@@ -1,0 +1,74 @@
+<template>
+  <svg
+    viewBox="0 0 24.00 24.00"
+    :class="iconClass"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    transform="matrix(-1, 0, 0, 1, 0, 0)"
+  >
+    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+    <g
+      id="SVGRepo_tracerCarrier"
+      stroke-linecap="round"
+      stroke-linejoin="round"
+      stroke="#CCCCCC"
+      stroke-width="0.048"
+    ></g>
+    <g id="SVGRepo_iconCarrier">
+      <path
+        fill-rule="evenodd"
+        clip-rule="evenodd"
+        d="M2.678 11.422a2.5 2.5 0 0 0 0 3.536l6.364 6.364a2.5 2.5 0 0 0 3.536 0l7.69-7.69A2.5 
+        2.5 0 0 0 21 11.864V4.5A1.5 1.5 0 0 0 19.5 3h-7.365a2.5 2.5 0 0 0-1.768.732l-7.69 7.69zM14.988 
+        7C13.878 7 13 7.832 13 8.988c0 1.157.878 2.012 1.988 2.012C16.121 11 17 10.145 17 8.988 17 7.832 
+        16.12 7 14.988 7z"
+        fill="#fff"
+      ></path>
+    </g>
+  </svg>
+</template>
+
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'IconPriceTag',
+  props: {
+    intent: {
+      type: String,
+      default: 'primary',
+      validator: (val: string) => {
+        return ['primary', 'transparent'].includes(val);
+      },
+    },
+  },
+  computed: {
+    iconClass() {
+      let baseClass = ['icon'];
+      const variants = {
+        primary: 'primary',
+        transparent: 'transparent',
+      };
+      if (this.intent) {
+        baseClass.push(variants[this.intent]);
+      }
+      return baseClass;
+    },
+  },
+});
+</script>
+
+<style scoped>
+.icon {
+  width: 50px;
+  height: 50px;
+}
+
+.primary path {
+  fill: #000;
+}
+
+.transparent path {
+  fill: #fff;
+}
+</style>
