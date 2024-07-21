@@ -1,5 +1,6 @@
 <template>
   <input
+    ref="inputRef"
     :type="inputType"
     :placeholder="placeholder"
     :disabled="disabled"
@@ -30,6 +31,11 @@ export default defineComponent({
       required: false,
     },
   },
+  methods: {
+    getInputRef() {
+      return this.$refs.inputRef;
+    },
+  },
 });
 </script>
 
@@ -38,5 +44,6 @@ input {
   padding: 10px 15px;
   outline: none;
   color: #000;
+  border: 1px solid #ddd;
 }
 </style>
