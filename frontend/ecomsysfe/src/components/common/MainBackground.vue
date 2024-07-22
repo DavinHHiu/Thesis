@@ -8,7 +8,7 @@
       <img class="image w-screen" src="/images/4.jpg" />
       <!-- <img class="image w-screen" src="/images/1.jpg" /> -->
     </image-slider>
-    <search-bar class="search-bar" />
+    <div class="search-bar-wp"><search-bar class="search-bar" /></div>
   </div>
 </template>
 
@@ -44,12 +44,16 @@ export default defineComponent({
     position: fixed;
     z-index: 0;
   }
-  .search-bar {
-    position: absolute;
-    top: 25%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 2;
+  .search-bar-wp {
+    height: 50px;
+    .search-bar {
+      position: absolute;
+      height: 50px;
+      top: 25%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
   }
 }
 </style>
