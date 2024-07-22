@@ -6,6 +6,7 @@ import AboutView from '@/views/AboutView.vue';
 import CartView from '@/views/CartView.vue';
 import ProductDetail from '@/views/ProductDetail.vue';
 import SearchView from '@/views/SearchView.vue';
+import CheckoutView from '@/views/CheckoutView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -39,6 +40,10 @@ const router = createRouter({
       path: '/search/:query',
       component: SearchView,
       props: true,
+    },
+    {
+      path: '/checkout',
+      component: CheckoutView,
     },
   ],
 });
