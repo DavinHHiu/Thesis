@@ -64,21 +64,14 @@
                 </tfoot>
               </table>
               <div class="payment-method-cont">
+                <radio-field
+                  label="Direct bank transfer"
+                  name="payment-method"
+                />
+                <radio-field label="Check payments" name="payment-method" />
+                <radio-field label="Cash on delivery" name="payment-method" />
                 <div class="payment-input-cont">
-                  <input type="radio" name="payment-method" />
-                  <label>Direct bank transfer</label>
-                </div>
-                <div class="payment-input-cont">
-                  <input type="radio" name="payment-method" />
-                  <label>Check payments</label>
-                </div>
-                <div class="payment-input-cont">
-                  <input type="radio" name="payment-method" />
-                  <label>Cash on delivery</label>
-                </div>
-                <div class="payment-input-cont">
-                  <input type="radio" name="payment-method" />
-                  <label>PayPal</label>
+                  <radio-field label="PayPal" name="payment-method" />
                   <img
                     src="https://www.paypalobjects.com/webstatic/mktg/logo/AM_mc_vs_dc_ae.jpg"
                     alt="PayPal acceptance mark"
@@ -104,6 +97,7 @@ import DefaultLayout from '../layouts/DefaultLayout.vue';
 import TextField from '../components/common/TextField.vue';
 import CardView from '../components/common/CardView.vue';
 import CustomButton from '../components/common/CustomButton.vue';
+import RadioField from '../components/common/RadioField.vue';
 
 export default defineComponent({
   name: 'CheckoutView',
@@ -112,6 +106,7 @@ export default defineComponent({
     TextField,
     CardView,
     CustomButton,
+    RadioField,
   },
 });
 </script>
