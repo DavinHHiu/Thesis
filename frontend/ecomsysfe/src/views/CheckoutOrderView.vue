@@ -1,5 +1,24 @@
 <template>
   <div class="wrapper">
+    <p>Thank you. Your order has been received.</p>
+    <ul class="order-info">
+      <li class="order-info-item">
+        ORDER NUMBER:
+        <strong>6261</strong>
+      </li>
+      <li class="order-info-item">
+        DATE:
+        <strong>July 28, 2024</strong>
+      </li>
+      <li class="order-info-item">
+        TOTAL:
+        <strong>$150.00</strong>
+      </li>
+      <li class="order-info-item">
+        PAYMENT METHOD:
+        <strong>Direct bank transfer</strong>
+      </li>
+    </ul>
     <section class="order-detail">
       <h2 class="section-title">Order details</h2>
       <table class="order-detail-content">
@@ -38,8 +57,8 @@
         <p>Nghĩa Dũng</p>
         <p>Hà Nội 000084</p>
         <p>Vietnam</p>
-        <p>0815220802</p>
-        <p>honghieu2208@gmail.com</p>
+        <p><span>&#128379;</span>0815220802</p>
+        <p><span>&#9993;</span>honghieu2208@gmail.com</p>
       </div>
     </section>
   </div>
@@ -59,6 +78,22 @@ export default defineComponent({
   display: flex;
   flex-direction: column;
   gap: 35px;
+  .order-info {
+    display: flex;
+    .order-info-item {
+      font-size: 11px;
+      display: flex;
+      flex-direction: column;
+      padding-right: 23px;
+      margin-right: 23px;
+      strong {
+        font-size: 15px;
+      }
+      &:not(:last-child) {
+        border-right: 1px dashed #e2e2e2;
+      }
+    }
+  }
   .section-title {
     width: 100%;
     padding: 21px;
