@@ -101,51 +101,54 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/variables';
+
 .container {
-  max-width: 1200px;
+  width: 120rem;
+  max-width: 100%;
 
   table {
     width: 100%;
     margin-bottom: 2rem;
-    font-size: 16px;
+    font-size: $--font-base;
     text-align: left;
     border-collapse: separate;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $--color-border;
     thead tr th {
-      font-weight: 600;
+      font-weight: $--font-bold;
     }
     th,
     td {
-      padding: 15px;
+      padding: 1.5rem;
     }
     tbody tr {
       td {
-        border-top: 1px solid #e2e2e2;
-        min-width: 32px;
-        min-height: 101px;
+        border-top: 1px solid $--color-border;
+        min-width: 3.2rem;
+        min-height: 10.1rem;
         img {
-          max-width: 70px;
+          max-width: 7rem;
         }
       }
       .input-quantity {
-        padding: 5px;
+        padding: 0.5rem;
         text-align: center;
         transition: 0.2s linear;
         &:focus {
-          border: 1px dotted #333;
+          border: 1px dotted $--black-color-800;
         }
       }
     }
   }
   .cart-totals {
     width: 48%;
-    border: 1px solid #e2e2e2;
+    border: 1px solid $--color-border;
 
     .cart-totals-title {
-      padding: 14px 20px;
-      font-size: 19px;
-      border-bottom: 1px solid #e2e2e2;
-      margin: 0 -20px 20px;
+      padding: 1.4rem 2rem;
+      font-size: $--font-xl;
+      border-bottom: 1px solid $--color-border;
+      margin: 0 -2rem 2rem;
     }
     table {
       border: none;
@@ -154,7 +157,7 @@ export default defineComponent({
       }
       tbody tr td,
       th {
-        border-bottom: 1px solid #e2e2e2;
+        border-bottom: 1px solid $--color-border;
       }
     }
   }

@@ -44,6 +44,6 @@ export default defineComponent({
 .nav-pills-wp {
   width: 100%;
   display: flex;
-  gap: 5px;
+  gap: 0.5rem;
 }
 </style>

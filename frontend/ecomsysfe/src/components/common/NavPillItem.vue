@@ -29,36 +29,38 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import '@/assets/variables';
+
 .nav-item {
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #000;
-  padding: 7px 0px;
-  padding-left: 20px;
-  padding-right: 10px;
-  border-radius: 20px;
+  color: $--primary-color;
+  padding: 0.7rem 0;
+  padding-left: 2rem;
+  padding-right: 1rem;
+  border-radius: 2rem;
   user-select: none;
-  gap: 5px;
+  gap: 0.5rem;
   transition: all 0.2s ease-out;
 
   span {
-    font-weight: 600;
+    font-weight: $--font-bold;
   }
 
   .nav-qty-cont {
-    padding: 0 7px;
-    border-radius: 20px;
-    border: 1px solid #777;
+    padding: 0 0.7rem;
+    border-radius: 2rem;
+    border: 1px solid $--gray-color-900;
   }
 }
 .active {
-  color: #fff;
-  background-color: #000;
+  color: $--second-color;
+  background-color: $--primary-color;
 
   .nav-qty-cont {
-    background-color: #000;
+    background-color: $--primary-color;
     border: none;
   }
 }

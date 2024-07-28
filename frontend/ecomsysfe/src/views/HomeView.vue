@@ -142,8 +142,10 @@ export default defineComponent({
 </template>
 
 <style lang="scss" scoped>
+@import '@/assets/variables';
+
 .wrapper {
-  background-color: #fff;
+  background-color: $--second-color;
   position: relative;
 }
 </style>

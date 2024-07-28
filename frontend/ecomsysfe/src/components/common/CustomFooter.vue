@@ -502,24 +502,22 @@
   </div>
 </template>
 
-<style scoped>
-/* 0F67B1 3FA2F6 96C9F4 */
+<style lang="scss" scoped>
+@import '@/assets/variables';
 
 .navLeftFooter {
   position: relative;
-  background-color: #fff;
-  color: #000;
+  background-color: $--white-color-900;
   width: 100vw;
-  background: linear-gradient(-180deg, rgba(234, 237, 237, 0), #e3e6e6);
 }
 
 .navFooterBackToTop {
-  background-color: #fff;
-  min-height: 50px;
+  background-color: $--white-color-900;
+  min-height: 5rem;
   display: flex;
   align-items: center;
   justify-content: center;
-  border-top: 1px solid #ddd;
+  border-top: 1px solid $--color-border;
 }
 
 .navFooterVerticalColumn {
@@ -530,28 +528,28 @@
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 50px 0px;
-  gap: 70px;
-  background-color: #fff;
-  border-top: 1px solid #ddd;
+  padding: 5rem 0;
+  gap: 7rem;
+  background-color: $--second-color;
+  border-top: 1px solid $--color-border;
 }
 
 .navFooterColHead {
-  font-weight: bold;
-  margin: 6px 0 14px;
+  font-weight: $--font-bold;
+  margin: 0.6rem 0 1.4rem;
 }
 
 .navFooterLine {
   display: flex;
   width: 100%;
   justify-content: center;
-  padding: 70px 0px;
-  font-size: 12px;
-  border-top: 1px solid #ddd;
+  padding: 7rem 0;
+  font-size: $--font-xs;
+  border-top: 1px solid $--color-border;
 }
 
 .navFooterLinkLine {
-  background-color: #fff;
+  background-color: $--second-color;
 }
 
 .navFooterPadItemLine {
@@ -562,23 +560,23 @@
 
 .ulCopyright {
   display: flex;
-  gap: 20px;
+  gap: 2rem;
 }
 
 li {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .navFooterLinkCol .nav_a {
-  font-size: 14px;
-  color: rgb(0, 0, 0, 0.9);
+  font-size: $--font-sm;
+  color: $--black-alpha-80;
 }
 
 .navFooterDescItem {
-  padding: 0 9px;
+  padding: 0 0.9rem;
 }
 .navFooterDescText {
-  font-size: 11px;
-  color: rgb(0, 0, 0, 0.75);
+  font-size: $--font-xs;
+  color: $--black-alpha-70;
 }
 </style>

@@ -100,14 +100,15 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-.container {
-  padding: 20px;
-}
+<style lang="scss" scoped>
+@import '@/assets/variables';
 
-.title {
-  font-size: 21px;
-  padding-left: 10px;
-  font-weight: bold;
+.container {
+  padding: 2rem;
+  .title {
+    font-size: $--font-xl;
+    padding-left: 1rem;
+    font-weight: $--font-bold;
+  }
 }
 </style>

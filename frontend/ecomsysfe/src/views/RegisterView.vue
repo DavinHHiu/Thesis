@@ -60,7 +60,9 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/variables';
+
 label {
-  font-size: 14px;
+  font-size: $--font-sm;
 }
 </style>

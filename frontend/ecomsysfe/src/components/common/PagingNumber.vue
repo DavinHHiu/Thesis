@@ -31,38 +31,40 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '@/assets/variables';
+
 .pagination {
   display: flex;
-  gap: 5px;
+  gap: 0.5rem;
   width: 100%;
   justify-content: end;
-  margin-top: 70px;
+  margin-top: 7rem;
   .page-item {
     display: flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #000;
-    min-width: 40px;
-    min-height: 40px;
+    border: 1px solid $--primary-color;
+    min-width: 4rem;
+    min-height: 4rem;
     transition: all 0.3s ease-out;
     cursor: pointer;
     .page-link {
-      color: #000;
-      font-size: 16px;
-      font-weight: 500;
+      color: $--primary-color-text;
+      font-size: $--font-base;
+      font-weight: $--font-semibold;
     }
     &:hover {
-      background-color: #000;
+      background-color: $--primary-color;
       .page-link {
-        color: #fff;
+        color: $--second-color-text;
       }
     }
   }
   .active {
-    background-color: #000;
+    background-color: $--primary-color;
     .page-link {
-      color: #fff;
+      color: $--second-color-text;
     }
   }
 }

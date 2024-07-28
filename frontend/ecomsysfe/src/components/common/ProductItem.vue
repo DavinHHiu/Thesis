@@ -58,7 +58,7 @@ export default defineComponent({
 
   .btn-add-to-cart {
     position: absolute;
-    bottom: -50px;
+    bottom: -5rem;
     opacity: 0;
     transition: 0.4s ease-out;
   }

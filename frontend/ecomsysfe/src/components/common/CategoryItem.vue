@@ -42,11 +42,13 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '@/assets/variables';
+
 .wrapper {
   position: relative;
-  width: 380px;
-  height: 480px;
+  width: 38rem;
+  height: 48rem;
   &::after {
     content: '';
     display: block;
@@ -54,7 +56,7 @@ export default defineComponent({
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0, 0, 0, 0.5);
+    background-color: $--black-alpha-50;
     z-index: 1;
   }
 
@@ -71,14 +73,14 @@ export default defineComponent({
     bottom: 0;
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    color: #fff;
-    padding: 40px;
+    gap: 2rem;
+    color: $--second-color-text;
+    padding: 4rem;
     z-index: 2;
 
     .category-title {
-      font-size: 26px;
-      font-weight: 600;
+      font-size: $--font-3xl;
+      font-weight: $--font-bold;
     }
   }
 }

@@ -198,21 +198,23 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/variables';
+
 .body {
   margin: auto;
   display: flex;
   min-height: 100vh;
-  max-width: 1360px;
-  padding: 0 20px;
+  max-width: 136rem;
+  padding: 0 2rem;
   .side-filter {
-    margin: 64px 0 40px;
-    padding-right: 60px;
-    max-width: 330px;
+    margin: 6.4rem 0 4rem;
+    padding-right: 6rem;
+    max-width: 33rem;
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 5rem;
     .search-input-wp {
-      height: 42px;
+      height: 4.2rem;
       width: 100%;
     }
     .filter-price-cont {
@@ -222,16 +224,16 @@ export default defineComponent({
           width: 100%;
           display: flex;
           justify-content: space-between;
-          margin-bottom: 20px;
+          margin-bottom: 2rem;
           .field {
-            height: 45px;
+            height: 4.5rem;
             display: flex;
             align-items: center;
 
             input {
               width: 100%;
               height: 100%;
-              margin-left: 12px;
+              margin-left: 1.2rem;
               -moz-appearance: textfield;
             }
             input[type='number']::-webkit-outer-spin-button,
@@ -241,25 +243,25 @@ export default defineComponent({
           }
           .separator {
             display: flex;
-            padding: 0 10px;
-            font-size: 20px;
+            padding: 0 1rem;
+            font-size: 2rem;
             align-items: center;
             justify-content: center;
           }
         }
         .price-slider {
           position: relative;
-          height: 3px;
-          border-radius: 3px;
-          background-color: #ddd;
+          height: 0.3rem;
+          border-radius: 0.3rem;
+          background-color: $--gray-color-300;
 
           .progress {
             position: absolute;
-            height: 3px;
-            border-radius: 3px;
+            height: 0.3rem;
+            border-radius: 0.3rem;
             left: 25%;
             right: 25%;
-            background-color: #000;
+            background-color: $--primary-color;
           }
         }
 
@@ -267,9 +269,9 @@ export default defineComponent({
           position: relative;
           input {
             position: absolute;
-            top: -3px;
+            top: -0.3rem;
             padding: 0 0;
-            height: 3px;
+            height: 0.3rem;
             width: 100%;
             pointer-events: none;
             background: none;
@@ -278,18 +280,18 @@ export default defineComponent({
           }
           input[type='range']::-webkit-slider-thumb {
             -webkit-appearance: none;
-            height: 17px;
-            width: 17px;
+            height: 1.7rem;
+            width: 1.7rem;
             pointer-events: auto;
-            background-color: #000;
+            background-color: $--primary-color;
             border-radius: 50%;
           }
           input[type='range']::-moz-slider-thumb {
             -moz-appearance: none;
-            height: 17px;
-            width: 17px;
+            height: 1.7rem;
+            width: 1.7rem;
             pointer-events: auto;
-            background-color: #000;
+            background-color: $--primary-color;
             border-radius: 50%;
           }
         }
@@ -297,8 +299,8 @@ export default defineComponent({
       .filter-price-action {
         .filter-price-value {
           .price-value {
-            font-weight: 500;
-            color: #000;
+            font-weight: $--font-semibold;
+            color: $--primary-color-text;
           }
         }
       }
@@ -307,18 +309,18 @@ export default defineComponent({
       .category-list {
         display: flex;
         flex-direction: column;
-        gap: 20px;
-        font-size: 16px;
+        gap: 2rem;
+        font-size: $--font-base;
       }
     }
     .filter-title {
-      font-size: 22px;
-      font-weight: 500;
-      margin-bottom: 20px;
+      font-size: $--font-xl;
+      font-weight: $--font-semibold;
+      margin-bottom: 2rem;
     }
   }
   .list-products {
-    padding: 85px 105px;
+    padding: 8.5rem 10.5rem;
   }
 }
 </style>

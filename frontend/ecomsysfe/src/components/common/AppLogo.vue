@@ -34,9 +34,10 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
+@import '@/assets/variables';
 
 .app-name {
   font-family: 'Playwrite CU', cursive;
-  font-size: 30px;
+  font-size: $--font-4xl;
 }
 </style>

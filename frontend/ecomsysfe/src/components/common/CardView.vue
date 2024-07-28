@@ -38,13 +38,15 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '@/assets/variables';
+
 .card {
   position: relative;
-  box-shadow: 0 0 20px 5px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0 2rem 0.5rem $--gray-color-200;
 }
 .form {
   box-shadow: none;
-  border: 2px solid #e2e2e2;
+  border: 2px solid $--color-border;
 }
 </style>
