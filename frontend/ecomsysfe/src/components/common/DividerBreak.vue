@@ -1,6 +1,6 @@
 <template>
   <div class="divider-wraper flex justify-center">
-    <p class="title text-center text-xs font-normal text-slate-400 bg-white">
+    <p class="title">
       {{ title }}
     </p>
   </div>
@@ -21,12 +21,16 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/variables';
+
 .divider-wraper {
   position: relative;
   .title {
+    color: $--gray-color-500;
+    font-size: $--font-xs;
     position: relative;
     display: inline-block;
-    padding: 0 8px 0 7px;
+    padding: 0 0.8rem 0 0.7rem;
     z-index: 2;
   }
   &::after {
@@ -36,7 +40,7 @@ export default defineComponent({
     top: 50%;
     display: block;
     width: 100%;
-    border-top: 1px solid #e7e7e7;
+    border-top: 1px solid $--color-border;
     z-index: 1;
   }
 }

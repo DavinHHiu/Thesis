@@ -69,11 +69,7 @@ export default defineComponent({
   },
   computed: {
     buttonClass() {
-      const classes = [
-        'inline-flex items-center justify-center',
-        'min-h-[32px] px-3 py-0.5 rounded',
-        'text-sm font-semibold',
-      ];
+      const classes = ['btn'];
       const variants = {
         intent: {
           primary: 'bg-black text-white',
@@ -93,4 +89,15 @@ export default defineComponent({
 });
 </script>
 
-<style scoped></style>
+<style lang="scss" scoped>
+@import '@/assets/variables';
+
+.btn {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 3.2rem;
+  font-weight: $--font-semibold;
+  font-size: $--font-sm;
+}
+</style>

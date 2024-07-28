@@ -17,10 +17,11 @@ export default defineComponent({
 <style lang="scss" scoped>
 .body-cont {
   margin: auto;
-  max-width: 1200px;
-  padding-bottom: 80px;
+  width: 120rem;
+  max-width: 100%;
+  padding-bottom: 8rem;
   .body-wp {
-    padding: 10px;
+    padding: 1rem;
   }
 }
 </style>

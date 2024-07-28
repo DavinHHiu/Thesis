@@ -21,17 +21,20 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/variables';
+
 .title-cont {
-  padding: 50px 0;
+  padding: 5rem 0;
   .title-wp {
     margin: auto;
-    max-width: 1200px;
-    padding: 10px;
+    width: 120rem;
+    max-width: 100%;
+    padding: 1rem;
     text-align: center;
     .title {
-      color: #54595f;
-      font-size: 59px;
-      font-weight: 600;
+      color: $--title-color-text;
+      font-size: $--font-8xl;
+      font-weight: $--font-bold;
     }
   }
 }

@@ -26,22 +26,4 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
-.image {
-  width: 300px;
-  height: 300px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.image1 {
-  width: 150px;
-  height: 115px;
-  object-fit: cover;
-  object-position: center;
-}
-
-.subtitle {
-  font-size: 12px;
-}
-</style>
+<style lang="scss" scoped></style>

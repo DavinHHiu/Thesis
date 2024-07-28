@@ -27,9 +27,11 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/variables';
+
 .bg-wrapper {
   position: relative;
-  height: 900px;
+  height: 90rem;
   &::after {
     position: absolute;
     top: 0;
@@ -37,7 +39,11 @@ export default defineComponent({
     width: 100%;
     height: 100%;
     background-color: transparent;
-    background-image: linear-gradient(180deg, #0084d6 0%, #000 100%);
+    background-image: linear-gradient(
+      180deg,
+      $--color-blue 0%,
+      $--primary-color 100%
+    );
     opacity: 0.3;
   }
   .bg-image {
@@ -45,10 +51,10 @@ export default defineComponent({
     z-index: 0;
   }
   .search-bar-wp {
-    height: 50px;
+    height: 5rem;
     .search-bar {
       position: absolute;
-      height: 50px;
+      height: 5rem;
       top: 25%;
       left: 50%;
       transform: translate(-50%, -50%);

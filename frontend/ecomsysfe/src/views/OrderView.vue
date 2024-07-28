@@ -79,30 +79,32 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/variables';
+
 .list-orders-wp {
-  margin-top: 20px;
+  margin-top: 2rem;
   width: 100%;
-  border: 1px solid #e2e2e2;
-  font-size: 16px;
+  border: 1px solid $--color-border;
+  font-size: $--font-base;
   tbody tr {
-    border-top: 1px solid #e2e2e2;
+    border-top: 1px solid $--color-border;
   }
   th,
   td {
-    padding: 12px 16px;
-    font-weight: 500;
+    padding: 1.2rem 1.6rem;
+    font-weight: $--font-semibold;
   }
   th {
     text-align: left;
-    font-weight: 600;
-    background-color: #fff;
+    font-weight: $--font-bold;
+    background-color: $--second-color;
   }
   .item-image {
-    width: 110px;
-    height: 100px;
+    width: 11rem;
+    height: 10rem;
   }
   .item-total-amount {
-    font-weight: 600;
+    font-weight: $--font-base;
   }
   .item-list-product {
     text-align: center;

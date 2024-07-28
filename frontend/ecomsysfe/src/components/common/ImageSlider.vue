@@ -108,42 +108,41 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '@/assets/variables';
+
 .slides {
   position: relative;
   overflow: hidden;
-}
-.slides-inner {
-  display: inline-block;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  transition: margin 0.5s ease-out;
-}
-.navigation {
-  top: 0;
-  position: absolute;
-  height: 100%;
-  width: 100px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: rgb(255, 255, 255, 0.2);
-  cursor: pointer;
-}
-
-.haft-navigattion {
-  top: 50%;
-  height: 50%;
-  transform: translateY(-50%);
-  border-radius: 4px;
-}
-
-.left {
-  left: 0;
-}
-
-.right {
-  right: 0;
+  .slides-inner {
+    display: inline-block;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    transition: margin 0.5s ease-out;
+  }
+  .navigation {
+    top: 0;
+    position: absolute;
+    height: 100%;
+    width: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $--white-alpha-20;
+    cursor: pointer;
+  }
+  .left {
+    left: 0;
+  }
+  .right {
+    right: 0;
+  }
+  .haft-navigattion {
+    top: 50%;
+    height: 50%;
+    transform: translateY(-50%);
+    border-radius: 0.4rem;
+  }
 }
 </style>

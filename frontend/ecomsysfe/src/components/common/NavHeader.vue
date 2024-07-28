@@ -47,22 +47,24 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '@/assets/variables';
+
 .nav-header-container {
   position: relative;
-  height: 103px;
+  height: 10.3rem;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px 50px 16px 30px;
+  padding: 1.6rem 5rem 1.6rem 3rem;
   z-index: 99;
 
   .container {
     display: flex;
     align-items: center;
     cursor: pointer;
-    gap: 10px;
+    gap: 1rem;
 
     .header-items {
       text-transform: uppercase;
@@ -71,12 +73,12 @@ export default defineComponent({
 }
 
 .primary {
-  background-color: #fff;
-  color: #000;
+  background-color: $--second-color;
+  color: $--primary-color;
 }
 
 .transparent {
-  background-color: rgb(0, 0, 0, 0.1);
-  color: #fff;
+  background-color: $--black-alpha-10;
+  color: $--second-color;
 }
 </style>

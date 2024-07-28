@@ -63,56 +63,58 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '@/assets/variables';
+
 .input-cont {
   width: 100%;
   label {
     display: block;
-    color: #000;
-    font-size: 13px;
-    font-weight: 600;
-    margin-bottom: 5px;
+    color: $--primary-color-text;
+    font-size: 1.3rem;
+    font-weight: $--font-bold;
+    margin-bottom: 0.5rem;
   }
   .required {
     &::after {
       content: '*';
-      margin-left: 3px;
-      color: #ff0000;
+      margin-left: 0.3rem;
+      color: $--color-red;
     }
   }
   input {
-    font-size: 15px;
+    font-size: $--font-base;
     width: 100%;
-    padding: 12px;
+    padding: 1.2rem;
     outline: none;
-    color: #000;
-    border: 1px solid #e2e2e2;
+    color: $--primary-color-text;
+    border: 1px solid $--color-border;
     transition: all 0.2s linear;
     line-height: 1;
     &:focus {
-      border: 1px dotted #000;
+      border: 1px dotted $--black-color-900;
     }
   }
   input::-webkit-input-placeholder {
-    color: #999;
+    color: $--gray-color-700;
   }
 
   input:-moz-placeholder {
-    color: #999;
+    color: $--gray-color-700;
   }
 
   input::-moz-placeholder {
-    color: #999;
+    color: $--gray-color-700;
   }
 
   input:-ms-input-placeholder {
-    color: #999;
+    color: $--gray-color-700;
   }
   .validated {
-    border: 1px solid #69bf29;
+    border: 1px solid $--color-valid;
   }
   .invalidated {
-    border: 1px solid #d65d67;
+    border: 1px solid $--color-invalid;
   }
 }
 </style>

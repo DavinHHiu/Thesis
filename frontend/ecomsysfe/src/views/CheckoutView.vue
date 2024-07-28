@@ -112,28 +112,32 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '@/assets/variables';
+
 .title-cont {
   .title {
     margin: auto;
-    max-width: 1200px;
+    width: 120rem;
+    max-width: 100%;
     display: block;
-    padding: 10px;
-    font-size: 60px;
-    font-weight: 600;
+    padding: 1rem;
+    font-size: $--font-8xl;
+    font-weight: $--font-bold;
     text-align: center;
   }
 }
 .content-cont {
   margin: auto;
-  max-width: 1200px;
-  padding-bottom: 80px;
+  width: 120rem;
+  max-width: 100%;
+  padding-bottom: 8rem;
   .content {
-    padding: 10px;
+    padding: 1rem;
     .separator {
       width: 100%;
-      border-top: 3px solid #333;
-      margin-bottom: 32px;
+      border-top: 3px solid $--black-color-800;
+      margin-bottom: 3.2rem;
     }
     .checkout-cont {
       display: flex;
@@ -141,47 +145,47 @@ export default defineComponent({
 
       .bill-cont {
         width: 55%;
-        margin-bottom: 30px;
+        margin-bottom: 3rem;
         .sub-title {
-          font-size: 20px;
-          font-weight: 600;
-          padding: 20px 0 14px;
-          margin-bottom: 20px;
-          border-bottom: 1px solid #e2e2e2;
+          font-size: $--font-xl;
+          font-weight: $--font-bold;
+          padding: 2rem 0 1.4rem;
+          margin-bottom: 2rem;
+          border-bottom: 1px solid $--color-border;
         }
         .bill-form {
           display: flex;
           flex-direction: column;
-          gap: 20px;
+          gap: 2rem;
           width: 100%;
           .input-name-cont {
             width: 100%;
             display: flex;
-            gap: 45px;
+            gap: 4.5rem;
           }
         }
       }
       .order-cont {
         width: 40%;
         .order-title {
-          font-size: 18px;
-          font-weight: 600;
-          padding-bottom: 20px;
+          font-size: $--font-lg;
+          font-weight: $--font-bold;
+          padding-bottom: 2rem;
         }
         .total-cont {
           width: 100%;
-          font-size: 15px;
+          font-size: $--font-base;
           thead tr th {
-            font-weight: 600;
+            font-weight: $--font-bold;
           }
           tr {
-            border-bottom: 1px solid #e2e2e2;
+            border-bottom: 1px solid $--color-border;
           }
           th {
-            padding: 14px 12px 14px 0;
+            padding: 1.4rem 1.2rem 1.4rem 0;
           }
           td {
-            padding: 10px 10px 10px 0;
+            padding: 1rem 1rem 1rem 0;
           }
           .product-name {
             text-align: left;
@@ -191,19 +195,19 @@ export default defineComponent({
           }
         }
         .payment-method-cont {
-          color: #000;
-          margin-top: 40px;
+          color: $--primary-color-text;
+          margin-top: 4rem;
           display: flex;
           flex-direction: column;
-          font-size: 15px;
-          gap: 15px;
-          margin-bottom: 25px;
+          font-size: $--font-base;
+          gap: 1.5rem;
+          margin-bottom: 2.5rem;
           .payment-input-cont {
             display: flex;
             align-items: center;
-            gap: 20px;
+            gap: 2rem;
             img {
-              height: 50px;
+              height: 5rem;
               width: auto;
             }
           }

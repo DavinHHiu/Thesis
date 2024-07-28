@@ -73,63 +73,65 @@ export default defineComponent({
 });
 </script>
 
-<style scoped>
+<style lang="scss" scoped>
+@import '@/assets/variables';
+
 .wrapper {
   display: flex;
   flex-direction: column;
-  gap: 35px;
+  gap: 3.5rem;
   .order-info {
     display: flex;
     .order-info-item {
-      font-size: 11px;
+      font-size: $--font-xs;
       display: flex;
       flex-direction: column;
-      padding-right: 23px;
-      margin-right: 23px;
+      padding-right: 2.3rem;
+      margin-right: 2.3rem;
       strong {
-        font-size: 15px;
+        font-size: $--font-base;
       }
       &:not(:last-child) {
-        border-right: 1px dashed #e2e2e2;
+        border-right: 1px dashed $--color-border;
       }
     }
   }
   .section-title {
     width: 100%;
-    padding: 21px;
-    font-size: 21px;
-    font-weight: 600;
-    border: 1px solid #e2e2e2;
+    padding: 2.1rem;
+    font-size: $--font-xl;
+    font-weight: $--font-bold;
+    border: 1px solid $--color-border;
   }
   .order-detail-content {
-    margin-top: -1px;
-    font-size: 16px;
-    color: #000;
+    margin-top: -0.1rem;
+    font-size: $--font-base;
+    color: $--primary-color-text;
     width: 100%;
     thead tr {
-      border: 1px solid #e2e2e2;
+      border: 1px solid $--color-border;
     }
     th,
     td {
-      padding: 11px 16px;
+      padding: 1.1rem 1.6rem;
     }
     td {
-      border: 1px solid #e2e2e2;
+      border: 1px solid $--color-border;
     }
     th {
       text-align: left;
-      font-weight: 600;
+      font-weight: $--font-bold;
     }
   }
   .custom-info-wp {
     display: flex;
-    color: #000;
+    color: $--primary-color-text;
     flex-direction: column;
-    margin-top: -1px;
-    font-size: 16px;
-    padding: 16px;
-    border: 1px solid #e2e2e2;
-    gap: 5px;
+    margin-top: -1.1rem;
+    font-size: $--font-base;
+    padding: 1.6rem;
+    border: 1px solid $--color-border;
+    gap: 0.5rem;
   }
 }
 </style>

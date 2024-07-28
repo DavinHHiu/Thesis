@@ -53,6 +53,8 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/variables';
+
 .container {
   flex: 1;
   display: flex;
@@ -61,21 +63,21 @@ export default defineComponent({
   height: 100%;
   width: 100%;
   overflow: hidden;
-  gap: 7px;
+  gap: 0.7rem;
 
   .input-search {
     line-height: 3rem;
-    font-size: 16px;
-    border: 1px solid #ddd;
+    font-size: $--font-base;
+    border: 1px solid $--color-border;
 
     &:focus {
-      border: 1px dotted #333;
+      border: 1px dotted $--black-color-800;
     }
   }
 
   .item-right-container {
-    background-color: #000;
-    padding: 0 5px;
+    background-color: $--primary-color;
+    padding: 0 0.5rem;
     height: 100%;
     display: flex;
     justify-content: center;
@@ -88,13 +90,13 @@ export default defineComponent({
 
     &:hover {
       .icon {
-        transform: translateX(7px);
+        transform: translateX(-0.7rem);
       }
     }
   }
 }
 
 .dotted {
-  border-bottom: 1px dotted #ddd;
+  border-bottom: 1px dotted $--color-border;
 }
 </style>

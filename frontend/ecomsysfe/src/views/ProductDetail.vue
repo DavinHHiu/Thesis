@@ -193,16 +193,19 @@ export default defineComponent({
 });
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
+@import '@/assets/variables';
+
 .content {
   display: flex;
   flex-direction: column;
   margin: auto;
-  max-width: 1240px;
+  width: 120rem;
+  max-width: 100%;
   .product {
     display: flex;
     width: 100%;
-    padding: 0 20px;
+    padding: 0 2rem;
     justify-content: space-between;
     .product-image {
       width: 50%;
@@ -214,15 +217,15 @@ export default defineComponent({
     .product-desc {
       width: 46%;
       .breadcrumb {
-        color: #777;
-        margin-bottom: 15px;
+        color: $--gray-color-900;
+        margin-bottom: 1.5rem;
       }
       .input-quantity {
-        padding: 5px;
+        padding: 0.5rem;
         text-align: center;
         transition: 0.2s linear;
         &:focus {
-          border: 1px dotted #333;
+          border: 1px dotted $--black-color-800;
         }
       }
       .btn-add {
@@ -231,16 +234,16 @@ export default defineComponent({
   }
   .product-details-wrapper {
     width: 100%;
-    padding: 32px 20px 0;
-    margin-top: 32px;
+    padding: 3.2rem 2rem 0;
+    margin-top: 3.2rem;
     .tabs {
       display: flex;
-      border-top: 1px solid #ddd;
+      border-top: 1px solid $--color-border;
       li {
-        margin-right: 16px;
-        font-size: 16px;
-        font-weight: 600;
-        padding: 15px 0;
+        margin-right: 1.6rem;
+        font-size: $--font-base;
+        font-weight: $--font-bold;
+        padding: 1.5rem 0;
         cursor: default;
       }
       .active {
@@ -250,15 +253,15 @@ export default defineComponent({
           top: 0;
           content: '';
           width: 100%;
-          border-top: 3px solid #000;
+          border-top: 3px solid $--black-color-800;
         }
       }
     }
     .product-details {
-      padding: 50px 0 70px;
+      padding: 5rem 0 7rem;
       .product-details-title {
-        font-size: 26px;
-        margin-bottom: 20px;
+        font-size: 2.6rem;
+        margin-bottom: 2rem;
       }
       .image-widget-container {
         width: 50%;
@@ -271,18 +274,18 @@ export default defineComponent({
         display: flex;
         flex-direction: column;
         justify-content: center;
-        padding: 70px 100px 70px;
+        padding: 7rem 10rem 7rem;
         width: 50%;
-        gap: 20px;
+        gap: 2rem;
         .elementor-widget-title {
-          font-size: 20px;
-          font-weight: 600;
-          line-height: 50px;
+          font-size: $--font-xl;
+          font-weight: $--font-bold;
+          line-height: 5rem;
         }
         .elementor-widget-body {
-          font-size: 16px;
-          color: #000;
-          line-height: 30px;
+          font-size: $--font-base;
+          color: $--primary-color-text;
+          line-height: 3rem;
         }
       }
     }
