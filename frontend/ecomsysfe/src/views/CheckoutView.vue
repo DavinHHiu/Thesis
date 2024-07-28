@@ -3,8 +3,9 @@
     <div class="title-cont py-[50px]"><span class="title">Checkout</span></div>
     <div class="content-cont">
       <div class="content">
-        <div class="separator"></div>
-        <div class="checkout-cont">
+        <router-view></router-view>
+        <!-- <div class="separator"></div> -->
+        <!-- <div class="checkout-cont">
           <div class="bill-cont">
             <div class="bill-form-cont">
               <div class="sub-title">Billing details</div>
@@ -85,7 +86,7 @@
               >
             </card-view>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </default-layout>
