@@ -45,7 +45,7 @@
               ></div>
             </div>
             <div class="range-input">
-              <text-field
+              <range-field
                 ref="rangeMin"
                 type="range"
                 class="range-min"
@@ -54,7 +54,7 @@
                 :value="minPrice"
                 @input="handleChangeMin"
               />
-              <text-field
+              <range-field
                 ref="rangeMax"
                 type="range"
                 class="range-max"
@@ -129,6 +129,7 @@ import GridLayout from '../layouts/GridLayout.vue';
 import ProductItem from '../components/common/ProductItem.vue';
 import TextField from '../components/common/TextField.vue';
 import CustomButton from '../components/common/CustomButton.vue';
+import RangeField from '../components/common/RangeField.vue';
 
 export default defineComponent({
   name: 'SearchView',
@@ -139,6 +140,7 @@ export default defineComponent({
     ProductItem,
     TextField,
     CustomButton,
+    RangeField,
   },
   data() {
     return {

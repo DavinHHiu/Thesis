@@ -85,6 +85,7 @@ export default defineComponent({
   input {
     font-size: $--font-base;
     width: 100%;
+    height: 100%;
     padding: 1.2rem;
     outline: none;
     color: $--primary-color-text;
