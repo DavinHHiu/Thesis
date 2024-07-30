@@ -507,12 +507,12 @@
 
 .navLeftFooter {
   position: relative;
-  background-color: $--white-color-900;
+  background-color: $--second-color;
   width: 100vw;
 }
 
 .navFooterBackToTop {
-  background-color: $--white-color-900;
+  background-color: $--second-color;
   min-height: 5rem;
   display: flex;
   align-items: center;
