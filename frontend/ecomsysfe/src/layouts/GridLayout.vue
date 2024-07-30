@@ -1,6 +1,6 @@
 <template>
-  <div class="container" :style="gridStyle">
-    <slot></slot>
+  <div class="container" :style="customStyle">
+    <slot class="flex-item"></slot>
   </div>
 </template>
 <script lang="ts">
@@ -9,55 +9,20 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'GridLayout',
   props: {
-    width: {
-      type: Number || String,
-      required: false,
-    },
-    height: {
-      type: Number || String,
-      required: false,
-    },
     gap: {
-      type: Number || String,
-      required: false,
+      type: [Number, String],
+      default: '2',
     },
-    columns: {
-      type: Number || String,
-      required: false,
-    },
-    rows: {
-      type: Number || String,
-      required: false,
-    },
-    justifyContent: {
+    wrap: {
       type: String,
-      required: false,
-    },
-    alignContent: {
-      type: String,
-      required: false,
-    },
-    justifyItems: {
-      type: String,
-      required: false,
-    },
-    alignItems: {
-      type: String,
-      required: false,
+      default: 'nowrap',
     },
   },
   computed: {
-    gridStyle() {
+    customStyle() {
       return {
-        width: this.width + 'px',
-        height: this.height + 'px',
-        gap: this.gap + 'px',
-        gridTemplateColumns: `repeat(${this.columns || 4}, 1fr)`,
-        gridTemplateRows: `repeat(${this.rows}, 1fr)`,
-        justifyContent: this.justifyContent || 'center',
-        alignContent: this.alignContent || 'center',
-        justifyItems: this.justifyItems || 'center',
-        alignItems: this.alignItems || 'center',
+        gap: this.gap + 'rem',
+        flexWrap: this.wrap,
       };
     },
   },
@@ -65,6 +30,10 @@ export default defineComponent({
 </script>
 <style lang="scss" scoped>
 .container {
-  display: grid;
+  display: flex;
+  justify-content: center;
+  .flex-item {
+    flex: 1 1 20rem;
+  }
 }
 </style>
