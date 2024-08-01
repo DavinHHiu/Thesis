@@ -78,6 +78,7 @@ export default defineComponent({
             'text-black bg-transparent border border-slate-400',
             'hover:text-white hover:bg-black',
           ],
+          outlineSecond: 'outlineSecond',
         },
       };
       if (this.intent) {
@@ -99,5 +100,10 @@ export default defineComponent({
   min-width: 3.2rem;
   font-weight: $--font-semibold;
   font-size: $--font-sm;
+}
+
+.outlineSecond {
+  color: $--second-color-text;
+  border: 1px solid $--second-color;
 }
 </style>
