@@ -1,5 +1,5 @@
 <template>
-  <default-layout class="w-screen" headerIntent="transparent">
+  <default-layout class="w-screen" headerIntent="second">
     <div class="main-bg-wp">
       <main-background
         class="mt-[-103px]"
@@ -115,7 +115,7 @@ import GridLayout from '../layouts/GridLayout.vue';
 import MainBackground from '../components/common/MainBackground.vue';
 import PageBody from '../components/common/PageBody.vue';
 import ProductItem from '../components/common/ProductItem.vue';
-import CustomButton from '../components/common/CustomButton.vue';
+import CustomButton from '../components/common/atomic/CustomButton.vue';
 import LogoSlider from '../components/common/LogoSlider.vue';
 import CriteriaItem from '../components/common/CriteriaItem.vue';
 

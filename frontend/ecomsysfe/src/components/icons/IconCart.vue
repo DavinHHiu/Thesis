@@ -1,6 +1,12 @@
 <template>
   <div class="wrapper">
-    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <svg
+      viewBox="0 0 24 24"
+      xmlns="http://www.w3.org/2000/svg"
+      id="cart"
+      :class="intent"
+      fill="#000000"
+    >
       <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
       <g
         id="SVGRepo_tracerCarrier"
@@ -9,15 +15,8 @@
       ></g>
       <g id="SVGRepo_iconCarrier">
         <path
-          d="M2.83179 4.38657H3.34341C4.20256 4.38657 4.96125 4.94691 5.21392 5.76808L8.27786 15.7259C8.53053 16.547 
-          9.28921 17.1074 10.1484 17.1074H17.1114C17.9373 17.1074 18.6743 16.5889 18.9534 15.8116L20.9925 10.1312C21.679 
-          8.21867 20.2616 6.20383 18.2295 6.20383H10.66"
-          :stroke="color"
-          stroke-width="1.7"
-          stroke-linecap="round"
+          d="M22,7.24l-2,8a1,1,0,0,1-.88.76l-11,1H8a1,1,0,0,1-1-.85l-1.38-9v0L5.14,4H3A1,1,0,0,1,3,2H5.14a2,2,0,0,1,2,1.69L7.48,6H21a1,1,0,0,1,.79.38A1,1,0,0,1,22,7.24ZM16.5,19A1.5,1.5,0,1,0,18,20.5,1.5,1.5,0,0,0,16.5,19Zm-6,0A1.5,1.5,0,1,0,12,20.5,1.5,1.5,0,0,0,10.5,19Z"
         ></path>
-        <circle cx="10.1707" cy="20.5322" r="1.46779" :fill="color"></circle>
-        <circle cx="17.0204" cy="20.5322" r="1.46779" :fill="color"></circle>
       </g>
     </svg>
     <div class="cart-quantity-wrapper">
@@ -26,46 +25,71 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { defineComponent } from 'vue';
 
 export default defineComponent({
   name: 'IconCart',
   props: {
-    color: {
+    intent: {
       type: String,
-      default: '#000',
+      default: 'primary',
+      validator: (value: string) => ['primary', 'second'].includes(value),
     },
   },
 });
 </script>
 
 <style lang="scss" scoped>
+@import '@/assets/variables';
+
 .wrapper {
   position: relative;
-  width: 50px;
-  height: 50px;
+  width: 2.5rem;
+  height: 2.5rem;
   display: flex;
   justify-content: center;
   align-items: center;
 
   .cart-quantity-wrapper {
     position: absolute;
-    top: 0;
-    right: -10px;
-    width: 25px;
-    height: 25px;
-    background-color: #e68369;
+    top: -0.5rem;
+    right: -0.7rem;
+    width: 1.5rem;
+    height: 1.5rem;
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
 
     .cart-quantity {
-      font-size: 14px;
-      color: #fff;
+      font-size: $--font-3xs;
       font-weight: bold;
     }
+  }
+}
+
+.primary {
+  .cart-quantity-wrapper {
+    background-color: $--primary-color;
+    .cart-quantity {
+      color: $--second-color;
+    }
+  }
+  svg path {
+    fill: $--primary-color;
+  }
+}
+
+.second {
+  .cart-quantity-wrapper {
+    background-color: $--second-color;
+    .cart-quantity {
+      color: $--primary-color;
+    }
+  }
+  svg path {
+    fill: $--second-color;
   }
 }
 </style>

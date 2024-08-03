@@ -1,14 +1,5 @@
 <template>
-  <div
-    class="wrapper"
-    :class="{
-      [intent]: intent,
-    }"
-    :style="{
-      width: width + 'px',
-      padding: padding,
-    }"
-  >
+  <div class="wrapper" :class="intent">
     <slot></slot>
   </div>
 </template>
@@ -19,15 +10,6 @@ import { defineComponent } from 'vue';
 export default defineComponent({
   name: 'CardView',
   props: {
-    width: {
-      type: [String, Number],
-      default: '100%',
-      required: false,
-    },
-    padding: {
-      type: [String, Number],
-      required: false,
-    },
     intent: {
       type: String,
       required: false,
@@ -43,6 +25,7 @@ export default defineComponent({
 
 .card {
   position: relative;
+  background-color: $--second-color;
   box-shadow: 0 0 2rem 0.5rem $--gray-color-200;
 }
 .form {

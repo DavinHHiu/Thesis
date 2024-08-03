@@ -75,8 +75,9 @@ export default defineComponent({
           primary: 'bg-black text-white',
           second: 'bg-white text-black',
           outline: [
-            'text-black bg-transparent border border-slate-400',
+            'text-black bg-transparent',
             'hover:text-white hover:bg-black',
+            'outlinePrimary',
           ],
           outlineSecond: 'outlineSecond',
         },
@@ -100,6 +101,11 @@ export default defineComponent({
   min-width: 3.2rem;
   font-weight: $--font-semibold;
   font-size: $--font-sm;
+  transition: all 0.2s linear;
+}
+
+.outlinePrimary {
+  border: 1px solid $--primary-color;
 }
 
 .outlineSecond {

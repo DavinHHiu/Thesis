@@ -1,13 +1,7 @@
 <template>
-  <div>
-    <div class="py-[50px] flex justify-center">
-      <div class="container">
-        <div>
-          <h1 class="text-6xl text-center">Cart</h1>
-        </div>
-      </div>
-    </div>
-    <div class="flex justify-center">
+  <default-layout>
+    <page-title title="Cart" />
+    <page-body>
       <div class="container flex flex-col items-end">
         <table class="list-items">
           <thead>
@@ -33,22 +27,14 @@
                 </a>
               </td>
               <td class="product-name">
-                <a
-                  href="https://websitedemos.net/brandstore-02/product/black-hoodie/"
-                  >Black Hoodie</a
-                >
+                <a href="">Black Hoodie</a>
               </td>
               <td>
                 <span>$150.00</span>
               </td>
               <td>
                 <div class="quantity">
-                  <text-field
-                    type="number"
-                    class="input-quantity w-[60px] border py-[5px]"
-                    value="1"
-                    min="0"
-                  />
+                  <text-field inputType="number" class="input-quantity" />
                 </div>
               </td>
               <td>
@@ -80,15 +66,18 @@
           </div>
         </div>
       </div>
-    </div>
-  </div>
+    </page-body>
+  </default-layout>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import TextField from '../components/common/TextField.vue';
+import TextField from '../components/common/molecules/TextField.vue';
 import IconRemove from '../components/icons/IconRemove.vue';
-import CustomButton from '../components/common/CustomButton.vue';
+import CustomButton from '../components/common/atomic/CustomButton.vue';
+import PageTitle from '../components/common/PageTitle.vue';
+import PageBody from '../components/common/PageBody.vue';
+import DefaultLayout from '../layouts/DefaultLayout.vue';
 
 export default defineComponent({
   name: 'CartView',
@@ -96,6 +85,9 @@ export default defineComponent({
     TextField,
     IconRemove,
     CustomButton,
+    PageTitle,
+    DefaultLayout,
+    PageBody,
   },
 });
 </script>
@@ -104,9 +96,6 @@ export default defineComponent({
 @import '@/assets/variables';
 
 .container {
-  width: 120rem;
-  max-width: 100%;
-
   table {
     width: 100%;
     margin-bottom: 2rem;
@@ -132,11 +121,8 @@ export default defineComponent({
       }
       .input-quantity {
         padding: 0.5rem;
-        text-align: center;
-        transition: 0.2s linear;
-        &:focus {
-          border: 1px dotted $--black-color-800;
-        }
+        height: 5rem;
+        width: 8rem;
       }
     }
   }

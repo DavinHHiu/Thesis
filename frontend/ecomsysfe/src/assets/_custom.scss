@@ -1,0 +1,11 @@
+@import 'variables';
+
+h2 {
+  color: $--primary-color;
+  font-size: $--font-xl;
+  font-weight: $--font-bold;
+}
+
+input {
+  outline: none;
+}

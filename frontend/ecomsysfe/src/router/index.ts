@@ -9,6 +9,7 @@ import SearchView from '@/views/SearchView.vue';
 import CheckoutView from '@/views/CheckoutView.vue';
 import OrderView from '@/views/OrderView.vue';
 import CheckoutOrderView from '@/views/CheckoutOrderView.vue';
+import CheckoutFormView from '@/views/CheckoutFormView.vue';
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -47,6 +48,10 @@ const router = createRouter({
       path: '/checkout',
       component: CheckoutView,
       children: [
+        {
+          path: 'order-form',
+          component: CheckoutFormView,
+        },
         {
           path: 'order-received',
           component: CheckoutOrderView,

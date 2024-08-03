@@ -26,11 +26,12 @@ export default defineComponent({
 .divider-wraper {
   position: relative;
   .title {
-    color: $--gray-color-500;
-    font-size: $--font-xs;
     position: relative;
+    color: $--gray-color-500;
+    font-size: $--font-3xs;
     display: inline-block;
     padding: 0 0.8rem 0 0.7rem;
+    background-color: $--second-color;
     z-index: 2;
   }
   &::after {
