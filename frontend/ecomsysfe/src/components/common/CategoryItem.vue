@@ -18,7 +18,7 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import CustomButton from './CustomButton.vue';
+import CustomButton from './atomic/CustomButton.vue';
 
 export default defineComponent({
   name: 'CategoryItem',

@@ -99,14 +99,11 @@ export default defineComponent({
   .section-title {
     width: 100%;
     padding: 2.1rem;
-    font-size: $--font-xl;
-    font-weight: $--font-bold;
     border: 1px solid $--color-border;
   }
   .order-detail-content {
     margin-top: -0.1rem;
     font-size: $--font-base;
-    color: $--primary-color-text;
     width: 100%;
     thead tr {
       border: 1px solid $--color-border;
@@ -114,6 +111,7 @@ export default defineComponent({
     th,
     td {
       padding: 1.1rem 1.6rem;
+      line-height: 2;
     }
     td {
       border: 1px solid $--color-border;
@@ -125,9 +123,8 @@ export default defineComponent({
   }
   .custom-info-wp {
     display: flex;
-    color: $--primary-color-text;
     flex-direction: column;
-    margin-top: -1.1rem;
+    margin-top: -0.1rem;
     font-size: $--font-base;
     padding: 1.6rem;
     border: 1px solid $--color-border;

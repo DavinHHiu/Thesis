@@ -127,8 +127,8 @@ import DefaultLayout from '../layouts/DefaultLayout.vue';
 import SearchBar from '../components/common/SearchBar.vue';
 import GridLayout from '../layouts/GridLayout.vue';
 import ProductItem from '../components/common/ProductItem.vue';
-import TextField from '../components/common/TextField.vue';
-import CustomButton from '../components/common/CustomButton.vue';
+import TextField from '../components/common/molecules/TextField.vue';
+import CustomButton from '../components/common/atomic/CustomButton.vue';
 
 export default defineComponent({
   name: 'SearchView',

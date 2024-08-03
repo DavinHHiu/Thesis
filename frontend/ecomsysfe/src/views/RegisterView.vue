@@ -1,51 +1,36 @@
 <template>
-  <div>
-    <div></div>
-    <div class="flex flex-col items-center gap-[30px] mt-[50px]">
-      <app-logo />
-      <card-view
-        class="w-[400px] h-[600px] p-[20px] rounded flex flex-col gap-[30px]"
-      >
-        <p class="text-[28px] font-bold">Sign in</p>
-        <div>
-          <label class="font-bold">Username or Email Address</label>
-          <text-field
-            class="w-full h-[50px] rounded border border-slate-400"
-            type="email"
-          ></text-field>
-        </div>
-        <div>
-          <label class="font-bold">Password</label>
-          <text-field
-            typp="password"
-            class="w-full h-[50px] rounded border border-slate-400"
-          ></text-field>
-        </div>
-        <div>
-          <label class="font-bold">Re-enter password</label>
-          <text-field
-            typp="password"
-            class="w-full h-[50px] rounded border border-slate-400"
-          ></text-field>
-        </div>
-        <custom-button class="w-full h-[50px]" intent="primary"
-          >Register</custom-button
-        >
-        <divider-break title="Already have an account?" />
-        <custom-button class="w-full h-[50px]" intent="outline"
-          >Login</custom-button
-        >
-      </card-view>
-    </div>
+  <div class="flex flex-col items-center gap-[3rem] mt-[5rem]">
+    <app-logo />
+    <card-view
+      class="w-[50rem] h-[60rem] p-[2rem] rounded flex flex-col gap-[3rem]"
+    >
+      <p class="text-[28px] font-bold">Register</p>
+      <div>
+        <custom-label>Username or Email Address</custom-label>
+        <text-field type="email" class="h-[5rem]"></text-field>
+      </div>
+      <div>
+        <custom-label>Password</custom-label>
+        <text-field type="password" class="h-[5rem]"></text-field>
+      </div>
+      <div>
+        <custom-label>Re-enter password</custom-label>
+        <text-field type="password" class="h-[5rem]"></text-field>
+      </div>
+      <custom-button class="h-[5rem]" intent="primary">Register</custom-button>
+      <divider-break title="Already have an account?" />
+      <custom-button class="h-[5rem]" intent="outline">Login</custom-button>
+    </card-view>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
 import CardView from '../components/common/CardView.vue';
-import TextField from '../components/common/TextField.vue';
-import CustomButton from '../components/common/CustomButton.vue';
-import AppLogo from '../components/common/AppLogo.vue';
+import TextField from '../components/common/molecules/TextField.vue';
+import CustomButton from '../components/common/atomic/CustomButton.vue';
+import AppLogo from '../components/common/molecules/AppLogo.vue';
 import DividerBreak from '../components/common/DividerBreak.vue';
+import CustomLabel from '../components/common/atomic/CustomLabel.vue';
 
 export default defineComponent({
   name: 'RegisterView',
@@ -55,14 +40,7 @@ export default defineComponent({
     CustomButton,
     AppLogo,
     DividerBreak,
+    CustomLabel,
   },
 });
 </script>
-
-<style lang="scss" scoped>
-@import '@/assets/variables';
-
-label {
-  font-size: $--font-sm;
-}
-</style>

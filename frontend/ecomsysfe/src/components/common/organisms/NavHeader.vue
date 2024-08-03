@@ -1,22 +1,22 @@
 <template>
   <div class="nav-header-container" :class="intent">
-    <div class="w-[200px]">
+    <div class="w-[20rem]">
       <app-logo :intent="intent" />
     </div>
-    <div class="flex gap-[100px]">
-      <div class="container language-container">
-        <icon-image src="/icons/flags/usa.svg" />
-        <h2 class="header-items font-bold">en</h2>
+    <div class="flex gap-[7rem]">
+      <div class="container">
+        <p class="header-items">en</p>
       </div>
-      <div class="container avatar-container">
-        <h2 class="header-items font-bold">account</h2>
+      <div class="container">
+        <p class="header-items">orders</p>
       </div>
-      <div class="container orders-container">
-        <h2 class="header-items font-bold">orders</h2>
+      <div class="container">
+        <icon-cart :intent="intent" />
+        <p class="header-items py-0.5">cart</p>
       </div>
-      <div class="container cart-container">
-        <icon-cart :color="intent == 'primary' ? '#000' : '#fff'" />
-        <h2 class="header-items font-bold py-0.5">cart</h2>
+      <div class="container">
+        <icon-user width="2rem" :intent="intent" />
+        <p class="header-items">account</p>
       </div>
     </div>
   </div>
@@ -24,23 +24,23 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import AppLogo from '../common/AppLogo.vue';
-import IconCart from '../icons/IconCart.vue';
-import IconImage from './IconImage.vue';
+import AppLogo from '../molecules/AppLogo.vue';
+import IconCart from '../../icons/IconCart.vue';
+import IconUser from '../../icons/IconUser.vue';
 
 export default defineComponent({
   name: 'NavHeader',
   components: {
     AppLogo,
     IconCart,
-    IconImage,
+    IconUser,
   },
   props: {
     intent: {
       type: String,
       default: 'primary',
       validator: (val: string) => {
-        return ['primary', 'transparent'].includes(val);
+        return ['primary', 'second'].includes(val);
       },
     },
   },
@@ -57,7 +57,7 @@ export default defineComponent({
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1.6rem 5rem 1.6rem 3rem;
+  padding: 1.6rem 7rem 1.6rem 3rem;
   z-index: 99;
 
   .container {
@@ -68,6 +68,8 @@ export default defineComponent({
 
     .header-items {
       text-transform: uppercase;
+      font-size: $--font-base;
+      font-weight: $--font-semibold;
     }
   }
 }
@@ -77,7 +79,7 @@ export default defineComponent({
   color: $--primary-color;
 }
 
-.transparent {
+.second {
   background-color: $--black-alpha-10;
   color: $--second-color;
 }

@@ -1,16 +1,21 @@
 <template>
   <div class="body">
-    <product-item></product-item>
+    <div class="wp">
+      <custom-label :required="true">Email</custom-label>
+      <custom-input placeholder="hddfdf" />
+    </div>
   </div>
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import ProductItem from '../components/common/ProductItem.vue';
+import CustomInput from '../components/common/atomic/CustomInput.vue';
+import CustomLabel from '../components/common/atomic/CustomLabel.vue';
 
 export default defineComponent({
   name: 'AboutView',
   components: {
-    ProductItem,
+    CustomInput,
+    CustomLabel,
   },
 });
 </script>
@@ -28,5 +33,9 @@ export default defineComponent({
   justify-content: center;
   align-items: center;
   height: 100vh;
+}
+.wp {
+  height: 4rem;
+  width: 10rem;
 }
 </style>

@@ -1,6 +1,6 @@
 <template>
   <default-layout>
-    <div class="content">
+    <page-body class="content">
       <div class="product">
         <div class="product-image">
           <img
@@ -14,23 +14,17 @@
             Yellow Shoes
           </nav>
           <span class="single-product-category mb-[16px] block"
-            ><a href="" rel="tag" class="text-black text-base">Men</a></span
+            ><a href="" rel="tag">Men</a></span
           >
-          <h1 class="product_title entry-title text-black text-3xl mb-[15px]">
-            DNK Yellow Shoes
-          </h1>
-          <p class="price text-2xl">
+          <h1 class="product-title mb-[15px]">DNK Yellow Shoes</h1>
+          <p class="price">
             <del aria-hidden="true" class="mr-[10px] text-slate-400"
               >$150.00</del
             >
-            <span class="screen-reader-text font-semibold text-black"
-              >$120.00</span
-            >
-            <span class="ast-shipping-text text-black text-base"
-              >+ Free Shipping</span
-            >
+            <span class="screen-reader-text">$120.00</span>
+            <span class="ast-shipping-text">+ Free Shipping</span>
           </p>
-          <div class="my-[16px] text-black text-base">
+          <div class="my-[16px]">
             <p>
               Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non
               mauris vitae erat consequat auctor eu in elit. Class aptent taciti
@@ -40,21 +34,14 @@
             </p>
           </div>
           <div class="action-wrapper flex gap-[20px] mb-[20px]">
-            <text-field
-              type="number"
-              class="input-quantity w-[60px] border py-[5px]"
-              value="1"
-              min="0"
-            />
-            <custom-button
-              class="btn-add rounded-none min-w-[280px] px-[20px] py[10px]"
-              intent="primary"
+            <text-field inputType="number" class="input-quantity" />
+            <custom-button class="btn-add" intent="primary"
               >ADD TO CART</custom-button
             >
           </div>
-          <div class="product_meta text-black border-t">
-            <span class="posted_in block pt-[10px] mb-[20px] text-black"
-              >Category: <a href="" rel="tag" class="text-black">Men</a></span
+          <div class="product_meta border-t">
+            <span class="posted_in block pt-[10px] mb-[20px]"
+              >Category: <a href="">Men</a></span
             >
           </div>
         </div>
@@ -73,28 +60,24 @@
         <div class="product-details">
           <div class="pb-[20px]">
             <div>
-              <div class="">
-                <h3 class="product-details-title font-bold">
-                  Product description
-                </h3>
-              </div>
+              <h3 class="product-details-title font-bold">
+                Product description
+              </h3>
             </div>
-            <div>
-              <div class="text-black text-base mb-[20px]">
-                <p>
-                  Since it’s creation lorem ipsum dolor sit amet, consectetur
-                  adipisicing elit, sed do eiusmod tempor incididunt ut labore
-                  et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                  exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate
-                  velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
-                  sint occaecat cupidatat non proident, sunt in culpa qui
-                  officia deserunt mollit anim id est laborum.
-                </p>
-              </div>
+            <div class="mb-[20px]">
+              <p>
+                Since it’s creation lorem ipsum dolor sit amet, consectetur
+                adipisicing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
+                exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                consequat. Duis aute irure dolor in reprehenderit in voluptate
+                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui officia
+                deserunt mollit anim id est laborum.
+              </p>
             </div>
             <div class="mt-[20px]">
-              <div class="text-black text-base mb-[20px]">
+              <div class="mb-[20px]">
                 <p>
                   Duis aute irure dolor in reprehenderit in voluptate velit esse
                   cillum dolore eu fugiat nulla pariatur. Excepteur sint
@@ -163,27 +146,29 @@
           </div>
         </div>
       </div>
-    </div>
+    </page-body>
   </default-layout>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
 import DefaultLayout from '../layouts/DefaultLayout.vue';
-import TextField from '../components/common/TextField.vue';
-import CustomButton from '../components/common/CustomButton.vue';
+import TextField from '../components/common/molecules/TextField.vue';
+import CustomButton from '../components/common/atomic/CustomButton.vue';
+import PageBody from '../components/common/PageBody.vue';
 
 export default defineComponent({
   name: 'ProductDetail',
-  data() {
-    return {
-      currentTabIndex: 0,
-    };
-  },
   components: {
     DefaultLayout,
     TextField,
     CustomButton,
+    PageBody,
+  },
+  data() {
+    return {
+      currentTabIndex: 0,
+    };
   },
   methods: {
     handleChangeTab(index: Number) {
@@ -199,9 +184,7 @@ export default defineComponent({
 .content {
   display: flex;
   flex-direction: column;
-  margin: auto;
-  width: 120rem;
-  max-width: 100%;
+  padding: 6rem 0;
   .product {
     display: flex;
     width: 100%;
@@ -216,19 +199,32 @@ export default defineComponent({
     }
     .product-desc {
       width: 46%;
+      .single-product-category {
+        font-size: $--font-base;
+      }
+      .product-title {
+        font-size: $--font-4xl;
+      }
       .breadcrumb {
         color: $--gray-color-900;
         margin-bottom: 1.5rem;
       }
-      .input-quantity {
-        padding: 0.5rem;
-        text-align: center;
-        transition: 0.2s linear;
-        &:focus {
-          border: 1px dotted $--black-color-800;
-        }
+      .price {
+        font-size: $--font-2xl;
+        font-weight: $--font-semibold;
       }
-      .btn-add {
+      .ast-shipping-text {
+        font-size: $--font-base;
+      }
+      .action-wrapper {
+        width: 100%;
+        .input-quantity {
+          width: 15%;
+          height: 4rem;
+        }
+        .btn-add {
+          width: 50%;
+        }
       }
     }
   }
@@ -284,7 +280,6 @@ export default defineComponent({
         }
         .elementor-widget-body {
           font-size: $--font-base;
-          color: $--primary-color-text;
           line-height: 3rem;
         }
       }

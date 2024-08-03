@@ -18,7 +18,7 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import TextField from './TextField.vue';
+import TextField from './molecules/TextField.vue';
 import IconRightArrow from '../icons/IconRightArrow.vue';
 
 export default defineComponent({
