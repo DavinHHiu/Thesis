@@ -16,7 +16,7 @@
                   type="number"
                   min="0"
                   max="10000"
-                  class="input-min"
+                  class="input-min h-[4.5rem]"
                   :value="minPrice"
                   @input="handleChangeMin"
                 />
@@ -29,7 +29,7 @@
                   type="number"
                   min="0"
                   max="10000"
-                  class="input-max"
+                  class="input-max h-[4.5rem]"
                   :value="maxPrice"
                   @input="handleChangeMax"
                 />
@@ -47,7 +47,6 @@
             <div class="range-input">
               <range-field
                 ref="rangeMin"
-                type="range"
                 class="range-min"
                 min="0"
                 max="10000"
@@ -56,7 +55,6 @@
               />
               <range-field
                 ref="rangeMax"
-                type="range"
                 class="range-max"
                 min="0"
                 max="10000"
@@ -69,7 +67,7 @@
             class="filter-price-action mt-[25px] flex items-center justify-between"
           >
             <custom-button
-              class="rounded-none px-[18px] uppercase"
+              class="px-[1.8rem] py-[1rem] uppercase"
               intent="primary"
               >Fitler</custom-button
             >
@@ -103,7 +101,7 @@
         <div class="side-best-sellers"></div>
       </div>
       <div class="list-products">
-        <grid-layout :columns="3" :gap="20">
+        <grid-layout wrap="wrap" align="start">
           <product-item />
           <product-item />
           <product-item />
@@ -126,7 +124,7 @@ import { defineComponent } from 'vue';
 import DefaultLayout from '../layouts/DefaultLayout.vue';
 import SearchBar from '../components/common/SearchBar.vue';
 import GridLayout from '../layouts/GridLayout.vue';
-import ProductItem from '../components/common/ProductItem.vue';
+import ProductItem from '../components/common/molecules/ProductItem.vue';
 import TextField from '../components/common/molecules/TextField.vue';
 import CustomButton from '../components/common/atomic/CustomButton.vue';
 import RangeField from '../components/common/RangeField.vue';
@@ -201,7 +199,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import '@/assets/variables';
-
 .body {
   margin: auto;
   display: flex;

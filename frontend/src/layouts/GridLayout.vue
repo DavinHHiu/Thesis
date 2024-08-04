@@ -17,12 +17,18 @@ export default defineComponent({
       type: String,
       default: 'nowrap',
     },
+    align: {
+      type: String,
+      default: 'center',
+    },
   },
   computed: {
     customStyle() {
       return {
         gap: this.gap + 'rem',
         flexWrap: this.wrap,
+        alignItems: this.align,
+        justifyContent: this.align,
       };
     },
   },

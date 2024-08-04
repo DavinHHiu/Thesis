@@ -23,6 +23,10 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import '@/assets/variables';
 
+.wrapper {
+  padding: 3.2rem 2.8rem;
+}
+
 .card {
   position: relative;
   background-color: $--second-color;
@@ -30,6 +34,7 @@ export default defineComponent({
 }
 .form {
   box-shadow: none;
+  background-color: $--second-color;
   border: 2px solid $--color-border;
 }
 </style>

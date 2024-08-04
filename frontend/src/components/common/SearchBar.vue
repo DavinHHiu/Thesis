@@ -66,13 +66,7 @@ export default defineComponent({
   gap: 0.7rem;
 
   .input-search {
-    line-height: 3rem;
     font-size: $--font-base;
-    border: 1px solid $--color-border;
-
-    &:focus {
-      border: 1px dotted $--black-color-800;
-    }
   }
 
   .item-right-container {

@@ -10,6 +10,6 @@ export default defineComponent({
   <RouterView />
 </template>
 
-<style>
+<style lang="scss">
 @import './assets/main.scss';
 </style>

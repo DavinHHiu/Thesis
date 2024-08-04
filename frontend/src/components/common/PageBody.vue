@@ -1,8 +1,6 @@
 <template>
   <div class="body-cont">
-    <div class="body-wp">
-      <slot></slot>
-    </div>
+    <slot></slot>
   </div>
 </template>
 
@@ -20,8 +18,5 @@ export default defineComponent({
   width: 120rem;
   max-width: 100%;
   padding-bottom: 8rem;
-  .body-wp {
-    padding: 1rem;
-  }
 }
 </style>

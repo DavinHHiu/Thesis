@@ -62,7 +62,7 @@ export default defineComponent({
     intent: {
       type: String,
       validator: (val: string) =>
-        ['primary', 'secondary', 'outline', 'text', 'danger'].includes(val),
+        ['primary', 'second', 'outline', 'text', 'danger'].includes(val),
       default: 'secondary',
       required: false,
     },
@@ -102,6 +102,7 @@ export default defineComponent({
   font-weight: $--font-semibold;
   font-size: $--font-sm;
   transition: all 0.2s linear;
+  gap: 0.5rem;
 }
 
 .outlinePrimary {
