@@ -1,0 +1,43 @@
+{
+  "name": "backoffice",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vue-tsc -b && vite build",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts",
+    "lint:fix": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs,.ts,.tsx,.cts --fix",
+    "format": "prettier . --write src/"
+  },
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "pinia": "^2.2.0",
+    "vue": "^3.4.31",
+    "vue-i18n": "^9.13.1",
+    "vue-router": "^4.4.2"
+  },
+  "devDependencies": {
+    "@intlify/unplugin-vue-i18n": "^4.0.0",
+    "@modyfi/vite-plugin-yaml": "^1.1.0",
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "@typescript-eslint/eslint-plugin": "^8.0.0",
+    "@typescript-eslint/parser": "^8.0.0",
+    "@vitejs/plugin-vue": "^5.0.5",
+    "@vue/cli-plugin-eslint": "^5.0.8",
+    "@vue/eslint-config-typescript": "^13.0.0",
+    "@vue/test-utils": "^2.4.6",
+    "eslint": "^8.57.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-vue": "^9.27.0",
+    "prettier": "^3.3.3",
+    "sass": "^1.77.8",
+    "tailwindcss": "^3.4.7",
+    "typescript": "^5.2.2",
+    "vite": "^5.3.4",
+    "vitest": "^2.0.5",
+    "vue-tsc": "^2.0.24"
+  }
+}
