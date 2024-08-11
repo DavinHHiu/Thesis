@@ -1,0 +1,92 @@
+//Colors
+$--black-color-800: #333;
+$--black-color-900: #000;
+
+$--white-color-900: #fff;
+
+$--gray-color-100: #f2f2f2;
+$--gray-color-200: #e2e2e2;
+$--gray-color-300: #d2d2d2;
+$--gray-color-400: #c2c2c2;
+$--gray-color-500: #b2b2b2;
+$--gray-color-600: #a2a2a2;
+$--gray-color-700: #929292;
+$--gray-color-800: #828282;
+$--gray-color-900: #727272;
+$--dark-gray: #54595f;
+
+$--color-disabled: #c3c3c6;
+$--color-info: #00a5c2;
+$--color-danger: #ff4238;
+$--color-warning: #f58700;
+$--color-success: #00bd5e;
+
+$--color-blue: #0084d6;
+$--color-red: #ff0000;
+$--color-yellow: #f6fb7a;
+$--color-pink: #f7b5ca;
+
+$--color-valid: #69bf29;
+$--color-invalid: #d65d67;
+
+//Alpha colors
+$--black-alpha-100: rgb(0, 0, 0, 1);
+$--black-alpha-90: rgb(0, 0, 0, 0.9);
+$--black-alpha-80: rgb(0, 0, 0, 0.8);
+$--black-alpha-70: rgb(0, 0, 0, 0.7);
+$--black-alpha-60: rgb(0, 0, 0, 0.6);
+$--black-alpha-50: rgb(0, 0, 0, 0.5);
+$--black-alpha-40: rgb(0, 0, 0, 0.4);
+$--black-alpha-30: rgb(0, 0, 0, 0.3);
+$--black-alpha-20: rgb(0, 0, 0, 0.2);
+$--black-alpha-10: rgb(0, 0, 0, 0.07);
+
+$--white-alpha-100: rgb(255, 255, 255, 1);
+$--white-alpha-90: rgb(255, 255, 255, 0.9);
+$--white-alpha-80: rgb(255, 255, 255, 0.8);
+$--white-alpha-70: rgb(255, 255, 255, 0.7);
+$--white-alpha-60: rgb(255, 255, 255, 0.6);
+$--white-alpha-50: rgb(255, 255, 255, 0.5);
+$--white-alpha-40: rgb(255, 255, 255, 0.4);
+$--white-alpha-30: rgb(255, 255, 255, 0.3);
+$--white-alpha-20: rgb(255, 255, 255, 0.2);
+$--white-alpha-10: rgb(255, 255, 255, 0.1);
+
+//Common
+$--primary: $--black-color-900;
+$--white: $--white-color-900;
+$--dark-alt: $--gray-color-200;
+$--light: #f1f5f9;
+
+$--text-color: $--black-color-900;
+$--background-color: $--black-alpha-10;
+
+$--sidebar-width: 300px;
+$--header-height: 64px;
+
+// Box shadows
+$--shadow-x: 0 1px 20px 2px $--dark-alt;
+$--shadow-y: 1px 0 20px 2px $--dark-alt;
+$--shadow: 1px 1px 20px 2px $--dark-alt;
+
+//Font sizes
+$--font-3xs: 1.1rem;
+$--font-2xs: 1.2rem;
+$--font-xs: 1.3rem;
+$--font-sm: 1.4rem;
+$--font-base: 1.6rem;
+$--font-lg: 1.8rem;
+$--font-xl: 2rem;
+$--font-2xl: 2.4rem;
+$--font-3xl: 2.6rem;
+$--font-4xl: 3rem;
+$--font-5xl: 3.6rem;
+$--font-6xl: 4rem;
+$--font-7xl: 4.8rem;
+$--font-8xl: 6rem;
+$--font-9xl: 6.6rem;
+
+//Font weights
+$--font-bold: 600;
+$--font-semibold: 500;
+$--font-normal: 400;
