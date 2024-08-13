@@ -2,7 +2,7 @@
   <main-layout>
     <page-title title="Home page" />
     <page-body>
-      <card>Hello</card>
+      <card>{{ $t("home.me.again") }}</card>
     </page-body>
   </main-layout>
 </template>
