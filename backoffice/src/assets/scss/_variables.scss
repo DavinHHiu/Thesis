@@ -90,3 +90,20 @@ $--font-9xl: 6.6rem;
 $--font-bold: 600;
 $--font-semibold: 500;
 $--font-normal: 400;
+
+$tooltip-font-size: $--font-sm;
+$tooltip-max-width: 200px;
+$tooltip-color: $--white;
+$tooltip-bg: $--primary;
+$tooltip-border-radius: 4px;
+$tooltip-opacity: 0.9;
+$tooltip-padding-y: 2px * 0.25;
+$tooltip-padding-x: 2px * 0.5;
+$tooltip-margin: 0;
+
+$tooltip-arrow-width: 0.8rem;
+$tooltip-arrow-height: 0.4rem;
+$tooltip-arrow-color: $tooltip-bg;
+
+// Line height
+$line-height-base: 1.6 !default;

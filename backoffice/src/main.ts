@@ -5,7 +5,7 @@ import "@/assets/css/tailwind.css";
 import "@/assets/scss/main.scss";
 // import yamlData from "@/locales/en.yaml";
 import i18n from "@/utils/i18n";
-// import "bootstrap/dist/css/bootstrap.css";
+// import "bootstrap/dist/css/bootstrap.rtl.css";
 import { createPinia } from "pinia";
 import { createApp } from "vue";
 

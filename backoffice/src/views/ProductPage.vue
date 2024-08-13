@@ -31,6 +31,11 @@
               <td>15.00$</td>
               <td>22-08-2024</td>
               <td>Processing</td>
+              <td class="action-wrap">
+                <ellipsis-dropdown
+                  :dropdown-list="['Action1', 'Action2', 'Action3']"
+                />
+              </td>
             </tr>
           </template>
         </tbody>
@@ -42,6 +47,9 @@
 
 <script lang="ts">
 import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import Alert from "@/components/common/molecules/Alert.vue";
+import EllipsisDropdown from "@/components/common/molecules/EllipsisDropdown.vue";
+import Modal from "@/components/common/molecules/Modal.vue";
 import PagingNumber from "@/components/common/molecules/PagingNumber.vue";
 import Card from "@/components/common/templates/Card.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
@@ -59,11 +67,19 @@ export default defineComponent({
     PageBody,
     PagingNumber,
     PageTitle,
+    Modal,
+    Alert,
+    EllipsisDropdown,
   },
   data() {
     return {
       curPage: 5,
     };
+  },
+  methods: {
+    handleAction() {
+      console.log("Action clicked");
+    },
   },
   computed: {
     paging() {
@@ -104,6 +120,10 @@ table {
       text-align: center;
       border-top: 1px solid $--gray-color-400;
     }
+  }
+  .action-wrap {
+    width: 1rem;
+    color: $--gray-color-500;
   }
 }
 </style>

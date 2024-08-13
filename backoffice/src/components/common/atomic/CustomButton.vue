@@ -56,7 +56,7 @@ export default defineComponent({
   font-weight: $--font-bold;
   border-radius: 0.4rem;
   padding: 0.8rem 1.2rem;
-  min-width: 10rem;
+  border: 1px solid $--primary;
   gap: 0.3rem;
 }
 
@@ -71,9 +71,15 @@ export default defineComponent({
 }
 
 .p-outline {
-  outline: 1px solid $--dark-gray;
+  border: 1px solid $--dark-gray;
   color: $--dark-gray;
   background-color: $--white;
+}
+
+.none {
+  border: none;
+  background-color: transparent;
+  color: inherit;
 }
 
 .rounded {
