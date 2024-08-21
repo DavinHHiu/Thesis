@@ -22,14 +22,22 @@ class ProductBase(models.Model, CreateAndUpdateModelMixin):
     cover = models.ImageField(_("product cover"))
     categories = models.ManyToManyField(
         to="api.SubCategory",
-        blank=True,
         verbose_name=_("product categories"),
     )
 
+    class Meta:
+        abstract = True
+
 
 class Product(ProductBase):
-    size = models.ForeignKey(to="ProductAttribute", on_delete=models.CASCADE)
-    color = models.ForeignKey(to="ProductAttribute", on_delete=models.CASCADE)
+    size = models.ForeignKey(
+        to="api.ProductAttribute", on_delete=models.CASCADE, related_name="product_size"
+    )
+    color = models.ForeignKey(
+        to="api.ProductAttribute",
+        on_delete=models.CASCADE,
+        related_name="product_color",
+    )
     sku = models.CharField(_("product sku"), max_length=255)
     price = models.FloatField(_("product price"))
     quantity = models.IntegerField(_("product quantity"))

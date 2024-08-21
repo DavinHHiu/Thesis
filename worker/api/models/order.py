@@ -6,7 +6,7 @@ from api.models.mixins import CreateAndUpdateModelMixin
 
 class OrderItem(models.Model, CreateAndUpdateModelMixin):
     id = models.UUIDField(_("order item id"), primary_key=True)
-    order = models.ForeignKey(to="api.Order", on_delete=models.CASCADE)
+    order = models.ForeignKey(to="api.OrderDetail", on_delete=models.CASCADE)
     product = models.ForeignKey(to="api.Product", on_delete=models.CASCADE)
     quantity = models.IntegerField(_("product quantity"))
 

@@ -7,7 +7,7 @@ from api.models.mixins import CreateAndUpdateModelMixin
 class Shipment(models.Model, CreateAndUpdateModelMixin):
     id = models.BigAutoField(_("shipment id"), primary_key=True)
     order = models.ForeignKey(
-        to="api.Order", on_delete=models.CASCADE, verbose_name=_("order")
+        to="api.OrderDetail", on_delete=models.CASCADE, verbose_name=_("order")
     )
     shipping_method = models.CharField(_("shipping method"), max_length=255)
     shipping_fee = models.FloatField(_("shipping fee"))

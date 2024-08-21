@@ -17,7 +17,7 @@ class Category(models.Model, CreateAndUpdateModelMixin):
 class SubCategory(models.Model, CreateAndUpdateModelMixin):
     id = models.BigIntegerField(_("subcategory id"), primary_key=True)
     category = models.ForeignKey(
-        to="Category",
+        to="api.Category",
         on_delete=models.SET_NULL,
         null=True,
         verbose_name=_("parent category"),
