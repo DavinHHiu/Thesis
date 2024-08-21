@@ -2,8 +2,26 @@ from rest_framework import serializers
 
 from api.models import User
 
-class UserSerializer(serializers.Serializer):
+
+class UserSerializer(serializers.ModelSerializer):
+    id = serializers.UUIDField()
+    avatar = serializers.ImageField()
+    first_name = serializers.CharField()
+    last_name = serializers.CharField()
+    email = serializers.EmailField()
+    password = serializers.CharField()
+    birth_of_date = serializers.DateField()
+    tel = serializers.CharField()
+
     class Meta:
         model = User
-
-    id = serializers.UUIDField()
+        fields = [
+            "id",
+            "avatar",
+            "first_name",
+            "last_name",
+            "email",
+            "password",
+            "birth_of_date",
+            "tel",
+        ]
