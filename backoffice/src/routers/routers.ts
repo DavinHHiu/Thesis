@@ -1,21 +1,23 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-const Home = () => import('@/views/Home.vue');
-const ProductPage = () => import('@/views/ProductPage.vue');
-
+const BaseView = () => import("@/views/BaseView.vue");
+const Home = () => import("@/views/Home.vue");
+const ProductView = () => import("@/views/ProductView.vue");
 
 const router = createRouter({
-    history: createWebHistory(),
-    routes: [
+  history: createWebHistory(),
+  routes: [
+    {
+      path: "/",
+      component: BaseView,
+      children: [
         {
-            path: '/',
-            component: Home,
+          path: "products",
+          component: ProductView,
         },
-        {
-            path: '/products',
-            component: ProductPage,
-        }
-    ]
+      ],
+    },
+  ],
 });
 
 export default router;

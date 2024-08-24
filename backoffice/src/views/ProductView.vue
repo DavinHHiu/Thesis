@@ -1,48 +1,46 @@
 <template>
-  <main-layout>
-    <page-title title="Product page" />
-    <page-body>
-      <div class="action-wrap flex justify-between">
-        <custom-button intent="p-outline">
-          <span class="material-icons">filter_alt</span>
-          Filter
-        </custom-button>
-        <custom-button :rounded="true">
-          <span class="material-icons">add</span>
-          Add
-        </custom-button>
-      </div>
+  <page-title title="Products" />
+  <page-body>
+    <div class="action-wrap flex justify-between">
+      <custom-button intent="p-outline">
+        <span class="material-icons">filter_alt</span>
+        Filter
+      </custom-button>
+      <custom-button :rounded="true">
+        <span class="material-icons">add</span>
+        Add
+      </custom-button>
+    </div>
 
-      <table class="w-full mt-[2rem]">
-        <thead>
-          <tr>
-            <th>No.</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Delivery date</th>
-            <th>Status</th>
+    <table class="w-full mt-[2rem] overflow-hidden">
+      <thead>
+        <tr>
+          <th>No.</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Delivery date</th>
+          <th>Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        <template v-for="(index, x) in 16" :key="index">
+          <tr :class="{ odd: index % 2 == 1 }">
+            <td>{{ index }}</td>
+            <td>Brown T-shirt</td>
+            <td>15.00$</td>
+            <td>22-08-2024</td>
+            <td>Processing</td>
+            <td class="action-wrap">
+              <ellipsis-dropdown
+                :dropdown-list="['Action1', 'Action2', 'Action3']"
+              />
+            </td>
           </tr>
-        </thead>
-        <tbody>
-          <template v-for="(index, x) in 7" :key="index">
-            <tr :class="{ odd: index % 2 == 1 }">
-              <td>{{ index }}</td>
-              <td>Brown T-shirt</td>
-              <td>15.00$</td>
-              <td>22-08-2024</td>
-              <td>Processing</td>
-              <td class="action-wrap">
-                <ellipsis-dropdown
-                  :dropdown-list="['Action1', 'Action2', 'Action3']"
-                />
-              </td>
-            </tr>
-          </template>
-        </tbody>
-      </table>
-      <paging-number :paging="paging" :cur-page="curPage" />
-    </page-body>
-  </main-layout>
+        </template>
+      </tbody>
+    </table>
+    <paging-number :paging="paging" :cur-page="curPage" />
+  </page-body>
 </template>
 
 <script lang="ts">
@@ -95,7 +93,6 @@ export default defineComponent({
 table {
   background-color: $--white;
   border-radius: 0.4rem;
-  overflow: hidden;
 
   th,
   td {
