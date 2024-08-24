@@ -3,7 +3,7 @@
     :class="{ 'is-expanded': is_expanded }"
     class="flex flex-col overflow-hidden p-[1.6rem]"
   >
-    <div class="menu-toggle-wrap relative mb-[1.6rem]">
+    <div class="menu-toggle-wrap flex justify-end relative top-0 mb-[1.6rem]">
       <button class="menu-toggle" @click="toggleMenu">
         <span class="material-icons">keyboard_double_arrow_right</span>
       </button>
@@ -28,7 +28,7 @@
       </router-link>
     </div>
 
-    <div class="flex"></div>
+    <div class="flex-1"></div>
 
     <div class="menu">
       <router-link class="button" to="/settings">
@@ -64,23 +64,20 @@ export default defineComponent({
 
 aside {
   width: calc(3.2rem + 32px);
-  min-height: calc(100vh - $--header-height);
+  height: calc(100vh - $--header-height);
   margin-top: $--header-height;
   background-color: $--white;
   color: $--primary;
   transition: 0.2s ease-out;
 
   .menu-toggle-wrap {
-    display: flex;
-    justify-content: flex-end;
-    top: 0;
     transition: 0.2s ease-out;
 
     .menu-toggle {
       transition: 0.2 ease-out;
       .material-icons {
         font-size: 3.2rem;
-        color: $--primary;
+        color: $--gray-color-300;
         transition: 0.2s ease-out;
 
         &:hover {
@@ -109,18 +106,16 @@ aside {
 
       .material-icons {
         font-size: 3.2rem;
-        color: $--primary;
+        color: $--gray-color-500;
         transition: 0.2s ease-out;
       }
 
       .text {
-        color: $--primary;
+        color: $--gray-color-500;
       }
 
       &:hover,
       &.router-link-exact-active {
-        background-color: $--dark-alt;
-
         .material-icons,
         .text {
           color: $--primary;
@@ -128,12 +123,9 @@ aside {
       }
       &.router-link-exact-active {
         border-right: 5px solid $--primary;
+        background-color: $--gray-color-200;
       }
     }
-  }
-
-  .flex {
-    flex: 1;
   }
 
   &.is-expanded {
