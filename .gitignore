@@ -1,6 +1,7 @@
 .venv
 db.sqlite3
 migrations
-
 poetry.lock
 __pycache__
+
+package-lock.json
