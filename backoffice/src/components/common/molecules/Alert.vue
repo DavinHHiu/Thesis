@@ -2,7 +2,7 @@
   <div class="alert alert-warning alert-dismissible fade show" role="alert">
     <slot />
     <button
-      class="btn-close material-icons"
+      class="btn-close material-symbols-outlined"
       data-bs-dismiss="alert"
       aria-label="Close"
     >

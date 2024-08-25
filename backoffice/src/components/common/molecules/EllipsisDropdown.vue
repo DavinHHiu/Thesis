@@ -1,5 +1,7 @@
 <template>
-  <span class="material-icons elipsis-dropdown" data-bs-toggle="dropdown"
+  <span
+    class="material-symbols-outlined elipsis-dropdown"
+    data-bs-toggle="dropdown"
     >more_vert</span
   >
   <ul class="dropdown-menu">

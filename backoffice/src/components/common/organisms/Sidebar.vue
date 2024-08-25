@@ -5,25 +5,27 @@
   >
     <div class="menu-toggle-wrap flex justify-end relative top-0 mb-[1.6rem]">
       <button class="menu-toggle" @click="toggleMenu">
-        <span class="material-icons">keyboard_double_arrow_right</span>
+        <span class="material-symbols-outlined"
+          >keyboard_double_arrow_right</span
+        >
       </button>
     </div>
 
     <div class="menu">
       <router-link class="button" to="/">
-        <span class="material-icons">home</span>
+        <span class="material-symbols-outlined">home</span>
         <span class="text">Home</span>
       </router-link>
       <router-link class="button" to="/products">
-        <span class="material-icons">inventory_2</span>
+        <span class="material-symbols-outlined">inventory_2</span>
         <span class="text">Product</span>
       </router-link>
       <router-link class="button" to="/users">
-        <span class="material-icons">group</span>
+        <span class="material-symbols-outlined">group</span>
         <span class="text">User</span>
       </router-link>
       <router-link class="button" to="/orders">
-        <span class="material-icons">description</span>
+        <span class="material-symbols-outlined">description</span>
         <span class="text">Order</span>
       </router-link>
     </div>
@@ -32,7 +34,7 @@
 
     <div class="menu">
       <router-link class="button" to="/settings">
-        <span class="material-icons">settings</span>
+        <span class="material-symbols-outlined">settings</span>
         <span class="text">Settings</span>
       </router-link>
     </div>
@@ -75,7 +77,7 @@ aside {
 
     .menu-toggle {
       transition: 0.2 ease-out;
-      .material-icons {
+      .material-symbols-outlined {
         font-size: 3.2rem;
         color: $--gray-color-300;
         transition: 0.2s ease-out;
@@ -104,7 +106,7 @@ aside {
       padding: 0.8rem 1.6rem;
       transition: 0.2s ease-out;
 
-      .material-icons {
+      .material-symbols-outlined {
         font-size: 3.2rem;
         color: $--gray-color-500;
         transition: 0.2s ease-out;
@@ -116,7 +118,7 @@ aside {
 
       &:hover,
       &.router-link-exact-active {
-        .material-icons,
+        .material-symbols-outlined,
         .text {
           color: $--primary;
         }
@@ -142,7 +144,7 @@ aside {
     }
 
     .button {
-      .material-icons {
+      .material-symbols-outlined {
         margin-right: 1.6rem;
       }
     }

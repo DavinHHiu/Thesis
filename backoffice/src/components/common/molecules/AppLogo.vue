@@ -1,6 +1,6 @@
 <template>
   <div class="logo-wrap h-full flex items-center">
-    <span class="material-icons flex items-center">sell</span>
+    <span class="material-symbols-outlined flex items-center">sell</span>
     <span class="app-name">Price tag</span>
   </div>
 </template>

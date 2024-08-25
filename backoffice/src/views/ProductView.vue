@@ -3,11 +3,11 @@
   <page-body>
     <div class="action-wrap flex justify-between">
       <custom-button intent="p-outline">
-        <span class="material-icons">filter_alt</span>
+        <span class="material-symbols-outlined">filter_alt</span>
         Filter
       </custom-button>
       <custom-button :rounded="true">
-        <span class="material-icons">add</span>
+        <span class="material-symbols-outlined">add</span>
         Add
       </custom-button>
     </div>
@@ -52,7 +52,6 @@ import PagingNumber from "@/components/common/molecules/PagingNumber.vue";
 import Card from "@/components/common/templates/Card.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
-import MainLayout from "@/layouts/MainLayout.vue";
 import { computePaging } from "@/utils/utils";
 import { defineComponent } from "vue";
 
@@ -61,7 +60,6 @@ export default defineComponent({
   components: {
     Card,
     CustomButton,
-    MainLayout,
     PageBody,
     PagingNumber,
     PageTitle,
