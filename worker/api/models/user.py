@@ -1,3 +1,5 @@
+import uuid
+
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.translation import gettext_lazy as _
@@ -29,7 +31,7 @@ class Address(models.Model, CreateAndUpdateModelMixin):
 
 
 class User(AbstractUser, CreateAndUpdateModelMixin):
-    id = models.UUIDField(_("user id"), primary_key=True)
+    id = models.UUIDField(_("user id"), primary_key=True, default=uuid.uuid4())
     avatar = models.ImageField(_("user avatar"))
     first_name = models.CharField(
         _("first name"),

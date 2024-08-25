@@ -1,11 +1,11 @@
 from rest_framework import serializers
 
 from api.models import Payment
-from api.v1.serializers import OrderDetailSerializer
+
+from .order import OrderDetailSerializer
 
 
 class PaymentSerializer(serializers.ModelSerializer):
-    id = serializers.UUIDField()
     order = OrderDetailSerializer()
     payment_method = serializers.CharField()
     status = serializers.CharField()
@@ -13,4 +13,4 @@ class PaymentSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Payment
-        fields = ["id", "order" "payment_method", "status", "total_amount"]
+        fields = ["order" "payment_method", "status", "total_amount"]
