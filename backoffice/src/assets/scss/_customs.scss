@@ -192,6 +192,10 @@ button {
   background: none;
 }
 
+input {
+  outline: none;
+}
+
 .tooltip {
   --bs-tooltip-zindex: 1080;
   --bs-tooltip-max-width: 200px;

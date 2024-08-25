@@ -1,5 +1,6 @@
 .venv
-.db
+db.sqlite3
+migrations
 
 poetry.lock
 __pycache__

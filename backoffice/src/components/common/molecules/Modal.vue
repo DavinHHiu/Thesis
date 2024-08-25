@@ -10,7 +10,7 @@
         <div class="modal-header">
           <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
           <span
-            class="material-icons btn-close"
+            class="material-symbols-outlined btn-close"
             data-bs-dismiss="modal"
             aria-label="Close"
             >close
