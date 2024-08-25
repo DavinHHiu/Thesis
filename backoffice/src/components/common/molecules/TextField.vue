@@ -1,7 +1,10 @@
 <template>
-  <div class="input-wp">
+  <div
+    class="input-wp"
+    :class="{ 'has-input': (inputValue != '') | (value != '') }"
+  >
     <custom-label v-if="label">{{ label }}</custom-label>
-    <custom-input />
+    <custom-input :value="value" @input="handleInput" />
   </div>
 </template>
 
@@ -12,6 +15,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "TextField",
+  emits: ["update:modelValue"],
   components: {
     CustomLabel,
     CustomInput,
@@ -20,6 +24,22 @@ export default defineComponent({
     label: {
       type: String,
       required: false,
+    },
+    value: {
+      type: String,
+      default: "",
+    },
+  },
+  data() {
+    return {
+      inputValue: "",
+    };
+  },
+  methods: {
+    handleInput(event: any) {
+      const value = event.target.value;
+      this.inputValue = value;
+      this.$emit("update:modelValue", this.inputValue);
     },
   },
 });
@@ -30,12 +50,14 @@ export default defineComponent({
 
 .input-wp {
   position: relative;
+  &.has-input,
   &:focus-within {
     label {
-      top: -1rem;
+      top: -1.25rem;
       left: 0.2rem;
       color: $--text-color;
-      font-size: $--font-xs;
+      font-size: $--font-sm;
+      font-weight: $--font-semibold;
     }
   }
 }

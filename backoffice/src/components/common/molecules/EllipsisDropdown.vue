@@ -6,23 +6,31 @@
   >
   <ul class="dropdown-menu">
     <li
-      class="dropdown-item"
       v-for="(x, index) in dropdownList"
+      class="dropdown-item"
+      @click="$emit('action', { action: x.title, currentIndex })"
+      data-bs-toggle="modal"
+      :data-bs-target="x.action"
       :key="index"
-      v-t="x"
+      v-t="x.title"
     ></li>
   </ul>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { DropdownItems } from "@/types/backoffice";
+import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
   name: "EllipsisDropdown",
+  emits: ["action"],
   props: {
     dropdownList: {
-      type: Array,
+      type: Array as PropType<DropdownItems[]>,
       required: true,
+    },
+    currentIndex: {
+      type: Number,
     },
   },
 });

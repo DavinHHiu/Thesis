@@ -2,9 +2,7 @@ from pathlib import Path
 
 BASE_DIR = Path(__file__).resolve().parent.parent
 
-SECRET_KEY = (
-    "django-insecure-l=z$v=v#_!qz^-i*1-q37mw1rv&9^hzo5r@ilw5yj^vc1&3*a#"
-)
+SECRET_KEY = "django-insecure-l=z$v=v#_!qz^-i*1-q37mw1rv&9^hzo5r@ilw5yj^vc1&3*a#"
 
 DEBUG = True
 
@@ -28,6 +26,7 @@ FIRST_PARTY_APPS = [
 
 THIRD_PARTY_APPS = [
     "rest_framework",
+    "corsheaders",
 ]
 
 INSTALLED_APPS += FIRST_PARTY_APPS + THIRD_PARTY_APPS
@@ -43,6 +42,13 @@ MIDDLEWARE = [
     "django.middleware.clickjacking.XFrameOptionsMiddleware",
 ]
 
+THIRD_PARTY_MIDDLEWARE = [
+    "corsheaders.middleware.CorsMiddleware",
+]
+
+MIDDLEWARE += THIRD_PARTY_MIDDLEWARE
+
+CORS_ALLOW_ALL_ORIGINS = True
 
 ROOT_URLCONF = "worker.urls"
 
