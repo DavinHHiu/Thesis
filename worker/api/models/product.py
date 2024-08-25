@@ -1,3 +1,5 @@
+import uuid
+
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
@@ -5,7 +7,7 @@ from api.models.mixins import CreateAndUpdateModelMixin
 
 
 class ProductAttribute(models.Model, CreateAndUpdateModelMixin):
-    id = models.BigIntegerField(_("product attribute id"), primary_key=True)
+    id = models.BigAutoField(_("product attribute id"), primary_key=True)
     type = models.CharField(_("product attribute type"), max_length=255)
     value = models.CharField(_("product attribute value"), max_length=255)
 
@@ -15,7 +17,7 @@ class ProductAttribute(models.Model, CreateAndUpdateModelMixin):
 
 
 class ProductBase(models.Model, CreateAndUpdateModelMixin):
-    id = models.UUIDField(_("product id"), primary_key=True)
+    id = models.UUIDField(_("product id"), primary_key=True, default=uuid.uuid4())
     name = models.CharField(_("product name"), max_length=255)
     description = models.TextField(_("product description"))
     summary = models.TextField(_("product summary"))

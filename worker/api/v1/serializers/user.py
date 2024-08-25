@@ -4,7 +4,6 @@ from api.models import User
 
 
 class UserSerializer(serializers.ModelSerializer):
-    id = serializers.UUIDField()
     avatar = serializers.ImageField()
     first_name = serializers.CharField()
     last_name = serializers.CharField()
@@ -16,7 +15,6 @@ class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
         fields = [
-            "id",
             "avatar",
             "first_name",
             "last_name",

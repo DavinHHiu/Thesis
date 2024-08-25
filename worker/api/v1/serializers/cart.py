@@ -2,33 +2,24 @@ from rest_framework import serializers
 
 from api.models import Cart, CartItem
 
+from .product import ProductSerializer
+from .user import UserSerializer
+
 
 class CartSerializer(serializers.ModelSerializer):
-    id = serializers.UUIDField()
-    user = serializers.SerializerMethodField()
+    user = UserSerializer()
     total = serializers.IntegerField()
 
     class Meta:
         model = Cart
-        fields = ["id", "user", "total"]
-
-    def get_user(self, obj):
-        from api.v1.serializers import UserSerializer
-
-        return UserSerializer(obj.user).data
+        fields = ["user", "total"]
 
 
 class CartItemSerializer(serializers.ModelSerializer):
-    id = serializers.UUIDField()
     cart = CartSerializer()
-    product = serializers.SerializerMethodField()
+    product = ProductSerializer()
     quantity = serializers.IntegerField()
 
     class Meta:
         model = CartItem
-        fields = ["id", "cart", "product", "quantity"]
-
-    def get_product(self, obj):
-        from api.v1.serializers import ProductSerializer
-
-        return ProductSerializer(obj.product).data
+        fields = ["cart", "product", "quantity"]
