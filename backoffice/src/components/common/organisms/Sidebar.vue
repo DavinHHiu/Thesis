@@ -12,6 +12,14 @@
     </div>
 
     <div class="menu">
+      <!-- <router-link
+        v-for="(item, index) in $t('backofficeSidebar')"
+        classs="button"
+        :to="item"
+      >
+        <span class="material-symbols-outlined">{{ item.icon }}</span>
+        <span class="text">{{ item }}</span>
+      </router-link> -->
       <router-link class="button" to="/">
         <span class="material-symbols-outlined">home</span>
         <span class="text">Home</span>
@@ -19,6 +27,10 @@
       <router-link class="button" to="/products">
         <span class="material-symbols-outlined">inventory_2</span>
         <span class="text">Product</span>
+      </router-link>
+      <router-link class="button" to="/product-attributes">
+        <span class="material-symbols-outlined">edit_attributes</span>
+        <span class="text">Product Attributes</span>
       </router-link>
       <router-link class="button" to="/users">
         <span class="material-symbols-outlined">group</span>

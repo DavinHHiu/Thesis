@@ -196,6 +196,40 @@ input {
   outline: none;
 }
 
+table {
+  background-color: $--white;
+  border-radius: 0.4rem;
+
+  th,
+  td {
+    padding: 2rem 1rem;
+  }
+
+  .odd {
+    background-color: $--gray-color-200;
+  }
+
+  tbody {
+    tr {
+      transition: 0.2s ease-out;
+
+      &:hover {
+        cursor: pointer;
+        color: $--white;
+        background-color: $--dark-gray;
+      }
+    }
+    td {
+      text-align: center;
+      border-top: 1px solid $--gray-color-400;
+    }
+  }
+  .action-wrap {
+    width: 1rem;
+    color: $--gray-color-500;
+  }
+}
+
 .tooltip {
   --bs-tooltip-zindex: 1080;
   --bs-tooltip-max-width: 200px;
@@ -740,6 +774,8 @@ input {
 
 .modal-title {
   margin-bottom: 0;
+  font-size: $--font-lg;
+  font-weight: $--font-semibold;
   line-height: var(--bs-modal-title-line-height);
 }
 

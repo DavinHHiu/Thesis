@@ -6,12 +6,13 @@ from .category import SubCategorySerializer
 
 
 class ProductAttributeSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(required=False)
     type = serializers.CharField()
     value = serializers.CharField()
 
     class Meta:
         model = ProductAttribute
-        fields = ["type", "value"]
+        fields = ["id", "type", "value"]
 
 
 class ProductSerializer(serializers.ModelSerializer):
