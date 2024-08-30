@@ -52,7 +52,6 @@ export default defineComponent({
         reader.onload = (event: any) => {
           const uploadWrapper = this.$refs.uploadWrapper as HTMLDivElement;
           if (uploadWrapper) {
-            console.log(event.target.result);
             this.src = event.target.result;
             uploadWrapper.style.border = "none";
           }
