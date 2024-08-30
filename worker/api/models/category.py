@@ -5,7 +5,7 @@ from api.models.mixins import CreateAndUpdateModelMixin
 
 
 class Category(models.Model, CreateAndUpdateModelMixin):
-    id = models.BigIntegerField(_("category id"), primary_key=True)
+    id = models.BigAutoField(_("category id"), primary_key=True)
     name = models.CharField(_("category name"), max_length=255)
     description = models.TextField(_("category description"), blank=True, null=True)
 
@@ -15,7 +15,7 @@ class Category(models.Model, CreateAndUpdateModelMixin):
 
 
 class SubCategory(models.Model, CreateAndUpdateModelMixin):
-    id = models.BigIntegerField(_("subcategory id"), primary_key=True)
+    id = models.BigAutoField(_("subcategory id"), primary_key=True)
     category = models.ForeignKey(
         to="api.Category",
         on_delete=models.SET_NULL,

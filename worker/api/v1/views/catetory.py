@@ -1,4 +1,5 @@
-from rest_framework import viewsets
+from rest_framework import status, viewsets
+from rest_framework.response import Response
 
 from api.models import Category, SubCategory
 from api.v1.serializers import CategorySerializer, SubCategorySerializer
@@ -20,3 +21,10 @@ class SubCategoryViewSet(viewsets.ModelViewSet):
 
     queryset = SubCategory.objects.all()
     serializer_class = SubCategorySerializer
+
+    def create(self, request):
+        serializer = self.get_serializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
+        return Response(serializer.validated_data, status=status.HTTP_201_CREATED)
