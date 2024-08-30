@@ -1,5 +1,5 @@
 from .cart import CartItemViewSet, CartViewSet
-from .catetory import CategoryViewSet
+from .catetory import CategoryViewSet, SubCategoryViewSet
 from .order import OrderDetailViewSet, OrderItemViewSet
 from .payment import PaymentViewSet
 from .product import ProductAttributeViewSet, ProductViewSet
