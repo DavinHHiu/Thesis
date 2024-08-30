@@ -1,7 +1,7 @@
 <template>
   <div
     class="input-wp"
-    :class="{ 'has-input': (inputValue != '') | (value != '') }"
+    :class="{ 'has-input': inputValue != '' || value != '' }"
   >
     <custom-label v-if="label">{{ label }}</custom-label>
     <custom-input :value="value" @input="handleInput" />

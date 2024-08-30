@@ -196,6 +196,14 @@ input {
   outline: none;
 }
 
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
+}
+
 table {
   background-color: $--white;
   border-radius: 0.4rem;
