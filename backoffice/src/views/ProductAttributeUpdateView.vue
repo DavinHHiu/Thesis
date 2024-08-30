@@ -1,20 +1,20 @@
 <template>
   <page-title :title="pageTitle" />
   <page-body>
-    <card class="h-[32vh] flex">
-      <section class="info-wp flex flex-col justify-between">
+    <card class="flex">
+      <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
-          :value="attribute.type"
+          :value="productAttribute.type"
           label="Type"
-          @update:modelValue="(newValue) => (attribute.type = newValue)"
+          @update:modelValue="(newValue) => (productAttribute.type = newValue)"
         />
         <text-field
-          :value="attribute.value"
+          :value="productAttribute.value"
           label="Value"
-          @update:modelValue="(newValue) => (attribute.value = newValue)"
+          @update:modelValue="(newValue) => (productAttribute.value = newValue)"
         />
         <custom-button @click="handleUpdate" class="w-[15rem]">
-          {{ this.new ? "Add" : "Update" }}
+          {{ "Update" }}
         </custom-button>
       </section>
     </card>
@@ -27,10 +27,9 @@ import TextField from "@/components/common/molecules/TextField.vue";
 import Card from "@/components/common/templates/Card.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
-import { useProductAttributeStore } from "@/stores/useProductAttributeStore";
-import { mapActions } from "pinia";
+import { useProductAttributeStore } from "@/stores/productAttribute";
+import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
-import { useRouter } from "vue-router";
 
 export default defineComponent({
   name: "ProductAttributeUpdateView",
@@ -44,7 +43,6 @@ export default defineComponent({
   data() {
     return {
       new: true as boolean,
-      attribute: {} as ProductAttribute,
     };
   },
   methods: {
@@ -55,15 +53,15 @@ export default defineComponent({
     ]),
     handleUpdate() {
       if (this.new) {
-        const { type, value } = this.$data.attribute;
-        this.createProductAttribute({ type, value });
+        this.createProductAttribute(this.productAttribute);
       } else {
-        this.updateProductAttribute(this.attribute);
+        this.updateProductAttribute(this.productAttribute);
       }
       this.$router.push("/product-attributes");
     },
   },
   computed: {
+    ...mapState(useProductAttributeStore, ["productAttribute"]),
     pageTitle() {
       return this.new ? "Create Product Attribute" : "Update Product Attribute";
     },
@@ -71,10 +69,8 @@ export default defineComponent({
   async mounted() {
     const id = this.$router.currentRoute._value.params.id;
     if (id) {
-      const response = await this.retrieveProductAttribute(id);
-      this.attribute = response.data;
+      this.retrieveProductAttribute(id);
       this.new = false;
-      console.log(response);
     }
   },
 });
@@ -85,6 +81,6 @@ export default defineComponent({
 
 .info-wp {
   width: 100%;
-  padding: 2rem 4rem;
+  padding: 4rem;
 }
 </style>
