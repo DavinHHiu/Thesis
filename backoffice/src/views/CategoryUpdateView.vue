@@ -59,8 +59,7 @@ export default defineComponent({
     ]),
     handleUpdate() {
       if (this.new) {
-        const { name, description } = this.currentCategory;
-        this.createCategory({ name, description });
+        this.createCategory(this.currentCategory);
       } else {
         this.updateCategory(this.currentCategory);
       }

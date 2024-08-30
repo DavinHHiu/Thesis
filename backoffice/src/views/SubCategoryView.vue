@@ -104,8 +104,8 @@ export default defineComponent({
   computed: {
     ...mapState(useSubCategoryStore, ["subcategories"]),
   },
-  mounted() {
-    this.listSubCategories();
+  async mounted() {
+    await this.listSubCategories();
   },
 });
 </script>

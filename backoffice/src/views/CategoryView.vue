@@ -101,8 +101,8 @@ export default defineComponent({
   computed: {
     ...mapState(useCategory, ["categories"]),
   },
-  mounted() {
-    this.listCategories();
+  async mounted() {
+    await this.listCategories();
   },
 });
 </script>
