@@ -18,7 +18,7 @@
 </template>
 
 <script lang="ts">
-import { DropdownItems } from "@/types/backoffice";
+import { DropdownItem } from "@/types/backoffice";
 import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
@@ -26,7 +26,7 @@ export default defineComponent({
   emits: ["action"],
   props: {
     dropdownList: {
-      type: Array as PropType<DropdownItems[]>,
+      type: Array as PropType<DropdownItem[]>,
       required: true,
     },
     currentIndex: {
