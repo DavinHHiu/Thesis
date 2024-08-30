@@ -32,6 +32,10 @@
         <span class="material-symbols-outlined">edit_attributes</span>
         <span class="text">Product Attributes</span>
       </router-link>
+      <router-link class="button" to="/categories">
+        <span class="material-symbols-outlined">category</span>
+        <span class="text">Category</span>
+      </router-link>
       <router-link class="button" to="/users">
         <span class="material-symbols-outlined">group</span>
         <span class="text">User</span>
