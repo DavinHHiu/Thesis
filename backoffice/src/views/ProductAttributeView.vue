@@ -21,7 +21,7 @@
         </tr>
       </thead>
       <tbody>
-        <template v-for="(attribute, index) in attributes" :key="index">
+        <template v-for="(attribute, index) in productAttributes" :key="index">
           <tr :class="{ odd: index % 2 == 0 }">
             <td>{{ index + 1 }}</td>
             <td>{{ attribute.type }}</td>
@@ -52,9 +52,9 @@ import EllipsisDropdown from "@/components/common/molecules/EllipsisDropdown.vue
 import Modal from "@/components/common/molecules/Modal.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
-import { useProductAttributeStore } from "@/stores/useProductAttributeStore";
+import { useProductAttributeStore } from "@/stores/productAttribute";
 import { ProductAttribute } from "@/types/backoffice";
-import { mapActions } from "pinia";
+import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -68,7 +68,6 @@ export default defineComponent({
   },
   data() {
     return {
-      attributes: [] as ProductAttribute[],
       currentAction: "" as string,
       currentIndex: 0 as number,
     };
@@ -79,7 +78,7 @@ export default defineComponent({
       "destroyProductAttribute",
     ]),
     handleActions(obj: any) {
-      const attribute = this.attributes[obj.currentIndex];
+      const attribute = this.productAttributes[obj.currentIndex];
       if (obj.action === "Update") {
         this.$router.push({
           name: "product.attributes.update",
@@ -89,26 +88,23 @@ export default defineComponent({
       this.currentAction = obj.action;
       this.currentIndex = obj.currentIndex;
     },
-    async submitAction() {
+    submitAction() {
       const action = this.currentAction;
       if (action === "Delete") {
-        const attribute = this.attributes[
+        const attribute = this.productAttributes[
           this.currentIndex
         ] as ProductAttribute;
         if (attribute.id) {
-          const response = await this.destroyProductAttribute(attribute.id);
-          if (response && response.status === 204) {
-            this.attributes.splice(this.currentIndex, 1);
-          }
+          this.destroyProductAttribute(attribute.id);
         }
       }
     },
   },
-  async mounted() {
-    const response = await this.listProductAttributes();
-    if (response && response.status === 200) {
-      this.attributes = response.data;
-    }
+  computed: {
+    ...mapState(useProductAttributeStore, ["productAttributes"]),
+  },
+  mounted() {
+    this.listProductAttributes();
   },
 });
 </script>

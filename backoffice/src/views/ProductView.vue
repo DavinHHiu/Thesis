@@ -31,9 +31,7 @@
             <td>22-08-2024</td>
             <td>Processing</td>
             <td class="action-wrap">
-              <ellipsis-dropdown
-                :dropdown-list="['Action1', 'Action2', 'Action3']"
-              />
+              <ellipsis-dropdown :dropdown-list="[]" />
             </td>
           </tr>
         </template>
@@ -56,7 +54,7 @@ import { computePaging } from "@/utils/utils";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "ProductPage",
+  name: "ProductView",
   components: {
     Card,
     CustomButton,
@@ -87,38 +85,4 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
-
-table {
-  background-color: $--white;
-  border-radius: 0.4rem;
-
-  th,
-  td {
-    padding: 2rem 1rem;
-  }
-
-  .odd {
-    background-color: $--gray-color-200;
-  }
-
-  tbody {
-    tr {
-      transition: 0.2s ease-out;
-
-      &:hover {
-        cursor: pointer;
-        color: $--white;
-        background-color: $--dark-gray;
-      }
-    }
-    td {
-      text-align: center;
-      border-top: 1px solid $--gray-color-400;
-    }
-  }
-  .action-wrap {
-    width: 1rem;
-    color: $--gray-color-500;
-  }
-}
 </style>
