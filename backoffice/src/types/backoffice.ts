@@ -4,9 +4,14 @@ interface ProductAttribute {
   value: string;
 }
 
-interface DropdownItems {
+interface DropdownItem {
   title: string;
   action: string;
 }
 
-export { ProductAttribute, DropdownItems };
+interface OptionItem {
+  displayValue: string;
+  value: string;
+}
+
+export { DropdownItem, OptionItem, ProductAttribute };
