@@ -103,8 +103,8 @@ export default defineComponent({
   computed: {
     ...mapState(useProductAttributeStore, ["productAttributes"]),
   },
-  mounted() {
-    this.listProductAttributes();
+  async mounted() {
+    await this.listProductAttributes();
   },
 });
 </script>
