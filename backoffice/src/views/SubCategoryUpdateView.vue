@@ -36,7 +36,7 @@ import TextField from "@/components/common/molecules/TextField.vue";
 import Card from "@/components/common/templates/Card.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
-import { useCategory } from "@/stores/category";
+import { useCategoryStore } from "@/stores/category";
 import { useSubCategoryStore } from "@/stores/subcategory";
 import { OptionItem } from "@/types/backoffice";
 import { Category } from "@/types/worker";
@@ -60,7 +60,7 @@ export default defineComponent({
     };
   },
   methods: {
-    ...mapActions(useCategory, ["listCategories"]),
+    ...mapActions(useCategoryStore, ["listCategories"]),
     ...mapActions(useSubCategoryStore, [
       "createSubCategory",
       "retrieveSubCategory",
@@ -80,7 +80,7 @@ export default defineComponent({
     },
   },
   computed: {
-    ...mapState(useCategory, ["categories"]),
+    ...mapState(useCategoryStore, ["categories"]),
     ...mapState(useSubCategoryStore, ["subcategory"]),
     options(): OptionItem[] {
       return _.map(this.categories, (category) => {

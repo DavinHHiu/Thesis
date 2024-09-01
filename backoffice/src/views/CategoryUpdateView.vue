@@ -31,7 +31,7 @@ import UploadPreview from "@/components/common/molecules/UploadPreview.vue";
 import Card from "@/components/common/templates/Card.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
-import { useCategory } from "@/stores/category";
+import { useCategoryStore } from "@/stores/category";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
@@ -52,7 +52,7 @@ export default defineComponent({
     };
   },
   methods: {
-    ...mapActions(useCategory, [
+    ...mapActions(useCategoryStore, [
       "createCategory",
       "retrieveCategory",
       "updateCategory",
@@ -67,7 +67,7 @@ export default defineComponent({
     },
   },
   computed: {
-    ...mapState(useCategory, ["currentCategory"]),
+    ...mapState(useCategoryStore, ["currentCategory"]),
   },
   mounted() {
     const id = this.$router.currentRoute._value.params.id;
