@@ -33,6 +33,11 @@ const router = createRouter({
               path: "add",
               component: ProductUpdateView,
             },
+            {
+              path: "update/:id",
+              name: "product.update",
+              component: ProductUpdateView,
+            },
           ],
         },
         {

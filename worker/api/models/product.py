@@ -17,7 +17,7 @@ class ProductAttribute(models.Model, CreateAndUpdateModelMixin):
 
 
 class ProductBase(models.Model, CreateAndUpdateModelMixin):
-    id = models.UUIDField(_("product id"), primary_key=True, default=uuid.uuid4())
+    id = models.UUIDField(_("product id"), primary_key=True, default=uuid.uuid4)
     name = models.CharField(_("product name"), max_length=255)
     description = models.TextField(_("product description"))
     summary = models.TextField(_("product summary"))

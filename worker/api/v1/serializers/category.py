@@ -15,9 +15,9 @@ class CategorySerializer(serializers.ModelSerializer):
 
 class SubCategorySerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True, required=False)
-    category = CategorySerializer()
-    name = serializers.CharField()
-    description = serializers.CharField()
+    category = CategorySerializer(required=False)
+    name = serializers.CharField(required=False)
+    description = serializers.CharField(required=False)
 
     class Meta:
         model = SubCategory

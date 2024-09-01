@@ -1,9 +1,3 @@
-interface ProductAttribute {
-  id?: number;
-  type: string;
-  value: string;
-}
-
 interface DropdownItem {
   title: string;
   action: string;
@@ -14,4 +8,4 @@ interface OptionItem {
   value: string;
 }
 
-export { DropdownItem, OptionItem, ProductAttribute };
+export { DropdownItem, OptionItem };

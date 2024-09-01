@@ -23,7 +23,7 @@ export default defineComponent({
       required: false,
     },
     value: {
-      type: String,
+      type: [String, Number],
       default: "",
     },
   },

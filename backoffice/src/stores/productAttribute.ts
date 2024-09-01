@@ -1,5 +1,5 @@
 import consts from "@/consts/consts";
-import { ProductAttribute } from "@/types/backoffice";
+import { ProductAttribute } from "@/types/worker";
 import axios from "axios";
 import { defineStore } from "pinia";
 

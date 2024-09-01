@@ -230,6 +230,10 @@ table {
   background-color: $--white;
   border-radius: 0.4rem;
 
+  th {
+    font-weight: $--font-semibold;
+  }
+
   th,
   td {
     padding: 2rem 1rem;
