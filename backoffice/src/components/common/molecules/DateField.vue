@@ -1,7 +1,7 @@
 <template>
-  <div class="input-wp" :class="{ 'has-input': value != '' }">
-    <custom-label v-if="label">{{ label }}</custom-label>
-    <custom-input :value="value" @input="handleInput" />
+  <div class="input-wp" :class="{ 'has-input': value }">
+    <custom-label v-if="label" v-text="label" />
+    <custom-input type="date" :value="value" @input="handleInput" />
   </div>
 </template>
 
@@ -11,7 +11,7 @@ import CustomLabel from "../atomic/CustomLabel.vue";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "TextField",
+  name: "DateField",
   emits: ["update:modelValue"],
   components: {
     CustomLabel,
@@ -23,14 +23,14 @@ export default defineComponent({
       required: false,
     },
     value: {
-      type: String,
-      default: "",
+      type: Date,
+      default: new Date(),
     },
   },
   methods: {
-    handleInput(event: any) {
-      const value = event.target.value;
-      this.$emit("update:modelValue", value);
+    handleInput(event: Event) {
+      const target = event.target as HTMLInputElement;
+      this.$emit("update:modelValue", target.value);
     },
   },
 });
