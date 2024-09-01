@@ -4,5 +4,5 @@ from .order import OrderDetailSerializer, OrderItemSerializer
 from .payment import PaymentSerializer
 from .product import ProductAttributeSerializer, ProductSerializer
 from .shipment import ShipmentSerializer
-from .user import UserSerializer
+from .user import AddressSerializer, UserSerializer
 from .wishlist import WithListSerializer

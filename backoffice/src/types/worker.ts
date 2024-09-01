@@ -24,4 +24,14 @@ interface User {
   tel?: string;
 }
 
-export { Category, SubCategory, User };
+interface Address {
+  id?: number;
+  user: User;
+  title: string;
+  address_1: string;
+  address_2?: string;
+  zipcode?: string;
+  tel: string;
+}
+
+export { Address, Category, SubCategory, User };
