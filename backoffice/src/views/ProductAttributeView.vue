@@ -53,7 +53,7 @@ import Modal from "@/components/common/molecules/Modal.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
 import { useProductAttributeStore } from "@/stores/productAttribute";
-import { ProductAttribute } from "@/types/backoffice";
+import { ProductAttribute } from "@/types/worker";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 

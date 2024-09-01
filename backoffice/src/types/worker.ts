@@ -34,4 +34,24 @@ interface Address {
   tel: string;
 }
 
-export { Address, Category, SubCategory, User };
+interface ProductAttribute {
+  id?: number;
+  type: string;
+  value: string;
+}
+
+interface Product {
+  id?: string;
+  name: string;
+  description?: string;
+  summary?: string;
+  cover?: File | string;
+  categories: SubCategory[];
+  size: ProductAttribute;
+  color: ProductAttribute;
+  sku: string;
+  price: number;
+  quantity: number;
+}
+
+export { Address, Category, Product, ProductAttribute, SubCategory, User };
