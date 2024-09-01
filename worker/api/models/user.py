@@ -31,12 +31,13 @@ class Address(models.Model, CreateAndUpdateModelMixin):
 
 
 class User(AbstractUser, CreateAndUpdateModelMixin):
-    id = models.UUIDField(_("user id"), primary_key=True, default=uuid.uuid4())
+    id = models.UUIDField(_("user id"), primary_key=True, default=uuid.uuid4)
     avatar = models.ImageField(_("user avatar"))
     first_name = models.CharField(
         _("first name"),
         max_length=255,
         blank=True,
+        null=True,
     )
     last_name = models.CharField(_("last name"), max_length=255, blank=True)
     email = models.EmailField(
@@ -44,6 +45,7 @@ class User(AbstractUser, CreateAndUpdateModelMixin):
         max_length=255,
         unique=True,
     )
+    username = models.CharField(_("username"), max_length=255, blank=True, null=True)
     password = models.CharField(_("password"), max_length=255)
     birth_of_date = models.DateField(_("birth of date"))
     tel = models.CharField(_("telephone number"), max_length=15)

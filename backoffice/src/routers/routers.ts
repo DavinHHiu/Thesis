@@ -100,6 +100,11 @@ const router = createRouter({
               path: "add",
               component: UserUpdateView,
             },
+            {
+              path: "update/:id",
+              name: "user.update",
+              component: UserUpdateView,
+            },
           ],
         },
         {
