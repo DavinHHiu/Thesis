@@ -55,7 +55,7 @@ import EllipsisDropdown from "@/components/common/molecules/EllipsisDropdown.vue
 import Modal from "@/components/common/molecules/Modal.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
-import { useCategory } from "@/stores/category";
+import { useCategoryStore } from "@/stores/category";
 import { Category } from "@/types/worker";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
@@ -76,7 +76,7 @@ export default defineComponent({
     };
   },
   methods: {
-    ...mapActions(useCategory, ["listCategories", "destroyCategory"]),
+    ...mapActions(useCategoryStore, ["listCategories", "destroyCategory"]),
     handleActions(obj: any) {
       const category = this.categories[obj.currentIndex];
       if (obj.action === "Update") {
@@ -99,7 +99,7 @@ export default defineComponent({
     },
   },
   computed: {
-    ...mapState(useCategory, ["categories"]),
+    ...mapState(useCategoryStore, ["categories"]),
   },
   async mounted() {
     await this.listCategories();

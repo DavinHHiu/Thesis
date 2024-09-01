@@ -4,7 +4,7 @@ import axios from "axios";
 import _ from "lodash";
 import { defineStore } from "pinia";
 
-export const useCategory = defineStore("category", {
+export const useCategoryStore = defineStore("category", {
   state: () => {
     return {
       currentCategory: {} as Category,
