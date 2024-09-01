@@ -3,12 +3,13 @@
     ref="uploadWrapper"
     @click="handleUpload"
     class="upload-preview flex items-center justify-center h-[40rem]"
+    :class="intent"
   >
     <img
-      v-if="src !== ''"
+      v-if="imagePath !== ''"
       ref="imagePreview"
       class="image-preview"
-      :src="src"
+      :src="imagePath"
       alt=""
     />
     <span v-else @click="handleUpload" class="material-symbols-outlined"
@@ -25,14 +26,27 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { readFileAsDataURL } from "@/utils/files";
+import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
   name: "UploadPreview",
+  emits: ["update:modelValue"],
+  props: {
+    modelValue: {
+      type: [File, String] as PropType<File | String>,
+    },
+    intent: {
+      type: String,
+      default: "poster",
+      validator: (value: string) => {
+        return ["poster", "avatar"].includes(value);
+      },
+    },
+  },
   data() {
     return {
-      file: undefined as File | undefined,
-      src: "",
+      imagePath: "",
     };
   },
   methods: {
@@ -46,18 +60,27 @@ export default defineComponent({
     handlePreview(event: any) {
       const file = event.target.files[0];
       if (file) {
-        this.file = file;
-        const reader = new FileReader();
-
-        reader.onload = (event: any) => {
-          const uploadWrapper = this.$refs.uploadWrapper as HTMLDivElement;
-          if (uploadWrapper) {
-            this.src = event.target.result;
-            uploadWrapper.style.border = "none";
-          }
-        };
-
-        reader.readAsDataURL(file);
+        this.$emit("update:modelValue", file);
+      }
+    },
+    getUserAvatarDataURL(file: File) {
+      readFileAsDataURL(file).then((result) => (this.imagePath = result));
+    },
+  },
+  computed: {
+    uploadWrapper() {
+      return this.$refs.uploadWrapper as HTMLDivElement;
+    },
+  },
+  watch: {
+    modelValue(newValue) {
+      if (newValue) {
+        this.uploadWrapper.style.border = "none";
+        if (typeof newValue === "string") {
+          this.imagePath = newValue;
+        } else if (newValue instanceof File) {
+          this.getUserAvatarDataURL(newValue);
+        }
       }
     },
   },
@@ -70,7 +93,7 @@ export default defineComponent({
 .upload-preview {
   border: 1px dashed $--gray-color-700;
   .image-preview {
-    height: 40rem;
+    height: 100%;
     width: 100%;
     max-width: 30rem;
     object-fit: cover;
@@ -83,5 +106,17 @@ export default defineComponent({
   .input-file {
     display: none;
   }
+}
+
+.poster {
+  width: 30rem;
+  height: 40rem;
+}
+
+.avatar {
+  width: 30rem;
+  height: 30rem;
+  border-radius: 50%;
+  overflow: hidden;
 }
 </style>
