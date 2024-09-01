@@ -118,6 +118,11 @@ const router = createRouter({
               path: "add",
               component: AddressUpdateView,
             },
+            {
+              path: "update/:id",
+              name: "address.update",
+              component: AddressUpdateView,
+            },
           ],
         },
       ],

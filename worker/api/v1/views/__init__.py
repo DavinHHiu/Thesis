@@ -4,5 +4,5 @@ from .order import OrderDetailViewSet, OrderItemViewSet
 from .payment import PaymentViewSet
 from .product import ProductAttributeViewSet, ProductViewSet
 from .shipment import ShipmentViewSet
-from .user import UserViewSet
+from .user import AddressViewSet, UserViewSet
 from .wishlist import WishListViewSet

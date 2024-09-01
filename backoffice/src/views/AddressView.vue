@@ -15,32 +15,32 @@
       <thead>
         <tr>
           <th>No.</th>
-          <th>Avatar</th>
-          <th>Email</th>
-          <th>First name</th>
-          <th>Last name</th>
-          <th>Date of birth</th>
+          <th>Title</th>
+          <th>Address_1</th>
+          <th>Address_2</th>
+          <th>Zipcode</th>
           <th>Tel</th>
+          <th>User</th>
         </tr>
       </thead>
       <tbody>
-        <template v-for="(user, index) in users" :key="index">
+        <template v-for="(address, index) in addresses" :key="index">
           <tr :class="{ odd: index % 2 == 0 }">
             <td>{{ index + 1 }}</td>
+            <td v-text="address.title" />
+            <td v-text="address.address_1" />
+            <td v-text="address.address_2" />
+            <td v-text="address.zipcode" />
+            <td v-text="address.tel" />
             <td>
               <div class="flex justify-center">
                 <img
-                  :src="user.avatar as string"
-                  :alt="user.email"
+                  :src="address.user.avatar as string"
+                  :alt="address.user.email"
                   class="w-[4rem] h-[4rem] rounded-full object-cover"
                 />
               </div>
             </td>
-            <td v-text="user.email" />
-            <td v-text="user.first_name" />
-            <td v-text="user.last_name" />
-            <td v-text="user.birth_of_date" />
-            <td v-text="user.tel" />
             <td class="action-wrap">
               <ellipsis-dropdown
                 @action="handleActions"
@@ -67,13 +67,13 @@ import EllipsisDropdown from "@/components/common/molecules/EllipsisDropdown.vue
 import Modal from "@/components/common/molecules/Modal.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
-import { useUserStore } from "@/stores/user";
-import { User } from "@/types/worker";
+import { useAddressStore } from "@/stores/address";
+import { Address } from "@/types/worker";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "UserView",
+  name: "AddressView",
   components: {
     CustomButton,
     EllipsisDropdown,
@@ -88,13 +88,13 @@ export default defineComponent({
     };
   },
   methods: {
-    ...mapActions(useUserStore, ["listUsers", "destroyUser"]),
+    ...mapActions(useAddressStore, ["listAddresses", "destroyAddress"]),
     handleActions(obj: any) {
-      const user = this.users[obj.currentIndex];
+      const address = this.addresses[obj.currentIndex];
       if (obj.action === "Update") {
         this.$router.push({
-          name: "user.update",
-          params: { id: user.id },
+          name: "address.update",
+          params: { id: address.id },
         });
       }
       this.currentAction = obj.action;
@@ -103,20 +103,18 @@ export default defineComponent({
     async submitAction() {
       const action = this.currentAction;
       if (action === "Delete") {
-        const user = this.users[this.currentIndex] as User;
-        if (user.id) {
-          this.destroyUser(user.id);
+        const address = this.addresses[this.currentIndex] as Address;
+        if (address.id) {
+          this.destroyAddress(address.id);
         }
       }
     },
   },
   computed: {
-    ...mapState(useUserStore, ["users"]),
+    ...mapState(useAddressStore, ["addresses"]),
   },
   async mounted() {
-    await this.listUsers();
+    await this.listAddresses();
   },
 });
 </script>
-
-<style lang="scss" scoped></style>

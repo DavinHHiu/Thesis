@@ -92,8 +92,13 @@ export default defineComponent({
       return this.$refs.itemsWp as HTMLDivElement;
     },
   },
+  watch: {
+    value() {
+      this.selectElement.style.color = "#000";
+    },
+  },
   mounted() {
-    if (this.selectElement) {
+    if (!this.value && this.selectElement) {
       this.selectElement.style.color = "#929292";
     }
   },

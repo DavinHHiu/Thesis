@@ -7,7 +7,7 @@ from django.db import IntegrityError, transaction
 from PIL import Image
 from rest_framework import serializers
 
-from api.models import User
+from api.models import Address, User
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -18,7 +18,7 @@ class UserSerializer(serializers.ModelSerializer):
     email = serializers.EmailField()
     password = serializers.CharField(required=False)
     birth_of_date = serializers.DateField()
-    tel = serializers.CharField()
+    tel = serializers.CharField(max_length=10)
 
     class Meta:
         model = User
@@ -88,6 +88,57 @@ class UserSerializer(serializers.ModelSerializer):
             elif attr == "password":
                 value = make_password(password=value)
 
+            setattr(instance, attr, value)
+
+        instance.save()
+
+        return instance
+
+
+class AddressSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(required=False)
+    user = UserSerializer()
+    title = serializers.CharField()
+    address_1 = serializers.CharField()
+    address_2 = serializers.CharField(required=False)
+    zipcode = serializers.CharField(required=False)
+    tel = serializers.CharField(max_length=10)
+
+    class Meta:
+        model = Address
+        fields = [
+            "id",
+            "user",
+            "title",
+            "address_1",
+            "address_2",
+            "zipcode",
+            "tel",
+        ]
+
+    @transaction.atomic
+    def create(self, validated_data):
+        if "user" in validated_data:
+            user_data = validated_data.pop("user")
+            try:
+                user = User.objects.get(**user_data)
+            except User.DoesNotExist as e:
+                raise serializers.ValidationError({"detail": str(e)})
+
+        ModelClass = self.Meta.model
+        instance = ModelClass._default_manager.create(user=user, **validated_data)
+        return instance
+
+    @transaction.atomic
+    def update(self, instance, validated_data):
+        for attr, value in validated_data.items():
+            if attr == "user":
+                user_data = value
+                try:
+                    user = User.objects.get(**user_data)
+                except User.DoesNotExist as e:
+                    raise serializers.ValidationError({"detail": str(e)})
+                value = user
             setattr(instance, attr, value)
 
         instance.save()
