@@ -5,7 +5,12 @@
     <app-logo />
     <div class="avatar-wrap flex items-center f-full">
       <avatar src="/images/avatars/6.jpg" class="mr-[0.8rem]" />
-      <span>Hong Hieu</span>
+      <button class="dropdown-toggle" data-bs-toggle="dropdown">
+        Hong Hieu
+      </button>
+      <ul class="dropdown-menu">
+        <li class="dropdown-item" @click="handleLogout">Logout</li>
+      </ul>
     </div>
   </nav>
 </template>
@@ -13,6 +18,8 @@
 <script lang="ts">
 import Avatar from "@/components/common/atomic/Avatar.vue";
 import AppLogo from "@/components/common/molecules/AppLogo.vue";
+import { useAuthStore } from "@/stores/auth";
+import { mapActions } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -20,6 +27,13 @@ export default defineComponent({
   components: {
     AppLogo,
     Avatar,
+  },
+  methods: {
+    ...mapActions(useAuthStore, ["logout"]),
+    handleLogout() {
+      this.logout();
+      this.$router.push("/login");
+    },
   },
 });
 </script>
@@ -33,5 +47,9 @@ nav {
   background-color: $--white;
   box-shadow: $--shadow-x;
   z-index: 100;
+  .dropdown-toggle,
+  .dropdown-item {
+    user-select: none;
+  }
 }
 </style>

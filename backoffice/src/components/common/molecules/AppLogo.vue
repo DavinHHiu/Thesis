@@ -1,6 +1,6 @@
 <template>
   <div class="logo-wrap h-full flex items-center">
-    <span class="material-symbols-outlined flex items-center">sell</span>
+    <span class="material-symbols-outlined icon flex items-center">sell</span>
     <span class="app-name">Price tag</span>
   </div>
 </template>
@@ -29,5 +29,9 @@ export default defineComponent({
   font-family: "Playwrite CU", cursive;
   font-weight: $--font-bold;
   text-transform: uppercase;
+}
+
+.icon {
+  font-size: 2.7rem;
 }
 </style>

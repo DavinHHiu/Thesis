@@ -81,7 +81,7 @@ export default defineComponent({
       const attribute = this.productAttributes[obj.currentIndex];
       if (obj.action === "Update") {
         this.$router.push({
-          name: "product.attributes.update",
+          name: "product.attribute.update",
           params: { id: attribute.id },
         });
       }
