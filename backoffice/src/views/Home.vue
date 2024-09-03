@@ -1,10 +1,8 @@
 <template>
-  <main-layout>
-    <page-title title="Home page" />
-    <page-body>
-      <card>{{ $t("home.me.again") }}</card>
-    </page-body>
-  </main-layout>
+  <page-title title="Home page" />
+  <page-body>
+    <card>{{ $t("home.me.again") }}</card>
+  </page-body>
 </template>
 
 <script lang="ts">

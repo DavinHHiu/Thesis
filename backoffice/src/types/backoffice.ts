@@ -1,3 +1,8 @@
+interface AuthToken {
+  access: string;
+  refresh: string;
+}
+
 interface DropdownItem {
   title: string;
   action: string;
@@ -8,4 +13,9 @@ interface OptionItem {
   value: string;
 }
 
-export { DropdownItem, OptionItem };
+interface LoginItem {
+  email: string;
+  password: string;
+}
+
+export { AuthToken, DropdownItem, OptionItem, LoginItem };
