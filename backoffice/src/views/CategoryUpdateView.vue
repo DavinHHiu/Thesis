@@ -1,23 +1,25 @@
 <template>
-  <page-title title="Add category" />
+  <page-title :title="pageTitle" />
   <page-body>
     <card class="flex">
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
+          :label="$t('inputLabel.common.name')"
           :value="currentCategory.name"
-          label="Name"
           @update:modelValue="(newValue) => (currentCategory.name = newValue)"
         />
         <text-field
+          :label="$t('inputLabel.common.description')"
           :value="currentCategory.description"
-          label="Description"
           @update:modelValue="
             (newValue) => (currentCategory.description = newValue)
           "
         />
-        <custom-button @click="handleUpdate" class="w-[15rem]">
-          {{ "Update" }}
-        </custom-button>
+        <custom-button
+          @click="handleUpdate"
+          class="w-[15rem]"
+          v-text="textButton"
+        />
       </section>
     </card>
   </page-body>
@@ -68,6 +70,16 @@ export default defineComponent({
   },
   computed: {
     ...mapState(useCategoryStore, ["currentCategory"]),
+    textButton() {
+      return this.new
+        ? this.$t("buttonLabel.add")
+        : this.$t("buttonLabel.update");
+    },
+    pageTitle() {
+      return this.new
+        ? this.$t("categoryPage.addCategory.title")
+        : this.$t("categoryPage.updateCategory.title");
+    },
   },
   mounted() {
     const id = this.$router.currentRoute._value.params.id;

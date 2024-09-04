@@ -1,3 +1,131 @@
-home:
-  me:
-    again: "Hong Kong"
+backofficeSidebar:
+  home:
+    title: "Home"
+    path: "/"
+    icon: "home"
+  product:
+    title: "Products"
+    path: "/products"
+    icon: "inventory_2"
+  user:
+    title: "Users"
+    path: "/users"
+    icon: "group"
+  order:
+    title: "Orders"
+    path: "/orders"
+    icon: "description"
+  setting:
+    title: "Settings"
+    path: "/settings"
+    icon: "settings"
+
+inputLabel:
+  common:
+    name: "Name"
+    description: "Description"
+    price: "Price"
+    quantity: "Quantity"
+  address:
+    title: "Title"
+    zipcode: "Zip Code"
+    address1: "Address 1"
+    address2: "Address 2"
+    tel: "Tel"
+    user: "User"
+  user:
+    firstName: "First Name"
+    lastName: "Last Name"
+    email: "Email"
+    password: "Password"
+    retypePassword: "Re-type Password"
+    dob: "Birth of date"
+    tel: "Tel"
+  subcategory:
+    category: "Category"
+  product:
+    sku: "Sku"
+    price: "Price"
+    color: "Color"
+    size: "Size"
+    categories: "Categories"
+    quantity: "Quantity"
+    summary: "Summary"
+  productAttribute:
+    type: "Type"
+    value: "Value"
+
+buttonLabel:
+  login: "Login"
+  register: "Register"
+  logout: "Logout"
+  save: "Save"
+  cancel: "Cancel"
+  add: "Add"
+  update: "Update"
+  filter: "Filter"
+  delete: "Delete"
+
+dividerBreak:
+  login: "New to Price Tag?"
+  register: "Already have an account?"
+
+userPage:
+  userList:
+    title: "Users"
+  addUser:
+    title: "Add User"
+  updateUser:
+    title: "Update User"
+  modalDelete:
+    title: "Do you want to delete this user?"
+
+addressPage:
+  addressList:
+    title: "Addresses"
+  addAddress:
+    title: "Add Address"
+  updateAddress:
+    title: "Update Address"
+  modalDelete:
+    title: "Do you want to delete this address?"
+
+subcategoryPage:
+  subcategoryList:
+    title: "Categories"
+  addSubCategory:
+    title: "Add Category"
+  updateSubCategory:
+    title: "Update Category"
+  modalDelete:
+    title: "Do you want to delete this subcategory?"
+
+categoryPage:
+  categoryList:
+    title: "Categories"
+  addCategory:
+    title: "Add Category"
+  updateCategory:
+    title: "Update Category"
+  modalDelete:
+    title: "Do you want to delete this category?"
+
+productPage:
+  productList:
+    title: "Products"
+  addProduct:
+    title: "Add Product"
+  updateProduct:
+    title: "Update Product"
+  modalDelete:
+    title: "Do you want to delete this product?"
+
+productAttributePage:
+  productAttributeList:
+    title: "Product Attributes"
+  addProductAttribute:
+    title: "Add Product Attribute"
+  updateProductAttribute:
+    title: "Update Product Attribute"
+  modalDelete:
+    title: "Do you want to delete this product attribute?"

@@ -6,26 +6,31 @@
         <p class="text-[28px] font-bold">Sign in</p>
         <div class="flex flex-col gap-[4rem]">
           <text-field
-            :value="loginItem.email"
-            label="Email"
             class="h-[5rem]"
+            :label="$t('inputLabel.user.email')"
+            :value="loginItem.email"
             @update:model-value="(newValue) => (loginItem.email = newValue)"
           ></text-field>
           <password-field
-            :value="loginItem.password"
-            label="Password"
             class="h-[5rem]"
+            :label="$t('inputLabel.user.password')"
+            :value="loginItem.password"
             @update:model-value="(newValue) => (loginItem.password = newValue)"
           ></password-field>
         </div>
         <div class="flex flex-col gap-[2rem]">
-          <custom-button class="h-[5rem]" intent="primary" @click="handleLogin"
-            >Login</custom-button
-          >
-          <divider-break title="New to Price Tag?" />
-          <custom-button class="h-[5rem]" intent="p-outline"
-            >Register</custom-button
-          >
+          <custom-button
+            class="h-[5rem]"
+            intent="primary"
+            @click="handleLogin"
+            v-text="$t('buttonLabel.login')"
+          />
+          <divider-break :title="$t('dividerBreak.login')" />
+          <custom-button
+            class="h-[5rem]"
+            intent="p-outline"
+            v-text="$t('buttonLabel.register')"
+          />
         </div>
       </div>
     </card>

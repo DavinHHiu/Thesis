@@ -18,4 +18,10 @@ interface LoginItem {
   password: string;
 }
 
-export { AuthToken, DropdownItem, OptionItem, LoginItem };
+interface SidebarItem {
+  title: string;
+  path: string;
+  icon: string;
+}
+
+export { AuthToken, DropdownItem, OptionItem, LoginItem, SidebarItem };

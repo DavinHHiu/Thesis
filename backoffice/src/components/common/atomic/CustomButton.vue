@@ -83,6 +83,6 @@ export default defineComponent({
 }
 
 .rounded {
-  border-radius: 2rem;
+  border-radius: 5rem;
 }
 </style>

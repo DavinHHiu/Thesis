@@ -1,5 +1,5 @@
 <template>
-  <page-title title="Products" />
+  <page-title :title="pageTitle" />
   <page-body>
     <card class="h-[80vh] flex">
       <section class="upload-wp">
@@ -10,61 +10,63 @@
       </section>
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
+          :label="$t('inputLabel.common.name')"
           :value="product.name"
-          label="Product name"
           @update:model-value="(newValue) => (product.name = newValue)"
         />
         <text-field
+          :label="$t('inputLabel.product.sku')"
           :value="product.sku"
-          label="Product sku"
           @update:model-value="(newValue) => (product.sku = newValue)"
         />
         <text-field
+          :label="$t('inputLabel.product.price')"
           :value="product.price"
-          label="Product price"
           @update:model-value="(newValue) => (product.price = newValue)"
         />
         <text-field
+          :label="$t('inputLabel.product.quantity')"
           :value="product.quantity"
-          label="Product quantity"
           @update:model-value="(newValue) => (product.quantity = newValue)"
         />
         <div class="flex gap-[1rem]">
           <select-field
-            :value="String(product?.color?.id || '')"
             class="flex-1"
-            label="Color"
+            :label="$t('inputLabel.product.color')"
+            :value="String(product?.color?.id || '')"
             :options="colorOptions"
             @update:model-value="selectColor"
           />
           <select-field
-            :value="String(product?.size?.id || '')"
             class="flex-1"
-            label="Size"
+            :label="$t('inputLabel.product.size')"
+            :value="String(product?.size?.id || '')"
             :options="sizeOptions"
             @update:model-value="selectSize"
           />
           <select-field
-            :value="String(product?.categories?.[0].id || '')"
             class="flex-1"
-            label="Categories"
+            :label="$t('inputLabel.product.categories')"
+            :value="String(product?.categories?.[0].id || '')"
             :options="categorieOptions"
             @update:model-value="selectCategories"
           />
         </div>
         <text-field
+          :label="$t('inputLabel.common.description')"
           :value="product.description"
-          label="Product description"
           @update:model-value="(newValue) => (product.description = newValue)"
         />
         <text-field
+          :label="$t('inputLabel.product.summary')"
           :value="product.summary"
-          label="Product summary"
           @update:model-value="(newValue) => (product.summary = newValue)"
         />
-        <custom-button class="w-[15rem]" @click="handleUpdate"
-          >Update</custom-button
-        >
+        <custom-button
+          class="w-[15rem]"
+          @click="handleUpdate"
+          v-text="textButton"
+        />
       </section>
     </card>
   </page-body>
@@ -170,6 +172,16 @@ export default defineComponent({
           displayValue: subcategory.name,
         };
       });
+    },
+    textButton() {
+      return this.new
+        ? this.$t("buttonLabel.add")
+        : this.$t("buttonLabel.update");
+    },
+    pageTitle() {
+      return this.new
+        ? this.$t("productPage.addProduct.title")
+        : this.$t("productPage.updateProduct.title");
     },
   },
   async mounted() {

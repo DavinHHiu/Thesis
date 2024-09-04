@@ -1,29 +1,31 @@
 <template>
-  <page-title title="Add category" />
+  <page-title :title="pageTitle" />
   <page-body>
     <card class="flex">
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
           :value="subcategory.name"
-          label="Name"
+          :label="$t('inputLabel.common.name')"
           @update:modelValue="(newValue) => (subcategory.name = newValue)"
         />
         <text-field
           :value="subcategory.description"
-          label="Description"
+          :label="$t('inputLabel.common.description')"
           @update:modelValue="
             (newValue) => (subcategory.description = newValue)
           "
         />
         <select-field
           :value="String(subcategory?.category?.id || '')"
-          label="Category"
+          :label="$t('inputLabel.subcategory.category')"
           :options="options"
           @update:modelValue="selectCategory"
         />
-        <custom-button @click="handleUpdate" class="w-[15rem]">
-          {{ "Update" }}
-        </custom-button>
+        <custom-button
+          class="w-[15rem]"
+          @click="handleUpdate"
+          v-text="textButton"
+        />
       </section>
     </card>
   </page-body>
@@ -89,6 +91,16 @@ export default defineComponent({
           value: String(category.id),
         };
       });
+    },
+    textButton() {
+      return this.new
+        ? this.$t("buttonLabel.add")
+        : this.$t("buttonLabel.update");
+    },
+    pageTitle() {
+      return this.new
+        ? this.$t("subcategoryPage.addSubCategory.title")
+        : this.$t("subcategoryPage.updateSubCategory.title");
     },
   },
   mounted() {

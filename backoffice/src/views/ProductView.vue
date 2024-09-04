@@ -1,17 +1,7 @@
 <template>
-  <page-title title="Products" />
+  <page-title :title="$t('productPage.productList.title')" />
   <page-body>
-    <div class="action-wrap flex justify-between">
-      <custom-button intent="p-outline">
-        <span class="material-symbols-outlined">filter_alt</span>
-        Filter
-      </custom-button>
-      <custom-button :rounded="true">
-        <span class="material-symbols-outlined">add</span>
-        Add
-      </custom-button>
-    </div>
-
+    <header-action :current-route="$router.currentRoute._value.path" />
     <table class="w-full mt-[2rem] overflow-hidden">
       <thead>
         <tr>
@@ -62,13 +52,14 @@
     </table>
   </page-body>
   <modal id="deleteModal" title="Delete attribute" @confirm="submitAction">
-    <span>Do you want to delete this user?</span>
+    <span v-text="$t('productPage.modalDelete.title')" />
   </modal>
 </template>
 
 <script lang="ts">
 import CustomButton from "@/components/common/atomic/CustomButton.vue";
 import EllipsisDropdown from "@/components/common/molecules/EllipsisDropdown.vue";
+import HeaderAction from "@/components/common/molecules/HeaderAction.vue";
 import Modal from "@/components/common/molecules/Modal.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
@@ -83,6 +74,7 @@ export default defineComponent({
     CustomButton,
     EllipsisDropdown,
     Modal,
+    HeaderAction,
     PageBody,
     PageTitle,
   },
