@@ -4,18 +4,20 @@
     <card class="flex">
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
+          :label="$t('inputLabel.productAttribute.type')"
           :value="productAttribute.type"
-          label="Type"
           @update:modelValue="(newValue) => (productAttribute.type = newValue)"
         />
         <text-field
+          :label="$t('inputLabel.productAttribute.value')"
           :value="productAttribute.value"
-          label="Value"
           @update:modelValue="(newValue) => (productAttribute.value = newValue)"
         />
-        <custom-button @click="handleUpdate" class="w-[15rem]">
-          {{ "Update" }}
-        </custom-button>
+        <custom-button
+          @click="handleUpdate"
+          class="w-[15rem]"
+          v-text="textButton"
+        />
       </section>
     </card>
   </page-body>
@@ -62,8 +64,15 @@ export default defineComponent({
   },
   computed: {
     ...mapState(useProductAttributeStore, ["productAttribute"]),
+    textButton() {
+      return this.new
+        ? this.$t("buttonLabel.add")
+        : this.$t("buttonLabel.update");
+    },
     pageTitle() {
-      return this.new ? "Create Product Attribute" : "Update Product Attribute";
+      return this.new
+        ? this.$t("productAttributePage.addProductAttribute.title")
+        : this.$t("productAttributePage.updateProductAttribute.title");
     },
   },
   async mounted() {

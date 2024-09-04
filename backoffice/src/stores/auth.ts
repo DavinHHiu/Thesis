@@ -3,7 +3,6 @@ import { AuthToken, LoginItem } from "@/types/backoffice";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { defineStore } from "pinia";
-import { useRouter } from "vue-router";
 
 let refreshInterval: NodeJS.Timeout | null = null;
 

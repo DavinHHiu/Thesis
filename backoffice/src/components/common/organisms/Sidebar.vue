@@ -12,13 +12,16 @@
     </div>
 
     <div class="menu">
-      <!-- <router-link
-        v-for="(item, index) in $t('backofficeSidebar')"
+      <!-- <span>{{ $t(`backofficeSidebar.user.title`) }}</span>
+      <router-link
+        v-for="(item, index) in sidebarItems"
         classs="button"
         :to="item"
       >
-        <span class="material-symbols-outlined">{{ item.icon }}</span>
-        <span class="text">{{ item }}</span>
+        <span class="material-symbols-outlined">{{
+          $t(`backofficeSidebar.${item}.icon`)
+        }}</span>
+        <span class="text">{{ $t(`backofficeSidebar.${item}.title`) }}</span>
       </router-link> -->
       <router-link class="button" to="/">
         <span class="material-symbols-outlined">home</span>
@@ -58,6 +61,7 @@
 </template>
 
 <script lang="ts">
+import { SidebarItem } from "@/types/backoffice";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -70,8 +74,14 @@ export default defineComponent({
   methods: {
     toggleMenu() {
       this.is_expanded = !this.is_expanded;
-
       localStorage.setItem("is_expanded", this.is_expanded.toString());
+    },
+  },
+  computed: {
+    sidebarItems() {
+      const t = this.$t("backofficeSidebar");
+      console.log(t);
+      return Object.values(this.$t("backofficeSidebar"));
     },
   },
 });

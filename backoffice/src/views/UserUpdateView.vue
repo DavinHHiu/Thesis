@@ -1,5 +1,5 @@
 <template>
-  <page-title title="Add category" />
+  <page-title :title="pageTitle" />
   <page-body>
     <card class="flex">
       <section class="upload-wp">
@@ -11,38 +11,40 @@
       </section>
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
+          :label="$t('inputLabel.user.firstName')"
           :value="user.first_name"
-          label="First name"
           @update:model-value="(newValue) => (user.first_name = newValue)"
         />
         <text-field
+          :label="$t('inputLabel.user.lastName')"
           :value="user.last_name"
-          label="Last name"
           @update:model-value="(newValue) => (user.last_name = newValue)"
         />
         <text-field
+          :label="$t('inputLabel.user.email')"
           :value="user.email"
-          label="Email"
           @update:model-value="(newValue) => (user.email = newValue)"
         />
         <password-field
+          :label="$t('inputLabel.user.password')"
           :value="user.password"
-          label="Password"
           @update:model-value="(newValue) => (user.password = newValue)"
         />
         <date-field
+          :label="$t('inputLabel.user.dob')"
           :value="user.birth_of_date"
-          label="Birth of date"
           @update:model-value="(newValue) => (user.birth_of_date = newValue)"
         />
         <text-field
+          :label="$t('inputLabel.user.tel')"
           :value="user.tel"
-          label="Tel"
           @update:model-value="(newValue) => (user.tel = newValue)"
         />
-        <custom-button class="w-[15rem]" @click="handleUpdate"
-          >Update</custom-button
-        >
+        <custom-button
+          class="w-[15rem]"
+          @click="handleUpdate"
+          v-text="textButton"
+        />
       </section>
     </card>
   </page-body>
@@ -93,6 +95,16 @@ export default defineComponent({
   },
   computed: {
     ...mapState(useUserStore, ["user"]),
+    textButton() {
+      return this.new
+        ? this.$t("buttonLabel.add")
+        : this.$t("buttonLabel.update");
+    },
+    pageTitle() {
+      return this.new
+        ? this.$t("userPage.addUser.title")
+        : this.$t("userPage.updateUser.title");
+    },
   },
   async mounted() {
     const id = this.$router.currentRoute._value.params.id;

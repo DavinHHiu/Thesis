@@ -1,41 +1,44 @@
 <template>
-  <page-title title="Add category" />
+  <page-title :title="pageTitle" />
   <page-body>
     <card class="flex">
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
-          label="Title"
+          :label="$t('inputLabel.address.title')"
           :value="address.title"
           @update:model-value="(newValue) => (address.title = newValue)"
         />
         <text-field
-          label="Zipcode"
+          :label="$t('inputLabel.address.zipcode')"
           :value="address.zipcode"
           @update:model-value="(newValue) => (address.zipcode = newValue)"
         />
         <text-field
-          label="Address 1"
+          :label="$t('inputLabel.address.address1')"
           :value="address.address_1"
           @update:model-value="(newValue) => (address.address_1 = newValue)"
         />
         <text-field
-          label="Address 2"
+          :label="$t('inputLabel.address.address2')"
           :value="address.address_2"
           @update:model-value="(newValue) => (address.address_2 = newValue)"
         />
         <text-field
-          label="Tel"
+          :label="$t('inputLabel.address.tel')"
           :value="address.tel"
           @update:model-value="(newValue) => (address.tel = newValue)"
         />
         <select-field
-          label="User"
+          :label="$t('inputLabel.address.user')"
           :value="address.user?.id"
           :options="options"
           @update:model-value="selectUser"
         />
-        <custom-button class="w-[15rem]" @click="handleUpdate"
-          >Update</custom-button
+        <custom-button
+          class="w-[15rem]"
+          @click="handleUpdate"
+          v-text="textButton"
+        />
         >
       </section>
     </card>
@@ -104,6 +107,16 @@ export default defineComponent({
           displayValue: `${user.first_name} ${user.last_name}`,
         };
       });
+    },
+    textButton() {
+      return this.new
+        ? this.$t("buttonLabel.add")
+        : this.$t("buttonLabel.update");
+    },
+    pageTitle() {
+      return this.new
+        ? this.$t("addressPage.addAddress.title")
+        : this.$t("addressPage.updateAddress.title");
     },
   },
   mounted() {

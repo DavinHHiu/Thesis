@@ -3,20 +3,33 @@
     <app-logo />
     <card class="w-[40rem] h-[55rem]">
       <div class="h-full p-[1rem] flex flex-col justify-between">
-        <p class="text-[28px] font-bold">Register</p>
+        <p class="text-[28px] font-bold" v-text="$t('buttonLabel.register')" />
         <div class="flex flex-col gap-[3rem]">
-          <text-field label="Email" class="h-[5rem]"></text-field>
-          <text-field label="Password" class="h-[5rem]"></text-field>
-          <text-field label="Re-type password" class="h-[5rem]"></text-field>
+          <text-field
+            class="h-[5rem]"
+            :label="$t('inputLabel.user.email')"
+          ></text-field>
+          <text-field
+            class="h-[5rem]"
+            :label="$t('inputLabel.user.password')"
+          ></text-field>
+          <text-field
+            class="h-[5rem]"
+            :label="$t('inputLabel.user.retypePassword')"
+          ></text-field>
         </div>
         <div class="flex flex-col gap-[2rem]">
-          <custom-button class="h-[5rem]" intent="primary"
-            >Register</custom-button
-          >
-          <divider-break title="Already have an account?" />
-          <custom-button class="h-[5rem]" intent="p-outline"
-            >Login</custom-button
-          >
+          <custom-button
+            class="h-[5rem]"
+            intent="primary"
+            v-text="$t('buttonLabel.register')"
+          />
+          <divider-break :title="$t('dividerBreak.register')" />
+          <custom-button
+            class="h-[5rem]"
+            intent="p-outline"
+            v-text="$t('buttonLabel.login')"
+          />
         </div>
       </div>
     </card>
