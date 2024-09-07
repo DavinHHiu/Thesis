@@ -1,21 +1,20 @@
-import { fileURLToPath, URL } from 'node:url';
+import { URL, fileURLToPath } from 'node:url';
 
+import ViteYaml from '@modyfi/vite-plugin-yaml';
+import VueI18nPlugin from '@intlify/unplugin-vue-i18n/vite';
 import { defineConfig } from 'vite';
+import { resolve } from 'node:path';
 import vue from '@vitejs/plugin-vue';
-import vueJsx from '@vitejs/plugin-vue-jsx';
-import vueDevTools from 'vite-plugin-vue-devtools';
-import vueI18n from '@intlify/vite-plugin-vue-i18n';
-import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
-    vueJsx(),
-    vueDevTools(),
-    vueI18n({
-      incluses: path.resolve(__dirname, './src/locales/**'),
+    VueI18nPlugin({
+      strictMessage: false,
+      include: resolve(__dirname, '**/locales/*.{yaml}'),
     }),
+    ViteYaml(),
   ],
   resolve: {
     alias: {
