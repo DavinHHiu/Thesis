@@ -10,9 +10,8 @@
       <div class="container">
         <p class="header-items">orders</p>
       </div>
-      <div class="container">
+      <div class="container" @click="$emit('open:cart-folder')">
         <icon-cart :intent="intent" />
-        <p class="header-items py-0.5">cart</p>
       </div>
       <div class="container">
         <icon-user width="2rem" :intent="intent" />
@@ -30,6 +29,7 @@ import IconUser from '../../icons/IconUser.vue';
 
 export default defineComponent({
   name: 'NavHeader',
+  emits: ['open:cart-folder'],
   components: {
     AppLogo,
     IconCart,
@@ -53,7 +53,7 @@ export default defineComponent({
 .nav-header-container {
   position: relative;
   height: 10.3rem;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
