@@ -1,12 +1,10 @@
 <template>
-  <default-layout>
-    <div class="title-cont py-[50px]"><span class="title">Checkout</span></div>
-    <div class="content-cont">
-      <div class="content">
-        <router-view></router-view>
-      </div>
+  <div class="title-cont py-[50px]"><span class="title">Checkout</span></div>
+  <div class="content-cont">
+    <div class="content">
+      <router-view></router-view>
     </div>
-  </default-layout>
+  </div>
 </template>
 
 <script lang="ts">

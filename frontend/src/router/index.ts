@@ -13,20 +13,63 @@ import ProfileView from '@/views/ProfileView.vue';
 import RegisterView from '@/views/RegisterView.vue';
 import SearchView from '@/views/SearchView.vue';
 
+const BaseView = import('@/views/BaseView.vue');
+
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
   routes: [
     {
       path: '/',
-      component: HomeView,
-    },
-    {
-      path: '/about',
-      component: AboutView,
-    },
-    {
-      path: '/cart',
-      component: CartView,
+      component: BaseView,
+      children: [
+        {
+          path: '',
+          component: HomeView,
+          meta: {
+            intent: 'second',
+          },
+        },
+        {
+          path: 'about',
+          component: AboutView,
+        },
+        {
+          path: 'cart',
+          component: CartView,
+        },
+        {
+          path: 'products/:id',
+          component: ProductDetail,
+          props: true,
+        },
+        {
+          path: 'search/:query',
+          component: SearchView,
+          props: true,
+        },
+        {
+          path: 'checkout',
+          component: CheckoutView,
+          children: [
+            {
+              path: 'order-form',
+              component: CheckoutFormView,
+            },
+            {
+              path: 'order-received',
+              component: CheckoutOrderView,
+            },
+          ],
+        },
+        {
+          path: 'orders',
+          component: OrderView,
+        },
+        {
+          path: 'profile',
+          component: ProfileView,
+        },
+      ],
     },
     {
       path: '/login',
@@ -35,38 +78,6 @@ const router = createRouter({
     {
       path: '/register',
       component: RegisterView,
-    },
-    {
-      path: '/products/:id',
-      component: ProductDetail,
-      props: true,
-    },
-    {
-      path: '/search/:query',
-      component: SearchView,
-      props: true,
-    },
-    {
-      path: '/checkout',
-      component: CheckoutView,
-      children: [
-        {
-          path: 'order-form',
-          component: CheckoutFormView,
-        },
-        {
-          path: 'order-received',
-          component: CheckoutOrderView,
-        },
-      ],
-    },
-    {
-      path: '/orders',
-      component: OrderView,
-    },
-    {
-      path: '/profile',
-      component: ProfileView,
     },
   ],
 });

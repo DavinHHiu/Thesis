@@ -1,127 +1,124 @@
 <template>
-  <default-layout>
-    <div class="body">
-      <div class="side-filter">
-        <div class="search-input-wp">
-          <search-bar class="search-input" />
-        </div>
-        <div class="filter-price-cont">
-          <h2 class="filter-title">Filter by price</h2>
-          <div class="filter-by-price-wp">
-            <div class="price-input">
-              <div class="field">
-                <span>Min</span>
-                <text-field
-                  ref="inputMin"
-                  type="number"
-                  min="0"
-                  max="10000"
-                  class="input-min h-[4.5rem]"
-                  :value="minPrice"
-                  @input="handleChangeMin"
-                />
-              </div>
-              <div class="separator">-</div>
-              <div class="field">
-                <span>Max</span>
-                <text-field
-                  ref="inputMax"
-                  type="number"
-                  min="0"
-                  max="10000"
-                  class="input-max h-[4.5rem]"
-                  :value="maxPrice"
-                  @input="handleChangeMax"
-                />
-              </div>
-            </div>
-            <div class="price-slider">
-              <div
-                class="progress"
-                :style="{
-                  left: progressLeft,
-                  right: progressRight,
-                }"
-              ></div>
-            </div>
-            <div class="range-input">
-              <range-field
-                ref="rangeMin"
-                class="range-min"
+  <div class="body">
+    <div class="side-filter">
+      <div class="search-input-wp">
+        <search-bar class="search-input" />
+      </div>
+      <div class="filter-price-cont">
+        <h2 class="filter-title">Filter by price</h2>
+        <div class="filter-by-price-wp">
+          <div class="price-input">
+            <div class="field">
+              <span>Min</span>
+              <text-field
+                ref="inputMin"
+                type="number"
                 min="0"
                 max="10000"
+                class="input-min h-[4.5rem]"
                 :value="minPrice"
                 @input="handleChangeMin"
               />
-              <range-field
-                ref="rangeMax"
-                class="range-max"
+            </div>
+            <div class="separator">-</div>
+            <div class="field">
+              <span>Max</span>
+              <text-field
+                ref="inputMax"
+                type="number"
                 min="0"
                 max="10000"
+                class="input-max h-[4.5rem]"
                 :value="maxPrice"
                 @input="handleChangeMax"
               />
             </div>
           </div>
-          <div
-            class="filter-price-action mt-[25px] flex items-center justify-between"
+          <div class="price-slider">
+            <div
+              class="progress"
+              :style="{
+                left: progressLeft,
+                right: progressRight,
+              }"
+            ></div>
+          </div>
+          <div class="range-input">
+            <range-field
+              ref="rangeMin"
+              class="range-min"
+              min="0"
+              max="10000"
+              :value="minPrice"
+              @input="handleChangeMin"
+            />
+            <range-field
+              ref="rangeMax"
+              class="range-max"
+              min="0"
+              max="10000"
+              :value="maxPrice"
+              @input="handleChangeMax"
+            />
+          </div>
+        </div>
+        <div
+          class="filter-price-action mt-[25px] flex items-center justify-between"
+        >
+          <custom-button
+            class="px-[1.8rem] py-[1rem] uppercase"
+            intent="primary"
+            >Fitler</custom-button
           >
-            <custom-button
-              class="px-[1.8rem] py-[1rem] uppercase"
-              intent="primary"
-              >Fitler</custom-button
+          <div class="filter-price-value">
+            <span
+              >Price:
+              <span class="price-value"
+                >${{ this.minPrice }} - ${{ this.maxPrice }}</span
+              ></span
             >
-            <div class="filter-price-value">
-              <span
-                >Price:
-                <span class="price-value"
-                  >${{ this.minPrice }} - ${{ this.maxPrice }}</span
-                ></span
-              >
-            </div>
           </div>
         </div>
-        <div class="fitler-category-cont">
-          <div class="filter-title">Categories</div>
-          <div class="category-list">
-            <div class="category-item flex justify-between text-black">
-              <div class="category-name">Book</div>
-              <div class="category-quantity">(243)</div>
-            </div>
-            <div class="category-item flex justify-between font-base">
-              <div class="category-name">Cloth</div>
-              <div class="category-quantity">(1423)</div>
-            </div>
-            <div class="category-item flex justify-between font-base">
-              <div class="category-name">PC</div>
-              <div class="category-quantity">(134)</div>
-            </div>
+      </div>
+      <div class="fitler-category-cont">
+        <div class="filter-title">Categories</div>
+        <div class="category-list">
+          <div class="category-item flex justify-between text-black">
+            <div class="category-name">Book</div>
+            <div class="category-quantity">(243)</div>
+          </div>
+          <div class="category-item flex justify-between font-base">
+            <div class="category-name">Cloth</div>
+            <div class="category-quantity">(1423)</div>
+          </div>
+          <div class="category-item flex justify-between font-base">
+            <div class="category-name">PC</div>
+            <div class="category-quantity">(134)</div>
           </div>
         </div>
-        <div class="side-best-sellers"></div>
       </div>
-      <div class="list-products">
-        <grid-layout wrap="wrap" align="start">
-          <product-item />
-          <product-item />
-          <product-item />
-          <product-item />
-          <product-item />
-          <product-item />
-          <product-item />
-          <product-item />
-          <product-item />
-          <product-item />
-          <product-item />
-        </grid-layout>
-      </div>
+      <div class="side-best-sellers"></div>
     </div>
-  </default-layout>
+    <div class="list-products">
+      <grid-layout wrap="wrap" align="start">
+        <product-item />
+        <product-item />
+        <product-item />
+        <product-item />
+        <product-item />
+        <product-item />
+        <product-item />
+        <product-item />
+        <product-item />
+        <product-item />
+        <product-item />
+      </grid-layout>
+    </div>
+  </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import DefaultLayout from '../layouts/DefaultLayout.vue';
 import SearchBar from '../components/common/SearchBar.vue';
 import GridLayout from '../layouts/GridLayout.vue';
 import ProductItem from '../components/common/molecules/ProductItem.vue';
@@ -132,7 +129,6 @@ import RangeField from '../components/common/RangeField.vue';
 export default defineComponent({
   name: 'SearchView',
   components: {
-    DefaultLayout,
     SearchBar,
     GridLayout,
     ProductItem,
