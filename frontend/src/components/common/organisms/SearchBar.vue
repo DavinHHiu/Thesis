@@ -10,8 +10,8 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import TextField from '../molecules/TextField.vue';
 import IconRightArrow from '@/components/icons/IconRightArrow.vue';
+import TextField from '../molecules/TextField.vue';
 
 export default defineComponent({
   name: 'SearchBar',
