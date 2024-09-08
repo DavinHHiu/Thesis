@@ -508,7 +508,7 @@
 .navLeftFooter {
   position: relative;
   background-color: $--second-color;
-  width: 100vw;
+  width: 100%;
 }
 
 .navFooterBackToTop {
