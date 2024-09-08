@@ -42,11 +42,11 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import PageTitle from '../components/common/PageTitle.vue';
-import PageBody from '../components/common/PageBody.vue';
-import SeparatorLine from '../components/common/SeparatorLine.vue';
-import NavPills from '../components/common/NavPills.vue';
-import PagingNumber from '../components/common/PagingNumber.vue';
+import PageTitle from '../components/common/templates/PageTitle.vue';
+import PageBody from '../components/common/templates/PageBody.vue';
+import SeparatorLine from '../components/common/molecules/SeparatorLine.vue';
+import NavPills from '../components/common/molecules/NavPills.vue';
+import PagingNumber from '../components/common/molecules/PagingNumber.vue';
 import { returnPaginationRange } from '../utils/utils';
 
 export default defineComponent({

@@ -1,5 +1,5 @@
 <template>
-  <input class="w-full h-full" :class="intent" />
+  <input class="w-full h-[5rem]" :class="intent" />
 </template>
 
 <script>

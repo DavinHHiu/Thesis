@@ -29,11 +29,11 @@
 </template>
 <script lang="ts">
 import { defineComponent } from 'vue';
-import CardView from '../components/common/CardView.vue';
+import CardView from '../components/common/molecules/CardView.vue';
 import TextField from '../components/common/molecules/TextField.vue';
 import CustomButton from '../components/common/atomic/CustomButton.vue';
 import AppLogo from '../components/common/molecules/AppLogo.vue';
-import DividerBreak from '../components/common/DividerBreak.vue';
+import DividerBreak from '../components/common/molecules/DividerBreak.vue';
 import CustomLabel from '../components/common/atomic/CustomLabel.vue';
 
 export default defineComponent({

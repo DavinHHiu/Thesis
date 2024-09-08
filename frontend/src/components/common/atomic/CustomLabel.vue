@@ -1,5 +1,5 @@
 <template>
-  <label :class="{ required: required }">
+  <label class="custom-label" :class="{ required: required }">
     <slot></slot>
   </label>
 </template>
@@ -20,14 +20,6 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import '@/assets/variables';
-
-label {
-  display: block;
-  font-size: $--font-xs;
-  font-weight: $--font-bold;
-  margin-left: 0.5rem;
-  margin-bottom: 0.3rem;
-}
 
 .required {
   &::after {

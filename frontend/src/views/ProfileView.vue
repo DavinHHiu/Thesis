@@ -63,12 +63,12 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import PageBody from '../components/common/PageBody.vue';
+import PageBody from '../components/common/templates/PageBody.vue';
 import EditableAvatar from '../components/common/molecules/EditableAvatar.vue';
 import CustomLabel from '../components/common/atomic/CustomLabel.vue';
 import CustomButton from '../components/common/atomic/CustomButton.vue';
 import TextField from '../components/common/molecules/TextField.vue';
-import CardView from '../components/common/CardView.vue';
+import CardView from '../components/common/molecules/CardView.vue';
 
 export default defineComponent({
   name: 'ProfileView',

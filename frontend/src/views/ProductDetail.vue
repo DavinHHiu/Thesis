@@ -148,7 +148,7 @@
 import { defineComponent } from 'vue';
 import TextField from '../components/common/molecules/TextField.vue';
 import CustomButton from '../components/common/atomic/CustomButton.vue';
-import PageBody from '../components/common/PageBody.vue';
+import PageBody from '../components/common/templates/PageBody.vue';
 
 export default defineComponent({
   name: 'ProductDetail',

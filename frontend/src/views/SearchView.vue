@@ -2,7 +2,7 @@
   <div class="body">
     <div class="side-filter">
       <div class="search-input-wp">
-        <search-bar class="search-input" />
+        <search-bar />
       </div>
       <div class="filter-price-cont">
         <h2 class="filter-title">Filter by price</h2>
@@ -97,7 +97,16 @@
           </div>
         </div>
       </div>
-      <div class="side-best-sellers"></div>
+      <div class="side-best-sellers">
+        <h2>Our Best Sellers</h2>
+        <ul>
+          <li><top-item /></li>
+          <li><top-item /></li>
+          <li><top-item /></li>
+          <li><top-item /></li>
+          <li><top-item /></li>
+        </ul>
+      </div>
     </div>
     <div class="list-products">
       <grid-layout wrap="wrap" align="start">
@@ -119,12 +128,13 @@
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import SearchBar from '../components/common/SearchBar.vue';
+import SearchBar from '../components/common/organisms/SearchBar.vue';
 import GridLayout from '../layouts/GridLayout.vue';
 import ProductItem from '../components/common/molecules/ProductItem.vue';
 import TextField from '../components/common/molecules/TextField.vue';
 import CustomButton from '../components/common/atomic/CustomButton.vue';
-import RangeField from '../components/common/RangeField.vue';
+import RangeField from '../components/common/molecules/RangeField.vue';
+import TopItem from '@/components/common/molecules/TopItem.vue';
 
 export default defineComponent({
   name: 'SearchView',
@@ -135,6 +145,7 @@ export default defineComponent({
     TextField,
     CustomButton,
     RangeField,
+    TopItem,
   },
   data() {
     return {
@@ -209,7 +220,7 @@ export default defineComponent({
     flex-direction: column;
     gap: 5rem;
     .search-input-wp {
-      height: 4.2rem;
+      height: 5rem;
       width: 100%;
     }
     .filter-price-cont {
@@ -316,6 +327,14 @@ export default defineComponent({
   }
   .list-products {
     padding: 8.5rem 10.5rem;
+  }
+  .side-best-sellers {
+    li {
+      border-bottom: 1px solid $--color-border;
+    }
+    li:last-child {
+      border-bottom: none;
+    }
   }
 }
 </style>
