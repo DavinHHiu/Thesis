@@ -9,3 +9,26 @@ h2 {
 input {
   outline: none;
 }
+
+.input-wp {
+  position: relative;
+  &.has-input,
+  &:focus-within {
+    .custom-label {
+      top: -1.25rem;
+      left: 0.2rem;
+      color: $--primary-color-text;
+      font-size: $--font-sm;
+      font-weight: $--font-semibold;
+    }
+  }
+}
+
+.custom-label {
+  top: 50%;
+  left: 1rem;
+  color: $--gray-color-700;
+  transform: translateY(-50%);
+  position: absolute;
+  transition: 0.2s all ease-out;
+}

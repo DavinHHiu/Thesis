@@ -14,7 +14,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import NavPillItem from './NavPillItem.vue';
-import { NavPillItem as iNavPill } from '../../types/common';
+import { NavPillItem as iNavPill } from '../../../types/common';
 
 export default defineComponent({
   name: 'NavPills',

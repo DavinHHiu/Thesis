@@ -111,9 +111,9 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import TextField from '../components/common/molecules/TextField.vue';
-import CardView from '../components/common/CardView.vue';
+import CardView from '../components/common/molecules/CardView.vue';
 import CustomButton from '../components/common/atomic/CustomButton.vue';
-import RadioField from '../components/common/RadioField.vue';
+import RadioField from '../components/common/molecules/RadioField.vue';
 import CustomLabel from '../components/common/atomic/CustomLabel.vue';
 
 export default defineComponent({

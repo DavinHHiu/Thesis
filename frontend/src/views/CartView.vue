@@ -73,8 +73,8 @@ import { defineComponent } from 'vue';
 import TextField from '../components/common/molecules/TextField.vue';
 import IconRemove from '../components/icons/IconRemove.vue';
 import CustomButton from '../components/common/atomic/CustomButton.vue';
-import PageTitle from '../components/common/PageTitle.vue';
-import PageBody from '../components/common/PageBody.vue';
+import PageTitle from '../components/common/templates/PageTitle.vue';
+import PageBody from '../components/common/templates/PageBody.vue';
 
 export default defineComponent({
   name: 'CartView',
