@@ -14,7 +14,7 @@ class Address(models.Model, CreateAndUpdateModelMixin):
     id = models.BigAutoField(_("address id"), primary_key=True)
     user = models.ForeignKey(
         to="api.User",
-        on_delete=models.SET_NULL,
+        on_delete=models.CASCADE,
         null=True,
         verbose_name=_("user"),
     )

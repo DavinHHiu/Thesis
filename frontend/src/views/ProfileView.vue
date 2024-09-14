@@ -8,7 +8,7 @@
     </section>
     <section class="user-profile w-3/4">
       <h2 class="sub-title mb-[2rem]">Profile Details</h2>
-      <card-view class="rounded" intent="form">
+      <card class="rounded" intent="form">
         <div class="user-form flex flex-col gap-[2rem]">
           <div class="input-name-wp flex gap-[4.5rem]">
             <div class="w-full">
@@ -56,7 +56,7 @@
             >Update profile</custom-button
           >
         </div>
-      </card-view>
+      </card>
     </section>
   </page-body>
 </template>
@@ -68,7 +68,7 @@ import EditableAvatar from '../components/common/molecules/EditableAvatar.vue';
 import CustomLabel from '../components/common/atomic/CustomLabel.vue';
 import CustomButton from '../components/common/atomic/CustomButton.vue';
 import TextField from '../components/common/molecules/TextField.vue';
-import CardView from '../components/common/molecules/CardView.vue';
+import Card from '../components/common/molecules/Card.vue';
 
 export default defineComponent({
   name: 'ProfileView',
@@ -78,7 +78,7 @@ export default defineComponent({
     PageBody,
     TextField,
     CustomButton,
-    CardView,
+    Card,
   },
 });
 </script>

@@ -1,85 +1,8 @@
 <template>
   <div class="body">
     <div class="side-filter">
-      <div class="search-input-wp">
-        <search-bar />
-      </div>
-      <div class="filter-price-cont">
-        <h2 class="filter-title">Filter by price</h2>
-        <div class="filter-by-price-wp">
-          <div class="price-input">
-            <div class="field">
-              <span>Min</span>
-              <text-field
-                ref="inputMin"
-                type="number"
-                min="0"
-                max="10000"
-                class="input-min h-[4.5rem]"
-                :value="minPrice"
-                @input="handleChangeMin"
-              />
-            </div>
-            <div class="separator">-</div>
-            <div class="field">
-              <span>Max</span>
-              <text-field
-                ref="inputMax"
-                type="number"
-                min="0"
-                max="10000"
-                class="input-max h-[4.5rem]"
-                :value="maxPrice"
-                @input="handleChangeMax"
-              />
-            </div>
-          </div>
-          <div class="price-slider">
-            <div
-              class="progress"
-              :style="{
-                left: progressLeft,
-                right: progressRight,
-              }"
-            ></div>
-          </div>
-          <div class="range-input">
-            <range-field
-              ref="rangeMin"
-              class="range-min"
-              min="0"
-              max="10000"
-              :value="minPrice"
-              @input="handleChangeMin"
-            />
-            <range-field
-              ref="rangeMax"
-              class="range-max"
-              min="0"
-              max="10000"
-              :value="maxPrice"
-              @input="handleChangeMax"
-            />
-          </div>
-        </div>
-        <div
-          class="filter-price-action mt-[25px] flex items-center justify-between"
-        >
-          <custom-button
-            class="px-[1.8rem] py-[1rem] uppercase"
-            intent="primary"
-            >Fitler</custom-button
-          >
-          <div class="filter-price-value">
-            <span
-              >Price:
-              <span class="price-value"
-                >${{ this.minPrice }} - ${{ this.maxPrice }}</span
-              ></span
-            >
-          </div>
-        </div>
-      </div>
+      <search-bar />
+      <filter-price />
       <div class="fitler-category-cont">
         <div class="filter-title">Categories</div>
         <div class="category-list">
@@ -135,16 +58,20 @@ import TextField from '../components/common/molecules/TextField.vue';
 import CustomButton from '../components/common/atomic/CustomButton.vue';
 import RangeField from '../components/common/molecules/RangeField.vue';
 import TopItem from '@/components/common/molecules/TopItem.vue';
+import NumberField from '@/components/common/molecules/NumberField.vue';
+import FilterPrice from '@/components/common/organisms/FilterPrice.vue';
 
 export default defineComponent({
   name: 'SearchView',
   components: {
-    SearchBar,
-    GridLayout,
-    ProductItem,
-    TextField,
     CustomButton,
+    FilterPrice,
+    GridLayout,
+    NumberField,
+    ProductItem,
     RangeField,
+    SearchBar,
+    TextField,
     TopItem,
   },
   data() {
@@ -155,51 +82,6 @@ export default defineComponent({
       progressRight: '25%',
       priceGap: 1000,
     };
-  },
-  setup() {},
-  methods: {
-    handleChangeMin(e: any) {
-      let minPrice = 0;
-      if (e.target.classList.value === 'input-min') {
-        minPrice =
-          !e.target.value && e.target.value === ''
-            ? 2500
-            : parseInt(this.$refs.inputMin.getInputRef().value);
-      } else {
-        minPrice = parseInt(this.$refs.rangeMin.getInputRef().value);
-      }
-      this.maxPrice = parseInt(this.$refs.rangeMax.getInputRef().value);
-      if (this.maxPrice - minPrice < this.priceGap) {
-        minPrice = this.maxPrice - this.priceGap;
-      }
-      minPrice = Math.max(minPrice, e.target.min);
-      this.$refs.rangeMin.getInputRef().value =
-        this.$refs.inputMin.getInputRef().value =
-        this.minPrice =
-          minPrice;
-      this.progressLeft = (this.minPrice / e.target.max) * 100 + '%';
-    },
-    handleChangeMax(e: any) {
-      let maxPrice = 0;
-      if (e.target.classList.value === 'input-max') {
-        maxPrice =
-          !e.target.value && e.target.value === ''
-            ? 7500
-            : parseInt(this.$refs.inputMax.getInputRef().value);
-      } else {
-        maxPrice = parseInt(this.$refs.rangeMax.getInputRef().value);
-      }
-      this.minPrice = parseInt(this.$refs.rangeMin.getInputRef().value);
-      if (maxPrice - this.minPrice < this.priceGap) {
-        maxPrice = this.minPrice + this.priceGap;
-      }
-      maxPrice = Math.min(maxPrice, e.target.max);
-      this.$refs.rangeMax.getInputRef().value =
-        this.$refs.inputMax.getInputRef().value =
-        this.maxPrice =
-          maxPrice;
-      this.progressRight = 100 - (this.maxPrice / e.target.max) * 100 + '%';
-    },
   },
 });
 </script>
@@ -214,8 +96,7 @@ export default defineComponent({
   padding: 0 2rem;
   .side-filter {
     margin: 6.4rem 0 4rem;
-    padding-right: 6rem;
-    max-width: 33rem;
+    width: 50rem;
     display: flex;
     flex-direction: column;
     gap: 5rem;

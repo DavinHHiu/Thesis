@@ -20,6 +20,14 @@ router.register(r"shipments", views.ShipmentViewSet, basename="shipment")
 router.register(r"users", views.UserViewSet, basename="user")
 router.register(r"wishlists", views.WishListViewSet, basename="wishlist")
 
-urlpatterns = []
+urlpatterns = [
+    path("register/", views.RegisterApiView.as_view(), name="register"),
+    path("token/", views.BaseObtainJSONWebTokenView.as_view(), name="token"),
+    path(
+        "token/refresh/",
+        views.BORefreshJSONWebTokenView.as_view(),
+        name="token-refresh",
+    ),
+]
 
 urlpatterns.append(path("", include(router.urls)))

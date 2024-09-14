@@ -1,5 +1,5 @@
 <template>
-  <card-view class="h-[280px] w-full mt-[20px] container" padding="10px">
+  <card class="h-[280px] w-full mt-[20px] container" padding="10px">
     <div class="title" v-if="title">{{ title }}</div>
     <image-slider
       class="h-[200px] w-full"
@@ -71,18 +71,18 @@
         class="w-[270px]"
       />
     </image-slider>
-  </card-view>
+  <card>
 </template>
 
 <script lang="ts">
 import { defineComponent } from 'vue';
-import CardView from './CardView.vue';
+import Card from './Card.vue';
 import ImageSlider from './ImageSlider.vue';
 
 export default defineComponent({
   name: 'ItemSlider',
   components: {
-    CardView,
+    Card,
     ImageSlider,
   },
   data() {

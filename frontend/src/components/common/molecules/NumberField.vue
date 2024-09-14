@@ -1,18 +1,22 @@
 <template>
   <div class="input-wp" :class="{ 'has-input': value != '' }">
     <custom-label v-if="label">{{ label }}</custom-label>
-    <custom-input :value="value" @input="handleInput" />
+    <custom-input
+      ref="inputRef"
+      type="number"
+      :value="value"
+      @input="handleInput"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
-import CustomInput from "../atomic/CustomInput.vue";
-import CustomLabel from "../atomic/CustomLabel.vue";
+import { defineComponent } from 'vue';
+import CustomInput from '../atomic/CustomInput.vue';
+import CustomLabel from '../atomic/CustomLabel.vue';
 
 export default defineComponent({
-  name: "TextField",
-  emits: ["update:modelValue"],
+  name: 'TextField',
   components: {
     CustomInput,
     CustomLabel,
@@ -24,7 +28,7 @@ export default defineComponent({
     },
     value: {
       type: [String, Number],
-      default: "",
+      default: '',
     },
   },
   data() {
@@ -42,12 +46,14 @@ export default defineComponent({
     },
     handleInput(event: any) {
       const value = event.target.value;
-      this.$emit("update:modelValue", value);
+      this.$emit('update:modelValue', value);
     },
   },
 });
 </script>
 
 <style lang="scss" scoped>
-@import "@/assets/variables";
+input {
+  text-align: center;
+}
 </style>

@@ -15,7 +15,13 @@
   </div>
 </template>
 
-<script lang="ts"></script>
+<script lang="ts">
+import { defineComponent } from 'vue';
+
+export default defineComponent({
+  name: 'TopItem',
+});
+</script>
 
 <style lang="scss" scoped>
 @import '@/assets/variables';

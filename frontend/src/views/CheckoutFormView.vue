@@ -60,7 +60,7 @@
       </div>
     </div>
     <div class="order-cont">
-      <card-view intent="form" class="py-[2.8rem] px-[3.2rem]">
+      <card intent="form" class="py-[2.8rem] px-[3.2rem]">
         <div class="order-title">Your order</div>
         <table class="total-cont">
           <thead>
@@ -103,7 +103,7 @@
           class="rounded-none w-full py-[16px] px-[28px]"
           >PLACE ORDER</custom-button
         >
-      </card-view>
+      </card>
     </div>
   </div>
 </template>
@@ -111,7 +111,7 @@
 <script lang="ts">
 import { defineComponent } from 'vue';
 import TextField from '../components/common/molecules/TextField.vue';
-import CardView from '../components/common/molecules/CardView.vue';
+import Card from '../components/common/molecules/Card.vue';
 import CustomButton from '../components/common/atomic/CustomButton.vue';
 import RadioField from '../components/common/molecules/RadioField.vue';
 import CustomLabel from '../components/common/atomic/CustomLabel.vue';
@@ -120,7 +120,7 @@ export default defineComponent({
   name: 'CheckoutFormView',
   components: {
     TextField,
-    CardView,
+    Card,
     CustomButton,
     RadioField,
     CustomLabel,

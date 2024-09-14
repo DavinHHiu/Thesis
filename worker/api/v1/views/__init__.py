@@ -5,5 +5,12 @@ from .payment import PaymentViewSet
 from .product import ProductAttributeViewSet, ProductViewSet
 from .shipment import ShipmentViewSet
 from .token import MyTokenObtainPairView
-from .user import AddressViewSet, UserViewSet
+from .user import (
+    AddressViewSet,
+    BaseObtainJSONWebTokenView,
+    BORefreshJSONWebTokenView,
+    EURefreshJSONWebTokenView,
+    RegisterApiView,
+    UserViewSet,
+)
 from .wishlist import WishListViewSet
