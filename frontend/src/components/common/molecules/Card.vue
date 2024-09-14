@@ -8,7 +8,7 @@
 import { defineComponent } from 'vue';
 
 export default defineComponent({
-  name: 'CardView',
+  name: 'Card',
   props: {
     intent: {
       type: String,
@@ -24,7 +24,7 @@ export default defineComponent({
 @import '@/assets/variables';
 
 .wrapper {
-  padding: 3.2rem 2.8rem;
+  padding: 2rem 1rem;
 }
 
 .card {

@@ -1,46 +1,83 @@
 <template>
-  <div class="overflow-hidden">
-    <div class="flex flex-col items-center gap-[3rem] mt-[5rem]">
-      <app-logo />
-      <card-view
-        class="w-[40rem] h-[50rem] p-[2rem] rounded flex flex-col gap-[3rem]"
-      >
+  <div class="flex flex-col items-center gap-[3rem] mt-[5rem]">
+    <app-logo />
+    <card class="w-[40rem] h-[48rem]">
+      <div class="h-full p-[1rem] flex flex-col justify-between">
         <p class="text-[28px] font-bold">Sign in</p>
-        <div>
-          <custom-label>Username or Email Address</custom-label>
-          <text-field type="email" class="h-[5rem]"></text-field>
+        <div class="flex flex-col gap-[4rem]">
+          <text-field
+            class="h-[5rem]"
+            :label="$t('inputLabel.user.email')"
+            :value="loginItem.email"
+            @update:model-value="(newValue) => (loginItem.email = newValue)"
+          ></text-field>
+          <password-field
+            class="h-[5rem]"
+            :label="$t('inputLabel.user.password')"
+            :value="loginItem.password"
+            @update:model-value="(newValue) => (loginItem.password = newValue)"
+          ></password-field>
         </div>
-        <div>
-          <custom-label>Password</custom-label>
-          <text-field type="password" class="h-[5rem]"></text-field>
+        <div class="flex flex-col gap-[2rem]">
+          <custom-button
+            class="h-[5rem]"
+            intent="primary"
+            @click="handleLogin"
+            v-text="$t('buttonLabel.login')"
+          />
+          <divider-break :title="$t('dividerBreak.login')" />
+          <custom-button
+            class="h-[5rem]"
+            intent="p-outline"
+            v-text="$t('buttonLabel.register')"
+          />
         </div>
-        <custom-button class="h-[5rem]" intent="primary">Login</custom-button>
-        <divider-break title="New to Price Tag?" />
-        <custom-button class="h-[5rem]" intent="outline"
-          >Register</custom-button
-        >
-      </card-view>
-    </div>
+      </div>
+    </card>
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue';
-import CardView from '../components/common/molecules/CardView.vue';
-import TextField from '../components/common/molecules/TextField.vue';
-import CustomButton from '../components/common/atomic/CustomButton.vue';
-import AppLogo from '../components/common/molecules/AppLogo.vue';
-import DividerBreak from '../components/common/molecules/DividerBreak.vue';
-import CustomLabel from '../components/common/atomic/CustomLabel.vue';
+import PasswordField from "@/components/common/molecules/PasswordField.vue";
+import { useSessionStore } from "@/stores/session";
+import { LoginItem } from "@/types/backoffice";
+import { mapActions, mapState } from "pinia";
+import { defineComponent } from "vue";
+
+import CustomButton from "../components/common/atomic/CustomButton.vue";
+import AppLogo from "../components/common/molecules/AppLogo.vue";
+import Card from "../components/common/molecules/Card.vue";
+import DividerBreak from "../components/common/molecules/DividerBreak.vue";
+import TextField from "../components/common/molecules/TextField.vue";
 
 export default defineComponent({
-  name: 'LoginView',
+  name: "LoginView",
   components: {
-    CardView,
-    TextField,
-    CustomButton,
     AppLogo,
+    Card,
+    CustomButton,
     DividerBreak,
-    CustomLabel,
+    PasswordField,
+    TextField,
+  },
+  data() {
+    return {
+      loginItem: {} as LoginItem,
+    };
+  },
+
+  methods: {
+    ...mapActions(useSessionStore, ["login"]),
+    handleLogin() {
+      this.login(this.loginItem).then((response) => {
+        if (response && response.status === 200) {
+          this.$router.push("/");
+        } else {
+        }
+      });
+    },
+  },
+  computed: {
+    ...mapState(useSessionStore, ["isAuthenticated"]),
   },
 });
 </script>

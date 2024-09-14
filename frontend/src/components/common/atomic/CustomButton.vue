@@ -62,7 +62,7 @@ export default defineComponent({
     intent: {
       type: String,
       validator: (val: string) =>
-        ['primary', 'second', 'outline', 'text', 'danger'].includes(val),
+        ['primary', 'second', 'p-outline', 'text', 'danger'].includes(val),
       default: 'secondary',
       required: false,
     },
@@ -70,20 +70,18 @@ export default defineComponent({
   computed: {
     buttonClass() {
       const classes = ['btn'];
-      const variants = {
-        intent: {
-          primary: 'bg-black text-white',
-          second: 'bg-white text-black',
-          outline: [
-            'text-black bg-transparent',
-            'hover:text-white hover:bg-black',
-            'outlinePrimary',
-          ],
-          outlineSecond: 'outlineSecond',
-        },
+      const intent: Record<string, string | string[]> = {
+        primary: 'bg-black text-white',
+        second: 'bg-white text-black',
+        'p-outline': [
+          'text-black bg-transparent',
+          'hover:text-white hover:bg-black',
+          'outlinePrimary',
+        ],
+        outlineSecond: 'outlineSecond',
       };
       if (this.intent) {
-        classes.push(variants.intent[this.intent]);
+        classes.push(intent[this.intent] as string);
       }
       return classes;
     },

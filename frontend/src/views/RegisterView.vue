@@ -1,50 +1,111 @@
 <template>
-  <div class="overflow-hidden">
-    <div class="flex flex-col items-center gap-[3rem] mt-[5rem]">
-      <app-logo />
-      <card-view
-        class="w-[50rem] h-[60rem] p-[2rem] rounded flex flex-col gap-[3rem]"
-      >
-        <p class="text-[28px] font-bold">Register</p>
-        <div>
-          <custom-label>Username or Email Address</custom-label>
-          <text-field type="email" class="h-[5rem]"></text-field>
+  <div class="flex flex-col items-center gap-[3rem] mt-[5rem]">
+    <app-logo />
+    <card class="w-[40rem] h-[55rem]">
+      <div class="h-full p-[1rem] flex flex-col justify-between">
+        <p class="text-[28px] font-bold" v-text="$t('buttonLabel.register')" />
+        <div class="flex flex-col gap-[4rem]">
+          <text-field
+            class="h-[5rem]"
+            :label="$t('inputLabel.user.email')"
+            :value="registerItem.email"
+            @update:model-value="(newValue) => (registerItem.email = newValue)"
+          ></text-field>
+          <password-field
+            class="h-[5rem]"
+            :label="$t('inputLabel.user.password')"
+            :value="registerItem.password"
+            @update:model-value="
+              (newValue) => (registerItem.password = newValue)
+            "
+          ></password-field>
+          <password-field
+            class="h-[5rem]"
+            :label="$t('inputLabel.user.retypePassword')"
+            :value="registerItem.retypePassword"
+            @update:model-value="
+              (newValue) => (registerItem.retypePassword = newValue)
+            "
+          ></password-field>
         </div>
-        <div>
-          <custom-label>Password</custom-label>
-          <text-field type="password" class="h-[5rem]"></text-field>
+        <div class="flex flex-col gap-[2rem]">
+          <custom-button
+            class="h-[5rem]"
+            intent="primary"
+            v-text="$t('buttonLabel.register')"
+            @click="handleRegister"
+          />
+          <divider-break :title="$t('dividerBreak.register')" />
+          <custom-button
+            class="h-[5rem]"
+            intent="p-outline"
+            v-text="$t('buttonLabel.login')"
+          />
         </div>
-        <div>
-          <custom-label>Re-enter password</custom-label>
-          <text-field type="password" class="h-[5rem]"></text-field>
-        </div>
-        <custom-button class="h-[5rem]" intent="primary"
-          >Register</custom-button
-        >
-        <divider-break title="Already have an account?" />
-        <custom-button class="h-[5rem]" intent="outline">Login</custom-button>
-      </card-view>
-    </div>
+      </div>
+    </card>
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue';
-import CardView from '../components/common/molecules/CardView.vue';
-import TextField from '../components/common/molecules/TextField.vue';
-import CustomButton from '../components/common/atomic/CustomButton.vue';
-import AppLogo from '../components/common/molecules/AppLogo.vue';
-import DividerBreak from '../components/common/molecules/DividerBreak.vue';
-import CustomLabel from '../components/common/atomic/CustomLabel.vue';
+import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import CustomLabel from "@/components/common/atomic/CustomLabel.vue";
+import AppLogo from "@/components/common/molecules/AppLogo.vue";
+import Card from "@/components/common/molecules/Card.vue";
+import DividerBreak from "@/components/common/molecules/DividerBreak.vue";
+import PasswordField from "@/components/common/molecules/PasswordField.vue";
+import TextField from "@/components/common/molecules/TextField.vue";
+import { useSessionStore } from "@/stores/session";
+import { RegisterItem } from "@/types/backoffice";
+import _ from "lodash";
+import { mapActions, mapState } from "pinia";
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'RegisterView',
+  name: "RegisterView",
   components: {
-    CardView,
-    TextField,
-    CustomButton,
     AppLogo,
-    DividerBreak,
+    Card,
+    CustomButton,
     CustomLabel,
+    DividerBreak,
+    PasswordField,
+    TextField,
+  },
+  data() {
+    return {
+      registerItem: {
+        email: "",
+        password: "",
+        retypePassword: "",
+      } as RegisterItem,
+    };
+  },
+  methods: {
+    ...mapActions(useSessionStore, ["register"]),
+    handleRegister() {
+      // Check fields not empty
+      if (
+        !_.every(
+          this.registerItem,
+          (field) => !_.isNil(field) && !_.isEmpty(field)
+        )
+      ) {
+        alert("Please fill out all the required fields");
+      }
+
+      //Register the user
+      this.register(this.registerItem).then((response) => {
+        if (response && response.status === 201) {
+          alert("User registered successfully");
+          this.$router.push("/login");
+        } else {
+          alert("Failed to register user");
+        }
+      });
+    },
+  },
+  computed: {
+    ...mapState(useSessionStore, ["user"]),
   },
 });
 </script>

@@ -1,17 +1,7 @@
 <template>
-  <div class="logo-wp w-[25rem] flex items-center justify-center gap-[0.5rem]">
-    <div class="w-[5rem] h-[5rem]">
-      <icon-price-tag :intent="intent" />
-    </div>
-    <h2
-      class="app-name flex items-center"
-      :class="{
-        'text-black': intent == 'primary',
-        'text-white': intent == 'second',
-      }"
-    >
-      price tag
-    </h2>
+  <div class="logo-wrap h-full flex items-center">
+    <span class="material-symbols-outlined icon flex items-center">sell</span>
+    <span class="app-name">Price tag</span>
   </div>
 </template>
 
@@ -38,13 +28,14 @@ export default defineComponent({
 @import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
 @import '@/assets/variables';
 
-.logo-wp {
-  margin: 0 auto;
-}
-
 .app-name {
   font-family: 'Playwrite CU', cursive;
-  font-size: $--font-xl;
+  font-weight: $--font-bold;
+  font-size: $--font-md;
   text-transform: uppercase;
+}
+
+.icon {
+  font-size: 2.7rem;
 }
 </style>

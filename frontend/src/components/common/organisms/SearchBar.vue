@@ -1,5 +1,5 @@
 <template>
-  <div class="container">
+  <div class="wrapper">
     <div class="search-input-container flex-1">
       <text-field label="Search Price Tag" />
     </div>
@@ -25,9 +25,10 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import '@/assets/variables';
 
-.container {
+.wrapper {
   display: flex;
-  height: 100%;
+  width: 100%;
+  height: 5rem;
   gap: 0.7rem;
 
   .item-right-container {
