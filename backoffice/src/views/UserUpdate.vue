@@ -1,5 +1,5 @@
 <template>
-  <page-title :title="pageTitle" />
+  <page-title v-if="new" :title="pageTitle" />
   <page-body>
     <card class="flex">
       <section class="upload-wp">
@@ -55,6 +55,7 @@ import CustomButton from "@/components/common/atomic/CustomButton.vue";
 import DateField from "@/components/common/molecules/DateField.vue";
 import PasswordField from "@/components/common/molecules/PasswordField.vue";
 import SelectField from "@/components/common/molecules/SelectField.vue";
+import TabLayout from "@/components/common/molecules/TabLayout.vue";
 import TextField from "@/components/common/molecules/TextField.vue";
 import UploadPreview from "@/components/common/molecules/UploadPreview.vue";
 import Card from "@/components/common/templates/Card.vue";
@@ -73,9 +74,10 @@ export default defineComponent({
     PageBody,
     PageTitle,
     PasswordField,
+    SelectField,
+    TabLayout,
     TextField,
     UploadPreview,
-    SelectField,
   },
   data() {
     return {

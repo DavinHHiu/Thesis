@@ -24,4 +24,9 @@ interface SidebarItem {
   icon: string;
 }
 
-export { AuthToken, DropdownItem, OptionItem, LoginItem, SidebarItem };
+interface TabItem {
+  title: string;
+  path: string;
+}
+
+export { AuthToken, DropdownItem, OptionItem, LoginItem, SidebarItem, TabItem };

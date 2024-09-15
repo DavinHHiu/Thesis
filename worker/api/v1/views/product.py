@@ -1,18 +1,30 @@
 from django.db import transaction
 from rest_framework import status, viewsets
+from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
-from api.models import Product, ProductAttribute, SubCategory
-from api.v1.serializers import ProductAttributeSerializer, ProductSerializer
+from api.models import Product, ProductAttribute, ProductSku, SubCategory
+from api.v1.serializers import (
+    ProductAttributeSerializer,
+    ProductSerializer,
+    ProductSkuSerializer,
+)
 
 
 class ProductViewSet(viewsets.ModelViewSet):
+    queryset = Product.objects.all()
+    serializer_class = ProductSerializer
+    permission_classes = [AllowAny]
+
+
+class ProductSkuViewSet(viewsets.ModelViewSet):
     """
     API endpoint for managing products.
     """
 
-    queryset = Product.objects.all()
-    serializer_class = ProductSerializer
+    queryset = ProductSku.objects.all()
+    serializer_class = ProductSkuSerializer
+    permission_classes = [AllowAny]
 
     @transaction.atomic
     def create(self, request):

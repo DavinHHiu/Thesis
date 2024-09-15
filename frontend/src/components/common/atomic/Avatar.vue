@@ -3,10 +3,10 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'Avatar',
+  name: "Avatar",
   props: {
     src: {
       type: String,
@@ -18,7 +18,7 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .avatar {
-  width: 100%;
+  width: 3.2rem;
   height: auto;
   border-radius: 50%;
 }

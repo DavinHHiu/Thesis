@@ -45,13 +45,27 @@ interface Product {
   name: string;
   description?: string;
   summary?: string;
-  cover?: File | string;
+  rating?: number;
   categories: SubCategory[];
+}
+
+interface ProductSku {
+  id?: string;
+  cover?: File | string;
   size: ProductAttribute;
   color: ProductAttribute;
   sku: string;
   price: number;
   quantity: number;
+  product_id?: string;
 }
 
-export { Address, Category, Product, ProductAttribute, SubCategory, User };
+export {
+  Address,
+  Category,
+  Product,
+  ProductSku,
+  ProductAttribute,
+  SubCategory,
+  User,
+};

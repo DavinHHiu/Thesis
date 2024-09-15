@@ -1,22 +1,26 @@
 import { createRouter, createWebHistory } from "vue-router";
 
-const AddressView = () => import("@/views/AddressView.vue");
-const AddressUpdateView = () => import("@/views/AddressUpdateView.vue");
-const BaseView = () => import("@/views/BaseView.vue");
-const CategoryView = () => import("@/views/CategoryView.vue");
-const CategoryUpdateView = () => import("@/views/CategoryUpdateView.vue");
-const HomeView = () => import("@/views/Home.vue");
-const LoginView = () => import("@/views/LoginView.vue");
-const RegisterView = () => import("@/views/RegisterView.vue");
-const ProductView = () => import("@/views/ProductView.vue");
-const ProductAttributeView = () => import("@/views/ProductAttributeView.vue");
-const ProductAttributeUpdateView = () =>
-  import("@/views/ProductAttributeUpdateView.vue");
-const ProductUpdateView = () => import("@/views/ProductUpdateView.vue");
-const SubCategoryView = () => import("@/views/SubCategoryView.vue");
-const SubCategoryUpdateView = () => import("@/views/SubCategoryUpdateView.vue");
-const UserView = () => import("@/views/UserView.vue");
-const UserUpdateView = () => import("@/views/UserUpdateView.vue");
+const Address = () => import("@/views/Address.vue");
+const AddressUpdate = () => import("@/views/AddressUpdate.vue");
+const Base = () => import("@/views/Base.vue");
+const Category = () => import("@/views/Category.vue");
+const CategoryUpdate = () => import("@/views/CategoryUpdate.vue");
+const Home = () => import("@/views/Home.vue");
+const Login = () => import("@/views/Login.vue");
+const Register = () => import("@/views/Register.vue");
+const Product = () => import("@/views/Product.vue");
+const ProductUpdate = () => import("@/views/ProductUpdate.vue");
+const ProductSku = () => import("@/views/ProductSku.vue");
+const ProductSkuUpdate = () => import("@/views/ProductSkuUpdate.vue");
+const ProductAttribute = () => import("@/views/ProductAttribute.vue");
+const ProductAttributeUpdate = () =>
+  import("@/views/ProductAttributeUpdate.vue");
+const SubCategory = () => import("@/views/SubCategory.vue");
+const SubCategoryUpdate = () => import("@/views/SubCategoryUpdate.vue");
+const UserDetail = () => import("@/views/UserDetail.vue");
+const UserAddresses = () => import("@/views/UserAddresses.vue");
+const User = () => import("@/views/User.vue");
+const UserUpdate = () => import("@/views/UserUpdate.vue");
 
 const router = createRouter({
   history: createWebHistory(),
@@ -24,12 +28,12 @@ const router = createRouter({
     {
       name: "base",
       path: "/",
-      component: BaseView,
+      component: Base,
       children: [
         {
           name: "home",
           path: "",
-          component: HomeView,
+          component: Home,
         },
         {
           path: "products",
@@ -37,17 +41,39 @@ const router = createRouter({
             {
               name: "product.list",
               path: "",
-              component: ProductView,
+              component: Product,
             },
             {
               name: "product.add",
               path: "add",
-              component: ProductUpdateView,
+              component: ProductUpdate,
             },
             {
               name: "product.update",
-              path: "update/:id",
-              component: ProductUpdateView,
+              path: ":id",
+              component: ProductUpdate,
+              children: [
+                {
+                  path: "product-skus",
+                  children: [
+                    {
+                      name: "product.skus.list",
+                      path: "",
+                      component: ProductSku,
+                    },
+                    {
+                      name: "product.skus.add",
+                      path: "add",
+                      component: ProductSkuUpdate,
+                    },
+                    {
+                      name: "product.skus.update",
+                      path: "update/:id",
+                      component: ProductSkuUpdate,
+                    },
+                  ],
+                },
+              ],
             },
           ],
         },
@@ -57,17 +83,17 @@ const router = createRouter({
             {
               name: "product.attribute.list",
               path: "",
-              component: ProductAttributeView,
+              component: ProductAttribute,
             },
             {
               name: "product.attribute.add",
               path: "add",
-              component: ProductAttributeUpdateView,
+              component: ProductAttributeUpdate,
             },
             {
               name: "product.attribute.update",
               path: "update/:id",
-              component: ProductAttributeUpdateView,
+              component: ProductAttributeUpdate,
             },
           ],
         },
@@ -77,17 +103,17 @@ const router = createRouter({
             {
               name: "category.list",
               path: "",
-              component: CategoryView,
+              component: Category,
             },
             {
               name: "category.add",
               path: "add",
-              component: CategoryUpdateView,
+              component: CategoryUpdate,
             },
             {
               name: "category.update",
               path: "update/:id",
-              component: CategoryUpdateView,
+              component: CategoryUpdate,
             },
           ],
         },
@@ -97,17 +123,17 @@ const router = createRouter({
             {
               name: "subcategory.list",
               path: "",
-              component: SubCategoryView,
+              component: SubCategory,
             },
             {
               name: "subcategory.add",
               path: "add",
-              component: SubCategoryUpdateView,
+              component: SubCategoryUpdate,
             },
             {
               name: "subcategory.update",
               path: "update/:id",
-              component: SubCategoryUpdateView,
+              component: SubCategoryUpdate,
             },
           ],
         },
@@ -117,17 +143,29 @@ const router = createRouter({
             {
               name: "user.list",
               path: "",
-              component: UserView,
+              component: User,
             },
             {
               name: "user.add",
               path: "add",
-              component: UserUpdateView,
+              component: UserUpdate,
             },
             {
-              name: "user.update",
-              path: "update/:id",
-              component: UserUpdateView,
+              name: "user.detail",
+              path: "detail",
+              component: UserDetail,
+              children: [
+                {
+                  name: "user.update",
+                  path: "update/:id",
+                  component: UserUpdate,
+                },
+                {
+                  name: "user.addresses",
+                  path: "addresses",
+                  component: UserAddresses,
+                },
+              ],
             },
           ],
         },
@@ -137,17 +175,17 @@ const router = createRouter({
             {
               name: "address.list",
               path: "",
-              component: AddressView,
+              component: Address,
             },
             {
               name: "address.add",
               path: "add",
-              component: AddressUpdateView,
+              component: AddressUpdate,
             },
             {
               name: "address.update",
               path: "update/:id",
-              component: AddressUpdateView,
+              component: AddressUpdate,
             },
           ],
         },
@@ -159,12 +197,12 @@ const router = createRouter({
         {
           name: "login",
           path: "login",
-          component: LoginView,
+          component: Login,
         },
         {
           name: "register",
           path: "register",
-          component: RegisterView,
+          component: Register,
         },
       ],
     },
@@ -172,7 +210,7 @@ const router = createRouter({
 });
 
 router.beforeEach((to, from) => {
-  const isAuthenticated = localStorage.getItem("authTokens");
+  const isAuthenticated = localStorage.getItem("token");
   if (!isAuthenticated && !["login", "register"].includes(to.name as string)) {
     return { name: "login" };
   }

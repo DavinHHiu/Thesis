@@ -16,22 +16,27 @@ class ProductAttribute(models.Model, CreateAndUpdateModelMixin):
         verbose_name_plural = _("product attributes")
 
 
-class ProductBase(models.Model, CreateAndUpdateModelMixin):
+class Product(models.Model, CreateAndUpdateModelMixin):
     id = models.UUIDField(_("product id"), primary_key=True, default=uuid.uuid4)
     name = models.CharField(_("product name"), max_length=255)
     description = models.TextField(_("product description"))
     summary = models.TextField(_("product summary"))
-    cover = models.ImageField(_("product cover"))
+    rating = models.IntegerField(_("product rating"), blank=True, null=True)
     categories = models.ManyToManyField(
         to="api.SubCategory",
         verbose_name=_("product categories"),
     )
 
     class Meta:
-        abstract = True
+        verbose_name = _("product")
+        verbose_name_plural = _("products")
 
 
-class Product(ProductBase):
+class ProductSku(models.Model, CreateAndUpdateModelMixin):
+    id = models.UUIDField(_("product id"), primary_key=True, default=uuid.uuid4)
+    product = models.ForeignKey(
+        to="api.Product", on_delete=models.CASCADE, related_name="product"
+    )
     size = models.ForeignKey(
         to="api.ProductAttribute", on_delete=models.CASCADE, related_name="product_size"
     )
@@ -40,10 +45,11 @@ class Product(ProductBase):
         on_delete=models.CASCADE,
         related_name="product_color",
     )
+    cover = models.ImageField(_("product cover"))
     sku = models.CharField(_("product sku"), max_length=255)
     price = models.FloatField(_("product price"))
     quantity = models.IntegerField(_("product quantity"))
 
     class Meta:
-        verbose_name = _("product")
-        verbose_name_plural = _("products")
+        verbose_name = _("product sku")
+        verbose_name_plural = _("product skus")

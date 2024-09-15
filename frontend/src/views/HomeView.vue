@@ -40,7 +40,10 @@
     </div>
     <div class="list-products">
       <div class="products-title-wp">
-        <h1 class="products-title">Featured Products</h1>
+        <h1
+          class="products-title"
+          v-t="$t('homePage.featuredProducts.title')"
+        />
       </div>
       <grid-layout wrap="wrap">
         <product-item />
@@ -105,19 +108,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import GridLayout from '../layouts/GridLayout.vue';
-import MainBackground from '../components/common/molecules/MainBackground.vue';
-import PageBody from '../components/common/templates/PageBody.vue';
-import ProductItem from '../components/common/molecules/ProductItem.vue';
-import CustomButton from '../components/common/atomic/CustomButton.vue';
-import LogoSlider from '../components/common/molecules/LogoSlider.vue';
-import CriteriaItem from '../components/common/molecules/CriteriaItem.vue';
-import CartFolder from '@/components/common/templates/CartFolder.vue';
-import CategoryItem from '@/components/common/molecules/CategoryItem.vue';
+import CategoryItem from "@/components/common/molecules/CategoryItem.vue";
+import CartFolder from "@/components/common/templates/CartFolder.vue";
+import { defineComponent } from "vue";
+
+import CustomButton from "../components/common/atomic/CustomButton.vue";
+import CriteriaItem from "../components/common/molecules/CriteriaItem.vue";
+import LogoSlider from "../components/common/molecules/LogoSlider.vue";
+import MainBackground from "../components/common/molecules/MainBackground.vue";
+import ProductItem from "../components/common/molecules/ProductItem.vue";
+import PageBody from "../components/common/templates/PageBody.vue";
+import GridLayout from "../layouts/GridLayout.vue";
 
 export default defineComponent({
-  name: 'HomeView',
+  name: "HomeView",
   components: {
     CartFolder,
     CategoryItem,
@@ -132,9 +136,9 @@ export default defineComponent({
   data() {
     return {
       slides: [
-        { title: '20% Off On Tank Tops', src: '/images/categories/2.jpg' },
-        { title: 'Latest Eyewear For You', src: '/images/categories/3.jpg' },
-        { title: "Let's Lorem Suit Up!", src: '/images/categories/4.jpg' },
+        { title: "20% Off On Tank Tops", src: "/images/categories/2.jpg" },
+        { title: "Latest Eyewear For You", src: "/images/categories/3.jpg" },
+        { title: "Let's Lorem Suit Up!", src: "/images/categories/4.jpg" },
       ],
     };
   },
@@ -142,7 +146,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .main-bg-wp {
   height: 47vw;
@@ -225,7 +229,7 @@ export default defineComponent({
         font-size: $--font-6xl;
         font-weight: $--font-bold;
         &::after {
-          content: '';
+          content: "";
           position: absolute;
           bottom: 0;
           right: 50%;

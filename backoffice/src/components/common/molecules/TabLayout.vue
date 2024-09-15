@@ -1,16 +1,39 @@
 <template>
   <div class="tab-wp flex">
-    <div class="tab-item">User</div>
-    <div class="tab-item active">Addresses</div>
+    <div
+      v-for="(item, index) in tabs"
+      class="tab-item"
+      :class="{ active: index === currentIndex }"
+      v-text="item.title"
+      @click="changeTab(index)"
+    />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { TabItem } from "@/types/backoffice";
+import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
   name: "TabLayout",
-  data() {},
+  props: {
+    tabs: {
+      type: Array as PropType<TabItem[]>,
+      required: true,
+    },
+  },
+  data() {
+    return {
+      currentIndex: 0,
+    };
+  },
+  methods: {
+    changeTab(index: number): void {
+      this.currentIndex = index;
+      this.$emit("change:tab", index);
+      console.log(this.$router.currentRoute._value);
+    },
+  },
 });
 </script>
 
@@ -22,6 +45,10 @@ export default defineComponent({
   border-bottom: 1px solid $--gray-color-200;
   .tab-item {
     padding: 1.5rem 1rem;
+    min-width: 10rem;
+    user-select: none;
+    text-align: center;
+    cursor: pointer;
     &.active {
       position: relative;
       &::after {

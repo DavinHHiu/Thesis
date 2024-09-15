@@ -36,6 +36,7 @@
     </card>
   </div>
 </template>
+
 <script lang="ts">
 import CustomButton from "../components/common/atomic/CustomButton.vue";
 import AppLogo from "../components/common/molecules/AppLogo.vue";
@@ -67,10 +68,13 @@ export default defineComponent({
   methods: {
     ...mapActions(useAuthStore, ["login"]),
     async handleLogin() {
-      await this.login(this.loginItem);
-      if (this.isAuthenticated) {
-        this.$router.push("/");
-      }
+      try {
+        const response = await this.login(this.loginItem);
+        if (response && response.status === 200) {
+          this.$router.push("/");
+        } else {
+        }
+      } catch (e) {}
     },
   },
   computed: {

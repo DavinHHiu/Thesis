@@ -13,7 +13,23 @@
       <div class="container" @click="$emit('open:cart-folder')">
         <icon-cart :intent="intent" />
       </div>
-      <div class="container">
+      <div v-if="isAuthenticated" class="container flex items-center f-full">
+        <avatar
+          :src="`http://localhost:8000/${user.avatar}`"
+          class="w-[3.2rem]"
+        />
+        <p
+          class="dropdown-toggle header-items"
+          data-bs-toggle="dropdown"
+          @click="handleClick"
+        >
+          Hong Hieu
+        </p>
+        <!-- <ul class="dropdown-menu">
+          <li class="dropdown-item" @click="handleLogout">Logout</li>
+        </ul> -->
+      </div>
+      <div v-else class="container">
         <icon-user width="2rem" :intent="intent" />
         <p class="header-items">account</p>
       </div>
@@ -22,33 +38,49 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import AppLogo from '../molecules/AppLogo.vue';
-import IconCart from '../../icons/IconCart.vue';
-import IconUser from '../../icons/IconUser.vue';
+import { useSessionStore } from "@/stores/session";
+import { mapState } from "pinia";
+import { defineComponent } from "vue";
+
+import IconCart from "../../icons/IconCart.vue";
+import IconUser from "../../icons/IconUser.vue";
+import Avatar from "../atomic/Avatar.vue";
+import AppLogo from "../molecules/AppLogo.vue";
 
 export default defineComponent({
-  name: 'NavHeader',
-  emits: ['open:cart-folder'],
+  name: "NavHeader",
+  emits: ["open:cart-folder"],
   components: {
     AppLogo,
     IconCart,
     IconUser,
+    Avatar,
   },
   props: {
     intent: {
       type: String,
-      default: 'primary',
+      default: "primary",
       validator: (val: string) => {
-        return ['primary', 'second'].includes(val);
+        return ["primary", "second"].includes(val);
       },
     },
+  },
+  computed: {
+    ...mapState(useSessionStore, ["isAuthenticated", "user"]),
+  },
+  methods: {
+    handleClick() {
+      console.log("Dropdown clicked");
+    },
+  },
+  mounted() {
+    console.log(this.user);
   },
 });
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .nav-header-container {
   position: relative;
@@ -63,6 +95,7 @@ export default defineComponent({
   .container {
     display: flex;
     align-items: center;
+    width: auto;
     cursor: pointer;
     gap: 1rem;
 
