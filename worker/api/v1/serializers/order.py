@@ -2,7 +2,7 @@ from rest_framework import serializers
 
 from api.models import OrderDetail, OrderItem
 
-from .product import ProductSerializer
+from .product import ProductSkuSerializer
 from .user import UserSerializer
 
 
@@ -18,7 +18,7 @@ class OrderDetailSerializer(serializers.ModelSerializer):
 
 class OrderItemSerializer(serializers.ModelSerializer):
     order = OrderDetailSerializer()
-    product = ProductSerializer()
+    product = ProductSkuSerializer()
     quantity = serializers.IntegerField()
 
     class Meta:

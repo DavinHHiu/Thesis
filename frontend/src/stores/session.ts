@@ -1,5 +1,6 @@
 import consts from "@/consts/consts";
-import { LoginItem, RegisterItem } from "@/types/backoffice";
+import { LoginItem, RegisterItem } from "@/types/frontend";
+import { User } from "@/types/worker";
 import localStore from "@/utils/localStorage";
 import axios from "axios";
 import { defineStore } from "pinia";
@@ -9,7 +10,7 @@ let refreshInterval: NodeJS.Timeout | null = null;
 export const useSessionStore = defineStore("session", {
   state: () => {
     return {
-      user: {},
+      user: {} as User,
       token: "",
     };
   },
@@ -50,7 +51,7 @@ export const useSessionStore = defineStore("session", {
     },
     logout() {
       this.token = "";
-      this.user = {};
+      this.user = {} as User;
       localStore.bulkRemove(["user", "token"]);
       delete axios.defaults.headers.common["Authorization"];
 
@@ -67,14 +68,13 @@ export const useSessionStore = defineStore("session", {
         .post(`${consts.BASE_URL}/token/refresh/`, payload)
         .then((response) => {
           if (response.status === 200 && response.data) {
+            this.token = "keep";
+            this.user = response.data.user;
             if (response.data.token) {
               axios.defaults.headers.common["Authorization"] =
                 `Bearer ${response.data.token}`;
             }
-          } else {
-            this.logout();
           }
-          return response;
         });
     },
   },

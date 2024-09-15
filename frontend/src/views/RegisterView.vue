@@ -55,7 +55,7 @@ import DividerBreak from "@/components/common/molecules/DividerBreak.vue";
 import PasswordField from "@/components/common/molecules/PasswordField.vue";
 import TextField from "@/components/common/molecules/TextField.vue";
 import { useSessionStore } from "@/stores/session";
-import { RegisterItem } from "@/types/backoffice";
+import { RegisterItem } from "@/types/frontend";
 import _ from "lodash";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";

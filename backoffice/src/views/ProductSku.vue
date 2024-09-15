@@ -1,38 +1,27 @@
 <template>
-  <page-title :title="$t('userPage.userList.title')" />
+  <page-title :title="$t('productSkuPage.productSkuList.title')" />
   <page-body>
     <header-action :current-route="$router.currentRoute._value.path" />
-    <tab-layout />
     <table class="w-full mt-[2rem] overflow-hidden">
       <thead>
         <tr>
           <th>No.</th>
-          <th>Avatar</th>
-          <th>Email</th>
-          <th>First name</th>
-          <th>Last name</th>
-          <th>Date of birth</th>
-          <th>Tel</th>
+          <th>Sku</th>
+          <th>Size</th>
+          <th>Color</th>
+          <th>Quantity</th>
+          <th>Price</th>
         </tr>
       </thead>
       <tbody>
-        <template v-for="(user, index) in users" :key="index">
+        <template v-for="(productSku, index) in productSkus" :key="index">
           <tr :class="{ odd: index % 2 == 0 }">
             <td>{{ index + 1 }}</td>
-            <td>
-              <div class="flex justify-center">
-                <img
-                  :src="user.avatar as string"
-                  :alt="user.email"
-                  class="w-[4rem] h-[4rem] rounded-full object-cover"
-                />
-              </div>
-            </td>
-            <td v-text="user.email" />
-            <td v-text="user.first_name" />
-            <td v-text="user.last_name" />
-            <td v-text="user.birth_of_date" />
-            <td v-text="user.tel" />
+            <td v-text="productSku.sku" />
+            <td v-text="productSku.size.value" />
+            <td v-text="productSku.color.value" />
+            <td v-text="productSku.quantity" />
+            <td v-text="productSku.price" />
             <td class="action-wrap">
               <ellipsis-dropdown
                 @action="handleActions"
@@ -49,7 +38,7 @@
     </table>
   </page-body>
   <modal id="deleteModal" title="Delete attribute" @confirm="submitAction">
-    <span v-text="$t('productPage.modalDelete.title')" />
+    <span v-text="$t('productSkuPage.modalDelete.title')" />
   </modal>
 </template>
 
@@ -58,24 +47,22 @@ import CustomButton from "@/components/common/atomic/CustomButton.vue";
 import EllipsisDropdown from "@/components/common/molecules/EllipsisDropdown.vue";
 import HeaderAction from "@/components/common/molecules/HeaderAction.vue";
 import Modal from "@/components/common/molecules/Modal.vue";
-import TabLayout from "@/components/common/molecules/TabLayout.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
-import { useUserStore } from "@/stores/user";
-import { User } from "@/types/worker";
+import { useProductStore } from "@/stores/product";
+import { Product } from "@/types/worker";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "UserView",
+  name: "ProductSkuView",
   components: {
     CustomButton,
     EllipsisDropdown,
     Modal,
     HeaderAction,
-    PageTitle,
     PageBody,
-    TabLayout,
+    PageTitle,
   },
   data() {
     return {
@@ -84,16 +71,16 @@ export default defineComponent({
     };
   },
   methods: {
-    ...mapActions(useUserStore, ["listUsers", "destroyUser"]),
-    handleAdd() {
-      console.log(this.$router);
+    ...mapActions(useProductStore, ["listProducts", "destroyProduct"]),
+    handleAction() {
+      console.log("Action clicked");
     },
     handleActions(obj: any) {
-      const user = this.users[obj.currentIndex];
+      const product = this.products[obj.currentIndex];
       if (obj.action === "Update") {
         this.$router.push({
-          name: "user.update",
-          params: { id: user.id },
+          name: "product.update",
+          params: { id: product.id },
         });
       }
       this.currentAction = obj.action;
@@ -102,20 +89,22 @@ export default defineComponent({
     async submitAction() {
       const action = this.currentAction;
       if (action === "Delete") {
-        const user = this.users[this.currentIndex] as User;
-        if (user.id) {
-          this.destroyUser(user.id);
+        const product = this.products[this.currentIndex] as Product;
+        if (product.id) {
+          this.destroyProduct(product.id);
         }
       }
     },
   },
   computed: {
-    ...mapState(useUserStore, ["users"]),
+    ...mapState(useProductStore, ["products"]),
   },
   async mounted() {
-    await this.listUsers();
+    await this.listProducts();
   },
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+@import "@/assets/scss/variables";
+</style>

@@ -4,64 +4,42 @@
     <card class="h-[80vh] flex">
       <section class="upload-wp">
         <upload-preview
-          :modelValue="product.cover"
-          @update:model-value="(newValue) => (product.cover = newValue)"
+          :modelValue="productSku.cover"
+          @update:model-value="(newValue) => (productSku.cover = newValue)"
         />
       </section>
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
-          :label="$t('inputLabel.common.name')"
-          :value="product.name"
-          @update:model-value="(newValue) => (product.name = newValue)"
-        />
-        <text-field
           :label="$t('inputLabel.product.sku')"
-          :value="product.sku"
-          @update:model-value="(newValue) => (product.sku = newValue)"
+          :value="productSku.sku"
+          @update:model-value="(newValue) => (productSku.sku = newValue)"
         />
         <text-field
           :label="$t('inputLabel.product.price')"
-          :value="product.price"
-          @update:model-value="(newValue) => (product.price = newValue)"
+          :value="productSku.price"
+          @update:model-value="(newValue) => (productSku.price = newValue)"
         />
         <text-field
           :label="$t('inputLabel.product.quantity')"
-          :value="product.quantity"
-          @update:model-value="(newValue) => (product.quantity = newValue)"
+          :value="productSku.quantity"
+          @update:model-value="(newValue) => (productSku.quantity = newValue)"
         />
         <div class="flex gap-[1rem]">
           <select-field
             class="flex-1"
             :label="$t('inputLabel.product.color')"
-            :value="String(product?.color?.id || '')"
+            :value="String(productSku?.color?.id || '')"
             :options="colorOptions"
             @update:model-value="selectColor"
           />
           <select-field
             class="flex-1"
             :label="$t('inputLabel.product.size')"
-            :value="String(product?.size?.id || '')"
+            :value="String(productSku?.size?.id || '')"
             :options="sizeOptions"
             @update:model-value="selectSize"
           />
-          <select-field
-            class="flex-1"
-            :label="$t('inputLabel.product.categories')"
-            :value="String(product?.categories?.[0].id || '')"
-            :options="categorieOptions"
-            @update:model-value="selectCategories"
-          />
         </div>
-        <text-field
-          :label="$t('inputLabel.common.description')"
-          :value="product.description"
-          @update:model-value="(newValue) => (product.description = newValue)"
-        />
-        <text-field
-          :label="$t('inputLabel.product.summary')"
-          :value="product.summary"
-          @update:model-value="(newValue) => (product.summary = newValue)"
-        />
         <custom-button
           class="w-[15rem]"
           @click="handleUpdate"
@@ -80,11 +58,11 @@ import UploadPreview from "@/components/common/molecules/UploadPreview.vue";
 import Card from "@/components/common/templates/Card.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
-import { useProductStore } from "@/stores/product";
 import { useProductAttributeStore } from "@/stores/productAttribute";
+import { useProductSkuStore } from "@/stores/productSku";
 import { useSubCategoryStore } from "@/stores/subcategory";
 import { OptionItem } from "@/types/backoffice";
-import { ProductAttribute, SubCategory } from "@/types/worker";
+import { ProductAttribute } from "@/types/worker";
 import _ from "lodash";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
@@ -108,18 +86,18 @@ export default defineComponent({
     };
   },
   methods: {
-    ...mapActions(useProductStore, [
-      "createProduct",
-      "retrieveProduct",
-      "updateProduct",
+    ...mapActions(useProductSkuStore, [
+      "createProductSku",
+      "retrieveProductSku",
+      "updateProductSku",
     ]),
     ...mapActions(useProductAttributeStore, ["listProductAttributes"]),
     ...mapActions(useSubCategoryStore, ["listSubCategories"]),
     handleUpdate() {
       if (this.new) {
-        this.createProduct(this.product);
+        this.createProductSku(this.productSku);
       } else {
-        this.updateProduct(this.product);
+        this.updateProductSku(this.productSku);
       }
       this.$router.push("/products");
     },
@@ -128,25 +106,18 @@ export default defineComponent({
         this.colors,
         (color) => color.id === Number(value)
       ) as ProductAttribute;
-      this.product.color = color;
+      this.productSku.color = color;
     },
     selectSize(value: number) {
       const size = _.find(
         this.sizes,
         (size) => size.id === Number(value)
       ) as ProductAttribute;
-      this.product.size = size;
-    },
-    selectCategories(value: number) {
-      const category = _.find(
-        this.subcategories,
-        (category) => category.id === Number(value)
-      ) as SubCategory;
-      this.product.categories[0] = category;
+      this.productSku.size = size;
     },
   },
   computed: {
-    ...mapState(useProductStore, ["product"]),
+    ...mapState(useProductSkuStore, ["productSku"]),
     ...mapState(useProductAttributeStore, ["productAttributes"]),
     ...mapState(useSubCategoryStore, ["subcategories"]),
     colorOptions(): OptionItem[] {
@@ -180,16 +151,16 @@ export default defineComponent({
     },
     pageTitle() {
       return this.new
-        ? this.$t("productPage.addProduct.title")
-        : this.$t("productPage.updateProduct.title");
+        ? this.$t("productSkuPage.addProductSku.title")
+        : this.$t("productSkuPage.updateProductSku.title");
     },
   },
   async mounted() {
     await this.listProductAttributes();
     await this.listSubCategories();
-    const id = this.$router.currentRoute._value.params.id;
+    const id = this.$router.currentRoute.value.params.id;
     if (id) {
-      await this.retrieveProduct(id);
+      await this.retrieveProductSku(id as string);
       this.new = false;
     }
     this.colors = _.filter(

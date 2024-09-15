@@ -39,7 +39,7 @@
 <script lang="ts">
 import PasswordField from "@/components/common/molecules/PasswordField.vue";
 import { useSessionStore } from "@/stores/session";
-import { LoginItem } from "@/types/backoffice";
+import { LoginItem } from "@/types/frontend";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
@@ -67,13 +67,14 @@ export default defineComponent({
 
   methods: {
     ...mapActions(useSessionStore, ["login"]),
-    handleLogin() {
-      this.login(this.loginItem).then((response) => {
+    async handleLogin() {
+      try {
+        const response = await this.login(this.loginItem);
         if (response && response.status === 200) {
           this.$router.push("/");
         } else {
         }
-      });
+      } catch (e) {}
     },
   },
   computed: {

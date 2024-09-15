@@ -6,7 +6,7 @@ from PIL import Image
 from rest_framework import serializers
 from rest_framework.utils import model_meta
 
-from api.models import Product, ProductAttribute
+from api.models import Product, ProductAttribute, ProductSku
 
 from .category import SubCategorySerializer
 
@@ -23,16 +23,11 @@ class ProductAttributeSerializer(serializers.ModelSerializer):
 
 class ProductSerializer(serializers.ModelSerializer):
     id = serializers.UUIDField(required=False)
-    name = serializers.CharField()
-    description = serializers.CharField()
-    summary = serializers.CharField()
-    cover = serializers.ImageField(required=False)
+    name = serializers.CharField(required=False)
     categories = SubCategorySerializer(many=True, required=False)
-    size = ProductAttributeSerializer(required=False)
-    color = ProductAttributeSerializer(required=False)
-    sku = serializers.CharField()
-    price = serializers.FloatField()
-    quantity = serializers.IntegerField()
+    description = serializers.CharField(required=False)
+    summary = serializers.CharField(required=False)
+    rating = serializers.IntegerField(required=False)
 
     class Meta:
         model = Product
@@ -49,6 +44,32 @@ class ProductSerializer(serializers.ModelSerializer):
             "price",
             "quantity",
         ]
+
+
+class ProductSkuSerializer(serializers.ModelSerializer):
+    id = serializers.UUIDField(required=False)
+    cover = serializers.ImageField(required=False)
+    size = ProductAttributeSerializer()
+    color = ProductAttributeSerializer()
+    sku = serializers.CharField()
+    price = serializers.FloatField()
+    quantity = serializers.IntegerField()
+    product_id = serializers.SerializerMethodField()
+
+    class Meta:
+        model = ProductSku
+        fields = [
+            "id",
+            "cover",
+            "size",
+            "color",
+            "sku",
+            "price",
+            "quantity",
+        ]
+
+    def get_product_id(self, obj):
+        return obj.product.id
 
     @transaction.atomic
     def create(self, data):

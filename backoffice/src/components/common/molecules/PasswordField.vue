@@ -68,7 +68,7 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "@/assets/scss/variables.scss";
 
-::v-deep .input-password {
+:deep(.input-password) {
   padding-right: 4.5rem;
 }
 

@@ -1,5 +1,7 @@
 import consts from "@/consts/consts";
 import { AuthToken, LoginItem } from "@/types/backoffice";
+import { User } from "@/types/worker";
+import localStore from "@/utils/localStorage";
 import axios from "axios";
 import { jwtDecode } from "jwt-decode";
 import { defineStore } from "pinia";
@@ -9,62 +11,74 @@ let refreshInterval: NodeJS.Timeout | null = null;
 export const useAuthStore = defineStore("auth", {
   state: () => {
     return {
-      isAuthenticated: false,
-      user: {},
-      authTokens: {} as AuthToken,
+      user: {} as User,
+      token: "",
     };
   },
   actions: {
     login(payload: LoginItem) {
       return axios
-        .post(`${consts.APP_URL}/token/`, payload)
+        .post(`${consts.BASE_URL}/token/`, payload)
         .then((response) => {
           if (response.status === 200 && response.data) {
-            this.authTokens = response.data;
-            this.user = jwtDecode(this.authTokens.access);
-            this.isAuthenticated = true;
-            localStorage.setItem("authTokens", JSON.stringify(this.authTokens));
+            this.token = "keep";
+            this.user = response.data.user;
+            if (response.data.token) {
+              axios.defaults.headers.common["Authorization"] =
+                `Bearer ${response.data.token}`;
+            }
+            localStore.bulkSet({
+              token: response.data.token,
+              user: JSON.stringify(this.user),
+            });
 
             refreshInterval = setInterval(
               () => {
                 if (this.isAuthenticated) {
-                  this.updateToken();
+                  this.refresh();
                 }
               },
               4 * 60 * 1000
             );
+
+            return response;
           } else {
             alert("Something went wrong!");
           }
         });
     },
     logout() {
-      this.authTokens = {} as AuthToken;
-      this.user = {};
-      this.isAuthenticated = false;
-      localStorage.removeItem("authTokens");
+      this.token = "";
+      this.user = {} as User;
+      localStore.bulkRemove(["user", "token"]);
+      delete axios.defaults.headers.common["Authorization"];
 
       if (refreshInterval) {
         clearInterval(refreshInterval);
         refreshInterval = null;
       }
     },
-    updateToken() {
+    refresh() {
       const payload = {
-        refresh: this.authTokens.refresh,
+        token: localStore.get("token"),
       };
       return axios
-        .post(`${consts.APP_URL}/token/refresh/`, payload)
+        .post(`${consts.BASE_URL}/token/refresh/`, payload)
         .then((response) => {
           if (response.status === 200 && response.data) {
-            this.authTokens = response.data;
-            this.user = jwtDecode(this.authTokens.access);
-            this.isAuthenticated = true;
-            localStorage.setItem("authTokens", JSON.stringify(this.authTokens));
-          } else {
-            this.logout();
+            this.token = "keep";
+            this.user = response.data.user;
+            if (response.data.token) {
+              axios.defaults.headers.common["Authorization"] =
+                `Bearer ${response.data.token}`;
+            }
           }
         });
+    },
+  },
+  getters: {
+    isAuthenticated: (state) => {
+      return !!localStore.get("token");
     },
   },
 });
