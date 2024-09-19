@@ -4,6 +4,7 @@ const Address = () => import("@/views/Address.vue");
 const AddressUpdate = () => import("@/views/AddressUpdate.vue");
 const Base = () => import("@/views/Base.vue");
 const Category = () => import("@/views/Category.vue");
+const CategoryDetail = () => import("@/views/CategoryDetail.vue");
 const CategoryUpdate = () => import("@/views/CategoryUpdate.vue");
 const Home = () => import("@/views/Home.vue");
 const Login = () => import("@/views/Login.vue");
@@ -118,29 +119,36 @@ const router = createRouter({
               component: CategoryUpdate,
             },
             {
-              name: "category.update",
-              path: "update/:id",
-              component: CategoryUpdate,
-            },
-          ],
-        },
-        {
-          path: "sub-categories",
-          children: [
-            {
-              name: "subcategory.list",
-              path: "",
-              component: SubCategory,
-            },
-            {
-              name: "subcategory.add",
-              path: "add",
-              component: SubCategoryUpdate,
-            },
-            {
-              name: "subcategory.update",
-              path: "update/:id",
-              component: SubCategoryUpdate,
+              name: "category.detail",
+              path: ":categoryId",
+              component: CategoryDetail,
+              children: [
+                {
+                  name: "category.update",
+                  path: "detail",
+                  component: CategoryUpdate,
+                },
+                {
+                  path: "sub-categories",
+                  children: [
+                    {
+                      name: "subcategory.list",
+                      path: "",
+                      component: SubCategory,
+                    },
+                    {
+                      name: "subcategory.add",
+                      path: "add",
+                      component: SubCategoryUpdate,
+                    },
+                    {
+                      name: "subcategory.update",
+                      path: "update/:subcategoryId",
+                      component: SubCategoryUpdate,
+                    },
+                  ],
+                },
+              ],
             },
           ],
         },

@@ -1,3 +1,4 @@
+from django.utils.translation import gettext_lazy as _
 from rest_framework import status, viewsets
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
@@ -24,6 +25,29 @@ class SubCategoryViewSet(viewsets.ModelViewSet):
     queryset = SubCategory.objects.all()
     serializer_class = SubCategorySerializer
     permission_classes = [AllowAny]
+
+    def list(self, request):
+        category_id = request.query_params.get("category_id")
+
+        if not category_id:
+            msg = _("Category ID is required")
+            return Response(
+                {"error": msg},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        try:
+            category = Category.objects.get(pk=category_id)
+        except Category.DoesNotExist:
+            msg = _("Category does not exist")
+            return Response(
+                {"error": msg},
+                status=status.HTTP_400_BAD_REQUEST,
+            )
+
+        subcategories = SubCategory.objects.filter(category=category)
+        serializer = self.get_serializer(subcategories, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
     def create(self, request):
         serializer = self.get_serializer(data=request.data)

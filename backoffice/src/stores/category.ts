@@ -48,7 +48,7 @@ export const useCategoryStore = defineStore("category", {
           }
         });
     },
-    updateCategory(payload: Category) {
+    update(payload: Category) {
       return axios
         .put(`${consts.BASE_URL}/categories/${payload.id}/`, payload)
         .then((response) => {

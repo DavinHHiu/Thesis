@@ -1,5 +1,4 @@
 <template>
-  <page-title :title="pageTitle" />
   <page-body>
     <card class="flex">
       <section class="info-wp flex flex-col gap-[4rem]">
@@ -37,7 +36,6 @@ import SelectField from "@/components/common/molecules/SelectField.vue";
 import TextField from "@/components/common/molecules/TextField.vue";
 import Card from "@/components/common/templates/Card.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
-import PageTitle from "@/components/common/templates/PageTitle.vue";
 import { useCategoryStore } from "@/stores/category";
 import { useSubCategoryStore } from "@/stores/subcategory";
 import { OptionItem } from "@/types/backoffice";
@@ -52,7 +50,6 @@ export default defineComponent({
     Card,
     CustomButton,
     PageBody,
-    PageTitle,
     TextField,
     SelectField,
   },
@@ -97,17 +94,12 @@ export default defineComponent({
         ? this.$t("buttonLabel.add")
         : this.$t("buttonLabel.update");
     },
-    pageTitle() {
-      return this.new
-        ? this.$t("subcategoryPage.addSubCategory.title")
-        : this.$t("subcategoryPage.updateSubCategory.title");
-    },
   },
   mounted() {
     this.listCategories();
-    const id = this.$router.currentRoute._value.params.id;
+    const id = this.$router.currentRoute.value.params.subcategoryId;
     if (id) {
-      this.retrieveSubCategory(id);
+      this.retrieveSubCategory(Number(id));
       this.new = false;
     }
   },

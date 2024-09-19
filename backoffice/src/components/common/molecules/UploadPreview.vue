@@ -20,19 +20,12 @@
           :src="imagePath"
           alt=""
         />
-        <img
-          v-if="imagePath !== ''"
-          ref="imageZoom"
-          class="image-zoom"
-          :src="imagePath"
-          alt=""
-          :style="zoomIn"
-        />
         <span
           v-else
           @click.prevent="handleUpload"
           class="fa fa-images upload-icon"
         />
+        <div ref="imageZoom" class="image-zoom" :style="zoomIn" />
         <input
           ref="input"
           @change="handlePreview"
@@ -128,23 +121,17 @@ export default defineComponent({
       this.imagePath = this.images[this.curImgIdx];
     },
     handleZoom(event: MouseEvent) {
-      let pointer = {
-        x:
-          (event.offsetX * 100) /
-          (this.$refs.imageZoom as HTMLImageElement).offsetWidth,
-        y:
-          (event.offsetY * 100) /
-          (this.$refs.imageZoom as HTMLImageElement).offsetHeight,
-        w: (this.$refs.imageZoom as HTMLImageElement).offsetWidth,
-        h: (this.$refs.imageZoom as HTMLImageElement).offsetHeight,
-      };
-      this.zoomIn = {
-        display: "block",
-        "object-position": `${pointer.x}% ${pointer.y}%`,
-      };
-      console.log(pointer);
-      console.log(event);
-      console.log(`${pointer.x}% ${pointer.y}%`);
+      const imagePreview = this.$refs.imagePreview as HTMLDivElement;
+      if (imagePreview) {
+        let pointer = {
+          x: (event.offsetX * 100) / imagePreview.offsetWidth,
+          y: (event.offsetY * 100) / imagePreview.offsetHeight,
+        };
+        this.zoomIn = {
+          display: "block",
+          backgroundPosition: `${pointer.x}% ${pointer.y}%`,
+        };
+      }
     },
     handleNotZoom(event: MouseEvent) {
       this.zoomIn = {
@@ -170,6 +157,10 @@ export default defineComponent({
           this.images = newValue;
         }
       }
+    },
+    imagePath(newValue) {
+      const imageZoomElement = this.$refs.imageZoom as HTMLDivElement;
+      imageZoomElement.style.backgroundImage = `url(${newValue})`;
     },
   },
 });
@@ -199,9 +190,13 @@ export default defineComponent({
   }
   .image-zoom {
     position: absolute;
-    width: 200%;
-    height: 200%;
-    object-fit: cover;
+    top: 0;
+    left: 0;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background-size: 200%;
+    cursor: zoom-in;
   }
   span {
     font-size: $--font-7xl;

@@ -1,7 +1,7 @@
 <template>
-  <page-title :title="$t('categoryPage.categoryList.title')" />
+  <page-title :title="$t('categoryPage.list.title')" />
   <page-body>
-    <header-action :current-route="$router.currentRoute.value.path" />
+    <header-action :current-route="$t('categoryPage.add.name')" />
     <table class="w-full mt-[2rem] overflow-hidden">
       <thead>
         <tr>
@@ -25,7 +25,7 @@
                 @action="handleActions"
                 :current-index="index"
                 :dropdown-list="[
-                  { title: 'Update', action: '' },
+                  { title: 'Detail', action: '' },
                   { title: 'Delete', action: '#deleteModal' },
                 ]"
               />
@@ -72,10 +72,10 @@ export default defineComponent({
     ...mapActions(useCategoryStore, ["listCategories", "destroyCategory"]),
     handleActions(obj: any) {
       const category = this.categories[obj.currentIndex];
-      if (obj.action === "Update") {
+      if (obj.action === "Detail") {
         this.$router.push({
           name: "category.update",
-          params: { id: category.id },
+          params: { categoryId: category.id },
         });
       }
       this.currentAction = obj.action;

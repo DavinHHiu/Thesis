@@ -1,5 +1,5 @@
 <template>
-  <page-title :title="pageTitle" />
+  <page-title v-if="new" :title="pageTitle" />
   <page-body>
     <card class="flex">
       <section class="info-wp flex flex-col gap-[4rem]">
@@ -57,13 +57,13 @@ export default defineComponent({
     ...mapActions(useCategoryStore, [
       "createCategory",
       "retrieveCategory",
-      "updateCategory",
+      "update",
     ]),
     handleUpdate() {
       if (this.new) {
         this.createCategory(this.currentCategory);
       } else {
-        this.updateCategory(this.currentCategory);
+        this.update(this.currentCategory);
       }
       this.$router.push("/categories");
     },
@@ -77,14 +77,14 @@ export default defineComponent({
     },
     pageTitle() {
       return this.new
-        ? this.$t("categoryPage.addCategory.title")
-        : this.$t("categoryPage.updateCategory.title");
+        ? this.$t("categoryPage.add.title")
+        : this.$t("categoryPage.update.title");
     },
   },
   mounted() {
-    const id = this.$router.currentRoute._value.params.id;
+    const id = this.$router.currentRoute.value.params.categoryId;
     if (id) {
-      this.retrieveCategory(id);
+      this.retrieveCategory(Number(id));
       this.new = false;
     }
   },

@@ -35,12 +35,18 @@ export const useProductSkuStore = defineStore("productSku", {
           }
         });
     },
-    listProductSkus() {
-      return axios.get(`${consts.BASE_URL}/product-skus/`).then((response) => {
-        if (response.status === 200 && response.data) {
-          this.productSkus = response.data.results;
-        }
-      });
+    listProductSkus(product_id: string) {
+      return axios
+        .get(`${consts.BASE_URL}/product-skus/`, {
+          params: {
+            product_id: product_id,
+          },
+        })
+        .then((response) => {
+          if (response.status === 200 && response.data) {
+            this.productSkus = response.data;
+          }
+        });
     },
     retrieveProductSku(id: string) {
       return axios

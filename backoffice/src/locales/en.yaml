@@ -71,11 +71,12 @@ dividerBreak:
   register: "Already have an account?"
 
 userPage:
-  userList:
+  list:
     title: "Users"
-  addUser:
+  add:
+    name: user.add
     title: "Add User"
-  updateUser:
+  update:
     title: "Update User"
   modalDelete:
     title: "Do you want to delete this user?"
@@ -91,21 +92,32 @@ addressPage:
     title: "Do you want to delete this address?"
 
 subcategoryPage:
-  subcategoryList:
+  list:
     title: "Categories"
-  addSubCategory:
+  add:
+    name: subcategory.add
     title: "Add Category"
-  updateSubCategory:
+  update:
     title: "Update Category"
   modalDelete:
     title: "Do you want to delete this subcategory?"
 
 categoryPage:
-  categoryList:
+  list:
     title: "Categories"
-  addCategory:
+  add:
+    name: category.add
     title: "Add Category"
-  updateCategory:
+  detail:
+    title: Category Detail
+    tabs:
+      - title: Category Detail
+        name: category.update
+        path: /detail
+      - title: Subcategories
+        name: subcategory.list
+        path: /subcategories
+  update:
     title: "Update Category"
   modalDelete:
     title: "Do you want to delete this category?"
