@@ -1,6 +1,6 @@
+import consts from "@/consts/consts";
 import { SubCategory } from "@/types/worker";
 import axios from "axios";
-import consts from "@/consts/consts";
 import { defineStore } from "pinia";
 
 export const useSubCategoryStore = defineStore("subcategory", {
@@ -19,12 +19,16 @@ export const useSubCategoryStore = defineStore("subcategory", {
           }
         });
     },
-    listSubCategories() {
+    listSubCategories(category_id: number) {
       return axios
-        .get(`${consts.BASE_URL}/sub-categories/`)
+        .get(`${consts.BASE_URL}/sub-categories/`, {
+          params: {
+            category_id: category_id,
+          },
+        })
         .then((response) => {
           if (response.status === 200 && response.data) {
-            this.subcategories = response.data.results;
+            this.subcategories = response.data;
           }
         });
     },

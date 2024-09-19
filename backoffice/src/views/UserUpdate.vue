@@ -104,8 +104,8 @@ export default defineComponent({
     },
     pageTitle() {
       return this.new
-        ? this.$t("userPage.addUser.title")
-        : this.$t("userPage.updateUser.title");
+        ? this.$t("userPage.add.title")
+        : this.$t("userPage.update.title");
     },
   },
   async mounted() {

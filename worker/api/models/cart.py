@@ -9,7 +9,7 @@ from api.models.mixins import CreateAndUpdateModelMixin
 class Cart(models.Model, CreateAndUpdateModelMixin):
     id = models.UUIDField(_("cart id"), primary_key=True, default=uuid.uuid4())
     user = models.ForeignKey(to="api.User", on_delete=models.CASCADE)
-    total = models.IntegerField(_("total amount"))
+    total = models.IntegerField(_("total amount"), default=0)
 
     class Meta:
         verbose_name = _("cart")

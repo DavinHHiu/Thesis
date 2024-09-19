@@ -30,6 +30,23 @@ class ProductSkuViewSet(viewsets.ModelViewSet):
     serializer_class = ProductSkuSerializer
     permission_classes = [AllowAny]
 
+    def list(self, request):
+        product_id = request.query_params.get("product_id")
+
+        if not product_id:
+            msg = _("Product ID is required")
+            return Response({"error": msg}, status=status.HTTP_400_BAD_REQUEST)
+
+        try:
+            product = Product.objects.get(pk=product_id)
+        except Product.DoesNotExist:
+            msg = _("Product does not exist")
+            return Response({"error": msg}, status=status.HTTP_400_BAD_REQUEST)
+
+        product_skus = ProductSku.objects.filter(product=product)
+        serializer = self.get_serializer(product_skus, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
     def create(self, request):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
@@ -116,6 +133,5 @@ class ProductImageViewSet(viewsets.ModelViewSet):
             )
 
         images = ProductImage.objects.filter(product_sku=product_sku)
-
         serializer = self.get_serializer(images, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)

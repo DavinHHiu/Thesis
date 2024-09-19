@@ -1,7 +1,6 @@
 <template>
-  <page-title :title="$t('subcategoryPage.subcategoryList.title')" />
   <page-body>
-    <header-action :current-route="$router.currentRoute._value.path" />
+    <header-action :current-route="$t('subcategoryPage.add.name')" />
     <table class="w-full mt-[2rem] overflow-hidden">
       <thead>
         <tr>
@@ -44,7 +43,6 @@ import EllipsisDropdown from "@/components/common/molecules/EllipsisDropdown.vue
 import HeaderAction from "@/components/common/molecules/HeaderAction.vue";
 import Modal from "@/components/common/molecules/Modal.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
-import PageTitle from "@/components/common/templates/PageTitle.vue";
 import { useSubCategoryStore } from "@/stores/subcategory";
 import { SubCategory } from "@/types/worker";
 import { mapActions, mapState } from "pinia";
@@ -58,7 +56,6 @@ export default defineComponent({
     Modal,
     HeaderAction,
     PageBody,
-    PageTitle,
   },
   data() {
     return {
@@ -76,7 +73,7 @@ export default defineComponent({
       if (obj.action === "Update") {
         this.$router.push({
           name: "subcategory.update",
-          params: { id: subcategory.id },
+          params: { subcategoryId: subcategory.id },
         });
       }
       this.currentAction = obj.action;
@@ -98,7 +95,8 @@ export default defineComponent({
     ...mapState(useSubCategoryStore, ["subcategories"]),
   },
   async mounted() {
-    await this.listSubCategories();
+    const category_id = this.$router.currentRoute.value.params.categoryId;
+    await this.listSubCategories(Number(category_id));
   },
 });
 </script>

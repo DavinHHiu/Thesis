@@ -1,7 +1,7 @@
 <template>
-  <page-title :title="$t('userPage.userList.title')" />
+  <page-title :title="$t('userPage.list.title')" />
   <page-body>
-    <header-action :current-route="$router.currentRoute._value.path" />
+    <header-action :current-route="$t('userPage.add.name')" />
     <tab-layout />
     <table class="w-full mt-[2rem] overflow-hidden">
       <thead>

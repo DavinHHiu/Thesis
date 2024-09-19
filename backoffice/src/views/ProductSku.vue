@@ -93,8 +93,8 @@ export default defineComponent({
     ...mapState(useProductSkuStore, ["productSkus"]),
   },
   async mounted() {
-    await this.listProductSkus();
-    console.log(this.productSkus);
+    const productId = this.$router.currentRoute.value.params.productId;
+    await this.listProductSkus(productId as string);
   },
 });
 </script>

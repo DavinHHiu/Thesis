@@ -9,6 +9,8 @@ from django.utils.translation import gettext_lazy as _
 
 from api.models.mixins import CreateAndUpdateModelMixin
 
+from . import Cart
+
 
 class Address(models.Model, CreateAndUpdateModelMixin):
     id = models.BigAutoField(_("address id"), primary_key=True)
@@ -44,6 +46,9 @@ class UserManager(BaseUserManager):
         user = self.model(email=email, **extra_fields)
         user.password = make_password(password)
         user.save(using=self._db)
+
+        Cart.objects.create(user=user)
+
         return user
 
     def create_user(self, email, password=None, **extra_fields):
