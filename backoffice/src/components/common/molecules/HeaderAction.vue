@@ -4,7 +4,7 @@
       <span class="material-symbols-outlined" v-text="'filter_alt'" />
       <span v-text="$t('buttonLabel.filter')" />
     </custom-button>
-    <custom-button class="btn" :rounded="true" @click="handleAdd">
+    <custom-button class="btn" :rounded="true" @click="routeAdd">
       <span class="material-symbols-outlined" v-text="'add'" />
       <span v-text="$t('buttonLabel.add')" />
     </custom-button>
@@ -27,8 +27,8 @@ export default defineComponent({
     },
   },
   methods: {
-    handleAdd() {
-      this.$router.push(`${this.currentRoute}/add`);
+    routeAdd() {
+      this.$router.push({ name: this.currentRoute });
     },
   },
 });

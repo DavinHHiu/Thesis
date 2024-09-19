@@ -13,6 +13,8 @@ router.register(r"orders", views.OrderDetailViewSet, basename="order-detail")
 router.register(r"order-items", views.OrderDetailViewSet, basename="order-item")
 router.register(r"payment", views.PaymentViewSet, basename="payment")
 router.register(r"products", views.ProductViewSet, basename="product")
+router.register(r"product-skus", views.ProductSkuViewSet, basename="product-sku")
+router.register(r"product-images", views.ProductImageViewSet, basename="product-images")
 router.register(
     r"product-attributes", views.ProductAttributeViewSet, basename="product-attribute"
 )

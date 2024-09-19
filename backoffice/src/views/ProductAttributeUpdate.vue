@@ -50,14 +50,14 @@ export default defineComponent({
   methods: {
     ...mapActions(useProductAttributeStore, [
       "createProductAttribute",
-      "updateProductAttribute",
+      "update",
       "retrieveProductAttribute",
     ]),
     handleUpdate() {
       if (this.new) {
         this.createProductAttribute(this.productAttribute);
       } else {
-        this.updateProductAttribute(this.productAttribute);
+        this.update(this.productAttribute);
       }
       this.$router.push("/product-attributes");
     },
@@ -71,8 +71,8 @@ export default defineComponent({
     },
     pageTitle() {
       return this.new
-        ? this.$t("productAttributePage.addProductAttribute.title")
-        : this.$t("productAttributePage.updateProductAttribute.title");
+        ? this.$t("productAttributePage.add.title")
+        : this.$t("productAttributePage.update.title");
     },
   },
   async mounted() {

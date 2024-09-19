@@ -24,7 +24,7 @@ export const useCategoryStore = defineStore("category", {
     listCategories() {
       return axios.get(`${consts.BASE_URL}/categories/`).then((response) => {
         if (response.status === 200 && response.data) {
-          this.categories = response.data;
+          this.categories = response.data.results;
         }
       });
     },

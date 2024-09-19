@@ -3,7 +3,7 @@
     <div
       v-for="(item, index) in tabs"
       class="tab-item"
-      :class="{ active: index === currentIndex }"
+      :class="{ active: activeTab(item) }"
       v-text="item.title"
       @click="changeTab(index)"
     />
@@ -12,11 +12,16 @@
 
 <script lang="ts">
 import { TabItem } from "@/types/backoffice";
+import _ from "lodash";
 import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
   name: "TabLayout",
   props: {
+    curPathName: {
+      type: String,
+      required: false,
+    },
     tabs: {
       type: Array as PropType<TabItem[]>,
       required: true,
@@ -31,7 +36,18 @@ export default defineComponent({
     changeTab(index: number): void {
       this.currentIndex = index;
       this.$emit("change:tab", index);
-      console.log(this.$router.currentRoute._value);
+    },
+    activeTab(item: TabItem) {
+      return this.$router.currentRoute.value.path.includes(item.path as string);
+    },
+  },
+  watch: {
+    curPathName() {
+      const index = _.findIndex(
+        this.tabs,
+        (tab) => tab.name === this.curPathName
+      );
+      this.currentIndex = index !== -1 ? index : 0;
     },
   },
 });

@@ -1,4 +1,5 @@
 from rest_framework import status, viewsets
+from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
 from api.models import Category, SubCategory
@@ -12,6 +13,7 @@ class CategoryViewSet(viewsets.ModelViewSet):
 
     queryset = Category.objects.all()
     serializer_class = CategorySerializer
+    permission_classes = [AllowAny]
 
 
 class SubCategoryViewSet(viewsets.ModelViewSet):
@@ -21,6 +23,7 @@ class SubCategoryViewSet(viewsets.ModelViewSet):
 
     queryset = SubCategory.objects.all()
     serializer_class = SubCategorySerializer
+    permission_classes = [AllowAny]
 
     def create(self, request):
         serializer = self.get_serializer(data=request.data)

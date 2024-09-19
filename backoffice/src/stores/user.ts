@@ -25,7 +25,7 @@ export const useUserStore = defineStore("user", {
     listUsers() {
       return axios.get(`${consts.BASE_URL}/users/`).then((response) => {
         if (response.status === 200 && response.data) {
-          this.users = response.data;
+          this.users = response.data.results;
         }
       });
     },

@@ -24,6 +24,7 @@ $--color-success: #00bd5e;
 $--color-blue: #0084d6;
 $--color-red: #ff0000;
 $--color-yellow: #f6fb7a;
+$--color-gold: gold;
 $--color-pink: #f7b5ca;
 
 $--color-valid: #69bf29;
@@ -67,7 +68,7 @@ $--header-height: 64px;
 // Box shadows
 $--shadow-x: 0 1px 20px 2px $--dark-alt;
 $--shadow-y: 1px 0 20px 2px $--dark-alt;
-$--shadow: 1px 1px 20px 2px $--dark-alt;
+$--shadow: 0px 0px 20px 3px $--dark-alt;
 
 //Font sizes
 $--font-3xs: 1.1rem;

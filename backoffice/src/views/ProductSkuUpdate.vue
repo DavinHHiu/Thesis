@@ -1,53 +1,50 @@
 <template>
-  <page-title :title="pageTitle" />
-  <page-body>
-    <card class="h-[80vh] flex">
-      <section class="upload-wp">
-        <upload-preview
-          :modelValue="productSku.cover"
-          @update:model-value="(newValue) => (productSku.cover = newValue)"
+  <card class="flex">
+    <section class="upload-wp">
+      <upload-preview
+        :modelValue="productSku.images"
+        @update:model-value="(newValue) => (productSku.images = newValue)"
+      />
+    </section>
+    <section class="info-wp flex flex-col gap-[4rem]">
+      <text-field
+        :label="$t('inputLabel.product.sku')"
+        :value="productSku.sku"
+        @update:model-value="(newValue) => (productSku.sku = newValue)"
+      />
+      <text-field
+        :label="$t('inputLabel.product.price')"
+        :value="productSku.price"
+        @update:model-value="(newValue) => (productSku.price = newValue)"
+      />
+      <text-field
+        :label="$t('inputLabel.product.quantity')"
+        :value="productSku.quantity"
+        @update:model-value="(newValue) => (productSku.quantity = newValue)"
+      />
+      <div class="flex gap-[1rem]">
+        <select-field
+          class="flex-1"
+          :label="$t('inputLabel.product.color')"
+          :value="String(productSku?.color?.id || '')"
+          :options="colorOptions"
+          @update:model-value="selectColor"
         />
-      </section>
-      <section class="info-wp flex flex-col gap-[4rem]">
-        <text-field
-          :label="$t('inputLabel.product.sku')"
-          :value="productSku.sku"
-          @update:model-value="(newValue) => (productSku.sku = newValue)"
+        <select-field
+          class="flex-1"
+          :label="$t('inputLabel.product.size')"
+          :value="String(productSku?.size?.id || '')"
+          :options="sizeOptions"
+          @update:model-value="selectSize"
         />
-        <text-field
-          :label="$t('inputLabel.product.price')"
-          :value="productSku.price"
-          @update:model-value="(newValue) => (productSku.price = newValue)"
-        />
-        <text-field
-          :label="$t('inputLabel.product.quantity')"
-          :value="productSku.quantity"
-          @update:model-value="(newValue) => (productSku.quantity = newValue)"
-        />
-        <div class="flex gap-[1rem]">
-          <select-field
-            class="flex-1"
-            :label="$t('inputLabel.product.color')"
-            :value="String(productSku?.color?.id || '')"
-            :options="colorOptions"
-            @update:model-value="selectColor"
-          />
-          <select-field
-            class="flex-1"
-            :label="$t('inputLabel.product.size')"
-            :value="String(productSku?.size?.id || '')"
-            :options="sizeOptions"
-            @update:model-value="selectSize"
-          />
-        </div>
-        <custom-button
-          class="w-[15rem]"
-          @click="handleUpdate"
-          v-text="textButton"
-        />
-      </section>
-    </card>
-  </page-body>
+      </div>
+      <custom-button
+        class="w-[15rem]"
+        @click="handleUpdate"
+        v-text="textButton"
+      />
+    </section>
+  </card>
 </template>
 
 <script lang="ts">
@@ -56,8 +53,6 @@ import SelectField from "@/components/common/molecules/SelectField.vue";
 import TextField from "@/components/common/molecules/TextField.vue";
 import UploadPreview from "@/components/common/molecules/UploadPreview.vue";
 import Card from "@/components/common/templates/Card.vue";
-import PageBody from "@/components/common/templates/PageBody.vue";
-import PageTitle from "@/components/common/templates/PageTitle.vue";
 import { useProductAttributeStore } from "@/stores/productAttribute";
 import { useProductSkuStore } from "@/stores/productSku";
 import { useSubCategoryStore } from "@/stores/subcategory";
@@ -72,8 +67,6 @@ export default defineComponent({
   components: {
     Card,
     CustomButton,
-    PageBody,
-    PageTitle,
     TextField,
     SelectField,
     UploadPreview,
@@ -99,7 +92,7 @@ export default defineComponent({
       } else {
         this.updateProductSku(this.productSku);
       }
-      this.$router.push("/products");
+      this.$router.push({ name: "product.skus.list" });
     },
     selectColor(value: string) {
       const color = _.find(
@@ -149,16 +142,15 @@ export default defineComponent({
         ? this.$t("buttonLabel.add")
         : this.$t("buttonLabel.update");
     },
-    pageTitle() {
-      return this.new
-        ? this.$t("productSkuPage.addProductSku.title")
-        : this.$t("productSkuPage.updateProductSku.title");
-    },
   },
   async mounted() {
     await this.listProductAttributes();
     await this.listSubCategories();
-    const id = this.$router.currentRoute.value.params.id;
+    const id = this.$router.currentRoute.value.params.productSkuId;
+    const productId = this.$router.currentRoute.value.params.productId;
+    if (productId) {
+      this.productSku.product_id = productId as string;
+    }
     if (id) {
       await this.retrieveProductSku(id as string);
       this.new = false;
