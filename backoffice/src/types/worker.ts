@@ -51,19 +51,24 @@ interface Product {
 
 interface ProductSku {
   id?: string;
-  cover?: File | string;
   size: ProductAttribute;
   color: ProductAttribute;
+  images: File[];
   sku: string;
   price: number;
   quantity: number;
   product_id?: string;
 }
 
+interface ProductImage {
+  image: File[];
+}
+
 export {
   Address,
   Category,
   Product,
+  ProductImage,
   ProductSku,
   ProductAttribute,
   SubCategory,

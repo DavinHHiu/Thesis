@@ -2,11 +2,12 @@ import os
 
 from django.conf import settings
 from django.db import transaction
+from django.utils.translation import gettext_lazy as _
 from PIL import Image
 from rest_framework import serializers
 from rest_framework.utils import model_meta
 
-from api.models import Product, ProductAttribute, ProductSku
+from api.models import Product, ProductAttribute, ProductImage, ProductSku, SubCategory
 
 from .category import SubCategorySerializer
 
@@ -36,90 +37,26 @@ class ProductSerializer(serializers.ModelSerializer):
             "name",
             "description",
             "summary",
-            "cover",
             "categories",
-            "size",
-            "color",
-            "sku",
-            "price",
-            "quantity",
+            "rating",
         ]
-
-
-class ProductSkuSerializer(serializers.ModelSerializer):
-    id = serializers.UUIDField(required=False)
-    cover = serializers.ImageField(required=False)
-    size = ProductAttributeSerializer()
-    color = ProductAttributeSerializer()
-    sku = serializers.CharField()
-    price = serializers.FloatField()
-    quantity = serializers.IntegerField()
-    product_id = serializers.SerializerMethodField()
-
-    class Meta:
-        model = ProductSku
-        fields = [
-            "id",
-            "cover",
-            "size",
-            "color",
-            "sku",
-            "price",
-            "quantity",
-        ]
-
-    def get_product_id(self, obj):
-        return obj.product.id
 
     @transaction.atomic
     def create(self, data):
-        # Get relationship object
-        related_data = data.pop("data")
-        categories = related_data.pop("categories")
-        size = related_data.pop("size")
-        color = related_data.pop("color")
-
-        # Get product's cover
-        if "cover" in data:
-            cover = data.pop("cover")
+        categories = data.pop("categories")
+        sub_category = SubCategory.objects.get(pk=categories[0].get("id"))
 
         ModelClass = self.Meta.model
-        instance = ModelClass._default_manager.create(size=size, color=color, **data)
-        instance.categories.add(categories)
-
-        media_root = settings.MEDIA_ROOT
-        cover_directory = os.path.join(media_root, "images", "cover")
-        if not os.path.exists(cover_directory):
-            os.makedirs(cover_directory, exist_ok=True)
-
-        cover_path = os.path.join(cover_directory, f"{instance.id}.jpg")
-        pil_image = Image.open(cover)
-        pil_image = pil_image.convert("RGB")
-        pil_image.save(cover_path, format="JPEG")
-
-        instance.cover = os.path.relpath(cover_path, media_root)
-
+        instance = ModelClass._default_manager.create(**data)
+        instance.categories.set([sub_category])
         instance.save()
 
         return instance
 
+    @transaction.atomic
     def update(self, instance, data):
-        related_data = data.pop("data")
-        categories = related_data.pop("categories")
-        size = related_data.pop("size")
-        color = related_data.pop("color")
-        if "cover" in related_data:
-            cover = related_data.pop("cover")
-            if isinstance(cover, str):
-                media_root = settings.MEDIA_ROOT
-                cover_directory = os.path.join(media_root, "images", "cover")
-                if not os.path.exists(cover_directory):
-                    os.makedirs(cover_directory, exist_ok=True)
-                cover_path = os.path.join(cover_directory, f"{instance.id}.jpg")
-                pil_image = Image.open(cover)
-                pil_image = pil_image.convert("RGB")
-                pil_image.save(cover_path, format="JPEG")
-                instance.cover = os.path.relpath(cover_path, media_root)
+        categories = data.pop("categories")
+        sub_category = SubCategory.objects.get(pk=categories[0].get("id"))
 
         info = model_meta.get_field_info(instance)
 
@@ -127,9 +64,130 @@ class ProductSkuSerializer(serializers.ModelSerializer):
             if not (attr in info.relations and info.relations[attr].to_many):
                 setattr(instance, attr, value)
 
-        instance.categories.set([categories])
-        instance.size = size
-        instance.color = color
+        instance.categories.set([sub_category])
+        instance.save()
+
+        return instance
+
+
+class ProductSkuSerializer(serializers.ModelSerializer):
+    id = serializers.UUIDField(required=False)
+    size = ProductAttributeSerializer()
+    color = ProductAttributeSerializer()
+    sku = serializers.CharField()
+    price = serializers.FloatField()
+    quantity = serializers.IntegerField()
+    product_id = serializers.CharField()
+
+    class Meta:
+        model = ProductSku
+        fields = [
+            "id",
+            "size",
+            "color",
+            "sku",
+            "price",
+            "quantity",
+            "product_id",
+        ]
+
+    @transaction.atomic
+    def create(self, data):
+        size_data = data.pop("size")
+        color_data = data.pop("color")
+        product_id = data.pop("product_id")
+
+        if not size_data or not color_data or not product_id:
+            msg = _("Missing required fields")
+            raise serializers.ValidationError(msg)
+
+        try:
+            size = ProductAttribute.objects.get(pk=size_data["id"])
+            color = ProductAttribute.objects.get(pk=color_data["id"])
+            product = Product.objects.get(pk=product_id)
+        except ProductAttribute.DoesNotExist:
+            msg = _("Product attribute does not exist")
+            raise serializers.ValidationError(msg)
+        except Product.DoesNotExist:
+            msg = _("Product does not exist")
+            raise serializers.ValidationError(msg)
+
+        ModelClass = self.Meta.model
+        instance = ModelClass._default_manager.create(
+            product=product, size=size, color=color, **data
+        )
+
+        return instance
+
+    def update(self, instance, data):
+        size_data = data.pop("size")
+        color_data = data.pop("color")
+        product_id = data.pop("product_id")
+
+        if not size_data or not color_data or not product_id:
+            msg = _("Missing required fields")
+            raise serializers.ValidationError(msg)
+
+        try:
+            size = ProductAttribute.objects.get(pk=size_data["id"])
+            color = ProductAttribute.objects.get(pk=color_data["id"])
+            product = Product.objects.get(pk=product_id)
+        except (ProductAttribute.DoesNotExist, Product.DoesNotExist):
+            raise serializers.ValidationError(_("Invalid product attribute or product"))
+
+        data["size"] = size
+        data["color"] = color
+        data["product"] = product
+
+        info = model_meta.get_field_info(instance)
+
+        for attr, value in data.items():
+            if not (attr in info.relations and info.relations[attr].to_many):
+                setattr(instance, attr, value)
+
+        instance.save()
+
+        return instance
+
+
+class ProductImageSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(required=False)
+    image = serializers.ImageField()
+    product_sku_id = serializers.CharField()
+
+    class Meta:
+        model = ProductImage
+        fields = ["id", "image", "product_sku_id"]
+
+    @transaction.atomic
+    def create(self, data):
+        product_sku_id = data.pop("product_sku_id")
+        image_data = data.pop("image")
+
+        try:
+            product_sku = ProductSku.objects.get(pk=product_sku_id)
+        except ProductSku.DoesNotExist:
+            msg = _("Product SKU does not exist")
+            raise serializers.ValidationError(msg)
+
+        ModelClass = self.Meta.model
+        instance = ModelClass._default_manager.create(product_sku=product_sku)
+
+        media_root = settings.MEDIA_ROOT
+        image_dir = os.path.join(
+            media_root,
+            "images",
+            "product",
+            product_sku_id,
+        )
+        os.makedirs(image_dir, exist_ok=True)
+        image_path = os.path.join(image_dir, f"{instance.id }.jpg")
+
+        image = Image.open(image_data)
+        image = image.convert("RGB")
+        image.save(image_path, format="JPEG")
+
+        instance.image = os.path.relpath(image_path, media_root)
         instance.save()
 
         return instance

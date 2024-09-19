@@ -26,7 +26,8 @@ interface SidebarItem {
 
 interface TabItem {
   title: string;
-  path: string;
+  name?: string;
+  path?: string;
 }
 
 export { AuthToken, DropdownItem, OptionItem, LoginItem, SidebarItem, TabItem };

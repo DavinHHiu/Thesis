@@ -25,7 +25,7 @@ export default defineComponent({
   padding: 0.5rem 0;
   border-bottom: 1px solid $--primary;
   .title {
-    font-size: $--font-4xl;
+    font-size: $--font-2xl;
     font-weight: $--font-bold;
   }
 }

@@ -14,11 +14,7 @@ export const useProductStore = defineStore("product", {
   actions: {
     createProduct(payload: Product) {
       return axios
-        .post(`${consts.BASE_URL}/products/`, payload, {
-          headers: {
-            "Content-type": "multipart/form-data",
-          },
-        })
+        .post(`${consts.BASE_URL}/products/`, payload)
         .then((response) => {
           console.log(response);
         });
@@ -26,7 +22,7 @@ export const useProductStore = defineStore("product", {
     listProducts() {
       return axios.get(`${consts.BASE_URL}/products/`).then((response) => {
         if (response.status === 200 && response.data) {
-          this.products = response.data;
+          this.products = response.data.results;
         }
       });
     },
@@ -41,11 +37,7 @@ export const useProductStore = defineStore("product", {
     },
     updateProduct(payload: Product) {
       return axios
-        .put(`${consts.BASE_URL}/products/${payload.id}/`, payload, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        })
+        .put(`${consts.BASE_URL}/products/${payload.id}/`, payload)
         .then((response) => {
           console.log(response);
         });

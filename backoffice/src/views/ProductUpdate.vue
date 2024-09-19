@@ -1,8 +1,7 @@
 <template>
-  <page-title :title="pageTitle" />
+  <page-title v-if="new" :title="pageTitle" />
   <page-body>
-    <card class="h-[80vh] flex">
-      <section class="upload-wp"></section>
+    <card class="flex">
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
           :label="$t('inputLabel.common.name')"
@@ -87,13 +86,14 @@ export default defineComponent({
       } else {
         this.updateProduct(this.product);
       }
-      this.$router.push("/products");
+      this.$router.push({ name: "product.list" });
     },
     selectCategories(value: number) {
       const category = _.find(
         this.subcategories,
         (category) => category.id === Number(value)
       ) as SubCategory;
+      this.product.categories ??= [];
       this.product.categories[0] = category;
     },
   },
@@ -101,22 +101,6 @@ export default defineComponent({
     ...mapState(useProductStore, ["product"]),
     ...mapState(useProductAttributeStore, ["productAttributes"]),
     ...mapState(useSubCategoryStore, ["subcategories"]),
-    colorOptions(): OptionItem[] {
-      return _.map(this.colors, (color) => {
-        return {
-          value: String(color.id),
-          displayValue: color.value,
-        };
-      });
-    },
-    sizeOptions(): OptionItem[] {
-      return _.map(this.sizes, (size) => {
-        return {
-          value: String(size.id),
-          displayValue: size.value,
-        };
-      });
-    },
     categorieOptions(): OptionItem[] {
       return _.map(this.subcategories, (subcategory) => {
         return {
@@ -139,19 +123,11 @@ export default defineComponent({
   async mounted() {
     await this.listProductAttributes();
     await this.listSubCategories();
-    const id = this.$router.currentRoute._value.params.id;
+    const id = this.$router.currentRoute.value.params.productId;
     if (id) {
-      await this.retrieveProduct(id);
+      await this.retrieveProduct(id as string);
       this.new = false;
     }
-    this.colors = _.filter(
-      this.productAttributes,
-      (attribute) => attribute.type === "Color"
-    );
-    this.sizes = _.filter(
-      this.productAttributes,
-      (attribute) => attribute.type === "Size"
-    );
   },
 });
 </script>
@@ -159,12 +135,8 @@ export default defineComponent({
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
 
-.upload-wp {
-  padding: 2rem 4rem;
-  color: $--gray-color-700;
-}
 .info-wp {
   flex: 1;
-  padding: 2rem 4rem;
+  padding: 4rem 4rem 2rem;
 }
 </style>

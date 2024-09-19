@@ -1,7 +1,7 @@
 <template>
-  <page-title :title="$t('productAttributePage.productAttributeList.title')" />
+  <page-title :title="$t('productAttributePage.list.title')" />
   <page-body>
-    <header-action :current-route="$router.currentRoute._value.path" />
+    <header-action :current-route="$t('productAttributePage.add.name')" />
     <table class="w-full mt-[2rem] overflow-hidden">
       <thead>
         <tr>

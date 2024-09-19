@@ -12,27 +12,24 @@
     </div>
 
     <div class="menu">
-      <!-- <span>{{ $t(`backofficeSidebar.user.title`) }}</span>
-      <router-link
+      <!-- <router-link
         v-for="(item, index) in sidebarItems"
         classs="button"
         :to="item"
       >
-        <span class="material-symbols-outlined">{{
-          $t(`backofficeSidebar.${item}.icon`)
-        }}</span>
-        <span class="text">{{ $t(`backofficeSidebar.${item}.title`) }}</span>
+        <span class="material-symbols-outlined">{{ item.icon }}</span>
+        <span class="text">{{ item.title }}</span>
       </router-link> -->
       <router-link class="button" to="/">
         <span class="material-symbols-outlined">home</span>
         <span class="text">Home</span>
       </router-link>
       <router-link class="button" to="/products">
-        <span class="material-symbols-outlined">inventory_2</span>
+        <span class="material-symbols-outlined"> checkroom </span>
         <span class="text">Product</span>
       </router-link>
       <router-link class="button" to="/product-attributes">
-        <span class="material-symbols-outlined">edit_attributes</span>
+        <span class="material-symbols-outlined"> format_list_bulleted </span>
         <span class="text">Product Attributes</span>
       </router-link>
       <router-link class="button" to="/categories">
@@ -40,11 +37,11 @@
         <span class="text">Category</span>
       </router-link>
       <router-link class="button" to="/users">
-        <span class="material-symbols-outlined">group</span>
+        <span class="material-symbols-outlined"> groups </span>
         <span class="text">User</span>
       </router-link>
       <router-link class="button" to="/orders">
-        <span class="material-symbols-outlined">description</span>
+        <span class="material-symbols-outlined"> task </span>
         <span class="text">Order</span>
       </router-link>
     </div>
@@ -79,9 +76,7 @@ export default defineComponent({
   },
   computed: {
     sidebarItems() {
-      const t = this.$t("backofficeSidebar");
-      console.log(t);
-      return Object.values(this.$t("backofficeSidebar"));
+      return this.$t("backofficeSidebar") as unknown as SidebarItem[];
     },
   },
 });
@@ -128,12 +123,14 @@ aside {
       display: flex;
       align-items: center;
       text-decoration: none;
+      height: 4.5rem;
 
       padding: 0.8rem 1.6rem;
       transition: 0.2s ease-out;
+      border-radius: 0.4rem;
 
       .material-symbols-outlined {
-        font-size: 3.2rem;
+        font-size: 2.5rem;
         color: $--gray-color-500;
         transition: 0.2s ease-out;
       }
@@ -151,7 +148,7 @@ aside {
       }
       &.router-link-exact-active {
         border-right: 5px solid $--primary;
-        background-color: $--gray-color-200;
+        background-color: rgba($--gray-color-200, 0.8);
       }
     }
   }

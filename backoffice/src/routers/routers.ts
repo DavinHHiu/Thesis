@@ -9,6 +9,7 @@ const Home = () => import("@/views/Home.vue");
 const Login = () => import("@/views/Login.vue");
 const Register = () => import("@/views/Register.vue");
 const Product = () => import("@/views/Product.vue");
+const ProductDetail = () => import("@/views/ProductDetail.vue");
 const ProductUpdate = () => import("@/views/ProductUpdate.vue");
 const ProductSku = () => import("@/views/ProductSku.vue");
 const ProductSkuUpdate = () => import("@/views/ProductSkuUpdate.vue");
@@ -49,11 +50,17 @@ const router = createRouter({
               component: ProductUpdate,
             },
             {
-              name: "product.update",
-              path: ":id",
-              component: ProductUpdate,
+              name: "product.detail",
+              path: ":productId",
+              component: ProductDetail,
               children: [
                 {
+                  name: "product.update",
+                  path: "detail",
+                  component: ProductUpdate,
+                },
+                {
+                  name: "product.skus.in.product",
                   path: "product-skus",
                   children: [
                     {
@@ -62,13 +69,13 @@ const router = createRouter({
                       component: ProductSku,
                     },
                     {
-                      name: "product.skus.add",
+                      name: "product.sku.add",
                       path: "add",
                       component: ProductSkuUpdate,
                     },
                     {
-                      name: "product.skus.update",
-                      path: "update/:id",
+                      name: "product.sku.update",
+                      path: "update/:productSkuId",
                       component: ProductSkuUpdate,
                     },
                   ],

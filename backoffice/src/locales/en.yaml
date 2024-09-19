@@ -1,24 +1,24 @@
 backofficeSidebar:
-  home:
-    title: "Home"
-    path: "/"
-    icon: "home"
-  product:
-    title: "Products"
-    path: "/products"
-    icon: "inventory_2"
-  user:
-    title: "Users"
-    path: "/users"
-    icon: "group"
-  order:
-    title: "Orders"
-    path: "/orders"
-    icon: "description"
-  setting:
-    title: "Settings"
-    path: "/settings"
-    icon: "settings"
+  - home:
+      title: "Home"
+      path: "/"
+      icon: "home"
+  - product:
+      title: "Products"
+      path: "/products"
+      icon: "inventory_2"
+  - user:
+      title: "Users"
+      path: "/users"
+      icon: "group"
+  - order:
+      title: "Orders"
+      path: "/orders"
+      icon: "description"
+  - setting:
+      title: "Settings"
+      path: "/settings"
+      icon: "settings"
 
 inputLabel:
   common:
@@ -114,28 +114,36 @@ productPage:
   productList:
     title: "Products"
   addProduct:
+    name: "product.add"
     title: "Add Product"
+  productDetail:
+    title: Product Detail
+    tabs:
+      - title: "Product Detail"
+        name: product.update
   updateProduct:
     title: "Update Product"
   modalDelete:
     title: "Do you want to delete this product?"
 
 productSkuPage:
-  productSkuList:
+  list:
     title: "Product SKUs"
-  addProductSku:
+  add:
+    name: "product.sku.add"
     title: Add Product SKU
-  updateProductSku:
+  update:
     title: Update Product SKU
   modalDelete:
     title: "Do you want to delete this product SKU?"
 
 productAttributePage:
-  productAttributeList:
+  list:
     title: "Product Attributes"
-  addProductAttribute:
+  add:
+    name: "product.attribute.add"
     title: "Add Product Attribute"
-  updateProductAttribute:
+  update:
     title: "Update Product Attribute"
   modalDelete:
     title: "Do you want to delete this product attribute?"

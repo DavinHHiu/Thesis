@@ -1,47 +1,35 @@
 <template>
   <page-title :title="$t('productPage.productList.title')" />
   <page-body>
-    <header-action :current-route="$router.currentRoute._value.path" />
+    <header-action :current-route="$t('productPage.addProduct.name')" />
     <table class="w-full mt-[2rem] overflow-hidden">
       <thead>
         <tr>
           <th>No.</th>
-          <th>Cover</th>
           <th>Name</th>
-          <th>Sku</th>
-          <th>Size</th>
-          <th>Color</th>
-          <th>Category</th>
-          <th>Quantity</th>
-          <th>Price</th>
+          <th>Categories</th>
+          <th>Rating</th>
+          <th>Description</th>
+          <th>Summary</th>
         </tr>
       </thead>
       <tbody>
         <template v-for="(product, index) in products" :key="index">
           <tr :class="{ odd: index % 2 == 0 }">
             <td>{{ index + 1 }}</td>
-            <td>
-              <div class="flex justify-center">
-                <img
-                  :src="product.cover as string"
-                  :alt="product.name"
-                  class="w-[5rem] h-[7rem] object-cover"
-                />
-              </div>
-            </td>
             <td v-text="product.name" />
-            <td v-text="product.sku" />
-            <td v-text="product.size.value" />
-            <td v-text="product.color.value" />
             <td v-text="product.categories[0].name" />
-            <td v-text="product.quantity" />
-            <td v-text="product.price" />
+            <td>
+              <badge-star :rating="product.rating ? product.rating : 0" />
+            </td>
+            <td class="text-ellipsis" v-text="product.description" />
+            <td class="text-ellipsis" v-text="product.summary" />
             <td class="action-wrap">
               <ellipsis-dropdown
                 @action="handleActions"
                 :current-index="index"
                 :dropdown-list="[
-                  { title: 'Update', action: '' },
+                  { title: 'Detail', action: '' },
                   { title: 'Delete', action: '#deleteModal' },
                 ]"
               />
@@ -58,9 +46,11 @@
 
 <script lang="ts">
 import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import BadgeStar from "@/components/common/molecules/BadgeStar.vue";
 import EllipsisDropdown from "@/components/common/molecules/EllipsisDropdown.vue";
 import HeaderAction from "@/components/common/molecules/HeaderAction.vue";
 import Modal from "@/components/common/molecules/Modal.vue";
+import RatingStar from "@/components/common/molecules/RatingStar.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
 import { useProductStore } from "@/stores/product";
@@ -71,12 +61,14 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "ProductView",
   components: {
+    BadgeStar,
     CustomButton,
     EllipsisDropdown,
     Modal,
     HeaderAction,
     PageBody,
     PageTitle,
+    RatingStar,
   },
   data() {
     return {
@@ -86,15 +78,12 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(useProductStore, ["listProducts", "destroyProduct"]),
-    handleAction() {
-      console.log("Action clicked");
-    },
     handleActions(obj: any) {
       const product = this.products[obj.currentIndex];
-      if (obj.action === "Update") {
+      if (obj.action === "Detail") {
         this.$router.push({
           name: "product.update",
-          params: { id: product.id },
+          params: { productId: product.id },
         });
       }
       this.currentAction = obj.action;
@@ -121,4 +110,11 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 @import "@/assets/scss/variables";
+
+.text-ellipsis {
+  max-width: 20rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
 </style>

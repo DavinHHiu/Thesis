@@ -1,7 +1,7 @@
 <template>
   <page-title :title="$t('categoryPage.categoryList.title')" />
   <page-body>
-    <header-action :current-route="$router.currentRoute._value.path" />
+    <header-action :current-route="$router.currentRoute.value.path" />
     <table class="w-full mt-[2rem] overflow-hidden">
       <thead>
         <tr>

@@ -25,7 +25,7 @@ export const useProductAttributeStore = defineStore("productAttribute", {
         .get(`${consts.BASE_URL}/product-attributes/`)
         .then((response) => {
           if (response.status === 200 && response.data) {
-            this.productAttributes = response.data;
+            this.productAttributes = response.data.results;
           }
         });
     },
@@ -36,7 +36,7 @@ export const useProductAttributeStore = defineStore("productAttribute", {
           console.log(response);
         });
     },
-    updateProductAttribute(payload: ProductAttribute) {
+    update(payload: ProductAttribute) {
       return axios
         .put(`${consts.BASE_URL}/product-attributes/${payload.id}/`, payload)
         .then((response) => {
