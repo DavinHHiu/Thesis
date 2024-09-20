@@ -50,14 +50,15 @@ export default defineComponent({
   methods: {
     ...mapActions(useProductAttributeStore, [
       "createProductAttribute",
-      "update",
+      "updateProductAttribute",
       "retrieveProductAttribute",
+      "resetProductAttribute",
     ]),
     handleUpdate() {
       if (this.new) {
         this.createProductAttribute(this.productAttribute);
       } else {
-        this.update(this.productAttribute);
+        this.updateProductAttribute(this.productAttribute);
       }
       this.$router.push("/product-attributes");
     },
@@ -75,12 +76,15 @@ export default defineComponent({
         : this.$t("productAttributePage.update.title");
     },
   },
-  async mounted() {
-    const id = this.$router.currentRoute._value.params.id;
+  mounted() {
+    const id = this.$router.currentRoute.value.params.id;
     if (id) {
-      this.retrieveProductAttribute(id);
+      this.retrieveProductAttribute(Number(id));
       this.new = false;
     }
+  },
+  beforeRouteLeave() {
+    this.resetProductAttribute();
   },
 });
 </script>

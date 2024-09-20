@@ -24,6 +24,7 @@ router.beforeEach(async (to, from, next) => {
     try {
       await session.refresh();
     } catch (err) {
+      localStore.bulkRemove(["token", "user"]);
       return next("/login");
     }
   }

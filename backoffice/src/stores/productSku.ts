@@ -103,5 +103,9 @@ export const useProductSkuStore = defineStore("productSku", {
           }
         });
     },
+    resetProductSku() {
+      this.productSku = {} as ProductSku;
+      this.productSkus = [] as ProductSku[];
+    },
   },
 });

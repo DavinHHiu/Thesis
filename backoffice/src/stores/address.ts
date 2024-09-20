@@ -57,5 +57,9 @@ export const useAddressStore = defineStore("address", {
           }
         });
     },
+    resetAddress() {
+      this.address = {} as Address;
+      this.addresses = [] as Address[];
+    },
   },
 });

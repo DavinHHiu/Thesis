@@ -1,9 +1,8 @@
 import consts from "@/consts/consts";
-import { AuthToken, LoginItem } from "@/types/backoffice";
+import { LoginItem } from "@/types/backoffice";
 import { User } from "@/types/worker";
 import localStore from "@/utils/localStorage";
 import axios from "axios";
-import { jwtDecode } from "jwt-decode";
 import { defineStore } from "pinia";
 
 let refreshInterval: NodeJS.Timeout | null = null;

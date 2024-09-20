@@ -30,6 +30,7 @@
             class="h-[5rem]"
             intent="p-outline"
             v-text="$t('buttonLabel.register')"
+            @click="routeRegister"
           />
         </div>
       </div>
@@ -75,6 +76,9 @@ export default defineComponent({
         } else {
         }
       } catch (e) {}
+    },
+    routeRegister() {
+      this.$router.push({ name: "register" });
     },
   },
   computed: {

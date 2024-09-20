@@ -172,6 +172,8 @@ AUTH_PASSWORD_VALIDATORS = [
 ]
 
 AUTHENTICATION_BACKENDS = [
+    # Custom django backend
+    "api.backends.CustomBackend",
     # Default django backend
     "django.contrib.auth.backends.ModelBackend",
 ]

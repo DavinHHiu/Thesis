@@ -77,6 +77,7 @@ export default defineComponent({
       "createProduct",
       "retrieveProduct",
       "updateProduct",
+      "resetProduct",
     ]),
     ...mapActions(useProductAttributeStore, ["listProductAttributes"]),
     ...mapActions(useSubCategoryStore, ["listSubCategories"]),
@@ -128,6 +129,9 @@ export default defineComponent({
       await this.retrieveProduct(id as string);
       this.new = false;
     }
+  },
+  beforeRouteLeave() {
+    this.resetProduct();
   },
 });
 </script>

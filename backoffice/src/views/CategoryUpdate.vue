@@ -5,15 +5,13 @@
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
           :label="$t('inputLabel.common.name')"
-          :value="currentCategory.name"
-          @update:modelValue="(newValue) => (currentCategory.name = newValue)"
+          :value="category.name"
+          @update:modelValue="(newValue) => (category.name = newValue)"
         />
         <text-field
           :label="$t('inputLabel.common.description')"
-          :value="currentCategory.description"
-          @update:modelValue="
-            (newValue) => (currentCategory.description = newValue)
-          "
+          :value="category.description"
+          @update:modelValue="(newValue) => (category.description = newValue)"
         />
         <custom-button
           @click="handleUpdate"
@@ -57,19 +55,20 @@ export default defineComponent({
     ...mapActions(useCategoryStore, [
       "createCategory",
       "retrieveCategory",
-      "update",
+      "updateCategory",
+      "resetCategory",
     ]),
     handleUpdate() {
       if (this.new) {
-        this.createCategory(this.currentCategory);
+        this.createCategory(this.category);
       } else {
-        this.update(this.currentCategory);
+        this.updateCategory(this.category);
       }
       this.$router.push("/categories");
     },
   },
   computed: {
-    ...mapState(useCategoryStore, ["currentCategory"]),
+    ...mapState(useCategoryStore, ["category"]),
     textButton() {
       return this.new
         ? this.$t("buttonLabel.add")
@@ -87,6 +86,9 @@ export default defineComponent({
       this.retrieveCategory(Number(id));
       this.new = false;
     }
+  },
+  beforeRouteLeave() {
+    this.resetCategory();
   },
 });
 </script>

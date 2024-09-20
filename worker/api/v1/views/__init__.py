@@ -4,6 +4,7 @@ from .order import OrderDetailViewSet, OrderItemViewSet
 from .payment import PaymentViewSet
 from .product import (
     ProductAttributeViewSet,
+    ProductDisplayViewset,
     ProductImageViewSet,
     ProductSkuViewSet,
     ProductViewSet,

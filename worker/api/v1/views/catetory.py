@@ -1,5 +1,6 @@
 from django.utils.translation import gettext_lazy as _
 from rest_framework import status, viewsets
+from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
@@ -26,7 +27,8 @@ class SubCategoryViewSet(viewsets.ModelViewSet):
     serializer_class = SubCategorySerializer
     permission_classes = [AllowAny]
 
-    def list(self, request):
+    @action(detail=False, methods=["GET"], url_path="list-by-category")
+    def list_by_category(self, request):
         category_id = request.query_params.get("category_id")
 
         if not category_id:

@@ -65,7 +65,7 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(useSubCategoryStore, [
-      "listSubCategories",
+      "listByCategory",
       "destroySubCategory",
     ]),
     handleActions(obj: any) {
@@ -96,7 +96,7 @@ export default defineComponent({
   },
   async mounted() {
     const category_id = this.$router.currentRoute.value.params.categoryId;
-    await this.listSubCategories(Number(category_id));
+    await this.listByCategory(Number(category_id));
   },
 });
 </script>
