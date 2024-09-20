@@ -19,9 +19,18 @@ export const useSubCategoryStore = defineStore("subcategory", {
           }
         });
     },
-    listSubCategories(category_id: number) {
+    listSubCategories() {
       return axios
-        .get(`${consts.BASE_URL}/sub-categories/`, {
+        .get(`${consts.BASE_URL}/sub-categories/`)
+        .then((response) => {
+          if (response.status === 200 && response.data) {
+            this.subcategories = response.data.results;
+          }
+        });
+    },
+    listByCategory(category_id: number) {
+      return axios
+        .get(`${consts.BASE_URL}/sub-categories/list-by-category/`, {
           params: {
             category_id: category_id,
           },
@@ -59,6 +68,10 @@ export const useSubCategoryStore = defineStore("subcategory", {
             this.subcategories = updatedSubcategories;
           }
         });
+    },
+    resetSubCategory() {
+      this.subcategory = {} as SubCategory;
+      this.subcategories = [] as SubCategory[];
     },
   },
 });

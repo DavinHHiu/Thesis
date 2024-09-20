@@ -83,6 +83,7 @@ export default defineComponent({
       "createAddress",
       "retrieveAddress",
       "updateAddress",
+      "resetAddress",
     ]),
     selectUser(value: string) {
       const user = _.find(this.users, (user) => (user.id = value)) as User;
@@ -121,11 +122,14 @@ export default defineComponent({
   },
   mounted() {
     this.listUsers();
-    const id = this.$router.currentRoute._value.params.id;
+    const id = this.$router.currentRoute.value.params.id;
     if (id) {
-      this.retrieveAddress(id);
+      this.retrieveAddress(Number(id));
       this.new = false;
     }
+  },
+  beforeRouteLeave() {
+    this.resetAddress();
   },
 });
 </script>

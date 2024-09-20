@@ -61,14 +61,9 @@ class UserSerializer(serializers.ModelSerializer):
         if "avatar" in validated_data:
             avatar = validated_data.pop("avatar")
 
-        password = validated_data["password"]
-        if not password:
-            raise serializers.ValidationError("Password is required")
-
-        validated_data["password"] = make_password(password=password)
         try:
             ModelClass = self.Meta.model
-            instance = ModelClass._default_manager.create(**validated_data)
+            instance = ModelClass._default_manager.create_user(**validated_data)
         except IntegrityError as e:
             raise serializers.ValidationError({"detail": str(e)})
 
@@ -199,7 +194,7 @@ class BaseJSONWebTokenSerializer(serializers.Serializer):
             )
             serializer.is_valid(raise_exception=True)
 
-            user = authenticate(**credentials)
+            user = authenticate(self.context["request"], **credentials)
 
             if user:
                 if not user.is_active:

@@ -83,6 +83,7 @@ export default defineComponent({
       "createProductSku",
       "retrieveProductSku",
       "updateProductSku",
+      "resetProductSku",
     ]),
     ...mapActions(useProductAttributeStore, ["listProductAttributes"]),
     ...mapActions(useSubCategoryStore, ["listSubCategories"]),
@@ -163,6 +164,9 @@ export default defineComponent({
       this.productAttributes,
       (attribute) => attribute.type === "Size"
     );
+  },
+  beforeRouteLeave() {
+    this.resetProductSku();
   },
 });
 </script>

@@ -55,5 +55,9 @@ export const useProductStore = defineStore("product", {
           }
         });
     },
+    resetProduct() {
+      this.product = {} as Product;
+      this.products = [] as Product[];
+    },
   },
 });

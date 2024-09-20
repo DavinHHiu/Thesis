@@ -57,5 +57,9 @@ export const useUserStore = defineStore("user", {
           }
         });
     },
+    resetUser() {
+      this.user = {} as User;
+      this.users = [] as User[];
+    },
   },
 });

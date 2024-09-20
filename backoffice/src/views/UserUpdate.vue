@@ -109,11 +109,14 @@ export default defineComponent({
     },
   },
   async mounted() {
-    const id = this.$router.currentRoute._value.params.id;
+    const id = this.$router.currentRoute.value.params.id;
     if (id) {
-      await this.retrieveUser(id);
+      await this.retrieveUser(id as string);
       this.new = false;
     }
+  },
+  beforeRouteLeave() {
+    this.resetUser();
   },
 });
 </script>

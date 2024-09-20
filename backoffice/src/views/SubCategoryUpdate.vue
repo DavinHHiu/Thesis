@@ -39,7 +39,7 @@ import PageBody from "@/components/common/templates/PageBody.vue";
 import { useCategoryStore } from "@/stores/category";
 import { useSubCategoryStore } from "@/stores/subcategory";
 import { OptionItem } from "@/types/backoffice";
-import { Category } from "@/types/worker";
+import { Category, SubCategory } from "@/types/worker";
 import _ from "lodash";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
@@ -63,6 +63,7 @@ export default defineComponent({
     ...mapActions(useSubCategoryStore, [
       "createSubCategory",
       "retrieveSubCategory",
+      "resetSubCategory",
     ]),
     selectCategory(value: string) {
       const category = _.find(
@@ -102,6 +103,9 @@ export default defineComponent({
       this.retrieveSubCategory(Number(id));
       this.new = false;
     }
+  },
+  beforeRouteLeave() {
+    this.resetSubCategory();
   },
 });
 </script>

@@ -1,6 +1,11 @@
-from django.urls import path
+from django.urls import include, path
+from rest_framework.routers import SimpleRouter
 
 from api.v1 import views
+
+router = SimpleRouter()
+
+router.register(r"products", views.ProductDisplayViewset, basename="product")
 
 urlpatterns = [
     path("register/", views.RegisterApiView.as_view(), name="register"),
@@ -11,3 +16,5 @@ urlpatterns = [
         name="eu-token-refresh",
     ),
 ]
+
+urlpatterns.append(path("", include(router.urls)))

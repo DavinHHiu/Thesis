@@ -7,18 +7,16 @@ import { defineStore } from "pinia";
 export const useCategoryStore = defineStore("category", {
   state: () => {
     return {
-      currentCategory: {} as Category,
+      category: {} as Category,
       categories: [] as Category[],
     };
   },
   actions: {
-    retrieveCategory(id: number) {
+    createCategory(payload: Category) {
       return axios
-        .get(`${consts.BASE_URL}/categories/${id}/`)
+        .post(`${consts.BASE_URL}/categories/`, payload)
         .then((response) => {
-          if (response.status === 200 && response.data) {
-            this.currentCategory = response.data;
-          }
+          console.log(response);
         });
     },
     listCategories() {
@@ -28,9 +26,18 @@ export const useCategoryStore = defineStore("category", {
         }
       });
     },
-    createCategory(payload: Category) {
+    retrieveCategory(id: number) {
       return axios
-        .post(`${consts.BASE_URL}/categories/`, payload)
+        .get(`${consts.BASE_URL}/categories/${id}/`)
+        .then((response) => {
+          if (response.status === 200 && response.data) {
+            this.category = response.data;
+          }
+        });
+    },
+    updateCategory(payload: Category) {
+      return axios
+        .put(`${consts.BASE_URL}/categories/${payload.id}/`, payload)
         .then((response) => {
           console.log(response);
         });
@@ -48,12 +55,9 @@ export const useCategoryStore = defineStore("category", {
           }
         });
     },
-    update(payload: Category) {
-      return axios
-        .put(`${consts.BASE_URL}/categories/${payload.id}/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+    resetCategory() {
+      this.category = {} as Category;
+      this.categories = [] as Category[];
     },
   },
 });

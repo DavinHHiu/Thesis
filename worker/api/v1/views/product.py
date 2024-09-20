@@ -6,9 +6,10 @@ from rest_framework import status, viewsets
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
-from api.models import Product, ProductAttribute, ProductImage, ProductSku, SubCategory
+from api.models import Product, ProductAttribute, ProductImage, ProductSku
 from api.v1.serializers import (
     ProductAttributeSerializer,
+    ProductDisplaySerializer,
     ProductImageSerializer,
     ProductSerializer,
     ProductSkuSerializer,
@@ -134,4 +135,15 @@ class ProductImageViewSet(viewsets.ModelViewSet):
 
         images = ProductImage.objects.filter(product_sku=product_sku)
         serializer = self.get_serializer(images, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+
+class ProductDisplayViewset(viewsets.ReadOnlyModelViewSet):
+
+    permission_classes = [AllowAny]
+    serializer_class = ProductDisplaySerializer
+
+    def list(self, request, *args, **kwargs):
+        products = Product.objects.all()
+        serializer = self.get_serializer(products, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)

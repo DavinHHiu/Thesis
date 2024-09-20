@@ -35,7 +35,7 @@ export default defineComponent({
   methods: {
     handleChangeTab(index: number): void {
       this.pageTitle = this.tabs[index].title;
-      this.$router.push(this.tabs[index].path);
+      this.$router.push({ name: this.tabs[index].name });
     },
   },
   computed: {},

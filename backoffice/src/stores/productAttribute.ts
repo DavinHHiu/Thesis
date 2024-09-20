@@ -36,7 +36,7 @@ export const useProductAttributeStore = defineStore("productAttribute", {
           console.log(response);
         });
     },
-    update(payload: ProductAttribute) {
+    updateProductAttribute(payload: ProductAttribute) {
       return axios
         .put(`${consts.BASE_URL}/product-attributes/${payload.id}/`, payload)
         .then((response) => {
@@ -54,6 +54,10 @@ export const useProductAttributeStore = defineStore("productAttribute", {
             this.productAttributes = updatedProductAttributes;
           }
         });
+    },
+    resetProductAttribute() {
+      this.productAttribute = {} as ProductAttribute;
+      this.productAttributes = [] as ProductAttribute[];
     },
   },
 });

@@ -191,3 +191,40 @@ class ProductImageSerializer(serializers.ModelSerializer):
         instance.save()
 
         return instance
+
+
+class ProductImageDisplaySerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+    image = serializers.ImageField()
+
+    class Meta:
+        model = ProductImage
+        fields = "__all__"
+
+
+class ProductSkuDisplaySerializer(serializers.Serializer):
+    id = serializers.UUIDField()
+    size = ProductAttributeSerializer()
+    color = ProductAttributeSerializer()
+    sku = serializers.CharField()
+    price = serializers.FloatField()
+    quantity = serializers.IntegerField()
+    images = ProductImageDisplaySerializer(many=True)
+
+    class Meta:
+        model = ProductSku
+        fields = "__all__"
+
+
+class ProductDisplaySerializer(serializers.Serializer):
+    id = serializers.UUIDField()
+    name = serializers.CharField()
+    categories = SubCategorySerializer(many=True)
+    description = serializers.CharField()
+    summary = serializers.CharField()
+    rating = serializers.IntegerField()
+    skus = ProductSkuDisplaySerializer(many=True)
+
+    class Meta:
+        model = Product
+        fields = "__all__"
