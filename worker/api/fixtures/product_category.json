@@ -1,0 +1,72 @@
+[
+  {
+    "pk": "10",
+    "fields": {
+      "product_id": "01dd5ecc0c0241a8b22aee0631338237",
+      "subcategory_id": 1
+    }
+  },
+  {
+    "pk": "1",
+    "fields": {
+      "product_id": "52c1692597e0482188e72c1ee8ed3e0d",
+      "subcategory_id": 2
+    }
+  },
+  {
+    "pk": "6",
+    "fields": {
+      "product_id": "5ed9316a3e904de2989ea3c75c5f256e",
+      "subcategory_id": 1
+    }
+  },
+  {
+    "pk": "3",
+    "fields": {
+      "product_id": "60eb5824ee164d9b9dd10013a9398cfa",
+      "subcategory_id": 1
+    }
+  },
+  {
+    "pk": "2",
+    "fields": {
+      "product_id": "6897aee3c30e4d67ae93252c1444b13f",
+      "subcategory_id": 1
+    }
+  },
+  {
+    "pk": "8",
+    "fields": {
+      "product_id": "770eb4d155314beca1bbf76427a2d5ce",
+      "subcategory_id": 1
+    }
+  },
+  {
+    "pk": "5",
+    "fields": {
+      "product_id": "7a904816d7444dfdbc5ee826bb768e25",
+      "subcategory_id": 1
+    }
+  },
+  {
+    "pk": "4",
+    "fields": {
+      "product_id": "89d456ee634141cbaa0c0c0c7e121b6b",
+      "subcategory_id": 1
+    }
+  },
+  {
+    "pk": "7",
+    "fields": {
+      "product_id": "ac5f583d18134f9ab7d3d8f75f000d8a",
+      "subcategory_id": 1
+    }
+  },
+  {
+    "pk": "9",
+    "fields": {
+      "product_id": "fe3c4227fb3f447b809952a2cc24771e",
+      "subcategory_id": 1
+    }
+  }
+]

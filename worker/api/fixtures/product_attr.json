@@ -1,0 +1,50 @@
+[
+  {
+    "model": "api.ProductAttribute",
+    "pk": 1,
+    "fields": {
+      "type": "Size",
+      "value": "S"
+    }
+  },
+  {
+    "model": "api.ProductAttribute",
+    "pk": 2,
+    "fields": {
+      "type": "Size",
+      "value": "M"
+    }
+  },
+  {
+    "model": "api.ProductAttribute",
+    "pk": 3,
+    "fields": {
+      "type": "Size",
+      "value": "L"
+    }
+  },
+  {
+    "model": "api.ProductAttribute",
+    "pk": 4,
+    "fields": {
+      "type": "Color",
+      "value": "Black"
+    }
+  },
+  {
+    "model": "api.ProductAttribute",
+    "pk": 5,
+    "fields": {
+      "type": "Color",
+      "value": "White"
+    }
+  },
+  {
+    "model": "api.ProductAttribute",
+    "pk": 6,
+    "fields": {
+      "type": "Color",
+      "value": "Purple"
+    }
+  }
+]
