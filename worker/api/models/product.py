@@ -20,7 +20,7 @@ class Product(models.Model, CreateAndUpdateModelMixin):
     id = models.UUIDField(_("product id"), primary_key=True, default=uuid.uuid4)
     name = models.CharField(_("product name"), max_length=255)
     description = models.TextField(_("product description"))
-    summary = models.TextField(_("product summary"))
+    summary = models.TextField(_("product summary"), null=True, blank=True)
     rating = models.DecimalField(
         _("product rating"), max_digits=3, decimal_places=2, blank=True, default=0
     )

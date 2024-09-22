@@ -3,6 +3,11 @@ import { createRouter, createWebHistory } from "vue-router";
 const Address = () => import("@/views/Address.vue");
 const AddressUpdate = () => import("@/views/AddressUpdate.vue");
 const Base = () => import("@/views/Base.vue");
+const Cart = () => import("@/views/Cart.vue");
+const CartDetail = () => import("@/views/CartDetail.vue");
+const CartUpdate = () => import("@/views/CartUpdate.vue");
+const CartItem = () => import("@/views/CartItem.vue");
+const CartItemUpdate = () => import("@/views/CartItemUpdate.vue");
 const Category = () => import("@/views/Category.vue");
 const CategoryDetail = () => import("@/views/CategoryDetail.vue");
 const CategoryUpdate = () => import("@/views/CategoryUpdate.vue");
@@ -34,7 +39,7 @@ const router = createRouter({
       children: [
         {
           name: "home",
-          path: "",
+          path: "dashboard",
           component: Home,
         },
         {
@@ -201,6 +206,54 @@ const router = createRouter({
               name: "address.update",
               path: "update/:id",
               component: AddressUpdate,
+            },
+          ],
+        },
+        {
+          path: "carts",
+          children: [
+            {
+              name: "cart.list",
+              path: "",
+              component: Cart,
+            },
+            {
+              name: "cart.add",
+              path: "add",
+              component: CartUpdate,
+            },
+            {
+              name: "cart.detail",
+              path: ":cartId",
+              component: CartDetail,
+              children: [
+                {
+                  name: "cart.update",
+                  path: "detail",
+                  component: CartUpdate,
+                },
+                {
+                  name: "cart.items",
+                  path: "cart-items",
+                  children: [
+                    {
+                      name: "cart.items.list",
+                      path: "",
+                      component: CartItem,
+                    },
+                    {
+                      name: "cart.item.add",
+                      path: "add",
+                      component: CartItemUpdate,
+                    },
+                    {
+                      name: "cart.item.update",
+                      path: "update/:cartItemId",
+                      component: CartItemUpdate,
+                    },
+                  ],
+                },
+              ],
             },
           ],
         },

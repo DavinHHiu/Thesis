@@ -179,7 +179,7 @@ export default defineComponent({
   color: $--gray-color-700;
 }
 .info-wp {
-  flex: 1;
-  padding: 2rem 4rem;
+  width: 100%;
+  padding: 4rem 4rem 2rem;
 }
 </style>

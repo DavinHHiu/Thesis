@@ -1,5 +1,5 @@
 import consts from "@/consts/consts";
-import { Product } from "@/types/worker";
+import { Product, ProductDetails } from "@/types/worker";
 import axios from "axios";
 import _ from "lodash";
 import { defineStore } from "pinia";
@@ -9,6 +9,7 @@ export const useProductStore = defineStore("product", {
     return {
       product: {} as Product,
       products: [] as Product[],
+      productsDetails: [] as ProductDetails[],
     };
   },
   actions: {
@@ -25,6 +26,15 @@ export const useProductStore = defineStore("product", {
           this.products = response.data.results;
         }
       });
+    },
+    listProductsDisplay() {
+      return axios
+        .get(`${consts.BASE_URL}/products-display/`)
+        .then((response) => {
+          if (response.status === 200 && response.data) {
+            this.productsDetails = response.data;
+          }
+        });
     },
     retrieveProduct(id: string) {
       return axios

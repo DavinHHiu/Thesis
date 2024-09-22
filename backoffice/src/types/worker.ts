@@ -53,7 +53,7 @@ interface ProductSku {
   id?: string;
   size: ProductAttribute;
   color: ProductAttribute;
-  images: File[];
+  images?: File[];
   sku: string;
   price: number;
   quantity: number;
@@ -61,14 +61,71 @@ interface ProductSku {
 }
 
 interface ProductImage {
-  image: File[];
+  id?: number;
+  image: string;
+}
+
+interface ProductSkuDetail {
+  id?: string;
+  size: ProductAttribute;
+  color: ProductAttribute;
+  images?: ProductImage[];
+  sku: string;
+  price: number;
+  quantity: number;
+  product: Product;
+}
+
+interface ProductDetails {
+  id?: string;
+  name: string;
+  description?: string;
+  summary?: string;
+  rating?: number;
+  categories: SubCategory[];
+  skus: ProductSkuDetail[];
+}
+
+interface Cart {
+  id?: string;
+  total_quantity?: number;
+  total_amount?: number;
+  user: User;
+}
+
+interface CartItem {
+  id?: number;
+  cart_id: string;
+  product_sku: ProductSkuDetail;
+  quantity: number;
+  subtotal?: number;
+}
+
+interface OrderDetail {
+  id?: string;
+  user: User;
+  total_amount?: number;
+  status?: string;
+}
+
+interface OrderItem {
+  id?: string;
+  order: OrderDetail;
+  product: ProductSku;
+  quantity: number;
 }
 
 export {
   Address,
+  Cart,
+  CartItem,
   Category,
+  OrderDetail,
+  OrderItem,
   Product,
   ProductImage,
+  ProductDetails,
+  ProductSkuDetail,
   ProductSku,
   ProductAttribute,
   SubCategory,

@@ -8,6 +8,7 @@ from .product import (
     ProductDisplaySerializer,
     ProductImageSerializer,
     ProductSerializer,
+    ProductSkuDisplaySerializer,
     ProductSkuSerializer,
 )
 from .shipment import ShipmentSerializer

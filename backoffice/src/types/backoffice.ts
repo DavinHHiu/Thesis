@@ -9,8 +9,9 @@ interface DropdownItem {
 }
 
 interface OptionItem {
-  displayValue: string;
+  image?: string;
   value: string;
+  displayValue: string;
 }
 
 interface LoginItem {

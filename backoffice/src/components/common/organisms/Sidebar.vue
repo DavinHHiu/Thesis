@@ -12,42 +12,19 @@
     </div>
 
     <div class="menu">
-      <!-- <router-link
-        v-for="(item, index) in sidebarItems"
-        classs="button"
-        :to="item"
+      <router-link
+        v-for="(x, index) in 8"
+        class="button"
+        :class="{ active: activeRoute($t(`backofficeSidebar[${index}].path`)) }"
+        :to="$t(`backofficeSidebar[${index}].path`)"
       >
-        <span class="material-symbols-outlined">{{ item.icon }}</span>
-        <span class="text">{{ item.title }}</span>
-      </router-link> -->
-      <router-link class="button" to="/">
-        <span class="material-symbols-outlined">home</span>
-        <span class="text">Home</span>
-      </router-link>
-      <router-link class="button" to="/products">
-        <span class="material-symbols-outlined"> checkroom </span>
-        <span class="text">Product</span>
-      </router-link>
-      <router-link class="button" to="/product-attributes">
-        <span class="material-symbols-outlined"> format_list_bulleted </span>
-        <span class="text">Product Attributes</span>
-      </router-link>
-      <router-link class="button" to="/categories">
-        <span class="material-symbols-outlined">category</span>
-        <span class="text">Category</span>
-      </router-link>
-      <router-link class="button" to="/users">
-        <span class="material-symbols-outlined"> groups </span>
-        <span class="text">User</span>
-      </router-link>
-      <router-link class="button" to="/orders">
-        <span class="material-symbols-outlined"> task </span>
-        <span class="text">Order</span>
+        <span class="material-symbols-outlined">{{
+          $t(`backofficeSidebar[${index}].icon`)
+        }}</span>
+        <span class="text">{{ $t(`backofficeSidebar[${index}].title`) }}</span>
       </router-link>
     </div>
-
     <div class="flex-1"></div>
-
     <div class="menu">
       <router-link class="button" to="/settings">
         <span class="material-symbols-outlined">settings</span>
@@ -58,7 +35,6 @@
 </template>
 
 <script lang="ts">
-import { SidebarItem } from "@/types/backoffice";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -73,10 +49,8 @@ export default defineComponent({
       this.is_expanded = !this.is_expanded;
       localStorage.setItem("is_expanded", this.is_expanded.toString());
     },
-  },
-  computed: {
-    sidebarItems() {
-      return this.$t("backofficeSidebar") as unknown as SidebarItem[];
+    activeRoute(path: string) {
+      return this.$router.currentRoute.value.path.includes(path);
     },
   },
 });
@@ -140,13 +114,13 @@ aside {
       }
 
       &:hover,
-      &.router-link-exact-active {
+      &.active {
         .material-symbols-outlined,
         .text {
           color: $--primary;
         }
       }
-      &.router-link-exact-active {
+      &.active {
         border-right: 5px solid $--primary;
         background-color: rgba($--gray-color-200, 0.8);
       }
