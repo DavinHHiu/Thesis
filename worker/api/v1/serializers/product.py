@@ -27,7 +27,7 @@ class ProductSerializer(serializers.ModelSerializer):
     name = serializers.CharField(required=False)
     categories = SubCategorySerializer(many=True, required=False)
     description = serializers.CharField(required=False)
-    summary = serializers.CharField(required=False)
+    summary = serializers.CharField(required=False, allow_null=True)
     rating = serializers.IntegerField(required=False)
 
     class Meta:
@@ -77,7 +77,7 @@ class ProductSkuSerializer(serializers.ModelSerializer):
     sku = serializers.CharField()
     price = serializers.FloatField()
     quantity = serializers.IntegerField()
-    product_id = serializers.CharField()
+    product_id = serializers.CharField(allow_null=True)
 
     class Meta:
         model = ProductSku
@@ -209,7 +209,8 @@ class ProductSkuDisplaySerializer(serializers.Serializer):
     sku = serializers.CharField()
     price = serializers.FloatField()
     quantity = serializers.IntegerField()
-    images = ProductImageDisplaySerializer(many=True)
+    images = ProductImageDisplaySerializer(required=False, allow_null=True, many=True)
+    product = ProductSerializer()
 
     class Meta:
         model = ProductSku
