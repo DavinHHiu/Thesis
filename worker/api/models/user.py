@@ -1,11 +1,15 @@
+import os
+import random
 import uuid
 
+from django.conf import settings
 from django.contrib import auth
 from django.contrib.auth.base_user import BaseUserManager
 from django.contrib.auth.hashers import make_password
 from django.contrib.auth.models import AbstractUser
 from django.db import models
 from django.utils.translation import gettext_lazy as _
+from PIL import Image
 
 from api.models.mixins import CreateAndUpdateModelMixin
 
@@ -48,6 +52,32 @@ class UserManager(BaseUserManager):
         email = self.normalize_email(email)
         user = self.model(email=email, **extra_fields)
         user.password = make_password(password)
+
+        if "avatar" in extra_fields:
+            avatar = extra_fields.pop("avatar")
+
+        media_root = settings.MEDIA_ROOT
+        avatar_directory = media_root / "images" / "avatars" / "custom"
+
+        if not os.path.exists(avatar_directory):
+            os.makedirs(avatar_directory, exist_ok=True)
+
+        avatar_path = avatar_directory / f"{str(user.id)}.jpg"
+        if "avatar" in extra_fields:
+            pil_image = Image.open(avatar)
+        else:
+            default_img_dir = os.path.join(media_root, "images", "avatars", "default")
+
+            img_paths = os.listdir(default_img_dir)
+            random_img_idx = random.randint(0, len(img_paths) - 1)
+            img_path = os.path.join(default_img_dir, img_paths[random_img_idx])
+
+            pil_image = Image.open(img_path)
+
+        pil_image = pil_image.convert("RGB")
+        pil_image.save(avatar_path, format="JPEG")
+
+        user.avatar = os.path.relpath(avatar_path, media_root)
         user.save(using=self._db)
 
         Cart.objects.create(user=user)

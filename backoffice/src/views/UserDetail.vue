@@ -25,10 +25,10 @@ export default defineComponent({
       userId: "",
       pageTitle: "User",
       tabs: [
-        { title: "User", path: "update" },
-        { title: "Addresses", path: "addresses" },
-        { title: "Cart", path: "cart" },
-        { title: "Order", path: "order" },
+        { title: "User", name: "user.update", path: "update" },
+        { title: "Addresses", name: "address.list", path: "addresses" },
+        { title: "Cart", name: "cart.items.list", path: "cart" },
+        { title: "Orders", name: "user.order.list", path: "order" },
       ] as TabItem[],
     };
   },

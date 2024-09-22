@@ -98,6 +98,6 @@ export default defineComponent({
 
 .info-wp {
   width: 100%;
-  padding: 4rem;
+  padding: 4rem 4rem 2rem;
 }
 </style>

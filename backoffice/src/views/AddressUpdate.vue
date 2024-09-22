@@ -34,12 +34,11 @@
           :options="options"
           @update:model-value="selectUser"
         />
-        <custom-button
-          class="w-[15rem]"
-          @click="handleUpdate"
-          v-text="textButton"
+        <custom-form-button
+          :text-button="textButton"
+          @update="handleUpdate"
+          @back="handleBack"
         />
-        >
       </section>
     </card>
   </page-body>
@@ -47,6 +46,7 @@
 
 <script lang="ts">
 import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import CustomFormButton from "@/components/common/molecules/CustomFormButton.vue";
 import SelectField from "@/components/common/molecules/SelectField.vue";
 import TextField from "@/components/common/molecules/TextField.vue";
 import UploadPreview from "@/components/common/molecules/UploadPreview.vue";
@@ -66,6 +66,7 @@ export default defineComponent({
   components: {
     Card,
     CustomButton,
+    CustomFormButton,
     PageBody,
     PageTitle,
     TextField,
@@ -86,7 +87,7 @@ export default defineComponent({
       "resetAddress",
     ]),
     selectUser(value: string) {
-      const user = _.find(this.users, (user) => (user.id = value)) as User;
+      const user = _.find(this.users, (user) => user.id === value) as User;
       this.address.user = user;
     },
     async handleUpdate() {
@@ -95,19 +96,23 @@ export default defineComponent({
       } else {
         await this.updateAddress(this.address);
       }
-      this.$router.push("/addresses");
+      this.$router.push({ name: "address.list" });
+    },
+    handleBack() {
+      this.$router.push({ name: "address.list" });
     },
   },
   computed: {
     ...mapState(useAddressStore, ["address"]),
     ...mapState(useUserStore, ["users"]),
     options(): OptionItem[] {
-      return _.map(this.users, (user) => {
+      const users = _.map(this.users, (user) => {
         return {
           value: String(user.id),
-          displayValue: `${user.first_name} ${user.last_name}`,
+          displayValue: user.email,
         };
       });
+      return users;
     },
     textButton() {
       return this.new
@@ -116,12 +121,12 @@ export default defineComponent({
     },
     pageTitle() {
       return this.new
-        ? this.$t("addressPage.addAddress.title")
-        : this.$t("addressPage.updateAddress.title");
+        ? this.$t("addressPage.add.title")
+        : this.$t("addressPage.update.title");
     },
   },
-  mounted() {
-    this.listUsers();
+  async mounted() {
+    await this.listUsers();
     const id = this.$router.currentRoute.value.params.id;
     if (id) {
       this.retrieveAddress(Number(id));
@@ -139,6 +144,6 @@ export default defineComponent({
 
 .info-wp {
   width: 100%;
-  padding: 2rem 4rem;
+  padding: 4rem 4rem 2rem;
 }
 </style>

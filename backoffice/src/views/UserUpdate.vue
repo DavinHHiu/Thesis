@@ -3,8 +3,7 @@
   <page-body>
     <card class="flex">
       <section class="upload-wp">
-        <upload-preview
-          intent="avatar"
+        <avatar-preview
           :modelValue="user.avatar"
           @update:model-value="(newValue) => (user.avatar = newValue)"
         />
@@ -40,11 +39,19 @@
           :value="user.tel"
           @update:model-value="(newValue) => (user.tel = newValue)"
         />
-        <custom-button
-          class="w-[15rem]"
-          @click="handleUpdate"
-          v-text="textButton"
-        />
+        <div class="flex gap-[2rem]">
+          <custom-button
+            class="w-[15rem]"
+            @click="handleUpdate"
+            v-text="textButton"
+          />
+          <custom-button
+            class="w-[15rem]"
+            intent="second"
+            @click="handleBack"
+            v-text="$t('buttonLabel.back')"
+          />
+        </div>
       </section>
     </card>
   </page-body>
@@ -52,12 +59,12 @@
 
 <script lang="ts">
 import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import AvatarPreview from "@/components/common/molecules/AvatarPreview.vue";
 import DateField from "@/components/common/molecules/DateField.vue";
 import PasswordField from "@/components/common/molecules/PasswordField.vue";
 import SelectField from "@/components/common/molecules/SelectField.vue";
 import TabLayout from "@/components/common/molecules/TabLayout.vue";
 import TextField from "@/components/common/molecules/TextField.vue";
-import UploadPreview from "@/components/common/molecules/UploadPreview.vue";
 import Card from "@/components/common/templates/Card.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
@@ -68,6 +75,7 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "UserUpdateView",
   components: {
+    AvatarPreview,
     Card,
     CustomButton,
     DateField,
@@ -77,7 +85,6 @@ export default defineComponent({
     SelectField,
     TabLayout,
     TextField,
-    UploadPreview,
   },
   data() {
     return {
@@ -85,14 +92,22 @@ export default defineComponent({
     };
   },
   methods: {
-    ...mapActions(useUserStore, ["createUser", "retrieveUser", "updateUser"]),
+    ...mapActions(useUserStore, [
+      "createUser",
+      "retrieveUser",
+      "updateUser",
+      "resetUser",
+    ]),
     handleUpdate() {
       if (this.new) {
         this.createUser(this.user);
       } else {
         this.updateUser(this.user);
       }
-      this.$router.push("/users");
+      this.$router.push({ name: "user.list" });
+    },
+    handleBack() {
+      this.$router.push({ name: "user.list" });
     },
   },
   computed: {
@@ -130,7 +145,7 @@ export default defineComponent({
 }
 
 .info-wp {
-  flex: 1;
-  padding: 2rem 4rem;
+  width: 100%;
+  padding: 4rem 4rem 2rem;
 }
 </style>

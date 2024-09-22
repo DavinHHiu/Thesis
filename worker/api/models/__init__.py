@@ -1,5 +1,6 @@
 from .cart import Cart, CartItem
 from .category import Category, SubCategory
+from .mixins import CreateAndUpdateModelMixin
 from .order import OrderDetail, OrderItem
 from .payment import Payment
 from .product import Product, ProductAttribute, ProductImage, ProductSku
