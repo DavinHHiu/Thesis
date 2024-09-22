@@ -18,19 +18,16 @@ from api.authentications import JSONWebTokenAuthentication
 from api.models import Address, User
 from api.v1.serializers import EmailValidationSerializer
 
-jwt_decode_handler = api_settings.JWT_DECODE_HANDLER
-jwt_get_username_from_payload = api_settings.JWT_PAYLOAD_GET_USERNAME_HANDLER
-
 
 class UserSerializer(serializers.ModelSerializer):
     id = serializers.UUIDField(required=False)
     avatar = serializers.ImageField(required=False)
-    first_name = serializers.CharField(required=False)
-    last_name = serializers.CharField(required=False)
+    first_name = serializers.CharField(required=False, allow_null=True)
+    last_name = serializers.CharField(required=False, allow_null=True)
     email = serializers.EmailField()
     password = serializers.CharField(required=False)
-    birth_of_date = serializers.DateField(required=False)
-    tel = serializers.CharField(max_length=10, required=False)
+    birth_of_date = serializers.DateField(required=False, allow_null=True)
+    tel = serializers.CharField(max_length=10, required=False, allow_null=True)
 
     class Meta:
         model = User
@@ -47,49 +44,22 @@ class UserSerializer(serializers.ModelSerializer):
 
     @transaction.atomic
     def validate(self, data):
-        serializer = EmailValidationSerializer(data=data)
-        serializer.is_valid(raise_exception=True)
-
-        existing_users = User.objects.filter(email=data["email"])
-        if len(existing_users) > 0:
-            msg = _("Email already exists")
-            raise serializers.ValidationError(msg)
         return super().validate(data)
 
     @transaction.atomic
     def create(self, validated_data):
-        if "avatar" in validated_data:
-            avatar = validated_data.pop("avatar")
+        serializer = EmailValidationSerializer(data=validated_data)
+        serializer.is_valid(raise_exception=True)
 
+        existing_users = User.objects.filter(email=validated_data["email"])
+        if len(existing_users) > 0:
+            msg = _("Email already exists")
+            raise serializers.ValidationError(msg)
         try:
             ModelClass = self.Meta.model
             instance = ModelClass._default_manager.create_user(**validated_data)
         except IntegrityError as e:
             raise serializers.ValidationError({"detail": str(e)})
-
-        media_root = settings.MEDIA_ROOT
-        avatar_directory = os.path.join(media_root, "images", "avatars", "custom")
-
-        if not os.path.exists(avatar_directory):
-            os.makedirs(avatar_directory, exist_ok=True)
-
-        avatar_path = os.path.join(avatar_directory, f"{str(instance.id)}.jpg")
-        if "avatar" in validated_data:
-            pil_image = Image.open(avatar)
-        else:
-            default_img_dir = os.path.join(media_root, "images", "avatars", "default")
-
-            img_paths = os.listdir(default_img_dir)
-            random_img_idx = random.randint(0, len(img_paths) - 1)
-            img_path = os.path.join(default_img_dir, img_paths[random_img_idx])
-
-            pil_image = Image.open(img_path)
-
-        pil_image = pil_image.convert("RGB")
-        pil_image.save(avatar_path, format="JPEG")
-
-        instance.avatar = os.path.relpath(avatar_path, media_root)
-        instance.save()
 
         return instance
 
@@ -117,7 +87,7 @@ class UserSerializer(serializers.ModelSerializer):
 
 class AddressSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(required=False)
-    user = UserSerializer()
+    user = UserSerializer(required=False)
     title = serializers.CharField()
     address_1 = serializers.CharField()
     address_2 = serializers.CharField(required=False)

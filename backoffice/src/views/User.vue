@@ -28,11 +28,11 @@
                 />
               </div>
             </td>
-            <td v-text="user.email" />
-            <td v-text="user.first_name" />
-            <td v-text="user.last_name" />
-            <td v-text="user.birth_of_date" />
-            <td v-text="user.tel" />
+            <td v-text="user.email || '_'" />
+            <td v-text="user.first_name || '_'" />
+            <td v-text="user.last_name || '_'" />
+            <td v-text="user.birth_of_date || '_'" />
+            <td v-text="user.tel || '_'" />
             <td class="action-wrap">
               <ellipsis-dropdown
                 @action="handleActions"
@@ -83,9 +83,6 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(useUserStore, ["listUsers", "destroyUser"]),
-    handleAdd() {
-      console.log(this.$router);
-    },
     handleActions(obj: any) {
       const user = this.users[obj.currentIndex];
       if (obj.action === "Update") {

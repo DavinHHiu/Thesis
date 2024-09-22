@@ -54,12 +54,23 @@ interface ProductImage {
   image: File[];
 }
 
+interface ProductDetails {
+  id?: string;
+  name: string;
+  description?: string;
+  summary?: string;
+  rating?: number;
+  categories: SubCategory[];
+  skus: ProductSku[];
+}
+
 export {
   Category,
   Product,
   ProductImage,
   ProductSku,
   ProductAttribute,
+  ProductDetails,
   SubCategory,
   User,
 };

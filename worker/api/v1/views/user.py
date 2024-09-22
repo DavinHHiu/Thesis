@@ -38,6 +38,7 @@ class AddressViewSet(viewsets.ModelViewSet):
     API endpoint for managing user addresses.
     """
 
+    permission_classes = [AllowAny]
     queryset = Address.objects.all()
     serializer_class = AddressSerializer
 

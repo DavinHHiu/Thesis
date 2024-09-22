@@ -23,7 +23,7 @@ export const useAddressStore = defineStore("address", {
     listAddresses() {
       return axios.get(`${consts.BASE_URL}/addresses/`).then((response) => {
         if (response.status === 200 && response.data) {
-          this.addresses = response.data;
+          this.addresses = response.data.results;
         }
       });
     },

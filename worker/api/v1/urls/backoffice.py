@@ -16,6 +16,9 @@ router.register(r"products", views.ProductViewSet, basename="product")
 router.register(r"product-skus", views.ProductSkuViewSet, basename="product-sku")
 router.register(r"product-images", views.ProductImageViewSet, basename="product-images")
 router.register(
+    r"products-display", views.ProductDisplayViewset, basename="product-display"
+)
+router.register(
     r"product-attributes", views.ProductAttributeViewSet, basename="product-attribute"
 )
 router.register(r"shipments", views.ShipmentViewSet, basename="shipment")
