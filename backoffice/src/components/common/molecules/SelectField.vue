@@ -3,7 +3,7 @@
     <label v-if="label" v-text="label" />
     <select
       ref="select"
-      @mousedown.stop="openDropdown"
+      @mousedown="openDropdown"
       class="w-full h-[5rem]"
       :value="value"
     >
@@ -19,13 +19,15 @@
     </select>
     <div ref="itemsWp" class="items-wp">
       <div
-        class="item"
+        class="item flex items-center gap-[1rem]"
         :class="{ selected: option.value === value }"
         v-for="(option, index) in options"
         :key="index"
         @click="selectOption(option.value)"
-        v-text="option.displayValue"
-      />
+      >
+        <img v-if="option.image" :src="option.image" />
+        <span v-text="option.displayValue" />
+      </div>
     </div>
     <span class="material-symbols-outlined dropdown-icon">arrow_drop_down</span>
   </div>
@@ -67,6 +69,9 @@ export default defineComponent({
     },
     handleFocusOut(event: Event) {
       const element = event.target as HTMLElement;
+      console.log(element);
+      console.log(this.selectElement);
+      console.log(this.dropdownElemnent);
       if (
         element !== this.selectElement &&
         !this.dropdownElemnent.contains(element)
@@ -138,12 +143,13 @@ export default defineComponent({
     border-top: none;
     z-index: 50;
     .item {
-      display: flex;
-      align-items: center;
       height: 5rem;
       padding: 0 1.5rem;
       border-top: 1px solid $--dark-gray;
       cursor: pointer;
+      img {
+        height: 90%;
+      }
     }
 
     .selected,

@@ -58,7 +58,7 @@ export default defineComponent({
 
 .tab-wp {
   margin: 2rem 0;
-  border-bottom: 1px solid $--gray-color-200;
+  border-bottom: 1px solid $--gray-color-300;
   .tab-item {
     padding: 1.5rem 1rem;
     min-width: 10rem;

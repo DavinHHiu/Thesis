@@ -1,7 +1,10 @@
 <template>
-  <div class="input-wp" :class="{ 'has-input': value != '' }">
+  <div
+    class="input-wp"
+    :class="{ 'has-input': value !== '' && value !== undefined }"
+  >
     <custom-label v-if="label">{{ label }}</custom-label>
-    <custom-input :value="value" @input="handleInput" />
+    <custom-input :value="value" @input="handleInput" :disabled="disabled" />
   </div>
 </template>
 
@@ -25,6 +28,10 @@ export default defineComponent({
     value: {
       type: [String, Number],
       default: "",
+    },
+    disabled: {
+      type: Boolean,
+      default: false,
     },
   },
   methods: {
