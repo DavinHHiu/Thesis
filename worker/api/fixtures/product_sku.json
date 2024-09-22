@@ -1,0 +1,230 @@
+[
+  {
+    "model": "api.ProductSku",
+    "pk": "1eba1f1347d549f7b4bef9ed0a22246f",
+    "fields": {
+      "sku": "JDIEKDIE",
+      "price": 23,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "ac5f583d18134f9ab7d3d8f75f000d8a",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "363b6cd1641f478497232c666ca7ea1a",
+    "fields": {
+      "sku": "PFKIEEIT",
+      "price": 23,
+      "quantity": 100,
+      "color_id": 6,
+      "product_id": "52c1692597e0482188e72c1ee8ed3e0d",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "3cad3ec6163344bc9a0c7e57de408087",
+    "fields": {
+      "sku": "AIEKGIEI",
+      "price": 29,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "770eb4d155314beca1bbf76427a2d5ce",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "4dd5004e60414e448e9936a41f9d436f",
+    "fields": {
+      "sku": "WIERHTJE",
+      "price": 29,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "5ed9316a3e904de2989ea3c75c5f256e",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "50bcdc17c4f04a61987064fdbc3b7e49",
+    "fields": {
+      "sku": "PIEKFIEK",
+      "price": 19,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "01dd5ecc0c0241a8b22aee0631338237",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "5474ced50ce941c88c483ec612962652",
+    "fields": {
+      "sku": "DIEOKGI",
+      "price": 29,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "89d456ee634141cbaa0c0c0c7e121b6b",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "6cd5ae668add495eaa9f01c508076fc2",
+    "fields": {
+      "sku": "BDKEIRIE",
+      "price": 19,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "01dd5ecc0c0241a8b22aee0631338237",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "70d065358bf646d7a73b5a61f9276e2c",
+    "fields": {
+      "sku": "HFUEFKEO",
+      "price": 23,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "6897aee3c30e4d67ae93252c1444b13f",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "8537c09d6f304d8ab2d35842a6269b77",
+    "fields": {
+      "sku": "KDIEKDIE",
+      "price": 29,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "fe3c4227fb3f447b809952a2cc24771e",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "85a2d382dd75439482686ab73a4136cd",
+    "fields": {
+      "sku": "DKEIDKEI",
+      "price": 29,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "89d456ee634141cbaa0c0c0c7e121b6b",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "8e9f1243009e4028af14bdc9b0876757",
+    "fields": {
+      "sku": "BDKEITIR",
+      "price": 40,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "6897aee3c30e4d67ae93252c1444b13f",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "983085eefec14ce1a31d48e0a1815d2a",
+    "fields": {
+      "sku": "BTIRPEKF",
+      "price": 23,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "52c1692597e0482188e72c1ee8ed3e0d",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "b8f2fa24bd9543b1894f26153b343952",
+    "fields": {
+      "sku": "DIEKDIEK",
+      "price": 23,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "ac5f583d18134f9ab7d3d8f75f000d8a",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "bdf81a3add0f4856b37e1dfc36c056e9",
+    "fields": {
+      "sku": "DIEKGIEK",
+      "price": 23,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "7a904816d7444dfdbc5ee826bb768e25",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "cd909f0d54d046da9b6798506466ac04",
+    "fields": {
+      "sku": "IEKIEKEI",
+      "price": 19,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "60eb5824ee164d9b9dd10013a9398cfa",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "d9b2501048814bc69c3f39077455b472",
+    "fields": {
+      "sku": "KDIEKGIEK",
+      "price": 29,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "770eb4d155314beca1bbf76427a2d5ce",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "eb01b9e72c104ed0b083cc9b57d2e2cd",
+    "fields": {
+      "sku": "KDIEKFIE",
+      "price": 23,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "fe3c4227fb3f447b809952a2cc24771e",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "ec81008ed54c40c1b19617d69a9dd0b5",
+    "fields": {
+      "sku": "BIEKTIEK",
+      "price": 19,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "60eb5824ee164d9b9dd10013a9398cfa",
+      "size_id": 2
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "f740550856f14d6383fd7d46aae75f32",
+    "fields": {
+      "sku": "BRIEOOEE",
+      "price": 29,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "5ed9316a3e904de2989ea3c75c5f256e",
+      "size_id": 2
+    }
+  }
+]

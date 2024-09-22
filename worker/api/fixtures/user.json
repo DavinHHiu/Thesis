@@ -1,0 +1,59 @@
+[
+  {
+    "model": "api.User",
+    "pk": "78ff9614ed8249bdaf80f64a07d9b1f9",
+    "fields": {
+      "last_login": null,
+      "is_superuser": 1,
+      "is_staff": 1,
+      "is_active": 1,
+      "date_joined": "2024-09-20T16:05:50.562064+00:00",
+      "avatar": "images\\avatars\\custom\\78ff9614-ed82-49bd-af80-f64a07d9b1f9.jpg",
+      "first_name": null,
+      "last_name": null,
+      "email": "honghieu@gmail.com",
+      "username": null,
+      "password": "pbkdf2_sha256$870000$q2AMynuEH7bpmXJnccxllt$8XPUCErHQBBkpUEsY0ZQCpsj0zDtN4nW0BGGJksmbIY=",
+      "birth_of_date": null,
+      "tel": null
+    }
+  },
+  {
+    "model": "api.User",
+    "pk": "92a33d1ad07143caa4adecf5428e1e0f",
+    "fields": {
+      "last_login": null,
+      "is_superuser": 0,
+      "is_staff": 0,
+      "is_active": 1,
+      "date_joined": "2024-09-20T16:20:26.143750+00:00",
+      "avatar": "images\\avatars\\custom\\92a33d1a-d071-43ca-a4ad-ecf5428e1e0f.jpg",
+      "first_name": "Nguy\u1ec5n",
+      "last_name": "Hi\u1ebfu",
+      "email": "honghieu2208@gmail.com",
+      "username": null,
+      "password": "pbkdf2_sha256$870000$cMR3H4KNKbqQRlptnTRpHI$dOiFwi80NtIki0FFdmnH7CuodcqhgUocfiWnWtcQgk0=",
+      "birth_of_date": "2002-11-23",
+      "tel": 83934553
+    }
+  },
+  {
+    "model": "api.User",
+    "pk": "b60bc589c7c04cfc81b062fb57c58ef3",
+    "fields": {
+      "last_login": null,
+      "is_superuser": 0,
+      "is_staff": 0,
+      "is_active": 1,
+      "date_joined": "2024-09-19T10:32:55.391398+00:00",
+      "avatar": "images\\avatars\\custom\\b60bc589-c7c0-4cfc-81b0-62fb57c58ef3.jpg",
+      "first_name": null,
+      "last_name": null,
+      "email": "honghieu252@gmail.com",
+      "username": null,
+      "password": "pbkdf2_sha256$870000$gHZXhHzEnKJ1qZRfjzrvnI$BQNLJLB7iaBB0WFdK7ZYjRyEjRtxehzzu2Ig2Mvs1Tc=",
+      "birth_of_date": null,
+      "tel": null
+    }
+  }
+]

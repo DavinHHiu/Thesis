@@ -1,0 +1,20 @@
+[
+  {
+    "model": "api.SubCategory",
+    "pk": 1,
+    "fields": {
+      "name": "T-Shirt",
+      "description": "T-Shirt",
+      "category_id": 1
+    }
+  },
+  {
+    "model": "api.SubCategory",
+    "pk": 2,
+    "fields": {
+      "name": "Jacket",
+      "description": "Jacket",
+      "category_id": 1
+    }
+  }
+]
