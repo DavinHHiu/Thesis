@@ -66,13 +66,13 @@ export default defineComponent({
 }
 
 .second {
-  background-color: $--white;
+  border: 1px transparent;
+  background-color: $--gray-color-200;
   color: $--primary;
 }
 
 .p-outline {
   border: 1px solid $--dark-gray;
-  color: $--dark-gray;
   background-color: $--white;
 }
 

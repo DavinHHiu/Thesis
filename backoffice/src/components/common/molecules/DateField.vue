@@ -1,5 +1,5 @@
 <template>
-  <div class="input-wp" :class="{ 'has-input': value }">
+  <div class="input-wp" :class="{ 'has-input': value !== undefined }">
     <custom-label v-if="label" v-text="label" />
     <custom-input type="date" :value="value" @input="handleInput" />
   </div>
