@@ -27,6 +27,19 @@ export const useCartItemStore = defineStore("cartItem", {
         }
       });
     },
+    listCartItemsByUser(userId: string) {
+      return axios
+        .get(`${consts.BASE_URL}/cart-items/list-by-user/`, {
+          params: {
+            user_id: userId,
+          },
+        })
+        .then((response) => {
+          if (response.status === 200 && response.data) {
+            this.cartItems = response.data;
+          }
+        });
+    },
     retrieveCartItem(id: string) {
       return axios
         .get(`${consts.BASE_URL}/cart-items/${id}/`)

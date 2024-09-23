@@ -1,37 +1,40 @@
 <template>
-  <page-title :title="$t('cartPage.list.title')" />
   <page-body>
-    <header-action :current-route="$t('cartPage.add.name')" />
+    <header-action :current-route="$t('orderItemPage.add.name')" />
     <table class="w-full mt-[2rem] overflow-hidden">
       <thead>
         <tr>
           <th>No.</th>
-          <th>Total quantity</th>
-          <th>Total amount</th>
-          <th>User</th>
+          <th />
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
         </tr>
       </thead>
       <tbody>
-        <template v-for="(cart, index) in carts" :key="index">
+        <template v-for="(orderItem, index) in orderItems" :key="index">
           <tr :class="{ odd: index % 2 == 0 }">
             <td>{{ index + 1 }}</td>
-            <td v-text="cart.total_quantity" />
-            <td v-text="cart.total_amount" />
             <td>
               <div class="flex justify-center">
                 <img
-                  :src="cart.user.avatar as string"
-                  :alt="cart.user.email"
-                  class="w-[4rem] h-[4rem] rounded-full object-cover"
+                  :src="orderItem.product_sku.images?.[0].image"
+                  alt=""
+                  class="w-[4rem] h-[5rem] object-cover"
                 />
               </div>
             </td>
+            <td v-text="orderItem.product_sku?.product.name" />
+            <td v-text="orderItem.product_sku.price" />
+            <td v-text="orderItem.quantity" />
+            <td v-text="orderItem.subtotal" />
             <td class="action-wrap">
               <ellipsis-dropdown
                 @action="handleActions"
                 :current-index="index"
                 :dropdown-list="[
-                  { title: 'Detail', action: '' },
+                  { title: 'Update', action: '' },
                   { title: 'Delete', action: '#deleteModal' },
                 ]"
               />
@@ -53,13 +56,13 @@ import HeaderAction from "@/components/common/molecules/HeaderAction.vue";
 import Modal from "@/components/common/molecules/Modal.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
-import { useCartStore } from "@/stores/cart";
-import { Cart } from "@/types/worker";
+import { useOrderItemStore } from "@/stores/orderItem";
+import { OrderItem } from "@/types/worker";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "CartView",
+  name: "OrderItemView",
   components: {
     CustomButton,
     EllipsisDropdown,
@@ -75,13 +78,13 @@ export default defineComponent({
     };
   },
   methods: {
-    ...mapActions(useCartStore, ["listCarts", "destroyCart"]),
+    ...mapActions(useOrderItemStore, ["listOrderItems", "destroyOrderItem"]),
     handleActions(obj: any) {
-      const cart = this.carts[obj.currentIndex];
-      if (obj.action === "Detail") {
+      const orderItem = this.orderItems[obj.currentIndex];
+      if (obj.action === "Update") {
         this.$router.push({
-          name: "cart.update",
-          params: { cartId: cart.id },
+          name: "order.item.update",
+          params: { orderItemId: orderItem.id },
         });
       }
       this.currentAction = obj.action;
@@ -90,18 +93,18 @@ export default defineComponent({
     async submitAction() {
       const action = this.currentAction;
       if (action === "Delete") {
-        const cart = this.carts[this.currentIndex] as Cart;
-        if (cart.id) {
-          this.destroyCart(cart.id);
+        const orderItem = this.orderItems[this.currentIndex] as OrderItem;
+        if (orderItem.id) {
+          this.destroyOrderItem(orderItem.id);
         }
       }
     },
   },
   computed: {
-    ...mapState(useCartStore, ["carts"]),
+    ...mapState(useOrderItemStore, ["orderItems"]),
   },
   async mounted() {
-    await this.listCarts();
+    await this.listOrderItems();
   },
 });
 </script>

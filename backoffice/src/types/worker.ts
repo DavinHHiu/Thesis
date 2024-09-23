@@ -101,18 +101,19 @@ interface CartItem {
   subtotal?: number;
 }
 
-interface OrderDetail {
+interface Order {
   id?: string;
-  user: User;
   total_amount?: number;
   status?: string;
+  user: User;
 }
 
 interface OrderItem {
   id?: string;
-  order: OrderDetail;
-  product: ProductSku;
+  order_id: string;
+  product_sku: ProductSkuDetail;
   quantity: number;
+  subtotal?: number;
 }
 
 export {
@@ -120,7 +121,7 @@ export {
   Cart,
   CartItem,
   Category,
-  OrderDetail,
+  Order,
   OrderItem,
   Product,
   ProductImage,

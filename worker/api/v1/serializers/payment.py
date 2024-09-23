@@ -14,3 +14,13 @@ class PaymentSerializer(serializers.ModelSerializer):
     class Meta:
         model = Payment
         fields = ["order" "payment_method", "status", "total_amount"]
+
+
+class PaymentMethodSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(required=False)
+    name = serializers.CharField()
+    description = serializers.CharField(required=False)
+
+    class Meta:
+        model = Payment
+        fields = ["id" "name", "description"]

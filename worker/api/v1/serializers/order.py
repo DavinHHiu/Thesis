@@ -8,12 +8,12 @@ from .user import UserSerializer
 
 class OrderDetailSerializer(serializers.ModelSerializer):
     user = UserSerializer()
-    total = serializers.FloatField()
+    total_amount = serializers.FloatField()
     status = serializers.CharField()
 
     class Meta:
         model = OrderDetail
-        fields = ["user", "total", "status"]
+        fields = ["user", "total_amount", "status"]
 
 
 class OrderItemSerializer(serializers.ModelSerializer):

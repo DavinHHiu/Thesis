@@ -62,7 +62,7 @@ import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "AddressView",
+  name: "CartItemView",
   components: {
     CustomButton,
     EllipsisDropdown,

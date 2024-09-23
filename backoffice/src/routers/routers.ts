@@ -14,6 +14,11 @@ const CategoryUpdate = () => import("@/views/CategoryUpdate.vue");
 const Home = () => import("@/views/Home.vue");
 const Login = () => import("@/views/Login.vue");
 const Register = () => import("@/views/Register.vue");
+const Order = () => import("@/views/Order.vue");
+const OrderDetail = () => import("@/views/OrderDetail.vue");
+const OrderItem = () => import("@/views/OrderItem.vue");
+const OrderItemUpdate = () => import("@/views/OrderItemUpdate.vue");
+const OrderUpdate = () => import("@/views/OrderUpdate.vue");
 const Product = () => import("@/views/Product.vue");
 const ProductDetail = () => import("@/views/ProductDetail.vue");
 const ProductUpdate = () => import("@/views/ProductUpdate.vue");
@@ -250,6 +255,54 @@ const router = createRouter({
                       name: "cart.item.update",
                       path: "update/:cartItemId",
                       component: CartItemUpdate,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+        },
+        {
+          path: "orders",
+          children: [
+            {
+              name: "order.list",
+              path: "",
+              component: Order,
+            },
+            {
+              name: "order.add",
+              path: "add",
+              component: OrderUpdate,
+            },
+            {
+              name: "order.detail",
+              path: ":orderId",
+              component: OrderDetail,
+              children: [
+                {
+                  name: "order.update",
+                  path: "detail",
+                  component: OrderDetail,
+                },
+                {
+                  name: "order.items",
+                  path: "order-items",
+                  children: [
+                    {
+                      name: "order.items.list",
+                      path: "",
+                      component: OrderItem,
+                    },
+                    {
+                      name: "order.item.add",
+                      path: "add",
+                      component: OrderItemUpdate,
+                    },
+                    {
+                      name: "order.item.update",
+                      path: "update/:orderItemId",
+                      component: OrderItemUpdate,
                     },
                   ],
                 },

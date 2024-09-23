@@ -23,6 +23,12 @@ backofficeSidebar:
   - title: Order
     path: /orders
     icon: task
+  - title: Shipment
+    path: /shipments
+    icon: local_shipping
+  - title: Payment
+    path: /payments
+    icon: paid
   - title: Settings
     path: /settings
     icon: settings
@@ -69,6 +75,11 @@ inputLabel:
     productSku: ProductSku
     quantity: Quantity
     subTotal: "Subtotal"
+  order:
+    status: Status
+    totalAmount: "Total Amount"
+  orderItem:
+    product: Product
 
 buttonLabel:
   login: "Login"
@@ -171,6 +182,17 @@ categoryPage:
     title: "Update Category"
   modalDelete:
     title: "Do you want to delete this category?"
+
+orderPage:
+  list:
+    title: Orders
+  detail:
+    title: Order Detail
+  add:
+    name: order.add
+    title: Add Order
+  modalDelete:
+    title: "Do you want to delete this order?"
 
 productPage:
   productList:

@@ -13,7 +13,7 @@
 
     <div class="menu">
       <router-link
-        v-for="(x, index) in 8"
+        v-for="(x, index) in 10"
         class="button"
         :class="{ active: activeRoute($t(`backofficeSidebar[${index}].path`)) }"
         :to="$t(`backofficeSidebar[${index}].path`)"

@@ -5,7 +5,7 @@
         <div class="flex gap-[1rem]">
           <select-field
             class="flex-1"
-            :label="$t('inputLabel.cartItem.product')"
+            :label="$t('inputLabel.orderItem.product')"
             :value="productDetail.id"
             :options="productOptions"
             @update:model-value="selectProduct"
@@ -13,28 +13,28 @@
           <select-field
             class="flex-1"
             :class="{ invisible: !productDetail.skus }"
-            :label="$t('inputLabel.cartItem.productSku')"
-            :value="cartItem?.product_sku?.id"
+            :label="$t('inputLabel.orderItem.productSku')"
+            :value="orderItem?.product_sku?.id"
             :options="productSkuOptions"
             @update:model-value="selectProductSku"
           />
         </div>
         <text-field
-          v-if="cartItem?.product_sku?.id"
+          v-if="orderItem?.product_sku?.id"
           :label="$t('inputLabel.product.price')"
-          :value="cartItem.product_sku?.price"
-          @update:model-value="(newValue) => (cartItem.quantity = newValue)"
+          :value="orderItem.product_sku?.price"
+          @update:model-value="(newValue) => (orderItem.quantity = newValue)"
         />
         <text-field
-          :label="$t('inputLabel.cartItem.quantity')"
-          :value="cartItem.quantity"
-          @update:model-value="(newValue) => (cartItem.quantity = newValue)"
+          :label="$t('inputLabel.orderItem.quantity')"
+          :value="orderItem.quantity"
+          @update:model-value="(newValue) => (orderItem.quantity = newValue)"
         />
         <text-field
-          v-if="cartItem.quantity"
-          :label="$t('inputLabel.cartItem.subTotal')"
-          :value="cartItem.product_sku?.price * cartItem.quantity"
-          @update:model-value="(newValue) => (cartItem.quantity = newValue)"
+          v-if="orderItem.quantity"
+          :label="$t('inputLabel.orderItem.subTotal')"
+          :value="orderItem.product_sku?.price * orderItem.quantity"
+          @update:model-value="(newValue) => (orderItem.quantity = newValue)"
           :disabled="true"
         />
         <custom-form-button
@@ -55,7 +55,7 @@ import TextField from "@/components/common/molecules/TextField.vue";
 import UploadPreview from "@/components/common/molecules/UploadPreview.vue";
 import Card from "@/components/common/templates/Card.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
-import { useCartItemStore } from "@/stores/cartItem";
+import { useOrderItemStore } from "@/stores/orderItem";
 import { useProductStore } from "@/stores/product";
 import { useUserStore } from "@/stores/user";
 import { OptionItem } from "@/types/backoffice";
@@ -65,7 +65,7 @@ import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "CartItemUpdateView",
+  name: "OrderItemUpdateView",
   components: {
     Card,
     CustomButton,
@@ -84,40 +84,40 @@ export default defineComponent({
   methods: {
     ...mapActions(useUserStore, ["listUsers"]),
     ...mapActions(useProductStore, ["listProductsDisplay"]),
-    ...mapActions(useCartItemStore, [
-      "createCartItem",
-      "retrieveCartItem",
-      "updateCartItem",
-      "resetCartItem",
+    ...mapActions(useOrderItemStore, [
+      "createOrderItem",
+      "retrieveOrderItem",
+      "updateOrderItem",
+      "resetOrderItem",
     ]),
     async handleUpdate() {
       if (this.new) {
-        this.createCartItem(this.cartItem);
+        this.createOrderItem(this.orderItem);
       } else {
-        await this.updateCartItem(this.cartItem);
+        await this.updateOrderItem(this.orderItem);
       }
-      this.$router.push({ name: "cart.items.list" });
+      this.$router.push({ name: "order.items.list" });
     },
     handleBack() {
-      this.$router.push({ name: "cart.items.list" });
+      this.$router.push({ name: "order.items.list" });
     },
     selectProduct(productId: string) {
       this.productDetail = _.find(
         this.productsDetails,
         (product) => product.id === productId
       ) as ProductDetails;
-      this.cartItem.product_sku = {} as ProductSkuDetail;
+      this.orderItem.product_sku = {} as ProductSkuDetail;
     },
     selectProductSku(skuId: string) {
       let productSkuDetail = _.find(
         this.productDetail.skus,
         (sku) => sku.id === skuId
       ) as ProductSkuDetail;
-      this.cartItem.product_sku = productSkuDetail;
+      this.orderItem.product_sku = productSkuDetail;
     },
   },
   computed: {
-    ...mapState(useCartItemStore, ["cartItem"]),
+    ...mapState(useOrderItemStore, ["orderItem"]),
     ...mapState(useProductStore, ["productsDetails"]),
     ...mapState(useUserStore, ["users"]),
     productOptions(): OptionItem[] {
@@ -146,26 +146,26 @@ export default defineComponent({
     },
     pageTitle() {
       return this.new
-        ? this.$t("cartPage.add.title")
-        : this.$t("cartPage.update.title");
+        ? this.$t("orderPage.add.title")
+        : this.$t("orderPage.update.title");
     },
   },
   async mounted() {
-    const cartId = this.$router.currentRoute.value.params.cartId;
-    const cartItemId = this.$router.currentRoute.value.params.cartItemId;
+    const orderId = this.$router.currentRoute.value.params.orderId;
+    const orderItemId = this.$router.currentRoute.value.params.orderItemId;
     await this.listProductsDisplay();
-    if (cartItemId) {
-      await this.retrieveCartItem(cartItemId as string);
+    if (orderItemId) {
+      await this.retrieveOrderItem(orderItemId as string);
       this.productDetail = _.find(
         this.productsDetails,
-        (product) => product.id === this.cartItem.product_sku.product.id
+        (product) => product.id === this.orderItem.product_sku.product.id
       ) as ProductDetails;
       this.new = false;
     }
-    this.cartItem.cart_id = cartId as string;
+    this.orderItem.order_id = orderId as string;
   },
   beforeRouteLeave() {
-    this.resetCartItem();
+    this.resetOrderItem();
   },
 });
 </script>

@@ -1,31 +1,31 @@
 <template>
-  <page-title :title="$t('cartPage.list.title')" />
+  <page-title :title="$t('orderPage.list.title')" />
   <page-body>
-    <header-action :current-route="$t('cartPage.add.name')" />
+    <header-action :current-route="$t('orderPage.add.name')" />
     <table class="w-full mt-[2rem] overflow-hidden">
       <thead>
         <tr>
           <th>No.</th>
-          <th>Total quantity</th>
-          <th>Total amount</th>
           <th>User</th>
+          <th>Total amount</th>
+          <th>Status</th>
         </tr>
       </thead>
       <tbody>
-        <template v-for="(cart, index) in carts" :key="index">
+        <template v-for="(order, index) in orders" :key="index">
           <tr :class="{ odd: index % 2 == 0 }">
             <td>{{ index + 1 }}</td>
-            <td v-text="cart.total_quantity" />
-            <td v-text="cart.total_amount" />
             <td>
               <div class="flex justify-center">
                 <img
-                  :src="cart.user.avatar as string"
-                  :alt="cart.user.email"
+                  :src="order.user.avatar as string"
+                  :alt="order.user.email"
                   class="w-[4rem] h-[4rem] rounded-full object-cover"
                 />
               </div>
             </td>
+            <td v-text="order.total_amount" />
+            <td v-text="order.status" />
             <td class="action-wrap">
               <ellipsis-dropdown
                 @action="handleActions"
@@ -42,7 +42,7 @@
     </table>
   </page-body>
   <modal id="deleteModal" title="Delete attribute" @confirm="submitAction">
-    <span v-text="$t('addressPage.modalDelete.title')" />
+    <span v-text="$t('orderPage.modalDelete.title')" />
   </modal>
 </template>
 
@@ -53,13 +53,13 @@ import HeaderAction from "@/components/common/molecules/HeaderAction.vue";
 import Modal from "@/components/common/molecules/Modal.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
-import { useCartStore } from "@/stores/cart";
-import { Cart } from "@/types/worker";
+import { useOrderStore } from "@/stores/order";
+import { Order } from "@/types/worker";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: "CartView",
+  name: "OrderView",
   components: {
     CustomButton,
     EllipsisDropdown,
@@ -75,13 +75,13 @@ export default defineComponent({
     };
   },
   methods: {
-    ...mapActions(useCartStore, ["listCarts", "destroyCart"]),
+    ...mapActions(useOrderStore, ["listOrders", "destroyOrder"]),
     handleActions(obj: any) {
-      const cart = this.carts[obj.currentIndex];
+      const order = this.orders[obj.currentIndex];
       if (obj.action === "Detail") {
         this.$router.push({
-          name: "cart.update",
-          params: { cartId: cart.id },
+          name: "order.update",
+          params: { orderId: order.id },
         });
       }
       this.currentAction = obj.action;
@@ -90,18 +90,18 @@ export default defineComponent({
     async submitAction() {
       const action = this.currentAction;
       if (action === "Delete") {
-        const cart = this.carts[this.currentIndex] as Cart;
-        if (cart.id) {
-          this.destroyCart(cart.id);
+        const order = this.orders[this.currentIndex] as Order;
+        if (order.id) {
+          this.destroyOrder(order.id);
         }
       }
     },
   },
   computed: {
-    ...mapState(useCartStore, ["carts"]),
+    ...mapState(useOrderStore, ["orders"]),
   },
   async mounted() {
-    await this.listCarts();
+    await this.listOrders();
   },
 });
 </script>
