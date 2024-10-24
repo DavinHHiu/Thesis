@@ -5,9 +5,12 @@ from .order import OrderDetailSerializer, OrderItemSerializer
 from .payment import PaymentSerializer
 from .product import (
     ProductAttributeSerializer,
+    ProductDetailSerializer,
     ProductDisplaySerializer,
     ProductImageSerializer,
     ProductSerializer,
+    ProductShallowSerializer,
+    ProductSkuDetailSerializer,
     ProductSkuDisplaySerializer,
     ProductSkuSerializer,
 )

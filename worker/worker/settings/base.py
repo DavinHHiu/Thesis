@@ -192,6 +192,8 @@ STATIC_URL = "static/"
 
 MEDIA_URL = "media/"
 
+BASE_MEDIA_URL = "http://localhost:8000/media/"
+
 MEDIA_ROOT = BASE_DIR / "media"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"

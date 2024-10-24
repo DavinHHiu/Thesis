@@ -2,10 +2,8 @@
   <page-body class="content">
     <div class="product">
       <div class="product-image">
-        <img
-          src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3.jpg"
-          class="zoomImg"
-        />
+        <image-preview :images="currentSku.images" />
+        <!-- <img :src="currentSku?.images[0]" class="zoomImg" /> -->
       </div>
       <div class="product-desc">
         <nav class="breadcrumb">
@@ -13,33 +11,38 @@
           Yellow Shoes
         </nav>
         <span class="single-product-category mb-[16px] block"
-          ><a href="" rel="tag">Men</a></span
-        >
-        <h1 class="product-title mb-[15px]">DNK Yellow Shoes</h1>
-        <p class="price">
-          <del aria-hidden="true" class="mr-[10px] text-slate-400">$150.00</del>
-          <span class="screen-reader-text">$120.00</span>
-          <span class="ast-shipping-text">+ Free Shipping</span>
+          ><a href="" rel="tag" v-text="productDetail?.categories?.[0]"
+        /></span>
+        <h1 class="product-title mb-[15px]" v-text="productDetail.name" />
+        <p class="price py-[1.5rem] border-y">
+          <!-- <del aria-hidden="true" class="mr-[10px] text-slate-400">$150.00</del> -->
+          <span
+            class="screen-reader-text font-bold"
+            v-text="`$${currentSku?.price}.00`"
+          />
+          <!-- <span class="ast-shipping-text">+ Free Shipping</span> -->
         </p>
         <div class="my-[16px]">
-          <p>
-            Nam nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris
-            vitae erat consequat auctor eu in elit. Class aptent taciti sociosqu
-            ad litora torquent per conubia nostra, per inceptos himenaeos.
-            Mauris in erat justo. Nullam ac urna eu felis dapibus condimentum
-            sit amet a augue. Sed non neque elit sed.
-          </p>
+          <product-sku-picker
+            :skus="productDetail?.skus"
+            :current-sku="currentSku"
+            @update:sku="changeSku"
+          />
         </div>
         <div class="action-wrapper flex gap-[20px] mb-[20px]">
-          <text-field inputType="number" class="input-quantity" />
-          <custom-button class="btn-add" intent="primary"
-            >ADD TO CART</custom-button
-          >
+          <custom-button
+            class="btn-add h-[4.5rem]"
+            intent="primary"
+            v-t="'inputLabel.common.addToCart'"
+          />
+        </div>
+        <div class="my-[16px]">
+          <span v-text="productDetail?.summary" />
         </div>
         <div class="product_meta border-t">
           <span class="posted_in block pt-[10px] mb-[20px]"
-            >Category: <a href="">Men</a></span
-          >
+            >Category: <a href="" v-text="productDetail?.categories?.[0]"
+          /></span>
         </div>
       </div>
     </div>
@@ -60,118 +63,70 @@
             <h3 class="product-details-title font-bold">Product description</h3>
           </div>
           <div class="mb-[20px]">
-            <p>
-              Since it’s creation lorem ipsum dolor sit amet, consectetur
-              adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-              dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-              exercitation ullamco laboris nisi ut aliquip ex ea commodo
-              consequat. Duis aute irure dolor in reprehenderit in voluptate
-              velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-              occaecat cupidatat non proident, sunt in culpa qui officia
-              deserunt mollit anim id est laborum.
-            </p>
-          </div>
-          <div class="mt-[20px]">
-            <div class="mb-[20px]">
-              <p>
-                Duis aute irure dolor in reprehenderit in voluptate velit esse
-                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                cupidatat non proident.
-              </p>
-            </div>
+            <p v-text="productDetail?.description" />
           </div>
         </div>
-        <div class="elementor-container elementor-column-gap-no flex">
-          <div class="">
-            <img
-              src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-about-01.jpg"
-            />
-          </div>
-          <div class="">
-            <img
-              src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-about-04.jpg"
-            />
-          </div>
-        </div>
-        <div class="elementor-container elementor-column-gap-no flex">
-          <div class="image-widget-container">
-            <img
-              src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-about-02.jpg"
-            />
-          </div>
-          <div class="elementor-widget-container">
-            <div>
-              <h3 class="elementor-widget-title">Ut enim ad minim</h3>
-              <span class="elementor-widget-body"
-                >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed
-                do eiusmod tempor incididunt.</span
-              >
-            </div>
-            <div>
-              <h3 class="elementor-widget-title">Quis nostrud</h3>
-              <span class="elementor-widget-body"
-                >Sed do eiusmod tempor incididunt ut labore.</span
-              >
-            </div>
-            <div>
-              <h3 class="elementor-widget-title">Duis aute irure</h3>
-              <span class="elementor-widget-body"
-                >Dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                tempor incididunt ut labore.</span
-              >
-            </div>
-          </div>
-        </div>
-        <div class="elementor-container elementor-column-gap-no flex w-full">
-          <div class="elementor-widget-container">
-            <h3 class="elementor-widget-title">More about the product</h3>
-            <span class="elementor-widget-body"
-              >Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor
-              in.</span
-            >
-          </div>
-          <div class="image-widget-container">
-            <img
-              src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-about-03.jpg"
-            />
-          </div>
+        <div v-for="image in currentSku?.images?.slice(1)" class="w-full">
+          <img :src="image" class="w-full" />
         </div>
       </div>
     </div>
+    <related-product-list />
   </page-body>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import TextField from '../components/common/molecules/TextField.vue';
-import CustomButton from '../components/common/atomic/CustomButton.vue';
-import PageBody from '../components/common/templates/PageBody.vue';
+import ImagePreview from "@/components/common/organisms/ImagePreview.vue";
+import ProductSkuPicker from "@/components/common/organisms/ProductSkuPicker.vue";
+import RelatedProductList from "@/components/common/organisms/RelatedProductList.vue";
+import { useProductStore } from "@/stores/product";
+import { ProductSkuDetail } from "@/types/worker";
+import { mapActions, mapState } from "pinia";
+import { defineComponent } from "vue";
+
+import CustomButton from "../components/common/atomic/CustomButton.vue";
+import TextField from "../components/common/molecules/TextField.vue";
+import PageBody from "../components/common/templates/PageBody.vue";
 
 export default defineComponent({
-  name: 'ProductDetail',
+  name: "ProductDetail",
   components: {
     CustomButton,
+    ImagePreview,
     PageBody,
+    ProductSkuPicker,
+    RelatedProductList,
     TextField,
   },
   data() {
     return {
       currentTabIndex: 0,
+      currentSku: {} as ProductSkuDetail,
     };
   },
   methods: {
+    ...mapActions(useProductStore, ["retrieveProductDetail"]),
     handleChangeTab(index: Number) {
-      this.currentTabIndex = index;
+      // this.currentTabIndex = index;
     },
+    changeSku(sku: ProductSkuDetail) {
+      this.currentSku = sku;
+      console.log(sku);
+    },
+  },
+  computed: {
+    ...mapState(useProductStore, ["productDetail"]),
+  },
+  async mounted() {
+    const productId = this.$router.currentRoute.value.params.id;
+    await this.retrieveProductDetail(productId as string);
+    this.currentSku = this.productDetail?.skus[0] as ProductSkuDetail;
   },
 });
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .content {
   display: flex;
@@ -183,19 +138,21 @@ export default defineComponent({
     padding: 0 2rem;
     justify-content: space-between;
     .product-image {
-      width: 50%;
+      width: 60%;
       .zoomImg {
         width: 100%;
         height: 100%;
       }
     }
     .product-desc {
-      width: 46%;
+      width: 35%;
       .single-product-category {
         font-size: $--font-base;
       }
       .product-title {
         font-size: $--font-4xl;
+        text-transform: uppercase;
+        color: $--dark-gray;
       }
       .breadcrumb {
         color: $--gray-color-900;
@@ -203,7 +160,6 @@ export default defineComponent({
       }
       .price {
         font-size: $--font-2xl;
-        font-weight: $--font-semibold;
       }
       .ast-shipping-text {
         font-size: $--font-base;
@@ -215,7 +171,7 @@ export default defineComponent({
           height: 4rem;
         }
         .btn-add {
-          width: 50%;
+          width: 100%;
         }
       }
     }
@@ -239,7 +195,7 @@ export default defineComponent({
         &::before {
           position: absolute;
           top: 0;
-          content: '';
+          content: "";
           width: 100%;
           border-top: 3px solid $--black-color-800;
         }

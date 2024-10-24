@@ -1,30 +1,39 @@
 <template>
   <div class="item-wp">
     <a class="image-wp">
-      <img
-        src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-m-jeans2-300x300.jpg"
-      />
+      <img :src="product?.images[0]" />
     </a>
-    <div class="item-info-wp flex flex-col justify-center">
+    <div class="item-info-wp flex flex-col justify-center gap-[0.5rem]">
       <a>
-        <span>Dark Blue Denim Jeans</span>
+        <span class="product-name" v-text="product?.name" />
       </a>
-      <span class="star"></span>
-      <span>$150.00</span>
+      <div>
+        <badge-star :rating="product?.rating as number" />
+      </div>
+      <span class="price font-semibold" v-text="`$${product?.prices[0]}.00`" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { Product } from "@/types/worker";
+import { defineComponent, PropType } from "vue";
+
+import BadgeStar from "./BadgeStar.vue";
 
 export default defineComponent({
-  name: 'TopItem',
+  name: "TopItem",
+  components: {
+    BadgeStar,
+  },
+  props: {
+    product: {} as PropType<Product>,
+  },
 });
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .item-wp {
   display: flex;
@@ -42,9 +51,13 @@ export default defineComponent({
     font-size: $--font-base;
     .star {
       &::after {
-        content: '\2606\2606\2606\2606\2606';
+        content: "\2606\2606\2606\2606\2606";
         font-size: $--font-2xl;
       }
+    }
+    .price {
+      margin-top: 0.5rem;
+      font-size: $--font-md;
     }
   }
 }

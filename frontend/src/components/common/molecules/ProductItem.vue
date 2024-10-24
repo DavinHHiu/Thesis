@@ -1,26 +1,23 @@
 <template>
   <div class="product-wrapper">
-    <div class="image-wrapper mb-[1rem] w-[40rem] h-[50rem]">
-      <img
-        class="first-img"
-        src="https://pos.nvncdn.com/778773-105877/ps/20221013_n6HKsuzizp6K2vDgrJLI4qA8.jpg"
-      />
-      <img
-        class="second-img"
-        src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-hoodie1-300x300.jpg"
-      />
+    <div class="image-wrapper mb-[1rem]">
+      <img class="first-img" :src="product?.images[0]" />
+      <img class="second-img" :src="product?.images[1]" />
     </div>
-    <div class="info-wrapper flex flex-col gap-[0.7rem]">
-      <span class="product-name">Black Hoodie</span>
-      <span class="product-category"> Men </span>
+    <div class="info-wrapper flex flex-col">
+      <span class="product-name" v-text="product?.name" />
+      <span class="product-category" v-text="product?.categories[0]" />
       <div>
-        <badge-star :rating="3" />
+        <badge-star :rating="product?.rating as number" />
       </div>
-      <span class="price font-semibold"> $150.00 </span>
+      <span class="price font-semibold" v-text="`$${product?.prices[0]}.00`" />
     </div>
-    <custom-button class="btn-add-to-cart w-full h-[4rem]" intent="p-outline">
-      Add to Cart
-    </custom-button>
+    <custom-button
+      v-text="$t('inputLabel.common.detail')"
+      intent="p-outline"
+      class="btn-add-to-cart w-full h-[4.5rem]"
+      @click="navigateToDetail"
+    />
   </div>
 </template>
 <script lang="ts">
@@ -39,6 +36,14 @@ export default defineComponent({
     BadgeStar,
     CustomButton,
   },
+  methods: {
+    navigateToDetail() {
+      this.$router.push({
+        name: "product.detail",
+        params: { id: this.product?.id },
+      });
+    },
+  },
 });
 </script>
 
@@ -46,12 +51,15 @@ export default defineComponent({
 @import "@/assets/variables";
 
 .product-wrapper {
+  width: 32%;
   position: relative;
   overflow: hidden;
   cursor: pointer;
 
   .image-wrapper {
     position: relative;
+    width: 100%;
+    padding-top: 120%;
   }
 
   img {
@@ -65,7 +73,14 @@ export default defineComponent({
     position: absolute;
     top: 0;
     left: 0;
-    opacity: 1;
+    z-index: 2;
+  }
+
+  .second-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
   }
 
   .product-name {
@@ -75,7 +90,8 @@ export default defineComponent({
   }
 
   .product-category {
-    color: $--gray-color-700;
+    color: $--gray-color-500;
+    text-transform: uppercase;
   }
 
   &:hover {
@@ -101,6 +117,10 @@ export default defineComponent({
     visibility: visible;
     opacity: 100%;
     transition: 0.2s ease-in-out;
+    .price {
+      margin-top: 0.5rem;
+      font-size: $--font-md;
+    }
   }
 
   .btn-add-to-cart {

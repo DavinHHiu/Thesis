@@ -229,3 +229,69 @@ class ProductDisplaySerializer(serializers.Serializer):
     class Meta:
         model = Product
         fields = "__all__"
+
+
+class ProductShallowSerializer(serializers.Serializer):
+    id = serializers.UUIDField()
+    name = serializers.CharField()
+    rating = serializers.IntegerField()
+    images = serializers.SerializerMethodField()
+    categories = serializers.SerializerMethodField()
+    prices = serializers.SerializerMethodField()
+
+    def get_images(self, obj):
+        first_sku = obj.skus.first()
+        if first_sku:
+            image_paths = first_sku.images.values_list("image", flat=True)
+            return [self._build_image_uri(image) for image in image_paths]
+        return []
+
+    def get_categories(self, obj):
+        return obj.categories.values_list("name", flat=True)
+
+    def get_prices(self, obj):
+        return obj.skus.values_list("price", flat=True)
+
+    def _build_image_uri(self, relative_uri):
+        return settings.BASE_MEDIA_URL + relative_uri.replace("\\", "/")
+
+
+class ProductSkuDetailSerializer(serializers.Serializer):
+    id = serializers.UUIDField()
+    size = serializers.SerializerMethodField()
+    color = serializers.SerializerMethodField()
+    price = serializers.FloatField()
+    quantity = serializers.IntegerField()
+    images = serializers.SerializerMethodField()
+
+    def get_size(self, obj):
+        return obj.size.value
+
+    def get_color(self, obj):
+        return obj.color.value
+
+    def get_images(self, obj):
+        image_paths = obj.images.values_list("image", flat=True)
+        return [self._build_image_uri(image) for image in image_paths]
+
+    def _build_image_uri(self, relative_uri):
+        return settings.BASE_MEDIA_URL + relative_uri.replace("\\", "/")
+
+
+class ProductDetailSerializer(serializers.Serializer):
+    id = serializers.UUIDField()
+    name = serializers.CharField()
+    rating = serializers.IntegerField()
+    description = serializers.CharField()
+    summary = serializers.CharField()
+    categories = serializers.SerializerMethodField()
+    skus = ProductSkuDetailSerializer(many=True)
+
+    def get_prices(self, obj):
+        return obj.skus.values_list("price", flat=True)
+
+    def get_categories(self, obj):
+        return obj.categories.values_list("name", flat=True)
+
+    def _build_image_uri(self, relative_uri):
+        return settings.BASE_MEDIA_URL + relative_uri.replace("\\", "/")

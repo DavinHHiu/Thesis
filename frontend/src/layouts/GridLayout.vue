@@ -4,31 +4,38 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'GridLayout',
+  name: "GridLayout",
   props: {
-    gap: {
+    rowGap: {
       type: [Number, String],
-      default: '2',
+    },
+    gapColumn: {
+      type: [Number, String],
     },
     wrap: {
       type: String,
-      default: 'nowrap',
+      default: "nowrap",
     },
-    align: {
+    alignItems: {
       type: String,
-      default: 'center',
+      default: "start",
+    },
+    justifyConent: {
+      type: String,
+      default: "space-between",
     },
   },
   computed: {
     customStyle() {
       return {
-        gap: this.gap + 'rem',
-        flexWrap: this.wrap,
-        alignItems: this.align,
-        justifyContent: this.align,
+        rowGap: this.rowGap ? this.rowGap + "rem" : "0rem",
+        gapColumn: this.gapColumn ? this.gapColumn + "rem" : "0rem",
+        flexWrap: this.wrap || "nowrap",
+        alignItems: this.alignItems || "initial",
+        justifyContent: this.justifyConent || "initial",
       };
     },
   },
