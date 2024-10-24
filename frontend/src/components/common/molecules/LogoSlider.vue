@@ -10,23 +10,23 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'LogoSlider',
+  name: "LogoSlider",
   data() {
     return {
       images: [
-        { src: '/images/brand_logos/1.jpeg' },
-        { src: '/images/brand_logos/2.jpeg' },
-        { src: '/images/brand_logos/3.jpeg' },
-        { src: '/images/brand_logos/4.jpeg' },
-        { src: '/images/brand_logos/5.jpeg' },
-        { src: '/images/brand_logos/6.jpeg' },
-        { src: '/images/brand_logos/7.jpeg' },
-        { src: '/images/brand_logos/8.jpeg' },
-        { src: '/images/brand_logos/9.jpeg' },
-        { src: '/images/brand_logos/10.jpeg' },
+        { src: "/images/brand_logos/1.jpeg" },
+        { src: "/images/brand_logos/2.jpeg" },
+        { src: "/images/brand_logos/3.jpeg" },
+        { src: "/images/brand_logos/4.jpeg" },
+        { src: "/images/brand_logos/5.jpeg" },
+        { src: "/images/brand_logos/6.jpeg" },
+        { src: "/images/brand_logos/7.jpeg" },
+        { src: "/images/brand_logos/8.jpeg" },
+        { src: "/images/brand_logos/9.jpeg" },
+        { src: "/images/brand_logos/10.jpeg" },
       ],
     };
   },
@@ -34,7 +34,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .slides {
   position: relative;
@@ -59,7 +59,7 @@ export default defineComponent({
   &::after {
     top: 0;
     position: absolute;
-    content: '';
+    content: "";
     height: 100%;
     width: 15rem;
     z-index: 2;
@@ -79,9 +79,6 @@ export default defineComponent({
       $--second-color,
       $--white-alpha-10
     );
-  }
-  &:hover .slide-track {
-    animation-play-state: paused;
   }
 }
 

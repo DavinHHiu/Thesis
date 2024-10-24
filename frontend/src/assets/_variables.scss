@@ -5,6 +5,7 @@ $--black-color-900: #000;
 $--white-color-900: #fff;
 
 $--gray-color-100: #f2f2f2;
+$--gray-color-150: #eee;
 $--gray-color-200: #e2e2e2;
 $--gray-color-300: #d2d2d2;
 $--gray-color-400: #c2c2c2;
@@ -79,6 +80,7 @@ $--font-normal: 400;
 //Common
 $--primary-color: $--black-color-900;
 $--second-color: $--white-color-900;
+$--dark-alt: $--gray-color-200;
 
 $--primary-color-text: $--black-color-800;
 $--second-color-text: $--white-color-900;
@@ -87,3 +89,8 @@ $--title-color-text: $--dark-gray;
 $--color-background: $--gray-color-100;
 
 $--color-border: $--gray-color-200;
+
+// Box shadows
+$--shadow-x: 0 1px 20px 2px $--dark-alt;
+$--shadow-y: 1px 0 20px 2px $--dark-alt;
+$--shadow: 0px 0px 20px 3px $--dark-alt;

@@ -45,17 +45,8 @@
           v-t="$t('homePage.featuredProducts.title')"
         />
       </div>
-      <grid-layout wrap="wrap">
-        <product-item />
-        <product-item />
-        <product-item />
-        <product-item />
-        <product-item />
-        <product-item />
-        <product-item />
-        <product-item />
-        <product-item />
-        <product-item />
+      <grid-layout wrap="wrap" :row-gap="2">
+        <product-item v-for="item in products" :product="item" />
       </grid-layout>
     </div>
     <div class="image-model">
@@ -110,6 +101,8 @@
 <script lang="ts">
 import CategoryItem from "@/components/common/molecules/CategoryItem.vue";
 import CartFolder from "@/components/common/templates/CartFolder.vue";
+import { useProductStore } from "@/stores/product";
+import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
 import CustomButton from "../components/common/atomic/CustomButton.vue";
@@ -141,6 +134,15 @@ export default defineComponent({
         { title: "Let's Lorem Suit Up!", src: "/images/categories/4.jpg" },
       ],
     };
+  },
+  methods: {
+    ...mapActions(useProductStore, ["listProducts"]),
+  },
+  computed: {
+    ...mapState(useProductStore, ["products"]),
+  },
+  mounted() {
+    this.listProducts({ limit: 9 });
   },
 });
 </script>

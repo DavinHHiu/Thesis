@@ -4,6 +4,8 @@ inputLabel:
     description: "Description"
     price: "Price"
     quantity: "Quantity"
+    addToCart: "Add to Cart"
+    detail: "Detail"
   address:
     title: "Title"
     zipcode: "Zip Code"
@@ -51,3 +53,6 @@ dividerBreak:
 homePage:
   featuredProducts:
     title: "Featured Products"
+
+searchPage:
+  placeholder: "Search Price Tag"

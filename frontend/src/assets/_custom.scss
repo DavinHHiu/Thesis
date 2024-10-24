@@ -1,4 +1,4 @@
-@import 'variables';
+@import "variables";
 
 h2 {
   color: $--primary-color;
@@ -10,9 +10,17 @@ input {
   outline: none;
 }
 
-input[type='number']::-webkit-outer-spin-button,
-input[type='number']::-webkit-inner-spin-button {
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
   -webkit-appearance: none;
+}
+
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  outline: none;
 }
 
 .input-wp {

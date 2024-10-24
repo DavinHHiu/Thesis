@@ -17,6 +17,17 @@ interface Category {
   updated_at?: Date;
 }
 
+interface ColorDisplay {
+  color: string;
+  image: string;
+  totalQuantity: number;
+}
+
+interface SizeDisplay {
+  size: string;
+  disabled: boolean;
+}
+
 interface SubCategory {
   id?: number;
   name: string;
@@ -33,17 +44,36 @@ interface ProductAttribute {
 interface Product {
   id?: string;
   name: string;
+  rating?: number;
+  categories: string[];
+  prices: number[];
+  images: string[];
+}
+
+interface ProductSkuDetail {
+  id?: string;
+  size: string;
+  color: string;
+  price: number;
+  quantity: number;
+  images: string[];
+}
+
+interface ProductDetail {
+  id?: string;
+  name: string;
+  rating?: number;
   description?: string;
   summary?: string;
-  rating?: number;
-  categories: SubCategory[];
+  categories: string[];
+  skus: ProductSkuDetail[];
 }
 
 interface ProductSku {
   id?: string;
   size: ProductAttribute;
   color: ProductAttribute;
-  images: File[];
+  images: ProductImage[];
   sku: string;
   price: number;
   quantity: number;
@@ -51,26 +81,20 @@ interface ProductSku {
 }
 
 interface ProductImage {
-  image: File[];
-}
-
-interface ProductDetails {
-  id?: string;
-  name: string;
-  description?: string;
-  summary?: string;
-  rating?: number;
-  categories: SubCategory[];
-  skus: ProductSku[];
+  id?: number;
+  image: string;
 }
 
 export {
   Category,
+  ColorDisplay,
   Product,
+  ProductDetail,
   ProductImage,
   ProductSku,
+  ProductSkuDetail,
   ProductAttribute,
-  ProductDetails,
+  SizeDisplay,
   SubCategory,
   User,
 };

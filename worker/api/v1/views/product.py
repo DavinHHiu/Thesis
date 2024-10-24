@@ -3,15 +3,17 @@ import os
 from django.db import transaction
 from django.utils.translation import gettext_lazy as _
 from rest_framework import status, viewsets
+from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 
 from api.models import Product, ProductAttribute, ProductImage, ProductSku
 from api.v1.serializers import (
     ProductAttributeSerializer,
-    ProductDisplaySerializer,
+    ProductDetailSerializer,
     ProductImageSerializer,
     ProductSerializer,
+    ProductShallowSerializer,
     ProductSkuSerializer,
 )
 
@@ -141,9 +143,18 @@ class ProductImageViewSet(viewsets.ModelViewSet):
 class ProductDisplayViewset(viewsets.ReadOnlyModelViewSet):
 
     permission_classes = [AllowAny]
-    serializer_class = ProductDisplaySerializer
+    serializer_class = ProductShallowSerializer
+    pagination_class = LimitOffsetPagination
+    queryset = Product.objects.all()
+
+    def get_serializer_class(self):
+        if self.action == "list":
+            return ProductShallowSerializer
+        return ProductDetailSerializer
 
     def list(self, request, *args, **kwargs):
-        products = Product.objects.all()
-        serializer = self.get_serializer(products, many=True)
+        queryset = self.get_queryset()
+        paginator = self.pagination_class()
+        result = paginator.paginate_queryset(queryset, request)
+        serializer = self.get_serializer(result, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
