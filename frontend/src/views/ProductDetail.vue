@@ -2,8 +2,7 @@
   <page-body class="content">
     <div class="product">
       <div class="product-image">
-        <image-preview :images="currentSku.images" />
-        <!-- <img :src="currentSku?.images[0]" class="zoomImg" /> -->
+        <image-preview :images="currentSku?.images || []" />
       </div>
       <div class="product-desc">
         <nav class="breadcrumb">
@@ -34,6 +33,7 @@
             class="btn-add h-[4.5rem]"
             intent="primary"
             v-t="'inputLabel.common.addToCart'"
+            @click="handleAddToCart"
           />
         </div>
         <div class="my-[16px]">
@@ -79,8 +79,9 @@
 import ImagePreview from "@/components/common/organisms/ImagePreview.vue";
 import ProductSkuPicker from "@/components/common/organisms/ProductSkuPicker.vue";
 import RelatedProductList from "@/components/common/organisms/RelatedProductList.vue";
+import { useCartStore } from "@/stores/cart";
 import { useProductStore } from "@/stores/product";
-import { ProductSkuDetail } from "@/types/worker";
+import { NewCartItem, ProductSkuDetail } from "@/types/worker";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
@@ -106,6 +107,7 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(useProductStore, ["retrieveProductDetail"]),
+    ...mapActions(useCartStore, ["retrieveCart", "addToCart"]),
     handleChangeTab(index: Number) {
       // this.currentTabIndex = index;
     },
@@ -113,14 +115,26 @@ export default defineComponent({
       this.currentSku = sku;
       console.log(sku);
     },
+    handleAddToCart() {
+      console.log(this.currentSku);
+      console.log(this.cart);
+      const payload = {
+        cart_id: this.cart.id,
+        product_sku_id: this.currentSku.id,
+        quantity: 1,
+      } as NewCartItem;
+      this.addToCart(payload);
+    },
   },
   computed: {
     ...mapState(useProductStore, ["productDetail"]),
+    ...mapState(useCartStore, ["cart"]),
   },
   async mounted() {
     const productId = this.$router.currentRoute.value.params.id;
     await this.retrieveProductDetail(productId as string);
     this.currentSku = this.productDetail?.skus[0] as ProductSkuDetail;
+    this.retrieveCart();
   },
 });
 </script>

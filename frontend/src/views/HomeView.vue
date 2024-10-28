@@ -28,6 +28,7 @@
             v-for="(x, index) in slides"
             :key="index"
             :title="x.title"
+            :grid-columns="3"
             class="p-10px"
           >
             <img class="bg-image" :src="x.src" />
@@ -40,10 +41,7 @@
     </div>
     <div class="list-products">
       <div class="products-title-wp">
-        <h1
-          class="products-title"
-          v-t="$t('homePage.featuredProducts.title')"
-        />
+        <h1 class="products-title" v-t="'homePage.featuredProducts.title'" />
       </div>
       <grid-layout wrap="wrap" :row-gap="2">
         <product-item v-for="item in products" :product="item" />

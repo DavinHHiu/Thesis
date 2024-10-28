@@ -1,7 +1,18 @@
 <template>
-  <page-title title="Cart" />
+  <page-title title="cartPage.title" />
   <page-body>
-    <div class="container flex flex-col items-end">
+    <div v-if="totalQuantity === 0" class="empty-cart">
+      <div class="flex items-center gap-[1rem] px-[2rem]">
+        <span class="material-symbols-outlined" v-text="'event_busy'" />
+        <span v-t="'cartPage.label.empty'" />
+      </div>
+      <custom-button
+        class="px-[3rem] py-[1.25rem] mt-[5rem] uppercase"
+        intent="primary"
+        v-html="$t('cartPage.btnLabel.continue')"
+      />
+    </div>
+    <div v-else class="container flex flex-col items-end">
       <table class="list-items">
         <thead>
           <tr>
@@ -11,48 +22,88 @@
             <th>Price</th>
             <th>Quantity</th>
             <th>Subtotal</th>
+            <th>
+              <input
+                type="checkbox"
+                :checked="chosenItems.length === cartItems.length"
+                @change="changeAllItem"
+              />
+            </th>
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr v-for="(cartItem, index) in cartItems" :key="index">
             <td class="h-full flex items-center justify-center">
               <icon-remove width="20px" height="20px" stroke="#aaa" />
             </td>
             <td>
-              <a>
-                <img
-                  src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2017/12/product-hoodie1-300x300.jpg"
-                />
-              </a>
+              <a class="image"
+                ><img :src="cartItem?.product_sku?.images?.[0]"
+              /></a>
             </td>
             <td class="product-name">
-              <a href="">Black Hoodie</a>
+              <a href="" v-text="cartItem?.product?.name" />
             </td>
             <td>
-              <span>$150.00</span>
+              <span v-text="`$${cartItem?.product_sku?.price}.00`" />
             </td>
             <td>
-              <div class="quantity">
-                <text-field inputType="number" class="input-quantity" />
+              <div class="quantity flex items-center gap-[0.5rem]">
+                <span
+                  class="material-symbols-outlined"
+                  v-text="'remove'"
+                  @click="decreaseQuantity(cartItem.id as number)"
+                />
+                <number-field
+                  class="input-quantity"
+                  :value="cartItem.quantity"
+                  @update:modelValue="
+                    (newValue) => (cartItem.quantity = newValue)
+                  "
+                />
+                <span
+                  class="material-symbols-outlined"
+                  v-text="'add'"
+                  @click="
+                    increaseQuantity(
+                      cartItem.id as number,
+                      cartItem.product_sku.quantity as number
+                    )
+                  "
+                />
               </div>
             </td>
+            <td><span v-text="`$${cartItem?.subtotal}.00`" /></td>
             <td>
-              <span>$150.00</span>
+              <input
+                type="checkbox"
+                @change="changeItem($event, index)"
+                :checked="
+                  chosenItems.findIndex((i) => i.id === cartItem.id) !== -1
+                "
+              />
             </td>
           </tr>
         </tbody>
       </table>
       <div class="cart-totals px-[20px]">
-        <h2 class="cart-totals-title font-bold">Cart totals</h2>
-        <table cellspacing="0" class="shop_table shop_table_responsive">
+        <h2
+          class="cart-totals-title font-bold"
+          v-t="'cartPage.label.subtitle'"
+        />
+        <table>
           <tbody>
-            <tr class="cart-subtotal">
-              <th>Subtotal</th>
-              <td data-title="Subtotal">$300.00</td>
+            <tr>
+              <th v-t="'cartPage.label.totalQuantity'" />
+              <td data-title="Subtotal" v-text="totalQuantityCheckout" />
             </tr>
-            <tr class="order-total">
-              <th>Total</th>
-              <td data-title="Total">$300.00</td>
+            <tr>
+              <th v-t="'cartPage.label.totalAmount'" />
+              <td
+                class="total-amount"
+                data-title="Total"
+                v-text="`$${totalAmountCheckout}.00`"
+              />
             </tr>
           </tbody>
         </table>
@@ -60,8 +111,8 @@
           <custom-button
             class="rounded-none w-full py-[20px] mb-[17px]"
             intent="primary"
-            >CHECKOUT</custom-button
-          >
+            v-html="$t('cartPage.btnLabel.checkout')"
+          />
         </div>
       </div>
     </div>
@@ -69,27 +120,121 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import TextField from '../components/common/molecules/TextField.vue';
-import IconRemove from '../components/icons/IconRemove.vue';
-import CustomButton from '../components/common/atomic/CustomButton.vue';
-import PageTitle from '../components/common/templates/PageTitle.vue';
-import PageBody from '../components/common/templates/PageBody.vue';
+import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import NumberField from "@/components/common/molecules/NumberField.vue";
+import TextField from "@/components/common/molecules/TextField.vue";
+import PageBody from "@/components/common/templates/PageBody.vue";
+import PageTitle from "@/components/common/templates/PageTitle.vue";
+import IconRemove from "@/components/icons/IconRemove.vue";
+import { useCartStore } from "@/stores/cart";
+import { CartItem } from "@/types/worker";
+import _ from "lodash";
+import { mapActions, mapState } from "pinia";
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'CartView',
+  name: "CartView",
   components: {
     TextField,
     IconRemove,
     CustomButton,
+    NumberField,
     PageTitle,
     PageBody,
+  },
+  data() {
+    return {
+      chosenItems: [] as CartItem[],
+    };
+  },
+  methods: {
+    ...mapActions(useCartStore, [
+      "retrieveCart",
+      "listCartItems",
+      "updateCartItemQuantity",
+    ]),
+    async increaseQuantity(cartItemId: number, maxQuantity: number) {
+      let foundItem = undefined;
+      let foundAt = -1;
+      _.forEach(this.cartItems, (item, index) => {
+        if (item.id === cartItemId && item.quantity + 1 <= maxQuantity) {
+          item.quantity++;
+          item.subtotal = item.product_sku.price * item.quantity;
+          foundItem = item;
+          foundAt = index;
+        }
+      });
+      if (foundItem) {
+        const response = await this.updateCartItemQuantity(foundItem);
+        if (response?.status !== 200) {
+          this.cartItems[foundAt].quantity--;
+        }
+      }
+    },
+    async decreaseQuantity(cartItemId: number) {
+      let foundItem = undefined;
+      let foundAt = -1;
+      _.forEach(this.cartItems, (item, index) => {
+        if (item.id === cartItemId && item.quantity - 1 > 0) {
+          item.quantity--;
+          item.subtotal = item.product_sku.price * item.quantity;
+          foundItem = item;
+          foundAt = index;
+        }
+      });
+      if (foundItem) {
+        const response = await this.updateCartItemQuantity(foundItem);
+        if (response?.status !== 200) {
+          this.cartItems[foundAt].quantity++;
+        }
+      }
+    },
+    changeItem(event: Event, index: number) {
+      const target = event.target as HTMLInputElement;
+      const item = this.cartItems[index];
+      if (target.checked) {
+        if (!this.chosenItems.find((i) => i.id === item.id)) {
+          this.chosenItems.push(item);
+        }
+      } else {
+        this.chosenItems = this.chosenItems.filter((i) => i.id !== item.id);
+      }
+      console.log(this.chosenItems);
+    },
+    changeAllItem(event: Event) {
+      const target = event.target as HTMLInputElement;
+      if (target.checked) {
+        this.chosenItems = [...this.cartItems];
+      } else {
+        this.chosenItems = [];
+      }
+      console.log(this.chosenItems);
+    },
+  },
+  computed: {
+    ...mapState(useCartStore, ["cartItems", "totalQuantity"]),
+    totalQuantityCheckout() {
+      return this.chosenItems.reduce(
+        (acc, curItem) => acc + curItem.quantity,
+        0
+      );
+    },
+    totalAmountCheckout() {
+      return this.chosenItems.reduce(
+        (acc, curItem) => acc + curItem.subtotal,
+        0
+      );
+    },
+  },
+  async mounted() {
+    await this.retrieveCart();
+    await this.listCartItems();
   },
 });
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .container {
   table {
@@ -115,10 +260,24 @@ export default defineComponent({
           max-width: 7rem;
         }
       }
+      .image {
+        display: block;
+        width: 6rem;
+        height: 6rem;
+        img {
+          width: 100%;
+          height: 100%;
+          object-fit: contain;
+          object-position: center;
+        }
+      }
       .input-quantity {
-        padding: 0.5rem;
-        height: 5rem;
-        width: 8rem;
+        width: 5rem;
+      }
+      .quantity {
+        span {
+          cursor: pointer;
+        }
       }
     }
   }
@@ -142,6 +301,14 @@ export default defineComponent({
         border-bottom: 1px solid $--color-border;
       }
     }
+    .total-amount {
+      font-weight: $--font-bold;
+    }
   }
+}
+.empty-cart {
+  padding: 2rem 0;
+  font-size: $--font-base;
+  border-top: 3px solid $--primary-color;
 }
 </style>

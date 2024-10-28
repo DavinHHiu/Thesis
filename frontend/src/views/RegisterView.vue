@@ -3,17 +3,17 @@
     <app-logo />
     <card class="w-[40rem] h-[55rem]">
       <div class="h-full p-[1rem] flex flex-col justify-between">
-        <p class="text-[28px] font-bold" v-text="$t('buttonLabel.register')" />
+        <p class="text-[28px] font-bold" v-t="'buttonLabel.register'" />
         <div class="flex flex-col gap-[4rem]">
           <text-field
             class="h-[5rem]"
-            :label="$t('inputLabel.user.email')"
+            :label="'inputLabel.user.email'"
             :value="registerItem.email"
             @update:model-value="(newValue) => (registerItem.email = newValue)"
           ></text-field>
           <password-field
             class="h-[5rem]"
-            :label="$t('inputLabel.user.password')"
+            :label="'inputLabel.user.password'"
             :value="registerItem.password"
             @update:model-value="
               (newValue) => (registerItem.password = newValue)
@@ -21,7 +21,7 @@
           ></password-field>
           <password-field
             class="h-[5rem]"
-            :label="$t('inputLabel.user.retypePassword')"
+            :label="'inputLabel.user.retypePassword'"
             :value="registerItem.retypePassword"
             @update:model-value="
               (newValue) => (registerItem.retypePassword = newValue)
@@ -32,14 +32,14 @@
           <custom-button
             class="h-[5rem]"
             intent="primary"
-            v-text="$t('buttonLabel.register')"
+            v-text="'buttonLabel.register'"
             @click="handleRegister"
           />
-          <divider-break :title="$t('dividerBreak.register')" />
+          <divider-break :title="'dividerBreak.register'" />
           <custom-button
             class="h-[5rem]"
             intent="p-outline"
-            v-text="$t('buttonLabel.login')"
+            v-t="'buttonLabel.login'"
           />
         </div>
       </div>

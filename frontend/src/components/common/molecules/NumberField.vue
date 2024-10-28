@@ -11,12 +11,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import CustomInput from '../atomic/CustomInput.vue';
-import CustomLabel from '../atomic/CustomLabel.vue';
+import { defineComponent } from "vue";
+
+import CustomInput from "../atomic/CustomInput.vue";
+import CustomLabel from "../atomic/CustomLabel.vue";
 
 export default defineComponent({
-  name: 'TextField',
+  name: "NumberField",
   components: {
     CustomInput,
     CustomLabel,
@@ -28,7 +29,7 @@ export default defineComponent({
     },
     value: {
       type: [String, Number],
-      default: '',
+      default: "",
     },
   },
   data() {
@@ -46,7 +47,7 @@ export default defineComponent({
     },
     handleInput(event: any) {
       const value = event.target.value;
-      this.$emit('update:modelValue', value);
+      this.$emit("update:modelValue", value);
     },
   },
 });

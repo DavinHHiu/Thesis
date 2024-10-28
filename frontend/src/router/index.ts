@@ -1,18 +1,18 @@
-import AboutView from "@/views/AboutView.vue";
-import CartView from "@/views/CartView.vue";
-import CheckoutFormView from "@/views/CheckoutFormView.vue";
-import CheckoutOrderView from "@/views/CheckoutOrderView.vue";
-import CheckoutView from "@/views/CheckoutView.vue";
-import HomeView from "@/views/HomeView.vue";
-import LoginView from "@/views/LoginView.vue";
-import OrderView from "@/views/OrderView.vue";
-import ProductDetail from "@/views/ProductDetail.vue";
-import ProfileView from "@/views/ProfileView.vue";
-import RegisterView from "@/views/RegisterView.vue";
-import SearchView from "@/views/SearchView.vue";
 import { createRouter, createWebHistory } from "vue-router";
 
-const BaseView = import("@/views/BaseView.vue");
+const AboutView = () => import("@/views/AboutView.vue");
+const BaseView = () => import("@/views/BaseView.vue");
+const CartView = () => import("@/views/CartView.vue");
+const CheckoutFormView = () => import("@/views/CheckoutFormView.vue");
+const CheckoutOrderView = () => import("@/views/CheckoutOrderView.vue");
+const CheckoutView = () => import("@/views/CheckoutView.vue");
+const HomeView = () => import("@/views/HomeView.vue");
+const LoginView = () => import("@/views/LoginView.vue");
+const OrderView = () => import("@/views/OrderView.vue");
+const ProductDetail = () => import("@/views/ProductDetail.vue");
+const ProfileView = () => import("@/views/ProfileView.vue");
+const RegisterView = () => import("@/views/RegisterView.vue");
+const SearchView = () => import("@/views/SearchView.vue");
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -35,6 +35,7 @@ const router = createRouter({
         },
         {
           path: "cart",
+          name: "cartPage",
           component: CartView,
         },
         {

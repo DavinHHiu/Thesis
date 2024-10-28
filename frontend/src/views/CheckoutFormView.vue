@@ -7,45 +7,69 @@
         <div class="bill-form">
           <div class="input-name-cont">
             <div class="w-full">
-              <custom-label :required="true">First name</custom-label>
-              <text-field class="h-[4.5rem]" :required="true" />
+              <text-field
+                class="h-[4.5rem]"
+                :label="'inputLabel.user.firstName'"
+                :required="true"
+              />
             </div>
             <div class="w-full">
-              <custom-label :required="true">Last name</custom-label>
-              <text-field class="h-[4.5rem]" :required="true" />
+              <text-field
+                class="h-[4.5rem]"
+                :label="'inputLabel.user.lastName'"
+                :required="true"
+              />
             </div>
           </div>
           <div>
-            <custom-label>Company name (optional)</custom-label>
-            <text-field class="h-[4.5rem]" :required="false" />
-          </div>
-          <div>
-            <custom-label :required="true">Country / Region</custom-label>
-            <text-field class="h-[4.5rem]" :required="true" />
-          </div>
-          <div>
-            <custom-label :required="true">Street address</custom-label>
             <text-field
               class="h-[4.5rem]"
+              :label="'inputLabel.checkout.company'"
+              :required="false"
+            />
+          </div>
+          <div>
+            <text-field
+              class="h-[4.5rem]"
+              :label="'inputLabel.checkout.country'"
+              :required="true"
+            />
+          </div>
+          <div>
+            <text-field
+              class="h-[4.5rem]"
+              :label="'inputLabel.checkout.street'"
               :required="true"
               placeholder="House number and street name"
             />
           </div>
           <div>
-            <custom-label>Postcode / ZIP (optional)</custom-label>
-            <text-field class="h-[4.5rem]" :required="false" />
+            <text-field
+              class="h-[4.5rem]"
+              :label="'inputLabel.checkout.zipcode'"
+              :required="false"
+            />
           </div>
           <div>
-            <custom-label :required="true">Town / City</custom-label>
-            <text-field class="h-[4.5rem]" :required="true" />
+            <text-field
+              class="h-[4.5rem]"
+              :label="'inputLabel.checkout.city'"
+              :required="true"
+            />
           </div>
           <div>
-            <custom-label :required="true">Phone</custom-label>
-            <text-field class="h-[4.5rem]" :required="true" />
+            <text-field
+              class="h-[4.5rem]"
+              :label="'inputLabel.checkout.phone'"
+              :required="true"
+            />
           </div>
           <div>
-            <custom-label :required="true">Email address</custom-label>
-            <text-field class="h-[4.5rem]" :required="true" />
+            <text-field
+              class="h-[4.5rem]"
+              :label="'inputLabel.checkout.email'"
+              :required="true"
+            />
           </div>
         </div>
       </div>
@@ -53,8 +77,11 @@
         <h2 class="sub-title">Additional information</h2>
         <div class="bill-form">
           <div>
-            <custom-label>Order notes (optional)</custom-label>
-            <text-field class="h-[4.5rem]" :required="false" />
+            <text-field
+              class="h-[4.5rem]"
+              :label="'inputLabel.checkout.notes'"
+              :required="false"
+            />
           </div>
         </div>
       </div>
@@ -109,15 +136,16 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import TextField from '../components/common/molecules/TextField.vue';
-import Card from '../components/common/molecules/Card.vue';
-import CustomButton from '../components/common/atomic/CustomButton.vue';
-import RadioField from '../components/common/molecules/RadioField.vue';
-import CustomLabel from '../components/common/atomic/CustomLabel.vue';
+import { defineComponent } from "vue";
+
+import CustomButton from "../components/common/atomic/CustomButton.vue";
+import CustomLabel from "../components/common/atomic/CustomLabel.vue";
+import Card from "../components/common/molecules/Card.vue";
+import RadioField from "../components/common/molecules/RadioField.vue";
+import TextField from "../components/common/molecules/TextField.vue";
 
 export default defineComponent({
-  name: 'CheckoutFormView',
+  name: "CheckoutFormView",
   components: {
     TextField,
     Card,
@@ -129,7 +157,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .separator {
   width: 100%;
@@ -149,9 +177,10 @@ export default defineComponent({
       border-bottom: 1px solid $--color-border;
     }
     .bill-form {
+      margin-top: 4rem;
       display: flex;
       flex-direction: column;
-      gap: 2rem;
+      gap: 4rem;
       width: 100%;
       .input-name-cont {
         width: 100%;

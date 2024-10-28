@@ -1,16 +1,16 @@
 <template>
   <div class="title-cont">
     <div class="title-wp">
-      <span class="title">{{ title }}</span>
+      <span class="title" v-t="title" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'PageTitle',
+  name: "PageTitle",
   props: {
     title: {
       type: String,
@@ -21,7 +21,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .title-cont {
   padding: 5rem 0;

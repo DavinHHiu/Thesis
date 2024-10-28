@@ -73,9 +73,6 @@ export default defineComponent({
       console.log("Dropdown clicked");
     },
   },
-  mounted() {
-    console.log(this.user);
-  },
 });
 </script>
 

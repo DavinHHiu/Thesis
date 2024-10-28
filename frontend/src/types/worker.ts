@@ -85,7 +85,32 @@ interface ProductImage {
   image: string;
 }
 
+interface Cart {
+  id?: string;
+  user: User;
+  total_quantity: number;
+  total_amount: number;
+}
+
+interface NewCartItem {
+  cart_id: string;
+  product_sku_id: string;
+  quantity: number;
+}
+
+interface CartItem {
+  id?: number;
+  cart_id: string;
+  product_sku: ProductSkuDetail;
+  product: Product;
+  quantity: number;
+  subtotal: number;
+}
+
 export {
+  Cart,
+  CartItem,
+  NewCartItem,
   Category,
   ColorDisplay,
   Product,

@@ -1,6 +1,6 @@
-import { createI18n } from 'vue-i18n';
-import en from '@/locales/en.yaml';
-import vi from '@/locales/vi.yaml';
+import en from "@/locales/en.yaml";
+import vi from "@/locales/vi.yaml";
+import { createI18n } from "vue-i18n";
 
 const messages = {
   en,
@@ -8,8 +8,8 @@ const messages = {
 };
 
 const i18n = createI18n({
-  locale: 'vi',
-  fallbackLocale: 'en',
+  locale: "en",
+  fallbackLocale: "en",
   messages,
 });
 
