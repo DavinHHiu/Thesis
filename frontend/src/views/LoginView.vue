@@ -7,13 +7,13 @@
         <div class="flex flex-col gap-[4rem]">
           <text-field
             class="h-[5rem]"
-            :label="$t('inputLabel.user.email')"
+            :label="'inputLabel.user.email'"
             :value="loginItem.email"
             @update:model-value="(newValue) => (loginItem.email = newValue)"
           ></text-field>
           <password-field
             class="h-[5rem]"
-            :label="$t('inputLabel.user.password')"
+            :label="'inputLabel.user.password'"
             :value="loginItem.password"
             @update:model-value="(newValue) => (loginItem.password = newValue)"
           ></password-field>
@@ -23,13 +23,13 @@
             class="h-[5rem]"
             intent="primary"
             @click="handleLogin"
-            v-text="$t('buttonLabel.login')"
+            v-t="'buttonLabel.login'"
           />
-          <divider-break :title="$t('dividerBreak.login')" />
+          <divider-break :title="'dividerBreak.login'" />
           <custom-button
             class="h-[5rem]"
             intent="p-outline"
-            v-text="$t('buttonLabel.register')"
+            v-t="'buttonLabel.register'"
             @click="routeRegister"
           />
         </div>

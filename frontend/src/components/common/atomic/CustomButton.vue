@@ -28,14 +28,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'CustomButton',
+  name: "CustomButton",
   props: {
     btnType: {
       type: String,
-      default: 'button',
+      default: "button",
       required: false,
     },
     disabled: {
@@ -57,28 +57,35 @@ export default defineComponent({
     },
     as: {
       type: [String, Object],
-      default: 'button',
+      default: "button",
     },
     intent: {
       type: String,
       validator: (val: string) =>
-        ['primary', 'second', 'p-outline', 'text', 'danger'].includes(val),
-      default: 'secondary',
+        [
+          "primary",
+          "second",
+          "p-outline",
+          "outlineSecond",
+          "text",
+          "danger",
+        ].includes(val),
+      default: "second",
       required: false,
     },
   },
   computed: {
     buttonClass() {
-      const classes = ['btn'];
+      const classes = ["btn"];
       const intent: Record<string, string | string[]> = {
-        primary: 'bg-black text-white',
-        second: 'bg-white text-black',
-        'p-outline': [
-          'text-black bg-transparent',
-          'hover:text-white hover:bg-black',
-          'outlinePrimary',
+        primary: "bg-black text-white",
+        second: "bg-white text-black",
+        "p-outline": [
+          "text-black bg-transparent",
+          "hover:text-white hover:bg-black",
+          "outlinePrimary",
         ],
-        outlineSecond: 'outlineSecond',
+        outlineSecond: "outlineSecond",
       };
       if (this.intent) {
         classes.push(intent[this.intent] as string);
@@ -90,7 +97,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .btn {
   display: inline-flex;

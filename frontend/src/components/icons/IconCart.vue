@@ -19,29 +19,34 @@
         ></path>
       </g>
     </svg>
-    <div class="cart-quantity-wrapper">
-      <p class="cart-quantity">1</p>
+    <div v-if="totalQuantity > 0" class="cart-quantity-wrapper">
+      <p class="cart-quantity" v-text="totalQuantity" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { useCartStore } from "@/stores/cart";
+import { mapState } from "pinia";
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'IconCart',
+  name: "IconCart",
   props: {
     intent: {
       type: String,
-      default: 'primary',
-      validator: (value: string) => ['primary', 'second'].includes(value),
+      default: "primary",
+      validator: (value: string) => ["primary", "second"].includes(value),
     },
+  },
+  computed: {
+    ...mapState(useCartStore, ["totalQuantity"]),
   },
 });
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .wrapper {
   position: relative;

@@ -1,5 +1,5 @@
 from .base import EmailValidationSerializer
-from .cart import CartItemSerializer, CartSerializer
+from .cart import CartItemSerializer, CartSerializer, ShallowCartItemSerializer
 from .category import CategorySerializer, SubCategorySerializer
 from .order import OrderDetailSerializer, OrderItemSerializer
 from .payment import PaymentSerializer

@@ -1,16 +1,14 @@
 <template>
   <div class="divider-wraper flex justify-center">
-    <p class="title">
-      {{ title }}
-    </p>
+    <p class="title" v-t="title" />
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'DividerBreak',
+  name: "DividerBreak",
   props: {
     title: {
       type: String,
@@ -21,7 +19,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .divider-wraper {
   position: relative;
@@ -35,7 +33,7 @@ export default defineComponent({
     z-index: 2;
   }
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     background-color: transparent;
     top: 50%;

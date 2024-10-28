@@ -2,7 +2,7 @@
   <div class="body-wp" :class="{ 'h-screen': openCart }">
     <nav-header :intent="headerIntent" @open:cart-folder="toogleCartFolder" />
     <div class="body">
-      <router-view class="overflow" />
+      <router-view />
     </div>
     <custom-footer />
     <cart-folder
@@ -13,13 +13,14 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import NavHeader from '../components/common/organisms/NavHeader.vue';
-import CustomFooter from '../components/common/organisms/CustomFooter.vue';
-import CartFolder from '@/components/common/templates/CartFolder.vue';
+import CartFolder from "@/components/common/templates/CartFolder.vue";
+import { defineComponent } from "vue";
+
+import CustomFooter from "../components/common/organisms/CustomFooter.vue";
+import NavHeader from "../components/common/organisms/NavHeader.vue";
 
 export default defineComponent({
-  name: 'BaseView',
+  name: "BaseView",
   components: {
     CartFolder,
     CustomFooter,

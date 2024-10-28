@@ -1,58 +1,93 @@
 inputLabel:
   common:
-    name: "Name"
-    description: "Description"
-    price: "Price"
-    quantity: "Quantity"
-    addToCart: "Add to Cart"
-    detail: "Detail"
+    name: Name
+    description: Description
+    price: Price
+    quantity: Quantity
+    addToCart: Add to Cart
+    detail: Detail
   address:
-    title: "Title"
-    zipcode: "Zip Code"
-    address1: "Address 1"
-    address2: "Address 2"
-    tel: "Tel"
-    user: "User"
+    title: Title
+    zipcode: Zip Code
+    address1: Address 1
+    address2: Address 2
+    tel: Tel
+    user: User
   user:
-    firstName: "First Name"
-    lastName: "Last Name"
-    email: "Email"
-    password: "Password"
-    retypePassword: "Re-type Password"
-    dob: "Birth of date"
-    tel: "Tel"
+    firstName: First Name
+    lastName: Last Name
+    email: Email
+    password: Password
+    retypePassword: Re-type Password
+    dob: Birth of date
+    tel: Tel
   subcategory:
-    category: "Category"
+    category: Category
   product:
-    sku: "Sku"
-    price: "Price"
-    color: "Color"
-    size: "Size"
-    categories: "Categories"
-    quantity: "Quantity"
-    summary: "Summary"
+    sku: Sku
+    price: Price
+    color: Color
+    size: Size
+    categories: Categories
+    quantity: Quantity
+    summary: Summary
   productAttribute:
-    type: "Type"
-    value: "Value"
+    type: Type
+    value: Value
+  checkout:
+    company: Company name (optional)
+    country: Country / Region
+    street: Street address
+    zipcode: Postcode / ZIP (optional)
+    city: City / Town
+    phone: Phone number
+    email: Email address
+    notes: Order notes (optional)
 
 buttonLabel:
-  login: "Login"
-  register: "Register"
-  logout: "Logout"
-  save: "Save"
-  cancel: "Cancel"
-  add: "Add"
-  update: "Update"
-  filter: "Filter"
-  delete: "Delete"
+  login: Login
+  register: Register
+  logout: Logout
+  save: Save
+  cancel: Cancel
+  close: Close
+  add: Add
+  update: Update
+  filter: Filter
+  delete: Delete
 
 dividerBreak:
-  login: "New to Price Tag?"
-  register: "Already have an account?"
+  login: New to Price Tag?
+  register: Already have an account?
 
 homePage:
   featuredProducts:
-    title: "Featured Products"
+    title: Featured Products
 
 searchPage:
-  placeholder: "Search Price Tag"
+  placeholder: Search Price Tag
+
+productDetailPage:
+  size: Size
+  color: Color
+
+cartFolder:
+  title: Shopping Cart
+  btnLabel:
+    checkout: Checkout
+    continue: Continue Shopping
+    view: View Cart
+  label:
+    noProduct: No products in the cart
+    subtotal: Subtotal
+
+cartPage:
+  title: Cart
+  btnLabel:
+    continue: Continue shopping
+    checkout: Checkout
+  label:
+    subtitle: Cart totals
+    empty: Your cart have no items
+    totalQuantity: Total quantity
+    totalAmount: Total amount

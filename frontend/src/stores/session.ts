@@ -5,6 +5,8 @@ import localStore from "@/utils/localStorage";
 import axios from "axios";
 import { defineStore } from "pinia";
 
+import { useCartStore } from "./cart";
+
 let refreshInterval: NodeJS.Timeout | null = null;
 
 export const useSessionStore = defineStore("session", {
@@ -30,6 +32,11 @@ export const useSessionStore = defineStore("session", {
               token: response.data.token,
               user: JSON.stringify(this.user),
             });
+
+            if (this.user.id) {
+              const cartStore = useCartStore();
+              cartStore.retrieveCart();
+            }
 
             refreshInterval = setInterval(
               () => {

@@ -1,2 +1,92 @@
-welcome: 'Chào mừng'
-hello: 'Xin chào, thế giới!'
+inputLabel:
+  common:
+    name: Tên
+    description: Mô tả
+    price: Giá
+    quantity: Số lượng
+    addToCart: Thêm vào giỏ
+    detail: Chi tiết
+  address:
+    title: Tiêu đề
+    zipcode: Mã zip
+    address1: Địa chỉ 1
+    address2: Địa chỉ 2
+    tel: Số điện thoại
+    user: Người đại diện
+  user:
+    firstName: Tên
+    lastName: Họ
+    email: Email
+    password: Mật khẩu
+    retypePassword: Nhập lại mật khẩu
+    dob: Ngày sinh
+    tel: Số điện thoại
+  subcategory:
+    category: Thể loại
+  product:
+    sku: Mã sku
+    price: Giá
+    color: Màu
+    size: Size
+    categories: Thể loại
+    quantity: Số lượng
+    summary: Mô tả ngắn
+  productAttribute:
+    type: Loại
+    value: Giá trị
+  checkout:
+    company: Tên công ty (Tuỳ chọn)
+    country: Quốc gia / Khu vực
+    street: Tên Phố
+    zipcode: Mã zip (Tuỳ chọn)
+    city: Thành phố / Thị trấn
+    phone: Số điện thoại
+    email: Địa chỉ email
+    notes: Ghi chú (Tuỳ chọn)
+
+buttonLabel:
+  login: Đăng nhập
+  register: Đăng ký
+  logout: Đăng xuất
+  save: Lưu
+  cancel: Huỷ
+  add: Thêm
+  update: Sửa
+  filter: Lọc
+  delete: Xoá
+
+dividerBreak:
+  login: Người mới với Price Tag?
+  register: Đã có tài khoản?
+
+homePage:
+  featuredProducts:
+    title: Sản phẩm đặc trưng
+
+searchPage:
+  placeholder: Tìm kiếm Price Tag
+
+productDetailPage:
+  size: Size
+  color: Màu sắc
+
+cartFolder:
+  title: Giỏ hàng
+  btnLabel:
+    checkout: Thanh toán
+    continue: Tiếp tục mua sắm
+    view: Xem giỏ hàng
+  label:
+    noProduct: Không có sản phẩm nào trong giỏ hàng
+    subtotal: Tổng
+
+cartPage:
+  title: Giỏ hàng
+  btnLabel:
+    continue: Tiếp tục mua sắm
+    checkout: Thanh toán
+  label:
+    subtitle: Tổng tiền giỏ hàng
+    empty: Giỏ hàng của bạn không có sản phẩm nào
+    subtotal: Tổng
+    total: Tổng cộng

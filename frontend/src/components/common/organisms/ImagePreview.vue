@@ -59,7 +59,6 @@ export default defineComponent({
       imageZoom.style.backgroundPosition = `${(x / width) * 100}% ${(y / height) * 100}%`;
     },
     offZoom() {
-      console.log("out");
       const imageZoom = this.$refs.imageZoom as HTMLImageElement;
       imageZoom.style.display = "none";
     },

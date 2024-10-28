@@ -13,7 +13,7 @@
       <span class="price font-semibold" v-text="`$${product?.prices[0]}.00`" />
     </div>
     <custom-button
-      v-text="$t('inputLabel.common.detail')"
+      v-t="'inputLabel.common.detail'"
       intent="p-outline"
       class="btn-add-to-cart w-full h-[4.5rem]"
       @click="navigateToDetail"

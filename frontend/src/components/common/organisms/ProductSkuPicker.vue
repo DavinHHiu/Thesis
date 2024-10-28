@@ -1,7 +1,7 @@
 <template>
   <div class="wrapper">
     <div class="color-list-wp">
-      <span class="title" v-t="'Color:'" />
+      <span class="title" v-t="'productDetailPage.color'" />
       <div class="color-wp">
         <div
           v-for="color in listColorDisplay"
@@ -17,7 +17,7 @@
       </div>
     </div>
     <div class="size-list-wp">
-      <span class="title" v-t="'Size:'" />
+      <span class="title" v-t="'productDetailPage.size'" />
       <div class="size-wp">
         <div
           v-for="size in listSizeDisplay"
@@ -43,7 +43,10 @@ export default defineComponent({
   name: "ProductSkuPicker",
   emits: ["update:sku"],
   props: {
-    skus: [] as PropType<ProductSkuDetail[]>,
+    skus: {
+      type: Array as PropType<ProductSkuDetail[]>,
+      default: [],
+    },
     currentSku: {
       type: {} as PropType<ProductSkuDetail>,
       default: "",
@@ -133,7 +136,6 @@ export default defineComponent({
         }
         return item;
       });
-      console.log(this.currentColor);
     },
   },
 });

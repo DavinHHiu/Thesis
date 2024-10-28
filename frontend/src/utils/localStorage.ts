@@ -13,7 +13,12 @@ const isLocalStorageAvailable = () => {
 
 export const get = (item: string) => {
   if (isLocalStorageAvailable()) {
-    return localStorage.getItem(item);
+    let value = localStorage.getItem(item);
+    try {
+      return JSON.parse(value as string);
+    } catch {
+      return value;
+    }
   } else {
     alert("Can't get local storage item!");
   }
