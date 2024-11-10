@@ -2,6 +2,38 @@ const apiVersion = "v1";
 const APP_URL = `http://localhost:8000/api/${apiVersion}`;
 const BASE_URL = `http://localhost:8000/api/${apiVersion}/eu`;
 
-const consts = { APP_URL, BASE_URL };
+const ORDER_STATUS_PENDING = "pending";
+const ORDER_STATUS_COMFIRMED = "confirmed";
+const ORDER_STATUS_PROCESSING = "processing";
+const ORDER_STATUS_SHIPPING = "shipping";
+const ORDER_STATUS_DELIVERED = "delivered";
+const ORDER_STATUS_COMPLETED = "completed";
+const ORDER_STATUS_CANCELLED = "cancelled";
+const ORDER_STATUS_REFUNDED = "refunded";
+
+const ORDER_STATUSES = {
+  ORDER_STATUS_PENDING,
+  ORDER_STATUS_COMFIRMED,
+  ORDER_STATUS_PROCESSING,
+  ORDER_STATUS_SHIPPING,
+  ORDER_STATUS_DELIVERED,
+  ORDER_STATUS_COMPLETED,
+  ORDER_STATUS_CANCELLED,
+  ORDER_STATUS_REFUNDED,
+};
+
+const consts = {
+  APP_URL,
+  BASE_URL,
+  ORDER_STATUS_PENDING,
+  ORDER_STATUS_COMFIRMED,
+  ORDER_STATUS_PROCESSING,
+  ORDER_STATUS_SHIPPING,
+  ORDER_STATUS_DELIVERED,
+  ORDER_STATUS_COMPLETED,
+  ORDER_STATUS_CANCELLED,
+  ORDER_STATUS_REFUNDED,
+  ORDER_STATUSES,
+};
 
 export default consts;

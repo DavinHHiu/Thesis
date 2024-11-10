@@ -1,80 +1,124 @@
 <template>
   <div class="wrapper">
-    <p>Thank you. Your order has been received.</p>
+    <p v-t="'receivedOrderPage.message.thank'" />
     <ul class="order-info">
       <li class="order-info-item">
-        ORDER NUMBER:
-        <strong>6261</strong>
+        <span class="uppercase" v-t="'receivedOrderPage.label.orderNumber'" />
+        <strong v-text="order?.id" />
       </li>
       <li class="order-info-item">
-        DATE:
-        <strong>July 28, 2024</strong>
+        <span
+          class="uppercase"
+          v-t="'receivedOrderPage.label.estimateShippingDate'"
+        />
+        <strong v-text="order?.shipment?.shipping_date" />
       </li>
       <li class="order-info-item">
-        TOTAL:
-        <strong>$150.00</strong>
+        <span class="uppercase" v-t="'receivedOrderPage.label.total'" />
+        <strong v-text="formattedAmount(order?.payment?.total_amount)" />
       </li>
       <li class="order-info-item">
-        PAYMENT METHOD:
-        <strong>Direct bank transfer</strong>
+        <span class="uppercase" v-t="'receivedOrderPage.label.paymentMethod'" />
+        <strong v-text="order?.payment?.payment_method?.name" />
       </li>
     </ul>
     <section class="order-detail">
-      <h2 class="section-title">Order details</h2>
+      <h2
+        class="section-title"
+        v-t="'receivedOrderPage.subtitle.orderDetails'"
+      />
       <table class="order-detail-content">
         <thead>
           <tr>
-            <th>Product</th>
-            <th>Total</th>
+            <th v-t="'receivedOrderPage.label.product'" />
+            <th v-t="'receivedOrderPage.label.total'" />
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <td>Basic Gray Jeans × 1</td>
-            <td>$150.00</td>
+          <tr v-for="item in orderItems">
+            <td v-text="`${item?.product?.name} x ${item.quantity}`" />
+            <td v-text="formattedAmount(item?.product_sku?.price)" />
           </tr>
         </tbody>
         <tfoot>
           <tr>
-            <td>Subtotal:</td>
-            <td>$150.00</td>
+            <td v-t="'receivedOrderPage.label.totalQuantity'" />
+            <td v-text="order?.total_quantity" />
           </tr>
           <tr>
-            <td>Payment method:</td>
-            <td>Direct bank transfer</td>
+            <td v-t="'receivedOrderPage.label.shippingFee'" />
+            <td
+              v-text="
+                formattedAmount(order?.shipment?.shipment_method?.shipping_fee)
+              "
+            />
           </tr>
           <tr>
-            <td>Total:</td>
-            <td>$150.00</td>
+            <td v-t="'receivedOrderPage.label.total'" />
+            <td v-text="formattedAmount(order?.payment?.total_amount)" />
+          </tr>
+          <tr>
+            <td v-t="'receivedOrderPage.label.paymentMethod'" />
+            <td v-text="order?.payment?.payment_method?.name" />
           </tr>
         </tfoot>
       </table>
     </section>
     <section class="billing-address">
-      <h2 class="section-title">Billing address</h2>
+      <h2
+        class="section-title"
+        v-t="'receivedOrderPage.subtitle.billingAddress'"
+      />
       <div class="custom-info-wp">
-        <p>Nguyễn Hiếu</p>
-        <p>Nghĩa Dũng</p>
-        <p>Hà Nội 000084</p>
-        <p>Vietnam</p>
-        <p><span>&#128379;</span>0815220802</p>
-        <p><span>&#9993;</span>honghieu2208@gmail.com</p>
+        <p v-text="order?.shipment?.receive_address?.representative" />
+        <p v-text="order?.shipment?.receive_address?.address_1" />
+        <p v-text="address" />
+        <p><span>&#9742; </span>{{ order?.shipment?.receive_address?.tel }}</p>
       </div>
     </section>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { useOrderStore } from "@/stores/order";
+import { formatCurrency } from "@/utils/currency";
+import { mapActions, mapState } from "pinia";
+import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
-  name: 'CheckoutOrderView',
+  name: "CheckoutOrderView",
   components: {},
+  computed: {
+    ...mapState(useOrderStore, ["order", "orderItems"]),
+    address() {
+      return (
+        this.order?.shipment?.receive_address?.ward +
+        ", " +
+        this.order?.shipment?.receive_address?.district +
+        ", " +
+        this.order?.shipment?.receive_address?.city
+      );
+    },
+  },
+  methods: {
+    ...mapActions(useOrderStore, ["retrieveOrder", "retrieveOrderItems"]),
+    formattedAmount(amount: number) {
+      const { locale } = useI18n();
+      return formatCurrency(locale.value, amount);
+    },
+    formatCurrency,
+  },
+  async mounted() {
+    const orderId = this.$route.params.orderId;
+    await this.retrieveOrder(orderId as string);
+    await this.retrieveOrderItems(orderId as string);
+  },
 });
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .wrapper {
   display: flex;

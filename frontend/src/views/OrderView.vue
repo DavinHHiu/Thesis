@@ -41,16 +41,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import PageTitle from '../components/common/templates/PageTitle.vue';
-import PageBody from '../components/common/templates/PageBody.vue';
-import SeparatorLine from '../components/common/molecules/SeparatorLine.vue';
-import NavPills from '../components/common/molecules/NavPills.vue';
-import PagingNumber from '../components/common/molecules/PagingNumber.vue';
-import { returnPaginationRange } from '../utils/utils';
+import { defineComponent } from "vue";
+
+import NavPills from "../components/common/molecules/NavPills.vue";
+import PagingNumber from "../components/common/molecules/PagingNumber.vue";
+import SeparatorLine from "../components/common/molecules/SeparatorLine.vue";
+import PageBody from "../components/common/templates/PageBody.vue";
+import PageTitle from "../components/common/templates/PageTitle.vue";
+import { returnPaginationRange } from "../utils/utils";
 
 export default defineComponent({
-  name: 'OrderView',
+  name: "OrderView",
   components: {
     PageTitle,
     PageBody,
@@ -61,9 +62,9 @@ export default defineComponent({
   data() {
     return {
       items: [
-        { title: 'All', quantity: 3 },
-        { title: 'Processing', quantity: 2 },
-        { title: 'Shipping', quantity: 1 },
+        { title: "All", quantity: 3 },
+        { title: "Processing", quantity: 2 },
+        { title: "Shipping", quantity: 1 },
       ],
       array: [],
     };
@@ -75,7 +76,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .list-orders-wp {
   margin-top: 2rem;

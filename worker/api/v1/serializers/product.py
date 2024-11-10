@@ -32,14 +32,7 @@ class ProductSerializer(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = [
-            "id",
-            "name",
-            "description",
-            "summary",
-            "categories",
-            "rating",
-        ]
+        fields = "__all__"
 
     @transaction.atomic
     def create(self, data):

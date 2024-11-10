@@ -24,15 +24,19 @@ class Address(models.Model, CreateAndUpdateModelMixin):
         null=True,
         verbose_name=_("user"),
     )
-    title = models.CharField(_("address title"), max_length=255)
+    title = models.CharField(_("address title"), max_length=255, null=True, blank=True)
+    city = models.CharField(_("city"), max_length=255)
+    district = models.CharField(_("district"), max_length=255)
+    ward = models.CharField(_("ward"), max_length=255)
     address_1 = models.CharField(_("address 1"), max_length=255, blank=True)
-    address_2 = models.CharField(_("address 2"), max_length=255, blank=True)
-    zipcode = models.CharField(_("zipcode"), max_length=255, blank=True)
+    address_2 = models.CharField(_("address 2"), max_length=255, null=True, blank=True)
     tel = models.CharField(
         _("telephone number"),
         max_length=15,
         blank=True,
     )
+    representative = models.CharField(_("representative"), max_length=255, blank=True)
+    is_default = models.BooleanField(_("is default address"), default=False)
 
     class Meta:
         verbose_name = _("address")

@@ -35,13 +35,13 @@ inputLabel:
     type: Type
     value: Value
   checkout:
-    company: Company name (optional)
-    country: Country / Region
-    street: Street address
-    zipcode: Postcode / ZIP (optional)
     city: City / Town
+    district: District
+    ward: Ward
+    address1: Address 1
+    address2: Address 2 (optional)
     phone: Phone number
-    email: Email address
+    representative: Representative
     notes: Order notes (optional)
 
 buttonLabel:
@@ -49,6 +49,7 @@ buttonLabel:
   register: Register
   logout: Logout
   save: Save
+  confirm: Confirm
   cancel: Cancel
   close: Close
   add: Add
@@ -91,3 +92,44 @@ cartPage:
     empty: Your cart have no items
     totalQuantity: Total quantity
     totalAmount: Total amount
+
+orderPage:
+  title: Checkout
+  subtitle:
+    address: Address details
+    contact: Contact
+    additionalInfo: Additional information
+    yourOrder: Your order
+    shipment: Shipment
+  thead:
+    product: Product
+    amount: Amount
+    quantity: Quantity
+    subtotal: Subtotal
+    shippingFee: Shipping fee
+    total: Total
+  btnLabel:
+    placeOrder: Place Order
+
+checkoutPage:
+  success: Checkout succesfully!
+
+addressPage:
+  deleteModel:
+    title: Delete Address
+    content: Are you sure you want to delete this address?
+
+receivedOrderPage:
+  label:
+    orderNumber: Order Number
+    estimateShippingDate: Estimate shipping date
+    paymentMethod: Payment method
+    total: Total
+    totalQuantity: Total quantity
+    product: Product
+    shippingFee: Shipping fee
+  subtitle:
+    orderDetails: Order Details
+    billingAddress: Billing Address
+  message:
+    thank: Thank you. Your order has been received.

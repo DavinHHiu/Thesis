@@ -1,6 +1,6 @@
 <template>
   <div class="select-wp">
-    <label v-if="label" v-text="label" />
+    <label v-if="label" v-t="label" />
     <select
       ref="select"
       @mousedown="openDropdown"
@@ -8,7 +8,7 @@
       :value="value"
     >
       <option value="" disabled selected>
-        Select {{ label?.toLowerCase() }}
+        Select {{ $t(`${label}`)?.toLowerCase() }}
       </option>
       <option
         v-for="(option, index) in options"
@@ -56,7 +56,6 @@ export default defineComponent({
       required: false,
     },
   },
-  data() {},
   methods: {
     openDropdown(event: Event) {
       event.preventDefault();

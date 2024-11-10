@@ -2,7 +2,7 @@ from .base import EmailValidationSerializer
 from .cart import CartItemSerializer, CartSerializer, ShallowCartItemSerializer
 from .category import CategorySerializer, SubCategorySerializer
 from .order import OrderDetailSerializer, OrderItemSerializer
-from .payment import PaymentSerializer
+from .payment import PaymentMethodSerializer, PaymentSerializer
 from .product import (
     ProductAttributeSerializer,
     ProductDetailSerializer,
@@ -14,7 +14,7 @@ from .product import (
     ProductSkuDisplaySerializer,
     ProductSkuSerializer,
 )
-from .shipment import ShipmentSerializer
+from .shipment import ShipmentMethodSerializer, ShipmentSerializer
 from .token import MyTokenObtainPairSerializer
 from .user import (
     AddressSerializer,

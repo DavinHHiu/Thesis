@@ -2,6 +2,7 @@ from datetime import datetime
 
 from django.db import transaction
 from rest_framework import status, viewsets
+from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -43,10 +44,26 @@ class AddressViewSet(viewsets.ModelViewSet):
     serializer_class = AddressSerializer
 
     def create(self, request):
+        user_id = request.data.pop("user_id", None)
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
-        serializer.save()
+        serializer.save(user_id=user_id)
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    def update(self, request, pk=None, *args, **kwargs):
+        address = self.get_object()
+        serializer = self.get_serializer(address, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
+        return Response(serializer.data, status=status.HTTP_200_OK)
+
+    @action(detail=False, methods=["GET"], url_path="by-user/(?P<user_id>[^/.]+)")
+    def listByUser(self, request, user_id=None, *args, **kwargs):
+        if user_id:
+            addresses = self.get_queryset().filter(user_id=user_id)
+            serializer = self.get_serializer(addresses, many=True)
+            return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class RegisterApiView(APIView):
