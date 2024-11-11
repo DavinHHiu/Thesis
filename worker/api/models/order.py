@@ -7,10 +7,10 @@ from api.models.mixins import CreateAndUpdateModelMixin
 
 
 class OrderDetail(models.Model, CreateAndUpdateModelMixin):
-    id = models.UUIDField(_("order id"), primary_key=True, default=uuid.uuid4())
+    id = models.CharField(_("order id"), primary_key=True, max_length=255)
     user = models.ForeignKey(to="api.User", on_delete=models.CASCADE)
-    total_amount = models.FloatField(_("total amount"))
     status = models.CharField(_("order status"), max_length=255)
+    total_quantity = models.IntegerField(_("total quantity"))
 
     class Meta:
         verbose_name = _("order detail")
@@ -18,7 +18,7 @@ class OrderDetail(models.Model, CreateAndUpdateModelMixin):
 
 
 class OrderItem(models.Model, CreateAndUpdateModelMixin):
-    id = models.UUIDField(_("order item id"), primary_key=True, default=uuid.uuid4())
+    id = models.UUIDField(_("order item id"), primary_key=True, default=uuid.uuid4)
     order = models.ForeignKey(to="api.OrderDetail", on_delete=models.CASCADE)
     product_sku = models.ForeignKey(to="api.ProductSku", on_delete=models.CASCADE)
     quantity = models.IntegerField(_("product quantity"))

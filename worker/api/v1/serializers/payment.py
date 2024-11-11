@@ -1,16 +1,30 @@
 from rest_framework import serializers
 
-from api.models import Payment
+from api.models import Payment, PaymentMethod
 
-from .order import OrderDetailSerializer
+
+class PaymentMethodSerializer(serializers.ModelSerializer):
+    id = serializers.IntegerField(required=False)
+    icon = serializers.ImageField(required=False)
+    name = serializers.CharField()
+    value = serializers.CharField()
+    description = serializers.CharField()
+    is_active = serializers.BooleanField(required=False)
+
+    class Meta:
+        model = PaymentMethod
+        fields = "__all__"
 
 
 class PaymentSerializer(serializers.ModelSerializer):
-    order = OrderDetailSerializer()
-    payment_method = serializers.CharField()
-    status = serializers.CharField()
+    id = serializers.IntegerField(required=False)
+    payment_method = PaymentMethodSerializer()
     total_amount = serializers.FloatField()
 
     class Meta:
         model = Payment
-        fields = ["order" "payment_method", "status", "total_amount"]
+        fields = [
+            "id",
+            "payment_method",
+            "total_amount",
+        ]

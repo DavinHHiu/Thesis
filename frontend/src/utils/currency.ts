@@ -11,14 +11,12 @@ const fetchExchangeRate = async (fromCurrency: string, toCurrency: string) => {
   }
 };
 
-export const formatCurrency = async (locale: string, amount: number) => {
+export const formatCurrency = (locale: string, amount: number) => {
   let defaultLocale = "en-US";
   let currency = "USD";
   if (locale === "vi") {
-    const rate = await fetchExchangeRate("USD", "VND");
     defaultLocale = "vi-VN";
     currency = "VND";
-    amount *= rate;
   }
   return Intl.NumberFormat(defaultLocale, {
     style: "currency",

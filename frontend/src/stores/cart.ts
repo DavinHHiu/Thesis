@@ -1,14 +1,25 @@
 import consts from "@/consts/consts";
-import { Cart, CartItem, NewCartItem, User } from "@/types/worker";
+import {
+  Address,
+  Cart,
+  CartItem,
+  NewCartItem,
+  PaymentMethod,
+  ShipmentMethod,
+  User,
+} from "@/types/worker";
 import localStore from "@/utils/localStorage";
 import axios from "axios";
 import { defineStore } from "pinia";
+
+import { useOrderStore } from "./order";
 
 export const useCartStore = defineStore("cart", {
   state: () => {
     return {
       cart: {} as Cart,
       cartItems: [] as CartItem[],
+      checkoutItems: [] as CartItem[],
     };
   },
   actions: {
@@ -64,6 +75,50 @@ export const useCartStore = defineStore("cart", {
           this.retrieveCart();
           return response;
         });
+    },
+    validateCheckoutItems() {
+      const payload = {
+        checkout_items: this.checkoutItems,
+      };
+      return axios
+        .post(`${consts.BASE_URL}/cart-items/validate/checkout-items/`, payload)
+        .then((response) => {
+          this.checkoutItems = response.data;
+          return response;
+        });
+    },
+    createPayment(
+      totalAmount: number,
+      totalQuantity: number,
+      address: Address,
+      shipmentMethod: ShipmentMethod,
+      paymentMethod: PaymentMethod
+    ) {
+      const host = window.location.origin;
+      const user = localStore.get("user") as User;
+      const payload = {
+        total_amount: totalAmount,
+        total_quantity: totalQuantity,
+        host: host,
+        user_id: user.id,
+        address: address,
+        shipment_method: shipmentMethod,
+        payment_method: paymentMethod,
+      };
+      return axios
+        .post(`${consts.BASE_URL}/create-payment/`, payload)
+        .then((response) => {
+          const orderStore = useOrderStore();
+          const orderId = response.data.order_id;
+          orderStore.createOrderItems(this.checkoutItems, totalAmount, orderId);
+          if (response.data.approval_url) {
+            window.location.href = response.data.approval_url;
+          }
+          return response;
+        });
+    },
+    setCheckoutItems(items: CartItem[]) {
+      this.checkoutItems = items;
     },
   },
   getters: {

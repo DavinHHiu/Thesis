@@ -71,3 +71,13 @@ class CartItemViewSet(viewsets.ModelViewSet):
         cart_item.delete()
 
         return Response(status=status.HTTP_204_NO_CONTENT)
+
+    @action(detail=False, methods=["POST"], url_path="validate/checkout-items")
+    def validateCheckoutItems(self, request, *args, **kwargs):
+        checkout_items = request.data["checkout_items"]
+        checkout_item_ids = [x["id"] for x in checkout_items]
+        cart_items = CartItem.objects.filter(id__in=checkout_item_ids)
+
+        serializer = self.get_serializer(cart_items, many=True)
+
+        return Response(serializer.data, status=status.HTTP_200_OK)

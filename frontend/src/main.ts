@@ -1,15 +1,15 @@
 import "./assets/main.scss";
 import "./assets/css/tailwind.css";
-
-import i18n from "@/utils/i18n";
-import axios from "axios";
-import { createPinia } from "pinia";
-import { createApp } from "vue";
+import "bootstrap/dist/js/bootstrap";
 
 import App from "./App.vue";
+import axios from "axios";
+import { createApp } from "vue";
+import { createPinia } from "pinia";
+import i18n from "@/utils/i18n";
+import localStore from "./utils/localStorage";
 import router from "./router";
 import { useSessionStore } from "./stores/session";
-import localStore from "./utils/localStorage";
 
 const app = createApp(App);
 

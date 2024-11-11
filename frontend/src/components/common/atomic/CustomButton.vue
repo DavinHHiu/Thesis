@@ -86,6 +86,7 @@ export default defineComponent({
           "outlinePrimary",
         ],
         outlineSecond: "outlineSecond",
+        danger: "danger",
       };
       if (this.intent) {
         classes.push(intent[this.intent] as string);
@@ -117,5 +118,10 @@ export default defineComponent({
 .outlineSecond {
   color: $--second-color-text;
   border: 1px solid $--second-color;
+}
+
+.danger {
+  color: $--second-color;
+  background-color: $--color-danger;
 }
 </style>

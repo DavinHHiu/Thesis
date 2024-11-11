@@ -13,7 +13,7 @@
     "forceConsistentCasingInFileNames": true,
     "sourceMap": true,
     "baseUrl": ".",
-    "types": ["node", "@modyfi/vite-plugin-yaml/modules"],
+    "types": ["node", "vite/client", "@modyfi/vite-plugin-yaml/modules"],
     "paths": {
       "@/*": ["src/*"]
     },

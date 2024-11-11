@@ -62,16 +62,17 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import PageBody from '../components/common/templates/PageBody.vue';
-import EditableAvatar from '../components/common/molecules/EditableAvatar.vue';
-import CustomLabel from '../components/common/atomic/CustomLabel.vue';
-import CustomButton from '../components/common/atomic/CustomButton.vue';
-import TextField from '../components/common/molecules/TextField.vue';
-import Card from '../components/common/molecules/Card.vue';
+import { defineComponent } from "vue";
+
+import CustomButton from "../components/common/atomic/CustomButton.vue";
+import CustomLabel from "../components/common/atomic/CustomLabel.vue";
+import Card from "../components/common/molecules/Card.vue";
+import EditableAvatar from "../components/common/molecules/EditableAvatar.vue";
+import TextField from "../components/common/molecules/TextField.vue";
+import PageBody from "../components/common/templates/PageBody.vue";
 
 export default defineComponent({
-  name: 'ProfileView',
+  name: "ProfileView",
   components: {
     CustomLabel,
     EditableAvatar,
@@ -84,7 +85,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .sub-title {
   border-bottom: 1px solid $--color-border;

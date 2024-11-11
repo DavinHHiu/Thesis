@@ -86,32 +86,41 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class AddressSerializer(serializers.ModelSerializer):
-    id = serializers.IntegerField(required=False)
-    user = UserSerializer(required=False)
-    title = serializers.CharField()
+    id = serializers.IntegerField(read_only=True, required=False)
+    user_id = serializers.SerializerMethodField()
+    title = serializers.CharField(required=False, allow_blank=True)
+    city = serializers.CharField()
+    district = serializers.CharField()
+    ward = serializers.CharField()
     address_1 = serializers.CharField()
-    address_2 = serializers.CharField(required=False)
-    zipcode = serializers.CharField(required=False)
+    address_2 = serializers.CharField(required=False, allow_blank=True)
     tel = serializers.CharField(max_length=10)
+    representative = serializers.CharField()
 
     class Meta:
         model = Address
         fields = [
             "id",
-            "user",
+            "user_id",
             "title",
+            "city",
+            "district",
+            "ward",
             "address_1",
             "address_2",
-            "zipcode",
             "tel",
+            "representative",
         ]
+
+    def get_user_id(self, obj):
+        return obj.user.id
 
     @transaction.atomic
     def create(self, validated_data):
-        if "user" in validated_data:
-            user_data = validated_data.pop("user")
+        if "user_id" in validated_data:
+            user_id = validated_data.pop("user_id")
             try:
-                user = User.objects.get(**user_data)
+                user = User.objects.get(id=user_id)
             except User.DoesNotExist as e:
                 raise serializers.ValidationError({"detail": str(e)})
 
@@ -122,13 +131,6 @@ class AddressSerializer(serializers.ModelSerializer):
     @transaction.atomic
     def update(self, instance, validated_data):
         for attr, value in validated_data.items():
-            if attr == "user":
-                user_data = value
-                try:
-                    user = User.objects.get(**user_data)
-                except User.DoesNotExist as e:
-                    raise serializers.ValidationError({"detail": str(e)})
-                value = user
             setattr(instance, attr, value)
 
         instance.save()

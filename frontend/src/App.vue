@@ -1,8 +1,8 @@
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'App',
+  name: "App",
 });
 </script>
 
@@ -11,5 +11,5 @@ export default defineComponent({
 </template>
 
 <style lang="scss">
-@import './assets/main.scss';
+@import "./assets/main.scss";
 </style>

@@ -35,13 +35,13 @@ inputLabel:
     type: Loại
     value: Giá trị
   checkout:
-    company: Tên công ty (Tuỳ chọn)
-    country: Quốc gia / Khu vực
-    street: Tên Phố
-    zipcode: Mã zip (Tuỳ chọn)
     city: Thành phố / Thị trấn
+    district: Quận
+    ward: Phường
+    address1: Địa chỉ 1
+    address2: Địa chỉ 2 (optional)
     phone: Số điện thoại
-    email: Địa chỉ email
+    representative: Người đại diện
     notes: Ghi chú (Tuỳ chọn)
 
 buttonLabel:
@@ -49,7 +49,9 @@ buttonLabel:
   register: Đăng ký
   logout: Đăng xuất
   save: Lưu
+  confirm: Xác nhận
   cancel: Huỷ
+  close: Đóng
   add: Thêm
   update: Sửa
   filter: Lọc
@@ -90,3 +92,44 @@ cartPage:
     empty: Giỏ hàng của bạn không có sản phẩm nào
     subtotal: Tổng
     total: Tổng cộng
+
+orderPage:
+  title: Thanh toán
+  subtitle:
+    address: Địa chỉ chi tiết
+    contact: Liên hệ
+    additionalInfo: Thông tin thêm
+    yourOrder: Đơn đặt
+    shipment: Vận chuyển
+  thead:
+    product: Sản phẩm
+    amount: Số tiền
+    quantity: Số lượng
+    subtotal: Tạm tính
+    shippingFee: Phí vận chuyển
+    total: Tổng tiền
+  btnLabel:
+    placeOrder: Đặt hàng
+
+checkoutPage:
+  success: Thanh toán thành công!
+
+addressPage:
+  deleteModel:
+    title: Xoá địa chỉ
+    content: Bạn có chắc chắn muốn xoá địa chỉ này không?
+
+receivedOrderPage:
+  label:
+    orderNumber: Số đơn hàng
+    estimateShippingDate: Ngày giao hàng dự kiến
+    paymentMethod: Phương thức thanh toán
+    total: Tổng cộng
+    totalQuantity: Tổng số lượng
+    product: Sản phẩm
+    shippingFee: Phí vận chuyển
+  subtitle:
+    orderDetails: Chi tiết đơn hàng
+    billingAddress: Địa chỉ thanh toán
+  message:
+    thank: Cảm ơn bạn. Đơn hàng của bạn đã được nhận.

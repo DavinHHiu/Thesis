@@ -9,6 +9,7 @@ const CheckoutView = () => import("@/views/CheckoutView.vue");
 const HomeView = () => import("@/views/HomeView.vue");
 const LoginView = () => import("@/views/LoginView.vue");
 const OrderView = () => import("@/views/OrderView.vue");
+const PaymentSuccessView = () => import("@/views/PaymentSuccessView.vue");
 const ProductDetail = () => import("@/views/ProductDetail.vue");
 const ProfileView = () => import("@/views/ProfileView.vue");
 const RegisterView = () => import("@/views/RegisterView.vue");
@@ -55,10 +56,12 @@ const router = createRouter({
           children: [
             {
               path: "order-form",
+              name: "checkout-form",
               component: CheckoutFormView,
             },
             {
-              path: "order-received",
+              path: "order-received/:orderId",
+              name: "checkout-received",
               component: CheckoutOrderView,
             },
           ],
@@ -90,6 +93,10 @@ const router = createRouter({
       meta: {
         requiresAuth: false,
       },
+    },
+    {
+      path: "/payment-success",
+      component: PaymentSuccessView,
     },
   ],
 });

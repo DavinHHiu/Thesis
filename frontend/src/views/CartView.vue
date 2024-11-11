@@ -25,7 +25,10 @@
             <th>
               <input
                 type="checkbox"
-                :checked="chosenItems.length === cartItems.length"
+                :checked="
+                  checkoutItems.length > 0 &&
+                  checkoutItems.length === cartItems.length
+                "
                 @change="changeAllItem"
               />
             </th>
@@ -79,7 +82,7 @@
                 type="checkbox"
                 @change="changeItem($event, index)"
                 :checked="
-                  chosenItems.findIndex((i) => i.id === cartItem.id) !== -1
+                  checkoutItems.findIndex((i) => i.id === cartItem.id) !== -1
                 "
               />
             </td>
@@ -112,6 +115,7 @@
             class="rounded-none w-full py-[20px] mb-[17px]"
             intent="primary"
             v-html="$t('cartPage.btnLabel.checkout')"
+            @click="navigateToCheckout"
           />
         </div>
       </div>
@@ -142,16 +146,13 @@ export default defineComponent({
     PageTitle,
     PageBody,
   },
-  data() {
-    return {
-      chosenItems: [] as CartItem[],
-    };
-  },
   methods: {
     ...mapActions(useCartStore, [
       "retrieveCart",
       "listCartItems",
       "updateCartItemQuantity",
+      "validateCheckoutItems",
+      "setCheckoutItems",
     ]),
     async increaseQuantity(cartItemId: number, maxQuantity: number) {
       let foundItem = undefined;
@@ -192,35 +193,45 @@ export default defineComponent({
     changeItem(event: Event, index: number) {
       const target = event.target as HTMLInputElement;
       const item = this.cartItems[index];
+      let items = this.checkoutItems;
       if (target.checked) {
-        if (!this.chosenItems.find((i) => i.id === item.id)) {
-          this.chosenItems.push(item);
+        if (!items.find((i) => i.id === item.id)) {
+          items.push(item);
         }
       } else {
-        this.chosenItems = this.chosenItems.filter((i) => i.id !== item.id);
+        items = items.filter((i) => i.id !== item.id);
       }
-      console.log(this.chosenItems);
+      this.setCheckoutItems(items);
     },
     changeAllItem(event: Event) {
       const target = event.target as HTMLInputElement;
       if (target.checked) {
-        this.chosenItems = [...this.cartItems];
+        this.setCheckoutItems(this.cartItems);
       } else {
-        this.chosenItems = [];
+        this.setCheckoutItems([]);
       }
-      console.log(this.chosenItems);
+    },
+    async navigateToCheckout() {
+      if (this.checkoutItems.length === 0) {
+        alert("Please select an item to checkout");
+        return;
+      }
+      const response = await this.validateCheckoutItems();
+      if (response.status === 200) {
+        this.$router.push({ name: "checkout-form" });
+      }
     },
   },
   computed: {
-    ...mapState(useCartStore, ["cartItems", "totalQuantity"]),
+    ...mapState(useCartStore, ["cartItems", "totalQuantity", "checkoutItems"]),
     totalQuantityCheckout() {
-      return this.chosenItems.reduce(
+      return this.checkoutItems.reduce(
         (acc, curItem) => acc + curItem.quantity,
         0
       );
     },
     totalAmountCheckout() {
-      return this.chosenItems.reduce(
+      return this.checkoutItems.reduce(
         (acc, curItem) => acc + curItem.subtotal,
         0
       );

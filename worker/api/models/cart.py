@@ -7,7 +7,7 @@ from api.models.mixins import CreateAndUpdateModelMixin
 
 
 class Cart(models.Model, CreateAndUpdateModelMixin):
-    id = models.UUIDField(_("cart id"), primary_key=True, default=uuid.uuid4())
+    id = models.UUIDField(_("cart id"), primary_key=True, default=uuid.uuid4)
     user = models.ForeignKey(to="api.User", on_delete=models.CASCADE)
     total_quantity = models.IntegerField(_("total quantity"), default=0)
     total_amount = models.FloatField(_("total amount"), default=0)
