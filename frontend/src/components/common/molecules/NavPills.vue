@@ -5,19 +5,20 @@
         :title="item.title"
         :quantity="item.quantity"
         :active="index === current"
-        @click="handleTab(index)"
+        @click="changeTab(index)"
       />
     </template>
   </nav>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import NavPillItem from './NavPillItem.vue';
-import { NavPillItem as iNavPill } from '../../../types/common';
+import NavPillItem from "@/components/common/molecules/NavPillItem.vue";
+import { NavPillItem as iNavPill } from "@/types/common";
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'NavPills',
+  name: "NavPills",
+  emits: ["update:changeStatus"],
   props: {
     items: {
       type: Array as () => iNavPill[],
@@ -33,8 +34,9 @@ export default defineComponent({
     };
   },
   methods: {
-    handleTab(index: number) {
+    changeTab(index: number) {
       this.current = index;
+      this.$emit("update:changeStatus", this.items[index]);
     },
   },
 });

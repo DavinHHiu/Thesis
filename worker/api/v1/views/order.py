@@ -49,6 +49,13 @@ class OrderDetailViewSet(viewsets.ModelViewSet):
     serializer_class = OrderDetailSerializer
     permission_classes = [AllowAny]
 
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        order_status = self.request.query_params.get("status")
+        if order_status:
+            queryset = queryset.filter(status=order_status)
+        return queryset
+
 
 class OrderItemViewSet(viewsets.ModelViewSet):
     """

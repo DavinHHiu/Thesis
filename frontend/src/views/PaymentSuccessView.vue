@@ -2,7 +2,7 @@
   <div class="wrapper" :class="{ 'fade-out': isFading }">
     <div class="content-wrapper">
       <icon-check class="icon-check" height="15rem" width="15rem" />
-      <span class="notify-text" v-t="'checkoutPage.success'" />
+      <span class="notify-text" v-t="'checkoutPage.message.success'" />
     </div>
   </div>
 </template>

@@ -1,17 +1,17 @@
 <template>
-  <div :class="['nav-item', { active: active }]" tabindex="none">
-    <span class="nav-title">{{ title }}</span>
+  <div :class="['nav-item', { active }]" tabindex="none">
+    <span class="nav-title" v-text="title" />
     <div class="nav-qty-cont">
-      <span class="nav-qty">{{ quantity }}</span>
+      <span class="nav-qty" v-text="quantity" />
     </div>
   </div>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'NavPillItem',
+  name: "NavPillItem",
   props: {
     title: {
       type: String,
@@ -30,7 +30,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .nav-item {
   display: flex;
@@ -44,24 +44,32 @@ export default defineComponent({
   user-select: none;
   gap: 0.5rem;
   transition: all 0.2s ease-out;
+  cursor: pointer;
 
   span {
     font-weight: $--font-bold;
+  }
+
+  .nav-title {
+    text-transform: capitalize;
   }
 
   .nav-qty-cont {
     padding: 0 0.7rem;
     border-radius: 2rem;
     border: 1px solid $--gray-color-900;
+    text-align: center;
+    min-width: 2.5rem;
   }
-}
-.active {
-  color: $--second-color;
-  background-color: $--primary-color;
 
-  .nav-qty-cont {
+  &.active {
+    color: $--second-color;
     background-color: $--primary-color;
-    border: none;
+
+    .nav-qty-cont {
+      background-color: $--primary-color;
+      border: none;
+    }
   }
 }
 </style>

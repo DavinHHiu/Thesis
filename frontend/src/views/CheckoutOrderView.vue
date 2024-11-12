@@ -102,7 +102,7 @@ export default defineComponent({
     },
   },
   methods: {
-    ...mapActions(useOrderStore, ["retrieveOrder", "retrieveOrderItems"]),
+    ...mapActions(useOrderStore, ["retrieveOrder", "listOrderItems"]),
     formattedAmount(amount: number) {
       const { locale } = useI18n();
       return formatCurrency(locale.value, amount);
@@ -112,7 +112,7 @@ export default defineComponent({
   async mounted() {
     const orderId = this.$route.params.orderId;
     await this.retrieveOrder(orderId as string);
-    await this.retrieveOrderItems(orderId as string);
+    await this.listOrderItems(orderId as string);
   },
 });
 </script>

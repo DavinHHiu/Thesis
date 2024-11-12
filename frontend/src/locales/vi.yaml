@@ -93,7 +93,7 @@ cartPage:
     subtotal: Tổng
     total: Tổng cộng
 
-orderPage:
+checkoutPage:
   title: Thanh toán
   subtitle:
     address: Địa chỉ chi tiết
@@ -110,9 +110,8 @@ orderPage:
     total: Tổng tiền
   btnLabel:
     placeOrder: Đặt hàng
-
-checkoutPage:
-  success: Thanh toán thành công!
+  message:
+    success: Thanh toán thành công!
 
 addressPage:
   deleteModel:
@@ -133,3 +132,17 @@ receivedOrderPage:
     billingAddress: Địa chỉ thanh toán
   message:
     thank: Cảm ơn bạn. Đơn hàng của bạn đã được nhận.
+
+orderPage:
+  title: Đơn hàng của bạn
+  thead:
+    orderNumber: Số đơn hàng
+    shipmentMethod: Phương thức vận chuyển
+    shippingDate: Ngày giao hàng
+    paymentMethod: Phương thức thanh toán
+    total: Tổng cộng
+    totalQuantity: Tổng số lượng
+    shippingFee: Phí vận chuyển
+    status: Trạng thái
+  label:
+    detail: Chi tiết
