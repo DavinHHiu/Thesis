@@ -8,7 +8,7 @@ router = SimpleRouter()
 router.register(r"products", views.ProductDisplayViewset, basename="product")
 router.register(r"carts", views.CartViewSet, basename="cart")
 router.register(r"cart-items", views.CartItemViewSet, basename="cart-item")
-router.register(r"order", views.OrderDetailViewSet, basename="order")
+router.register(r"orders", views.OrderDetailViewSet, basename="order")
 router.register(r"order-items", views.OrderItemViewSet, basename="order-item")
 router.register(r"addresses", views.AddressViewSet, basename="address")
 router.register(

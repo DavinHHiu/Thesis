@@ -8,6 +8,7 @@ export const useOrderStore = defineStore("order", {
   state: () => {
     return {
       order: {} as Order,
+      orders: [] as Order[],
       orderItems: [] as OrderItem[],
     };
   },
@@ -38,7 +39,7 @@ export const useOrderStore = defineStore("order", {
     },
     retrieveOrder(orderId: string) {
       return axios
-        .get(`${consts.BASE_URL}/order/${orderId}/`)
+        .get(`${consts.BASE_URL}/orders/${orderId}/`)
         .then((response) => {
           if (response.status === 200 && response.data) {
             this.order = response.data;
@@ -46,11 +47,25 @@ export const useOrderStore = defineStore("order", {
           }
         });
     },
-    retrieveOrderItems(orderId: string) {
+    listOrderItems(orderId: string) {
       return axios
         .get(`${consts.BASE_URL}/order-items/by-order/${orderId}/`)
         .then((response) => {
           this.orderItems = response.data;
+        });
+    },
+    listOrders(status?: string, page?: number) {
+      return axios
+        .get(`${consts.BASE_URL}/orders/`, {
+          params: {
+            status,
+            page,
+          },
+        })
+        .then((response) => {
+          if (response.status === 200 && response.data) {
+            this.orders = response.data.results;
+          }
         });
     },
   },

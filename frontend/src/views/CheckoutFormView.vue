@@ -3,7 +3,7 @@
   <div class="checkout-cont">
     <div class="bill-cont">
       <div class="address-form-cont">
-        <h2 class="sub-title" v-t="'orderPage.subtitle.address'" />
+        <h2 class="sub-title" v-t="'checkoutPage.subtitle.address'" />
         <div v-if="addresses.length > 0">
           <address-select
             :open-add-btn="!openAddressForm"
@@ -69,7 +69,7 @@
         v-if="addresses.length === 0 || openAddressForm"
         class="contact-form-cont"
       >
-        <h2 class="sub-title" v-t="'orderPage.subtitle.contact'" />
+        <h2 class="sub-title" v-t="'checkoutPage.subtitle.contact'" />
         <div class="bill-form">
           <div>
             <text-field
@@ -119,13 +119,13 @@
         </div>
       </div>
       <div class="shipments-cont">
-        <h2 class="sub-title" v-t="'orderPage.subtitle.shipment'" />
+        <h2 class="sub-title" v-t="'checkoutPage.subtitle.shipment'" />
         <div class="bill-form">
           <shipment-select @update:shipment-method="changeShipmentMethod" />
         </div>
       </div>
       <div class="note-cont">
-        <h2 class="sub-title" v-t="'orderPage.subtitle.additionalInfo'" />
+        <h2 class="sub-title" v-t="'checkoutPage.subtitle.additionalInfo'" />
         <div class="bill-form">
           <div>
             <text-field
@@ -139,12 +139,12 @@
     </div>
     <div class="order-cont">
       <card intent="form" class="form">
-        <div class="order-title" v-t="'orderPage.subtitle.yourOrder'" />
+        <div class="order-title" v-t="'checkoutPage.subtitle.yourOrder'" />
         <table class="total-cont">
           <thead>
             <tr>
-              <th class="product-name" v-t="'orderPage.thead.product'" />
-              <th class="product-total" v-t="'orderPage.thead.amount'" />
+              <th class="product-name" v-t="'checkoutPage.thead.product'" />
+              <th class="product-total" v-t="'checkoutPage.thead.amount'" />
             </tr>
           </thead>
           <tbody>
@@ -158,22 +158,22 @@
           </tbody>
           <tfoot>
             <tr>
-              <th class="product-name" v-t="'orderPage.thead.quantity'" />
+              <th class="product-name" v-t="'checkoutPage.thead.quantity'" />
               <td class="product-total" v-text="totalQuantity" />
             </tr>
             <tr>
-              <th class="product-name" v-t="'orderPage.thead.subtotal'" />
+              <th class="product-name" v-t="'checkoutPage.thead.subtotal'" />
               <td class="product-total" v-text="`$${totalAmount}.00`" />
             </tr>
             <tr>
-              <th class="product-name" v-t="'orderPage.thead.shippingFee'" />
+              <th class="product-name" v-t="'checkoutPage.thead.shippingFee'" />
               <td
                 class="product-total"
                 v-text="`$${shipmentMethod.shipping_fee}.00`"
               />
             </tr>
             <tr>
-              <th class="product-name" v-t="'orderPage.thead.total'" />
+              <th class="product-name" v-t="'checkoutPage.thead.total'" />
               <td
                 class="product-total"
                 v-text="`$${totalAmount + shipmentMethod.shipping_fee}.00`"
@@ -202,7 +202,7 @@
         <custom-button
           intent="primary"
           class="btn w-full py-[16px] px-[28px]"
-          v-html="$t('orderPage.btnLabel.placeOrder')"
+          v-html="$t('checkoutPage.btnLabel.placeOrder')"
           @click="handlePlaceOrder"
         />
       </card>

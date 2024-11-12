@@ -1,37 +1,49 @@
 <template>
-  <page-title title="Orders" />
+  <page-title title="orderPage.title" />
   <page-body>
-    <separator-line class="mb-[32px]" />
-    <nav-pills :items="items" />
+    <separator-line class="mb-[3.2rem]" />
+    <nav-pills :items="items" @update:change-status="changeStatus" />
     <table class="list-orders-wp">
       <thead>
         <tr>
-          <th>Order ID</th>
-          <th>Image</th>
-          <th>Shipping method</th>
-          <th>Shipping date</th>
-          <th>Status</th>
-          <th>Payment method</th>
-          <th>Total amount</th>
-          <th>List products</th>
+          <th v-t="'orderPage.thead.orderNumber'" />
+          <th v-t="'orderPage.thead.shippingDate'" />
+          <th v-t="'orderPage.thead.paymentMethod'" />
+          <th v-t="'orderPage.thead.totalQuantity'" />
+          <th v-t="'orderPage.thead.total'" />
+          <th v-t="'orderPage.thead.status'" />
+          <th />
         </tr>
       </thead>
       <tbody>
-        <template v-for="(item, index) in 3" :key="index">
+        <template v-for="order in orders" :key="order?.id">
           <tr class="item-cont">
-            <td class="item-id">OR6789</td>
-            <td class="item-image">
-              <img
-                class="h-full w-full"
-                src="https://websitedemos.net/brandstore-02/wp-content/uploads/sites/150/2021/03/sports-shoe3-300x300.jpg"
+            <td class="item-id" v-text="order?.id" />
+            <td class="item-shipment">
+              <span
+                class="item-shipment-method"
+                v-text="order?.shipment?.shipment_method?.name"
+              />
+              <span
+                class="item-shipment-date"
+                v-text="formatDate(order?.shipment?.shipping_date)"
               />
             </td>
-            <td class="item-shipping-method">Express</td>
-            <td class="item-delivery">Tue 01/01/2025</td>
-            <td class="item-status">Shipping</td>
-            <td class="item-payment-method">COD</td>
-            <td class="item-total-amount">$150.00</td>
-            <td class="item-list-product">Show</td>
+            <td
+              class="item-payment"
+              v-text="order?.payment?.payment_method?.name"
+            />
+            <td class="item-quantity" v-text="order?.total_quantity" />
+            <td
+              class="item-total-amount"
+              v-text="formatAmount(order?.payment?.total_amount)"
+            />
+            <td><status-pill :status="order?.status as StatusType" /></td>
+            <td
+              class="item-detail"
+              v-t="'orderPage.label.detail'"
+              @click="goToDetail(order?.id as string)"
+            />
           </tr>
         </template>
       </tbody>
@@ -41,14 +53,21 @@
 </template>
 
 <script lang="ts">
+import StatusPill from "@/components/common/atomic/StatusPill.vue";
+import NavPills from "@/components/common/molecules/NavPills.vue";
+import PagingNumber from "@/components/common/molecules/PagingNumber.vue";
+import SeparatorLine from "@/components/common/molecules/SeparatorLine.vue";
+import PageBody from "@/components/common/templates/PageBody.vue";
+import PageTitle from "@/components/common/templates/PageTitle.vue";
+import consts, { StatusType } from "@/consts/consts";
+import { useOrderStore } from "@/stores/order";
+import { NavPillItem as iNavPill } from "@/types/common";
+import { formatCurrency } from "@/utils/currency";
+import { formatDate } from "@/utils/date";
+import { returnPaginationRange } from "@/utils/utils";
+import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
-
-import NavPills from "../components/common/molecules/NavPills.vue";
-import PagingNumber from "../components/common/molecules/PagingNumber.vue";
-import SeparatorLine from "../components/common/molecules/SeparatorLine.vue";
-import PageBody from "../components/common/templates/PageBody.vue";
-import PageTitle from "../components/common/templates/PageTitle.vue";
-import { returnPaginationRange } from "../utils/utils";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "OrderView",
@@ -56,21 +75,46 @@ export default defineComponent({
     PageTitle,
     PageBody,
     SeparatorLine,
+    StatusPill,
     NavPills,
     PagingNumber,
   },
   data() {
     return {
       items: [
-        { title: "All", quantity: 3 },
-        { title: "Processing", quantity: 2 },
-        { title: "Shipping", quantity: 1 },
-      ],
+        { title: consts.ALL_STATUS, quantity: 3 },
+        { title: consts.ORDER_STATUS_PENDING, quantity: 2 },
+        { title: consts.ORDER_STATUS_COMFIRMED, quantity: 1 },
+      ] as iNavPill[],
       array: [],
     };
   },
-  mounted() {
-    this.array = returnPaginationRange(15, 1, 5, 1);
+  computed: {
+    ...mapState(useOrderStore, ["orders"]),
+  },
+  methods: {
+    ...mapActions(useOrderStore, ["listOrders"]),
+    changeStatus(item: iNavPill) {
+      this.listOrders(
+        item.title !== consts.ALL_STATUS ? item.title : undefined
+      );
+    },
+    formatAmount(amount: number) {
+      const { locale } = useI18n();
+      return formatCurrency(locale.value, amount);
+    },
+    goToDetail(orderId: string) {
+      this.$router.push({
+        name: "checkout-received",
+        params: {
+          orderId,
+        },
+      });
+    },
+    formatDate,
+  },
+  async mounted() {
+    await this.listOrders();
   },
 });
 </script>
@@ -89,22 +133,39 @@ export default defineComponent({
   th,
   td {
     padding: 1.2rem 1.6rem;
-    font-weight: $--font-semibold;
   }
   th {
     text-align: left;
     font-weight: $--font-bold;
     background-color: $--second-color;
   }
-  .item-image {
-    width: 11rem;
-    height: 10rem;
+  .item-id {
+    width: 40rem;
   }
   .item-total-amount {
-    font-weight: $--font-base;
+    font-weight: $--font-bold;
+  }
+  .item-shipment {
+    display: flex;
+    flex-direction: column;
   }
   .item-list-product {
     text-align: center;
+  }
+  .item-shipment-method {
+    color: $--title-color-text;
+  }
+  .item-shipment-date {
+    font-size: $--font-2xs;
+    font-weight: $--font-bold;
+  }
+  .item-detail {
+    color: $--color-blue;
+    font-size: $--font-xs;
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
   }
 }
 </style>

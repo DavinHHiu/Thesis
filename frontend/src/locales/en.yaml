@@ -93,7 +93,7 @@ cartPage:
     totalQuantity: Total quantity
     totalAmount: Total amount
 
-orderPage:
+checkoutPage:
   title: Checkout
   subtitle:
     address: Address details
@@ -110,9 +110,8 @@ orderPage:
     total: Total
   btnLabel:
     placeOrder: Place Order
-
-checkoutPage:
-  success: Checkout succesfully!
+  message:
+    success: Checkout succesfully!
 
 addressPage:
   deleteModel:
@@ -133,3 +132,17 @@ receivedOrderPage:
     billingAddress: Billing Address
   message:
     thank: Thank you. Your order has been received.
+
+orderPage:
+  title: Orders
+  thead:
+    orderNumber: Order number
+    shipmentMethod: Shipment method
+    shippingDate: Shipping date
+    paymentMethod: Payment method
+    total: Total
+    totalQuantity: Total quantity
+    shippingFee: Shipping fee
+    status: Status
+  label:
+    detail: Detail

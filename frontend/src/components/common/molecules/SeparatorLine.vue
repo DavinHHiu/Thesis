@@ -8,20 +8,20 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'SeparatorLine',
+  name: "SeparatorLine",
   props: {
     color: {
       type: String,
-      default: '#333',
-      required: true,
+      default: "#333",
+      required: false,
     },
     thickness: {
       type: Number,
       default: 3,
-      required: true,
+      required: false,
     },
   },
 });
