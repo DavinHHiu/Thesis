@@ -17,6 +17,7 @@ router.register(
 router.register(
     r"payment-methods", views.PaymentMethodViewSet, basename="payment-method"
 )
+router.register(r"users", views.UserViewSet, basename="users")
 
 urlpatterns = [
     path("register/", views.RegisterApiView.as_view(), name="register"),
@@ -29,6 +30,11 @@ urlpatterns = [
     path("create-payment/", views.CreatePaymentView.as_view(), name="create-payment"),
     path(
         "execute-payment/", views.ExecutePaymentView.as_view(), name="execute-payment"
+    ),
+    path(
+        "change-password/",
+        views.ChangePasswordApiView.as_view(),
+        name="change-password",
     ),
 ]
 

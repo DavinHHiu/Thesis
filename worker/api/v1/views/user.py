@@ -1,9 +1,12 @@
 from datetime import datetime
 
+from django.contrib.auth.hashers import make_password
 from django.db import transaction
+from django.utils.translation import gettext_lazy as _
 from rest_framework import status, viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny
+from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.views import APIView
 from rest_framework_jwt.settings import api_settings
@@ -14,6 +17,7 @@ from api.v1.serializers import (
     AddressSerializer,
     BaseJSONWebTokenSerializer,
     BaseRefreshAuthTokenSerializer,
+    PasswordResetSerializer,
     UserSerializer,
 )
 
@@ -32,6 +36,13 @@ class UserViewSet(viewsets.ModelViewSet):
         serializer.is_valid(raise_exception=True)
         serializer.save()
         return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+    def update(self, request, pk=None, *args, **kwargs):
+        user = self.get_object()
+        serializer = self.get_serializer(user, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_200_OK)
 
 
 class AddressViewSet(viewsets.ModelViewSet):
@@ -173,3 +184,34 @@ class EURefreshJSONWebTokenView(BaseRefreshJSONWebTokenView):
     permission_classes = [AllowAny]
     authentication_class = JSONWebTokenAuthentication
     serializer_class = BaseRefreshAuthTokenSerializer
+
+
+class ChangePasswordApiView(APIView):
+    """API endpoint for changing user passwords"""
+
+    permission_classes = [AllowAny]
+
+    def post(self, request: Request) -> Response:
+        """Change password"""
+        serializer = PasswordResetSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        user = request.user
+        if not user.check_password(serializer.validated_data["old_password"]):
+            msg = _("Invalid old password")
+            return Response(msg, status=status.HTTP_400_BAD_REQUEST)
+        if (
+            serializer.validated_data["new_password"]
+            != serializer.validated_data["retype_password"]
+        ):
+            msg = _("Passwords do not match")
+            return Response(msg, status=status.HTTP_400_BAD_REQUEST)
+
+        new_password = serializer.validated_data["new_password"]
+        hashed_password = make_password(new_password)
+        user.password = hashed_password
+        user.save()
+
+        serializer = UserSerializer(user)
+
+        return Response(serializer.data, status=status.HTTP_200_OK)

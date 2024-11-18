@@ -127,12 +127,12 @@ class BaseJSONWebTokenAuthentication(JSONWebTokenAuthentication):
         Returns a two-tuple of `User` and token if a valid signature has been
         supplied using JWT-based authentication.  Otherwise returns `None`.
         """
-        jwt_value = self.get_jwt_value(request)
+        jwt_value = self.get_token_from_request(request)
         if jwt_value is None:
             return None
 
         try:
-            payload = self.jwt_decode_handler(jwt_value)
+            payload = jwt_decode_handler(jwt_value)
         except jwt.ExpiredSignature:
             msg = _("Signature has expired.")
             raise exceptions.AuthenticationFailed(msg)

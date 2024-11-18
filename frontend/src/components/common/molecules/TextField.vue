@@ -1,5 +1,8 @@
 <template>
-  <div class="input-wp" :class="{ 'has-input': value != '' }">
+  <div
+    class="input-wp flex items-center"
+    :class="{ 'has-input': value && value != '' }"
+  >
     <custom-label v-if="label" v-t="label" />
     <custom-input :value="value" @input="handleInput" />
   </div>
@@ -25,6 +28,7 @@ export default defineComponent({
     },
     value: {
       type: [String, Number],
+      required: true,
       default: "",
     },
   },

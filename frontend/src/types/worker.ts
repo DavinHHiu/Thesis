@@ -2,11 +2,18 @@ interface User {
   id?: string;
   avatar?: File | string;
   email: string;
+  username?: string;
   first_name?: string;
   last_name?: string;
   password?: string;
-  birth_of_date?: Date;
+  dob?: Date;
   tel?: string;
+}
+
+interface Password {
+  old_password: string;
+  new_password: string;
+  retype_password: string;
 }
 
 interface Address {
@@ -208,6 +215,7 @@ export {
   Order,
   OrderItem,
   User,
+  Password,
   PaymentMethod,
   Payment,
   ShipmentMethod,

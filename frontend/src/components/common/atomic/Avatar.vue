@@ -18,8 +18,8 @@ export default defineComponent({
 
 <style lang="scss" scoped>
 .avatar {
-  width: 3.2rem;
-  height: auto;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
 }
 </style>

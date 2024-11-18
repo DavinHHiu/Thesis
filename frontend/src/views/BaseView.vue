@@ -4,7 +4,7 @@
     <div class="body">
       <router-view />
     </div>
-    <custom-footer />
+    <custom-footer v-if="hasFooter" />
     <cart-folder
       :class="{ active: openCart }"
       @close:cart-folder="toogleCartFolder"
@@ -38,7 +38,12 @@ export default defineComponent({
   },
   computed: {
     headerIntent() {
-      return this.$router.currentRoute._value.meta.intent;
+      return this.$route.meta?.intent as string;
+    },
+    hasFooter() {
+      return this.$route.meta?.hasFooter === undefined
+        ? true
+        : this.$route.meta?.hasFooter;
     },
   },
 });

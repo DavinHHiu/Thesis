@@ -20,6 +20,7 @@ from .user import (
     AddressViewSet,
     BaseObtainJSONWebTokenView,
     BORefreshJSONWebTokenView,
+    ChangePasswordApiView,
     EURefreshJSONWebTokenView,
     RegisterApiView,
     UserViewSet,
