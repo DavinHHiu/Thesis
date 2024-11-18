@@ -1,6 +1,6 @@
 <template>
   <div class="input-wp" :class="{ 'has-input': value != '' }">
-    <custom-label v-if="label" v-text="label" />
+    <custom-label v-if="label" v-t="label" />
     <custom-input
       class="input-password"
       :type="type"
@@ -10,17 +10,15 @@
     <span
       v-if="!visiable"
       class="icon material-symbols-outlined"
+      v-text="'visibility'"
       @click="toogleVisibility"
-    >
-      visibility
-    </span>
+    />
     <span
       v-else
       class="icon material-symbols-outlined"
+      v-text="'visibility_off'"
       @click="toogleVisibility"
-    >
-      visibility_off
-    </span>
+    />
   </div>
 </template>
 

@@ -36,6 +36,14 @@ interface TabItem {
   path: string;
 }
 
+interface Toast {
+  id?: number;
+  message: string;
+  theme: string;
+  icon?: string;
+  autohide?: boolean;
+}
+
 export {
   AuthToken,
   DropdownItem,
@@ -44,4 +52,5 @@ export {
   RegisterItem,
   SidebarItem,
   TabItem,
+  Toast,
 };

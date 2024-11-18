@@ -7,14 +7,14 @@
         <div class="flex flex-col gap-[4rem]">
           <text-field
             class="h-[5rem]"
-            :label="'inputLabel.user.email'"
-            :value="loginItem.email"
+            label="inputLabel.user.email"
+            :value="loginItem?.email"
             @update:model-value="(newValue) => (loginItem.email = newValue)"
           ></text-field>
           <password-field
             class="h-[5rem]"
-            :label="'inputLabel.user.password'"
-            :value="loginItem.password"
+            label="inputLabel.user.password"
+            :value="loginItem?.password"
             @update:model-value="(newValue) => (loginItem.password = newValue)"
           ></password-field>
         </div>
@@ -38,17 +38,16 @@
   </div>
 </template>
 <script lang="ts">
+import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import AppLogo from "@/components/common/molecules/AppLogo.vue";
+import Card from "@/components/common/molecules/Card.vue";
+import DividerBreak from "@/components/common/molecules/DividerBreak.vue";
 import PasswordField from "@/components/common/molecules/PasswordField.vue";
+import TextField from "@/components/common/molecules/TextField.vue";
 import { useSessionStore } from "@/stores/session";
 import { LoginItem } from "@/types/frontend";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
-
-import CustomButton from "../components/common/atomic/CustomButton.vue";
-import AppLogo from "../components/common/molecules/AppLogo.vue";
-import Card from "../components/common/molecules/Card.vue";
-import DividerBreak from "../components/common/molecules/DividerBreak.vue";
-import TextField from "../components/common/molecules/TextField.vue";
 
 export default defineComponent({
   name: "LoginView",
@@ -65,7 +64,6 @@ export default defineComponent({
       loginItem: {} as LoginItem,
     };
   },
-
   methods: {
     ...mapActions(useSessionStore, ["login"]),
     async handleLogin() {

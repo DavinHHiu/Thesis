@@ -12,6 +12,10 @@ const OrderView = () => import("@/views/OrderView.vue");
 const PaymentSuccessView = () => import("@/views/PaymentSuccessView.vue");
 const ProductDetail = () => import("@/views/ProductDetail.vue");
 const ProfileView = () => import("@/views/ProfileView.vue");
+const ProfileAddressView = () => import("@/views/ProfileAddressView.vue");
+const ProfileDetailView = () => import("@/views/ProfileDetailView.vue");
+const ProfileChangePasswordView = () =>
+  import("@/views/ProfileChangePasswordView.vue");
 const RegisterView = () => import("@/views/RegisterView.vue");
 const SearchView = () => import("@/views/SearchView.vue");
 
@@ -24,6 +28,7 @@ const router = createRouter({
       children: [
         {
           path: "",
+          name: "home",
           component: HomeView,
           meta: {
             intent: "second",
@@ -68,19 +73,39 @@ const router = createRouter({
         },
         {
           path: "orders",
+          name: "orderPage",
           component: OrderView,
         },
         {
           path: "profile",
           component: ProfileView,
           meta: {
+            hasFooter: false,
             requiresAuth: true,
           },
+          children: [
+            {
+              path: "",
+              name: "profile.details",
+              component: ProfileDetailView,
+            },
+            {
+              path: "addresses",
+              name: "profile.addresses",
+              component: ProfileAddressView,
+            },
+            {
+              path: "change-password",
+              name: "profile.change-password",
+              component: ProfileChangePasswordView,
+            },
+          ],
         },
       ],
     },
     {
       path: "/login",
+      name: "login",
       component: LoginView,
       meta: {
         requiresAuth: false,

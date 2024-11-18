@@ -22,10 +22,11 @@ from api.v1.serializers import EmailValidationSerializer
 class UserSerializer(serializers.ModelSerializer):
     id = serializers.UUIDField(required=False)
     avatar = serializers.ImageField(required=False)
+    username = serializers.CharField(required=False)
     first_name = serializers.CharField(required=False, allow_null=True)
     last_name = serializers.CharField(required=False, allow_null=True)
     email = serializers.EmailField()
-    password = serializers.CharField(required=False)
+    password = serializers.CharField(required=False, read_only=True)
     birth_of_date = serializers.DateField(required=False, allow_null=True)
     tel = serializers.CharField(max_length=10, required=False, allow_null=True)
 
@@ -34,6 +35,7 @@ class UserSerializer(serializers.ModelSerializer):
         fields = [
             "id",
             "avatar",
+            "username",
             "first_name",
             "last_name",
             "email",
@@ -83,6 +85,12 @@ class UserSerializer(serializers.ModelSerializer):
         instance.save()
 
         return instance
+
+
+class PasswordResetSerializer(serializers.Serializer):
+    old_password = serializers.CharField()
+    new_password = serializers.CharField()
+    retype_password = serializers.CharField()
 
 
 class AddressSerializer(serializers.ModelSerializer):

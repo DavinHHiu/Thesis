@@ -16,8 +16,11 @@ inputLabel:
   user:
     firstName: First Name
     lastName: Last Name
+    username: Username
     email: Email
     password: Password
+    oldPassword: Old Password
+    newPassword: New Password
     retypePassword: Re-type Password
     dob: Birth of date
     tel: Tel
@@ -146,3 +149,8 @@ orderPage:
     status: Status
   label:
     detail: Detail
+
+profilePage:
+  subtitle:
+    detail: Profile Details
+    passwordChange: Change password

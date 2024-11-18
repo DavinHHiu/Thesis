@@ -20,6 +20,7 @@ from .user import (
     AddressSerializer,
     BaseJSONWebTokenSerializer,
     BaseRefreshAuthTokenSerializer,
+    PasswordResetSerializer,
     UserSerializer,
 )
 from .wishlist import WithListSerializer

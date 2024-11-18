@@ -1,8 +1,9 @@
 import consts from "@/consts/consts";
 import { LoginItem, RegisterItem } from "@/types/frontend";
-import { User } from "@/types/worker";
+import { Password, User } from "@/types/worker";
 import localStore from "@/utils/localStorage";
 import axios from "axios";
+import _ from "lodash";
 import { defineStore } from "pinia";
 
 import { useCartStore } from "./cart";
@@ -82,6 +83,21 @@ export const useSessionStore = defineStore("session", {
                 `Bearer ${response.data.token}`;
             }
           }
+        });
+    },
+    updateUser(payload: User) {
+      payload = _.omit(payload, ["avatar"]);
+      return axios
+        .put(`${consts.BASE_URL}/users/${payload.id}/`, payload)
+        .then((response) => {
+          return response;
+        });
+    },
+    resetPassword(payload: Password) {
+      return axios
+        .post(`${consts.BASE_URL}/change-password/`, payload)
+        .then((response) => {
+          console.log(response);
         });
     },
   },

@@ -16,8 +16,11 @@ inputLabel:
   user:
     firstName: Tên
     lastName: Họ
+    username: Tên người dùng
     email: Email
     password: Mật khẩu
+    oldPassword: Mật khẩu cũ
+    newPassword: Mật khẩu mới
     retypePassword: Nhập lại mật khẩu
     dob: Ngày sinh
     tel: Số điện thoại
@@ -146,3 +149,8 @@ orderPage:
     status: Trạng thái
   label:
     detail: Chi tiết
+
+profilePage:
+  subtitle:
+    detail: Chi tiết hồ sơ
+    passwordChange: Đổi mật khẩu

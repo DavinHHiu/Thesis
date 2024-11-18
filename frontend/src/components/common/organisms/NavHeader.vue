@@ -14,10 +14,10 @@
         <icon-cart :intent="intent" />
       </div>
       <div v-if="isAuthenticated" class="container flex items-center f-full">
-        <avatar
+        <!-- <avatar
           :src="`http://localhost:8000/${user.avatar}`"
           class="w-[3.2rem]"
-        />
+        /> -->
         <p
           class="dropdown-toggle header-items"
           data-bs-toggle="dropdown"
