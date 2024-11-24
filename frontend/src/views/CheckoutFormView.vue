@@ -98,12 +98,14 @@
               v-if="addresses.length > 0"
               class="btn w-1/2 py-[1.4rem] px-[2.8rem]"
               intent="p-outline"
+              :disabled="loading"
               v-html="$t('buttonLabel.cancel')"
               @click="cancelAdd"
             />
             <custom-button
               class="btn w-1/2 py-[1.4rem] px-[2.8rem]"
               intent="primary"
+              :disabled="loading"
               v-html="$t('buttonLabel.save')"
               @click="addNewAddress"
             />
@@ -153,7 +155,7 @@
                 class="product-name"
                 v-text="`${item?.product?.name} x ${item.quantity}`"
               />
-              <td class="product-total" v-text="`$${item.subtotal}.00`" />
+              <td class="product-total" v-text="formatAmount(item.subtotal)" />
             </tr>
           </tbody>
           <tfoot>
@@ -163,20 +165,20 @@
             </tr>
             <tr>
               <th class="product-name" v-t="'checkoutPage.thead.subtotal'" />
-              <td class="product-total" v-text="`$${totalAmount}.00`" />
+              <td class="product-total" v-text="formatAmount(totalAmount)" />
             </tr>
             <tr>
               <th class="product-name" v-t="'checkoutPage.thead.shippingFee'" />
               <td
                 class="product-total"
-                v-text="`$${shipmentMethod.shipping_fee}.00`"
+                v-text="formatAmount(shipmentMethod.shipping_fee)"
               />
             </tr>
             <tr>
               <th class="product-name" v-t="'checkoutPage.thead.total'" />
               <td
                 class="product-total"
-                v-text="`$${totalAmount + shipmentMethod.shipping_fee}.00`"
+                v-text="formatAmount(totalAmount + shipmentMethod.shipping_fee)"
               />
             </tr>
           </tfoot>
@@ -202,6 +204,7 @@
         <custom-button
           intent="primary"
           class="btn w-full py-[16px] px-[28px]"
+          :disabled="loading"
           v-html="$t('checkoutPage.btnLabel.placeOrder')"
           @click="handlePlaceOrder"
         />
@@ -231,10 +234,13 @@ import { useAddressStore } from "@/stores/address";
 import { useCartStore } from "@/stores/cart";
 import { usePaymentStore } from "@/stores/payment";
 import { useShipmentStore } from "@/stores/shipment";
+import { useToastStore } from "@/stores/toast";
 import { Address, CartItem, isAddressValid, User } from "@/types/worker";
+import { formatCurrency } from "@/utils/currency";
 import localStore from "@/utils/localStorage";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "CheckoutFormView",
@@ -251,6 +257,7 @@ export default defineComponent({
   },
   data() {
     return {
+      loading: false,
       totalQuantity: 0,
       totalAmount: 0,
       paymentMethodCurIdx: 0,
@@ -259,14 +266,12 @@ export default defineComponent({
     };
   },
   computed: {
-    ...mapState(useCartStore, ["checkoutItems"]),
     ...mapState(useAddressStore, ["address", "addresses"]),
+    ...mapState(useCartStore, ["checkoutItems"]),
     ...mapState(usePaymentStore, ["paymentMethods"]),
     ...mapState(useShipmentStore, ["shipmentMethod", "shipmentMethods"]),
   },
   methods: {
-    ...mapActions(useCartStore, ["createPayment"]),
-    ...mapActions(usePaymentStore, ["listPaymentMethods"]),
     ...mapActions(useAddressStore, [
       "createAddress",
       "updateAddress",
@@ -274,8 +279,17 @@ export default defineComponent({
       "destroyAddress",
       "setAddress",
     ]),
+    ...mapActions(useCartStore, ["createPayment"]),
+    ...mapActions(usePaymentStore, ["listPaymentMethods"]),
+    ...mapActions(useToastStore, ["toast"]),
     ...mapActions(useShipmentStore, ["setShipmentMethod"]),
+    formatCurrency,
+    formatAmount(amount: number) {
+      const { locale } = useI18n();
+      return this.formatCurrency(locale.value, amount);
+    },
     async handlePlaceOrder() {
+      this.loading = true;
       const response = await this.createPayment(
         this.totalAmount + this.shipmentMethod.shipping_fee,
         this.totalQuantity,
@@ -307,15 +321,43 @@ export default defineComponent({
       }
       if (isAddressValid(this.address)) {
         if (this.address.id) {
-          const response = await this.updateAddress(this.address);
-          if (response && response.status === 200) {
-            this.openAddressForm = false;
-          }
+          await this.updateAddress(this.address)
+            .then((response) => {
+              if (response && response.status === 200) {
+                this.openAddressForm = false;
+              }
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              this.toast({
+                theme: "success",
+                message: "Update added successfully!",
+              });
+            })
+            .catch((err) => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              this.toast({
+                theme: "danger",
+                message: "Failed to update address!",
+              });
+            });
         } else {
-          const response = await this.createAddress(this.address);
-          if (response && response.status === 201) {
-            this.openAddressForm = false;
-          }
+          await this.createAddress(this.address)
+            .then((response) => {
+              if (response && response.status === 201) {
+                this.openAddressForm = false;
+              }
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              this.toast({
+                theme: "success",
+                message: "Address added successfully!",
+              });
+            })
+            .catch((err) => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              this.toast({
+                theme: "danger",
+                message: "Failed to add address!",
+              });
+            });
         }
       } else {
         alert("Please fill all the required fields");
@@ -337,7 +379,21 @@ export default defineComponent({
       this.openAddressForm = true;
     },
     async deleteAddress() {
-      this.destroyAddress(this.address);
+      this.destroyAddress(this.address)
+        .then((response) => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          this.toast({
+            theme: "success",
+            message: "Address deleted successfully!",
+          });
+        })
+        .catch((err) => {
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          this.toast({
+            theme: "danger",
+            message: "Failed to delete address!",
+          });
+        });
       this.setAddress({} as Address);
       this.openAddressForm = false;
       this.editing = false;

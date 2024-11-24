@@ -10,7 +10,7 @@
       <div class="container">
         <p class="header-items">orders</p>
       </div>
-      <div class="container" @click="$emit('open:cart-folder')">
+      <div class="container" @click="openCartFolder">
         <icon-cart :intent="intent" />
       </div>
       <div v-if="isAuthenticated" class="container flex items-center f-full">
@@ -18,11 +18,7 @@
           :src="`http://localhost:8000/${user.avatar}`"
           class="w-[3.2rem]"
         /> -->
-        <p
-          class="dropdown-toggle header-items"
-          data-bs-toggle="dropdown"
-          @click="handleClick"
-        >
+        <p class="dropdown-toggle header-items" data-bs-toggle="dropdown">
           Hong Hieu
         </p>
         <!-- <ul class="dropdown-menu">
@@ -69,8 +65,10 @@ export default defineComponent({
     ...mapState(useSessionStore, ["isAuthenticated", "user"]),
   },
   methods: {
-    handleClick() {
-      console.log("Dropdown clicked");
+    openCartFolder() {
+      if (this.$route.name !== "cartPage") {
+        this.$emit("open:cart-folder");
+      }
     },
   },
 });

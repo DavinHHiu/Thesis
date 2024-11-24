@@ -8,14 +8,14 @@
       <div class="item-price">
         <span v-text="cartItem?.quantity" />
         <span v-text="' x '" />
-        <span v-text="`$${cartItem?.product_sku?.price}.00`" />
+        <span v-text="formatAmount(cartItem?.product_sku?.price)" />
       </div>
     </div>
     <div class="item-actions flex items-center">
       <span
         class="material-symbols-outlined"
         v-text="'cancel'"
-        @click="removeCartItem(cartItem?.id as number)"
+        @click="handleRemoveCartItem(cartItem.id as number)"
       />
     </div>
   </div>
@@ -23,9 +23,12 @@
 
 <script lang="ts">
 import { useCartStore } from "@/stores/cart";
+import { useToastStore } from "@/stores/toast";
 import { CartItem } from "@/types/worker";
+import { formatCurrency } from "@/utils/currency";
 import { mapActions } from "pinia";
 import { defineComponent, PropType } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "CartFolderItem",
@@ -37,6 +40,27 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(useCartStore, ["removeCartItem"]),
+    ...mapActions(useToastStore, ["toast"]),
+    formatCurrency,
+    handleRemoveCartItem(cartItemId: number) {
+      this.removeCartItem(cartItemId)
+        .then((res) => {
+          this.toast({
+            theme: "success",
+            message: "cartFolder.message.delete.success",
+          });
+        })
+        .catch((err) => {
+          this.toast({
+            theme: "danger",
+            message: "cartFolder.message.delete.fail",
+          });
+        });
+    },
+    formatAmount(amount: number) {
+      const { locale } = useI18n();
+      return this.formatCurrency(locale.value, amount);
+    },
   },
 });
 </script>

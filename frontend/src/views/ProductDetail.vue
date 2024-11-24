@@ -1,5 +1,6 @@
 <template>
   <page-body class="content">
+    <Toast />
     <div class="product">
       <div class="product-image">
         <image-preview :images="currentSku?.images || []" />
@@ -9,38 +10,39 @@
           <a href="">Home</a>&nbsp;/&nbsp;<a href="">Men</a>&nbsp;/&nbsp;DNK
           Yellow Shoes
         </nav>
-        <span class="single-product-category mb-[16px] block"
+        <span class="single-product-category mb-[1.6rem] block"
           ><a href="" rel="tag" v-text="productDetail?.categories?.[0]"
         /></span>
-        <h1 class="product-title mb-[15px]" v-text="productDetail.name" />
+        <h1 class="product-title mb-[1.5rem]" v-text="productDetail.name" />
         <p class="price py-[1.5rem] border-y">
           <!-- <del aria-hidden="true" class="mr-[10px] text-slate-400">$150.00</del> -->
           <span
             class="screen-reader-text font-bold"
-            v-text="`$${currentSku?.price}.00`"
+            v-text="formatAmount(currentSku?.price)"
           />
           <!-- <span class="ast-shipping-text">+ Free Shipping</span> -->
         </p>
-        <div class="my-[16px]">
+        <div class="my-[1.6rem]">
           <product-sku-picker
             :skus="productDetail?.skus"
             :current-sku="currentSku"
             @update:sku="changeSku"
           />
         </div>
-        <div class="action-wrapper flex gap-[20px] mb-[20px]">
+        <div class="action-wrapper flex gap-[2rem] mb-[2rem]">
           <custom-button
             class="btn-add h-[4.5rem]"
             intent="primary"
+            :disabled="loading"
             v-t="'inputLabel.common.addToCart'"
             @click="handleAddToCart"
           />
         </div>
-        <div class="my-[16px]">
+        <div class="my-[1.6rem]">
           <span v-text="productDetail?.summary" />
         </div>
         <div class="product_meta border-t">
-          <span class="posted_in block pt-[10px] mb-[20px]"
+          <span class="posted_in block pt-[1rem] mb-[2rem]"
             >Category: <a href="" v-text="productDetail?.categories?.[0]"
           /></span>
         </div>
@@ -58,11 +60,11 @@
         </li>
       </ul>
       <div class="product-details">
-        <div class="pb-[20px]">
+        <div class="pb-[2rem]">
           <div>
             <h3 class="product-details-title font-bold">Product description</h3>
           </div>
-          <div class="mb-[20px]">
+          <div class="mb-[2rem]">
             <p v-text="productDetail?.description" />
           </div>
         </div>
@@ -76,18 +78,20 @@
 </template>
 
 <script lang="ts">
+import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import TextField from "@/components/common/molecules/TextField.vue";
 import ImagePreview from "@/components/common/organisms/ImagePreview.vue";
 import ProductSkuPicker from "@/components/common/organisms/ProductSkuPicker.vue";
 import RelatedProductList from "@/components/common/organisms/RelatedProductList.vue";
+import PageBody from "@/components/common/templates/PageBody.vue";
 import { useCartStore } from "@/stores/cart";
 import { useProductStore } from "@/stores/product";
+import { useToastStore } from "@/stores/toast";
 import { NewCartItem, ProductSkuDetail } from "@/types/worker";
+import { formatCurrency } from "@/utils/currency";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
-
-import CustomButton from "../components/common/atomic/CustomButton.vue";
-import TextField from "../components/common/molecules/TextField.vue";
-import PageBody from "../components/common/templates/PageBody.vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "ProductDetail",
@@ -101,40 +105,62 @@ export default defineComponent({
   },
   data() {
     return {
+      loading: false,
       currentTabIndex: 0,
       currentSku: {} as ProductSkuDetail,
     };
-  },
-  methods: {
-    ...mapActions(useProductStore, ["retrieveProductDetail"]),
-    ...mapActions(useCartStore, ["retrieveCart", "addToCart"]),
-    handleChangeTab(index: Number) {
-      // this.currentTabIndex = index;
-    },
-    changeSku(sku: ProductSkuDetail) {
-      this.currentSku = sku;
-      console.log(sku);
-    },
-    handleAddToCart() {
-      console.log(this.currentSku);
-      console.log(this.cart);
-      const payload = {
-        cart_id: this.cart.id,
-        product_sku_id: this.currentSku.id,
-        quantity: 1,
-      } as NewCartItem;
-      this.addToCart(payload);
-    },
   },
   computed: {
     ...mapState(useProductStore, ["productDetail"]),
     ...mapState(useCartStore, ["cart"]),
   },
+  methods: {
+    ...mapActions(useProductStore, ["retrieveProductDetail"]),
+    ...mapActions(useCartStore, ["retrieveCart", "addToCart"]),
+    ...mapActions(useToastStore, ["toast"]),
+    formatCurrency,
+    formatAmount(amount: number) {
+      const { locale } = useI18n();
+      return this.formatCurrency(locale.value, amount);
+    },
+    handleChangeTab(index: Number) {
+      // this.currentTabIndex = index;
+    },
+    changeSku(sku: ProductSkuDetail) {
+      this.currentSku = sku;
+    },
+    handleAddToCart() {
+      console.log(this.currentSku);
+      console.log(this.cart);
+      this.loading = true;
+      const payload = {
+        cart_id: this.cart.id,
+        product_sku_id: this.currentSku.id,
+        quantity: 1,
+      } as NewCartItem;
+      this.addToCart(payload)
+        .then(() => {
+          this.loading = false;
+          this.toast({
+            theme: "success",
+            message: "productDetailPage.messages.addToCart.success",
+          });
+        })
+        .catch(() => {
+          this.loading = false;
+          this.toast({
+            theme: "danger",
+            message: "productDetailPage.messages.addToCart.fail",
+          });
+        });
+    },
+  },
   async mounted() {
-    const productId = this.$router.currentRoute.value.params.id;
+    const productId = this.$route.params.id;
     await this.retrieveProductDetail(productId as string);
     this.currentSku = this.productDetail?.skus[0] as ProductSkuDetail;
-    this.retrieveCart();
+    // this.retrieveCart();
+    console.log(this.$route);
   },
 });
 </script>

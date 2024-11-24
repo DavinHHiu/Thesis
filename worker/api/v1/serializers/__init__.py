@@ -21,6 +21,7 @@ from .user import (
     BaseJSONWebTokenSerializer,
     BaseRefreshAuthTokenSerializer,
     PasswordResetSerializer,
+    RegisterSerializer,
     UserSerializer,
 )
 from .wishlist import WithListSerializer

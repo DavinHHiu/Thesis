@@ -1,5 +1,5 @@
 <template>
-  <component :is="as" :class="buttonClass">
+  <component :is="as" :class="buttonClass" :disable="disabled">
     <svg
       v-if="loading"
       class="animate-spin h-5 w-5"
@@ -91,6 +91,9 @@ export default defineComponent({
       if (this.intent) {
         classes.push(intent[this.intent] as string);
       }
+      if (this.disabled) {
+        classes.push("disabled");
+      }
       return classes;
     },
   },
@@ -123,5 +126,11 @@ export default defineComponent({
 .danger {
   color: $--second-color;
   background-color: $--color-danger;
+}
+
+.disabled {
+  opacity: 0.5;
+  pointer-events: none;
+  user-select: none;
 }
 </style>

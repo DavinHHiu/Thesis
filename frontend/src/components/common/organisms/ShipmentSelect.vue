@@ -22,7 +22,7 @@
           </span>
           <span class="method-description" v-text="method.description" />
         </div>
-        <span class="shipment-fee" v-text="`$${method.shipping_fee}.00`" />
+        <span class="shipment-fee" v-text="formatAmount(method.shipping_fee)" />
       </div>
     </label>
   </div>
@@ -30,8 +30,10 @@
 
 <script lang="ts">
 import { useShipmentStore } from "@/stores/shipment";
+import { formatCurrency } from "@/utils/currency";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "ShipmentSelect",
@@ -46,6 +48,11 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(useShipmentStore, ["listShipmentMethods"]),
+    formatCurrency,
+    formatAmount(amount: number) {
+      const { locale } = useI18n();
+      return this.formatCurrency(locale.value, amount);
+    },
     changeIndex(index: number) {
       this.curIdx = index;
       this.$emit("update:shipmentMethod", index);

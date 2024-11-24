@@ -31,6 +31,7 @@ export const useCartStore = defineStore("cart", {
           .then((response) => {
             if (response.status === 200 && response.data) {
               this.cart = response.data;
+              console.log(this.cart);
             }
           });
       }
@@ -38,21 +39,23 @@ export const useCartStore = defineStore("cart", {
     addToCart(payload: NewCartItem) {
       return axios
         .post(`${consts.BASE_URL}/cart-items/`, payload)
-        .then((response) => {
+        .then(async (response) => {
           if (response.status === 201 && response.data) {
-            this.retrieveCart();
-            this.listCartItems();
+            await this.retrieveCart();
+            await this.listCartItems();
           }
+          return response;
         });
     },
     removeCartItem(id: number) {
       return axios
         .delete(`${consts.BASE_URL}/cart-items/${id}/`)
-        .then((response) => {
+        .then(async (response) => {
           if (response.status === 204) {
-            this.retrieveCart();
-            this.listCartItems();
+            await this.retrieveCart();
+            await this.listCartItems();
           }
+          return response;
         });
     },
     listCartItems() {

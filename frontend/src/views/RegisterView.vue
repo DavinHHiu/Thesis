@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col items-center gap-[3rem] mt-[5rem]">
+    <Toast />
     <app-logo />
     <card class="w-[40rem] h-[55rem]">
       <div class="h-full p-[1rem] flex flex-col justify-between">
@@ -22,9 +23,9 @@
           <password-field
             class="h-[5rem]"
             :label="'inputLabel.user.retypePassword'"
-            :value="registerItem.retypePassword"
+            :value="registerItem.retype_password"
             @update:model-value="
-              (newValue) => (registerItem.retypePassword = newValue)
+              (newValue) => (registerItem.retype_password = newValue)
             "
           ></password-field>
         </div>
@@ -32,14 +33,17 @@
           <custom-button
             class="h-[5rem]"
             intent="primary"
-            v-text="'buttonLabel.register'"
+            :disabled="loading"
+            v-text="$t('buttonLabel.register')"
             @click="handleRegister"
           />
           <divider-break :title="'dividerBreak.register'" />
           <custom-button
             class="h-[5rem]"
             intent="p-outline"
+            :disabled="loading"
             v-t="'buttonLabel.login'"
+            @click="routeLogin"
           />
         </div>
       </div>
@@ -55,7 +59,9 @@ import DividerBreak from "@/components/common/molecules/DividerBreak.vue";
 import PasswordField from "@/components/common/molecules/PasswordField.vue";
 import TextField from "@/components/common/molecules/TextField.vue";
 import { useSessionStore } from "@/stores/session";
+import { useToastStore } from "@/stores/toast";
 import { RegisterItem } from "@/types/frontend";
+import { AxiosError } from "axios";
 import _ from "lodash";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
@@ -76,32 +82,50 @@ export default defineComponent({
       registerItem: {
         email: "",
         password: "",
-        retypePassword: "",
+        retype_password: "",
       } as RegisterItem,
+      loading: false,
     };
   },
   methods: {
     ...mapActions(useSessionStore, ["register"]),
-    handleRegister() {
-      // Check fields not empty
+    ...mapActions(useToastStore, ["toast"]),
+    async handleRegister() {
+      this.loading = true;
       if (
         !_.every(
           this.registerItem,
           (field) => !_.isNil(field) && !_.isEmpty(field)
         )
       ) {
-        alert("Please fill out all the required fields");
+        this.toast({
+          theme: "danger",
+          message: "registerPage.message.warn",
+        });
+        this.loading = false;
+        return;
       }
 
-      //Register the user
-      this.register(this.registerItem).then((response) => {
-        if (response && response.status === 201) {
-          alert("User registered successfully");
-          this.$router.push("/login");
-        } else {
-          alert("Failed to register user");
-        }
-      });
+      this.register(this.registerItem)
+        .then(() => {
+          this.toast({
+            theme: "success",
+            message: "registerPage.message.success",
+          });
+          setTimeout(() => this.$router.push({ name: "login" }), 1000);
+        })
+        .catch((err) => {
+          const message = err.response.data.non_field_errors[0];
+          console.log(message);
+          this.loading = false;
+          this.toast({
+            theme: "danger",
+            message: message,
+          });
+        });
+    },
+    routeLogin() {
+      this.$router.push({ name: "login" });
     },
   },
   computed: {

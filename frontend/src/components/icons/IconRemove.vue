@@ -1,5 +1,8 @@
 <template>
   <svg
+    class="icon-remove"
+    width="2rem"
+    height="2rem"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 64 64"
     transform="rotate(45)"
@@ -20,15 +23,21 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'IconRemove',
+  name: "IconRemove",
   props: {
     stroke: {
       type: String,
-      default: '#000',
+      default: "#aaa",
     },
   },
 });
 </script>
+
+<style scoped>
+.icon-remove {
+  cursor: pointer;
+}
+</style>

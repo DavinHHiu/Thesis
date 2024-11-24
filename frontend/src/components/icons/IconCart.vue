@@ -27,7 +27,7 @@
 
 <script lang="ts">
 import { useCartStore } from "@/stores/cart";
-import { mapState } from "pinia";
+import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -41,6 +41,12 @@ export default defineComponent({
   },
   computed: {
     ...mapState(useCartStore, ["totalQuantity"]),
+  },
+  methods: {
+    ...mapActions(useCartStore, ["retrieveCart"]),
+  },
+  async mounted() {
+    await this.retrieveCart();
   },
 });
 </script>

@@ -1,6 +1,7 @@
 <template>
   <page-title title="cartPage.title" />
   <page-body>
+    <Toast />
     <div v-if="totalQuantity === 0" class="empty-cart">
       <div class="flex items-center gap-[1rem] px-[2rem]">
         <span class="material-symbols-outlined" v-text="'event_busy'" />
@@ -9,7 +10,9 @@
       <custom-button
         class="px-[3rem] py-[1.25rem] mt-[5rem] uppercase"
         intent="primary"
+        :disabled="loading"
         v-html="$t('cartPage.btnLabel.continue')"
+        @click="continueShopping"
       />
     </div>
     <div v-else class="container flex flex-col items-end">
@@ -37,7 +40,7 @@
         <tbody>
           <tr v-for="(cartItem, index) in cartItems" :key="index">
             <td class="h-full flex items-center justify-center">
-              <icon-remove width="20px" height="20px" stroke="#aaa" />
+              <icon-remove @click="handleRemoveItem(cartItem.id as number)" />
             </td>
             <td>
               <a class="image"
@@ -48,7 +51,7 @@
               <a href="" v-text="cartItem?.product?.name" />
             </td>
             <td>
-              <span v-text="`$${cartItem?.product_sku?.price}.00`" />
+              <span v-text="formatAmount(cartItem?.product_sku?.price)" />
             </td>
             <td>
               <div class="quantity flex items-center gap-[0.5rem]">
@@ -76,7 +79,7 @@
                 />
               </div>
             </td>
-            <td><span v-text="`$${cartItem?.subtotal}.00`" /></td>
+            <td><span v-text="formatAmount(cartItem?.subtotal)" /></td>
             <td>
               <input
                 type="checkbox"
@@ -105,7 +108,7 @@
               <td
                 class="total-amount"
                 data-title="Total"
-                v-text="`$${totalAmountCheckout}.00`"
+                v-text="formatAmount(totalAmountCheckout)"
               />
             </tr>
           </tbody>
@@ -114,6 +117,7 @@
           <custom-button
             class="rounded-none w-full py-[20px] mb-[17px]"
             intent="primary"
+            :disabled="loading"
             v-html="$t('cartPage.btnLabel.checkout')"
             @click="navigateToCheckout"
           />
@@ -131,10 +135,12 @@ import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
 import IconRemove from "@/components/icons/IconRemove.vue";
 import { useCartStore } from "@/stores/cart";
-import { CartItem } from "@/types/worker";
+import { useToastStore } from "@/stores/toast";
+import { formatCurrency } from "@/utils/currency";
 import _ from "lodash";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "CartView",
@@ -146,14 +152,26 @@ export default defineComponent({
     PageTitle,
     PageBody,
   },
+  data() {
+    return {
+      loading: false,
+    };
+  },
   methods: {
     ...mapActions(useCartStore, [
       "retrieveCart",
       "listCartItems",
+      "removeCartItem",
       "updateCartItemQuantity",
       "validateCheckoutItems",
       "setCheckoutItems",
     ]),
+    ...mapActions(useToastStore, ["toast"]),
+    formatCurrency,
+    formatAmount(amount: number) {
+      const { locale } = useI18n();
+      return this.formatCurrency(locale.value, amount);
+    },
     async increaseQuantity(cartItemId: number, maxQuantity: number) {
       let foundItem = undefined;
       let foundAt = -1;
@@ -220,6 +238,24 @@ export default defineComponent({
       if (response.status === 200) {
         this.$router.push({ name: "checkout-form" });
       }
+    },
+    handleRemoveItem(cartItemId: number) {
+      this.removeCartItem(cartItemId)
+        .then((res) => {
+          this.toast({
+            theme: "success",
+            message: "cartFolder.message.delete.success",
+          });
+        })
+        .catch((err) => {
+          this.toast({
+            theme: "danger",
+            message: "cartFolder.message.delete.fail",
+          });
+        });
+    },
+    continueShopping() {
+      this.$router.push({ name: "search" });
     },
   },
   computed: {

@@ -37,6 +37,7 @@ const router = createRouter({
         },
         {
           path: "about",
+          name: "about",
           component: AboutView,
         },
         {
@@ -51,7 +52,8 @@ const router = createRouter({
           props: true,
         },
         {
-          path: "search/:query",
+          path: "search/:query?",
+          name: "search",
           component: SearchView,
           props: true,
         },
@@ -124,6 +126,9 @@ const router = createRouter({
       component: PaymentSuccessView,
     },
   ],
+  scrollBehavior(to, from, savedPosition) {
+    return { top: 0 };
+  },
 });
 
 export default router;

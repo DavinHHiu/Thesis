@@ -10,7 +10,10 @@
       <div>
         <badge-star :rating="product?.rating as number" />
       </div>
-      <span class="price font-semibold" v-text="`$${product?.prices[0]}.00`" />
+      <span
+        class="price font-semibold"
+        v-text="formattedAmount(product?.prices[0] as number)"
+      />
     </div>
     <custom-button
       v-t="'inputLabel.common.detail'"
@@ -21,11 +24,12 @@
   </div>
 </template>
 <script lang="ts">
+import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import BadgeStar from "@/components/common/molecules/BadgeStar.vue";
 import { Product } from "@/types/worker";
+import { formatCurrency } from "@/utils/currency";
 import { defineComponent, PropType } from "vue";
-
-import CustomButton from "../atomic/CustomButton.vue";
-import BadgeStar from "./BadgeStar.vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "ProductItem",
@@ -37,11 +41,16 @@ export default defineComponent({
     CustomButton,
   },
   methods: {
+    formatCurrency,
     navigateToDetail() {
       this.$router.push({
         name: "product.detail",
         params: { id: this.product?.id },
       });
+    },
+    formattedAmount(amount: number) {
+      const { locale } = useI18n();
+      return formatCurrency(locale.value, amount);
     },
   },
 });

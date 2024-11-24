@@ -26,7 +26,7 @@ class UserSerializer(serializers.ModelSerializer):
     first_name = serializers.CharField(required=False, allow_null=True)
     last_name = serializers.CharField(required=False, allow_null=True)
     email = serializers.EmailField()
-    password = serializers.CharField(required=False, read_only=True)
+    password = serializers.CharField(required=False, write_only=True)
     birth_of_date = serializers.DateField(required=False, allow_null=True)
     tel = serializers.CharField(max_length=10, required=False, allow_null=True)
 
@@ -88,20 +88,60 @@ class UserSerializer(serializers.ModelSerializer):
 
 
 class PasswordResetSerializer(serializers.Serializer):
-    old_password = serializers.CharField()
-    new_password = serializers.CharField()
+    old_password = serializers.CharField(write_only=True)
+    new_password = serializers.CharField(write_only=True)
+    retype_password = serializers.CharField(write_only=True)
+
+    def validate(self, attrs):
+        user = self.context["request"].user
+        if not user.check_password(attrs["old_password"]):
+            msg = _("Invalid old password")
+            raise serializers.ValidationError({"error": msg})
+        if attrs["new_password"] != attrs["retype_password"]:
+            msg = _("Passwords do not match")
+            raise serializers.ValidationError({"error": msg})
+        return attrs
+
+    def create(self, data):
+        user = self.context["request"].user
+        user.set_password(data["new_password"])
+        user.save()
+        return user
+
+
+class RegisterSerializer(serializers.Serializer):
+    email = serializers.EmailField()
+    password = serializers.CharField()
     retype_password = serializers.CharField()
+
+    def validate(self, data):
+        existing_email = User.objects.filter(email=data["email"])
+        if existing_email.exists():
+            msg = _("Email already exists")
+            raise serializers.ValidationError(msg)
+        if data["password"] != data["retype_password"]:
+            msg = _("Passwords do not match")
+            raise serializers.ValidationError(msg)
+
+        data.pop("retype_password", None)
+
+        return data
+
+    def create(self, validated_data):
+        ModelClass = User
+        instance = ModelClass._default_manager.create_user(**validated_data)
+        return instance
 
 
 class AddressSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True, required=False)
-    user_id = serializers.SerializerMethodField()
-    title = serializers.CharField(required=False, allow_blank=True)
+    user_id = serializers.CharField(source="user.id")
+    title = serializers.CharField(required=False, allow_blank=True, allow_null=True)
     city = serializers.CharField()
     district = serializers.CharField()
     ward = serializers.CharField()
     address_1 = serializers.CharField()
-    address_2 = serializers.CharField(required=False, allow_blank=True)
+    address_2 = serializers.CharField(required=False, allow_blank=True, allow_null=True)
     tel = serializers.CharField(max_length=10)
     representative = serializers.CharField()
 
@@ -120,9 +160,6 @@ class AddressSerializer(serializers.ModelSerializer):
             "representative",
         ]
 
-    def get_user_id(self, obj):
-        return obj.user.id
-
     @transaction.atomic
     def create(self, validated_data):
         if "user_id" in validated_data:
@@ -138,6 +175,7 @@ class AddressSerializer(serializers.ModelSerializer):
 
     @transaction.atomic
     def update(self, instance, validated_data):
+        validated_data.pop("user", None)
         for attr, value in validated_data.items():
             setattr(instance, attr, value)
 
@@ -168,32 +206,27 @@ class BaseJSONWebTokenSerializer(serializers.Serializer):
             "password": data.get("password"),
         }
 
-        if all(credentials.values()):
-            serializer = EmailValidationSerializer(
-                data={"email": data.get(self.username_field)}
-            )
-            serializer.is_valid(raise_exception=True)
+        serializer = EmailValidationSerializer(
+            data={"email": data.get(self.username_field)}
+        )
+        serializer.is_valid(raise_exception=True)
 
-            user = authenticate(self.context["request"], **credentials)
+        user = authenticate(self.context["request"], **credentials)
 
-            if user:
-                if not user.is_active:
-                    msg = _("User account is disabled.")
-                    raise serializers.ValidationError(msg)
-
-                payload = JSONWebTokenAuthentication.jwt_create_payload(user)
-
-                return {
-                    "token": JSONWebTokenAuthentication.jwt_encode_payload(payload),
-                    "user": user,
-                    "issued_at": payload.get("iat", datetime.utcnow().isoformat()),
-                }
-            else:
-                msg = _("Unable to log in with provided credentials.")
+        if user:
+            if not user.is_active:
+                msg = _("User account is disabled.")
                 raise serializers.ValidationError(msg)
+
+            payload = JSONWebTokenAuthentication.jwt_create_payload(user)
+
+            return {
+                "token": JSONWebTokenAuthentication.jwt_encode_payload(payload),
+                "user": user,
+                "issued_at": payload.get("iat", datetime.utcnow().isoformat()),
+            }
         else:
-            msg = _("Must include '{username_field}' and 'password'.")
-            msg = msg.format(username_field=self.username_field)
+            msg = _("Unable to log in with provided credentials.")
             raise serializers.ValidationError(msg)
 
 

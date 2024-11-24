@@ -82,6 +82,7 @@ class JSONWebTokenAuthentication(BaseAuthentication):
 
     @classmethod
     def jwt_get_username_from_payload(self, payload):
+
         return payload.get(get_username_field())
 
     @classmethod
