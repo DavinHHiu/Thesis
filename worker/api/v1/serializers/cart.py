@@ -5,7 +5,6 @@ from rest_framework.utils import model_meta
 from api.models import Cart, CartItem, Product, ProductSku, User
 
 from .product import ProductSerializer, ProductSkuDetailSerializer
-from .user import UserSerializer
 
 
 class CartSerializer(serializers.ModelSerializer):

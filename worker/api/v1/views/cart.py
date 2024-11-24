@@ -17,21 +17,19 @@ class CartViewSet(viewsets.ModelViewSet):
     API endpoint for managing carts.
     """
 
-    queryset = Cart.objects.select_related("user").all()
+    queryset = Cart.objects.select_related("user")
     serializer_class = CartSerializer
     permission_classes = [AllowAny]
 
-    @action(detail=False, methods=["GET"], url_path="by-user/(?P<user_id>[^/.]+)")
-    def retrieveByUser(self, request, user_id=None, *args, **kwargs):
-        if user_id:
-            try:
-                cart = self.get_queryset().get(user_id=user_id)
-                serializer = self.get_serializer(cart)
-                return Response(serializer.data, status=status.HTTP_200_OK)
-            except Cart.DoesNotExist:
-                msg = _("Cart not found for user ID")
-                return Response({"error": msg}, status=status.HTTP_404_NOT_FOUND)
-        return Response(status=status.HTTP_400_BAD_REQUEST)
+    @action(detail=False, methods=["GET"], url_path="by-user")
+    def retrieveByUser(self, request, *args, **kwargs):
+        try:
+            cart = self.get_queryset().get(user=request.user)
+            serializer = self.get_serializer(cart)
+            return Response(serializer.data, status=status.HTTP_200_OK)
+        except Cart.DoesNotExist:
+            msg = _("Cart not found")
+            return Response({"error": msg}, status=status.HTTP_404_NOT_FOUND)
 
 
 class CartItemViewSet(viewsets.ModelViewSet):

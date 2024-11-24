@@ -31,7 +31,6 @@ interface Address {
 
 function isAddressValid(address: Address): boolean {
   const requiredFields: (keyof Address)[] = [
-    "user_id",
     "city",
     "district",
     "ward",

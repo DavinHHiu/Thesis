@@ -24,17 +24,12 @@ export const useCartStore = defineStore("cart", {
   },
   actions: {
     retrieveCart() {
-      const user = localStore.get("user") as User;
-      if (user) {
-        return axios
-          .get(`${consts.BASE_URL}/carts/by-user/${user.id}/`)
-          .then((response) => {
-            if (response.status === 200 && response.data) {
-              this.cart = response.data;
-              console.log(this.cart);
-            }
-          });
-      }
+      return axios.get(`${consts.BASE_URL}/carts/by-user/`).then((response) => {
+        if (response.status === 200 && response.data) {
+          this.cart = response.data;
+          console.log(this.cart);
+        }
+      });
     },
     addToCart(payload: NewCartItem) {
       return axios
@@ -98,12 +93,10 @@ export const useCartStore = defineStore("cart", {
       paymentMethod: PaymentMethod
     ) {
       const host = window.location.origin;
-      const user = localStore.get("user") as User;
       const payload = {
         total_amount: totalAmount,
         total_quantity: totalQuantity,
         host: host,
-        user_id: user.id,
         address: address,
         shipment_method: shipmentMethod,
         payment_method: paymentMethod,

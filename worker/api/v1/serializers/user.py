@@ -1,6 +1,4 @@
-import calendar
 import os
-import random
 from datetime import datetime, timedelta
 
 import jwt
@@ -135,7 +133,7 @@ class RegisterSerializer(serializers.Serializer):
 
 class AddressSerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(read_only=True, required=False)
-    user_id = serializers.CharField(source="user.id")
+    user_id = serializers.CharField(source="user.id", read_only=True)
     title = serializers.CharField(required=False, allow_blank=True, allow_null=True)
     city = serializers.CharField()
     district = serializers.CharField()
@@ -162,20 +160,14 @@ class AddressSerializer(serializers.ModelSerializer):
 
     @transaction.atomic
     def create(self, validated_data):
-        if "user_id" in validated_data:
-            user_id = validated_data.pop("user_id")
-            try:
-                user = User.objects.get(id=user_id)
-            except User.DoesNotExist as e:
-                raise serializers.ValidationError({"detail": str(e)})
-
         ModelClass = self.Meta.model
-        instance = ModelClass._default_manager.create(user=user, **validated_data)
+        instance = ModelClass._default_manager.create(
+            user=self.context["request"].user, **validated_data
+        )
         return instance
 
     @transaction.atomic
     def update(self, instance, validated_data):
-        validated_data.pop("user", None)
         for attr, value in validated_data.items():
             setattr(instance, attr, value)
 

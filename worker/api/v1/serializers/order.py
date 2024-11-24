@@ -9,7 +9,7 @@ from .shipment import ShipmentSerializer
 
 class OrderDetailSerializer(serializers.ModelSerializer):
     id = serializers.CharField(required=False)
-    user_id = serializers.SerializerMethodField()
+    user_id = serializers.CharField(source="user.id")
     total_quantity = serializers.IntegerField()
     status = serializers.CharField()
     shipment = serializers.SerializerMethodField()
@@ -25,9 +25,6 @@ class OrderDetailSerializer(serializers.ModelSerializer):
             "shipment",
             "payment",
         ]
-
-    def get_user_id(self, obj):
-        return obj.user.id
 
     def get_shipment(self, obj):
         return ShipmentSerializer(obj.shipment).data
