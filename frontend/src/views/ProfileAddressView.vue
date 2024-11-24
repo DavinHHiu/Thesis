@@ -127,6 +127,7 @@ import SelectField from "@/components/common/molecules/SelectField.vue";
 import TextField from "@/components/common/molecules/TextField.vue";
 import AddressSelect from "@/components/common/organisms/AddressSelect.vue";
 import { useAddressStore } from "@/stores/address";
+import { useToastStore } from "@/stores/toast";
 import { Address, isAddressValid, User } from "@/types/worker";
 import localStore from "@/utils/localStorage";
 import { mapActions, mapState } from "pinia";
@@ -156,6 +157,7 @@ export default defineComponent({
       "listAddressesByUser",
       "createAddress",
     ]),
+    ...mapActions(useToastStore, ["toast"]),
     addAddress() {
       this.setAddress({} as Address);
       this.openAddressForm = true;
@@ -167,18 +169,26 @@ export default defineComponent({
       this.openAddressForm = true;
     },
     async addNewAddress() {
-      if (!this.address.user_id) {
-        const user = localStore.get("user") as User;
-        if (user && user.id) {
-          this.address.user_id = user.id;
-        }
-      }
       if (isAddressValid(this.address)) {
         if (this.address.id) {
-          const response = await this.updateAddress(this.address);
-          if (response && response.status === 200) {
-            this.openAddressForm = false;
-          }
+          await this.updateAddress(this.address)
+            .then((response) => {
+              if (response && response.status === 200) {
+                this.openAddressForm = false;
+              }
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              this.toast({
+                theme: "success",
+                message: "Update added successfully!",
+              });
+            })
+            .catch((err) => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+              this.toast({
+                theme: "danger",
+                message: "Failed to update address!",
+              });
+            });
         } else {
           const response = await this.createAddress(this.address);
           if (response && response.status === 201) {

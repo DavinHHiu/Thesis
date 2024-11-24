@@ -33,9 +33,8 @@ export const useAddressStore = defineStore("address", {
         });
     },
     listAddressesByUser() {
-      const user = localStore.get("user");
       return axios
-        .get(`${consts.BASE_URL}/addresses/by-user/${user.id}/`)
+        .get(`${consts.BASE_URL}/addresses/by-user/`)
         .then((response) => {
           if (response.status === 200 && response.data) {
             this.addresses = response.data;

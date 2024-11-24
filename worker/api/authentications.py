@@ -1,5 +1,4 @@
 import uuid
-from datetime import datetime
 
 import jwt
 from django.conf import settings
@@ -88,7 +87,6 @@ class JSONWebTokenAuthentication(BaseAuthentication):
     @classmethod
     def get_token_from_request(self, request):
         auth = get_authorization_header(request).split()
-        auth_header_prefix = api_settings.JWT_AUTH_HEADER_PREFIX.lower()
 
         if not auth:
             if api_settings.JWT_AUTH_COOKIE:
@@ -106,16 +104,6 @@ class JSONWebTokenAuthentication(BaseAuthentication):
             raise exceptions.AuthenticationFailed(msg)
 
         return auth[1]
-
-    def authenticate_header(self, request):
-        """
-        Return a string to be used as the value of the `WWW-Authenticate`
-        header in a `401 Unauthenticated` response, or `None` if the
-        authentication scheme should return `403 Permission Denied` responses.
-        """
-        return '{0} realm="{1}"'.format(
-            api_settings.JWT_AUTH_HEADER_PREFIX, self.www_authenticate_realm
-        )
 
 
 class BaseJSONWebTokenAuthentication(JSONWebTokenAuthentication):

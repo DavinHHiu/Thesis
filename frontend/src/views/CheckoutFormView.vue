@@ -313,12 +313,6 @@ export default defineComponent({
       this.setShipmentMethod(this.shipmentMethods[index]);
     },
     async addNewAddress() {
-      if (!this.address.user_id) {
-        const user = localStore.get("user") as User;
-        if (user && user.id) {
-          this.address.user_id = user.id;
-        }
-      }
       if (isAddressValid(this.address)) {
         if (this.address.id) {
           await this.updateAddress(this.address)

@@ -21,7 +21,6 @@ from api.models import (
     PaymentMethod,
     Shipment,
     ShipmentMethod,
-    User,
 )
 from api.v1.serializers import OrderDetailSerializer, OrderItemSerializer
 
@@ -105,7 +104,6 @@ class CreatePaymentView(APIView):
 
     @transaction.atomic
     def post(self, request):
-        user_id = request.data.get("user_id")
         address_data = request.data.get("address")
         shipment_method = request.data.get("shipment_method")
         payment_method = request.data.get("payment_method")
@@ -117,14 +115,8 @@ class CreatePaymentView(APIView):
             msg = _("You need to fill in the address to place the order")
             return Response({"detail": msg}, status=status.HTTP_400_BAD_REQUEST)
 
-        try:
-            user = User.objects.get(id=user_id)
-        except User.DoesNotExist:
-            msg = _("User does not exist")
-            return Response({"detail": msg}, status=status.HTTP_400_BAD_REQUEST)
-
         order_address, created = Address.objects.get_or_create(
-            user=user, **address_data
+            user=request.user, **address_data
         )
         if not created:
             order_address.pk = None
@@ -177,7 +169,7 @@ class CreatePaymentView(APIView):
 
         order = OrderDetail.objects.create(
             id=order_id,
-            user=user,
+            user=request.user,
             total_quantity=total_quantity,
             status=order_status,
         )
@@ -186,27 +178,26 @@ class CreatePaymentView(APIView):
             db_shipment_method = ShipmentMethod.objects.get(
                 id=shipment_method.get("id")
             )
+            Shipment.objects.create(
+                order=order,
+                receive_address=order_address,
+                shipment_method=db_shipment_method,
+            )
         except ShipmentMethod.DoesNotExist:
             msg = _("Shipping method does not exist")
             return Response({"detail": msg}, status=status.HTTP_400_BAD_REQUEST)
 
         try:
             db_payment_method = PaymentMethod.objects.get(id=payment_method.get("id"))
+            Payment.objects.create(
+                order=order,
+                payment_method=db_payment_method,
+                total_amount=total_amount,
+            )
         except PaymentMethod.DoesNotExist:
             msg = _("Payment method does not exist")
             return Response({"detail": msg}, status=status.HTTP_400_BAD_REQUEST)
 
-        Shipment.objects.create(
-            order=order,
-            receive_address=order_address,
-            shipment_method=db_shipment_method,
-        )
-
-        Payment.objects.create(
-            order=order,
-            payment_method=db_payment_method,
-            total_amount=total_amount,
-        )
         return Response(response, status=status.HTTP_200_OK)
 
 
