@@ -17,11 +17,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import CustomButton from '../atomic/CustomButton.vue';
+import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'CategoryItem',
+  name: "CategoryItem",
   components: {
     CustomButton,
   },
@@ -40,14 +40,14 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .wrapper {
   position: relative;
   width: 38rem;
   height: 48rem;
   &::after {
-    content: '';
+    content: "";
     display: block;
     position: absolute;
     top: 0;

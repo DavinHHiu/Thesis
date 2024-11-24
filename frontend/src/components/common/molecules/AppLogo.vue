@@ -6,15 +6,15 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import IconPriceTag from '../../icons/IconPriceTag.vue';
+import IconPriceTag from "@/components/icons/IconPriceTag.vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'AppLogo',
+  name: "AppLogo",
   props: {
     intent: {
       type: String,
-      default: 'primary',
+      default: "primary",
     },
   },
   components: {
@@ -24,12 +24,12 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import url('https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap');
-@import '@/assets/variables';
+@import url("https://fonts.googleapis.com/css2?family=Rubik+Glitch&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playwrite+CU:wght@100..400&display=swap");
+@import "@/assets/variables";
 
 .app-name {
-  font-family: 'Playwrite CU', cursive;
+  font-family: "Playwrite CU", cursive;
   font-weight: $--font-bold;
   font-size: $--font-md;
   text-transform: uppercase;

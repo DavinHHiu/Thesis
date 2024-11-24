@@ -21,14 +21,13 @@
   </div>
 </template>
 <script lang="ts">
+import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import SelectField from "@/components/common/molecules/SelectField.vue";
+import TextField from "@/components/common/molecules/TextField.vue";
+import UploadPreview from "@/components/common/molecules/UploadPreview.vue";
 import IconRightArrow from "@/components/icons/IconRightArrow.vue";
 import { OptionItem } from "@/types/frontend";
 import { defineComponent } from "vue";
-
-import CustomButton from "../atomic/CustomButton.vue";
-import SelectField from "../molecules/SelectField.vue";
-import TextField from "../molecules/TextField.vue";
-import UploadPreview from "../molecules/UploadPreview.vue";
 
 export default defineComponent({
   name: "SearchBar",

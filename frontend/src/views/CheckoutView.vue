@@ -9,9 +9,8 @@
 </template>
 
 <script lang="ts">
+import DefaultLayout from "@/layouts/DefaultLayout.vue";
 import { defineComponent } from "vue";
-
-import DefaultLayout from "../layouts/DefaultLayout.vue";
 
 export default defineComponent({
   name: "CheckoutView",

@@ -7,12 +7,12 @@
 </template>
 
 <script>
-import { defineComponent } from 'vue';
-import NavHeader from '../components/common/organisms/NavHeader.vue';
-import CustomFooter from '../components/common/organisms/CustomFooter.vue';
+import CustomFooter from "@/components/common/organisms/CustomFooter.vue";
+import NavHeader from "@/components/common/organisms/NavHeader.vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'DefaultLayout',
+  name: "DefaultLayout",
   components: {
     NavHeader,
     CustomFooter,
@@ -20,7 +20,7 @@ export default defineComponent({
   props: {
     headerIntent: {
       type: String,
-      default: 'primary',
+      default: "primary",
     },
   },
 });

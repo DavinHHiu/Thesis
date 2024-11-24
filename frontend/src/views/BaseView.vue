@@ -13,11 +13,10 @@
 </template>
 
 <script lang="ts">
+import CustomFooter from "@/components/common/organisms/CustomFooter.vue";
+import NavHeader from "@/components/common/organisms/NavHeader.vue";
 import CartFolder from "@/components/common/templates/CartFolder.vue";
 import { defineComponent } from "vue";
-
-import CustomFooter from "../components/common/organisms/CustomFooter.vue";
-import NavHeader from "../components/common/organisms/NavHeader.vue";
 
 export default defineComponent({
   name: "BaseView",

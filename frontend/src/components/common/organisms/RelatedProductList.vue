@@ -10,11 +10,10 @@
 </template>
 
 <script lang="ts">
+import ProductItem from "@/components/common/molecules/ProductItem.vue";
 import { useProductStore } from "@/stores/product";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
-
-import ProductItem from "../molecules/ProductItem.vue";
 
 export default defineComponent({
   name: "RelatedProductList",
