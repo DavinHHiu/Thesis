@@ -9,13 +9,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import Avatar from '../atomic/Avatar.vue';
-import CustomButton from '../atomic/CustomButton.vue';
-import IconPen from '../../icons/IconPen.vue';
+import Avatar from "@/components/common/atomic/Avatar.vue";
+import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import IconPen from "@/components/icons/IconPen.vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'EditableAvatar',
+  name: "EditableAvatar",
   components: {
     Avatar,
     CustomButton,
@@ -31,7 +31,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .user-avatar-wp {
   position: relative;

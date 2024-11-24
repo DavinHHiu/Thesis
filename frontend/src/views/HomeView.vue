@@ -97,19 +97,18 @@
 </template>
 
 <script lang="ts">
+import CustomButton from "@/components/common/atomic/CustomButton.vue";
 import CategoryItem from "@/components/common/molecules/CategoryItem.vue";
+import CriteriaItem from "@/components/common/molecules/CriteriaItem.vue";
+import LogoSlider from "@/components/common/molecules/LogoSlider.vue";
+import MainBackground from "@/components/common/molecules/MainBackground.vue";
+import ProductItem from "@/components/common/molecules/ProductItem.vue";
 import CartFolder from "@/components/common/templates/CartFolder.vue";
+import PageBody from "@/components/common/templates/PageBody.vue";
+import GridLayout from "@/layouts/GridLayout.vue";
 import { useProductStore } from "@/stores/product";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
-
-import CustomButton from "../components/common/atomic/CustomButton.vue";
-import CriteriaItem from "../components/common/molecules/CriteriaItem.vue";
-import LogoSlider from "../components/common/molecules/LogoSlider.vue";
-import MainBackground from "../components/common/molecules/MainBackground.vue";
-import ProductItem from "../components/common/molecules/ProductItem.vue";
-import PageBody from "../components/common/templates/PageBody.vue";
-import GridLayout from "../layouts/GridLayout.vue";
 
 export default defineComponent({
   name: "HomeView",

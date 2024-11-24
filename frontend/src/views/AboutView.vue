@@ -7,12 +7,12 @@
   </div>
 </template>
 <script lang="ts">
-import { defineComponent } from 'vue';
-import CustomInput from '../components/common/atomic/CustomInput.vue';
-import CustomLabel from '../components/common/atomic/CustomLabel.vue';
+import CustomInput from "@/components/common/atomic/CustomInput.vue";
+import CustomLabel from "@/components/common/atomic/CustomLabel.vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'AboutView',
+  name: "AboutView",
   components: {
     CustomInput,
     CustomLabel,

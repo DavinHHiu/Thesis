@@ -68,13 +68,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import NumberField from '../molecules/NumberField.vue';
-import RangeField from '../molecules/RangeField.vue';
-import CustomButton from '../atomic/CustomButton.vue';
+import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import NumberField from "@/components/common/molecules/NumberField.vue";
+import RangeField from "@/components/common/molecules/RangeField.vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'FilterPrice',
+  name: "FilterPrice",
   components: {
     NumberField,
     RangeField,
@@ -94,17 +94,17 @@ export default defineComponent({
     return {
       minPrice: 2500,
       maxPrice: 7500,
-      progressLeft: '25%',
-      progressRight: '25%',
+      progressLeft: "25%",
+      progressRight: "25%",
       priceGap: 1000,
     };
   },
   methods: {
     handleChangeMin(e: any) {
       let minPrice = 0;
-      if (e.target.type === 'number') {
+      if (e.target.type === "number") {
         minPrice =
-          !e.target.value && e.target.value === ''
+          !e.target.value && e.target.value === ""
             ? 2500
             : parseInt(e.target.value);
       } else {
@@ -116,13 +116,13 @@ export default defineComponent({
       }
       minPrice = Math.max(minPrice, this.min);
       this.rangeMin.getInputRef().value = this.minPrice = minPrice;
-      this.progressLeft = (this.minPrice / this.max) * 100 + '%';
+      this.progressLeft = (this.minPrice / this.max) * 100 + "%";
     },
     handleChangeMax(e: any) {
       let maxPrice = 0;
-      if (e.target.type === 'number') {
+      if (e.target.type === "number") {
         maxPrice =
-          !e.target.value && e.target.value === ''
+          !e.target.value && e.target.value === ""
             ? 7500
             : parseInt(e.target.value);
       } else {
@@ -134,7 +134,7 @@ export default defineComponent({
       }
       maxPrice = Math.min(maxPrice, this.max);
       this.rangeMax.getInputRef().value = this.maxPrice = maxPrice;
-      this.progressRight = 100 - (this.maxPrice / this.max) * 100 + '%';
+      this.progressRight = 100 - (this.maxPrice / this.max) * 100 + "%";
     },
   },
   computed: {
@@ -155,7 +155,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .filter-price-wp {
   .filter-by-price-wp {

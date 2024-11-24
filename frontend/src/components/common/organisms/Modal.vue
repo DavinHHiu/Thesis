@@ -39,9 +39,8 @@
 </template>
 
 <script lang="ts">
+import CustomButton from "@/components/common/atomic/CustomButton.vue";
 import { defineComponent } from "vue";
-
-import CustomButton from "../atomic/CustomButton.vue";
 
 export default defineComponent({
   name: "Modal",

@@ -34,14 +34,13 @@
 </template>
 
 <script lang="ts">
+import Avatar from "@/components/common/atomic/Avatar.vue";
+import AppLogo from "@/components/common/molecules/AppLogo.vue";
+import IconCart from "@/components/icons/IconCart.vue";
+import IconUser from "@/components/icons/IconUser.vue";
 import { useSessionStore } from "@/stores/session";
 import { mapState } from "pinia";
 import { defineComponent } from "vue";
-
-import IconCart from "../../icons/IconCart.vue";
-import IconUser from "../../icons/IconUser.vue";
-import Avatar from "../atomic/Avatar.vue";
-import AppLogo from "../molecules/AppLogo.vue";
 
 export default defineComponent({
   name: "NavHeader",

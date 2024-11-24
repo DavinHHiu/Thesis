@@ -8,12 +8,11 @@
 </template>
 
 <script lang="ts">
+import TopItem from "@/components/common/molecules/TopItem.vue";
 import { useProductStore } from "@/stores/product";
 import _ from "lodash";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
-
-import TopItem from "../molecules/TopItem.vue";
 
 export default defineComponent({
   name: "SideBestSellers",

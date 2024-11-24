@@ -6,10 +6,9 @@
 </template>
 
 <script lang="ts">
+import CustomInput from "@/components/common/atomic/CustomInput.vue";
+import CustomLabel from "@/components/common/atomic/CustomLabel.vue";
 import { defineComponent } from "vue";
-
-import CustomInput from "../atomic/CustomInput.vue";
-import CustomLabel from "../atomic/CustomLabel.vue";
 
 export default defineComponent({
   name: "DateField",
