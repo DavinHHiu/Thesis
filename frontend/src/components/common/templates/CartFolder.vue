@@ -27,7 +27,7 @@
         class="subtotal flex justify-between px-[2.2rem] py-[1.2rem]"
       >
         <span v-t="'cartFolder.label.subtotal'" />
-        <span v-text="`$${cart?.total_amount}.00`" />
+        <span v-text="formatAmount(cart?.total_amount)" />
       </div>
       <div class="cart-folder-footer">
         <custom-button
@@ -35,6 +35,7 @@
           class="btn-view"
           intent="primary"
           v-html="$t('cartFolder.btnLabel.continue')"
+          @click="continueShopping"
         />
         <custom-button
           v-if="cart.total_quantity > 0"
@@ -55,12 +56,13 @@
 </template>
 
 <script lang="ts">
+import CustomButton from "@/components/common/atomic/CustomButton.vue";
+import CartFolderItem from "@/components/common/molecules/CartFolderItem.vue";
 import { useCartStore } from "@/stores/cart";
+import { formatCurrency } from "@/utils/currency";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
-
-import CustomButton from "../atomic/CustomButton.vue";
-import CartFolderItem from "../molecules/CartFolderItem.vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "CartFolder",
@@ -68,15 +70,24 @@ export default defineComponent({
     CustomButton,
     CartFolderItem,
   },
-  methods: {
-    ...mapActions(useCartStore, ["retrieveCart", "listCartItems"]),
-    navigateToCart() {
-      this.$emit("close:cart-folder");
-      this.$router.push("/cart");
-    },
-  },
   computed: {
     ...mapState(useCartStore, ["cart", "cartItems"]),
+  },
+  methods: {
+    ...mapActions(useCartStore, ["retrieveCart", "listCartItems"]),
+    formatCurrency,
+    formatAmount(amount: number) {
+      const { locale } = useI18n();
+      return this.formatCurrency(locale.value, amount);
+    },
+    navigateToCart() {
+      this.$emit("close:cart-folder");
+      this.$router.push({ name: "cartPage" });
+    },
+    continueShopping() {
+      this.$emit("close:cart-folder");
+      this.$router.push({ name: "search" });
+    },
   },
   async mounted() {
     await this.retrieveCart();

@@ -10,8 +10,7 @@
       :data-bs-autohide="toast?.autohide"
     >
       <div class="toast-body" :class="`toast-${toast.theme}`">
-        <span class="material-symbols-outlined" v-text="toast?.icon" />
-        <span class="message" v-text="toast.message" />
+        <span class="message" v-t="toast.message" />
         <span
           class="material-symbols-outlined close-btn"
           v-text="'cancel'"
@@ -41,32 +40,34 @@ export default defineComponent({
     ...mapState(useToastStore, ["toasts"]),
   },
   methods: {
-    ...mapActions(useToastStore, ["removeToast"]),
+    ...mapActions(useToastStore, ["removeToast", "clearToasts"]),
   },
   watch: {
     toasts: {
       handler(newToasts) {
         if (newToasts.length > this.displayToasts.length) {
-          // console.log(newToasts);
+          const newToast = newToasts[newToasts.length - 1];
           this.$nextTick(() => {
-            this.displayToasts.forEach((toast) => {
-              const toastElement = document.getElementById(
-                `toast-${toast.id}`
-              ) as HTMLElement;
-              Toast.getInstance(toastElement) ?? new Toast(toastElement).show();
-              toastElement.addEventListener("hidden.bs.toast", (event) => {
-                const target = event.target as HTMLElement;
-                this.removeToast(Number(target.id));
-                target.remove();
+            const toastElement = document.getElementById(
+              `toast-${newToast.id}`
+            ) as HTMLElement;
+            if (toastElement) {
+              Toast.getOrCreateInstance(toastElement).show();
+              toastElement.addEventListener("hidden.bs.toast", () => {
+                this.removeToast(newToast.id);
+                toastElement.remove();
               });
-            });
+            }
           });
-          this.displayToasts = _.cloneDeep(newToasts);
         }
+        this.displayToasts = _.cloneDeep(newToasts);
       },
       immediate: true,
       deep: true,
     },
+  },
+  mounted() {
+    this.clearToasts();
   },
 });
 </script>

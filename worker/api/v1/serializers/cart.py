@@ -10,13 +10,13 @@ from .user import UserSerializer
 
 class CartSerializer(serializers.ModelSerializer):
     id = serializers.UUIDField(required=False)
-    user = UserSerializer()
+    user_id = serializers.CharField(source="user.id")
     total_quantity = serializers.IntegerField(required=False)
     total_amount = serializers.FloatField(required=False)
 
     class Meta:
         model = Cart
-        fields = ["id", "user", "total_quantity", "total_amount"]
+        fields = ["id", "user_id", "total_quantity", "total_amount"]
 
     def update(self, instance, validated_data):
         user = validated_data.pop("user")

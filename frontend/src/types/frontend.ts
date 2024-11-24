@@ -22,7 +22,7 @@ interface LoginItem {
 interface RegisterItem {
   email: string;
   password: string;
-  retypePassword: string;
+  retype_password: string;
 }
 
 interface SidebarItem {
@@ -40,8 +40,8 @@ interface Toast {
   id?: number;
   message: string;
   theme: string;
-  icon?: string;
   autohide?: boolean;
+  delay?: number;
 }
 
 export {

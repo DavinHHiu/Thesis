@@ -70,16 +70,27 @@ export default defineComponent({
       );
     },
     changePassword() {
-      console.log(this.password);
-      this.toast({
-        message: "Successfully!",
-        theme: "success",
-        autohide: false,
-      });
       if (this.isValidPassword(this.password)) {
-        //call api change password
-        // alert("Change password");
-        // this.resetPassword(this.password);
+        this.resetPassword(this.password)
+          .then(() => {
+            this.toast({
+              theme: "success",
+              message: "changePasswordPage.messages.success",
+            });
+            this.password = {} as Password;
+          })
+          .catch(() => {
+            this.toast({
+              theme: "danger",
+              message: "changePasswordPage.messages.fail",
+            });
+            this.password = {} as Password;
+          });
+      } else {
+        this.toast({
+          theme: "danger",
+          message: "changePasswordPage.messages.error",
+        });
       }
     },
   },

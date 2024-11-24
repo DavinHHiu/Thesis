@@ -23,14 +23,14 @@ export const useSessionStore = defineStore("session", {
         .post(`${consts.BASE_URL}/token/`, payload)
         .then((response) => {
           if (response.status === 200 && response.data) {
-            this.token = "keep";
+            this.token = response.data.token;
             this.user = response.data.user;
             if (response.data.token) {
               axios.defaults.headers.common["Authorization"] =
-                `Bearer ${response.data.token}`;
+                `Bearer ${this.token}`;
             }
             localStore.bulkSet({
-              token: response.data.token,
+              token: this.token,
               user: JSON.stringify(this.user),
             });
 
@@ -55,7 +55,9 @@ export const useSessionStore = defineStore("session", {
         });
     },
     register(payload: RegisterItem) {
-      return axios.post(`${consts.BASE_URL}/register/`, payload);
+      return axios
+        .post(`${consts.BASE_URL}/register/`, payload)
+        .then((response) => response);
     },
     logout() {
       this.token = "";
@@ -69,21 +71,24 @@ export const useSessionStore = defineStore("session", {
       }
     },
     refresh() {
-      const payload = {
-        token: localStore.get("token"),
-      };
-      return axios
-        .post(`${consts.BASE_URL}/token/refresh/`, payload)
-        .then((response) => {
-          if (response.status === 200 && response.data) {
-            this.token = "keep";
-            this.user = response.data.user;
-            if (response.data.token) {
-              axios.defaults.headers.common["Authorization"] =
-                `Bearer ${response.data.token}`;
+      const requestToken = localStore.get("token");
+      if (requestToken) {
+        const payload = {
+          token: requestToken,
+        };
+        return axios
+          .post(`${consts.BASE_URL}/token/refresh/`, payload)
+          .then((response) => {
+            if (response.status === 200 && response.data) {
+              this.token = response.data.token;
+              this.user = response.data.user;
+              if (response.data.token) {
+                axios.defaults.headers.common["Authorization"] =
+                  `Bearer ${response.data.token}`;
+              }
             }
-          }
-        });
+          });
+      }
     },
     updateUser(payload: User) {
       payload = _.omit(payload, ["avatar"]);
@@ -97,13 +102,13 @@ export const useSessionStore = defineStore("session", {
       return axios
         .post(`${consts.BASE_URL}/change-password/`, payload)
         .then((response) => {
-          console.log(response);
+          return response;
         });
     },
   },
   getters: {
     isAuthenticated: (state) => {
-      return !!localStore.get("token");
+      return !!state.token;
     },
   },
 });

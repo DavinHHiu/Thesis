@@ -21,24 +21,30 @@ app.use(globalComponents);
 
 router.beforeEach(async (to, from, next) => {
   const session = useSessionStore();
-  if (to.meta.requiresAuth) {
-    try {
-      await session.refresh();
-      const isAuthenticated = session.isAuthenticated;
-      if (isAuthenticated && to.path === "/login") {
-        return next("/");
-      }
-    } catch (err) {
-      localStore.bulkRemove(["token", "user"]);
-      return next("/login");
-    }
+  try {
+    await session.refresh();
+  } catch (err) {
+    localStore.bulkRemove(["token", "user"]);
+    return next({ name: "login" });
   }
+
+  if (session.isAuthenticated) {
+    return ["login", "register"].includes(String(to.name))
+      ? next({ name: "home" })
+      : next();
+  }
+
+  if (to.meta.requiresAuth) {
+    localStore.bulkRemove(["token", "user"]);
+    next({ name: "login" });
+  }
+
   return next();
 });
 
 axios.interceptors.request.use(
   (config) => {
-    const token = localStore.get("token");
+    const token = useSessionStore().token;
     if (token) {
       config.headers.Authorization = `Bearer ${token}`;
     }

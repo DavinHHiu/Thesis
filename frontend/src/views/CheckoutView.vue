@@ -1,6 +1,7 @@
 <template>
   <div class="title-cont py-[50px]"><span class="title">Checkout</span></div>
   <div class="content-cont">
+    <Toast />
     <div class="content">
       <router-view></router-view>
     </div>
@@ -8,11 +9,12 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import DefaultLayout from '../layouts/DefaultLayout.vue';
+import { defineComponent } from "vue";
+
+import DefaultLayout from "../layouts/DefaultLayout.vue";
 
 export default defineComponent({
-  name: 'CheckoutView',
+  name: "CheckoutView",
   components: {
     DefaultLayout,
   },
@@ -20,7 +22,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .title-cont {
   .title {

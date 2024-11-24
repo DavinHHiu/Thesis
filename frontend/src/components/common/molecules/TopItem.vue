@@ -10,16 +10,20 @@
       <div>
         <badge-star :rating="product?.rating as number" />
       </div>
-      <span class="price font-semibold" v-text="`$${product?.prices[0]}.00`" />
+      <span
+        class="price font-semibold"
+        v-text="formatAmount(product?.prices[0] as number)"
+      />
     </div>
   </div>
 </template>
 
 <script lang="ts">
+import BadgeStar from "@/components/common/molecules/BadgeStar.vue";
 import { Product } from "@/types/worker";
+import { formatCurrency } from "@/utils/currency";
 import { defineComponent, PropType } from "vue";
-
-import BadgeStar from "./BadgeStar.vue";
+import { useI18n } from "vue-i18n";
 
 export default defineComponent({
   name: "TopItem",
@@ -28,6 +32,13 @@ export default defineComponent({
   },
   props: {
     product: {} as PropType<Product>,
+  },
+  methods: {
+    formatCurrency,
+    formatAmount(amount: number) {
+      const { locale } = useI18n();
+      return this.formatCurrency(locale.value, amount);
+    },
   },
 });
 </script>
