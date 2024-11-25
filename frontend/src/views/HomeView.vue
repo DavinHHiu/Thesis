@@ -21,7 +21,7 @@
   </div>
   <div class="wrapper w-screen flex flex-col justify-center">
     <logo-slider />
-    <page-body>
+    <!-- <page-body>
       <div class="categories-wp">
         <grid-layout class="w-full">
           <category-item
@@ -35,7 +35,7 @@
           </category-item>
         </grid-layout>
       </div>
-    </page-body>
+    </page-body> -->
     <div class="image-bg">
       <main-background bgImgUrl="/images/4.jpg" gradientColor="#f58700" />
     </div>

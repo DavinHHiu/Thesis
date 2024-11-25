@@ -6,6 +6,7 @@
       @mousedown="openDropdown"
       class="w-full h-[5rem]"
       :value="value"
+      :disabled="disabled"
     >
       <option value="" disabled selected>
         Select {{ $t(`${label}`)?.toLowerCase() }}
@@ -54,6 +55,11 @@ export default defineComponent({
     value: {
       type: String,
       required: false,
+    },
+    disabled: {
+      type: Boolean,
+      required: false,
+      default: false,
     },
   },
   methods: {
@@ -113,6 +119,7 @@ export default defineComponent({
 
 .select-wp {
   position: relative;
+
   label {
     position: absolute;
     top: -2.5rem;
@@ -139,6 +146,8 @@ export default defineComponent({
     transition: 0.5s all ease-out;
     border: 1px solid $--dark-gray;
     border-top: none;
+    overflow: auto;
+    max-height: 50rem;
     z-index: 50;
     .item {
       height: 5rem;

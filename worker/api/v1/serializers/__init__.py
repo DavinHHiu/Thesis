@@ -1,3 +1,4 @@
+from .address import DistrictSerializer, ProvinceSerializer, WardSerializer
 from .base import EmailValidationSerializer
 from .cart import CartItemSerializer, CartSerializer, ShallowCartItemSerializer
 from .category import CategorySerializer, SubCategorySerializer

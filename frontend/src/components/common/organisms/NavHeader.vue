@@ -3,31 +3,34 @@
     <div class="w-[20rem]">
       <app-logo :intent="intent" />
     </div>
-    <div class="flex gap-[7rem]">
+    <div class="flex gap-[5rem]">
       <div class="container">
-        <p class="header-items">en</p>
+        <span class="material-symbols-outlined" v-text="'language'" />
+        <p class="header-items" v-text="'en'" />
       </div>
-      <div class="container">
-        <p class="header-items">orders</p>
+      <div class="container" @click="navigateToOrders">
+        <span class="material-symbols-outlined" v-text="'receipt_long'" />
+        <p class="header-items" v-text="'orders'" />
+      </div>
+      <div class="container" @click="navigateToSearch">
+        <span class="material-symbols-outlined" v-text="'search'" />
       </div>
       <div class="container" @click="openCartFolder">
         <icon-cart :intent="intent" />
       </div>
-      <div v-if="isAuthenticated" class="container flex items-center f-full">
-        <!-- <avatar
-          :src="`http://localhost:8000/${user.avatar}`"
-          class="w-[3.2rem]"
-        /> -->
-        <p class="dropdown-toggle header-items" data-bs-toggle="dropdown">
-          Hong Hieu
-        </p>
-        <!-- <ul class="dropdown-menu">
-          <li class="dropdown-item" @click="handleLogout">Logout</li>
-        </ul> -->
+      <div
+        v-if="isAuthenticated"
+        class="container flex items-center f-full"
+        @click="navigateToProfile"
+      >
+        <div class="w-[3rem]">
+          <avatar :src="String(user.avatar)" />
+        </div>
+        <p class="header-items" v-text="user.username" />
       </div>
       <div v-else class="container">
-        <icon-user width="2rem" :intent="intent" />
-        <p class="header-items">account</p>
+        <span class="material-symbols-outlined" v-text="'person'" />
+        <p class="header-items" v-text="'account'" />
       </div>
     </div>
   </div>
@@ -69,6 +72,18 @@ export default defineComponent({
         this.$emit("open:cart-folder");
       }
     },
+    navigateToOrders() {
+      this.$router.push({ name: "orderPage" });
+    },
+    navigateToSearch() {
+      this.$router.push({ name: "search" });
+    },
+    navigateToProfile() {
+      this.$router.push({ name: "profile.details" });
+    },
+  },
+  mounted() {
+    console.log(this.user);
   },
 });
 </script>

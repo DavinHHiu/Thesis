@@ -18,3 +18,6 @@ python manage.py loaddata product.json
 python manage.py loaddata product_attr.json
 python manage.py loaddata product_sku.json
 python manage.py loaddata product_images.json
+python manage.py loaddata province.json
+python manage.py loaddata district.json
+python manage.py loaddata ward.json

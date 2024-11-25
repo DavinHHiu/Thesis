@@ -1,123 +1,5 @@
 <template>
-  <div class="address-form-cont">
-    <h2 class="sub-title" v-t="'checkoutPage.subtitle.address'" />
-    <div v-if="addresses.length > 0">
-      <address-select
-        :open-add-btn="!openAddressForm"
-        @add:address="addAddress"
-        @edit:address="editAddress"
-      />
-    </div>
-    <div
-      v-if="addresses.length === 0 || openAddressForm"
-      class="bill-form flex flex-col gap-[4rem] mt-[4rem]"
-    >
-      <div>
-        <select-field
-          :label="'inputLabel.checkout.city'"
-          :options="[
-            { displayValue: 'Ha Noi', value: 'Ha Noi' },
-            { displayValue: 'Hai Phong', value: 'Hai Phong' },
-          ]"
-          :value="address?.city"
-          @update:model-value="(newValue) => (address.city = newValue)"
-        />
-      </div>
-      <div>
-        <select-field
-          :label="'inputLabel.checkout.district'"
-          :options="[
-            { displayValue: 'Ba Dinh', value: 'Ba Dinh' },
-            { displayValue: 'Tay Ho', value: 'Tay Ho' },
-          ]"
-          :value="address?.district"
-          @update:model-value="(newValue) => (address.district = newValue)"
-        />
-      </div>
-      <div>
-        <select-field
-          :label="'inputLabel.checkout.ward'"
-          :options="[
-            { displayValue: 'Phuc Xa', value: 'Phuc Xa' },
-            { displayValue: 'Quan Thanh', value: 'Quan Thanh' },
-          ]"
-          :value="address?.ward"
-          @update:model-value="(newValue) => (address.ward = newValue)"
-        />
-      </div>
-      <div>
-        <text-field
-          class="h-[4.5rem]"
-          :label="'inputLabel.checkout.address1'"
-          :required="true"
-          :value="address?.address_1"
-          @update:model-value="(newValue) => (address.address_1 = newValue)"
-        />
-      </div>
-      <div>
-        <text-field
-          class="h-[4.5rem]"
-          :label="'inputLabel.checkout.address2'"
-          :required="true"
-          :value="address?.address_2 as string"
-          @update:model-value="(newValue) => (address.address_2 = newValue)"
-        />
-      </div>
-    </div>
-  </div>
-  <div
-    v-if="addresses.length === 0 || openAddressForm"
-    class="contact-form-cont"
-  >
-    <h2 class="sub-title" v-t="'checkoutPage.subtitle.contact'" />
-    <div class="bill-form flex flex-col gap-[4rem] mt-[4rem]">
-      <div>
-        <text-field
-          class="h-[4.5rem]"
-          :label="'inputLabel.checkout.phone'"
-          :required="true"
-          :value="address?.tel"
-          @update:model-value="(newValue) => (address.tel = newValue)"
-        />
-      </div>
-      <div>
-        <text-field
-          class="h-[4.5rem]"
-          :label="'inputLabel.checkout.representative'"
-          :required="true"
-          :value="address?.representative"
-          @update:model-value="
-            (newValue) => (address.representative = newValue)
-          "
-        />
-      </div>
-    </div>
-    <div class="flex flex-col mt-[4rem]">
-      <div class="flex w-full gap-[2rem] justify-end">
-        <custom-button
-          v-if="addresses.length > 0"
-          class="btn w-1/2 py-[1.4rem] px-[2.8rem]"
-          intent="p-outline"
-          v-html="$t('buttonLabel.cancel')"
-          @click="cancelAdd"
-        />
-        <custom-button
-          class="btn w-1/2 py-[1.4rem] px-[2.8rem]"
-          intent="primary"
-          v-html="$t('buttonLabel.save')"
-          @click="addNewAddress"
-        />
-      </div>
-      <custom-button
-        v-if="editing"
-        class="btn w-full py-[1.4rem] px-[2.8rem]"
-        intent="danger"
-        data-bs-toggle="modal"
-        data-bs-target="#deleteModal"
-        v-html="$t('buttonLabel.delete')"
-      />
-    </div>
-  </div>
+  <address-form />
 </template>
 
 <script lang="ts">
@@ -125,7 +7,9 @@ import CustomButton from "@/components/common/atomic/CustomButton.vue";
 import Card from "@/components/common/molecules/Card.vue";
 import SelectField from "@/components/common/molecules/SelectField.vue";
 import TextField from "@/components/common/molecules/TextField.vue";
+import AddressForm from "@/components/common/organisms/AddressForm.vue";
 import AddressSelect from "@/components/common/organisms/AddressSelect.vue";
+import LoadingContent from "@/components/common/organisms/LoadingContent.vue";
 import { useAddressStore } from "@/stores/address";
 import { useToastStore } from "@/stores/toast";
 import { Address, isAddressValid, User } from "@/types/worker";
@@ -137,10 +21,12 @@ export default defineComponent({
   name: "ProfileAddressView",
   components: {
     AddressSelect,
+    AddressForm,
     Card,
     CustomButton,
     SelectField,
     TextField,
+    LoadingContent,
   },
   data() {
     return {

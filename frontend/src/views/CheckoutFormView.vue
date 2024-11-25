@@ -2,124 +2,7 @@
   <div class="separator"></div>
   <div class="checkout-cont">
     <div class="bill-cont">
-      <div class="address-form-cont">
-        <h2 class="sub-title" v-t="'checkoutPage.subtitle.address'" />
-        <div v-if="addresses.length > 0">
-          <address-select
-            :open-add-btn="!openAddressForm"
-            @add:address="addAddress"
-            @edit:address="editAddress"
-          />
-        </div>
-        <div v-if="addresses.length === 0 || openAddressForm" class="bill-form">
-          <div>
-            <select-field
-              :label="'inputLabel.checkout.city'"
-              :options="[
-                { displayValue: 'Ha Noi', value: 'Ha Noi' },
-                { displayValue: 'Hai Phong', value: 'Hai Phong' },
-              ]"
-              :value="address?.city"
-              @update:model-value="(newValue) => (address.city = newValue)"
-            />
-          </div>
-          <div>
-            <select-field
-              :label="'inputLabel.checkout.district'"
-              :options="[
-                { displayValue: 'Ba Dinh', value: 'Ba Dinh' },
-                { displayValue: 'Tay Ho', value: 'Tay Ho' },
-              ]"
-              :value="address?.district"
-              @update:model-value="(newValue) => (address.district = newValue)"
-            />
-          </div>
-          <div>
-            <select-field
-              :label="'inputLabel.checkout.ward'"
-              :options="[
-                { displayValue: 'Phuc Xa', value: 'Phuc Xa' },
-                { displayValue: 'Quan Thanh', value: 'Quan Thanh' },
-              ]"
-              :value="address?.ward"
-              @update:model-value="(newValue) => (address.ward = newValue)"
-            />
-          </div>
-          <div>
-            <text-field
-              class="h-[4.5rem]"
-              :label="'inputLabel.checkout.address1'"
-              :required="true"
-              :value="address?.address_1"
-              @update:model-value="(newValue) => (address.address_1 = newValue)"
-            />
-          </div>
-          <div>
-            <text-field
-              class="h-[4.5rem]"
-              :label="'inputLabel.checkout.address2'"
-              :required="true"
-              :value="address?.address_2"
-              @update:model-value="(newValue) => (address.address_2 = newValue)"
-            />
-          </div>
-        </div>
-      </div>
-      <div
-        v-if="addresses.length === 0 || openAddressForm"
-        class="contact-form-cont"
-      >
-        <h2 class="sub-title" v-t="'checkoutPage.subtitle.contact'" />
-        <div class="bill-form">
-          <div>
-            <text-field
-              class="h-[4.5rem]"
-              :label="'inputLabel.checkout.phone'"
-              :required="true"
-              :value="address?.tel"
-              @update:model-value="(newValue) => (address.tel = newValue)"
-            />
-          </div>
-          <div>
-            <text-field
-              class="h-[4.5rem]"
-              :label="'inputLabel.checkout.representative'"
-              :required="true"
-              :value="address?.representative"
-              @update:model-value="
-                (newValue) => (address.representative = newValue)
-              "
-            />
-          </div>
-        </div>
-        <div class="flex flex-col">
-          <div class="flex w-full gap-[2rem] justify-end">
-            <custom-button
-              v-if="addresses.length > 0"
-              class="btn w-1/2 py-[1.4rem] px-[2.8rem]"
-              intent="p-outline"
-              :disabled="loading"
-              v-html="$t('buttonLabel.cancel')"
-              @click="cancelAdd"
-            />
-            <custom-button
-              class="btn w-1/2 py-[1.4rem] px-[2.8rem]"
-              intent="primary"
-              :disabled="loading"
-              v-html="$t('buttonLabel.save')"
-              @click="addNewAddress"
-            />
-          </div>
-          <custom-button
-            v-if="editing"
-            class="btn w-full py-[1.4rem] px-[2.8rem]"
-            intent="danger"
-            data-bs-toggle="modal"
-            data-bs-target="#deleteModal"
-            v-html="$t('buttonLabel.delete')"
-          />
-        </div>
-      </div>
+      <address-form />
       <div class="shipments-cont">
         <h2 class="sub-title" v-t="'checkoutPage.subtitle.shipment'" />
         <div class="bill-form">
@@ -211,13 +94,6 @@
       </card>
     </div>
   </div>
-  <modal
-    id="deleteModal"
-    :title="'addressPage.deleteModel.title'"
-    @submit="deleteAddress"
-  >
-    <span v-t="'addressPage.deleteModel.content'" />
-  </modal>
 </template>
 
 <script lang="ts">
@@ -227,17 +103,15 @@ import Card from "@/components/common/molecules/Card.vue";
 import RadioField from "@/components/common/molecules/RadioField.vue";
 import SelectField from "@/components/common/molecules/SelectField.vue";
 import TextField from "@/components/common/molecules/TextField.vue";
-import AddressSelect from "@/components/common/organisms/AddressSelect.vue";
+import AddressForm from "@/components/common/organisms/AddressForm.vue";
 import Modal from "@/components/common/organisms/Modal.vue";
 import ShipmentSelect from "@/components/common/organisms/ShipmentSelect.vue";
 import { useAddressStore } from "@/stores/address";
 import { useCartStore } from "@/stores/cart";
 import { usePaymentStore } from "@/stores/payment";
 import { useShipmentStore } from "@/stores/shipment";
-import { useToastStore } from "@/stores/toast";
-import { Address, CartItem, isAddressValid, User } from "@/types/worker";
+import { CartItem } from "@/types/worker";
 import { formatCurrency } from "@/utils/currency";
-import localStore from "@/utils/localStorage";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 import { useI18n } from "vue-i18n";
@@ -245,7 +119,7 @@ import { useI18n } from "vue-i18n";
 export default defineComponent({
   name: "CheckoutFormView",
   components: {
-    AddressSelect,
+    AddressForm,
     Card,
     CustomButton,
     CustomLabel,
@@ -261,27 +135,17 @@ export default defineComponent({
       totalQuantity: 0,
       totalAmount: 0,
       paymentMethodCurIdx: 0,
-      openAddressForm: false,
-      editing: false,
     };
   },
   computed: {
-    ...mapState(useAddressStore, ["address", "addresses"]),
+    ...mapState(useAddressStore, ["address"]),
     ...mapState(useCartStore, ["checkoutItems"]),
     ...mapState(usePaymentStore, ["paymentMethods"]),
     ...mapState(useShipmentStore, ["shipmentMethod", "shipmentMethods"]),
   },
   methods: {
-    ...mapActions(useAddressStore, [
-      "createAddress",
-      "updateAddress",
-      "listAddressesByUser",
-      "destroyAddress",
-      "setAddress",
-    ]),
     ...mapActions(useCartStore, ["createPayment"]),
     ...mapActions(usePaymentStore, ["listPaymentMethods"]),
-    ...mapActions(useToastStore, ["toast"]),
     ...mapActions(useShipmentStore, ["setShipmentMethod"]),
     formatCurrency,
     formatAmount(amount: number) {
@@ -312,86 +176,6 @@ export default defineComponent({
     changeShipmentMethod(index: number) {
       this.setShipmentMethod(this.shipmentMethods[index]);
     },
-    async addNewAddress() {
-      if (isAddressValid(this.address)) {
-        if (this.address.id) {
-          await this.updateAddress(this.address)
-            .then((response) => {
-              if (response && response.status === 200) {
-                this.openAddressForm = false;
-              }
-              window.scrollTo({ top: 0, behavior: "smooth" });
-              this.toast({
-                theme: "success",
-                message: "Update added successfully!",
-              });
-            })
-            .catch((err) => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-              this.toast({
-                theme: "danger",
-                message: "Failed to update address!",
-              });
-            });
-        } else {
-          await this.createAddress(this.address)
-            .then((response) => {
-              if (response && response.status === 201) {
-                this.openAddressForm = false;
-              }
-              window.scrollTo({ top: 0, behavior: "smooth" });
-              this.toast({
-                theme: "success",
-                message: "Address added successfully!",
-              });
-            })
-            .catch((err) => {
-              window.scrollTo({ top: 0, behavior: "smooth" });
-              this.toast({
-                theme: "danger",
-                message: "Failed to add address!",
-              });
-            });
-        }
-      } else {
-        alert("Please fill all the required fields");
-      }
-    },
-    cancelAdd() {
-      this.openAddressForm = false;
-      this.editing = false;
-      this.setAddress({} as Address);
-    },
-    addAddress() {
-      this.setAddress({} as Address);
-      this.openAddressForm = true;
-    },
-    editAddress(id: number) {
-      const address = this.addresses.find((addr) => addr.id === id) as Address;
-      this.setAddress(address);
-      this.editing = true;
-      this.openAddressForm = true;
-    },
-    async deleteAddress() {
-      this.destroyAddress(this.address)
-        .then((response) => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-          this.toast({
-            theme: "success",
-            message: "Address deleted successfully!",
-          });
-        })
-        .catch((err) => {
-          window.scrollTo({ top: 0, behavior: "smooth" });
-          this.toast({
-            theme: "danger",
-            message: "Failed to delete address!",
-          });
-        });
-      this.setAddress({} as Address);
-      this.openAddressForm = false;
-      this.editing = false;
-    },
   },
   watch: {
     checkoutItems: {
@@ -412,7 +196,6 @@ export default defineComponent({
     },
   },
   async mounted() {
-    await this.listAddressesByUser();
     await this.listPaymentMethods();
   },
 });
@@ -444,11 +227,6 @@ export default defineComponent({
       flex-direction: column;
       gap: 4rem;
       width: 100%;
-      .input-name-cont {
-        width: 100%;
-        display: flex;
-        gap: 4.5rem;
-      }
     }
   }
   .order-cont {

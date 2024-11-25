@@ -36,6 +36,7 @@ class Address(models.Model, CreateAndUpdateModelMixin):
         blank=True,
     )
     representative = models.CharField(_("representative"), max_length=255, blank=True)
+    display_address1 = models.CharField(_("display address"), max_length=255)
     is_default = models.BooleanField(_("is default address"), default=False)
 
     class Meta:
@@ -82,6 +83,10 @@ class UserManager(BaseUserManager):
         pil_image.save(avatar_path, format="JPEG")
 
         user.avatar = os.path.relpath(avatar_path, media_root)
+
+        if not user.username:
+            user.username = self.get_username(email)
+
         user.save(using=self._db)
 
         Cart.objects.create(user=user)
@@ -130,6 +135,9 @@ class UserManager(BaseUserManager):
                 obj=obj,
             )
         return self.none()
+
+    def get_username(self, email):
+        return email.split("@")[0]
 
 
 class User(AbstractUser, CreateAndUpdateModelMixin):

@@ -71,16 +71,16 @@
         class="w-[270px]"
       />
     </image-slider>
-  <card>
+  </card>
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
-import Card from './Card.vue';
-import ImageSlider from './ImageSlider.vue';
+import Card from "@/components/common/molecules/Card.vue";
+import ImageSlider from "@/components/common/molecules/ImageSlider.vue";
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'ItemSlider',
+  name: "ItemSlider",
   components: {
     Card,
     ImageSlider,
@@ -101,7 +101,7 @@ export default defineComponent({
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .container {
   padding: 2rem;

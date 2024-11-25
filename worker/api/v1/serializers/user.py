@@ -13,7 +13,7 @@ from rest_framework import serializers
 from rest_framework_jwt.settings import api_settings
 
 from api.authentications import JSONWebTokenAuthentication
-from api.models import Address, User
+from api.models import Address, District, Province, User, Ward
 from api.v1.serializers import EmailValidationSerializer
 
 
@@ -84,6 +84,13 @@ class UserSerializer(serializers.ModelSerializer):
 
         return instance
 
+    def to_representation(self, instance):
+        representation = super().to_representation(instance)
+        request = self.context.get("request", None)
+        if request and instance.avatar:
+            representation["avatar"] = request.build_absolute_uri(instance.avatar.url)
+        return representation
+
 
 class PasswordResetSerializer(serializers.Serializer):
     old_password = serializers.CharField(write_only=True)
@@ -140,6 +147,9 @@ class AddressSerializer(serializers.ModelSerializer):
     ward = serializers.CharField()
     address_1 = serializers.CharField()
     address_2 = serializers.CharField(required=False, allow_blank=True, allow_null=True)
+    display_address1 = serializers.CharField(
+        required=False, allow_blank=True, allow_null=True
+    )
     tel = serializers.CharField(max_length=10)
     representative = serializers.CharField()
 
@@ -156,11 +166,27 @@ class AddressSerializer(serializers.ModelSerializer):
             "address_2",
             "tel",
             "representative",
+            "display_address1",
         ]
 
     @transaction.atomic
     def create(self, validated_data):
         ModelClass = self.Meta.model
+        try:
+            province = Province.objects.get(code=validated_data.get("city", None)).name
+            district = District.objects.get(
+                code=validated_data.get("district", None)
+            ).name
+            ward = Ward.objects.get(code=validated_data.get("ward", None)).name
+            validated_data["display_address1"] = f"{ward}, {district}, {province}"
+
+        except (Province.DoesNotExist, District.DoesNotExist, Ward.DoesNotExist) as e:
+            msg = {
+                Province.DoesNotExist: _("Province does not exist"),
+                District.DoesNotExist: _("District does not exist"),
+                Ward.DoesNotExist: _("Ward does not exist"),
+            }
+            raise serializers.ValidationError(msg[type(e)])
         instance = ModelClass._default_manager.create(
             user=self.context["request"].user, **validated_data
         )
@@ -168,6 +194,21 @@ class AddressSerializer(serializers.ModelSerializer):
 
     @transaction.atomic
     def update(self, instance, validated_data):
+        try:
+            province = Province.objects.get(code=validated_data.pop("city", None)).name
+            district = District.objects.get(
+                code=validated_data.pop("district", None)
+            ).name
+            ward = Ward.objects.get(code=validated_data.pop("ward", None)).name
+            validated_data["display_address1"] = f"{ward}, {district}, {province}"
+
+        except (Province.DoesNotExist, District.DoesNotExist, Ward.DoesNotExist) as e:
+            msg = {
+                Province.DoesNotExist: _("Province does not exist"),
+                District.DoesNotExist: _("District does not exist"),
+                Ward.DoesNotExist: _("Ward does not exist"),
+            }
+            raise serializers.ValidationError(msg[type(e)])
         for attr, value in validated_data.items():
             setattr(instance, attr, value)
 

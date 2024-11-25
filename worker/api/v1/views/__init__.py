@@ -1,3 +1,4 @@
+from .address import DistrictViewSet, ProvinceViewSet, WardViewSet
 from .cart import CartItemViewSet, CartViewSet
 from .catetory import CategoryViewSet, SubCategoryViewSet
 from .order import (

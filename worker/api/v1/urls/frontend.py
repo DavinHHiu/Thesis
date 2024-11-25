@@ -5,17 +5,22 @@ from api.v1 import views
 
 router = SimpleRouter()
 
-router.register(r"products", views.ProductDisplayViewset, basename="product")
+router.register(r"addresses", views.AddressViewSet, basename="address")
+router.register(r"provinces", views.ProvinceViewSet, basename="province")
+router.register(r"districts", views.DistrictViewSet, basename="district")
+router.register(r"wards", views.WardViewSet, basename="ward")
+router.register(r"categories", views.CategoryViewSet, basename="category")
+router.register(r"subcategories", views.SubCategoryViewSet, basename="subcategory")
 router.register(r"carts", views.CartViewSet, basename="cart")
 router.register(r"cart-items", views.CartItemViewSet, basename="cart-item")
 router.register(r"orders", views.OrderDetailViewSet, basename="order")
 router.register(r"order-items", views.OrderItemViewSet, basename="order-item")
-router.register(r"addresses", views.AddressViewSet, basename="address")
-router.register(
-    r"shipment-methods", views.ShipmentMethodViewSet, basename="shipment-method"
-)
 router.register(
     r"payment-methods", views.PaymentMethodViewSet, basename="payment-method"
+)
+router.register(r"products", views.ProductDisplayViewset, basename="product")
+router.register(
+    r"shipment-methods", views.ShipmentMethodViewSet, basename="shipment-method"
 )
 router.register(r"users", views.UserViewSet, basename="users")
 

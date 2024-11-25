@@ -27,7 +27,7 @@ class SubCategoryViewSet(viewsets.ModelViewSet):
     serializer_class = SubCategorySerializer
     permission_classes = [AllowAny]
 
-    @action(detail=False, methods=["GET"], url_path="list-by-category")
+    @action(detail=False, methods=["GET"], url_path="by-category")
     def list_by_category(self, request):
         category_id = request.query_params.get("category_id")
 

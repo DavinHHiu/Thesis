@@ -1,3 +1,7 @@
+app:
+  name: Price Tag
+  slogan: Định giá phong cách, nâng tầm thời trang.
+
 inputLabel:
   common:
     name: Tên
@@ -181,3 +185,20 @@ changePasswordPage:
     success: Cập nhật thành công
     fail: Cập nhật mật khẩu thất bại
     error: Vui lòng điền đầy đủ tất cả các trường
+
+languageSettingsPage:
+  title: Khu vực
+  subtitle:
+    langauge: Cài đặt ngôn ngữ
+    currency: Cài đặt tiền tệ
+
+footer:
+  buttonLabel:
+    backToTop: Quay lại đầu trang
+    subscribe: Đăng ký
+  placeholder: Nhập email của bạn...
+  copyright: Bản quyền © 2024 Price Tag. Được cung cấp bởi Pink.
+  subtitle:
+    forHim: Dành cho nam
+    forHer: Dành cho nữ
+    subscribe: Đăng ký

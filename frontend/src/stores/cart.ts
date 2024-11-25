@@ -1,4 +1,5 @@
 import consts from "@/consts/consts";
+import { useOrderStore } from "@/stores/order";
 import {
   Address,
   Cart,
@@ -6,13 +7,9 @@ import {
   NewCartItem,
   PaymentMethod,
   ShipmentMethod,
-  User,
 } from "@/types/worker";
-import localStore from "@/utils/localStorage";
 import axios from "axios";
 import { defineStore } from "pinia";
-
-import { useOrderStore } from "./order";
 
 export const useCartStore = defineStore("cart", {
   state: () => {

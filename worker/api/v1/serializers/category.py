@@ -15,13 +15,13 @@ class CategorySerializer(serializers.ModelSerializer):
 
 class SubCategorySerializer(serializers.ModelSerializer):
     id = serializers.IntegerField(required=False)
-    category = CategorySerializer(required=False)
+    category_id = serializers.IntegerField(source="category.id")
     name = serializers.CharField(required=False)
     description = serializers.CharField(required=False)
 
     class Meta:
         model = SubCategory
-        fields = ["id", "category", "name", "description"]
+        fields = ["id", "category_id", "name", "description"]
 
     def create(self, validated_data):
         category_data = validated_data.pop("category")

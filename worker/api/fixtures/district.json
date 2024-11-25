@@ -1,0 +1,7052 @@
+[
+  {
+    "model": "api.District",
+    "pk": 1,
+    "fields": {
+      "name": "Quận Ba Đình",
+      "division_type": "quận",
+      "codename": "quan_ba_dinh",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 2,
+    "fields": {
+      "name": "Quận Hoàn Kiếm",
+      "division_type": "quận",
+      "codename": "quan_hoan_kiem",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 3,
+    "fields": {
+      "name": "Quận Tây Hồ",
+      "division_type": "quận",
+      "codename": "quan_tay_ho",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 4,
+    "fields": {
+      "name": "Quận Long Biên",
+      "division_type": "quận",
+      "codename": "quan_long_bien",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 5,
+    "fields": {
+      "name": "Quận Cầu Giấy",
+      "division_type": "quận",
+      "codename": "quan_cau_giay",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 6,
+    "fields": {
+      "name": "Quận Đống Đa",
+      "division_type": "quận",
+      "codename": "quan_dong_da",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 7,
+    "fields": {
+      "name": "Quận Hai Bà Trưng",
+      "division_type": "quận",
+      "codename": "quan_hai_ba_trung",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 8,
+    "fields": {
+      "name": "Quận Hoàng Mai",
+      "division_type": "quận",
+      "codename": "quan_hoang_mai",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 9,
+    "fields": {
+      "name": "Quận Thanh Xuân",
+      "division_type": "quận",
+      "codename": "quan_thanh_xuan",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 16,
+    "fields": {
+      "name": "Huyện Sóc Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_soc_son",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 17,
+    "fields": {
+      "name": "Huyện Đông Anh",
+      "division_type": "huyện",
+      "codename": "huyen_dong_anh",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 18,
+    "fields": {
+      "name": "Huyện Gia Lâm",
+      "division_type": "huyện",
+      "codename": "huyen_gia_lam",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 19,
+    "fields": {
+      "name": "Quận Nam Từ Liêm",
+      "division_type": "quận",
+      "codename": "quan_nam_tu_liem",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 20,
+    "fields": {
+      "name": "Huyện Thanh Trì",
+      "division_type": "huyện",
+      "codename": "huyen_thanh_tri",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 21,
+    "fields": {
+      "name": "Quận Bắc Từ Liêm",
+      "division_type": "quận",
+      "codename": "quan_bac_tu_liem",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 250,
+    "fields": {
+      "name": "Huyện Mê Linh",
+      "division_type": "huyện",
+      "codename": "huyen_me_linh",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 268,
+    "fields": {
+      "name": "Quận Hà Đông",
+      "division_type": "quận",
+      "codename": "quan_ha_dong",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 269,
+    "fields": {
+      "name": "Thị xã Sơn Tây",
+      "division_type": "thị xã",
+      "codename": "thi_xa_son_tay",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 271,
+    "fields": {
+      "name": "Huyện Ba Vì",
+      "division_type": "huyện",
+      "codename": "huyen_ba_vi",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 272,
+    "fields": {
+      "name": "Huyện Phúc Thọ",
+      "division_type": "huyện",
+      "codename": "huyen_phuc_tho",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 273,
+    "fields": {
+      "name": "Huyện Đan Phượng",
+      "division_type": "huyện",
+      "codename": "huyen_dan_phuong",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 274,
+    "fields": {
+      "name": "Huyện Hoài Đức",
+      "division_type": "huyện",
+      "codename": "huyen_hoai_duc",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 275,
+    "fields": {
+      "name": "Huyện Quốc Oai",
+      "division_type": "huyện",
+      "codename": "huyen_quoc_oai",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 276,
+    "fields": {
+      "name": "Huyện Thạch Thất",
+      "division_type": "huyện",
+      "codename": "huyen_thach_that",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 277,
+    "fields": {
+      "name": "Huyện Chương Mỹ",
+      "division_type": "huyện",
+      "codename": "huyen_chuong_my",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 278,
+    "fields": {
+      "name": "Huyện Thanh Oai",
+      "division_type": "huyện",
+      "codename": "huyen_thanh_oai",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 279,
+    "fields": {
+      "name": "Huyện Thường Tín",
+      "division_type": "huyện",
+      "codename": "huyen_thuong_tin",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 280,
+    "fields": {
+      "name": "Huyện Phú Xuyên",
+      "division_type": "huyện",
+      "codename": "huyen_phu_xuyen",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 281,
+    "fields": {
+      "name": "Huyện Ứng Hòa",
+      "division_type": "huyện",
+      "codename": "huyen_ung_hoa",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 282,
+    "fields": {
+      "name": "Huyện Mỹ Đức",
+      "division_type": "huyện",
+      "codename": "huyen_my_duc",
+      "province": 1
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 24,
+    "fields": {
+      "name": "Thành phố Hà Giang",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_ha_giang",
+      "province": 2
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 26,
+    "fields": {
+      "name": "Huyện Đồng Văn",
+      "division_type": "huyện",
+      "codename": "huyen_dong_van",
+      "province": 2
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 27,
+    "fields": {
+      "name": "Huyện Mèo Vạc",
+      "division_type": "huyện",
+      "codename": "huyen_meo_vac",
+      "province": 2
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 28,
+    "fields": {
+      "name": "Huyện Yên Minh",
+      "division_type": "huyện",
+      "codename": "huyen_yen_minh",
+      "province": 2
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 29,
+    "fields": {
+      "name": "Huyện Quản Bạ",
+      "division_type": "huyện",
+      "codename": "huyen_quan_ba",
+      "province": 2
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 30,
+    "fields": {
+      "name": "Huyện Vị Xuyên",
+      "division_type": "huyện",
+      "codename": "huyen_vi_xuyen",
+      "province": 2
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 31,
+    "fields": {
+      "name": "Huyện Bắc Mê",
+      "division_type": "huyện",
+      "codename": "huyen_bac_me",
+      "province": 2
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 32,
+    "fields": {
+      "name": "Huyện Hoàng Su Phì",
+      "division_type": "huyện",
+      "codename": "huyen_hoang_su_phi",
+      "province": 2
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 33,
+    "fields": {
+      "name": "Huyện Xín Mần",
+      "division_type": "huyện",
+      "codename": "huyen_xin_man",
+      "province": 2
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 34,
+    "fields": {
+      "name": "Huyện Bắc Quang",
+      "division_type": "huyện",
+      "codename": "huyen_bac_quang",
+      "province": 2
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 35,
+    "fields": {
+      "name": "Huyện Quang Bình",
+      "division_type": "huyện",
+      "codename": "huyen_quang_binh",
+      "province": 2
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 40,
+    "fields": {
+      "name": "Thành phố Cao Bằng",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_cao_bang",
+      "province": 4
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 42,
+    "fields": {
+      "name": "Huyện Bảo Lâm",
+      "division_type": "huyện",
+      "codename": "huyen_bao_lam",
+      "province": 4
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 43,
+    "fields": {
+      "name": "Huyện Bảo Lạc",
+      "division_type": "huyện",
+      "codename": "huyen_bao_lac",
+      "province": 4
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 45,
+    "fields": {
+      "name": "Huyện Hà Quảng",
+      "division_type": "huyện",
+      "codename": "huyen_ha_quang",
+      "province": 4
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 47,
+    "fields": {
+      "name": "Huyện Trùng Khánh",
+      "division_type": "huyện",
+      "codename": "huyen_trung_khanh",
+      "province": 4
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 48,
+    "fields": {
+      "name": "Huyện Hạ Lang",
+      "division_type": "huyện",
+      "codename": "huyen_ha_lang",
+      "province": 4
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 49,
+    "fields": {
+      "name": "Huyện Quảng Hòa",
+      "division_type": "huyện",
+      "codename": "huyen_quang_hoa",
+      "province": 4
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 51,
+    "fields": {
+      "name": "Huyện Hoà An",
+      "division_type": "huyện",
+      "codename": "huyen_hoa_an",
+      "province": 4
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 52,
+    "fields": {
+      "name": "Huyện Nguyên Bình",
+      "division_type": "huyện",
+      "codename": "huyen_nguyen_binh",
+      "province": 4
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 53,
+    "fields": {
+      "name": "Huyện Thạch An",
+      "division_type": "huyện",
+      "codename": "huyen_thach_an",
+      "province": 4
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 58,
+    "fields": {
+      "name": "Thành Phố Bắc Kạn",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_bac_kan",
+      "province": 6
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 60,
+    "fields": {
+      "name": "Huyện Pác Nặm",
+      "division_type": "huyện",
+      "codename": "huyen_pac_nam",
+      "province": 6
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 61,
+    "fields": {
+      "name": "Huyện Ba Bể",
+      "division_type": "huyện",
+      "codename": "huyen_ba_be",
+      "province": 6
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 62,
+    "fields": {
+      "name": "Huyện Ngân Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_ngan_son",
+      "province": 6
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 63,
+    "fields": {
+      "name": "Huyện Bạch Thông",
+      "division_type": "huyện",
+      "codename": "huyen_bach_thong",
+      "province": 6
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 64,
+    "fields": {
+      "name": "Huyện Chợ Đồn",
+      "division_type": "huyện",
+      "codename": "huyen_cho_don",
+      "province": 6
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 65,
+    "fields": {
+      "name": "Huyện Chợ Mới",
+      "division_type": "huyện",
+      "codename": "huyen_cho_moi",
+      "province": 6
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 66,
+    "fields": {
+      "name": "Huyện Na Rì",
+      "division_type": "huyện",
+      "codename": "huyen_na_ri",
+      "province": 6
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 70,
+    "fields": {
+      "name": "Thành phố Tuyên Quang",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_tuyen_quang",
+      "province": 8
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 71,
+    "fields": {
+      "name": "Huyện Lâm Bình",
+      "division_type": "huyện",
+      "codename": "huyen_lam_binh",
+      "province": 8
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 72,
+    "fields": {
+      "name": "Huyện Na Hang",
+      "division_type": "huyện",
+      "codename": "huyen_na_hang",
+      "province": 8
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 73,
+    "fields": {
+      "name": "Huyện Chiêm Hóa",
+      "division_type": "huyện",
+      "codename": "huyen_chiem_hoa",
+      "province": 8
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 74,
+    "fields": {
+      "name": "Huyện Hàm Yên",
+      "division_type": "huyện",
+      "codename": "huyen_ham_yen",
+      "province": 8
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 75,
+    "fields": {
+      "name": "Huyện Yên Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_yen_son",
+      "province": 8
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 76,
+    "fields": {
+      "name": "Huyện Sơn Dương",
+      "division_type": "huyện",
+      "codename": "huyen_son_duong",
+      "province": 8
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 80,
+    "fields": {
+      "name": "Thành phố Lào Cai",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_lao_cai",
+      "province": 10
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 82,
+    "fields": {
+      "name": "Huyện Bát Xát",
+      "division_type": "huyện",
+      "codename": "huyen_bat_xat",
+      "province": 10
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 83,
+    "fields": {
+      "name": "Huyện Mường Khương",
+      "division_type": "huyện",
+      "codename": "huyen_muong_khuong",
+      "province": 10
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 84,
+    "fields": {
+      "name": "Huyện Si Ma Cai",
+      "division_type": "huyện",
+      "codename": "huyen_si_ma_cai",
+      "province": 10
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 85,
+    "fields": {
+      "name": "Huyện Bắc Hà",
+      "division_type": "huyện",
+      "codename": "huyen_bac_ha",
+      "province": 10
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 86,
+    "fields": {
+      "name": "Huyện Bảo Thắng",
+      "division_type": "huyện",
+      "codename": "huyen_bao_thang",
+      "province": 10
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 87,
+    "fields": {
+      "name": "Huyện Bảo Yên",
+      "division_type": "huyện",
+      "codename": "huyen_bao_yen",
+      "province": 10
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 88,
+    "fields": {
+      "name": "Thị xã Sa Pa",
+      "division_type": "thị xã",
+      "codename": "thi_xa_sa_pa",
+      "province": 10
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 89,
+    "fields": {
+      "name": "Huyện Văn Bàn",
+      "division_type": "huyện",
+      "codename": "huyen_van_ban",
+      "province": 10
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 94,
+    "fields": {
+      "name": "Thành phố Điện Biên Phủ",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_dien_bien_phu",
+      "province": 11
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 95,
+    "fields": {
+      "name": "Thị xã Mường Lay",
+      "division_type": "thị xã",
+      "codename": "thi_xa_muong_lay",
+      "province": 11
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 96,
+    "fields": {
+      "name": "Huyện Mường Nhé",
+      "division_type": "huyện",
+      "codename": "huyen_muong_nhe",
+      "province": 11
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 97,
+    "fields": {
+      "name": "Huyện Mường Chà",
+      "division_type": "huyện",
+      "codename": "huyen_muong_cha",
+      "province": 11
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 98,
+    "fields": {
+      "name": "Huyện Tủa Chùa",
+      "division_type": "huyện",
+      "codename": "huyen_tua_chua",
+      "province": 11
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 99,
+    "fields": {
+      "name": "Huyện Tuần Giáo",
+      "division_type": "huyện",
+      "codename": "huyen_tuan_giao",
+      "province": 11
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 100,
+    "fields": {
+      "name": "Huyện Điện Biên",
+      "division_type": "huyện",
+      "codename": "huyen_dien_bien",
+      "province": 11
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 101,
+    "fields": {
+      "name": "Huyện Điện Biên Đông",
+      "division_type": "huyện",
+      "codename": "huyen_dien_bien_dong",
+      "province": 11
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 102,
+    "fields": {
+      "name": "Huyện Mường Ảng",
+      "division_type": "huyện",
+      "codename": "huyen_muong_ang",
+      "province": 11
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 103,
+    "fields": {
+      "name": "Huyện Nậm Pồ",
+      "division_type": "huyện",
+      "codename": "huyen_nam_po",
+      "province": 11
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 105,
+    "fields": {
+      "name": "Thành phố Lai Châu",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_lai_chau",
+      "province": 12
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 106,
+    "fields": {
+      "name": "Huyện Tam Đường",
+      "division_type": "huyện",
+      "codename": "huyen_tam_duong",
+      "province": 12
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 107,
+    "fields": {
+      "name": "Huyện Mường Tè",
+      "division_type": "huyện",
+      "codename": "huyen_muong_te",
+      "province": 12
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 108,
+    "fields": {
+      "name": "Huyện Sìn Hồ",
+      "division_type": "huyện",
+      "codename": "huyen_sin_ho",
+      "province": 12
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 109,
+    "fields": {
+      "name": "Huyện Phong Thổ",
+      "division_type": "huyện",
+      "codename": "huyen_phong_tho",
+      "province": 12
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 110,
+    "fields": {
+      "name": "Huyện Than Uyên",
+      "division_type": "huyện",
+      "codename": "huyen_than_uyen",
+      "province": 12
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 111,
+    "fields": {
+      "name": "Huyện Tân Uyên",
+      "division_type": "huyện",
+      "codename": "huyen_tan_uyen",
+      "province": 12
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 112,
+    "fields": {
+      "name": "Huyện Nậm Nhùn",
+      "division_type": "huyện",
+      "codename": "huyen_nam_nhun",
+      "province": 12
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 116,
+    "fields": {
+      "name": "Thành phố Sơn La",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_son_la",
+      "province": 14
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 118,
+    "fields": {
+      "name": "Huyện Quỳnh Nhai",
+      "division_type": "huyện",
+      "codename": "huyen_quynh_nhai",
+      "province": 14
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 119,
+    "fields": {
+      "name": "Huyện Thuận Châu",
+      "division_type": "huyện",
+      "codename": "huyen_thuan_chau",
+      "province": 14
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 120,
+    "fields": {
+      "name": "Huyện Mường La",
+      "division_type": "huyện",
+      "codename": "huyen_muong_la",
+      "province": 14
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 121,
+    "fields": {
+      "name": "Huyện Bắc Yên",
+      "division_type": "huyện",
+      "codename": "huyen_bac_yen",
+      "province": 14
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 122,
+    "fields": {
+      "name": "Huyện Phù Yên",
+      "division_type": "huyện",
+      "codename": "huyen_phu_yen",
+      "province": 14
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 123,
+    "fields": {
+      "name": "Huyện Mộc Châu",
+      "division_type": "huyện",
+      "codename": "huyen_moc_chau",
+      "province": 14
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 124,
+    "fields": {
+      "name": "Huyện Yên Châu",
+      "division_type": "huyện",
+      "codename": "huyen_yen_chau",
+      "province": 14
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 125,
+    "fields": {
+      "name": "Huyện Mai Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_mai_son",
+      "province": 14
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 126,
+    "fields": {
+      "name": "Huyện Sông Mã",
+      "division_type": "huyện",
+      "codename": "huyen_song_ma",
+      "province": 14
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 127,
+    "fields": {
+      "name": "Huyện Sốp Cộp",
+      "division_type": "huyện",
+      "codename": "huyen_sop_cop",
+      "province": 14
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 128,
+    "fields": {
+      "name": "Huyện Vân Hồ",
+      "division_type": "huyện",
+      "codename": "huyen_van_ho",
+      "province": 14
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 132,
+    "fields": {
+      "name": "Thành phố Yên Bái",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_yen_bai",
+      "province": 15
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 133,
+    "fields": {
+      "name": "Thị xã Nghĩa Lộ",
+      "division_type": "thị xã",
+      "codename": "thi_xa_nghia_lo",
+      "province": 15
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 135,
+    "fields": {
+      "name": "Huyện Lục Yên",
+      "division_type": "huyện",
+      "codename": "huyen_luc_yen",
+      "province": 15
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 136,
+    "fields": {
+      "name": "Huyện Văn Yên",
+      "division_type": "huyện",
+      "codename": "huyen_van_yen",
+      "province": 15
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 137,
+    "fields": {
+      "name": "Huyện Mù Căng Chải",
+      "division_type": "huyện",
+      "codename": "huyen_mu_cang_chai",
+      "province": 15
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 138,
+    "fields": {
+      "name": "Huyện Trấn Yên",
+      "division_type": "huyện",
+      "codename": "huyen_tran_yen",
+      "province": 15
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 139,
+    "fields": {
+      "name": "Huyện Trạm Tấu",
+      "division_type": "huyện",
+      "codename": "huyen_tram_tau",
+      "province": 15
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 140,
+    "fields": {
+      "name": "Huyện Văn Chấn",
+      "division_type": "huyện",
+      "codename": "huyen_van_chan",
+      "province": 15
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 141,
+    "fields": {
+      "name": "Huyện Yên Bình",
+      "division_type": "huyện",
+      "codename": "huyen_yen_binh",
+      "province": 15
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 148,
+    "fields": {
+      "name": "Thành phố Hòa Bình",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_hoa_binh",
+      "province": 17
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 150,
+    "fields": {
+      "name": "Huyện Đà Bắc",
+      "division_type": "huyện",
+      "codename": "huyen_da_bac",
+      "province": 17
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 152,
+    "fields": {
+      "name": "Huyện Lương Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_luong_son",
+      "province": 17
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 153,
+    "fields": {
+      "name": "Huyện Kim Bôi",
+      "division_type": "huyện",
+      "codename": "huyen_kim_boi",
+      "province": 17
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 154,
+    "fields": {
+      "name": "Huyện Cao Phong",
+      "division_type": "huyện",
+      "codename": "huyen_cao_phong",
+      "province": 17
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 155,
+    "fields": {
+      "name": "Huyện Tân Lạc",
+      "division_type": "huyện",
+      "codename": "huyen_tan_lac",
+      "province": 17
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 156,
+    "fields": {
+      "name": "Huyện Mai Châu",
+      "division_type": "huyện",
+      "codename": "huyen_mai_chau",
+      "province": 17
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 157,
+    "fields": {
+      "name": "Huyện Lạc Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_lac_son",
+      "province": 17
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 158,
+    "fields": {
+      "name": "Huyện Yên Thủy",
+      "division_type": "huyện",
+      "codename": "huyen_yen_thuy",
+      "province": 17
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 159,
+    "fields": {
+      "name": "Huyện Lạc Thủy",
+      "division_type": "huyện",
+      "codename": "huyen_lac_thuy",
+      "province": 17
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 164,
+    "fields": {
+      "name": "Thành phố Thái Nguyên",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_thai_nguyen",
+      "province": 19
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 165,
+    "fields": {
+      "name": "Thành phố Sông Công",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_song_cong",
+      "province": 19
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 167,
+    "fields": {
+      "name": "Huyện Định Hóa",
+      "division_type": "huyện",
+      "codename": "huyen_dinh_hoa",
+      "province": 19
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 168,
+    "fields": {
+      "name": "Huyện Phú Lương",
+      "division_type": "huyện",
+      "codename": "huyen_phu_luong",
+      "province": 19
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 169,
+    "fields": {
+      "name": "Huyện Đồng Hỷ",
+      "division_type": "huyện",
+      "codename": "huyen_dong_hy",
+      "province": 19
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 170,
+    "fields": {
+      "name": "Huyện Võ Nhai",
+      "division_type": "huyện",
+      "codename": "huyen_vo_nhai",
+      "province": 19
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 171,
+    "fields": {
+      "name": "Huyện Đại Từ",
+      "division_type": "huyện",
+      "codename": "huyen_dai_tu",
+      "province": 19
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 172,
+    "fields": {
+      "name": "Thành phố Phổ Yên",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_pho_yen",
+      "province": 19
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 173,
+    "fields": {
+      "name": "Huyện Phú Bình",
+      "division_type": "huyện",
+      "codename": "huyen_phu_binh",
+      "province": 19
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 178,
+    "fields": {
+      "name": "Thành phố Lạng Sơn",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_lang_son",
+      "province": 20
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 180,
+    "fields": {
+      "name": "Huyện Tràng Định",
+      "division_type": "huyện",
+      "codename": "huyen_trang_dinh",
+      "province": 20
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 181,
+    "fields": {
+      "name": "Huyện Bình Gia",
+      "division_type": "huyện",
+      "codename": "huyen_binh_gia",
+      "province": 20
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 182,
+    "fields": {
+      "name": "Huyện Văn Lãng",
+      "division_type": "huyện",
+      "codename": "huyen_van_lang",
+      "province": 20
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 183,
+    "fields": {
+      "name": "Huyện Cao Lộc",
+      "division_type": "huyện",
+      "codename": "huyen_cao_loc",
+      "province": 20
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 184,
+    "fields": {
+      "name": "Huyện Văn Quan",
+      "division_type": "huyện",
+      "codename": "huyen_van_quan",
+      "province": 20
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 185,
+    "fields": {
+      "name": "Huyện Bắc Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_bac_son",
+      "province": 20
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 186,
+    "fields": {
+      "name": "Huyện Hữu Lũng",
+      "division_type": "huyện",
+      "codename": "huyen_huu_lung",
+      "province": 20
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 187,
+    "fields": {
+      "name": "Huyện Chi Lăng",
+      "division_type": "huyện",
+      "codename": "huyen_chi_lang",
+      "province": 20
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 188,
+    "fields": {
+      "name": "Huyện Lộc Bình",
+      "division_type": "huyện",
+      "codename": "huyen_loc_binh",
+      "province": 20
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 189,
+    "fields": {
+      "name": "Huyện Đình Lập",
+      "division_type": "huyện",
+      "codename": "huyen_dinh_lap",
+      "province": 20
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 193,
+    "fields": {
+      "name": "Thành phố Hạ Long",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_ha_long",
+      "province": 22
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 194,
+    "fields": {
+      "name": "Thành phố Móng Cái",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_mong_cai",
+      "province": 22
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 195,
+    "fields": {
+      "name": "Thành phố Cẩm Phả",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_cam_pha",
+      "province": 22
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 196,
+    "fields": {
+      "name": "Thành phố Uông Bí",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_uong_bi",
+      "province": 22
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 198,
+    "fields": {
+      "name": "Huyện Bình Liêu",
+      "division_type": "huyện",
+      "codename": "huyen_binh_lieu",
+      "province": 22
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 199,
+    "fields": {
+      "name": "Huyện Tiên Yên",
+      "division_type": "huyện",
+      "codename": "huyen_tien_yen",
+      "province": 22
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 200,
+    "fields": {
+      "name": "Huyện Đầm Hà",
+      "division_type": "huyện",
+      "codename": "huyen_dam_ha",
+      "province": 22
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 201,
+    "fields": {
+      "name": "Huyện Hải Hà",
+      "division_type": "huyện",
+      "codename": "huyen_hai_ha",
+      "province": 22
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 202,
+    "fields": {
+      "name": "Huyện Ba Chẽ",
+      "division_type": "huyện",
+      "codename": "huyen_ba_che",
+      "province": 22
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 203,
+    "fields": {
+      "name": "Huyện Vân Đồn",
+      "division_type": "huyện",
+      "codename": "huyen_van_don",
+      "province": 22
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 205,
+    "fields": {
+      "name": "Thị xã Đông Triều",
+      "division_type": "thị xã",
+      "codename": "thi_xa_dong_trieu",
+      "province": 22
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 206,
+    "fields": {
+      "name": "Thị xã Quảng Yên",
+      "division_type": "thị xã",
+      "codename": "thi_xa_quang_yen",
+      "province": 22
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 207,
+    "fields": {
+      "name": "Huyện Cô Tô",
+      "division_type": "huyện",
+      "codename": "huyen_co_to",
+      "province": 22
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 213,
+    "fields": {
+      "name": "Thành phố Bắc Giang",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_bac_giang",
+      "province": 24
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 215,
+    "fields": {
+      "name": "Huyện Yên Thế",
+      "division_type": "huyện",
+      "codename": "huyen_yen_the",
+      "province": 24
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 216,
+    "fields": {
+      "name": "Huyện Tân Yên",
+      "division_type": "huyện",
+      "codename": "huyen_tan_yen",
+      "province": 24
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 217,
+    "fields": {
+      "name": "Huyện Lạng Giang",
+      "division_type": "huyện",
+      "codename": "huyen_lang_giang",
+      "province": 24
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 218,
+    "fields": {
+      "name": "Huyện Lục Nam",
+      "division_type": "huyện",
+      "codename": "huyen_luc_nam",
+      "province": 24
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 219,
+    "fields": {
+      "name": "Huyện Lục Ngạn",
+      "division_type": "huyện",
+      "codename": "huyen_luc_ngan",
+      "province": 24
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 220,
+    "fields": {
+      "name": "Huyện Sơn Động",
+      "division_type": "huyện",
+      "codename": "huyen_son_dong",
+      "province": 24
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 221,
+    "fields": {
+      "name": "Huyện Yên Dũng",
+      "division_type": "huyện",
+      "codename": "huyen_yen_dung",
+      "province": 24
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 222,
+    "fields": {
+      "name": "Huyện Việt Yên",
+      "division_type": "huyện",
+      "codename": "huyen_viet_yen",
+      "province": 24
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 223,
+    "fields": {
+      "name": "Huyện Hiệp Hòa",
+      "division_type": "huyện",
+      "codename": "huyen_hiep_hoa",
+      "province": 24
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 227,
+    "fields": {
+      "name": "Thành phố Việt Trì",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_viet_tri",
+      "province": 25
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 228,
+    "fields": {
+      "name": "Thị xã Phú Thọ",
+      "division_type": "thị xã",
+      "codename": "thi_xa_phu_tho",
+      "province": 25
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 230,
+    "fields": {
+      "name": "Huyện Đoan Hùng",
+      "division_type": "huyện",
+      "codename": "huyen_doan_hung",
+      "province": 25
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 231,
+    "fields": {
+      "name": "Huyện Hạ Hoà",
+      "division_type": "huyện",
+      "codename": "huyen_ha_hoa",
+      "province": 25
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 232,
+    "fields": {
+      "name": "Huyện Thanh Ba",
+      "division_type": "huyện",
+      "codename": "huyen_thanh_ba",
+      "province": 25
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 233,
+    "fields": {
+      "name": "Huyện Phù Ninh",
+      "division_type": "huyện",
+      "codename": "huyen_phu_ninh",
+      "province": 25
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 234,
+    "fields": {
+      "name": "Huyện Yên Lập",
+      "division_type": "huyện",
+      "codename": "huyen_yen_lap",
+      "province": 25
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 235,
+    "fields": {
+      "name": "Huyện Cẩm Khê",
+      "division_type": "huyện",
+      "codename": "huyen_cam_khe",
+      "province": 25
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 236,
+    "fields": {
+      "name": "Huyện Tam Nông",
+      "division_type": "huyện",
+      "codename": "huyen_tam_nong",
+      "province": 25
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 237,
+    "fields": {
+      "name": "Huyện Lâm Thao",
+      "division_type": "huyện",
+      "codename": "huyen_lam_thao",
+      "province": 25
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 238,
+    "fields": {
+      "name": "Huyện Thanh Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_thanh_son",
+      "province": 25
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 239,
+    "fields": {
+      "name": "Huyện Thanh Thuỷ",
+      "division_type": "huyện",
+      "codename": "huyen_thanh_thuy",
+      "province": 25
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 240,
+    "fields": {
+      "name": "Huyện Tân Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_tan_son",
+      "province": 25
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 243,
+    "fields": {
+      "name": "Thành phố Vĩnh Yên",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_vinh_yen",
+      "province": 26
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 244,
+    "fields": {
+      "name": "Thành phố Phúc Yên",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_phuc_yen",
+      "province": 26
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 246,
+    "fields": {
+      "name": "Huyện Lập Thạch",
+      "division_type": "huyện",
+      "codename": "huyen_lap_thach",
+      "province": 26
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 247,
+    "fields": {
+      "name": "Huyện Tam Dương",
+      "division_type": "huyện",
+      "codename": "huyen_tam_duong",
+      "province": 26
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 248,
+    "fields": {
+      "name": "Huyện Tam Đảo",
+      "division_type": "huyện",
+      "codename": "huyen_tam_dao",
+      "province": 26
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 249,
+    "fields": {
+      "name": "Huyện Bình Xuyên",
+      "division_type": "huyện",
+      "codename": "huyen_binh_xuyen",
+      "province": 26
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 251,
+    "fields": {
+      "name": "Huyện Yên Lạc",
+      "division_type": "huyện",
+      "codename": "huyen_yen_lac",
+      "province": 26
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 252,
+    "fields": {
+      "name": "Huyện Vĩnh Tường",
+      "division_type": "huyện",
+      "codename": "huyen_vinh_tuong",
+      "province": 26
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 253,
+    "fields": {
+      "name": "Huyện Sông Lô",
+      "division_type": "huyện",
+      "codename": "huyen_song_lo",
+      "province": 26
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 256,
+    "fields": {
+      "name": "Thành phố Bắc Ninh",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_bac_ninh",
+      "province": 27
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 258,
+    "fields": {
+      "name": "Huyện Yên Phong",
+      "division_type": "huyện",
+      "codename": "huyen_yen_phong",
+      "province": 27
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 259,
+    "fields": {
+      "name": "Thị xã Quế Võ",
+      "division_type": "thị xã",
+      "codename": "thi_xa_que_vo",
+      "province": 27
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 260,
+    "fields": {
+      "name": "Huyện Tiên Du",
+      "division_type": "huyện",
+      "codename": "huyen_tien_du",
+      "province": 27
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 261,
+    "fields": {
+      "name": "Thành phố Từ Sơn",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_tu_son",
+      "province": 27
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 262,
+    "fields": {
+      "name": "Thị xã Thuận Thành",
+      "division_type": "thị xã",
+      "codename": "thi_xa_thuan_thanh",
+      "province": 27
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 263,
+    "fields": {
+      "name": "Huyện Gia Bình",
+      "division_type": "huyện",
+      "codename": "huyen_gia_binh",
+      "province": 27
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 264,
+    "fields": {
+      "name": "Huyện Lương Tài",
+      "division_type": "huyện",
+      "codename": "huyen_luong_tai",
+      "province": 27
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 288,
+    "fields": {
+      "name": "Thành phố Hải Dương",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_hai_duong",
+      "province": 30
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 290,
+    "fields": {
+      "name": "Thành phố Chí Linh",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_chi_linh",
+      "province": 30
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 291,
+    "fields": {
+      "name": "Huyện Nam Sách",
+      "division_type": "huyện",
+      "codename": "huyen_nam_sach",
+      "province": 30
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 292,
+    "fields": {
+      "name": "Thị xã Kinh Môn",
+      "division_type": "thị xã",
+      "codename": "thi_xa_kinh_mon",
+      "province": 30
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 293,
+    "fields": {
+      "name": "Huyện Kim Thành",
+      "division_type": "huyện",
+      "codename": "huyen_kim_thanh",
+      "province": 30
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 294,
+    "fields": {
+      "name": "Huyện Thanh Hà",
+      "division_type": "huyện",
+      "codename": "huyen_thanh_ha",
+      "province": 30
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 295,
+    "fields": {
+      "name": "Huyện Cẩm Giàng",
+      "division_type": "huyện",
+      "codename": "huyen_cam_giang",
+      "province": 30
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 296,
+    "fields": {
+      "name": "Huyện Bình Giang",
+      "division_type": "huyện",
+      "codename": "huyen_binh_giang",
+      "province": 30
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 297,
+    "fields": {
+      "name": "Huyện Gia Lộc",
+      "division_type": "huyện",
+      "codename": "huyen_gia_loc",
+      "province": 30
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 298,
+    "fields": {
+      "name": "Huyện Tứ Kỳ",
+      "division_type": "huyện",
+      "codename": "huyen_tu_ky",
+      "province": 30
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 299,
+    "fields": {
+      "name": "Huyện Ninh Giang",
+      "division_type": "huyện",
+      "codename": "huyen_ninh_giang",
+      "province": 30
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 300,
+    "fields": {
+      "name": "Huyện Thanh Miện",
+      "division_type": "huyện",
+      "codename": "huyen_thanh_mien",
+      "province": 30
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 303,
+    "fields": {
+      "name": "Quận Hồng Bàng",
+      "division_type": "quận",
+      "codename": "quan_hong_bang",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 304,
+    "fields": {
+      "name": "Quận Ngô Quyền",
+      "division_type": "quận",
+      "codename": "quan_ngo_quyen",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 305,
+    "fields": {
+      "name": "Quận Lê Chân",
+      "division_type": "quận",
+      "codename": "quan_le_chan",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 306,
+    "fields": {
+      "name": "Quận Hải An",
+      "division_type": "quận",
+      "codename": "quan_hai_an",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 307,
+    "fields": {
+      "name": "Quận Kiến An",
+      "division_type": "quận",
+      "codename": "quan_kien_an",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 308,
+    "fields": {
+      "name": "Quận Đồ Sơn",
+      "division_type": "quận",
+      "codename": "quan_do_son",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 309,
+    "fields": {
+      "name": "Quận Dương Kinh",
+      "division_type": "quận",
+      "codename": "quan_duong_kinh",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 311,
+    "fields": {
+      "name": "Huyện Thuỷ Nguyên",
+      "division_type": "huyện",
+      "codename": "huyen_thuy_nguyen",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 312,
+    "fields": {
+      "name": "Huyện An Dương",
+      "division_type": "huyện",
+      "codename": "huyen_an_duong",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 313,
+    "fields": {
+      "name": "Huyện An Lão",
+      "division_type": "huyện",
+      "codename": "huyen_an_lao",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 314,
+    "fields": {
+      "name": "Huyện Kiến Thuỵ",
+      "division_type": "huyện",
+      "codename": "huyen_kien_thuy",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 315,
+    "fields": {
+      "name": "Huyện Tiên Lãng",
+      "division_type": "huyện",
+      "codename": "huyen_tien_lang",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 316,
+    "fields": {
+      "name": "Huyện Vĩnh Bảo",
+      "division_type": "huyện",
+      "codename": "huyen_vinh_bao",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 317,
+    "fields": {
+      "name": "Huyện Cát Hải",
+      "division_type": "huyện",
+      "codename": "huyen_cat_hai",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 318,
+    "fields": {
+      "name": "Huyện Bạch Long Vĩ",
+      "division_type": "huyện",
+      "codename": "huyen_bach_long_vi",
+      "province": 31
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 323,
+    "fields": {
+      "name": "Thành phố Hưng Yên",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_hung_yen",
+      "province": 33
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 325,
+    "fields": {
+      "name": "Huyện Văn Lâm",
+      "division_type": "huyện",
+      "codename": "huyen_van_lam",
+      "province": 33
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 326,
+    "fields": {
+      "name": "Huyện Văn Giang",
+      "division_type": "huyện",
+      "codename": "huyen_van_giang",
+      "province": 33
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 327,
+    "fields": {
+      "name": "Huyện Yên Mỹ",
+      "division_type": "huyện",
+      "codename": "huyen_yen_my",
+      "province": 33
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 328,
+    "fields": {
+      "name": "Thị xã Mỹ Hào",
+      "division_type": "thị xã",
+      "codename": "thi_xa_my_hao",
+      "province": 33
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 329,
+    "fields": {
+      "name": "Huyện Ân Thi",
+      "division_type": "huyện",
+      "codename": "huyen_an_thi",
+      "province": 33
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 330,
+    "fields": {
+      "name": "Huyện Khoái Châu",
+      "division_type": "huyện",
+      "codename": "huyen_khoai_chau",
+      "province": 33
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 331,
+    "fields": {
+      "name": "Huyện Kim Động",
+      "division_type": "huyện",
+      "codename": "huyen_kim_dong",
+      "province": 33
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 332,
+    "fields": {
+      "name": "Huyện Tiên Lữ",
+      "division_type": "huyện",
+      "codename": "huyen_tien_lu",
+      "province": 33
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 333,
+    "fields": {
+      "name": "Huyện Phù Cừ",
+      "division_type": "huyện",
+      "codename": "huyen_phu_cu",
+      "province": 33
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 336,
+    "fields": {
+      "name": "Thành phố Thái Bình",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_thai_binh",
+      "province": 34
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 338,
+    "fields": {
+      "name": "Huyện Quỳnh Phụ",
+      "division_type": "huyện",
+      "codename": "huyen_quynh_phu",
+      "province": 34
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 339,
+    "fields": {
+      "name": "Huyện Hưng Hà",
+      "division_type": "huyện",
+      "codename": "huyen_hung_ha",
+      "province": 34
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 340,
+    "fields": {
+      "name": "Huyện Đông Hưng",
+      "division_type": "huyện",
+      "codename": "huyen_dong_hung",
+      "province": 34
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 341,
+    "fields": {
+      "name": "Huyện Thái Thụy",
+      "division_type": "huyện",
+      "codename": "huyen_thai_thuy",
+      "province": 34
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 342,
+    "fields": {
+      "name": "Huyện Tiền Hải",
+      "division_type": "huyện",
+      "codename": "huyen_tien_hai",
+      "province": 34
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 343,
+    "fields": {
+      "name": "Huyện Kiến Xương",
+      "division_type": "huyện",
+      "codename": "huyen_kien_xuong",
+      "province": 34
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 344,
+    "fields": {
+      "name": "Huyện Vũ Thư",
+      "division_type": "huyện",
+      "codename": "huyen_vu_thu",
+      "province": 34
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 347,
+    "fields": {
+      "name": "Thành phố Phủ Lý",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_phu_ly",
+      "province": 35
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 349,
+    "fields": {
+      "name": "Thị xã Duy Tiên",
+      "division_type": "thị xã",
+      "codename": "thi_xa_duy_tien",
+      "province": 35
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 350,
+    "fields": {
+      "name": "Huyện Kim Bảng",
+      "division_type": "huyện",
+      "codename": "huyen_kim_bang",
+      "province": 35
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 351,
+    "fields": {
+      "name": "Huyện Thanh Liêm",
+      "division_type": "huyện",
+      "codename": "huyen_thanh_liem",
+      "province": 35
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 352,
+    "fields": {
+      "name": "Huyện Bình Lục",
+      "division_type": "huyện",
+      "codename": "huyen_binh_luc",
+      "province": 35
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 353,
+    "fields": {
+      "name": "Huyện Lý Nhân",
+      "division_type": "huyện",
+      "codename": "huyen_ly_nhan",
+      "province": 35
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 356,
+    "fields": {
+      "name": "Thành phố Nam Định",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_nam_dinh",
+      "province": 36
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 358,
+    "fields": {
+      "name": "Huyện Mỹ Lộc",
+      "division_type": "huyện",
+      "codename": "huyen_my_loc",
+      "province": 36
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 359,
+    "fields": {
+      "name": "Huyện Vụ Bản",
+      "division_type": "huyện",
+      "codename": "huyen_vu_ban",
+      "province": 36
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 360,
+    "fields": {
+      "name": "Huyện Ý Yên",
+      "division_type": "huyện",
+      "codename": "huyen_y_yen",
+      "province": 36
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 361,
+    "fields": {
+      "name": "Huyện Nghĩa Hưng",
+      "division_type": "huyện",
+      "codename": "huyen_nghia_hung",
+      "province": 36
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 362,
+    "fields": {
+      "name": "Huyện Nam Trực",
+      "division_type": "huyện",
+      "codename": "huyen_nam_truc",
+      "province": 36
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 363,
+    "fields": {
+      "name": "Huyện Trực Ninh",
+      "division_type": "huyện",
+      "codename": "huyen_truc_ninh",
+      "province": 36
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 364,
+    "fields": {
+      "name": "Huyện Xuân Trường",
+      "division_type": "huyện",
+      "codename": "huyen_xuan_truong",
+      "province": 36
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 365,
+    "fields": {
+      "name": "Huyện Giao Thủy",
+      "division_type": "huyện",
+      "codename": "huyen_giao_thuy",
+      "province": 36
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 366,
+    "fields": {
+      "name": "Huyện Hải Hậu",
+      "division_type": "huyện",
+      "codename": "huyen_hai_hau",
+      "province": 36
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 369,
+    "fields": {
+      "name": "Thành phố Ninh Bình",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_ninh_binh",
+      "province": 37
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 370,
+    "fields": {
+      "name": "Thành phố Tam Điệp",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_tam_diep",
+      "province": 37
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 372,
+    "fields": {
+      "name": "Huyện Nho Quan",
+      "division_type": "huyện",
+      "codename": "huyen_nho_quan",
+      "province": 37
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 373,
+    "fields": {
+      "name": "Huyện Gia Viễn",
+      "division_type": "huyện",
+      "codename": "huyen_gia_vien",
+      "province": 37
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 374,
+    "fields": {
+      "name": "Huyện Hoa Lư",
+      "division_type": "huyện",
+      "codename": "huyen_hoa_lu",
+      "province": 37
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 375,
+    "fields": {
+      "name": "Huyện Yên Khánh",
+      "division_type": "huyện",
+      "codename": "huyen_yen_khanh",
+      "province": 37
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 376,
+    "fields": {
+      "name": "Huyện Kim Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_kim_son",
+      "province": 37
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 377,
+    "fields": {
+      "name": "Huyện Yên Mô",
+      "division_type": "huyện",
+      "codename": "huyen_yen_mo",
+      "province": 37
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 380,
+    "fields": {
+      "name": "Thành phố Thanh Hóa",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_thanh_hoa",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 381,
+    "fields": {
+      "name": "Thị xã Bỉm Sơn",
+      "division_type": "thị xã",
+      "codename": "thi_xa_bim_son",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 382,
+    "fields": {
+      "name": "Thành phố Sầm Sơn",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_sam_son",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 384,
+    "fields": {
+      "name": "Huyện Mường Lát",
+      "division_type": "huyện",
+      "codename": "huyen_muong_lat",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 385,
+    "fields": {
+      "name": "Huyện Quan Hóa",
+      "division_type": "huyện",
+      "codename": "huyen_quan_hoa",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 386,
+    "fields": {
+      "name": "Huyện Bá Thước",
+      "division_type": "huyện",
+      "codename": "huyen_ba_thuoc",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 387,
+    "fields": {
+      "name": "Huyện Quan Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_quan_son",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 388,
+    "fields": {
+      "name": "Huyện Lang Chánh",
+      "division_type": "huyện",
+      "codename": "huyen_lang_chanh",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 389,
+    "fields": {
+      "name": "Huyện Ngọc Lặc",
+      "division_type": "huyện",
+      "codename": "huyen_ngoc_lac",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 390,
+    "fields": {
+      "name": "Huyện Cẩm Thủy",
+      "division_type": "huyện",
+      "codename": "huyen_cam_thuy",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 391,
+    "fields": {
+      "name": "Huyện Thạch Thành",
+      "division_type": "huyện",
+      "codename": "huyen_thach_thanh",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 392,
+    "fields": {
+      "name": "Huyện Hà Trung",
+      "division_type": "huyện",
+      "codename": "huyen_ha_trung",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 393,
+    "fields": {
+      "name": "Huyện Vĩnh Lộc",
+      "division_type": "huyện",
+      "codename": "huyen_vinh_loc",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 394,
+    "fields": {
+      "name": "Huyện Yên Định",
+      "division_type": "huyện",
+      "codename": "huyen_yen_dinh",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 395,
+    "fields": {
+      "name": "Huyện Thọ Xuân",
+      "division_type": "huyện",
+      "codename": "huyen_tho_xuan",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 396,
+    "fields": {
+      "name": "Huyện Thường Xuân",
+      "division_type": "huyện",
+      "codename": "huyen_thuong_xuan",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 397,
+    "fields": {
+      "name": "Huyện Triệu Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_trieu_son",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 398,
+    "fields": {
+      "name": "Huyện Thiệu Hóa",
+      "division_type": "huyện",
+      "codename": "huyen_thieu_hoa",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 399,
+    "fields": {
+      "name": "Huyện Hoằng Hóa",
+      "division_type": "huyện",
+      "codename": "huyen_hoang_hoa",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 400,
+    "fields": {
+      "name": "Huyện Hậu Lộc",
+      "division_type": "huyện",
+      "codename": "huyen_hau_loc",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 401,
+    "fields": {
+      "name": "Huyện Nga Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_nga_son",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 402,
+    "fields": {
+      "name": "Huyện Như Xuân",
+      "division_type": "huyện",
+      "codename": "huyen_nhu_xuan",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 403,
+    "fields": {
+      "name": "Huyện Như Thanh",
+      "division_type": "huyện",
+      "codename": "huyen_nhu_thanh",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 404,
+    "fields": {
+      "name": "Huyện Nông Cống",
+      "division_type": "huyện",
+      "codename": "huyen_nong_cong",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 405,
+    "fields": {
+      "name": "Huyện Đông Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_dong_son",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 406,
+    "fields": {
+      "name": "Huyện Quảng Xương",
+      "division_type": "huyện",
+      "codename": "huyen_quang_xuong",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 407,
+    "fields": {
+      "name": "Thị xã Nghi Sơn",
+      "division_type": "thị xã",
+      "codename": "thi_xa_nghi_son",
+      "province": 38
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 412,
+    "fields": {
+      "name": "Thành phố Vinh",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_vinh",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 413,
+    "fields": {
+      "name": "Thị xã Cửa Lò",
+      "division_type": "thị xã",
+      "codename": "thi_xa_cua_lo",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 414,
+    "fields": {
+      "name": "Thị xã Thái Hoà",
+      "division_type": "thị xã",
+      "codename": "thi_xa_thai_hoa",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 415,
+    "fields": {
+      "name": "Huyện Quế Phong",
+      "division_type": "huyện",
+      "codename": "huyen_que_phong",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 416,
+    "fields": {
+      "name": "Huyện Quỳ Châu",
+      "division_type": "huyện",
+      "codename": "huyen_quy_chau",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 417,
+    "fields": {
+      "name": "Huyện Kỳ Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_ky_son",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 418,
+    "fields": {
+      "name": "Huyện Tương Dương",
+      "division_type": "huyện",
+      "codename": "huyen_tuong_duong",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 419,
+    "fields": {
+      "name": "Huyện Nghĩa Đàn",
+      "division_type": "huyện",
+      "codename": "huyen_nghia_dan",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 420,
+    "fields": {
+      "name": "Huyện Quỳ Hợp",
+      "division_type": "huyện",
+      "codename": "huyen_quy_hop",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 421,
+    "fields": {
+      "name": "Huyện Quỳnh Lưu",
+      "division_type": "huyện",
+      "codename": "huyen_quynh_luu",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 422,
+    "fields": {
+      "name": "Huyện Con Cuông",
+      "division_type": "huyện",
+      "codename": "huyen_con_cuong",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 423,
+    "fields": {
+      "name": "Huyện Tân Kỳ",
+      "division_type": "huyện",
+      "codename": "huyen_tan_ky",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 424,
+    "fields": {
+      "name": "Huyện Anh Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_anh_son",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 425,
+    "fields": {
+      "name": "Huyện Diễn Châu",
+      "division_type": "huyện",
+      "codename": "huyen_dien_chau",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 426,
+    "fields": {
+      "name": "Huyện Yên Thành",
+      "division_type": "huyện",
+      "codename": "huyen_yen_thanh",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 427,
+    "fields": {
+      "name": "Huyện Đô Lương",
+      "division_type": "huyện",
+      "codename": "huyen_do_luong",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 428,
+    "fields": {
+      "name": "Huyện Thanh Chương",
+      "division_type": "huyện",
+      "codename": "huyen_thanh_chuong",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 429,
+    "fields": {
+      "name": "Huyện Nghi Lộc",
+      "division_type": "huyện",
+      "codename": "huyen_nghi_loc",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 430,
+    "fields": {
+      "name": "Huyện Nam Đàn",
+      "division_type": "huyện",
+      "codename": "huyen_nam_dan",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 431,
+    "fields": {
+      "name": "Huyện Hưng Nguyên",
+      "division_type": "huyện",
+      "codename": "huyen_hung_nguyen",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 432,
+    "fields": {
+      "name": "Thị xã Hoàng Mai",
+      "division_type": "thị xã",
+      "codename": "thi_xa_hoang_mai",
+      "province": 40
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 436,
+    "fields": {
+      "name": "Thành phố Hà Tĩnh",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_ha_tinh",
+      "province": 42
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 437,
+    "fields": {
+      "name": "Thị xã Hồng Lĩnh",
+      "division_type": "thị xã",
+      "codename": "thi_xa_hong_linh",
+      "province": 42
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 439,
+    "fields": {
+      "name": "Huyện Hương Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_huong_son",
+      "province": 42
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 440,
+    "fields": {
+      "name": "Huyện Đức Thọ",
+      "division_type": "huyện",
+      "codename": "huyen_duc_tho",
+      "province": 42
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 441,
+    "fields": {
+      "name": "Huyện Vũ Quang",
+      "division_type": "huyện",
+      "codename": "huyen_vu_quang",
+      "province": 42
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 442,
+    "fields": {
+      "name": "Huyện Nghi Xuân",
+      "division_type": "huyện",
+      "codename": "huyen_nghi_xuan",
+      "province": 42
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 443,
+    "fields": {
+      "name": "Huyện Can Lộc",
+      "division_type": "huyện",
+      "codename": "huyen_can_loc",
+      "province": 42
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 444,
+    "fields": {
+      "name": "Huyện Hương Khê",
+      "division_type": "huyện",
+      "codename": "huyen_huong_khe",
+      "province": 42
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 445,
+    "fields": {
+      "name": "Huyện Thạch Hà",
+      "division_type": "huyện",
+      "codename": "huyen_thach_ha",
+      "province": 42
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 446,
+    "fields": {
+      "name": "Huyện Cẩm Xuyên",
+      "division_type": "huyện",
+      "codename": "huyen_cam_xuyen",
+      "province": 42
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 447,
+    "fields": {
+      "name": "Huyện Kỳ Anh",
+      "division_type": "huyện",
+      "codename": "huyen_ky_anh",
+      "province": 42
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 448,
+    "fields": {
+      "name": "Huyện Lộc Hà",
+      "division_type": "huyện",
+      "codename": "huyen_loc_ha",
+      "province": 42
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 449,
+    "fields": {
+      "name": "Thị xã Kỳ Anh",
+      "division_type": "thị xã",
+      "codename": "thi_xa_ky_anh",
+      "province": 42
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 450,
+    "fields": {
+      "name": "Thành Phố Đồng Hới",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_dong_hoi",
+      "province": 44
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 452,
+    "fields": {
+      "name": "Huyện Minh Hóa",
+      "division_type": "huyện",
+      "codename": "huyen_minh_hoa",
+      "province": 44
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 453,
+    "fields": {
+      "name": "Huyện Tuyên Hóa",
+      "division_type": "huyện",
+      "codename": "huyen_tuyen_hoa",
+      "province": 44
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 454,
+    "fields": {
+      "name": "Huyện Quảng Trạch",
+      "division_type": "huyện",
+      "codename": "huyen_quang_trach",
+      "province": 44
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 455,
+    "fields": {
+      "name": "Huyện Bố Trạch",
+      "division_type": "huyện",
+      "codename": "huyen_bo_trach",
+      "province": 44
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 456,
+    "fields": {
+      "name": "Huyện Quảng Ninh",
+      "division_type": "huyện",
+      "codename": "huyen_quang_ninh",
+      "province": 44
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 457,
+    "fields": {
+      "name": "Huyện Lệ Thủy",
+      "division_type": "huyện",
+      "codename": "huyen_le_thuy",
+      "province": 44
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 458,
+    "fields": {
+      "name": "Thị xã Ba Đồn",
+      "division_type": "thị xã",
+      "codename": "thi_xa_ba_don",
+      "province": 44
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 461,
+    "fields": {
+      "name": "Thành phố Đông Hà",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_dong_ha",
+      "province": 45
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 462,
+    "fields": {
+      "name": "Thị xã Quảng Trị",
+      "division_type": "thị xã",
+      "codename": "thi_xa_quang_tri",
+      "province": 45
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 464,
+    "fields": {
+      "name": "Huyện Vĩnh Linh",
+      "division_type": "huyện",
+      "codename": "huyen_vinh_linh",
+      "province": 45
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 465,
+    "fields": {
+      "name": "Huyện Hướng Hóa",
+      "division_type": "huyện",
+      "codename": "huyen_huong_hoa",
+      "province": 45
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 466,
+    "fields": {
+      "name": "Huyện Gio Linh",
+      "division_type": "huyện",
+      "codename": "huyen_gio_linh",
+      "province": 45
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 467,
+    "fields": {
+      "name": "Huyện Đa Krông",
+      "division_type": "huyện",
+      "codename": "huyen_da_krong",
+      "province": 45
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 468,
+    "fields": {
+      "name": "Huyện Cam Lộ",
+      "division_type": "huyện",
+      "codename": "huyen_cam_lo",
+      "province": 45
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 469,
+    "fields": {
+      "name": "Huyện Triệu Phong",
+      "division_type": "huyện",
+      "codename": "huyen_trieu_phong",
+      "province": 45
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 470,
+    "fields": {
+      "name": "Huyện Hải Lăng",
+      "division_type": "huyện",
+      "codename": "huyen_hai_lang",
+      "province": 45
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 471,
+    "fields": {
+      "name": "Huyện Cồn Cỏ",
+      "division_type": "huyện",
+      "codename": "huyen_con_co",
+      "province": 45
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 474,
+    "fields": {
+      "name": "Thành phố Huế",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_hue",
+      "province": 46
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 476,
+    "fields": {
+      "name": "Huyện Phong Điền",
+      "division_type": "huyện",
+      "codename": "huyen_phong_dien",
+      "province": 46
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 477,
+    "fields": {
+      "name": "Huyện Quảng Điền",
+      "division_type": "huyện",
+      "codename": "huyen_quang_dien",
+      "province": 46
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 478,
+    "fields": {
+      "name": "Huyện Phú Vang",
+      "division_type": "huyện",
+      "codename": "huyen_phu_vang",
+      "province": 46
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 479,
+    "fields": {
+      "name": "Thị xã Hương Thủy",
+      "division_type": "thị xã",
+      "codename": "thi_xa_huong_thuy",
+      "province": 46
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 480,
+    "fields": {
+      "name": "Thị xã Hương Trà",
+      "division_type": "thị xã",
+      "codename": "thi_xa_huong_tra",
+      "province": 46
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 481,
+    "fields": {
+      "name": "Huyện A Lưới",
+      "division_type": "huyện",
+      "codename": "huyen_a_luoi",
+      "province": 46
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 482,
+    "fields": {
+      "name": "Huyện Phú Lộc",
+      "division_type": "huyện",
+      "codename": "huyen_phu_loc",
+      "province": 46
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 483,
+    "fields": {
+      "name": "Huyện Nam Đông",
+      "division_type": "huyện",
+      "codename": "huyen_nam_dong",
+      "province": 46
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 490,
+    "fields": {
+      "name": "Quận Liên Chiểu",
+      "division_type": "quận",
+      "codename": "quan_lien_chieu",
+      "province": 48
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 491,
+    "fields": {
+      "name": "Quận Thanh Khê",
+      "division_type": "quận",
+      "codename": "quan_thanh_khe",
+      "province": 48
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 492,
+    "fields": {
+      "name": "Quận Hải Châu",
+      "division_type": "quận",
+      "codename": "quan_hai_chau",
+      "province": 48
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 493,
+    "fields": {
+      "name": "Quận Sơn Trà",
+      "division_type": "quận",
+      "codename": "quan_son_tra",
+      "province": 48
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 494,
+    "fields": {
+      "name": "Quận Ngũ Hành Sơn",
+      "division_type": "quận",
+      "codename": "quan_ngu_hanh_son",
+      "province": 48
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 495,
+    "fields": {
+      "name": "Quận Cẩm Lệ",
+      "division_type": "quận",
+      "codename": "quan_cam_le",
+      "province": 48
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 497,
+    "fields": {
+      "name": "Huyện Hòa Vang",
+      "division_type": "huyện",
+      "codename": "huyen_hoa_vang",
+      "province": 48
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 498,
+    "fields": {
+      "name": "Huyện Hoàng Sa",
+      "division_type": "huyện",
+      "codename": "huyen_hoang_sa",
+      "province": 48
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 502,
+    "fields": {
+      "name": "Thành phố Tam Kỳ",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_tam_ky",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 503,
+    "fields": {
+      "name": "Thành phố Hội An",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_hoi_an",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 504,
+    "fields": {
+      "name": "Huyện Tây Giang",
+      "division_type": "huyện",
+      "codename": "huyen_tay_giang",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 505,
+    "fields": {
+      "name": "Huyện Đông Giang",
+      "division_type": "huyện",
+      "codename": "huyen_dong_giang",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 506,
+    "fields": {
+      "name": "Huyện Đại Lộc",
+      "division_type": "huyện",
+      "codename": "huyen_dai_loc",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 507,
+    "fields": {
+      "name": "Thị xã Điện Bàn",
+      "division_type": "thị xã",
+      "codename": "thi_xa_dien_ban",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 508,
+    "fields": {
+      "name": "Huyện Duy Xuyên",
+      "division_type": "huyện",
+      "codename": "huyen_duy_xuyen",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 509,
+    "fields": {
+      "name": "Huyện Quế Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_que_son",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 510,
+    "fields": {
+      "name": "Huyện Nam Giang",
+      "division_type": "huyện",
+      "codename": "huyen_nam_giang",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 511,
+    "fields": {
+      "name": "Huyện Phước Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_phuoc_son",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 512,
+    "fields": {
+      "name": "Huyện Hiệp Đức",
+      "division_type": "huyện",
+      "codename": "huyen_hiep_duc",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 513,
+    "fields": {
+      "name": "Huyện Thăng Bình",
+      "division_type": "huyện",
+      "codename": "huyen_thang_binh",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 514,
+    "fields": {
+      "name": "Huyện Tiên Phước",
+      "division_type": "huyện",
+      "codename": "huyen_tien_phuoc",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 515,
+    "fields": {
+      "name": "Huyện Bắc Trà My",
+      "division_type": "huyện",
+      "codename": "huyen_bac_tra_my",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 516,
+    "fields": {
+      "name": "Huyện Nam Trà My",
+      "division_type": "huyện",
+      "codename": "huyen_nam_tra_my",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 517,
+    "fields": {
+      "name": "Huyện Núi Thành",
+      "division_type": "huyện",
+      "codename": "huyen_nui_thanh",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 518,
+    "fields": {
+      "name": "Huyện Phú Ninh",
+      "division_type": "huyện",
+      "codename": "huyen_phu_ninh",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 519,
+    "fields": {
+      "name": "Huyện Nông Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_nong_son",
+      "province": 49
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 522,
+    "fields": {
+      "name": "Thành phố Quảng Ngãi",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_quang_ngai",
+      "province": 51
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 524,
+    "fields": {
+      "name": "Huyện Bình Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_binh_son",
+      "province": 51
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 525,
+    "fields": {
+      "name": "Huyện Trà Bồng",
+      "division_type": "huyện",
+      "codename": "huyen_tra_bong",
+      "province": 51
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 527,
+    "fields": {
+      "name": "Huyện Sơn Tịnh",
+      "division_type": "huyện",
+      "codename": "huyen_son_tinh",
+      "province": 51
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 528,
+    "fields": {
+      "name": "Huyện Tư Nghĩa",
+      "division_type": "huyện",
+      "codename": "huyen_tu_nghia",
+      "province": 51
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 529,
+    "fields": {
+      "name": "Huyện Sơn Hà",
+      "division_type": "huyện",
+      "codename": "huyen_son_ha",
+      "province": 51
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 530,
+    "fields": {
+      "name": "Huyện Sơn Tây",
+      "division_type": "huyện",
+      "codename": "huyen_son_tay",
+      "province": 51
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 531,
+    "fields": {
+      "name": "Huyện Minh Long",
+      "division_type": "huyện",
+      "codename": "huyen_minh_long",
+      "province": 51
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 532,
+    "fields": {
+      "name": "Huyện Nghĩa Hành",
+      "division_type": "huyện",
+      "codename": "huyen_nghia_hanh",
+      "province": 51
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 533,
+    "fields": {
+      "name": "Huyện Mộ Đức",
+      "division_type": "huyện",
+      "codename": "huyen_mo_duc",
+      "province": 51
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 534,
+    "fields": {
+      "name": "Thị xã Đức Phổ",
+      "division_type": "thị xã",
+      "codename": "thi_xa_duc_pho",
+      "province": 51
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 535,
+    "fields": {
+      "name": "Huyện Ba Tơ",
+      "division_type": "huyện",
+      "codename": "huyen_ba_to",
+      "province": 51
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 536,
+    "fields": {
+      "name": "Huyện Lý Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_ly_son",
+      "province": 51
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 540,
+    "fields": {
+      "name": "Thành phố Quy Nhơn",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_quy_nhon",
+      "province": 52
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 542,
+    "fields": {
+      "name": "Huyện An Lão",
+      "division_type": "huyện",
+      "codename": "huyen_an_lao",
+      "province": 52
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 543,
+    "fields": {
+      "name": "Thị xã Hoài Nhơn",
+      "division_type": "thị xã",
+      "codename": "thi_xa_hoai_nhon",
+      "province": 52
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 544,
+    "fields": {
+      "name": "Huyện Hoài Ân",
+      "division_type": "huyện",
+      "codename": "huyen_hoai_an",
+      "province": 52
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 545,
+    "fields": {
+      "name": "Huyện Phù Mỹ",
+      "division_type": "huyện",
+      "codename": "huyen_phu_my",
+      "province": 52
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 546,
+    "fields": {
+      "name": "Huyện Vĩnh Thạnh",
+      "division_type": "huyện",
+      "codename": "huyen_vinh_thanh",
+      "province": 52
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 547,
+    "fields": {
+      "name": "Huyện Tây Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_tay_son",
+      "province": 52
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 548,
+    "fields": {
+      "name": "Huyện Phù Cát",
+      "division_type": "huyện",
+      "codename": "huyen_phu_cat",
+      "province": 52
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 549,
+    "fields": {
+      "name": "Thị xã An Nhơn",
+      "division_type": "thị xã",
+      "codename": "thi_xa_an_nhon",
+      "province": 52
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 550,
+    "fields": {
+      "name": "Huyện Tuy Phước",
+      "division_type": "huyện",
+      "codename": "huyen_tuy_phuoc",
+      "province": 52
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 551,
+    "fields": {
+      "name": "Huyện Vân Canh",
+      "division_type": "huyện",
+      "codename": "huyen_van_canh",
+      "province": 52
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 555,
+    "fields": {
+      "name": "Thành phố Tuy Hoà",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_tuy_hoa",
+      "province": 54
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 557,
+    "fields": {
+      "name": "Thị xã Sông Cầu",
+      "division_type": "thị xã",
+      "codename": "thi_xa_song_cau",
+      "province": 54
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 558,
+    "fields": {
+      "name": "Huyện Đồng Xuân",
+      "division_type": "huyện",
+      "codename": "huyen_dong_xuan",
+      "province": 54
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 559,
+    "fields": {
+      "name": "Huyện Tuy An",
+      "division_type": "huyện",
+      "codename": "huyen_tuy_an",
+      "province": 54
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 560,
+    "fields": {
+      "name": "Huyện Sơn Hòa",
+      "division_type": "huyện",
+      "codename": "huyen_son_hoa",
+      "province": 54
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 561,
+    "fields": {
+      "name": "Huyện Sông Hinh",
+      "division_type": "huyện",
+      "codename": "huyen_song_hinh",
+      "province": 54
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 562,
+    "fields": {
+      "name": "Huyện Tây Hoà",
+      "division_type": "huyện",
+      "codename": "huyen_tay_hoa",
+      "province": 54
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 563,
+    "fields": {
+      "name": "Huyện Phú Hoà",
+      "division_type": "huyện",
+      "codename": "huyen_phu_hoa",
+      "province": 54
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 564,
+    "fields": {
+      "name": "Thị xã Đông Hòa",
+      "division_type": "thị xã",
+      "codename": "thi_xa_dong_hoa",
+      "province": 54
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 568,
+    "fields": {
+      "name": "Thành phố Nha Trang",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_nha_trang",
+      "province": 56
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 569,
+    "fields": {
+      "name": "Thành phố Cam Ranh",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_cam_ranh",
+      "province": 56
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 570,
+    "fields": {
+      "name": "Huyện Cam Lâm",
+      "division_type": "huyện",
+      "codename": "huyen_cam_lam",
+      "province": 56
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 571,
+    "fields": {
+      "name": "Huyện Vạn Ninh",
+      "division_type": "huyện",
+      "codename": "huyen_van_ninh",
+      "province": 56
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 572,
+    "fields": {
+      "name": "Thị xã Ninh Hòa",
+      "division_type": "thị xã",
+      "codename": "thi_xa_ninh_hoa",
+      "province": 56
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 573,
+    "fields": {
+      "name": "Huyện Khánh Vĩnh",
+      "division_type": "huyện",
+      "codename": "huyen_khanh_vinh",
+      "province": 56
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 574,
+    "fields": {
+      "name": "Huyện Diên Khánh",
+      "division_type": "huyện",
+      "codename": "huyen_dien_khanh",
+      "province": 56
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 575,
+    "fields": {
+      "name": "Huyện Khánh Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_khanh_son",
+      "province": 56
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 576,
+    "fields": {
+      "name": "Huyện Trường Sa",
+      "division_type": "huyện",
+      "codename": "huyen_truong_sa",
+      "province": 56
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 582,
+    "fields": {
+      "name": "Thành phố Phan Rang-Tháp Chàm",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_phan_rang_thap_cham",
+      "province": 58
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 584,
+    "fields": {
+      "name": "Huyện Bác Ái",
+      "division_type": "huyện",
+      "codename": "huyen_bac_ai",
+      "province": 58
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 585,
+    "fields": {
+      "name": "Huyện Ninh Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_ninh_son",
+      "province": 58
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 586,
+    "fields": {
+      "name": "Huyện Ninh Hải",
+      "division_type": "huyện",
+      "codename": "huyen_ninh_hai",
+      "province": 58
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 587,
+    "fields": {
+      "name": "Huyện Ninh Phước",
+      "division_type": "huyện",
+      "codename": "huyen_ninh_phuoc",
+      "province": 58
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 588,
+    "fields": {
+      "name": "Huyện Thuận Bắc",
+      "division_type": "huyện",
+      "codename": "huyen_thuan_bac",
+      "province": 58
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 589,
+    "fields": {
+      "name": "Huyện Thuận Nam",
+      "division_type": "huyện",
+      "codename": "huyen_thuan_nam",
+      "province": 58
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 593,
+    "fields": {
+      "name": "Thành phố Phan Thiết",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_phan_thiet",
+      "province": 60
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 594,
+    "fields": {
+      "name": "Thị xã La Gi",
+      "division_type": "thị xã",
+      "codename": "thi_xa_la_gi",
+      "province": 60
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 595,
+    "fields": {
+      "name": "Huyện Tuy Phong",
+      "division_type": "huyện",
+      "codename": "huyen_tuy_phong",
+      "province": 60
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 596,
+    "fields": {
+      "name": "Huyện Bắc Bình",
+      "division_type": "huyện",
+      "codename": "huyen_bac_binh",
+      "province": 60
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 597,
+    "fields": {
+      "name": "Huyện Hàm Thuận Bắc",
+      "division_type": "huyện",
+      "codename": "huyen_ham_thuan_bac",
+      "province": 60
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 598,
+    "fields": {
+      "name": "Huyện Hàm Thuận Nam",
+      "division_type": "huyện",
+      "codename": "huyen_ham_thuan_nam",
+      "province": 60
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 599,
+    "fields": {
+      "name": "Huyện Tánh Linh",
+      "division_type": "huyện",
+      "codename": "huyen_tanh_linh",
+      "province": 60
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 600,
+    "fields": {
+      "name": "Huyện Đức Linh",
+      "division_type": "huyện",
+      "codename": "huyen_duc_linh",
+      "province": 60
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 601,
+    "fields": {
+      "name": "Huyện Hàm Tân",
+      "division_type": "huyện",
+      "codename": "huyen_ham_tan",
+      "province": 60
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 602,
+    "fields": {
+      "name": "Huyện Phú Quí",
+      "division_type": "huyện",
+      "codename": "huyen_phu_qui",
+      "province": 60
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 608,
+    "fields": {
+      "name": "Thành phố Kon Tum",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_kon_tum",
+      "province": 62
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 610,
+    "fields": {
+      "name": "Huyện Đắk Glei",
+      "division_type": "huyện",
+      "codename": "huyen_dak_glei",
+      "province": 62
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 611,
+    "fields": {
+      "name": "Huyện Ngọc Hồi",
+      "division_type": "huyện",
+      "codename": "huyen_ngoc_hoi",
+      "province": 62
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 612,
+    "fields": {
+      "name": "Huyện Đắk Tô",
+      "division_type": "huyện",
+      "codename": "huyen_dak_to",
+      "province": 62
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 613,
+    "fields": {
+      "name": "Huyện Kon Plông",
+      "division_type": "huyện",
+      "codename": "huyen_kon_plong",
+      "province": 62
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 614,
+    "fields": {
+      "name": "Huyện Kon Rẫy",
+      "division_type": "huyện",
+      "codename": "huyen_kon_ray",
+      "province": 62
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 615,
+    "fields": {
+      "name": "Huyện Đắk Hà",
+      "division_type": "huyện",
+      "codename": "huyen_dak_ha",
+      "province": 62
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 616,
+    "fields": {
+      "name": "Huyện Sa Thầy",
+      "division_type": "huyện",
+      "codename": "huyen_sa_thay",
+      "province": 62
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 617,
+    "fields": {
+      "name": "Huyện Tu Mơ Rông",
+      "division_type": "huyện",
+      "codename": "huyen_tu_mo_rong",
+      "province": 62
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 618,
+    "fields": {
+      "name": "Huyện Ia H' Drai",
+      "division_type": "huyện",
+      "codename": "huyen_ia_h_drai",
+      "province": 62
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 622,
+    "fields": {
+      "name": "Thành phố Pleiku",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_pleiku",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 623,
+    "fields": {
+      "name": "Thị xã An Khê",
+      "division_type": "thị xã",
+      "codename": "thi_xa_an_khe",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 624,
+    "fields": {
+      "name": "Thị xã Ayun Pa",
+      "division_type": "thị xã",
+      "codename": "thi_xa_ayun_pa",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 625,
+    "fields": {
+      "name": "Huyện KBang",
+      "division_type": "huyện",
+      "codename": "huyen_kbang",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 626,
+    "fields": {
+      "name": "Huyện Đăk Đoa",
+      "division_type": "huyện",
+      "codename": "huyen_dak_doa",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 627,
+    "fields": {
+      "name": "Huyện Chư Păh",
+      "division_type": "huyện",
+      "codename": "huyen_chu_pah",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 628,
+    "fields": {
+      "name": "Huyện Ia Grai",
+      "division_type": "huyện",
+      "codename": "huyen_ia_grai",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 629,
+    "fields": {
+      "name": "Huyện Mang Yang",
+      "division_type": "huyện",
+      "codename": "huyen_mang_yang",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 630,
+    "fields": {
+      "name": "Huyện Kông Chro",
+      "division_type": "huyện",
+      "codename": "huyen_kong_chro",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 631,
+    "fields": {
+      "name": "Huyện Đức Cơ",
+      "division_type": "huyện",
+      "codename": "huyen_duc_co",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 632,
+    "fields": {
+      "name": "Huyện Chư Prông",
+      "division_type": "huyện",
+      "codename": "huyen_chu_prong",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 633,
+    "fields": {
+      "name": "Huyện Chư Sê",
+      "division_type": "huyện",
+      "codename": "huyen_chu_se",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 634,
+    "fields": {
+      "name": "Huyện Đăk Pơ",
+      "division_type": "huyện",
+      "codename": "huyen_dak_po",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 635,
+    "fields": {
+      "name": "Huyện Ia Pa",
+      "division_type": "huyện",
+      "codename": "huyen_ia_pa",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 637,
+    "fields": {
+      "name": "Huyện Krông Pa",
+      "division_type": "huyện",
+      "codename": "huyen_krong_pa",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 638,
+    "fields": {
+      "name": "Huyện Phú Thiện",
+      "division_type": "huyện",
+      "codename": "huyen_phu_thien",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 639,
+    "fields": {
+      "name": "Huyện Chư Pưh",
+      "division_type": "huyện",
+      "codename": "huyen_chu_puh",
+      "province": 64
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 643,
+    "fields": {
+      "name": "Thành phố Buôn Ma Thuột",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_buon_ma_thuot",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 644,
+    "fields": {
+      "name": "Thị xã Buôn Hồ",
+      "division_type": "thị xã",
+      "codename": "thi_xa_buon_ho",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 645,
+    "fields": {
+      "name": "Huyện Ea H'leo",
+      "division_type": "huyện",
+      "codename": "huyen_ea_hleo",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 646,
+    "fields": {
+      "name": "Huyện Ea Súp",
+      "division_type": "huyện",
+      "codename": "huyen_ea_sup",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 647,
+    "fields": {
+      "name": "Huyện Buôn Đôn",
+      "division_type": "huyện",
+      "codename": "huyen_buon_don",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 648,
+    "fields": {
+      "name": "Huyện Cư M'gar",
+      "division_type": "huyện",
+      "codename": "huyen_cu_mgar",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 649,
+    "fields": {
+      "name": "Huyện Krông Búk",
+      "division_type": "huyện",
+      "codename": "huyen_krong_buk",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 650,
+    "fields": {
+      "name": "Huyện Krông Năng",
+      "division_type": "huyện",
+      "codename": "huyen_krong_nang",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 651,
+    "fields": {
+      "name": "Huyện Ea Kar",
+      "division_type": "huyện",
+      "codename": "huyen_ea_kar",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 652,
+    "fields": {
+      "name": "Huyện M'Đrắk",
+      "division_type": "huyện",
+      "codename": "huyen_mdrak",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 653,
+    "fields": {
+      "name": "Huyện Krông Bông",
+      "division_type": "huyện",
+      "codename": "huyen_krong_bong",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 654,
+    "fields": {
+      "name": "Huyện Krông Pắc",
+      "division_type": "huyện",
+      "codename": "huyen_krong_pac",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 655,
+    "fields": {
+      "name": "Huyện Krông A Na",
+      "division_type": "huyện",
+      "codename": "huyen_krong_a_na",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 656,
+    "fields": {
+      "name": "Huyện Lắk",
+      "division_type": "huyện",
+      "codename": "huyen_lak",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 657,
+    "fields": {
+      "name": "Huyện Cư Kuin",
+      "division_type": "huyện",
+      "codename": "huyen_cu_kuin",
+      "province": 66
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 660,
+    "fields": {
+      "name": "Thành phố Gia Nghĩa",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_gia_nghia",
+      "province": 67
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 661,
+    "fields": {
+      "name": "Huyện Đăk Glong",
+      "division_type": "huyện",
+      "codename": "huyen_dak_glong",
+      "province": 67
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 662,
+    "fields": {
+      "name": "Huyện Cư Jút",
+      "division_type": "huyện",
+      "codename": "huyen_cu_jut",
+      "province": 67
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 663,
+    "fields": {
+      "name": "Huyện Đắk Mil",
+      "division_type": "huyện",
+      "codename": "huyen_dak_mil",
+      "province": 67
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 664,
+    "fields": {
+      "name": "Huyện Krông Nô",
+      "division_type": "huyện",
+      "codename": "huyen_krong_no",
+      "province": 67
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 665,
+    "fields": {
+      "name": "Huyện Đắk Song",
+      "division_type": "huyện",
+      "codename": "huyen_dak_song",
+      "province": 67
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 666,
+    "fields": {
+      "name": "Huyện Đắk R'Lấp",
+      "division_type": "huyện",
+      "codename": "huyen_dak_rlap",
+      "province": 67
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 667,
+    "fields": {
+      "name": "Huyện Tuy Đức",
+      "division_type": "huyện",
+      "codename": "huyen_tuy_duc",
+      "province": 67
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 672,
+    "fields": {
+      "name": "Thành phố Đà Lạt",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_da_lat",
+      "province": 68
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 673,
+    "fields": {
+      "name": "Thành phố Bảo Lộc",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_bao_loc",
+      "province": 68
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 674,
+    "fields": {
+      "name": "Huyện Đam Rông",
+      "division_type": "huyện",
+      "codename": "huyen_dam_rong",
+      "province": 68
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 675,
+    "fields": {
+      "name": "Huyện Lạc Dương",
+      "division_type": "huyện",
+      "codename": "huyen_lac_duong",
+      "province": 68
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 676,
+    "fields": {
+      "name": "Huyện Lâm Hà",
+      "division_type": "huyện",
+      "codename": "huyen_lam_ha",
+      "province": 68
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 677,
+    "fields": {
+      "name": "Huyện Đơn Dương",
+      "division_type": "huyện",
+      "codename": "huyen_don_duong",
+      "province": 68
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 678,
+    "fields": {
+      "name": "Huyện Đức Trọng",
+      "division_type": "huyện",
+      "codename": "huyen_duc_trong",
+      "province": 68
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 679,
+    "fields": {
+      "name": "Huyện Di Linh",
+      "division_type": "huyện",
+      "codename": "huyen_di_linh",
+      "province": 68
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 680,
+    "fields": {
+      "name": "Huyện Bảo Lâm",
+      "division_type": "huyện",
+      "codename": "huyen_bao_lam",
+      "province": 68
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 681,
+    "fields": {
+      "name": "Huyện Đạ Huoai",
+      "division_type": "huyện",
+      "codename": "huyen_da_huoai",
+      "province": 68
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 682,
+    "fields": {
+      "name": "Huyện Đạ Tẻh",
+      "division_type": "huyện",
+      "codename": "huyen_da_teh",
+      "province": 68
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 683,
+    "fields": {
+      "name": "Huyện Cát Tiên",
+      "division_type": "huyện",
+      "codename": "huyen_cat_tien",
+      "province": 68
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 688,
+    "fields": {
+      "name": "Thị xã Phước Long",
+      "division_type": "thị xã",
+      "codename": "thi_xa_phuoc_long",
+      "province": 70
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 689,
+    "fields": {
+      "name": "Thành phố Đồng Xoài",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_dong_xoai",
+      "province": 70
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 690,
+    "fields": {
+      "name": "Thị xã Bình Long",
+      "division_type": "thị xã",
+      "codename": "thi_xa_binh_long",
+      "province": 70
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 691,
+    "fields": {
+      "name": "Huyện Bù Gia Mập",
+      "division_type": "huyện",
+      "codename": "huyen_bu_gia_map",
+      "province": 70
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 692,
+    "fields": {
+      "name": "Huyện Lộc Ninh",
+      "division_type": "huyện",
+      "codename": "huyen_loc_ninh",
+      "province": 70
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 693,
+    "fields": {
+      "name": "Huyện Bù Đốp",
+      "division_type": "huyện",
+      "codename": "huyen_bu_dop",
+      "province": 70
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 694,
+    "fields": {
+      "name": "Huyện Hớn Quản",
+      "division_type": "huyện",
+      "codename": "huyen_hon_quan",
+      "province": 70
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 695,
+    "fields": {
+      "name": "Huyện Đồng Phú",
+      "division_type": "huyện",
+      "codename": "huyen_dong_phu",
+      "province": 70
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 696,
+    "fields": {
+      "name": "Huyện Bù Đăng",
+      "division_type": "huyện",
+      "codename": "huyen_bu_dang",
+      "province": 70
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 697,
+    "fields": {
+      "name": "Thị xã Chơn Thành",
+      "division_type": "thị xã",
+      "codename": "thi_xa_chon_thanh",
+      "province": 70
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 698,
+    "fields": {
+      "name": "Huyện Phú Riềng",
+      "division_type": "huyện",
+      "codename": "huyen_phu_rieng",
+      "province": 70
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 703,
+    "fields": {
+      "name": "Thành phố Tây Ninh",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_tay_ninh",
+      "province": 72
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 705,
+    "fields": {
+      "name": "Huyện Tân Biên",
+      "division_type": "huyện",
+      "codename": "huyen_tan_bien",
+      "province": 72
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 706,
+    "fields": {
+      "name": "Huyện Tân Châu",
+      "division_type": "huyện",
+      "codename": "huyen_tan_chau",
+      "province": 72
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 707,
+    "fields": {
+      "name": "Huyện Dương Minh Châu",
+      "division_type": "huyện",
+      "codename": "huyen_duong_minh_chau",
+      "province": 72
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 708,
+    "fields": {
+      "name": "Huyện Châu Thành",
+      "division_type": "huyện",
+      "codename": "huyen_chau_thanh",
+      "province": 72
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 709,
+    "fields": {
+      "name": "Thị xã Hòa Thành",
+      "division_type": "thị xã",
+      "codename": "thi_xa_hoa_thanh",
+      "province": 72
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 710,
+    "fields": {
+      "name": "Huyện Gò Dầu",
+      "division_type": "huyện",
+      "codename": "huyen_go_dau",
+      "province": 72
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 711,
+    "fields": {
+      "name": "Huyện Bến Cầu",
+      "division_type": "huyện",
+      "codename": "huyen_ben_cau",
+      "province": 72
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 712,
+    "fields": {
+      "name": "Thị xã Trảng Bàng",
+      "division_type": "thị xã",
+      "codename": "thi_xa_trang_bang",
+      "province": 72
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 718,
+    "fields": {
+      "name": "Thành phố Thủ Dầu Một",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_thu_dau_mot",
+      "province": 74
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 719,
+    "fields": {
+      "name": "Huyện Bàu Bàng",
+      "division_type": "huyện",
+      "codename": "huyen_bau_bang",
+      "province": 74
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 720,
+    "fields": {
+      "name": "Huyện Dầu Tiếng",
+      "division_type": "huyện",
+      "codename": "huyen_dau_tieng",
+      "province": 74
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 721,
+    "fields": {
+      "name": "Thị xã Bến Cát",
+      "division_type": "thị xã",
+      "codename": "thi_xa_ben_cat",
+      "province": 74
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 722,
+    "fields": {
+      "name": "Huyện Phú Giáo",
+      "division_type": "huyện",
+      "codename": "huyen_phu_giao",
+      "province": 74
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 723,
+    "fields": {
+      "name": "Thành phố Tân Uyên",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_tan_uyen",
+      "province": 74
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 724,
+    "fields": {
+      "name": "Thành phố Dĩ An",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_di_an",
+      "province": 74
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 725,
+    "fields": {
+      "name": "Thành phố Thuận An",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_thuan_an",
+      "province": 74
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 726,
+    "fields": {
+      "name": "Huyện Bắc Tân Uyên",
+      "division_type": "huyện",
+      "codename": "huyen_bac_tan_uyen",
+      "province": 74
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 731,
+    "fields": {
+      "name": "Thành phố Biên Hòa",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_bien_hoa",
+      "province": 75
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 732,
+    "fields": {
+      "name": "Thành phố Long Khánh",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_long_khanh",
+      "province": 75
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 734,
+    "fields": {
+      "name": "Huyện Tân Phú",
+      "division_type": "huyện",
+      "codename": "huyen_tan_phu",
+      "province": 75
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 735,
+    "fields": {
+      "name": "Huyện Vĩnh Cửu",
+      "division_type": "huyện",
+      "codename": "huyen_vinh_cuu",
+      "province": 75
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 736,
+    "fields": {
+      "name": "Huyện Định Quán",
+      "division_type": "huyện",
+      "codename": "huyen_dinh_quan",
+      "province": 75
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 737,
+    "fields": {
+      "name": "Huyện Trảng Bom",
+      "division_type": "huyện",
+      "codename": "huyen_trang_bom",
+      "province": 75
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 738,
+    "fields": {
+      "name": "Huyện Thống Nhất",
+      "division_type": "huyện",
+      "codename": "huyen_thong_nhat",
+      "province": 75
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 739,
+    "fields": {
+      "name": "Huyện Cẩm Mỹ",
+      "division_type": "huyện",
+      "codename": "huyen_cam_my",
+      "province": 75
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 740,
+    "fields": {
+      "name": "Huyện Long Thành",
+      "division_type": "huyện",
+      "codename": "huyen_long_thanh",
+      "province": 75
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 741,
+    "fields": {
+      "name": "Huyện Xuân Lộc",
+      "division_type": "huyện",
+      "codename": "huyen_xuan_loc",
+      "province": 75
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 742,
+    "fields": {
+      "name": "Huyện Nhơn Trạch",
+      "division_type": "huyện",
+      "codename": "huyen_nhon_trach",
+      "province": 75
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 747,
+    "fields": {
+      "name": "Thành phố Vũng Tàu",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_vung_tau",
+      "province": 77
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 748,
+    "fields": {
+      "name": "Thành phố Bà Rịa",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_ba_ria",
+      "province": 77
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 750,
+    "fields": {
+      "name": "Huyện Châu Đức",
+      "division_type": "huyện",
+      "codename": "huyen_chau_duc",
+      "province": 77
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 751,
+    "fields": {
+      "name": "Huyện Xuyên Mộc",
+      "division_type": "huyện",
+      "codename": "huyen_xuyen_moc",
+      "province": 77
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 752,
+    "fields": {
+      "name": "Huyện Long Điền",
+      "division_type": "huyện",
+      "codename": "huyen_long_dien",
+      "province": 77
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 753,
+    "fields": {
+      "name": "Huyện Đất Đỏ",
+      "division_type": "huyện",
+      "codename": "huyen_dat_do",
+      "province": 77
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 754,
+    "fields": {
+      "name": "Thị xã Phú Mỹ",
+      "division_type": "thị xã",
+      "codename": "thi_xa_phu_my",
+      "province": 77
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 755,
+    "fields": {
+      "name": "Huyện Côn Đảo",
+      "division_type": "huyện",
+      "codename": "huyen_con_dao",
+      "province": 77
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 760,
+    "fields": {
+      "name": "Quận 1",
+      "division_type": "quận",
+      "codename": "quan_1",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 761,
+    "fields": {
+      "name": "Quận 12",
+      "division_type": "quận",
+      "codename": "quan_12",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 764,
+    "fields": {
+      "name": "Quận Gò Vấp",
+      "division_type": "quận",
+      "codename": "quan_go_vap",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 765,
+    "fields": {
+      "name": "Quận Bình Thạnh",
+      "division_type": "quận",
+      "codename": "quan_binh_thanh",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 766,
+    "fields": {
+      "name": "Quận Tân Bình",
+      "division_type": "quận",
+      "codename": "quan_tan_binh",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 767,
+    "fields": {
+      "name": "Quận Tân Phú",
+      "division_type": "quận",
+      "codename": "quan_tan_phu",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 768,
+    "fields": {
+      "name": "Quận Phú Nhuận",
+      "division_type": "quận",
+      "codename": "quan_phu_nhuan",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 769,
+    "fields": {
+      "name": "Thành phố Thủ Đức",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_thu_duc",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 770,
+    "fields": {
+      "name": "Quận 3",
+      "division_type": "quận",
+      "codename": "quan_3",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 771,
+    "fields": {
+      "name": "Quận 10",
+      "division_type": "quận",
+      "codename": "quan_10",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 772,
+    "fields": {
+      "name": "Quận 11",
+      "division_type": "quận",
+      "codename": "quan_11",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 773,
+    "fields": {
+      "name": "Quận 4",
+      "division_type": "quận",
+      "codename": "quan_4",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 774,
+    "fields": {
+      "name": "Quận 5",
+      "division_type": "quận",
+      "codename": "quan_5",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 775,
+    "fields": {
+      "name": "Quận 6",
+      "division_type": "quận",
+      "codename": "quan_6",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 776,
+    "fields": {
+      "name": "Quận 8",
+      "division_type": "quận",
+      "codename": "quan_8",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 777,
+    "fields": {
+      "name": "Quận Bình Tân",
+      "division_type": "quận",
+      "codename": "quan_binh_tan",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 778,
+    "fields": {
+      "name": "Quận 7",
+      "division_type": "quận",
+      "codename": "quan_7",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 783,
+    "fields": {
+      "name": "Huyện Củ Chi",
+      "division_type": "huyện",
+      "codename": "huyen_cu_chi",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 784,
+    "fields": {
+      "name": "Huyện Hóc Môn",
+      "division_type": "huyện",
+      "codename": "huyen_hoc_mon",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 785,
+    "fields": {
+      "name": "Huyện Bình Chánh",
+      "division_type": "huyện",
+      "codename": "huyen_binh_chanh",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 786,
+    "fields": {
+      "name": "Huyện Nhà Bè",
+      "division_type": "huyện",
+      "codename": "huyen_nha_be",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 787,
+    "fields": {
+      "name": "Huyện Cần Giờ",
+      "division_type": "huyện",
+      "codename": "huyen_can_gio",
+      "province": 79
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 794,
+    "fields": {
+      "name": "Thành phố Tân An",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_tan_an",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 795,
+    "fields": {
+      "name": "Thị xã Kiến Tường",
+      "division_type": "thị xã",
+      "codename": "thi_xa_kien_tuong",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 796,
+    "fields": {
+      "name": "Huyện Tân Hưng",
+      "division_type": "huyện",
+      "codename": "huyen_tan_hung",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 797,
+    "fields": {
+      "name": "Huyện Vĩnh Hưng",
+      "division_type": "huyện",
+      "codename": "huyen_vinh_hung",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 798,
+    "fields": {
+      "name": "Huyện Mộc Hóa",
+      "division_type": "huyện",
+      "codename": "huyen_moc_hoa",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 799,
+    "fields": {
+      "name": "Huyện Tân Thạnh",
+      "division_type": "huyện",
+      "codename": "huyen_tan_thanh",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 800,
+    "fields": {
+      "name": "Huyện Thạnh Hóa",
+      "division_type": "huyện",
+      "codename": "huyen_thanh_hoa",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 801,
+    "fields": {
+      "name": "Huyện Đức Huệ",
+      "division_type": "huyện",
+      "codename": "huyen_duc_hue",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 802,
+    "fields": {
+      "name": "Huyện Đức Hòa",
+      "division_type": "huyện",
+      "codename": "huyen_duc_hoa",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 803,
+    "fields": {
+      "name": "Huyện Bến Lức",
+      "division_type": "huyện",
+      "codename": "huyen_ben_luc",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 804,
+    "fields": {
+      "name": "Huyện Thủ Thừa",
+      "division_type": "huyện",
+      "codename": "huyen_thu_thua",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 805,
+    "fields": {
+      "name": "Huyện Tân Trụ",
+      "division_type": "huyện",
+      "codename": "huyen_tan_tru",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 806,
+    "fields": {
+      "name": "Huyện Cần Đước",
+      "division_type": "huyện",
+      "codename": "huyen_can_duoc",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 807,
+    "fields": {
+      "name": "Huyện Cần Giuộc",
+      "division_type": "huyện",
+      "codename": "huyen_can_giuoc",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 808,
+    "fields": {
+      "name": "Huyện Châu Thành",
+      "division_type": "huyện",
+      "codename": "huyen_chau_thanh",
+      "province": 80
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 815,
+    "fields": {
+      "name": "Thành phố Mỹ Tho",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_my_tho",
+      "province": 82
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 816,
+    "fields": {
+      "name": "Thị xã Gò Công",
+      "division_type": "thị xã",
+      "codename": "thi_xa_go_cong",
+      "province": 82
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 817,
+    "fields": {
+      "name": "Thị xã Cai Lậy",
+      "division_type": "thị xã",
+      "codename": "thi_xa_cai_lay",
+      "province": 82
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 818,
+    "fields": {
+      "name": "Huyện Tân Phước",
+      "division_type": "huyện",
+      "codename": "huyen_tan_phuoc",
+      "province": 82
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 819,
+    "fields": {
+      "name": "Huyện Cái Bè",
+      "division_type": "huyện",
+      "codename": "huyen_cai_be",
+      "province": 82
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 820,
+    "fields": {
+      "name": "Huyện Cai Lậy",
+      "division_type": "huyện",
+      "codename": "huyen_cai_lay",
+      "province": 82
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 821,
+    "fields": {
+      "name": "Huyện Châu Thành",
+      "division_type": "huyện",
+      "codename": "huyen_chau_thanh",
+      "province": 82
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 822,
+    "fields": {
+      "name": "Huyện Chợ Gạo",
+      "division_type": "huyện",
+      "codename": "huyen_cho_gao",
+      "province": 82
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 823,
+    "fields": {
+      "name": "Huyện Gò Công Tây",
+      "division_type": "huyện",
+      "codename": "huyen_go_cong_tay",
+      "province": 82
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 824,
+    "fields": {
+      "name": "Huyện Gò Công Đông",
+      "division_type": "huyện",
+      "codename": "huyen_go_cong_dong",
+      "province": 82
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 825,
+    "fields": {
+      "name": "Huyện Tân Phú Đông",
+      "division_type": "huyện",
+      "codename": "huyen_tan_phu_dong",
+      "province": 82
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 829,
+    "fields": {
+      "name": "Thành phố Bến Tre",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_ben_tre",
+      "province": 83
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 831,
+    "fields": {
+      "name": "Huyện Châu Thành",
+      "division_type": "huyện",
+      "codename": "huyen_chau_thanh",
+      "province": 83
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 832,
+    "fields": {
+      "name": "Huyện Chợ Lách",
+      "division_type": "huyện",
+      "codename": "huyen_cho_lach",
+      "province": 83
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 833,
+    "fields": {
+      "name": "Huyện Mỏ Cày Nam",
+      "division_type": "huyện",
+      "codename": "huyen_mo_cay_nam",
+      "province": 83
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 834,
+    "fields": {
+      "name": "Huyện Giồng Trôm",
+      "division_type": "huyện",
+      "codename": "huyen_giong_trom",
+      "province": 83
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 835,
+    "fields": {
+      "name": "Huyện Bình Đại",
+      "division_type": "huyện",
+      "codename": "huyen_binh_dai",
+      "province": 83
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 836,
+    "fields": {
+      "name": "Huyện Ba Tri",
+      "division_type": "huyện",
+      "codename": "huyen_ba_tri",
+      "province": 83
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 837,
+    "fields": {
+      "name": "Huyện Thạnh Phú",
+      "division_type": "huyện",
+      "codename": "huyen_thanh_phu",
+      "province": 83
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 838,
+    "fields": {
+      "name": "Huyện Mỏ Cày Bắc",
+      "division_type": "huyện",
+      "codename": "huyen_mo_cay_bac",
+      "province": 83
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 842,
+    "fields": {
+      "name": "Thành phố Trà Vinh",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_tra_vinh",
+      "province": 84
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 844,
+    "fields": {
+      "name": "Huyện Càng Long",
+      "division_type": "huyện",
+      "codename": "huyen_cang_long",
+      "province": 84
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 845,
+    "fields": {
+      "name": "Huyện Cầu Kè",
+      "division_type": "huyện",
+      "codename": "huyen_cau_ke",
+      "province": 84
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 846,
+    "fields": {
+      "name": "Huyện Tiểu Cần",
+      "division_type": "huyện",
+      "codename": "huyen_tieu_can",
+      "province": 84
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 847,
+    "fields": {
+      "name": "Huyện Châu Thành",
+      "division_type": "huyện",
+      "codename": "huyen_chau_thanh",
+      "province": 84
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 848,
+    "fields": {
+      "name": "Huyện Cầu Ngang",
+      "division_type": "huyện",
+      "codename": "huyen_cau_ngang",
+      "province": 84
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 849,
+    "fields": {
+      "name": "Huyện Trà Cú",
+      "division_type": "huyện",
+      "codename": "huyen_tra_cu",
+      "province": 84
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 850,
+    "fields": {
+      "name": "Huyện Duyên Hải",
+      "division_type": "huyện",
+      "codename": "huyen_duyen_hai",
+      "province": 84
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 851,
+    "fields": {
+      "name": "Thị xã Duyên Hải",
+      "division_type": "thị xã",
+      "codename": "thi_xa_duyen_hai",
+      "province": 84
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 855,
+    "fields": {
+      "name": "Thành phố Vĩnh Long",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_vinh_long",
+      "province": 86
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 857,
+    "fields": {
+      "name": "Huyện Long Hồ",
+      "division_type": "huyện",
+      "codename": "huyen_long_ho",
+      "province": 86
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 858,
+    "fields": {
+      "name": "Huyện Mang Thít",
+      "division_type": "huyện",
+      "codename": "huyen_mang_thit",
+      "province": 86
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 859,
+    "fields": {
+      "name": "Huyện Vũng Liêm",
+      "division_type": "huyện",
+      "codename": "huyen_vung_liem",
+      "province": 86
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 860,
+    "fields": {
+      "name": "Huyện Tam Bình",
+      "division_type": "huyện",
+      "codename": "huyen_tam_binh",
+      "province": 86
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 861,
+    "fields": {
+      "name": "Thị xã Bình Minh",
+      "division_type": "thị xã",
+      "codename": "thi_xa_binh_minh",
+      "province": 86
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 862,
+    "fields": {
+      "name": "Huyện Trà Ôn",
+      "division_type": "huyện",
+      "codename": "huyen_tra_on",
+      "province": 86
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 863,
+    "fields": {
+      "name": "Huyện Bình Tân",
+      "division_type": "huyện",
+      "codename": "huyen_binh_tan",
+      "province": 86
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 866,
+    "fields": {
+      "name": "Thành phố Cao Lãnh",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_cao_lanh",
+      "province": 87
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 867,
+    "fields": {
+      "name": "Thành phố Sa Đéc",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_sa_dec",
+      "province": 87
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 868,
+    "fields": {
+      "name": "Thành phố Hồng Ngự",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_hong_ngu",
+      "province": 87
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 869,
+    "fields": {
+      "name": "Huyện Tân Hồng",
+      "division_type": "huyện",
+      "codename": "huyen_tan_hong",
+      "province": 87
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 870,
+    "fields": {
+      "name": "Huyện Hồng Ngự",
+      "division_type": "huyện",
+      "codename": "huyen_hong_ngu",
+      "province": 87
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 871,
+    "fields": {
+      "name": "Huyện Tam Nông",
+      "division_type": "huyện",
+      "codename": "huyen_tam_nong",
+      "province": 87
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 872,
+    "fields": {
+      "name": "Huyện Tháp Mười",
+      "division_type": "huyện",
+      "codename": "huyen_thap_muoi",
+      "province": 87
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 873,
+    "fields": {
+      "name": "Huyện Cao Lãnh",
+      "division_type": "huyện",
+      "codename": "huyen_cao_lanh",
+      "province": 87
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 874,
+    "fields": {
+      "name": "Huyện Thanh Bình",
+      "division_type": "huyện",
+      "codename": "huyen_thanh_binh",
+      "province": 87
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 875,
+    "fields": {
+      "name": "Huyện Lấp Vò",
+      "division_type": "huyện",
+      "codename": "huyen_lap_vo",
+      "province": 87
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 876,
+    "fields": {
+      "name": "Huyện Lai Vung",
+      "division_type": "huyện",
+      "codename": "huyen_lai_vung",
+      "province": 87
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 877,
+    "fields": {
+      "name": "Huyện Châu Thành",
+      "division_type": "huyện",
+      "codename": "huyen_chau_thanh",
+      "province": 87
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 883,
+    "fields": {
+      "name": "Thành phố Long Xuyên",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_long_xuyen",
+      "province": 89
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 884,
+    "fields": {
+      "name": "Thành phố Châu Đốc",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_chau_doc",
+      "province": 89
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 886,
+    "fields": {
+      "name": "Huyện An Phú",
+      "division_type": "huyện",
+      "codename": "huyen_an_phu",
+      "province": 89
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 887,
+    "fields": {
+      "name": "Thị xã Tân Châu",
+      "division_type": "thị xã",
+      "codename": "thi_xa_tan_chau",
+      "province": 89
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 888,
+    "fields": {
+      "name": "Huyện Phú Tân",
+      "division_type": "huyện",
+      "codename": "huyen_phu_tan",
+      "province": 89
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 889,
+    "fields": {
+      "name": "Huyện Châu Phú",
+      "division_type": "huyện",
+      "codename": "huyen_chau_phu",
+      "province": 89
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 890,
+    "fields": {
+      "name": "Thị xã Tịnh Biên",
+      "division_type": "thị xã",
+      "codename": "thi_xa_tinh_bien",
+      "province": 89
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 891,
+    "fields": {
+      "name": "Huyện Tri Tôn",
+      "division_type": "huyện",
+      "codename": "huyen_tri_ton",
+      "province": 89
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 892,
+    "fields": {
+      "name": "Huyện Châu Thành",
+      "division_type": "huyện",
+      "codename": "huyen_chau_thanh",
+      "province": 89
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 893,
+    "fields": {
+      "name": "Huyện Chợ Mới",
+      "division_type": "huyện",
+      "codename": "huyen_cho_moi",
+      "province": 89
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 894,
+    "fields": {
+      "name": "Huyện Thoại Sơn",
+      "division_type": "huyện",
+      "codename": "huyen_thoai_son",
+      "province": 89
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 899,
+    "fields": {
+      "name": "Thành phố Rạch Giá",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_rach_gia",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 900,
+    "fields": {
+      "name": "Thành phố Hà Tiên",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_ha_tien",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 902,
+    "fields": {
+      "name": "Huyện Kiên Lương",
+      "division_type": "huyện",
+      "codename": "huyen_kien_luong",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 903,
+    "fields": {
+      "name": "Huyện Hòn Đất",
+      "division_type": "huyện",
+      "codename": "huyen_hon_dat",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 904,
+    "fields": {
+      "name": "Huyện Tân Hiệp",
+      "division_type": "huyện",
+      "codename": "huyen_tan_hiep",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 905,
+    "fields": {
+      "name": "Huyện Châu Thành",
+      "division_type": "huyện",
+      "codename": "huyen_chau_thanh",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 906,
+    "fields": {
+      "name": "Huyện Giồng Riềng",
+      "division_type": "huyện",
+      "codename": "huyen_giong_rieng",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 907,
+    "fields": {
+      "name": "Huyện Gò Quao",
+      "division_type": "huyện",
+      "codename": "huyen_go_quao",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 908,
+    "fields": {
+      "name": "Huyện An Biên",
+      "division_type": "huyện",
+      "codename": "huyen_an_bien",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 909,
+    "fields": {
+      "name": "Huyện An Minh",
+      "division_type": "huyện",
+      "codename": "huyen_an_minh",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 910,
+    "fields": {
+      "name": "Huyện Vĩnh Thuận",
+      "division_type": "huyện",
+      "codename": "huyen_vinh_thuan",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 911,
+    "fields": {
+      "name": "Thành phố Phú Quốc",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_phu_quoc",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 912,
+    "fields": {
+      "name": "Huyện Kiên Hải",
+      "division_type": "huyện",
+      "codename": "huyen_kien_hai",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 913,
+    "fields": {
+      "name": "Huyện U Minh Thượng",
+      "division_type": "huyện",
+      "codename": "huyen_u_minh_thuong",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 914,
+    "fields": {
+      "name": "Huyện Giang Thành",
+      "division_type": "huyện",
+      "codename": "huyen_giang_thanh",
+      "province": 91
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 916,
+    "fields": {
+      "name": "Quận Ninh Kiều",
+      "division_type": "quận",
+      "codename": "quan_ninh_kieu",
+      "province": 92
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 917,
+    "fields": {
+      "name": "Quận Ô Môn",
+      "division_type": "quận",
+      "codename": "quan_o_mon",
+      "province": 92
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 918,
+    "fields": {
+      "name": "Quận Bình Thuỷ",
+      "division_type": "quận",
+      "codename": "quan_binh_thuy",
+      "province": 92
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 919,
+    "fields": {
+      "name": "Quận Cái Răng",
+      "division_type": "quận",
+      "codename": "quan_cai_rang",
+      "province": 92
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 923,
+    "fields": {
+      "name": "Quận Thốt Nốt",
+      "division_type": "quận",
+      "codename": "quan_thot_not",
+      "province": 92
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 924,
+    "fields": {
+      "name": "Huyện Vĩnh Thạnh",
+      "division_type": "huyện",
+      "codename": "huyen_vinh_thanh",
+      "province": 92
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 925,
+    "fields": {
+      "name": "Huyện Cờ Đỏ",
+      "division_type": "huyện",
+      "codename": "huyen_co_do",
+      "province": 92
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 926,
+    "fields": {
+      "name": "Huyện Phong Điền",
+      "division_type": "huyện",
+      "codename": "huyen_phong_dien",
+      "province": 92
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 927,
+    "fields": {
+      "name": "Huyện Thới Lai",
+      "division_type": "huyện",
+      "codename": "huyen_thoi_lai",
+      "province": 92
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 930,
+    "fields": {
+      "name": "Thành phố Vị Thanh",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_vi_thanh",
+      "province": 93
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 931,
+    "fields": {
+      "name": "Thành phố Ngã Bảy",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_nga_bay",
+      "province": 93
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 932,
+    "fields": {
+      "name": "Huyện Châu Thành A",
+      "division_type": "huyện",
+      "codename": "huyen_chau_thanh_a",
+      "province": 93
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 933,
+    "fields": {
+      "name": "Huyện Châu Thành",
+      "division_type": "huyện",
+      "codename": "huyen_chau_thanh",
+      "province": 93
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 934,
+    "fields": {
+      "name": "Huyện Phụng Hiệp",
+      "division_type": "huyện",
+      "codename": "huyen_phung_hiep",
+      "province": 93
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 935,
+    "fields": {
+      "name": "Huyện Vị Thuỷ",
+      "division_type": "huyện",
+      "codename": "huyen_vi_thuy",
+      "province": 93
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 936,
+    "fields": {
+      "name": "Huyện Long Mỹ",
+      "division_type": "huyện",
+      "codename": "huyen_long_my",
+      "province": 93
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 937,
+    "fields": {
+      "name": "Thị xã Long Mỹ",
+      "division_type": "thị xã",
+      "codename": "thi_xa_long_my",
+      "province": 93
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 941,
+    "fields": {
+      "name": "Thành phố Sóc Trăng",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_soc_trang",
+      "province": 94
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 942,
+    "fields": {
+      "name": "Huyện Châu Thành",
+      "division_type": "huyện",
+      "codename": "huyen_chau_thanh",
+      "province": 94
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 943,
+    "fields": {
+      "name": "Huyện Kế Sách",
+      "division_type": "huyện",
+      "codename": "huyen_ke_sach",
+      "province": 94
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 944,
+    "fields": {
+      "name": "Huyện Mỹ Tú",
+      "division_type": "huyện",
+      "codename": "huyen_my_tu",
+      "province": 94
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 945,
+    "fields": {
+      "name": "Huyện Cù Lao Dung",
+      "division_type": "huyện",
+      "codename": "huyen_cu_lao_dung",
+      "province": 94
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 946,
+    "fields": {
+      "name": "Huyện Long Phú",
+      "division_type": "huyện",
+      "codename": "huyen_long_phu",
+      "province": 94
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 947,
+    "fields": {
+      "name": "Huyện Mỹ Xuyên",
+      "division_type": "huyện",
+      "codename": "huyen_my_xuyen",
+      "province": 94
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 948,
+    "fields": {
+      "name": "Thị xã Ngã Năm",
+      "division_type": "thị xã",
+      "codename": "thi_xa_nga_nam",
+      "province": 94
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 949,
+    "fields": {
+      "name": "Huyện Thạnh Trị",
+      "division_type": "huyện",
+      "codename": "huyen_thanh_tri",
+      "province": 94
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 950,
+    "fields": {
+      "name": "Thị xã Vĩnh Châu",
+      "division_type": "thị xã",
+      "codename": "thi_xa_vinh_chau",
+      "province": 94
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 951,
+    "fields": {
+      "name": "Huyện Trần Đề",
+      "division_type": "huyện",
+      "codename": "huyen_tran_de",
+      "province": 94
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 954,
+    "fields": {
+      "name": "Thành phố Bạc Liêu",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_bac_lieu",
+      "province": 95
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 956,
+    "fields": {
+      "name": "Huyện Hồng Dân",
+      "division_type": "huyện",
+      "codename": "huyen_hong_dan",
+      "province": 95
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 957,
+    "fields": {
+      "name": "Huyện Phước Long",
+      "division_type": "huyện",
+      "codename": "huyen_phuoc_long",
+      "province": 95
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 958,
+    "fields": {
+      "name": "Huyện Vĩnh Lợi",
+      "division_type": "huyện",
+      "codename": "huyen_vinh_loi",
+      "province": 95
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 959,
+    "fields": {
+      "name": "Thị xã Giá Rai",
+      "division_type": "thị xã",
+      "codename": "thi_xa_gia_rai",
+      "province": 95
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 960,
+    "fields": {
+      "name": "Huyện Đông Hải",
+      "division_type": "huyện",
+      "codename": "huyen_dong_hai",
+      "province": 95
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 961,
+    "fields": {
+      "name": "Huyện Hoà Bình",
+      "division_type": "huyện",
+      "codename": "huyen_hoa_binh",
+      "province": 95
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 964,
+    "fields": {
+      "name": "Thành phố Cà Mau",
+      "division_type": "thành phố",
+      "codename": "thanh_pho_ca_mau",
+      "province": 96
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 966,
+    "fields": {
+      "name": "Huyện U Minh",
+      "division_type": "huyện",
+      "codename": "huyen_u_minh",
+      "province": 96
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 967,
+    "fields": {
+      "name": "Huyện Thới Bình",
+      "division_type": "huyện",
+      "codename": "huyen_thoi_binh",
+      "province": 96
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 968,
+    "fields": {
+      "name": "Huyện Trần Văn Thời",
+      "division_type": "huyện",
+      "codename": "huyen_tran_van_thoi",
+      "province": 96
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 969,
+    "fields": {
+      "name": "Huyện Cái Nước",
+      "division_type": "huyện",
+      "codename": "huyen_cai_nuoc",
+      "province": 96
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 970,
+    "fields": {
+      "name": "Huyện Đầm Dơi",
+      "division_type": "huyện",
+      "codename": "huyen_dam_doi",
+      "province": 96
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 971,
+    "fields": {
+      "name": "Huyện Năm Căn",
+      "division_type": "huyện",
+      "codename": "huyen_nam_can",
+      "province": 96
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 972,
+    "fields": {
+      "name": "Huyện Phú Tân",
+      "division_type": "huyện",
+      "codename": "huyen_phu_tan",
+      "province": 96
+    }
+  },
+  {
+    "model": "api.District",
+    "pk": 973,
+    "fields": {
+      "name": "Huyện Ngọc Hiển",
+      "division_type": "huyện",
+      "codename": "huyen_ngoc_hien",
+      "province": 96
+    }
+  }
+]

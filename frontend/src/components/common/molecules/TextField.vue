@@ -4,7 +4,11 @@
     :class="{ 'has-input': value && value != '' }"
   >
     <custom-label v-if="label" v-t="label" />
-    <custom-input :value="value" @input="handleInput" />
+    <custom-input
+      :value="value"
+      @input="handleInput"
+      :placeholder="placeholder"
+    />
   </div>
 </template>
 
@@ -29,6 +33,10 @@ export default defineComponent({
       type: [String, Number],
       required: true,
       default: "",
+    },
+    placeholder: {
+      type: String,
+      required: false,
     },
   },
   data() {

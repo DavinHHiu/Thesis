@@ -13,6 +13,8 @@ const PaymentSuccessView = () => import("@/views/PaymentSuccessView.vue");
 const ProductDetail = () => import("@/views/ProductDetail.vue");
 const ProfileView = () => import("@/views/ProfileView.vue");
 const ProfileAddressView = () => import("@/views/ProfileAddressView.vue");
+const ProfileLocaleSettingView = () =>
+  import("@/views/ProfileLocaleSetting.vue");
 const ProfileDetailView = () => import("@/views/ProfileDetailView.vue");
 const ProfileChangePasswordView = () =>
   import("@/views/ProfileChangePasswordView.vue");
@@ -95,6 +97,11 @@ const router = createRouter({
               path: "addresses",
               name: "profile.addresses",
               component: ProfileAddressView,
+            },
+            {
+              path: "language",
+              name: "profile.language",
+              component: ProfileLocaleSettingView,
             },
             {
               path: "change-password",
