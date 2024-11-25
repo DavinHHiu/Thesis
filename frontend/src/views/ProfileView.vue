@@ -1,5 +1,6 @@
 <template>
   <page-body class="page-wp flex justify-between py-[6rem]">
+    <Toast />
     <section class="user-sidebar">
       <editable-avatar
         class="w-[20rem] h-[20rem]"
@@ -17,6 +18,10 @@
           >
             <span class="material-symbols-outlined" v-text="'pin_drop'" />
             <span v-text="'My addresses'" />
+          </router-link>
+          <router-link class="side-tab-item" :to="{ name: 'profile.language' }">
+            <span class="material-symbols-outlined" v-text="'map'" />
+            <span v-text="'Locale'" />
           </router-link>
           <router-link class="side-tab-item" :to="{ name: 'cartPage' }">
             <span class="material-symbols-outlined" v-text="'shopping_cart'" />

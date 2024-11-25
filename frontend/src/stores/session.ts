@@ -1,12 +1,11 @@
 import consts from "@/consts/consts";
+import { useCartStore } from "@/stores/cart";
 import { LoginItem, RegisterItem } from "@/types/frontend";
 import { Password, User } from "@/types/worker";
 import localStore from "@/utils/localStorage";
 import axios from "axios";
 import _ from "lodash";
 import { defineStore } from "pinia";
-
-import { useCartStore } from "./cart";
 
 let refreshInterval: NodeJS.Timeout | null = null;
 
@@ -29,10 +28,7 @@ export const useSessionStore = defineStore("session", {
               axios.defaults.headers.common["Authorization"] =
                 `Bearer ${this.token}`;
             }
-            localStore.bulkSet({
-              token: this.token,
-              user: JSON.stringify(this.user),
-            });
+            localStore.set("token", this.token);
 
             if (this.user.id) {
               const cartStore = useCartStore();
@@ -60,11 +56,9 @@ export const useSessionStore = defineStore("session", {
         .then((response) => response);
     },
     logout() {
-      this.token = "";
-      this.user = {} as User;
-      localStore.bulkRemove(["user", "token"]);
+      this.resetSession();
+      localStore.remove("token");
       delete axios.defaults.headers.common["Authorization"];
-
       if (refreshInterval) {
         clearInterval(refreshInterval);
         refreshInterval = null;
@@ -104,6 +98,10 @@ export const useSessionStore = defineStore("session", {
         .then((response) => {
           return response;
         });
+    },
+    resetSession() {
+      this.user = {} as User;
+      this.token = "";
     },
   },
   getters: {

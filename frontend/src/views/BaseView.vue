@@ -4,7 +4,7 @@
     <div class="body">
       <router-view />
     </div>
-    <custom-footer v-if="hasFooter" />
+    <Footer v-if="hasFooter" />
     <cart-folder
       :class="{ active: openCart }"
       @close:cart-folder="toogleCartFolder"
@@ -13,7 +13,7 @@
 </template>
 
 <script lang="ts">
-import CustomFooter from "@/components/common/organisms/CustomFooter.vue";
+import Footer from "@/components/common/organisms/Footer.vue";
 import NavHeader from "@/components/common/organisms/NavHeader.vue";
 import CartFolder from "@/components/common/templates/CartFolder.vue";
 import { defineComponent } from "vue";
@@ -22,7 +22,7 @@ export default defineComponent({
   name: "BaseView",
   components: {
     CartFolder,
-    CustomFooter,
+    Footer,
     NavHeader,
   },
   data() {

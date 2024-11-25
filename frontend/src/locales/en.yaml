@@ -1,3 +1,7 @@
+app:
+  name: Price Tag
+  slogan: Defining style, elevating fashion.
+
 inputLabel:
   common:
     name: Name
@@ -181,3 +185,23 @@ changePasswordPage:
     success: Updated successfully
     fail: Failed to update password
     error: Please fill all fields
+
+languageSettingsPage:
+  title: Locale
+  subtitle:
+    language: Language Settings
+    currency: Currency Settings
+  label:
+    language: Language
+    currency: Currency
+
+footer:
+  buttonLabel:
+    backToTop: Back to top
+    subscribe: Subscribe
+  placeholder: Enter your email...
+  copyright: Copyright © 2024 Price Tag. Powered by Pink.
+  subtitle:
+    forHim: For him
+    forHer: For her
+    subscribe: Subscribe

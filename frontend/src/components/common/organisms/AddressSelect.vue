@@ -17,12 +17,7 @@
             />
           </span>
           <span class="address" v-text="addresses[curIdx].address_1" />
-          <span
-            class="address"
-            v-text="
-              `${addresses[curIdx].ward}, ${addresses[curIdx].district}, ${addresses[curIdx].city} `
-            "
-          />
+          <span class="address" v-text="addresses[curIdx].display_address1" />
         </div>
         <span
           v-if="addresses.length > 1"
@@ -53,10 +48,7 @@
               />
             </span>
             <span class="address" v-text="address.address_1" />
-            <span
-              class="address"
-              v-text="`${address.ward}, ${address.district}, ${address.city} `"
-            />
+            <span class="address" v-text="address.display_address1" />
           </div>
         </div>
       </div>
@@ -85,13 +77,13 @@
 
 <script lang="ts">
 import { useAddressStore } from "@/stores/address";
-import { Address } from "@/types/worker";
+import { Address, District, Province, Ward } from "@/types/worker";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "AddressSelect",
-  emits: ["add:address", "edit:address"],
+  emits: ["add:address", "edit:address", "choose:address"],
   props: {
     openAddBtn: {
       type: Boolean,
@@ -102,6 +94,9 @@ export default defineComponent({
     return {
       open: false,
       curIdx: 0,
+      provinces: [] as Province[],
+      districts: [] as District[],
+      wards: [] as Ward[],
     };
   },
   computed: {
@@ -111,7 +106,12 @@ export default defineComponent({
     },
   },
   methods: {
-    ...mapActions(useAddressStore, ["setAddress"]),
+    ...mapActions(useAddressStore, [
+      "setAddress",
+      "listProvinces",
+      "listDistricts",
+      "listWards",
+    ]),
     toggleDropdown() {
       if (this.addresses.length > 0) {
         this.open = !this.open;
@@ -119,7 +119,7 @@ export default defineComponent({
     },
     chooseAddress(id: number) {
       this.curIdx = this.addresses.findIndex((address) => address.id === id);
-      this.setAddress(this.addresses[this.curIdx]);
+      this.$emit("choose:address", this.addresses[this.curIdx]);
       this.toggleDropdown();
     },
     addNewAddress() {
@@ -129,12 +129,8 @@ export default defineComponent({
     handleEdit(id: number) {
       this.open = false;
       this.curIdx = this.addresses.findIndex((address) => address.id === id);
-      this.$emit("edit:address", id);
+      this.$emit("edit:address", this.addresses[this.curIdx]);
     },
-  },
-  mounted() {
-    console.log(this.curIdx);
-    this.setAddress(this.addresses[this.curIdx]);
   },
   watch: {
     addresses: {
@@ -146,6 +142,9 @@ export default defineComponent({
         }
       },
     },
+  },
+  async mounted() {
+    await this.setAddress(this.addresses[this.curIdx]);
   },
 });
 </script>

@@ -125,7 +125,7 @@ class JSONWebTokenViewMixin(APIView):
             issued_at = serializer.validated_data.get("issued_at")
             response_data = {
                 "token": token,
-                "user": UserSerializer(user).data,
+                "user": UserSerializer(user, context={"request": request}).data,
                 "issued_at": issued_at,
             }
             response = Response(response_data)

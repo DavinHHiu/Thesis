@@ -1,5 +1,4 @@
 <template>
-  <Toast />
   <h2 class="sub-title mb-[2rem]" v-t="'profilePage.subtitle.passwordChange'" />
   <card class="profile-form rounded" intent="form">
     <div class="user-form flex flex-col gap-[2rem]">

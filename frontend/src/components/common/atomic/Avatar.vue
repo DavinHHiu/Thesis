@@ -11,6 +11,7 @@ export default defineComponent({
     src: {
       type: String,
       required: true,
+      default: "",
     },
   },
 });

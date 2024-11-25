@@ -234,9 +234,13 @@ class ProductShallowSerializer(serializers.Serializer):
 
     def get_images(self, obj):
         first_sku = obj.skus.first()
+        request = self.context.get("request", None)
         if first_sku:
-            image_paths = first_sku.images.values_list("image", flat=True)
-            return [self._build_image_uri(image) for image in image_paths]
+            product_images = first_sku.images.all()
+            return [
+                request.build_absolute_uri(product_image.image.url)
+                for product_image in product_images
+            ]
         return []
 
     def get_categories(self, obj):
@@ -244,9 +248,6 @@ class ProductShallowSerializer(serializers.Serializer):
 
     def get_prices(self, obj):
         return obj.skus.values_list("price", flat=True)
-
-    def _build_image_uri(self, relative_uri):
-        return settings.BASE_MEDIA_URL + relative_uri.replace("\\", "/")
 
 
 class ProductSkuDetailSerializer(serializers.Serializer):
@@ -285,6 +286,3 @@ class ProductDetailSerializer(serializers.Serializer):
 
     def get_categories(self, obj):
         return obj.categories.values_list("name", flat=True)
-
-    def _build_image_uri(self, relative_uri):
-        return settings.BASE_MEDIA_URL + relative_uri.replace("\\", "/")

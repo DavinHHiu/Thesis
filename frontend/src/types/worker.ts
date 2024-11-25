@@ -27,6 +27,7 @@ interface Address {
   address_2?: string;
   tel: string;
   representative: string;
+  display_address1?: string;
 }
 
 function isAddressValid(address: Address): boolean {
@@ -42,6 +43,33 @@ function isAddressValid(address: Address): boolean {
   return requiredFields.every(
     (field) => field in address && Boolean(address[field])
   );
+}
+
+interface Province {
+  code: number;
+  name: string;
+  division_type: string;
+  codename: string;
+  phone_code: number;
+  is_active: boolean;
+}
+
+interface District {
+  code: number;
+  name: string;
+  division_type: string;
+  codename: string;
+  province_code: number;
+  is_active: boolean;
+}
+
+interface Ward {
+  code: number;
+  name: string;
+  division_type: string;
+  codename: string;
+  district_code: number;
+  is_active: boolean;
 }
 
 interface Category {
@@ -198,6 +226,9 @@ interface OrderItem {
 
 export {
   Address,
+  Province,
+  District,
+  Ward,
   Cart,
   CartItem,
   NewCartItem,

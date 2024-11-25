@@ -2,12 +2,12 @@
   <div>
     <nav-header :intent="headerIntent" />
     <slot></slot>
-    <custom-footer />
+    <Footer />
   </div>
 </template>
 
 <script>
-import CustomFooter from "@/components/common/organisms/CustomFooter.vue";
+import Footer from "@/components/common/organisms/Footer.vue";
 import NavHeader from "@/components/common/organisms/NavHeader.vue";
 import { defineComponent } from "vue";
 
@@ -15,7 +15,7 @@ export default defineComponent({
   name: "DefaultLayout",
   components: {
     NavHeader,
-    CustomFooter,
+    Footer,
   },
   props: {
     headerIntent: {

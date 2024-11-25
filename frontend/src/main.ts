@@ -1,5 +1,5 @@
-import "./assets/main.scss";
-import "./assets/css/tailwind.css";
+import "@/assets/main.scss";
+import "@/assets/css/tailwind.css";
 import "bootstrap/dist/js/bootstrap";
 
 import App from "@/App.vue";
