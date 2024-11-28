@@ -4,32 +4,32 @@
     <card class="flex">
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
-          :label="$t('inputLabel.address.title')"
+          label="inputLabel.address.title"
           :value="address.title"
           @update:model-value="(newValue) => (address.title = newValue)"
         />
         <text-field
-          :label="$t('inputLabel.address.zipcode')"
+          label="'inputLabel.address.zipcode"
           :value="address.zipcode"
           @update:model-value="(newValue) => (address.zipcode = newValue)"
         />
         <text-field
-          :label="$t('inputLabel.address.address1')"
+          label="inputLabel.address.address1"
           :value="address.address_1"
           @update:model-value="(newValue) => (address.address_1 = newValue)"
         />
         <text-field
-          :label="$t('inputLabel.address.address2')"
+          label="inputLabel.address.address2"
           :value="address.address_2"
           @update:model-value="(newValue) => (address.address_2 = newValue)"
         />
         <text-field
-          :label="$t('inputLabel.address.tel')"
+          label="inputLabel.address.tel"
           :value="address.tel"
           @update:model-value="(newValue) => (address.tel = newValue)"
         />
         <select-field
-          :label="$t('inputLabel.address.user')"
+          label="inputLabel.address.user"
           :value="address.user?.id"
           :options="options"
           @update:model-value="selectUser"
@@ -127,7 +127,7 @@ export default defineComponent({
   },
   async mounted() {
     await this.listUsers();
-    const id = this.$router.currentRoute.value.params.id;
+    const id = this.$route.params.id;
     if (id) {
       this.retrieveAddress(Number(id));
       this.new = false;

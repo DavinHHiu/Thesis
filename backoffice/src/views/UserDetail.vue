@@ -1,7 +1,7 @@
 <template>
   <page-title :title="pageTitle" />
   <page-body>
-    <tab-layout :tabs="tabs" @change:tab="handleChangeTab" />
+    <!-- <tab-layout :tabs="tabs" @change:tab="handleChangeTab" /> -->
     <router-view />
   </page-body>
 </template>
@@ -26,8 +26,6 @@ export default defineComponent({
       pageTitle: "User",
       tabs: [
         { title: "User", name: "user.update", path: "update" },
-        { title: "Addresses", name: "address.list", path: "addresses" },
-        { title: "Cart", name: "cart.items.list", path: "cart" },
         { title: "Orders", name: "user.order.list", path: "order" },
       ] as TabItem[],
     };

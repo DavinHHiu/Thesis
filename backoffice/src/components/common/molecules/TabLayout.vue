@@ -18,10 +18,6 @@ import { defineComponent, PropType } from "vue";
 export default defineComponent({
   name: "TabLayout",
   props: {
-    curPathName: {
-      type: String,
-      required: false,
-    },
     tabs: {
       type: Array as PropType<TabItem[]>,
       required: true,
@@ -38,16 +34,15 @@ export default defineComponent({
       this.$emit("change:tab", index);
     },
     activeTab(item: TabItem) {
-      return this.$router.currentRoute.value.path.includes(item.path as string);
-    },
-  },
-  watch: {
-    curPathName() {
-      const index = _.findIndex(
-        this.tabs,
-        (tab) => tab.name === this.curPathName
-      );
-      this.currentIndex = index !== -1 ? index : 0;
+      if (this.$route.name && item.name) {
+        const name = (this.$route.name as string)
+          .split(".")
+          .slice(0, -1)
+          .join(".") as string;
+        const itemName = item.name.split(".").slice(0, -1).join(".") as string;
+        return name === itemName;
+      }
+      return false;
     },
   },
 });

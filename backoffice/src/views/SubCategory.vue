@@ -13,10 +13,10 @@
       <tbody>
         <template v-for="(subcategory, index) in subcategories" :key="index">
           <tr :class="{ odd: index % 2 == 0 }">
-            <td>{{ index + 1 }}</td>
-            <td v-text="subcategory.name" />
-            <td v-text="subcategory.category.name" />
-            <td v-text="subcategory.description" />
+            <td v-text="index + 1" />
+            <td v-text="fmt(subcategory.name)" />
+            <td v-text="fmt(subcategory.category_id)" />
+            <td v-text="fmt(subcategory.description)" />
             <td class="action-wrap">
               <ellipsis-dropdown
                 @action="handleActions"
@@ -33,7 +33,7 @@
     </table>
   </page-body>
   <modal id="deleteModal" title="Delete attribute" @confirm="submitAction">
-    <span v-text="$t('subcategoryPage.modalDelete.title')" />
+    <span v-t="'subcategoryPage.modalDelete.title'" />
   </modal>
 </template>
 
@@ -45,6 +45,7 @@ import Modal from "@/components/common/molecules/Modal.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import { useSubCategoryStore } from "@/stores/subcategory";
 import { SubCategory } from "@/types/worker";
+import { fmt } from "@/utils/string";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
@@ -90,12 +91,13 @@ export default defineComponent({
         }
       }
     },
+    fmt,
   },
   computed: {
     ...mapState(useSubCategoryStore, ["subcategories"]),
   },
   async mounted() {
-    const category_id = this.$router.currentRoute.value.params.categoryId;
+    const category_id = this.$route.params.categoryId;
     await this.listByCategory(Number(category_id));
   },
 });

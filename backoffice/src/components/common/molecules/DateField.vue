@@ -1,6 +1,6 @@
 <template>
   <div class="input-wp" :class="{ 'has-input': value !== undefined }">
-    <custom-label v-if="label" v-text="label" />
+    <custom-label v-if="label" :label="label" />
     <custom-input type="date" :value="value" @input="handleInput" />
   </div>
 </template>

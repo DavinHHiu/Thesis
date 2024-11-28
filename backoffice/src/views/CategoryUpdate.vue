@@ -64,7 +64,7 @@ export default defineComponent({
       } else {
         this.updateCategory(this.category);
       }
-      this.$router.push("/categories");
+      this.$router.push({ name: "category.list" });
     },
   },
   computed: {
@@ -81,7 +81,7 @@ export default defineComponent({
     },
   },
   mounted() {
-    const id = this.$router.currentRoute.value.params.categoryId;
+    const id = this.$route.params.categoryId;
     if (id) {
       this.retrieveCategory(Number(id));
       this.new = false;

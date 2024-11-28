@@ -184,8 +184,6 @@
   --bs-form-invalid-border-color: #ea868f;
 }
 
-
-
 button {
   cursor: pointer;
   appearance: none;
@@ -242,7 +240,7 @@ table {
   }
 
   .odd {
-    background-color: $--gray-color-200;
+    background-color: $--gray-color-150;
   }
 
   tbody {
@@ -251,8 +249,7 @@ table {
 
       &:hover {
         cursor: pointer;
-        color: $--white;
-        background-color: $--dark-gray;
+        background-color: rgba($--dark-gray, 0.3);
       }
     }
     td {

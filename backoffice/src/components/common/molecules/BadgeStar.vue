@@ -1,15 +1,11 @@
 <template>
   <div class="badge-wp">
     <div class="badge-bg">
-      <span v-for="(x, index) in 5" :key="index" class="fa fa-star"></span>
+      <span v-for="(_, idx) in 5" :key="idx" class="fa fa-star"></span>
     </div>
     <div class="badge-fg" :style="ratingStar">
       <div class="badge-inner">
-        <span
-          v-for="(x, index) in 5"
-          :key="index"
-          class="fa fa-star gold"
-        ></span>
+        <span v-for="(_, idx) in 5" :key="idx" class="fa fa-star gold"></span>
       </div>
     </div>
   </div>

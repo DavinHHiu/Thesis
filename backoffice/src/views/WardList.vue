@@ -1,25 +1,24 @@
 <template>
-  <header-action :current-route="$t('productSkuPage.add.name')" />
   <table class="w-full mt-[2rem] overflow-hidden">
     <thead>
       <tr>
-        <th>No.</th>
-        <th>Sku</th>
-        <th>Size</th>
-        <th>Color</th>
-        <th>Quantity</th>
-        <th>Price</th>
+        <th v-text="'Code'" />
+        <th v-text="'Name'" />
+        <th v-text="'Divistion type'" />
+        <th v-text="'Codename'" />
+        <th v-text="'Province code'" />
+        <th v-text="'Status'" />
       </tr>
     </thead>
     <tbody>
-      <template v-for="(productSku, index) in productSkus" :key="index">
-        <tr :class="{ odd: index % 2 == 0 }">
-          <td v-text="index + 1" />
-          <td v-text="fmt(productSku.sku)" />
-          <td v-text="fmt(productSku.size.value)" />
-          <td v-text="fmt(productSku.color.value)" />
-          <td v-text="fmt(productSku.quantity)" />
-          <td v-text="fmtAmount(productSku.price)" />
+      <template v-for="(ward, index) in wards" :key="index">
+        <tr :class="{ odd: !(index % 2) }">
+          <td v-text="fmt(ward.code)" />
+          <td v-text="fmt(ward.name)" />
+          <td v-text="fmt(ward.division_type)" />
+          <td v-text="fmt(ward.codename)" />
+          <td v-text="fmt(ward.district_code)" />
+          <td v-text="fmt(ward.is_active)" />
           <td class="action-wrap">
             <ellipsis-dropdown
               @action="handleActions"
@@ -35,7 +34,7 @@
     </tbody>
   </table>
   <modal id="deleteModal" title="Delete attribute" @confirm="submitAction">
-    <span v-text="$t('productSkuPage.modalDelete.title')" />
+    <span v-text="$t('productPage.modalDelete.title')" />
   </modal>
 </template>
 
@@ -44,39 +43,45 @@ import CustomButton from "@/components/common/atomic/CustomButton.vue";
 import EllipsisDropdown from "@/components/common/molecules/EllipsisDropdown.vue";
 import HeaderAction from "@/components/common/molecules/HeaderAction.vue";
 import Modal from "@/components/common/molecules/Modal.vue";
-import { useProductSkuStore } from "@/stores/productSku";
-import { ProductSku } from "@/types/worker";
-import { fmtCur } from "@/utils/currency";
+import TabLayout from "@/components/common/molecules/TabLayout.vue";
+import PageBody from "@/components/common/templates/PageBody.vue";
+import PageTitle from "@/components/common/templates/PageTitle.vue";
+import { useAddressStore } from "@/stores/address";
+import { TabItem } from "@/types/backoffice";
+import { Ward } from "@/types/worker";
 import { fmt } from "@/utils/string";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
-import { useI18n } from "vue-i18n";
 
 export default defineComponent({
-  name: "ProductSkuView",
+  name: "AddressView",
   components: {
     CustomButton,
     EllipsisDropdown,
-    Modal,
     HeaderAction,
+    Modal,
+    PageTitle,
+    PageBody,
+    TabLayout,
   },
   data() {
     return {
       currentAction: "" as string,
       currentIndex: 0 as number,
+      tabs: [
+        { title: "User", name: "user.update", path: "update" },
+        { title: "Orders", name: "user.order.list", path: "order" },
+      ] as TabItem[],
     };
   },
   methods: {
-    ...mapActions(useProductSkuStore, ["listProductSkus", "destroyProductSku"]),
-    handleAction() {
-      console.log("Action clicked");
-    },
+    ...mapActions(useAddressStore, ["listWards"]),
     handleActions(obj: any) {
-      const productSku = this.productSkus[obj.currentIndex];
+      const ward = this.wards[obj.currentIndex];
       if (obj.action === "Update") {
         this.$router.push({
-          name: "product.sku.update",
-          params: { productSkuId: productSku.id },
+          name: "address.update",
+          params: { id: ward.code },
         });
       }
       this.currentAction = obj.action;
@@ -85,28 +90,19 @@ export default defineComponent({
     async submitAction() {
       const action = this.currentAction;
       if (action === "Delete") {
-        const product = this.productSkus[this.currentIndex] as ProductSku;
-        if (product.id) {
-          this.destroyProductSku(product.id);
+        const ward = this.wards[this.currentIndex] as Ward;
+        if (ward.code) {
+          this.destroyAddress(ward.code);
         }
       }
-    },
-    fmtAmount(amount: number) {
-      const { locale } = useI18n();
-      return fmtCur(locale.value, amount);
     },
     fmt,
   },
   computed: {
-    ...mapState(useProductSkuStore, ["productSkus"]),
+    ...mapState(useAddressStore, ["wards"]),
   },
   async mounted() {
-    const productId = this.$route.params.productId;
-    await this.listProductSkus(productId as string);
+    await this.listWards();
   },
 });
 </script>
-
-<style lang="scss" scoped>
-@import "@/assets/scss/variables";
-</style>

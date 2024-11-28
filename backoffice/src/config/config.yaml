@@ -1,0 +1,28 @@
+backofficeSidebar:
+  - title: Dashboard
+    path: /
+    icon: dashboard
+  - title: Products
+    path: /products
+    icon: checkroom
+  - title: Product Attributes
+    path: /product-attributes
+    icon: format_list_bulleted
+  - title: Category
+    path: /categories
+    icon: category
+  - title: User
+    path: /users
+    icon: groups
+  - title: Address
+    path: /addresses
+    icon: contact_mail
+  - title: Cart
+    path: /carts
+    icon: shopping_cart
+  - title: Order
+    path: /orders
+    icon: task
+  - title: Settings
+    path: /settings
+    icon: settings

@@ -2,7 +2,6 @@
   <page-title :title="$t('userPage.list.title')" />
   <page-body>
     <header-action :current-route="$t('userPage.add.name')" />
-    <tab-layout />
     <table class="w-full mt-[2rem] overflow-hidden">
       <thead>
         <tr>
@@ -17,22 +16,22 @@
       </thead>
       <tbody>
         <template v-for="(user, index) in users" :key="index">
-          <tr :class="{ odd: index % 2 == 0 }">
-            <td>{{ index + 1 }}</td>
+          <tr :class="{ odd: !(index % 2) }">
+            <td v-text="index + 1" />
             <td>
               <div class="flex justify-center">
                 <img
-                  :src="user.avatar as string"
+                  :src="fmt(user.avatar)"
                   :alt="user.email"
                   class="w-[4rem] h-[4rem] rounded-full object-cover"
                 />
               </div>
             </td>
-            <td v-text="user.email || '_'" />
-            <td v-text="user.first_name || '_'" />
-            <td v-text="user.last_name || '_'" />
-            <td v-text="user.birth_of_date || '_'" />
-            <td v-text="user.tel || '_'" />
+            <td v-text="fmt(user.email)" />
+            <td v-text="fmt(user.first_name)" />
+            <td v-text="fmt(user.last_name)" />
+            <td v-text="fmt(user.birth_of_date)" />
+            <td v-text="fmt(user.tel)" />
             <td class="action-wrap">
               <ellipsis-dropdown
                 @action="handleActions"
@@ -62,6 +61,7 @@ import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
 import { useUserStore } from "@/stores/user";
 import { User } from "@/types/worker";
+import { fmt } from "@/utils/string";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
@@ -103,6 +103,7 @@ export default defineComponent({
         }
       }
     },
+    fmt,
   },
   computed: {
     ...mapState(useUserStore, ["users"]),

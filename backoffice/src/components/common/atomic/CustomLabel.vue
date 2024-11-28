@@ -1,7 +1,5 @@
 <template>
-  <label class="custom-label" :class="{ required: required }">
-    <slot />
-  </label>
+  <label class="custom-label" :class="{ required: required }" v-t="label" />
 </template>
 
 <script lang="ts">
@@ -10,6 +8,10 @@ import { defineComponent } from "vue";
 export default defineComponent({
   name: "CustomLabel",
   props: {
+    label: {
+      type: String,
+      required: false,
+    },
     required: {
       type: Boolean,
       default: false,

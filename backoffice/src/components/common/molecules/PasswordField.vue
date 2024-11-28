@@ -1,6 +1,6 @@
 <template>
-  <div class="input-wp" :class="{ 'has-input': value != '' }">
-    <custom-label v-if="label" v-text="label" />
+  <div class="input-wp" :class="{ 'has-input': value && value !== '' }">
+    <custom-label v-if="label" :label="label" />
     <custom-input
       class="input-password"
       :type="type"
@@ -11,16 +11,14 @@
       v-if="!visiable"
       class="icon material-symbols-outlined"
       @click="toogleVisibility"
-    >
-      visibility
-    </span>
+      v-text="'visibility'"
+    />
     <span
       v-else
       class="icon material-symbols-outlined"
       @click="toogleVisibility"
-    >
-      visibility_off
-    </span>
+      v-text="'visibility_off'"
+    />
   </div>
 </template>
 
@@ -74,11 +72,16 @@ export default defineComponent({
 
 .icon {
   position: absolute;
+  font-size: $--font-xl;
   top: 50%;
   right: 1rem;
-  color: $--gray-color-700;
+  color: $--gray-color-300;
   transform: translateY(-50%);
   user-select: none;
   cursor: pointer;
+  transition: 0.2s ease-out;
+  &:hover {
+    color: $--gray-color-600;
+  }
 }
 </style>

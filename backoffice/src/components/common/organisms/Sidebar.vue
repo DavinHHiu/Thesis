@@ -5,9 +5,10 @@
   >
     <div class="menu-toggle-wrap flex justify-end relative top-0 mb-[1.6rem]">
       <button class="menu-toggle" @click="toggleMenu">
-        <span class="material-symbols-outlined"
-          >keyboard_double_arrow_right</span
-        >
+        <span
+          class="material-symbols-outlined"
+          v-text="'keyboard_double_arrow_right'"
+        />
       </button>
     </div>
 
@@ -22,13 +23,6 @@
           $t(`backofficeSidebar[${index}].icon`)
         }}</span>
         <span class="text">{{ $t(`backofficeSidebar[${index}].title`) }}</span>
-      </router-link>
-    </div>
-    <div class="flex-1"></div>
-    <div class="menu">
-      <router-link class="button" to="/settings">
-        <span class="material-symbols-outlined">settings</span>
-        <span class="text">Settings</span>
       </router-link>
     </div>
   </aside>
@@ -50,7 +44,9 @@ export default defineComponent({
       localStorage.setItem("is_expanded", this.is_expanded.toString());
     },
     activeRoute(path: string) {
-      return this.$router.currentRoute.value.path.includes(path);
+      return path === "/"
+        ? this.$route.path === "/"
+        : this.$route.path.includes(path);
     },
   },
 });

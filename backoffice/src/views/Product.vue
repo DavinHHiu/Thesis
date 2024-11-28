@@ -16,21 +16,24 @@
       <tbody>
         <template v-for="(product, index) in products" :key="index">
           <tr :class="{ odd: index % 2 == 0 }">
-            <td>{{ index + 1 }}</td>
-            <td v-text="product.name" />
-            <td v-text="product.categories[0].name" />
+            <td v-text="index + 1" />
+            <td v-text="fmt(product.name)" />
+            <td v-text="fmt(product.categories)" />
             <td>
-              <badge-star :rating="product.rating ? product.rating : 0" />
+              <badge-star :rating="fmt(product.rating)" />
             </td>
-            <td class="text-ellipsis" v-text="product.description" />
-            <td class="text-ellipsis" v-text="product.summary" />
+            <td class="text-ellipsis" v-text="fmt(product.description)" />
+            <td class="text-ellipsis" v-text="fmt(product.summary)" />
             <td class="action-wrap">
               <ellipsis-dropdown
                 @action="handleActions"
                 :current-index="index"
                 :dropdown-list="[
-                  { title: 'Detail', action: '' },
-                  { title: 'Delete', action: '#deleteModal' },
+                  { title: $t('productPage.dropdown[0].title'), action: '' },
+                  {
+                    title: $t('productPage.dropdown[1].title'),
+                    action: '#deleteModal',
+                  },
                 ]"
               />
             </td>
@@ -55,6 +58,7 @@ import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
 import { useProductStore } from "@/stores/product";
 import { Product } from "@/types/worker";
+import { fmt } from "@/utils/string";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
@@ -80,7 +84,7 @@ export default defineComponent({
     ...mapActions(useProductStore, ["listProducts", "destroyProduct"]),
     handleActions(obj: any) {
       const product = this.products[obj.currentIndex];
-      if (obj.action === "Detail") {
+      if (obj.action === this.$t("productPage.dropdown[0].title")) {
         this.$router.push({
           name: "product.update",
           params: { productId: product.id },
@@ -98,12 +102,14 @@ export default defineComponent({
         }
       }
     },
+    fmt,
   },
   computed: {
     ...mapState(useProductStore, ["products"]),
   },
   async mounted() {
     await this.listProducts();
+    console.log(this.$config.backofficeSidebar);
   },
 });
 </script>

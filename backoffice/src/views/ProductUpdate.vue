@@ -1,6 +1,7 @@
 <template>
-  <page-title v-if="new" :title="pageTitle" />
-  <page-body>
+  <loading-content v-if="loading" />
+  <page-title v-if="!loading && isNew" :title="pageTitle" />
+  <page-body v-if="!loading">
     <card class="flex">
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
@@ -12,7 +13,7 @@
           <select-field
             class="flex-1"
             :label="$t('inputLabel.product.categories')"
-            :value="String(product?.categories?.[0].id || '')"
+            :value="String(product?.categories?.[0]?.id || '')"
             :options="categorieOptions"
             @update:model-value="selectCategories"
           />
@@ -50,6 +51,7 @@ import { useProductAttributeStore } from "@/stores/productAttribute";
 import { useSubCategoryStore } from "@/stores/subcategory";
 import { OptionItem } from "@/types/backoffice";
 import { ProductAttribute, SubCategory } from "@/types/worker";
+import { fmt } from "@/utils/string";
 import _ from "lodash";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
@@ -67,7 +69,8 @@ export default defineComponent({
   },
   data() {
     return {
-      new: true as boolean,
+      loading: false,
+      isNew: true as boolean,
       colors: [] as ProductAttribute[],
       sizes: [] as ProductAttribute[],
     };
@@ -82,7 +85,7 @@ export default defineComponent({
     ...mapActions(useProductAttributeStore, ["listProductAttributes"]),
     ...mapActions(useSubCategoryStore, ["listSubCategories"]),
     handleUpdate() {
-      if (this.new) {
+      if (this.isNew) {
         this.createProduct(this.product);
       } else {
         this.updateProduct(this.product);
@@ -97,6 +100,7 @@ export default defineComponent({
       this.product.categories ??= [];
       this.product.categories[0] = category;
     },
+    fmt,
   },
   computed: {
     ...mapState(useProductStore, ["product"]),
@@ -111,24 +115,26 @@ export default defineComponent({
       });
     },
     textButton() {
-      return this.new
+      return this.isNew
         ? this.$t("buttonLabel.add")
         : this.$t("buttonLabel.update");
     },
     pageTitle() {
-      return this.new
+      return this.isNew
         ? this.$t("productPage.addProduct.title")
         : this.$t("productPage.updateProduct.title");
     },
   },
   async mounted() {
+    this.loading = true;
     await this.listProductAttributes();
     await this.listSubCategories();
-    const id = this.$router.currentRoute.value.params.productId;
+    const id = this.$route.params.productId;
     if (id) {
       await this.retrieveProduct(id as string);
-      this.new = false;
+      this.isNew = false;
     }
+    this.loading = false;
   },
   beforeRouteLeave() {
     this.resetProduct();

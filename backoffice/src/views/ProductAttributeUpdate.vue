@@ -4,12 +4,12 @@
     <card class="flex">
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
-          :label="$t('inputLabel.productAttribute.type')"
+          label="inputLabel.productAttribute.type"
           :value="productAttribute.type"
           @update:modelValue="(newValue) => (productAttribute.type = newValue)"
         />
         <text-field
-          :label="$t('inputLabel.productAttribute.value')"
+          label="inputLabel.productAttribute.value"
           :value="productAttribute.value"
           @update:modelValue="(newValue) => (productAttribute.value = newValue)"
         />
@@ -60,7 +60,7 @@ export default defineComponent({
       } else {
         this.updateProductAttribute(this.productAttribute);
       }
-      this.$router.push("/product-attributes");
+      this.$router.push({ name: "product.attribute.list" });
     },
   },
   computed: {
@@ -77,7 +77,7 @@ export default defineComponent({
     },
   },
   mounted() {
-    const id = this.$router.currentRoute.value.params.id;
+    const id = this.$route.params.id;
     if (id) {
       this.retrieveProductAttribute(Number(id));
       this.new = false;

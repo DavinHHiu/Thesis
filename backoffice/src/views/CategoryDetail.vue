@@ -1,5 +1,5 @@
 <template>
-  <page-title :title="$t('categoryPage.detail.title')" />
+  <page-title title="categoryPage.detail.title" />
   <page-body>
     <tab-layout
       :cur-path-name="curPathName"
@@ -48,7 +48,7 @@ export default defineComponent({
     },
   },
   mounted() {
-    this.curPathName = this.$router.currentRoute.value.name as string;
+    this.curPathName = this.$route.name as string;
   },
 });
 </script>

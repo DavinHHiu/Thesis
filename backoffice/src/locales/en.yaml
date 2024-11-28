@@ -1,7 +1,7 @@
 backofficeSidebar:
-  - title: Home
-    path: /dashboard
-    icon: Home
+  - title: Dashboard
+    path: /
+    icon: dashboard
   - title: Products
     path: /products
     icon: checkroom
@@ -17,9 +17,6 @@ backofficeSidebar:
   - title: Address
     path: /addresses
     icon: contact_mail
-  - title: Cart
-    path: /carts
-    icon: shopping_cart
   - title: Order
     path: /orders
     icon: task
@@ -29,104 +26,107 @@ backofficeSidebar:
 
 inputLabel:
   common:
-    name: "Name"
-    description: "Description"
-    price: "Price"
-    quantity: "Quantity"
+    name: Name
+    description: Description
+    price: Price
+    quantity: Quantity
   address:
-    title: "Title"
-    zipcode: "Zip Code"
-    address1: "Address 1"
-    address2: "Address 2"
-    tel: "Tel"
-    user: "User"
+    title: Title
+    zipcode: Zip Code
+    address1: Address 1
+    address2: Address 2
+    tel: Tel
+    user: User
   user:
-    firstName: "First Name"
-    lastName: "Last Name"
-    email: "Email"
-    password: "Password"
-    retypePassword: "Re-type Password"
-    dob: "Birth of date"
-    tel: "Tel"
+    firstName: First Name
+    lastName: Last Name
+    email: Email
+    password: Password
+    retypePassword: Re-type Password
+    dob: Birth of date
+    tel: Tel
   subcategory:
-    category: "Category"
+    category: Category
   product:
-    sku: "Sku"
-    price: "Price"
-    color: "Color"
-    size: "Size"
-    categories: "Categories"
-    quantity: "Quantity"
-    summary: "Summary"
+    sku: Sku
+    price: Price
+    color: Color
+    size: Size
+    categories: Categories
+    quantity: Quantity
+    summary: Summary
   productAttribute:
-    type: "Type"
-    value: "Value"
+    type: Type
+    value: Value
   cart:
-    totalAmount: "Total Amount"
-    totalQuantity: "Total Quantity"
+    totalAmount: Total Amount
+    totalQuantity: Total Quantity
   cartItem:
     product: Product
     productSku: ProductSku
     quantity: Quantity
-    subTotal: "Subtotal"
+    subTotal: Subtotal
 
 buttonLabel:
-  login: "Login"
-  register: "Register"
-  logout: "Logout"
-  save: "Save"
-  cancel: "Cancel"
-  add: "Add"
-  update: "Update"
-  filter: "Filter"
-  delete: "Delete"
-  back: "Back"
+  login: Login
+  register: Register
+  logout: Logout
+  save: Save
+  cancel: Cancel
+  add: Add
+  update: Update
+  filter: Filter
+  delete: Delete
+  back: Back
 
 dividerBreak:
-  login: "New to Price Tag?"
-  register: "Already have an account?"
+  login: New to Price Tag?
+  register: Already have an account?
+
+dashboardPage:
+  title: Dashboard
 
 userPage:
   list:
-    title: "Users"
+    title: Users
   add:
     name: user.add
-    title: "Add User"
+    title: Add User
   detail:
     title: User Detail
   update:
-    title: "Update User"
+    title: Update User
   modalDelete:
-    title: "Do you want to delete this user?"
+    title: Do you want to delete this user?
 
 addressPage:
   list:
-    title: "Addresses"
+    title: Addresses
   add:
-    name: "address.add"
-    title: "Add Address"
+    name: address.add
+    title: Add Address
   update:
-    title: "Update Address"
+    title: Update Address
   modalDelete:
-    title: "Do you want to delete this address?"
+    title: Do you want to delete this address?
 
 subcategoryPage:
   list:
-    title: "Categories"
+    title: Categories
   add:
     name: subcategory.add
-    title: "Add Category"
+    title: Add Category
   update:
-    title: "Update Category"
+    title: Update Category
   modalDelete:
-    title: "Do you want to delete this subcategory?"
+    title: Do you want to delete this subcategory?
 
 cartPage:
   list:
-    title: "Carts"
+    title: Carts
   add:
     name: cart.add
-    title: "Add Cart"
+    title: Add Cart
   detail:
     title: Cart Detail
     tabs:
@@ -137,27 +137,27 @@ cartPage:
         name: subcategory.list
         path: /subcategories
   update:
-    title: "Update Cart"
+    title: Update Cart
   modalDelete:
-    title: "Do you want to delete this cart?"
+    title: Do you want to delete this cart?
 
 cartItemPage:
   list:
-    title: "Cart Items"
+    title: Cart Items
   add:
     name: cart.item.add
-    title: "Add Cart Item"
+    title: Add Cart Item
   update:
-    title: "Update Cart Item"
+    title: Update Cart Item
   modalDelete:
-    title: "Do you want to delete this cart item?"
+    title: Do you want to delete this cart item?
 
 categoryPage:
   list:
-    title: "Categories"
+    title: Categories
   add:
     name: category.add
-    title: "Add Category"
+    title: Add Category
   detail:
     title: Category Detail
     tabs:
@@ -168,44 +168,49 @@ categoryPage:
         name: subcategory.list
         path: /subcategories
   update:
-    title: "Update Category"
+    title: Update Category
   modalDelete:
-    title: "Do you want to delete this category?"
+    title: Do you want to delete this category?
 
 productPage:
   productList:
-    title: "Products"
+    title: Products
   addProduct:
-    name: "product.add"
-    title: "Add Product"
+    name: product.add
+    title: Add Product
   productDetail:
     title: Product Detail
     tabs:
-      - title: "Product Detail"
+      - title: Product Detail
         name: product.update
   updateProduct:
-    title: "Update Product"
+    title: Update Product
   modalDelete:
-    title: "Do you want to delete this product?"
+    title: Do you want to delete this product?
+  dropdown:
+    - title: "Detail"
+      action: ""
+    - title: "Delete"
+      action: "#deleteModal"
 
 productSkuPage:
   list:
-    title: "Product SKUs"
+    title: Product SKUs
   add:
-    name: "product.sku.add"
+    name: product.sku.add
     title: Add Product SKU
   update:
     title: Update Product SKU
   modalDelete:
-    title: "Do you want to delete this product SKU?"
+    title: Do you want to delete this product SKU?
 
 productAttributePage:
   list:
-    title: "Product Attributes"
+    title: Product Attributes
   add:
-    name: "product.attribute.add"
-    title: "Add Product Attribute"
+    name: product.attribute.add
+    title: Add Product Attribute
   update:
-    title: "Update Product Attribute"
+    title: Update Product Attribute
   modalDelete:
-    title: "Do you want to delete this product attribute?"
+    title: Do you want to delete this product attribute?
