@@ -31,4 +31,20 @@ interface TabItem {
   path?: string;
 }
 
-export { AuthToken, DropdownItem, OptionItem, LoginItem, SidebarItem, TabItem };
+interface Toast {
+  id?: number;
+  message: string;
+  theme: string;
+  autohide?: boolean;
+  delay?: number;
+}
+
+export {
+  AuthToken,
+  DropdownItem,
+  OptionItem,
+  LoginItem,
+  SidebarItem,
+  TabItem,
+  Toast,
+};

@@ -1,5 +1,5 @@
 <template>
-  <page-title v-if="new" :title="pageTitle" />
+  <page-title v-if="isNew" :title="pageTitle" />
   <page-body>
     <card class="flex">
       <section class="upload-wp">
@@ -10,32 +10,32 @@
       </section>
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
-          :label="$t('inputLabel.user.firstName')"
+          label="inputLabel.user.firstName"
           :value="user.first_name"
           @update:model-value="(newValue) => (user.first_name = newValue)"
         />
         <text-field
-          :label="$t('inputLabel.user.lastName')"
+          label="inputLabel.user.lastName"
           :value="user.last_name"
           @update:model-value="(newValue) => (user.last_name = newValue)"
         />
         <text-field
-          :label="$t('inputLabel.user.email')"
+          label="inputLabel.user.email"
           :value="user.email"
           @update:model-value="(newValue) => (user.email = newValue)"
         />
         <password-field
-          :label="$t('inputLabel.user.password')"
+          label="inputLabel.user.password"
           :value="user.password"
           @update:model-value="(newValue) => (user.password = newValue)"
         />
         <date-field
-          :label="$t('inputLabel.user.dob')"
+          label="inputLabel.user.dob"
           :value="user.birth_of_date"
           @update:model-value="(newValue) => (user.birth_of_date = newValue)"
         />
         <text-field
-          :label="$t('inputLabel.user.tel')"
+          label="inputLabel.user.tel"
           :value="user.tel"
           @update:model-value="(newValue) => (user.tel = newValue)"
         />
@@ -88,7 +88,7 @@ export default defineComponent({
   },
   data() {
     return {
-      new: true as boolean,
+      isNew: true as boolean,
     };
   },
   methods: {
@@ -99,11 +99,7 @@ export default defineComponent({
       "resetUser",
     ]),
     handleUpdate() {
-      if (this.new) {
-        this.createUser(this.user);
-      } else {
-        this.updateUser(this.user);
-      }
+      this.isNew ? this.createUser(this.user) : this.updateUser(this.user);
       this.$router.push({ name: "user.list" });
     },
     handleBack() {
@@ -113,21 +109,21 @@ export default defineComponent({
   computed: {
     ...mapState(useUserStore, ["user"]),
     textButton() {
-      return this.new
+      return this.isNew
         ? this.$t("buttonLabel.add")
         : this.$t("buttonLabel.update");
     },
     pageTitle() {
-      return this.new
+      return this.isNew
         ? this.$t("userPage.add.title")
         : this.$t("userPage.update.title");
     },
   },
   async mounted() {
-    const id = this.$router.currentRoute.value.params.id;
+    const id = this.$route.params.id;
     if (id) {
       await this.retrieveUser(id as string);
-      this.new = false;
+      this.isNew = false;
     }
   },
   beforeRouteLeave() {

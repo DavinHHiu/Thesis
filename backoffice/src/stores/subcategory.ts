@@ -30,7 +30,7 @@ export const useSubCategoryStore = defineStore("subcategory", {
     },
     listByCategory(category_id: number) {
       return axios
-        .get(`${consts.BASE_URL}/sub-categories/list-by-category/`, {
+        .get(`${consts.BASE_URL}/sub-categories/by-category/`, {
           params: {
             category_id: category_id,
           },
@@ -52,7 +52,7 @@ export const useSubCategoryStore = defineStore("subcategory", {
     },
     updateSubCategory(payload: SubCategory) {
       return axios
-        .put(`{consts.BASE_URL}/sub-categories/${payload.id}`, payload)
+        .put(`${consts.BASE_URL}/sub-categories/${payload.id}/`, payload)
         .then((response) => {
           console.log(response);
         });

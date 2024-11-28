@@ -18,7 +18,7 @@ from api.v1.serializers import EmailValidationSerializer
 
 
 class UserSerializer(serializers.ModelSerializer):
-    id = serializers.UUIDField(required=False)
+    id = serializers.UUIDField(required=False, read_only=True)
     avatar = serializers.ImageField(required=False)
     username = serializers.CharField(required=False)
     first_name = serializers.CharField(required=False, allow_null=True)

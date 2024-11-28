@@ -7,14 +7,14 @@
         <div class="flex flex-col gap-[4rem]">
           <text-field
             class="h-[5rem]"
-            :label="$t('inputLabel.user.email')"
-            :value="loginItem.email"
+            label="inputLabel.user.email"
+            :value="loginItem?.email"
             @update:model-value="(newValue) => (loginItem.email = newValue)"
           ></text-field>
           <password-field
             class="h-[5rem]"
-            :label="$t('inputLabel.user.password')"
-            :value="loginItem.password"
+            label="inputLabel.user.password"
+            :value="loginItem?.password"
             @update:model-value="(newValue) => (loginItem.password = newValue)"
           ></password-field>
         </div>
@@ -44,7 +44,7 @@ import TextField from "../components/common/molecules/TextField.vue";
 import DividerBreak from "@/components/common/molecules/DividerBreak.vue";
 import PasswordField from "@/components/common/molecules/PasswordField.vue";
 import Card from "@/components/common/templates/Card.vue";
-import { useAuthStore } from "@/stores/auth";
+import { useSessionStore } from "@/stores/session";
 import { LoginItem } from "@/types/backoffice";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
@@ -66,19 +66,19 @@ export default defineComponent({
   },
 
   methods: {
-    ...mapActions(useAuthStore, ["login"]),
+    ...mapActions(useSessionStore, ["login"]),
     async handleLogin() {
       try {
         const response = await this.login(this.loginItem);
         if (response && response.status === 200) {
-          this.$router.push("/");
+          this.$router.push({ name: "dashboard" });
         } else {
         }
       } catch (e) {}
     },
   },
   computed: {
-    ...mapState(useAuthStore, ["isAuthenticated"]),
+    ...mapState(useSessionStore, ["isAuthenticated"]),
   },
 });
 </script>

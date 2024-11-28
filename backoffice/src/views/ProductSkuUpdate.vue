@@ -8,31 +8,31 @@
     </section>
     <section class="info-wp flex flex-col gap-[4rem]">
       <text-field
-        :label="$t('inputLabel.product.sku')"
+        label="inputLabel.product.sku"
         :value="productSku.sku"
         @update:model-value="(newValue) => (productSku.sku = newValue)"
       />
       <text-field
-        :label="$t('inputLabel.product.price')"
+        label="inputLabel.product.price"
         :value="productSku.price"
         @update:model-value="(newValue) => (productSku.price = newValue)"
       />
       <text-field
-        :label="$t('inputLabel.product.quantity')"
+        label="inputLabel.product.quantity"
         :value="productSku.quantity"
         @update:model-value="(newValue) => (productSku.quantity = newValue)"
       />
       <div class="flex gap-[1rem]">
         <select-field
           class="flex-1"
-          :label="$t('inputLabel.product.color')"
+          label="inputLabel.product.color"
           :value="String(productSku?.color?.id || '')"
           :options="colorOptions"
           @update:model-value="selectColor"
         />
         <select-field
           class="flex-1"
-          :label="$t('inputLabel.product.size')"
+          label="inputLabel.product.size"
           :value="String(productSku?.size?.id || '')"
           :options="sizeOptions"
           @update:model-value="selectSize"
@@ -147,8 +147,8 @@ export default defineComponent({
   async mounted() {
     await this.listProductAttributes();
     await this.listSubCategories();
-    const id = this.$router.currentRoute.value.params.productSkuId;
-    const productId = this.$router.currentRoute.value.params.productId;
+    const id = this.$route.params.productSkuId;
+    const productId = this.$route.params.productId;
     if (productId) {
       this.productSku.product_id = productId as string;
     }

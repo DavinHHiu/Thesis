@@ -4,17 +4,17 @@
     <card class="flex">
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
-          :label="$t('inputLabel.cart.totalQuantity')"
+          label="inputLabel.cart.totalQuantity"
           :value="cart.total_quantity"
           @update:model-value="(newValue) => (cart.total_quantity = newValue)"
         />
         <text-field
-          :label="$t('inputLabel.cart.totalAmount')"
+          label="inputLabel.cart.totalAmount"
           :value="cart.total_amount"
           @update:model-value="(newValue) => (cart.total_amount = newValue)"
         />
         <select-field
-          :label="$t('inputLabel.address.user')"
+          label="inputLabel.address.user"
           :value="cart.user?.id"
           :options="options"
           @update:model-value="selectUser"
@@ -112,7 +112,7 @@ export default defineComponent({
   },
   async mounted() {
     await this.listUsers();
-    const cartId = this.$router.currentRoute.value.params.cartId;
+    const cartId = this.$route.params.cartId;
     if (cartId) {
       this.retrieveCart(cartId as string);
       this.new = false;

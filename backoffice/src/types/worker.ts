@@ -10,12 +10,13 @@ interface SubCategory {
   id?: number;
   name: string;
   description: string;
-  category: Category;
+  category_id: number;
 }
 
 interface User {
   id?: string;
   avatar?: File | string;
+  username?: string;
   email: string;
   first_name?: string;
   last_name?: string;
@@ -32,6 +33,33 @@ interface Address {
   address_2?: string;
   zipcode?: string;
   tel: string;
+}
+
+interface Province {
+  code: number;
+  name: string;
+  division_type: string;
+  codename: string;
+  phone_code: number;
+  is_active: boolean;
+}
+
+interface District {
+  code: number;
+  name: string;
+  division_type: string;
+  codename: string;
+  province_code: number;
+  is_active: boolean;
+}
+
+interface Ward {
+  code: number;
+  name: string;
+  division_type: string;
+  codename: string;
+  district_code: number;
+  is_active: boolean;
 }
 
 interface ProductAttribute {
@@ -117,6 +145,9 @@ interface OrderItem {
 
 export {
   Address,
+  Province,
+  District,
+  Ward,
   Cart,
   CartItem,
   Category,

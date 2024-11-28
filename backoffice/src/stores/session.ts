@@ -1,13 +1,13 @@
-import consts from "@/consts/consts";
 import { LoginItem } from "@/types/backoffice";
 import { User } from "@/types/worker";
-import localStore from "@/utils/localStorage";
 import axios from "axios";
+import consts from "@/consts/consts";
 import { defineStore } from "pinia";
+import localStore from "@/utils/localStorage";
 
 let refreshInterval: NodeJS.Timeout | null = null;
 
-export const useAuthStore = defineStore("auth", {
+export const useSessionStore = defineStore("session", {
   state: () => {
     return {
       user: {} as User,
@@ -20,16 +20,13 @@ export const useAuthStore = defineStore("auth", {
         .post(`${consts.BASE_URL}/token/`, payload)
         .then((response) => {
           if (response.status === 200 && response.data) {
-            this.token = "keep";
+            this.token = response.data.token;
             this.user = response.data.user;
             if (response.data.token) {
               axios.defaults.headers.common["Authorization"] =
-                `Bearer ${response.data.token}`;
+                `Bearer ${this.token}`;
             }
-            localStore.bulkSet({
-              token: response.data.token,
-              user: JSON.stringify(this.user),
-            });
+            localStore.set("token", this.token);
 
             refreshInterval = setInterval(
               () => {
@@ -47,32 +44,37 @@ export const useAuthStore = defineStore("auth", {
         });
     },
     logout() {
-      this.token = "";
-      this.user = {} as User;
-      localStore.bulkRemove(["user", "token"]);
+      this.resetSession();
+      localStore.remove("token");
       delete axios.defaults.headers.common["Authorization"];
-
       if (refreshInterval) {
         clearInterval(refreshInterval);
         refreshInterval = null;
       }
     },
     refresh() {
-      const payload = {
-        token: localStore.get("token"),
-      };
-      return axios
-        .post(`${consts.BASE_URL}/token/refresh/`, payload)
-        .then((response) => {
-          if (response.status === 200 && response.data) {
-            this.token = "keep";
-            this.user = response.data.user;
-            if (response.data.token) {
-              axios.defaults.headers.common["Authorization"] =
-                `Bearer ${response.data.token}`;
+      const requestToken = localStore.get("token");
+      if (requestToken) {
+        const payload = {
+          token: requestToken,
+        };
+        return axios
+          .post(`${consts.BASE_URL}/token/refresh/`, payload)
+          .then((response) => {
+            if (response.status === 200 && response.data) {
+              this.token = response.data.token;
+              this.user = response.data.user;
+              if (response.data.token) {
+                axios.defaults.headers.common["Authorization"] =
+                  `Bearer ${response.data.token}`;
+              }
             }
-          }
-        });
+          });
+      }
+    },
+    resetSession() {
+      this.user = {} as User;
+      this.token = "";
     },
   },
   getters: {

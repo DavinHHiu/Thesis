@@ -15,11 +15,11 @@
       <tbody>
         <template v-for="(category, index) in categories" :key="index">
           <tr :class="{ odd: index % 2 == 0 }">
-            <td>{{ index + 1 }}</td>
-            <td v-text="category.name" />
-            <td v-text="category.description" />
-            <td v-text="category.created_at" />
-            <td v-text="category.updated_at" />
+            <td v-text="index + 1" />
+            <td v-text="fmt(category.name)" />
+            <td v-text="fmt(category.description)" />
+            <td v-text="fmt(category.created_at)" />
+            <td v-text="fmt(category.updated_at)" />
             <td class="action-wrap">
               <ellipsis-dropdown
                 @action="handleActions"
@@ -36,7 +36,7 @@
     </table>
   </page-body>
   <modal id="deleteModal" title="Delete category" @confirm="submitAction">
-    <span v-text="$t('categoryPage.modalDelete.title')" />
+    <span v-t="'categoryPage.modalDelete.title'" />
   </modal>
 </template>
 
@@ -49,6 +49,7 @@ import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
 import { useCategoryStore } from "@/stores/category";
 import { Category } from "@/types/worker";
+import { fmt } from "@/utils/string";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
@@ -90,6 +91,7 @@ export default defineComponent({
         }
       }
     },
+    fmt,
   },
   computed: {
     ...mapState(useCategoryStore, ["categories"]),

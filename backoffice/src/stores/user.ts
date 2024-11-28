@@ -1,6 +1,7 @@
 import consts from "@/consts/consts";
 import { User } from "@/types/worker";
 import axios from "axios";
+import _ from "lodash";
 import { defineStore } from "pinia";
 
 export const useUserStore = defineStore("user", {
@@ -37,6 +38,9 @@ export const useUserStore = defineStore("user", {
       });
     },
     updateUser(payload: User) {
+      if (payload.avatar && !(payload.avatar instanceof File)) {
+        payload = _.omit(payload, ["avatar"]);
+      }
       return axios
         .put(`${consts.BASE_URL}/users/${payload.id}/`, payload, {
           headers: {

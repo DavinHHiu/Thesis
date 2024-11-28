@@ -1,7 +1,9 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 const Address = () => import("@/views/Address.vue");
-const AddressUpdate = () => import("@/views/AddressUpdate.vue");
+const ProvinceList = () => import("@/views/ProvinceList.vue");
+const DistrictList = () => import("@/views/DistrictList.vue");
+const WardList = () => import("@/views/WardList.vue");
 const Base = () => import("@/views/Base.vue");
 const Cart = () => import("@/views/Cart.vue");
 const CartDetail = () => import("@/views/CartDetail.vue");
@@ -11,7 +13,7 @@ const CartItemUpdate = () => import("@/views/CartItemUpdate.vue");
 const Category = () => import("@/views/Category.vue");
 const CategoryDetail = () => import("@/views/CategoryDetail.vue");
 const CategoryUpdate = () => import("@/views/CategoryUpdate.vue");
-const Home = () => import("@/views/Home.vue");
+const DashBoard = () => import("@/views/DashBoard.vue");
 const Login = () => import("@/views/Login.vue");
 const Register = () => import("@/views/Register.vue");
 const Product = () => import("@/views/Product.vue");
@@ -38,9 +40,9 @@ const router = createRouter({
       component: Base,
       children: [
         {
-          name: "home",
-          path: "dashboard",
-          component: Home,
+          name: "dashboard",
+          path: "",
+          component: DashBoard,
         },
         {
           path: "products",
@@ -62,12 +64,12 @@ const router = createRouter({
               children: [
                 {
                   name: "product.update",
-                  path: "detail",
+                  path: "",
                   component: ProductUpdate,
                 },
                 {
                   name: "product.skus.in.product",
-                  path: "product-skus",
+                  path: "skus",
                   children: [
                     {
                       name: "product.skus.list",
@@ -172,7 +174,7 @@ const router = createRouter({
             },
             {
               name: "user.detail",
-              path: "detail",
+              path: "",
               component: UserDetail,
               children: [
                 {
@@ -191,21 +193,22 @@ const router = createRouter({
         },
         {
           path: "addresses",
+          component: Address,
           children: [
             {
-              name: "address.list",
-              path: "",
-              component: Address,
+              path: "provinces",
+              name: "province.list",
+              component: ProvinceList,
             },
             {
-              name: "address.add",
-              path: "add",
-              component: AddressUpdate,
+              path: "districts",
+              name: "district.list",
+              component: DistrictList,
             },
             {
-              name: "address.update",
-              path: "update/:id",
-              component: AddressUpdate,
+              path: "wards",
+              name: "ward.list",
+              component: WardList,
             },
           ],
         },

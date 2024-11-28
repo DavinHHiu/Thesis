@@ -5,7 +5,7 @@
         <div class="flex gap-[1rem]">
           <select-field
             class="flex-1"
-            :label="$t('inputLabel.cartItem.product')"
+            label="'inputLabel.cartItem.product'"
             :value="productDetail.id"
             :options="productOptions"
             @update:model-value="selectProduct"
@@ -13,7 +13,7 @@
           <select-field
             class="flex-1"
             :class="{ invisible: !productDetail.skus }"
-            :label="$t('inputLabel.cartItem.productSku')"
+            label="inputLabel.cartItem.productSku"
             :value="cartItem?.product_sku?.id"
             :options="productSkuOptions"
             @update:model-value="selectProductSku"
@@ -21,18 +21,18 @@
         </div>
         <text-field
           v-if="cartItem?.product_sku?.id"
-          :label="$t('inputLabel.product.price')"
+          label="inputLabel.product.price"
           :value="cartItem.product_sku?.price"
           @update:model-value="(newValue) => (cartItem.quantity = newValue)"
         />
         <text-field
-          :label="$t('inputLabel.cartItem.quantity')"
+          label="inputLabel.cartItem.quantity"
           :value="cartItem.quantity"
           @update:model-value="(newValue) => (cartItem.quantity = newValue)"
         />
         <text-field
           v-if="cartItem.quantity"
-          :label="$t('inputLabel.cartItem.subTotal')"
+          label="inputLabel.cartItem.subTotal"
           :value="cartItem.product_sku?.price * cartItem.quantity"
           @update:model-value="(newValue) => (cartItem.quantity = newValue)"
           :disabled="true"
@@ -151,8 +151,8 @@ export default defineComponent({
     },
   },
   async mounted() {
-    const cartId = this.$router.currentRoute.value.params.cartId;
-    const cartItemId = this.$router.currentRoute.value.params.cartItemId;
+    const cartId = this.$route.params.cartId;
+    const cartItemId = this.$route.params.cartItemId;
     await this.listProductsDisplay();
     if (cartItemId) {
       await this.retrieveCartItem(cartItemId as string);

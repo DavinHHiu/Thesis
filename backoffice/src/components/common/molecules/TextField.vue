@@ -1,9 +1,6 @@
 <template>
-  <div
-    class="input-wp"
-    :class="{ 'has-input': value !== '' && value !== undefined }"
-  >
-    <custom-label v-if="label">{{ label }}</custom-label>
+  <div class="input-wp" :class="{ 'has-input': value && value !== '' }">
+    <custom-label v-if="label" :label="label" />
     <custom-input :value="value" @input="handleInput" :disabled="disabled" />
   </div>
 </template>

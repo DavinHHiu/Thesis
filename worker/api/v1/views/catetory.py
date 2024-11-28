@@ -1,3 +1,4 @@
+from django.db import transaction
 from django.utils.translation import gettext_lazy as _
 from rest_framework import status, viewsets
 from rest_framework.decorators import action
@@ -51,9 +52,19 @@ class SubCategoryViewSet(viewsets.ModelViewSet):
         serializer = self.get_serializer(subcategories, many=True)
         return Response(serializer.data, status=status.HTTP_200_OK)
 
+    @transaction.atomic
     def create(self, request):
         serializer = self.get_serializer(data=request.data)
         serializer.is_valid(raise_exception=True)
         serializer.save()
 
         return Response(serializer.validated_data, status=status.HTTP_201_CREATED)
+
+    @transaction.atomic
+    def update(self, request, pk=None):
+        subcategory = self.get_object()
+        serializer = self.get_serializer(subcategory, data=request.data)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+
+        return Response(serializer.data, status=status.HTTP_200_OK)

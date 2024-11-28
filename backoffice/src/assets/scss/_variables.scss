@@ -5,6 +5,7 @@ $--black-color-900: #000;
 $--white-color-900: #fff;
 
 $--gray-color-100: #f2f2f2;
+$--gray-color-150: #eeeeee;
 $--gray-color-200: #e9e9e9;
 $--gray-color-300: #d2d2d2;
 $--gray-color-400: #c2c2c2;
@@ -60,7 +61,7 @@ $--dark-alt: $--gray-color-200;
 $--light: #f1f5f9;
 
 $--text-color: $--black-color-900;
-$--background-color: $--black-alpha-10;
+$--background-color: $--gray-color-200;
 
 $--sidebar-width: 300px;
 $--header-height: 64px;

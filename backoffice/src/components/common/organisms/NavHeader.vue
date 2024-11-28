@@ -4,12 +4,18 @@
   >
     <app-logo />
     <div class="avatar-wrap flex items-center f-full">
-      <avatar src="/images/avatars/6.jpg" class="mr-[0.8rem]" />
-      <button class="dropdown-toggle" data-bs-toggle="dropdown">
-        Hong Hieu
-      </button>
+      <avatar :src="String(user?.avatar)" class="mr-[0.8rem]" />
+      <button
+        class="dropdown-toggle"
+        data-bs-toggle="dropdown"
+        v-text="String(user?.username)"
+      />
       <ul class="dropdown-menu">
-        <li class="dropdown-item" @click="handleLogout">Logout</li>
+        <li
+          class="dropdown-item"
+          @click="handleLogout"
+          v-t="'buttonLabel.logout'"
+        />
       </ul>
     </div>
   </nav>
@@ -18,8 +24,8 @@
 <script lang="ts">
 import Avatar from "@/components/common/atomic/Avatar.vue";
 import AppLogo from "@/components/common/molecules/AppLogo.vue";
-import { useAuthStore } from "@/stores/auth";
-import { mapActions } from "pinia";
+import { useSessionStore } from "@/stores/session";
+import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -28,12 +34,18 @@ export default defineComponent({
     AppLogo,
     Avatar,
   },
+  computed: {
+    ...mapState(useSessionStore, ["user"]),
+  },
   methods: {
-    ...mapActions(useAuthStore, ["logout"]),
+    ...mapActions(useSessionStore, ["logout"]),
     handleLogout() {
       this.logout();
-      this.$router.push("/login");
+      this.$router.push({ name: "login" });
     },
+  },
+  mounted() {
+    console.log(this.user);
   },
 });
 </script>
@@ -50,6 +62,7 @@ nav {
   .dropdown-toggle,
   .dropdown-item {
     user-select: none;
+    font-size: $--font-sm;
   }
 }
 </style>

@@ -1,0 +1,216 @@
+backofficeSidebar:
+  - title: Bảng điều khiển
+    path: /
+    icon: dashboard
+  - title: Sản phẩm
+    path: /products
+    icon: checkroom
+  - title: Thuộc tính sản phẩm
+    path: /product-attributes
+    icon: format_list_bulleted
+  - title: Danh mục
+    path: /categories
+    icon: category
+  - title: Người dùng
+    path: /users
+    icon: groups
+  - title: Địa chỉ
+    path: /addresses
+    icon: contact_mail
+  - title: Đơn hàng
+    path: /orders
+    icon: task
+  - title: Cài đặt
+    path: /settings
+    icon: settings
+
+inputLabel:
+  common:
+    name: Tên
+    description: Mô tả
+    price: Giá
+    quantity: Số lượng
+  address:
+    title: Tiêu đề
+    zipcode: Mã bưu chính
+    address1: Địa chỉ 1
+    address2: Địa chỉ 2
+    tel: Điện thoại
+    user: Người dùng
+  user:
+    firstName: Tên
+    lastName: Họ
+    email: Email
+    password: Mật khẩu
+    retypePassword: Nhập lại mật khẩu
+    dob: Ngày sinh
+    tel: Điện thoại
+  subcategory:
+    category: Danh mục
+  product:
+    sku: SKU
+    price: Giá
+    color: Màu sắc
+    size: Kích thước
+    categories: Các danh mục
+    quantity: Số lượng
+    summary: Tóm tắt
+  productAttribute:
+    type: Loại
+    value: Giá trị
+  cart:
+    totalAmount: Tổng tiền
+    totalQuantity: Tổng số lượng
+  cartItem:
+    product: Sản phẩm
+    productSku: SKU sản phẩm
+    quantity: Số lượng
+    subTotal: Tổng phụ
+
+buttonLabel:
+  login: Đăng nhập
+  register: Đăng ký
+  logout: Đăng xuất
+  save: Lưu
+  cancel: Hủy
+  add: Thêm
+  update: Cập nhật
+  filter: Lọc
+  delete: Xóa
+  back: Quay lại
+
+dividerBreak:
+  login: Mới sử dụng Price Tag?
+  register: Đã có tài khoản?
+
+dashboardPage:
+  title: Bảng điều khiển
+
+userPage:
+  list:
+    title: Người dùng
+  add:
+    name: user.add
+    title: Thêm người dùng
+  detail:
+    title: Chi tiết người dùng
+  update:
+    title: Cập nhật người dùng
+  modalDelete:
+    title: Bạn có muốn xóa người dùng này không?
+
+addressPage:
+  list:
+    title: Địa chỉ
+  add:
+    name: address.add
+    title: Thêm địa chỉ
+  update:
+    title: Cập nhật địa chỉ
+  modalDelete:
+    title: Bạn có muốn xóa địa chỉ này không?
+
+subcategoryPage:
+  list:
+    title: Danh mục con
+  add:
+    name: subcategory.add
+    title: Thêm danh mục con
+  update:
+    title: Cập nhật danh mục con
+  modalDelete:
+    title: Bạn có muốn xóa danh mục con này không?
+
+cartPage:
+  list:
+    title: Giỏ hàng
+  add:
+    name: cart.add
+    title: Thêm giỏ hàng
+  detail:
+    title: Chi tiết giỏ hàng
+    tabs:
+      - title: Chi tiết danh mục
+        name: category.update
+        path: /detail
+      - title: Danh mục con
+        name: subcategory.list
+        path: /subcategories
+  update:
+    title: Cập nhật giỏ hàng
+  modalDelete:
+    title: Bạn có muốn xóa giỏ hàng này không?
+
+cartItemPage:
+  list:
+    title: Các mặt hàng trong giỏ
+  add:
+    name: cart.item.add
+    title: Thêm mặt hàng vào giỏ
+  update:
+    title: Cập nhật mặt hàng
+  modalDelete:
+    title: Bạn có muốn xóa mặt hàng này không?
+
+categoryPage:
+  list:
+    title: Các danh mục
+  add:
+    name: category.add
+    title: Thêm danh mục
+  detail:
+    title: Chi tiết danh mục
+    tabs:
+      - title: Chi tiết danh mục
+        name: category.update
+        path: /detail
+      - title: Danh mục con
+        name: subcategory.list
+        path: /subcategories
+  update:
+    title: Cập nhật danh mục
+  modalDelete:
+    title: Bạn có muốn xóa danh mục này không?
+
+productPage:
+  productList:
+    title: Các sản phẩm
+  addProduct:
+    name: product.add
+    title: Thêm sản phẩm
+  productDetail:
+    title: Chi tiết sản phẩm
+    tabs:
+      - title: Chi tiết sản phẩm
+        name: product.update
+  updateProduct:
+    title: Cập nhật sản phẩm
+  modalDelete:
+    title: Bạn có muốn xóa sản phẩm này không?
+  dropdown:
+    - title: Chi tiết
+      action: ""
+    - title: Xóa
+      action: "#deleteModal"
+
+productSkuPage:
+  list:
+    title: Các SKU sản phẩm
+  add:
+    name: product.sku.add
+    title: Thêm SKU sản phẩm
+  update:
+    title: Cập nhật SKU sản phẩm
+  modalDelete:
+    title: Bạn có muốn xóa SKU sản phẩm này không?
+
+productAttributePage:
+  list:
+    title: Thuộc tính sản phẩm
+  add:
+    name: product.attribute.add
+    title: Thêm thuộc tính sản phẩm
+  update:
+    title: Cập nhật thuộc tính sản phẩm
+  modalDelete:
+    title: Bạn có muốn xóa thuộc tính sản phẩm này không?

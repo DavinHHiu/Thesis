@@ -5,6 +5,9 @@ from api.v1 import views
 
 router = SimpleRouter()
 router.register(r"addresses", views.AddressViewSet, basename="address")
+router.register(r"provinces", views.ProvinceViewSet, basename="province")
+router.register(r"districts", views.DistrictViewSet, basename="district")
+router.register(r"wards", views.WardViewSet, basename="ward")
 router.register(r"carts", views.CartViewSet, basename="cart")
 router.register(r"cart-items", views.CartItemViewSet, basename="cart-item")
 router.register(r"categories", views.CategoryViewSet, basename="category")

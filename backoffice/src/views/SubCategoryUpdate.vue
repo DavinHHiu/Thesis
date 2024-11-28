@@ -4,18 +4,18 @@
       <section class="info-wp flex flex-col gap-[4rem]">
         <text-field
           :value="subcategory.name"
-          :label="$t('inputLabel.common.name')"
+          label="inputLabel.common.name"
           @update:modelValue="(newValue) => (subcategory.name = newValue)"
         />
         <text-field
           :value="subcategory.description"
-          :label="$t('inputLabel.common.description')"
+          label="inputLabel.common.description"
           @update:modelValue="
             (newValue) => (subcategory.description = newValue)
           "
         />
         <select-field
-          :value="String(subcategory?.category?.id || '')"
+          :value="String(subcategory?.category_id || '')"
           :label="$t('inputLabel.subcategory.category')"
           :options="options"
           @update:modelValue="selectCategory"
@@ -55,7 +55,7 @@ export default defineComponent({
   },
   data() {
     return {
-      new: true as boolean,
+      isNew: true as boolean,
     };
   },
   methods: {
@@ -64,19 +64,22 @@ export default defineComponent({
       "createSubCategory",
       "retrieveSubCategory",
       "resetSubCategory",
+      "updateSubCategory",
     ]),
     selectCategory(value: string) {
       const category = _.find(
         this.categories,
         (category) => category.id === Number(value)
       ) as Category;
-      this.subcategory.category = category;
+      if (category && category.id) {
+        this.subcategory.category_id = category.id;
+      }
     },
     handleUpdate() {
-      if (this.new) {
-        this.createSubCategory(this.subcategory);
-        this.$router.push("/sub-categories");
-      }
+      this.isNew
+        ? this.createSubCategory(this.subcategory)
+        : this.updateSubCategory(this.subcategory);
+      this.$router.push({ name: "subcategory.list" });
     },
   },
   computed: {
@@ -91,17 +94,17 @@ export default defineComponent({
       });
     },
     textButton() {
-      return this.new
+      return this.isNew
         ? this.$t("buttonLabel.add")
         : this.$t("buttonLabel.update");
     },
   },
   mounted() {
     this.listCategories();
-    const id = this.$router.currentRoute.value.params.subcategoryId;
+    const id = this.$route.params.subcategoryId;
     if (id) {
       this.retrieveSubCategory(Number(id));
-      this.new = false;
+      this.isNew = false;
     }
   },
   beforeRouteLeave() {

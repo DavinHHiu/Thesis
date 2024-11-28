@@ -1,11 +1,7 @@
 <template>
   <page-title :title="$t('productPage.productDetail.title')" />
   <page-body>
-    <tab-layout
-      :cur-path-name="curPathName"
-      :tabs="tabs"
-      @change:tab="handleChangeTab"
-    />
+    <tab-layout :tabs="tabs" @change:tab="handleChangeTab" />
     <router-view />
   </page-body>
 </template>
@@ -28,11 +24,11 @@ export default defineComponent({
   data() {
     return {
       tabs: [
-        { title: "Product Detail", name: "product.update", path: "/detail" },
+        { title: "Product Detail", name: "product.update", path: "" },
         {
           title: "Product SKUs",
           name: "product.skus.list",
-          path: "/product-skus",
+          path: "/skus",
         },
       ] as TabItem[],
       curPathName: "" as string,
@@ -44,7 +40,7 @@ export default defineComponent({
     },
   },
   mounted() {
-    this.curPathName = this.$router.currentRoute.value.name as string;
+    this.curPathName = this.$route.name as string;
   },
 });
 </script>
