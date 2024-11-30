@@ -25,8 +25,8 @@
                 @action="handleActions"
                 :current-index="index"
                 :dropdown-list="[
-                  { title: 'Detail', action: '' },
-                  { title: 'Delete', action: '#deleteModal' },
+                  { title: 'Detail', action: 'detail' },
+                  { title: 'Delete', action: 'openModal' },
                 ]"
               />
             </td>
@@ -35,7 +35,12 @@
       </tbody>
     </table>
   </page-body>
-  <modal id="deleteModal" title="Delete category" @confirm="submitAction">
+  <modal
+    ref="deleteModal"
+    id="deleteModal"
+    title="Delete attribute"
+    @confirm="handleDelete"
+  >
     <span v-t="'categoryPage.modalDelete.title'" />
   </modal>
 </template>
@@ -65,7 +70,6 @@ export default defineComponent({
   },
   data() {
     return {
-      currentAction: "" as string,
       currentIndex: 0 as number,
     };
   },
@@ -73,22 +77,21 @@ export default defineComponent({
     ...mapActions(useCategoryStore, ["listCategories", "destroyCategory"]),
     handleActions(obj: any) {
       const category = this.categories[obj.currentIndex];
-      if (obj.action === "Detail") {
+      if (obj.action === "detail") {
         this.$router.push({
           name: "category.update",
           params: { categoryId: category.id },
         });
+      } else if (obj.action === "openModal") {
+        const modal = this.$refs.deleteModal as InstanceType<typeof Modal>;
+        modal.open();
       }
-      this.currentAction = obj.action;
       this.currentIndex = obj.currentIndex;
     },
-    submitAction() {
-      const action = this.currentAction;
-      if (action === "Delete") {
-        const category = this.categories[this.currentIndex] as Category;
-        if (category.id) {
-          this.destroyCategory(category.id);
-        }
+    handleDelete() {
+      const category = this.categories[this.currentIndex] as Category;
+      if (category.id) {
+        this.destroyCategory(category.id);
       }
     },
     fmt,

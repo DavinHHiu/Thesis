@@ -13,7 +13,7 @@ from PIL import Image
 
 from api.models.mixins import CreateAndUpdateModelMixin
 
-from . import Cart
+from . import Cart, District, Province, Ward
 
 
 class Address(models.Model, CreateAndUpdateModelMixin):
@@ -42,6 +42,21 @@ class Address(models.Model, CreateAndUpdateModelMixin):
     class Meta:
         verbose_name = _("address")
         verbose_name_plural = _("addresses")
+
+    def save(self, *args, **kwargs):
+        try:
+            province = Province.objects.get(code=self.city).name
+            district = District.objects.get(code=self.district).name
+            ward = Ward.objects.get(code=self.ward).name
+            self.display_address1 = f"{ward}, {district}, {province}"
+            super().save(*args, **kwargs)
+        except (Province.DoesNotExist, District.DoesNotExist, Ward.DoesNotExist) as e:
+            msg = {
+                Province.DoesNotExist: _("Province does not exist"),
+                District.DoesNotExist: _("District does not exist"),
+                Ward.DoesNotExist: _("Ward does not exist"),
+            }
+            raise ValueError(msg[type(e)])
 
 
 class UserManager(BaseUserManager):

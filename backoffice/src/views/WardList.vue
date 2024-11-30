@@ -24,8 +24,8 @@
               @action="handleActions"
               :current-index="index"
               :dropdown-list="[
-                { title: 'Update', action: '' },
-                { title: 'Delete', action: '#deleteModal' },
+                { title: 'Update', action: 'update' },
+                { title: 'Delete', action: 'openModal' },
               ]"
             />
           </td>
@@ -33,7 +33,12 @@
       </template>
     </tbody>
   </table>
-  <modal id="deleteModal" title="Delete attribute" @confirm="submitAction">
+  <modal
+    ref="deleteModal"
+    id="deleteModal"
+    title="Delete attribute"
+    @confirm="handleDelete"
+  >
     <span v-text="$t('productPage.modalDelete.title')" />
   </modal>
 </template>
@@ -66,34 +71,28 @@ export default defineComponent({
   },
   data() {
     return {
-      currentAction: "" as string,
       currentIndex: 0 as number,
-      tabs: [
-        { title: "User", name: "user.update", path: "update" },
-        { title: "Orders", name: "user.order.list", path: "order" },
-      ] as TabItem[],
     };
   },
   methods: {
     ...mapActions(useAddressStore, ["listWards"]),
     handleActions(obj: any) {
       const ward = this.wards[obj.currentIndex];
-      if (obj.action === "Update") {
+      if (obj.action === "update") {
         this.$router.push({
           name: "address.update",
           params: { id: ward.code },
         });
+      } else if (obj.action === "openModal") {
+        const modal = this.$refs.deleteModal as InstanceType<typeof Modal>;
+        modal.open();
       }
-      this.currentAction = obj.action;
       this.currentIndex = obj.currentIndex;
     },
-    async submitAction() {
-      const action = this.currentAction;
-      if (action === "Delete") {
-        const ward = this.wards[this.currentIndex] as Ward;
-        if (ward.code) {
-          this.destroyAddress(ward.code);
-        }
+    async handleDelete() {
+      const ward = this.wards[this.currentIndex] as Ward;
+      if (ward.code) {
+        this.destroyAddress(ward.code);
       }
     },
     fmt,

@@ -228,7 +228,7 @@ select {
 
 table {
   background-color: $--white;
-  border-radius: 0.4rem;
+  border-radius: 0.8rem;
 
   th {
     font-weight: $--font-semibold;
@@ -236,7 +236,7 @@ table {
 
   th,
   td {
-    padding: 2rem 1rem;
+    padding: 1.5rem 1rem;
   }
 
   .odd {
@@ -401,7 +401,7 @@ table {
   --bs-dropdown-padding-x: 0;
   --bs-dropdown-padding-y: 0.8rem;
   --bs-dropdown-spacer: 0.2rem;
-  --bs-dropdown-font-size: 1.6rem;
+  --bs-dropdown-font-size: 1.3rem;
   --bs-dropdown-color: var(--bs-body-color);
   --bs-dropdown-bg: var(--bs-body-bg);
   --bs-dropdown-border-color: var(--bs-border-color-translucent);

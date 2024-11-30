@@ -3,13 +3,19 @@ import uuid
 from django.db import models
 from django.utils.translation import gettext_lazy as _
 
+from api.consts import base_consts
 from api.models.mixins import CreateAndUpdateModelMixin
 
 
 class OrderDetail(models.Model, CreateAndUpdateModelMixin):
     id = models.CharField(_("order id"), primary_key=True, max_length=255)
     user = models.ForeignKey(to="api.User", on_delete=models.CASCADE)
-    status = models.CharField(_("order status"), max_length=255)
+    status = models.CharField(
+        _("order status"),
+        max_length=255,
+        choices=base_consts.ORDER_STATUSES,
+        default=base_consts.ORDER_STATUS_PENDING,
+    )
     total_quantity = models.IntegerField(_("total quantity"))
 
     class Meta:

@@ -1,3 +1,6 @@
+import { fmtCur } from "@/utils/currency";
+import { fmtDate } from "@/utils/date";
+import { fmt } from "@/utils/string";
 import _ from "lodash";
 
 const computePaging = (
@@ -31,4 +34,4 @@ const computePaging = (
   }
 };
 
-export { computePaging };
+export { computePaging, fmt, fmtCur, fmtDate };

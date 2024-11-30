@@ -18,7 +18,7 @@
         <select-field
           :label="'inputLabel.checkout.city'"
           :options="provinceOptions"
-          :value="formAddress?.city"
+          :value="formAddress.city"
           @update:model-value="changeProvince"
         />
       </div>
@@ -26,7 +26,7 @@
         <select-field
           :label="'inputLabel.checkout.district'"
           :options="districtOptions"
-          :value="formAddress?.district"
+          :value="formAddress.district"
           :disabled="!formAddress.city"
           @update:model-value="changeDistrict"
         />
@@ -35,9 +35,14 @@
         <select-field
           :label="'inputLabel.checkout.ward'"
           :options="wardOptions"
-          :value="formAddress?.ward"
+          :value="formAddress.ward"
           :disabled="!formAddress.city || !formAddress.district"
-          @update:model-value="(newValue) => (formAddress.ward = newValue)"
+          @update:model-value="
+            (newValue) => {
+              formAddress.ward = newValue;
+              $emit('update:modelValue', formAddress);
+            }
+          "
         />
       </div>
       <div>
@@ -45,8 +50,13 @@
           class="h-[4.5rem]"
           :label="'inputLabel.checkout.address1'"
           :required="true"
-          :value="formAddress?.address_1"
-          @update:model-value="(newValue) => (formAddress.address_1 = newValue)"
+          :value="formAddress.address_1"
+          @update:model-value="
+            (newValue) => {
+              formAddress.address_1 = newValue;
+              $emit('update:modelValue', formAddress);
+            }
+          "
         />
       </div>
       <div>
@@ -54,8 +64,13 @@
           class="h-[4.5rem]"
           :label="'inputLabel.checkout.address2'"
           :required="true"
-          :value="formAddress?.address_2"
-          @update:model-value="(newValue) => (formAddress.address_2 = newValue)"
+          :value="formAddress.address_2"
+          @update:model-value="
+            (newValue) => {
+              formAddress.address_2 = newValue;
+              $emit('update:modelValue', formAddress);
+            }
+          "
         />
       </div>
     </div>
@@ -72,7 +87,12 @@
           :label="'inputLabel.checkout.phone'"
           :required="true"
           :value="formAddress?.tel"
-          @update:model-value="(newValue) => (formAddress.tel = newValue)"
+          @update:model-value="
+            (newValue) => {
+              formAddress.tel = newValue;
+              $emit('update:modelValue', formAddress);
+            }
+          "
         />
       </div>
       <div>
@@ -82,7 +102,10 @@
           :required="true"
           :value="formAddress?.representative"
           @update:model-value="
-            (newValue) => (formAddress.representative = newValue)
+            (newValue) => {
+              formAddress.representative = newValue;
+              $emit('update:modelValue', formAddress);
+            }
           "
         />
       </div>
@@ -141,16 +164,23 @@ import {
   Ward,
 } from "@/types/worker";
 import { mapActions, mapState } from "pinia";
-import { defineComponent } from "vue";
+import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
   name: "AddressForm",
+  emits: ["update:modelValue"],
   components: {
     AddressSelect,
     CustomButton,
     Modal,
     SelectField,
     TextField,
+  },
+  props: {
+    modelValue: {
+      type: Object as PropType<Address>,
+      required: true,
+    },
   },
   data() {
     return {
@@ -297,11 +327,13 @@ export default defineComponent({
       this.formAddress.district = "";
       this.formAddress.ward = "";
       this.listDistricts(newValue);
+      this.$emit("update:modelValue", this.formAddress);
     },
     changeDistrict(newValue: string) {
       this.formAddress.district = newValue;
       this.formAddress.ward = "";
       this.listWards(newValue);
+      this.$emit("update:modelValue", this.formAddress);
     },
     async listDistricts(province: string) {
       await this.listDistrictsByProvince(Number(province)).then((response) => {
@@ -326,6 +358,8 @@ export default defineComponent({
         this.provinces = response.data.results;
       }
     });
+    this.formAddress = this.addresses[0] || {};
+    this.$emit("update:modelValue", this.formAddress);
     this.loading = false;
   },
 });

@@ -28,3 +28,8 @@ class PaymentSerializer(serializers.ModelSerializer):
             "payment_method",
             "total_amount",
         ]
+
+
+class RevenueStatisticsSerializer(serializers.Serializer):
+    start_date = serializers.DateTimeField()
+    end_date = serializers.DateTimeField()

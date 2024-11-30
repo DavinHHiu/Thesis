@@ -1,5 +1,7 @@
+from django.utils.translation import gettext_lazy as _
 from rest_framework import serializers
 
+from api.consts import base_consts
 from api.models import OrderDetail, OrderItem
 
 from .payment import PaymentSerializer
@@ -31,6 +33,17 @@ class OrderDetailSerializer(serializers.ModelSerializer):
 
     def get_payment(self, obj):
         return PaymentSerializer(obj.payment).data
+
+    def validate_status(self, value):
+        if not value:
+            msg = _("Status cannot be empty")
+            raise serializers.ValidationError({"status": msg})
+
+        if value not in dict(base_consts.ORDER_STATUSES):
+            msg = _("Invalid order status")
+            raise serializers.ValidationError(msg)
+
+        return value
 
 
 class OrderItemSerializer(serializers.ModelSerializer):

@@ -172,21 +172,6 @@ class AddressSerializer(serializers.ModelSerializer):
     @transaction.atomic
     def create(self, validated_data):
         ModelClass = self.Meta.model
-        try:
-            province = Province.objects.get(code=validated_data.get("city", None)).name
-            district = District.objects.get(
-                code=validated_data.get("district", None)
-            ).name
-            ward = Ward.objects.get(code=validated_data.get("ward", None)).name
-            validated_data["display_address1"] = f"{ward}, {district}, {province}"
-
-        except (Province.DoesNotExist, District.DoesNotExist, Ward.DoesNotExist) as e:
-            msg = {
-                Province.DoesNotExist: _("Province does not exist"),
-                District.DoesNotExist: _("District does not exist"),
-                Ward.DoesNotExist: _("Ward does not exist"),
-            }
-            raise serializers.ValidationError(msg[type(e)])
         instance = ModelClass._default_manager.create(
             user=self.context["request"].user, **validated_data
         )

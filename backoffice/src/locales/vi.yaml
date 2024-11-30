@@ -214,3 +214,19 @@ productAttributePage:
     title: Cập nhật thuộc tính sản phẩm
   modalDelete:
     title: Bạn có muốn xóa thuộc tính sản phẩm này không?
+
+orderPage:
+  title: Đơn hàng của bạn
+  thead:
+    orderNumber: Số đơn hàng
+    shipment: Vận chuyển
+    shipmentMethod: Phương thức vận chuyển
+    shippingDate: Ngày giao hàng
+    paymentMethod: Phương thức thanh toán
+    total: Tổng cộng
+    totalQuantity: Tổng số lượng
+    shippingFee: Phí vận chuyển
+    status: Trạng thái
+  label:
+    detail: Chi tiết
+    cancel: Huỷ đơn

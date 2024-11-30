@@ -38,6 +38,10 @@ interface Toast {
   autohide?: boolean;
   delay?: number;
 }
+interface NavPillItem {
+  title: string;
+  quantity: number;
+}
 
 export {
   AuthToken,
@@ -47,4 +51,5 @@ export {
   SidebarItem,
   TabItem,
   Toast,
+  NavPillItem,
 };

@@ -31,8 +31,8 @@
                 @action="handleActions"
                 :current-index="index"
                 :dropdown-list="[
-                  { title: 'Detail', action: '' },
-                  { title: 'Delete', action: '#deleteModal' },
+                  { title: 'Detail', action: 'detail' },
+                  { title: 'Delete', action: 'openModal' },
                 ]"
               />
             </td>
@@ -41,7 +41,12 @@
       </tbody>
     </table>
   </page-body>
-  <modal id="deleteModal" title="Delete attribute" @confirm="submitAction">
+  <modal
+    ref="deleteModal"
+    id="deleteModal"
+    title="Delete attribute"
+    @confirm="handleDelete"
+  >
     <span v-text="$t('addressPage.modalDelete.title')" />
   </modal>
 </template>
@@ -70,7 +75,6 @@ export default defineComponent({
   },
   data() {
     return {
-      currentAction: "" as string,
       currentIndex: 0 as number,
     };
   },
@@ -78,22 +82,21 @@ export default defineComponent({
     ...mapActions(useCartStore, ["listCarts", "destroyCart"]),
     handleActions(obj: any) {
       const cart = this.carts[obj.currentIndex];
-      if (obj.action === "Detail") {
+      if (obj.action === "detail") {
         this.$router.push({
           name: "cart.update",
           params: { cartId: cart.id },
         });
+      } else if (obj.action === "openModal") {
+        const modal = this.$refs.deleteModal as InstanceType<typeof Modal>;
+        modal.open();
       }
-      this.currentAction = obj.action;
       this.currentIndex = obj.currentIndex;
     },
-    async submitAction() {
-      const action = this.currentAction;
-      if (action === "Delete") {
-        const cart = this.carts[this.currentIndex] as Cart;
-        if (cart.id) {
-          this.destroyCart(cart.id);
-        }
+    async handleDelete() {
+      const cart = this.carts[this.currentIndex] as Cart;
+      if (cart.id) {
+        this.destroyCart(cart.id);
       }
     },
   },

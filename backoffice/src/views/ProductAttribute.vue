@@ -21,8 +21,8 @@
                 @action="handleActions"
                 :current-index="index"
                 :dropdown-list="[
-                  { title: 'Update', action: '' },
-                  { title: 'Delete', action: '#deleteModal' },
+                  { title: 'Update', action: 'update' },
+                  { title: 'Delete', action: 'openModal' },
                 ]"
               />
             </td>
@@ -31,7 +31,12 @@
       </tbody>
     </table>
   </page-body>
-  <modal id="deleteModal" title="Delete attribute" @confirm="submitAction">
+  <modal
+    ref="deleteModal"
+    id="deleteModal"
+    title="Delete attribute"
+    @confirm="handleDelete"
+  >
     <span v-text="$t('productAttributePage.modalDelete.title')" />
   </modal>
 </template>
@@ -60,7 +65,6 @@ export default defineComponent({
   },
   data() {
     return {
-      currentAction: "" as string,
       currentIndex: 0 as number,
     };
   },
@@ -71,24 +75,23 @@ export default defineComponent({
     ]),
     handleActions(obj: any) {
       const attribute = this.productAttributes[obj.currentIndex];
-      if (obj.action === "Update") {
+      if (obj.action === "update") {
         this.$router.push({
           name: "product.attribute.update",
           params: { id: attribute.id },
         });
+      } else if (obj.action === "openModal") {
+        const modal = this.$refs.deleteModal as InstanceType<typeof Modal>;
+        modal.open();
       }
-      this.currentAction = obj.action;
       this.currentIndex = obj.currentIndex;
     },
-    submitAction() {
-      const action = this.currentAction;
-      if (action === "Delete") {
-        const attribute = this.productAttributes[
-          this.currentIndex
-        ] as ProductAttribute;
-        if (attribute.id) {
-          this.destroyProductAttribute(attribute.id);
-        }
+    handleDelete() {
+      const attribute = this.productAttributes[
+        this.currentIndex
+      ] as ProductAttribute;
+      if (attribute.id) {
+        this.destroyProductAttribute(attribute.id);
       }
     },
   },

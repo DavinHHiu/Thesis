@@ -3,7 +3,11 @@ from .base import EmailValidationSerializer
 from .cart import CartItemSerializer, CartSerializer, ShallowCartItemSerializer
 from .category import CategorySerializer, SubCategorySerializer
 from .order import OrderDetailSerializer, OrderItemSerializer
-from .payment import PaymentMethodSerializer, PaymentSerializer
+from .payment import (
+    PaymentMethodSerializer,
+    PaymentSerializer,
+    RevenueStatisticsSerializer,
+)
 from .product import (
     ProductAttributeSerializer,
     ProductDetailSerializer,

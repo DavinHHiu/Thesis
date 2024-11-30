@@ -16,6 +16,7 @@ const CategoryUpdate = () => import("@/views/CategoryUpdate.vue");
 const DashBoard = () => import("@/views/DashBoard.vue");
 const Login = () => import("@/views/Login.vue");
 const Register = () => import("@/views/Register.vue");
+const Order = () => import("@/views/Order.vue");
 const Product = () => import("@/views/Product.vue");
 const ProductDetail = () => import("@/views/ProductDetail.vue");
 const ProductUpdate = () => import("@/views/ProductUpdate.vue");
@@ -257,6 +258,16 @@ const router = createRouter({
                   ],
                 },
               ],
+            },
+          ],
+        },
+        {
+          path: "orders",
+          children: [
+            {
+              name: "order.list",
+              path: "",
+              component: Order,
             },
           ],
         },

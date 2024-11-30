@@ -82,9 +82,6 @@ export default defineComponent({
       this.$router.push({ name: "profile.details" });
     },
   },
-  mounted() {
-    console.log(this.user);
-  },
 });
 </script>
 

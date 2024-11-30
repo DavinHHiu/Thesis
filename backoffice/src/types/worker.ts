@@ -129,17 +129,56 @@ interface CartItem {
   subtotal?: number;
 }
 
-interface OrderDetail {
+interface PaymentMethod {
+  id?: number;
+  icon?: string;
+  name: string;
+  value: string;
+  description: string;
+  is_active?: boolean;
+}
+
+interface Payment {
+  id?: number;
+  order_id?: string;
+  payment_method: PaymentMethod;
+  status: string;
+  total_amount: number;
+}
+
+interface ShipmentMethod {
+  id?: number;
+  name: string;
+  value: string;
+  description: string;
+  estimated_shipping_days: number;
+  shipping_fee: number;
+  is_active?: boolean;
+}
+
+interface Shipment {
+  id?: number;
+  order_id?: string;
+  receive_address: Address;
+  shipment_method: ShipmentMethod;
+  shipping_date: Date;
+  status: string;
+}
+
+interface Order {
   id?: string;
-  user: User;
-  total_amount?: number;
-  status?: string;
+  user_id: string;
+  shipment: Shipment;
+  payment: Payment;
+  total_quantity: number;
+  status: string;
 }
 
 interface OrderItem {
   id?: string;
-  order: OrderDetail;
-  product: ProductSku;
+  order_id: string;
+  product_sku: ProductSkuDetail;
+  product: Product;
   quantity: number;
 }
 
@@ -151,7 +190,7 @@ export {
   Cart,
   CartItem,
   Category,
-  OrderDetail,
+  Order,
   OrderItem,
   Product,
   ProductImage,

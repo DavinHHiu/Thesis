@@ -1,6 +1,7 @@
 <template>
   <div
     :id="id"
+    ref="modal"
     class="modal fade"
     tabindex="-1"
     aria-labelledby="exampleModalLabel"
@@ -14,20 +15,22 @@
             class="material-symbols-outlined btn-close"
             data-bs-dismiss="modal"
             aria-label="Close"
-            >close
-          </span>
+            v-text="'close'"
+          />
         </div>
         <div class="modal-body"><slot /></div>
         <div class="modal-footer">
-          <custom-button intent="p-outline" data-bs-dismiss="modal">
-            Close
-          </custom-button>
+          <custom-button
+            intent="p-outline"
+            data-bs-dismiss="modal"
+            v-text="'Close'"
+          />
           <custom-button
             @click="$emit('confirm')"
             data-bs-dismiss="modal"
             intent="primary"
-            >Confirm</custom-button
-          >
+            v-text="'Confirm'"
+          />
         </div>
       </div>
     </div>
@@ -36,6 +39,7 @@
 
 <script lang="ts">
 import CustomButton from "../atomic/CustomButton.vue";
+import { Modal } from "bootstrap";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -52,6 +56,29 @@ export default defineComponent({
       type: String,
       required: true,
     },
+  },
+  data() {
+    return {
+      modal: {} as Modal,
+    };
+  },
+  methods: {
+    init() {
+      const modalElement = this.$refs.modal as HTMLDivElement;
+      this.modal = Modal.getOrCreateInstance(modalElement);
+    },
+    open() {
+      this.modal.show();
+    },
+    close() {
+      this.modal.hide();
+    },
+    dispose() {
+      this.modal.dispose();
+    },
+  },
+  mounted() {
+    this.init();
   },
 });
 </script>
