@@ -2,17 +2,15 @@
   <span
     class="material-symbols-outlined elipsis-dropdown"
     data-bs-toggle="dropdown"
-    >more_vert</span
-  >
+    v-text="'more_vert'"
+  />
   <ul class="dropdown-menu">
     <li
       v-for="(x, index) in dropdownList"
       class="dropdown-item"
-      @click="$emit('action', { action: x.title, currentIndex })"
-      data-bs-toggle="modal"
-      :data-bs-target="x.action"
+      @click="$emit('action', { action: x.action, currentIndex })"
       :key="index"
-      v-t="x.title"
+      v-text="x.title"
     ></li>
   </ul>
 </template>

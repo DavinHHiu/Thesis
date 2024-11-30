@@ -1,8 +1,9 @@
 <template>
+  <loading-page v-if="loading" />
   <div class="separator"></div>
   <div class="checkout-cont">
     <div class="bill-cont">
-      <address-form />
+      <address-form v-model="address" />
       <div class="shipments-cont">
         <h2 class="sub-title" v-t="'checkoutPage.subtitle.shipment'" />
         <div class="bill-form">
@@ -110,7 +111,8 @@ import { useAddressStore } from "@/stores/address";
 import { useCartStore } from "@/stores/cart";
 import { usePaymentStore } from "@/stores/payment";
 import { useShipmentStore } from "@/stores/shipment";
-import { CartItem } from "@/types/worker";
+import { useToastStore } from "@/stores/toast";
+import { Address, CartItem } from "@/types/worker";
 import { formatCurrency } from "@/utils/currency";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
@@ -132,13 +134,13 @@ export default defineComponent({
   data() {
     return {
       loading: false,
+      address: {} as Address,
       totalQuantity: 0,
       totalAmount: 0,
       paymentMethodCurIdx: 0,
     };
   },
   computed: {
-    ...mapState(useAddressStore, ["address"]),
     ...mapState(useCartStore, ["checkoutItems"]),
     ...mapState(usePaymentStore, ["paymentMethods"]),
     ...mapState(useShipmentStore, ["shipmentMethod", "shipmentMethods"]),
@@ -147,6 +149,7 @@ export default defineComponent({
     ...mapActions(useCartStore, ["createPayment"]),
     ...mapActions(usePaymentStore, ["listPaymentMethods"]),
     ...mapActions(useShipmentStore, ["setShipmentMethod"]),
+    ...mapActions(useToastStore, ["toast"]),
     formatCurrency,
     formatAmount(amount: number) {
       const { locale } = useI18n();
@@ -154,21 +157,31 @@ export default defineComponent({
     },
     async handlePlaceOrder() {
       this.loading = true;
-      const response = await this.createPayment(
+      await this.createPayment(
         this.totalAmount + this.shipmentMethod.shipping_fee,
         this.totalQuantity,
         this.address,
         this.shipmentMethod,
         this.paymentMethods[this.paymentMethodCurIdx]
-      );
-      if (!response.data.approval_url) {
-        this.$router.push({
-          name: "checkout-received",
-          params: {
-            orderId: response.data.order_id,
-          },
+      )
+        .then((response) => {
+          if (!response.data.approval_url) {
+            this.$router.push({
+              name: "checkout-received",
+              params: {
+                orderId: response.data.order_id,
+              },
+            });
+          }
+        })
+        .catch((error) => {
+          this.loading = false;
+          window.scrollTo({ top: 0, behavior: "smooth" });
+          this.toast({
+            theme: "danger",
+            message: "registerPage.message.error",
+          });
         });
-      }
     },
     changePaymentMethod(index: number) {
       this.paymentMethodCurIdx = index;
@@ -193,6 +206,13 @@ export default defineComponent({
           0
         );
       },
+    },
+    address: {
+      immediate: true,
+      handler(newAddress) {
+        console.log(newAddress);
+      },
+      deep: true,
     },
   },
   async mounted() {

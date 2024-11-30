@@ -34,8 +34,8 @@
               @action="handleActions"
               :current-index="index"
               :dropdown-list="[
-                { title: 'Update', action: '' },
-                { title: 'Delete', action: '#deleteModal' },
+                { title: 'Update', action: 'update' },
+                { title: 'Delete', action: 'openModal' },
               ]"
             />
           </td>
@@ -43,7 +43,12 @@
       </template>
     </tbody>
   </table>
-  <modal id="deleteModal" title="Delete attribute" @confirm="submitAction">
+  <modal
+    ref="deleteModal"
+    id="deleteModal"
+    title="Delete attribute"
+    @confirm="handleDelete"
+  >
     <span v-text="$t('addressPage.modalDelete.title')" />
   </modal>
 </template>
@@ -66,7 +71,6 @@ export default defineComponent({
   },
   data() {
     return {
-      currentAction: "" as string,
       currentIndex: 0 as number,
     };
   },
@@ -74,22 +78,21 @@ export default defineComponent({
     ...mapActions(useAddressStore, ["listAddresses", "destroyAddress"]),
     handleActions(obj: any) {
       const address = this.addresses[obj.currentIndex];
-      if (obj.action === "Update") {
+      if (obj.action === "update") {
         this.$router.push({
           name: "address.update",
           params: { id: address.id },
         });
+      } else if (obj.action === "openModal") {
+        const modal = this.$refs.deleteModal as InstanceType<typeof Modal>;
+        modal.open();
       }
-      this.currentAction = obj.action;
       this.currentIndex = obj.currentIndex;
     },
-    async submitAction() {
-      const action = this.currentAction;
-      if (action === "Delete") {
-        const address = this.addresses[this.currentIndex] as Address;
-        if (address.id) {
-          this.destroyAddress(address.id);
-        }
+    async handleDelete() {
+      const address = this.addresses[this.currentIndex] as Address;
+      if (address.id) {
+        this.destroyAddress(address.id);
       }
     },
   },

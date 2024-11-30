@@ -22,8 +22,8 @@
                 @action="handleActions"
                 :current-index="index"
                 :dropdown-list="[
-                  { title: 'Update', action: '' },
-                  { title: 'Delete', action: '#deleteModal' },
+                  { title: 'Update', action: 'update' },
+                  { title: 'Delete', action: 'openModal' },
                 ]"
               />
             </td>
@@ -32,7 +32,12 @@
       </tbody>
     </table>
   </page-body>
-  <modal id="deleteModal" title="Delete attribute" @confirm="submitAction">
+  <modal
+    ref="deleteModal"
+    id="deleteModal"
+    title="Delete attribute"
+    @confirm="handleDelete"
+  >
     <span v-t="'subcategoryPage.modalDelete.title'" />
   </modal>
 </template>
@@ -60,7 +65,6 @@ export default defineComponent({
   },
   data() {
     return {
-      currentAction: "" as string,
       currentIndex: 0 as number,
     };
   },
@@ -71,24 +75,21 @@ export default defineComponent({
     ]),
     handleActions(obj: any) {
       const subcategory = this.subcategories[obj.currentIndex];
-      if (obj.action === "Update") {
+      if (obj.action === "update") {
         this.$router.push({
           name: "subcategory.update",
           params: { subcategoryId: subcategory.id },
         });
+      } else if (obj.action === "openModal") {
+        const modal = this.$refs.deleteModal as InstanceType<typeof Modal>;
+        modal.open();
       }
-      this.currentAction = obj.action;
       this.currentIndex = obj.currentIndex;
     },
-    async submitAction() {
-      const action = this.currentAction;
-      if (action === "Delete") {
-        const subcategory = this.subcategories[
-          this.currentIndex
-        ] as SubCategory;
-        if (subcategory.id) {
-          this.destroySubCategory(subcategory.id);
-        }
+    async handleDelete() {
+      const subcategory = this.subcategories[this.currentIndex] as SubCategory;
+      if (subcategory.id) {
+        this.destroySubCategory(subcategory.id);
       }
     },
     fmt,

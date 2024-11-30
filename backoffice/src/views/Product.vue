@@ -29,10 +29,13 @@
                 @action="handleActions"
                 :current-index="index"
                 :dropdown-list="[
-                  { title: $t('productPage.dropdown[0].title'), action: '' },
+                  {
+                    title: $t('productPage.dropdown[0].title'),
+                    action: 'detail',
+                  },
                   {
                     title: $t('productPage.dropdown[1].title'),
-                    action: '#deleteModal',
+                    action: 'openModal',
                   },
                 ]"
               />
@@ -42,7 +45,12 @@
       </tbody>
     </table>
   </page-body>
-  <modal id="deleteModal" title="Delete attribute" @confirm="submitAction">
+  <modal
+    ref="deleteModal"
+    id="deleteModal"
+    title="Delete attribute"
+    @confirm="handleDelete"
+  >
     <span v-text="$t('productPage.modalDelete.title')" />
   </modal>
 </template>
@@ -76,7 +84,6 @@ export default defineComponent({
   },
   data() {
     return {
-      currentAction: "" as string,
       currentIndex: 0 as number,
     };
   },
@@ -84,22 +91,21 @@ export default defineComponent({
     ...mapActions(useProductStore, ["listProducts", "destroyProduct"]),
     handleActions(obj: any) {
       const product = this.products[obj.currentIndex];
-      if (obj.action === this.$t("productPage.dropdown[0].title")) {
+      if (obj.action === "detail") {
         this.$router.push({
           name: "product.update",
           params: { productId: product.id },
         });
+      } else if (obj.action === "openModal") {
+        const modal = this.$refs.deleteModal as InstanceType<typeof Modal>;
+        modal.open();
       }
-      this.currentAction = obj.action;
       this.currentIndex = obj.currentIndex;
     },
-    async submitAction() {
-      const action = this.currentAction;
-      if (action === "Delete") {
-        const product = this.products[this.currentIndex] as Product;
-        if (product.id) {
-          this.destroyProduct(product.id);
-        }
+    async handleDelete() {
+      const product = this.products[this.currentIndex] as Product;
+      if (product.id) {
+        this.destroyProduct(product.id);
       }
     },
     fmt,
@@ -109,7 +115,6 @@ export default defineComponent({
   },
   async mounted() {
     await this.listProducts();
-    console.log(this.$config.backofficeSidebar);
   },
 });
 </script>

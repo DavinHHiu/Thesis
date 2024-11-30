@@ -44,9 +44,6 @@ export default defineComponent({
       this.$router.push({ name: "login" });
     },
   },
-  mounted() {
-    console.log(this.user);
-  },
 });
 </script>
 

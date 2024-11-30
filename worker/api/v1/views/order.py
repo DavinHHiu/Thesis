@@ -102,6 +102,31 @@ class OrderItemViewSet(viewsets.ModelViewSet):
 class CreatePaymentView(APIView):
     permission_classes = [AllowAny]
 
+    def _request_order(self, total_amount, host):
+        paypal_client = PayPalClient()
+
+        request_order = OrdersCreateRequest()
+        request_order.prefer("return=representation")
+        request_order.request_body(
+            {
+                "intent": "CAPTURE",
+                "purchase_units": [
+                    {
+                        "amount": {
+                            "currency_code": "USD",
+                            "value": f"{total_amount:.2f}",
+                        },
+                    }
+                ],
+                "application_context": {
+                    "return_url": f"{host}/payment-success",
+                    "cancel_url": f"{host}/payment-cancel",
+                },
+            }
+        )
+
+        return paypal_client.client.execute(request_order)
+
     @transaction.atomic
     def post(self, request):
         address_data = request.data.get("address")
@@ -122,39 +147,22 @@ class CreatePaymentView(APIView):
             order_address.pk = None
             order_address.save()
 
+        payment_status = base_consts.PAYMENT_STATUS_PENDING
+        response_status = status.HTTP_200_OK
+        order_id = str(uuid.uuid4())
+
         if payment_method.get("value") == base_consts.PAYMENT_METHOD_COD:
             order_status = base_consts.ORDER_STATUS_COMFIRMED
-            order_id = str(uuid.uuid4())
             response = {"order_id": order_id}
         else:
             order_status = base_consts.ORDER_STATUS_PENDING
 
-            paypal_client = PayPalClient()
-
-            request_order = OrdersCreateRequest()
-            request_order.prefer("return=representation")
-            request_order.request_body(
-                {
-                    "intent": "CAPTURE",
-                    "purchase_units": [
-                        {
-                            "amount": {
-                                "currency_code": "USD",
-                                "value": f"{total_amount:.2f}",
-                            },
-                        }
-                    ],
-                    "application_context": {
-                        "return_url": f"{host}/payment-success",
-                        "cancel_url": f"{host}/payment-cancel",
-                    },
-                }
-            )
-
-            response = paypal_client.client.execute(request_order)
+            response = self._request_order(total_amount, host)
 
             if response.status_code == status.HTTP_201_CREATED:
                 order_id = response.result.id
+                order_status = base_consts.ORDER_STATUS_COMFIRMED
+                payment_status = base_consts.PAYMENT_STATUS_SUCCESS
                 for link in response.result.links:
                     if link.rel == "approve":
                         response = {
@@ -162,10 +170,10 @@ class CreatePaymentView(APIView):
                             "order_id": order_id,
                         }
             else:
-                return Response(
-                    {"error": "Could not create payment"},
-                    status=status.HTTP_500_INTERNAL_SERVER_ERROR,
-                )
+                msg = _("Could not create payment")
+                response = {"error": msg}
+                response_status = status.HTTP_500_INTERNAL_SERVER_ERROR
+                payment_status = base_consts.PAYMENT_STATUS_FAIL
 
         order = OrderDetail.objects.create(
             id=order_id,
@@ -193,12 +201,13 @@ class CreatePaymentView(APIView):
                 order=order,
                 payment_method=db_payment_method,
                 total_amount=total_amount,
+                status=payment_status,
             )
         except PaymentMethod.DoesNotExist:
             msg = _("Payment method does not exist")
             return Response({"detail": msg}, status=status.HTTP_400_BAD_REQUEST)
 
-        return Response(response, status=status.HTTP_200_OK)
+        return Response(response, status=response_status)
 
 
 class ExecutePaymentView(APIView):

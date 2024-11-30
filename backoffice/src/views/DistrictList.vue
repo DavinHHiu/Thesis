@@ -24,8 +24,8 @@
               @action="handleActions"
               :current-index="index"
               :dropdown-list="[
-                { title: 'Update', action: '' },
-                { title: 'Delete', action: '#deleteModal' },
+                { title: 'Update', action: 'update' },
+                { title: 'Delete', action: 'openModal' },
               ]"
             />
           </td>
@@ -33,7 +33,12 @@
       </template>
     </tbody>
   </table>
-  <modal id="deleteModal" title="Delete attribute" @confirm="submitAction">
+  <modal
+    ref="deleteModal"
+    id="deleteModal"
+    title="Delete attribute"
+    @confirm="handleDelete"
+  >
     <span v-text="$t('productPage.modalDelete.title')" />
   </modal>
 </template>
@@ -47,7 +52,6 @@ import TabLayout from "@/components/common/molecules/TabLayout.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
 import { useAddressStore } from "@/stores/address";
-import { TabItem } from "@/types/backoffice";
 import { District, Province } from "@/types/worker";
 import { fmt } from "@/utils/string";
 import { mapActions, mapState } from "pinia";
@@ -66,44 +70,34 @@ export default defineComponent({
   },
   data() {
     return {
-      currentAction: "" as string,
       currentIndex: 0 as number,
-      tabs: [
-        { title: "User", name: "user.update", path: "update" },
-        { title: "Orders", name: "user.order.list", path: "order" },
-      ] as TabItem[],
     };
-  },
-  methods: {
-    ...mapActions(useAddressStore, [
-      "listAddresses",
-      "destroyAddress",
-      "listDistricts",
-    ]),
-    handleActions(obj: any) {
-      const province = this.districts[obj.currentIndex];
-      if (obj.action === "Update") {
-        this.$router.push({
-          name: "address.update",
-          params: { id: province.code },
-        });
-      }
-      this.currentAction = obj.action;
-      this.currentIndex = obj.currentIndex;
-    },
-    async submitAction() {
-      const action = this.currentAction;
-      if (action === "Delete") {
-        const district = this.districts[this.currentIndex] as District;
-        if (district.code) {
-          this.destroyAddress(district.code);
-        }
-      }
-    },
-    fmt,
   },
   computed: {
     ...mapState(useAddressStore, ["districts"]),
+  },
+  methods: {
+    ...mapActions(useAddressStore, ["listDistricts"]),
+    handleActions(obj: any) {
+      const district = this.districts[obj.currentIndex];
+      if (obj.action === "update") {
+        this.$router.push({
+          name: "address.update",
+          params: { id: district.code },
+        });
+      } else if (obj.action === "openModal") {
+        const modal = this.$refs.deleteModal as InstanceType<typeof Modal>;
+        modal.open();
+      }
+      this.currentIndex = obj.currentIndex;
+    },
+    async handleDelete() {
+      const district = this.districts[this.currentIndex] as District;
+      if (district.code) {
+        this.destroyAddress(district.code);
+      }
+    },
+    fmt,
   },
   async mounted() {
     await this.listDistricts();

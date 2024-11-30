@@ -34,8 +34,8 @@
                 @action="handleActions"
                 :current-index="index"
                 :dropdown-list="[
-                  { title: 'Update', action: '' },
-                  { title: 'Delete', action: '#deleteModal' },
+                  { title: 'Update', action: 'update' },
+                  { title: 'Delete', action: 'openModal' },
                 ]"
               />
             </td>
@@ -44,7 +44,12 @@
       </tbody>
     </table>
   </page-body>
-  <modal id="deleteModal" title="Delete attribute" @confirm="submitAction">
+  <modal
+    ref="deleteModal"
+    id="deleteModal"
+    title="Delete attribute"
+    @confirm="handleDelete"
+  >
     <span v-text="$t('addressPage.modalDelete.title')" />
   </modal>
 </template>
@@ -73,7 +78,6 @@ export default defineComponent({
   },
   data() {
     return {
-      currentAction: "" as string,
       currentIndex: 0 as number,
     };
   },
@@ -81,22 +85,21 @@ export default defineComponent({
     ...mapActions(useCartItemStore, ["listCartItems", "destroyCartItem"]),
     handleActions(obj: any) {
       const cartItem = this.cartItems[obj.currentIndex];
-      if (obj.action === "Update") {
+      if (obj.action === "update") {
         this.$router.push({
           name: "cart.item.update",
           params: { cartItemId: cartItem.id },
         });
+      } else if (obj.action === "openModal") {
+        const modal = this.$refs.deleteModal as InstanceType<typeof Modal>;
+        modal.open();
       }
-      this.currentAction = obj.action;
       this.currentIndex = obj.currentIndex;
     },
-    async submitAction() {
-      const action = this.currentAction;
-      if (action === "Delete") {
-        const cartItem = this.cartItems[this.currentIndex] as CartItem;
-        if (cartItem.id) {
-          this.destroyCartItem(cartItem.id);
-        }
+    async handleDelete() {
+      const cartItem = this.cartItems[this.currentIndex] as CartItem;
+      if (cartItem.id) {
+        this.destroyCartItem(cartItem.id);
       }
     },
   },
