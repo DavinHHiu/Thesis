@@ -15,8 +15,8 @@ from .product import (
     ProductSkuViewSet,
     ProductViewSet,
 )
+from .search import SearchByImageApiView
 from .shipment import ShipmentMethodViewSet, ShipmentViewSet
-from .token import MyTokenObtainPairView
 from .user import (
     AddressViewSet,
     BaseObtainJSONWebTokenView,

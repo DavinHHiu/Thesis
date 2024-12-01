@@ -1,7 +1,7 @@
 <template>
   <div class="body flex">
     <div class="side-filter">
-      <search-bar />
+      <search-bar v-model="queryInput" @submit="search" />
       <filter-price />
       <side-category />
       <side-best-sellers />
@@ -27,6 +27,7 @@ import SideBestSellers from "@/components/common/organisms/SideBestSellers.vue";
 import SideCategory from "@/components/common/organisms/SideCategory.vue";
 import GridLayout from "@/layouts/GridLayout.vue";
 import { useProductStore } from "@/stores/product";
+import { useSearchStore } from "@/stores/search";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
@@ -46,14 +47,31 @@ export default defineComponent({
     TopItem,
   },
   data() {
-    return {};
-  },
-  methods: {
-    ...mapActions(useProductStore, ["listProducts"]),
+    return {
+      queryInput: "" as String | File,
+    };
   },
   computed: {
     ...mapState(useProductStore, ["products"]),
   },
+  methods: {
+    ...mapActions(useProductStore, ["listProducts"]),
+    ...mapActions(useSearchStore, ["searchByImage"]),
+    search() {
+      if (this.queryInput instanceof File) {
+        this.searchByImage(this.queryInput);
+      }
+    },
+  },
+  // watch: {
+  //   queryInput: {
+  //     immediate: true,
+  //     handler(query) {
+  //       console.log(query);
+  //       this.searchByImage(query);
+  //     },
+  //   },
+  // },
   mounted() {
     this.listProducts();
   },
