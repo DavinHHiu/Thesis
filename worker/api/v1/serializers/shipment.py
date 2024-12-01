@@ -2,10 +2,11 @@ from rest_framework import serializers
 
 from api.models import Shipment, ShipmentMethod
 
+from .mixin import CreateAndUpdateSerializer
 from .user import AddressSerializer
 
 
-class ShipmentMethodSerializer(serializers.ModelSerializer):
+class ShipmentMethodSerializer(CreateAndUpdateSerializer):
     id = serializers.IntegerField(required=False)
     name = serializers.CharField()
     value = serializers.CharField()
@@ -19,7 +20,7 @@ class ShipmentMethodSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class ShipmentSerializer(serializers.ModelSerializer):
+class ShipmentSerializer(CreateAndUpdateSerializer):
     id = serializers.IntegerField(required=False)
     receive_address = AddressSerializer()
     shipment_method = ShipmentMethodSerializer()

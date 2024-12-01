@@ -72,7 +72,7 @@
       <div class="custom-info-wp">
         <p v-text="order?.shipment?.receive_address?.representative" />
         <p v-text="order?.shipment?.receive_address?.address_1" />
-        <p v-text="address" />
+        <p v-text="order?.shipment?.receive_address?.display_address1" />
         <p><span>&#9742; </span>{{ order?.shipment?.receive_address?.tel }}</p>
       </div>
     </section>

@@ -85,6 +85,13 @@ dividerBreak:
 
 dashboardPage:
   title: Bảng điều khiển
+  label:
+    period: Thời kỳ
+  statistics:
+    period:
+      week: Tuần này
+      month: Tháng này
+      year: Năm nay
 
 userPage:
   list:

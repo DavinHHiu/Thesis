@@ -29,9 +29,7 @@ export const useProductSkuStore = defineStore("productSku", {
                   "Content-Type": "multipart/form-data",
                 },
               })
-              .then((response) => {
-                console.log(response);
-              });
+              .then((response) => response);
           }
         });
     },
@@ -84,9 +82,7 @@ export const useProductSkuStore = defineStore("productSku", {
                   "Content-Type": "multipart/form-data",
                 },
               })
-              .then((response) => {
-                console.log(response);
-              });
+              .then((response) => response);
           }
         });
     },

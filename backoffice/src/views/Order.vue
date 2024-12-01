@@ -151,7 +151,6 @@ export default defineComponent({
     handleActions(obj: any) {
       const order = this.orders[obj.currentIndex];
       if (order && order.id) {
-        console.log(order.id, obj.action);
         this.updateOrderStatus(order.id, obj.action);
       }
     },

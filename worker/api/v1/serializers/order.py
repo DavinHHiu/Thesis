@@ -4,12 +4,13 @@ from rest_framework import serializers
 from api.consts import base_consts
 from api.models import OrderDetail, OrderItem
 
+from .mixin import CreateAndUpdateSerializer
 from .payment import PaymentSerializer
 from .product import ProductSerializer, ProductSkuSerializer
 from .shipment import ShipmentSerializer
 
 
-class OrderDetailSerializer(serializers.ModelSerializer):
+class OrderDetailSerializer(CreateAndUpdateSerializer):
     id = serializers.CharField(required=False)
     user_id = serializers.CharField(source="user.id")
     total_quantity = serializers.IntegerField()
@@ -46,7 +47,7 @@ class OrderDetailSerializer(serializers.ModelSerializer):
         return value
 
 
-class OrderItemSerializer(serializers.ModelSerializer):
+class OrderItemSerializer(CreateAndUpdateSerializer):
     id = serializers.UUIDField(required=False)
     order_id = serializers.CharField()
     product_sku = ProductSkuSerializer()

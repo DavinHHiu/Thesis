@@ -10,9 +10,10 @@ from rest_framework.utils import model_meta
 from api.models import Product, ProductAttribute, ProductImage, ProductSku, SubCategory
 
 from .category import SubCategorySerializer
+from .mixin import CreateAndUpdateSerializer
 
 
-class ProductAttributeSerializer(serializers.ModelSerializer):
+class ProductAttributeSerializer(CreateAndUpdateSerializer):
     id = serializers.IntegerField(required=False)
     type = serializers.CharField()
     value = serializers.CharField()
@@ -22,7 +23,7 @@ class ProductAttributeSerializer(serializers.ModelSerializer):
         fields = ["id", "type", "value"]
 
 
-class ProductSerializer(serializers.ModelSerializer):
+class ProductSerializer(CreateAndUpdateSerializer):
     id = serializers.UUIDField(required=False)
     name = serializers.CharField(required=False)
     categories = SubCategorySerializer(many=True, required=False)
@@ -63,7 +64,7 @@ class ProductSerializer(serializers.ModelSerializer):
         return instance
 
 
-class ProductSkuSerializer(serializers.ModelSerializer):
+class ProductSkuSerializer(CreateAndUpdateSerializer):
     id = serializers.UUIDField(required=False)
     size = ProductAttributeSerializer()
     color = ProductAttributeSerializer()
@@ -143,7 +144,7 @@ class ProductSkuSerializer(serializers.ModelSerializer):
         return instance
 
 
-class ProductImageSerializer(serializers.ModelSerializer):
+class ProductImageSerializer(CreateAndUpdateSerializer):
     id = serializers.IntegerField(required=False)
     image = serializers.ImageField()
     product_sku_id = serializers.CharField()

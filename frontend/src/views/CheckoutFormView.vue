@@ -207,13 +207,6 @@ export default defineComponent({
         );
       },
     },
-    address: {
-      immediate: true,
-      handler(newAddress) {
-        console.log(newAddress);
-      },
-      deep: true,
-    },
   },
   async mounted() {
     await this.listPaymentMethods();

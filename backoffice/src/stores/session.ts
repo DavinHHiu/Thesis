@@ -1,9 +1,10 @@
+import { useToastStore } from "./toast";
+import consts from "@/consts/consts";
 import { LoginItem } from "@/types/backoffice";
 import { User } from "@/types/worker";
-import axios from "axios";
-import consts from "@/consts/consts";
-import { defineStore } from "pinia";
 import localStore from "@/utils/localStorage";
+import axios from "axios";
+import { defineStore } from "pinia";
 
 let refreshInterval: NodeJS.Timeout | null = null;
 
@@ -69,6 +70,14 @@ export const useSessionStore = defineStore("session", {
                   `Bearer ${response.data.token}`;
               }
             }
+          })
+          .catch((err) => {
+            const toastStore = useToastStore();
+            toastStore.toast({
+              message: err.response.data.detail,
+              theme: "danger",
+            });
+            throw err;
           });
       }
     },

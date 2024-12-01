@@ -1,13 +1,15 @@
+from django.db import transaction
 from django.utils.translation import gettext_lazy as _
 from rest_framework import serializers
 from rest_framework.utils import model_meta
 
 from api.models import Cart, CartItem, Product, ProductSku, User
 
+from .mixin import CreateAndUpdateSerializer
 from .product import ProductSerializer, ProductSkuDetailSerializer
 
 
-class CartSerializer(serializers.ModelSerializer):
+class CartSerializer(CreateAndUpdateSerializer):
     id = serializers.UUIDField(required=False)
     user_id = serializers.CharField(source="user.id")
     total_quantity = serializers.IntegerField(required=False)
@@ -17,6 +19,7 @@ class CartSerializer(serializers.ModelSerializer):
         model = Cart
         fields = ["id", "user_id", "total_quantity", "total_amount"]
 
+    @transaction.atomic
     def update(self, instance, validated_data):
         user = validated_data.pop("user")
         try:
@@ -37,7 +40,7 @@ class CartSerializer(serializers.ModelSerializer):
         return instance
 
 
-class CartItemSerializer(serializers.ModelSerializer):
+class CartItemSerializer(CreateAndUpdateSerializer):
     id = serializers.IntegerField(required=False)
     cart_id = serializers.CharField()
     product_sku = ProductSkuDetailSerializer()
@@ -55,7 +58,7 @@ class CartItemSerializer(serializers.ModelSerializer):
         return ProductSerializer(product).data
 
 
-class ShallowCartItemSerializer(serializers.ModelSerializer):
+class ShallowCartItemSerializer(CreateAndUpdateSerializer):
     cart_id = serializers.CharField()
     product_sku_id = serializers.CharField()
     quantity = serializers.IntegerField()
@@ -64,6 +67,7 @@ class ShallowCartItemSerializer(serializers.ModelSerializer):
         model = CartItem
         fields = ["cart_id", "product_sku_id", "quantity"]
 
+    @transaction.atomic
     def create(self, validated_data):
         cart_id = validated_data.pop("cart_id")
         product_sku_id = validated_data.pop("product_sku_id")
@@ -88,6 +92,7 @@ class ShallowCartItemSerializer(serializers.ModelSerializer):
 
         return cart_item
 
+    @transaction.atomic
     def update(self, instance, validated_data):
         cart_id = validated_data.pop("cart_id")
         product_sku_id = validated_data.pop("product_sku_id")

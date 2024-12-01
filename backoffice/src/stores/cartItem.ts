@@ -16,9 +16,7 @@ export const useCartItemStore = defineStore("cartItem", {
       payload.product_sku = _.omit(payload.product_sku, ["images"]);
       return axios
         .post(`${consts.BASE_URL}/cart-items/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     listCartItems() {
       return axios.get(`${consts.BASE_URL}/cart-items/`).then((response) => {
@@ -41,9 +39,7 @@ export const useCartItemStore = defineStore("cartItem", {
 
       return axios
         .put(`${consts.BASE_URL}/cart-items/${payload.id}/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     destroyCartItem(id: number) {
       return axios

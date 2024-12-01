@@ -31,7 +31,11 @@
       </div>
       <div class="flex flex-col gap-[1.5rem]">
         <h2 v-t="'footer.subtitle.subscribe'" />
-        <text-field :placeholder="$t('footer.placeholder')" />
+        <text-field
+          :value="emailToSend"
+          :placeholder="$t('footer.placeholder')"
+          @update:model-value="(newValue) => (emailToSend = newValue)"
+        />
         <custom-button
           class="w-[15rem] h-[4.5rem] uppercase"
           intent="primary"
@@ -63,6 +67,7 @@ export default defineComponent({
   },
   data() {
     return {
+      emailToSend: "",
       subcategories: {} as { [key: number]: SubCategory[] },
     };
   },

@@ -1,0 +1,24 @@
+[
+  {
+    "model": "api.Payment",
+    "pk": "9",
+    "fields": {
+      "payment_method_id": 1,
+      "total_amount": 58,
+      "order_id": "8BL4453184110653D",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Payment",
+    "pk": "10",
+    "fields": {
+      "payment_method_id": 1,
+      "total_amount": 58,
+      "order_id": "6DM62794Y0350943M",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  }
+]

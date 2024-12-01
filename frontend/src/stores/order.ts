@@ -43,7 +43,6 @@ export const useOrderStore = defineStore("order", {
         .then((response) => {
           if (response.status === 200 && response.data) {
             this.order = response.data;
-            console.log(response);
           }
         });
     },

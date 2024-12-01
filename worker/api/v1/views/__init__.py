@@ -7,7 +7,7 @@ from .order import (
     OrderDetailViewSet,
     OrderItemViewSet,
 )
-from .payment import PaymentMethodViewSet, PaymentViewSet
+from .payment import PaymentMethodViewSet, PaymentViewSet, RevenueStatisticsApiView
 from .product import (
     ProductAttributeViewSet,
     ProductDisplayViewset,

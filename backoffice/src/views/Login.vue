@@ -1,5 +1,6 @@
 <template>
   <div class="flex flex-col items-center gap-[3rem] mt-[5rem]">
+    <Toast />
     <app-logo />
     <card class="w-[40rem] h-[48rem]">
       <div class="h-full p-[1rem] flex flex-col justify-between">

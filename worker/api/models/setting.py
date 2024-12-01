@@ -4,7 +4,7 @@ from django.utils.translation import gettext_lazy as _
 from api.models.mixins import CreateAndUpdateModelMixin
 
 
-class Settings(models.Model, CreateAndUpdateModelMixin):
+class Settings(CreateAndUpdateModelMixin, models.Model):
     id = models.BigAutoField(primary_key=True)
     user = models.OneToOneField(to="api.User", on_delete=models.CASCADE)
 
@@ -13,7 +13,7 @@ class Settings(models.Model, CreateAndUpdateModelMixin):
         verbose_name_plural = _("settings")
 
 
-class SettingItems(models.Model, CreateAndUpdateModelMixin):
+class SettingItems(CreateAndUpdateModelMixin, models.Model):
     id = models.BigAutoField(_("setting item id"), primary_key=True)
     setting = models.ForeignKey(
         to="api.Settings",

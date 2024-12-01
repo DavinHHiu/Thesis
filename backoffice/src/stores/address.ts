@@ -22,9 +22,7 @@ export const useAddressStore = defineStore("address", {
       payload.user = _.omit(payload.user, ["avatar", "password"]);
       return axios
         .post(`${consts.BASE_URL}/addresses/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     listAddresses() {
       return axios.get(`${consts.BASE_URL}/addresses/`).then((response) => {
@@ -46,9 +44,7 @@ export const useAddressStore = defineStore("address", {
       payload.user = _.omit(payload.user, ["avatar", "password"]);
       return axios
         .put(`${consts.BASE_URL}/addresses/${payload.id}/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     destroyAddress(id: number) {
       return axios

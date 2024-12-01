@@ -1,3 +1,5 @@
+import i18n from "@/utils/i18n";
+
 const apiVersion = "v1";
 const APP_URL = `http://localhost:8000/api/${apiVersion}`;
 const BASE_URL = `http://localhost:8000/api/${apiVersion}/bo`;
@@ -44,6 +46,30 @@ const ORDER_STATUS_MAP_COLOR = {
 
 export type StatusType = keyof typeof consts.ORDER_STATUS_MAP_COLOR;
 
+const STATISTIC_WEEK_PERIOD = "week";
+const STATISTIC_MONTH_PERIOD = "month";
+const STATISTIC_YEAR_PERIOD = "year";
+
+const STATISTIC_PERIODS = [
+  STATISTIC_WEEK_PERIOD,
+  STATISTIC_MONTH_PERIOD,
+  STATISTIC_YEAR_PERIOD,
+];
+
+const STATISTIC_PERIODS_DISPLAY = {
+  [STATISTIC_WEEK_PERIOD]: i18n.global.t(
+    "dashboardPage.statistics.period.week"
+  ),
+  [STATISTIC_MONTH_PERIOD]: i18n.global.t(
+    "dashboardPage.statistics.period.month"
+  ),
+  [STATISTIC_YEAR_PERIOD]: i18n.global.t(
+    "dashboardPage.statistics.period.year"
+  ),
+};
+
+export type StatisticPeriodType = keyof typeof STATISTIC_PERIODS_DISPLAY;
+
 const consts = {
   APP_URL,
   BASE_URL,
@@ -59,6 +85,11 @@ const consts = {
   ORDER_STATUS_MAP_COLOR,
   ORDER_STATUSES,
   CHANGABLE_ORDER_STATUSES,
+  STATISTIC_WEEK_PERIOD,
+  STATISTIC_MONTH_PERIOD,
+  STATISTIC_YEAR_PERIOD,
+  STATISTIC_PERIODS,
+  STATISTIC_PERIODS_DISPLAY,
 };
 
 export default consts;

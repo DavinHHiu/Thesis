@@ -4,7 +4,7 @@ from django.utils.translation import gettext_lazy as _
 from api.models.mixins import CreateAndUpdateModelMixin
 
 
-class Province(models.Model, CreateAndUpdateModelMixin):
+class Province(CreateAndUpdateModelMixin, models.Model):
     code = models.IntegerField(_("province code"), primary_key=True)
     name = models.CharField(_("province name"), max_length=255)
     division_type = models.CharField(_("province type"), max_length=255)
@@ -17,7 +17,7 @@ class Province(models.Model, CreateAndUpdateModelMixin):
         verbose_name_plural = _("provinces")
 
 
-class District(models.Model, CreateAndUpdateModelMixin):
+class District(CreateAndUpdateModelMixin, models.Model):
     code = models.IntegerField(_("district code"), primary_key=True)
     name = models.CharField(_("district name"), max_length=255)
     division_type = models.CharField(_("district type"), max_length=255)
@@ -35,7 +35,7 @@ class District(models.Model, CreateAndUpdateModelMixin):
         verbose_name_plural = _("districts")
 
 
-class Ward(models.Model, CreateAndUpdateModelMixin):
+class Ward(CreateAndUpdateModelMixin, models.Model):
     code = models.IntegerField(_("ward code"), primary_key=True)
     name = models.CharField(_("ward name"), max_length=255)
     division_type = models.CharField(_("ward type"), max_length=255)

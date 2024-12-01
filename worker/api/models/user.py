@@ -16,7 +16,7 @@ from api.models.mixins import CreateAndUpdateModelMixin
 from . import Cart, District, Province, Ward
 
 
-class Address(models.Model, CreateAndUpdateModelMixin):
+class Address(CreateAndUpdateModelMixin, models.Model):
     id = models.BigAutoField(_("address id"), primary_key=True)
     user = models.ForeignKey(
         to="api.User",

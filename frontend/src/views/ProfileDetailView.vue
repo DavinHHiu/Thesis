@@ -74,12 +74,7 @@ export default defineComponent({
     ...mapActions(useSessionStore, ["refresh", "updateUser"]),
     async updateProfile() {
       const response = await this.updateUser(this.user);
-      console.log(response);
     },
-  },
-  async mounted() {
-    // await this.refresh();
-    console.log(this.user);
   },
 });
 </script>

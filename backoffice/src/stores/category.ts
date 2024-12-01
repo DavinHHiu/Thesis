@@ -15,9 +15,7 @@ export const useCategoryStore = defineStore("category", {
     createCategory(payload: Category) {
       return axios
         .post(`${consts.BASE_URL}/categories/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     listCategories() {
       return axios.get(`${consts.BASE_URL}/categories/`).then((response) => {
@@ -38,9 +36,7 @@ export const useCategoryStore = defineStore("category", {
     updateCategory(payload: Category) {
       return axios
         .put(`${consts.BASE_URL}/categories/${payload.id}/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     destroyCategory(id: number) {
       return axios

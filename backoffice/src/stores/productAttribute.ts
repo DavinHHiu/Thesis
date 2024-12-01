@@ -32,16 +32,12 @@ export const useProductAttributeStore = defineStore("productAttribute", {
     createProductAttribute(payload: ProductAttribute) {
       return axios
         .post(`${consts.BASE_URL}/product-attributes/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     updateProductAttribute(payload: ProductAttribute) {
       return axios
         .put(`${consts.BASE_URL}/product-attributes/${payload.id}/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     destroyProductAttribute(id: number) {
       return axios

@@ -2,8 +2,10 @@ from rest_framework import serializers
 
 from api.models import District, Province, Ward
 
+from .mixin import CreateAndUpdateSerializer
 
-class ProvinceSerializer(serializers.ModelSerializer):
+
+class ProvinceSerializer(CreateAndUpdateSerializer):
     code = serializers.IntegerField()
     name = serializers.CharField()
     division_type = serializers.CharField()
@@ -16,7 +18,7 @@ class ProvinceSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class DistrictSerializer(serializers.ModelSerializer):
+class DistrictSerializer(CreateAndUpdateSerializer):
     code = serializers.IntegerField()
     name = serializers.CharField()
     division_type = serializers.CharField()
@@ -36,7 +38,7 @@ class DistrictSerializer(serializers.ModelSerializer):
         ]
 
 
-class WardSerializer(serializers.ModelSerializer):
+class WardSerializer(CreateAndUpdateSerializer):
     code = serializers.IntegerField()
     name = serializers.CharField()
     division_type = serializers.CharField()

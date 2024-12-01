@@ -41,6 +41,9 @@ export default defineComponent({
   name: "SelectField",
   emits: ["update:modelValue"],
   props: {
+    modelValue: {
+      type: String,
+    },
     label: {
       type: String,
       required: false,
@@ -54,7 +57,6 @@ export default defineComponent({
       required: false,
     },
   },
-  data() {},
   methods: {
     openDropdown(event: Event) {
       event.preventDefault();
@@ -69,9 +71,6 @@ export default defineComponent({
     },
     handleFocusOut(event: Event) {
       const element = event.target as HTMLElement;
-      console.log(element);
-      console.log(this.selectElement);
-      console.log(this.dropdownElemnent);
       if (
         element !== this.selectElement &&
         !this.dropdownElemnent.contains(element)

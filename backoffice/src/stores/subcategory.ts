@@ -53,9 +53,7 @@ export const useSubCategoryStore = defineStore("subcategory", {
     updateSubCategory(payload: SubCategory) {
       return axios
         .put(`${consts.BASE_URL}/sub-categories/${payload.id}/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     destroySubCategory(id: number) {
       return axios

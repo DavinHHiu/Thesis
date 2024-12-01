@@ -2,8 +2,10 @@ from rest_framework import serializers
 
 from api.models import Payment, PaymentMethod
 
+from .mixin import CreateAndUpdateSerializer
 
-class PaymentMethodSerializer(serializers.ModelSerializer):
+
+class PaymentMethodSerializer(CreateAndUpdateSerializer):
     id = serializers.IntegerField(required=False)
     icon = serializers.ImageField(required=False)
     name = serializers.CharField()
@@ -16,7 +18,7 @@ class PaymentMethodSerializer(serializers.ModelSerializer):
         fields = "__all__"
 
 
-class PaymentSerializer(serializers.ModelSerializer):
+class PaymentSerializer(CreateAndUpdateSerializer):
     id = serializers.IntegerField(required=False)
     payment_method = PaymentMethodSerializer()
     total_amount = serializers.FloatField()

@@ -3,7 +3,7 @@ from datetime import datetime
 from django.db import transaction
 from rest_framework import status, viewsets
 from rest_framework.decorators import action
-from rest_framework.permissions import AllowAny
+from rest_framework.permissions import AllowAny, IsAdminUser
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -172,7 +172,7 @@ class BaseRefreshJSONWebTokenView(JSONWebTokenViewMixin):
 class BORefreshJSONWebTokenView(BaseRefreshJSONWebTokenView):
     """BORefresh"""
 
-    permission_classes = [AllowAny]
+    permission_classes = (IsAdminUser,)
     authentication_class = JSONWebTokenAuthentication
     serializer_class = BaseRefreshAuthTokenSerializer
 
@@ -180,7 +180,7 @@ class BORefreshJSONWebTokenView(BaseRefreshJSONWebTokenView):
 class EURefreshJSONWebTokenView(BaseRefreshJSONWebTokenView):
     """EU 認証トークンの更新"""
 
-    permission_classes = [AllowAny]
+    permission_classes = (AllowAny,)
     authentication_class = JSONWebTokenAuthentication
     serializer_class = BaseRefreshAuthTokenSerializer
 
