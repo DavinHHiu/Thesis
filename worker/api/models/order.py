@@ -8,7 +8,7 @@ from api.models.mixins import CreateAndUpdateModelMixin
 
 
 class OrderDetail(CreateAndUpdateModelMixin, models.Model):
-    id = models.CharField(_("order id"), primary_key=True, max_length=255)
+    id = models.UUIDField(_("order id"), primary_key=True, default=uuid.uuid4)
     user = models.ForeignKey(to="api.User", on_delete=models.CASCADE)
     status = models.CharField(
         _("order status"),

@@ -19,17 +19,14 @@ class PaymentMethodSerializer(CreateAndUpdateSerializer):
 
 
 class PaymentSerializer(CreateAndUpdateSerializer):
-    id = serializers.IntegerField(required=False)
+    id = serializers.CharField(required=False)
     payment_method = PaymentMethodSerializer()
     total_amount = serializers.FloatField()
+    status = serializers.CharField()
 
     class Meta:
         model = Payment
-        fields = [
-            "id",
-            "payment_method",
-            "total_amount",
-        ]
+        fields = "__all__"
 
 
 class RevenueStatisticsSerializer(serializers.Serializer):

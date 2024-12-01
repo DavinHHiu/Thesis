@@ -1,7 +1,7 @@
-import consts from "@/consts/consts";
 import { CartItem, Order, OrderItem, User } from "@/types/worker";
-import localStore from "@/utils/localStorage";
+
 import axios from "axios";
+import consts from "@/consts/consts";
 import { defineStore } from "pinia";
 
 export const useOrderStore = defineStore("order", {
@@ -27,11 +27,12 @@ export const useOrderStore = defineStore("order", {
         .post(`${consts.BASE_URL}/order-items/`, payload)
         .then((response) => {});
     },
-    executePayment(token: string, PayerID: string) {
+    executePayment(token: string, PayerID: string, paymentId: string) {
       return axios
         .post(`${consts.BASE_URL}/execute-payment/`, {
           token,
           PayerID,
+          paymentId,
         })
         .then((response) => {
           return response;

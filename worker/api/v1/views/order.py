@@ -1,10 +1,8 @@
-import uuid
-
+import paypalrestsdk
 from django.conf import settings
 from django.db import transaction
 from django.utils.translation import gettext_lazy as _
-from paypalcheckoutsdk.core import PayPalHttpClient, SandboxEnvironment
-from paypalcheckoutsdk.orders import OrdersCaptureRequest, OrdersCreateRequest
+from paypalrestsdk import Payment as PaypalPayment
 from rest_framework import status, viewsets
 from rest_framework.decorators import action
 from rest_framework.permissions import AllowAny
@@ -14,7 +12,6 @@ from rest_framework.views import APIView
 from api.consts import base_consts
 from api.models import (
     Address,
-    Cart,
     CartItem,
     OrderDetail,
     OrderItem,
@@ -24,20 +21,6 @@ from api.models import (
     ShipmentMethod,
 )
 from api.v1.serializers import OrderDetailSerializer, OrderItemSerializer
-
-
-class PayPalClient:
-    def __init__(self):
-        self.client_id = settings.PAYPAL_CLIENT_ID
-        self.client_secret = settings.PAYPAL_CLIENT_SECRET
-
-        # Sử dụng môi trường sandbox hoặc live
-        self.environment = SandboxEnvironment(
-            client_id=self.client_id, client_secret=self.client_secret
-        )
-
-        # Khởi tạo PayPalHttpClient với môi trường
-        self.client = PayPalHttpClient(self.environment)
 
 
 class OrderDetailViewSet(viewsets.ModelViewSet):
@@ -115,33 +98,41 @@ class OrderItemViewSet(viewsets.ModelViewSet):
             return Response(serializer.data, status=status.HTTP_200_OK)
 
 
+def configure_paypal():
+    paypalrestsdk.configure(
+        {
+            "mode": settings.PAYPAL_ENVIRONMENT,
+            "client_id": settings.PAYPAL_CLIENT_ID,
+            "client_secret": settings.PAYPAL_CLIENT_SECRET,
+        }
+    )
+
+
 class CreatePaymentView(APIView):
     permission_classes = [AllowAny]
 
     def _request_order(self, total_amount, host):
-        paypal_client = PayPalClient()
-
-        request_order = OrdersCreateRequest()
-        request_order.prefer("return=representation")
-        request_order.request_body(
+        configure_paypal()
+        payment = paypalrestsdk.Payment(
             {
-                "intent": "CAPTURE",
-                "purchase_units": [
+                "intent": "sale",
+                "payer": {"payment_method": "paypal"},
+                "transactions": [
                     {
                         "amount": {
-                            "currency_code": "USD",
-                            "value": f"{total_amount:.2f}",
+                            "currency": "USD",
+                            "total": f"{total_amount:.2f}",
                         },
                     }
                 ],
-                "application_context": {
+                "redirect_urls": {
                     "return_url": f"{host}/payment-success",
                     "cancel_url": f"{host}/payment-cancel",
                 },
             }
         )
 
-        return paypal_client.client.execute(request_order)
+        return payment
 
     @transaction.atomic
     def post(self, request):
@@ -165,25 +156,21 @@ class CreatePaymentView(APIView):
 
         payment_status = base_consts.PAYMENT_STATUS_PENDING
         response_status = status.HTTP_200_OK
-        order_id = str(uuid.uuid4())
+        response = {}
 
         if payment_method.get("value") == base_consts.PAYMENT_METHOD_COD:
             order_status = base_consts.ORDER_STATUS_COMFIRMED
-            response = {"order_id": order_id}
         else:
             order_status = base_consts.ORDER_STATUS_PENDING
 
-            response = self._request_order(total_amount, host)
-
-            if response.status_code == status.HTTP_201_CREATED:
-                order_id = response.result.id
+            payment = self._request_order(total_amount, host)
+            if payment.create():
                 order_status = base_consts.ORDER_STATUS_COMFIRMED
                 payment_status = base_consts.PAYMENT_STATUS_SUCCESS
-                for link in response.result.links:
-                    if link.rel == "approve":
+                for link in payment.links:
+                    if link.rel == "approval_url":
                         response = {
                             "approval_url": link.href,
-                            "order_id": order_id,
                         }
             else:
                 msg = _("Could not create payment")
@@ -192,11 +179,11 @@ class CreatePaymentView(APIView):
                 payment_status = base_consts.PAYMENT_STATUS_FAIL
 
         order = OrderDetail.objects.create(
-            id=order_id,
             user=request.user,
             total_quantity=total_quantity,
             status=order_status,
         )
+        response["order_id"] = order.id
 
         try:
             db_shipment_method = ShipmentMethod.objects.get(
@@ -214,6 +201,7 @@ class CreatePaymentView(APIView):
         try:
             db_payment_method = PaymentMethod.objects.get(id=payment_method.get("id"))
             Payment.objects.create(
+                id=payment.id,
                 order=order,
                 payment_method=db_payment_method,
                 total_amount=total_amount,
@@ -233,19 +221,37 @@ class ExecutePaymentView(APIView):
         data = request.data
         token = data.get("token")
         payer_id = data.get("PayerID")
+        payment_id = data.get("paymentId")
 
         if token and payer_id:
-            paypal_client = PayPalClient()
+            configure_paypal()
 
-            # Tìm và thực hiện thanh toán bằng cách xác nhận order_id
-            capture_request = OrdersCaptureRequest(token)
-            capture_request.request_body({"payer_id": payer_id})
-            response = paypal_client.client.execute(capture_request)
+            payment = PaypalPayment.find(payment_id)
 
-            if response.status_code == 201 and response.result.status == "COMPLETED":
-                # Xử lý logic sau khi thanh toán thành công (ví dụ: cập nhật đơn hàng)
-                return Response({"status": "success"}, status=status.HTTP_200_OK)
+            if payment.state == "created":
+                execute_payment = payment.execute({"payer_id": payer_id})
+                if execute_payment:
+                    try:
+                        payment = Payment.objects.get(id=payment_id)
+                        return Response(
+                            {"order_id": payment.order.id}, status=status.HTTP_200_OK
+                        )
+                    except Payment.DoesNotExist:
+                        msg = _("Payment does not exist")
+                        return Response(
+                            {"detail": msg}, status=status.HTTP_400_BAD_REQUEST
+                        )
+                else:
+                    return Response(
+                        {"error": "Payment execution failed."},
+                        status=status.HTTP_400_BAD_REQUEST,
+                    )
+            else:
+                return Response(
+                    {"error": "Payment was not approved."},
+                    status=status.HTTP_400_BAD_REQUEST,
+                )
         return Response(
-            {"error": "Could not capture payment"},
+            {"error": "Invalid token or payer ID"},
             status=status.HTTP_500_INTERNAL_SERVER_ERROR,
         )
