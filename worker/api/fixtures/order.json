@@ -1,0 +1,24 @@
+[
+  {
+    "model": "api.OrderDetail",
+    "pk": "6DM62794Y0350943M",
+    "fields": {
+      "user_id": "cfe934e5d185453e8900f49aa78cf0d9",
+      "total_quantity": 3,
+      "status": "pending",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.OrderDetail",
+    "pk": "8BL4453184110653D",
+    "fields": {
+      "user_id": "cfe934e5d185453e8900f49aa78cf0d9",
+      "total_quantity": 3,
+      "status": "delivered",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  }
+]

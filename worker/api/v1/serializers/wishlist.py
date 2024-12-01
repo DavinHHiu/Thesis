@@ -2,11 +2,12 @@ from rest_framework import serializers
 
 from api.models import WishList
 
+from .mixin import CreateAndUpdateSerializer
 from .product import ProductSkuSerializer
 from .user import UserSerializer
 
 
-class WithListSerializer(serializers.ModelSerializer):
+class WithListSerializer(CreateAndUpdateSerializer):
     product = ProductSkuSerializer()
     user = UserSerializer()
 

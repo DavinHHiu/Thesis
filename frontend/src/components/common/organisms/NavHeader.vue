@@ -41,8 +41,9 @@ import Avatar from "@/components/common/atomic/Avatar.vue";
 import AppLogo from "@/components/common/molecules/AppLogo.vue";
 import IconCart from "@/components/icons/IconCart.vue";
 import IconUser from "@/components/icons/IconUser.vue";
+import { useCartStore } from "@/stores/cart";
 import { useSessionStore } from "@/stores/session";
-import { mapState } from "pinia";
+import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({

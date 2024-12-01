@@ -5,7 +5,9 @@
     "fields": {
       "user_id": "92a33d1ad07143caa4adecf5428e1e0f",
       "total_amount": 0,
-      "total_quantity": 0
+      "total_quantity": 0,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -14,7 +16,9 @@
     "fields": {
       "user_id": "b60bc589c7c04cfc81b062fb57c58ef3",
       "total_amount": 0,
-      "total_quantity": 0
+      "total_quantity": 0,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -23,7 +27,9 @@
     "fields": {
       "user_id": "78ff9614ed8249bdaf80f64a07d9b1f9",
       "total_amount": 0,
-      "total_quantity": 0
+      "total_quantity": 0,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   }
 ]

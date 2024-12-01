@@ -6,7 +6,7 @@ from django.utils.translation import gettext_lazy as _
 from api.models.mixins import CreateAndUpdateModelMixin
 
 
-class Cart(models.Model, CreateAndUpdateModelMixin):
+class Cart(CreateAndUpdateModelMixin, models.Model):
     id = models.UUIDField(_("cart id"), primary_key=True, default=uuid.uuid4)
     user = models.ForeignKey(to="api.User", on_delete=models.CASCADE)
     total_quantity = models.IntegerField(_("total quantity"), default=0)

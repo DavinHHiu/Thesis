@@ -14,6 +14,11 @@ interface OptionItem {
   displayValue: string;
 }
 
+interface Period {
+  start_date: String;
+  end_date: String;
+}
+
 interface LoginItem {
   email: string;
   password: string;
@@ -47,6 +52,7 @@ export {
   AuthToken,
   DropdownItem,
   OptionItem,
+  Period,
   LoginItem,
   SidebarItem,
   TabItem,

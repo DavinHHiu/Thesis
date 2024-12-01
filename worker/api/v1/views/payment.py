@@ -1,3 +1,5 @@
+from datetime import datetime, timedelta
+
 from django.db.models import Sum
 from django.db.models.functions import TruncDay
 from rest_framework import status, viewsets
@@ -44,7 +46,11 @@ class RevenueStatisticsApiView(APIView):
     serializer_class = RevenueStatisticsSerializer
 
     def post(self, request: Request, *args, **kwargs) -> Response:
-        serializer = self.serializer_class(data=request.data)
+        converted_data = {
+            "start_date": datetime.fromisoformat(request.data.get("start_date", None)),
+            "end_date": datetime.fromisoformat(request.data.get("end_date", None)),
+        }
+        serializer = self.serializer_class(data=converted_data)
         serializer.is_valid(raise_exception=True)
 
         start_date = serializer.validated_data["start_date"]
@@ -60,8 +66,13 @@ class RevenueStatisticsApiView(APIView):
             .order_by("day")
         )
 
-        response = {
-            entry["day"]: entry["total_amount"] for entry in revenue_stattistics
-        }
+        response = {}
+        cur_date = start_date
+        while cur_date <= end_date:
+            response[cur_date.isoformat()] = 0
+            cur_date += timedelta(days=1)
+
+        for entry in revenue_stattistics:
+            response[entry["day"].isoformat()] = entry["total_amount"]
 
         return Response(response, status=status.HTTP_200_OK)

@@ -50,7 +50,6 @@ export default defineComponent({
     },
     handleValidation(event: any) {
       this.validated = event.target.value.trim() ? true : false;
-      console.log(this.validated);
     },
     handleInput(event: any) {
       const value = event.target.value;

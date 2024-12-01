@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="w-full h-full">
     <Line :data="chartData" :options="chartOptions" />
   </div>
 </template>

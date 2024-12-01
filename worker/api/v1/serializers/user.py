@@ -16,8 +16,10 @@ from api.authentications import JSONWebTokenAuthentication
 from api.models import Address, District, Province, User, Ward
 from api.v1.serializers import EmailValidationSerializer
 
+from .mixin import CreateAndUpdateSerializer
 
-class UserSerializer(serializers.ModelSerializer):
+
+class UserSerializer(CreateAndUpdateSerializer):
     id = serializers.UUIDField(required=False, read_only=True)
     avatar = serializers.ImageField(required=False)
     username = serializers.CharField(required=False)
@@ -138,7 +140,7 @@ class RegisterSerializer(serializers.Serializer):
         return instance
 
 
-class AddressSerializer(serializers.ModelSerializer):
+class AddressSerializer(CreateAndUpdateSerializer):
     id = serializers.IntegerField(read_only=True, required=False)
     user_id = serializers.CharField(source="user.id", read_only=True)
     title = serializers.CharField(required=False, allow_blank=True, allow_null=True)

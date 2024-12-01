@@ -116,7 +116,7 @@ export default defineComponent({
   },
   methods: {
     ...mapActions(useProductStore, ["retrieveProductDetail"]),
-    ...mapActions(useCartStore, ["retrieveCart", "addToCart"]),
+    ...mapActions(useCartStore, ["addToCart"]),
     ...mapActions(useToastStore, ["toast"]),
     formatCurrency,
     formatAmount(amount: number) {
@@ -130,8 +130,6 @@ export default defineComponent({
       this.currentSku = sku;
     },
     handleAddToCart() {
-      console.log(this.currentSku);
-      console.log(this.cart);
       this.loading = true;
       const payload = {
         cart_id: this.cart.id,
@@ -159,8 +157,6 @@ export default defineComponent({
     const productId = this.$route.params.id;
     await this.retrieveProductDetail(productId as string);
     this.currentSku = this.productDetail?.skus[0] as ProductSkuDetail;
-    // this.retrieveCart();
-    console.log(this.$route);
   },
 });
 </script>

@@ -16,9 +16,7 @@ export const useProductStore = defineStore("product", {
     createProduct(payload: Product) {
       return axios
         .post(`${consts.BASE_URL}/products/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     listProducts() {
       return axios.get(`${consts.BASE_URL}/products/`).then((response) => {
@@ -48,9 +46,7 @@ export const useProductStore = defineStore("product", {
     updateProduct(payload: Product) {
       return axios
         .put(`${consts.BASE_URL}/products/${payload.id}/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     destroyProduct(id: string) {
       return axios

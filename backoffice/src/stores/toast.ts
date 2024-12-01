@@ -24,14 +24,16 @@ export const useToastStore = defineStore("toast", {
       this.counter++;
     },
     removeToast(toastId: number) {
-      const index = _.findIndex(this.toasts, (toast) => toast.id === toastId);
+      const index = _.findIndex(
+        this.toasts,
+        (toast: Toast) => toast.id === toastId
+      );
       if (index !== -1) {
         this.toasts.splice(index, 1);
       }
       if (this.toasts.length === 0) {
         this.counter = 0;
       }
-      console.log(this.toasts.length);
     },
     clearToasts() {
       this.toasts = [];

@@ -1,0 +1,50 @@
+[
+  {
+    "model": "api.OrderItem",
+    "pk": "0a3b4cf76fc642da9c84220174fc3c36",
+    "fields": {
+      "quantity": 1,
+      "subtotal": 19,
+      "order_id": "6DM62794Y0350943M",
+      "product_sku_id": "6cd5ae668add495eaa9f01c508076fc2",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.OrderItem",
+    "pk": "2c287573c70e48a9879ac5dc42a3da59",
+    "fields": {
+      "quantity": 1,
+      "subtotal": 19,
+      "order_id": "8BL4453184110653D",
+      "product_sku_id": "6cd5ae668add495eaa9f01c508076fc2",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.OrderItem",
+    "pk": "8d2724d3361543c8bcf1004450734071",
+    "fields": {
+      "quantity": 2,
+      "subtotal": 38,
+      "order_id": "6DM62794Y0350943M",
+      "product_sku_id": "50bcdc17c4f04a61987064fdbc3b7e49",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.OrderItem",
+    "pk": "92d1cfd137bb4d7e83a3c29ab5844bc7",
+    "fields": {
+      "quantity": 2,
+      "subtotal": 38,
+      "order_id": "8BL4453184110653D",
+      "product_sku_id": "50bcdc17c4f04a61987064fdbc3b7e49",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  }
+]

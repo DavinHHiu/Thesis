@@ -24,7 +24,6 @@ export const useCartStore = defineStore("cart", {
       return axios.get(`${consts.BASE_URL}/carts/by-user/`).then((response) => {
         if (response.status === 200 && response.data) {
           this.cart = response.data;
-          console.log(this.cart);
         }
       });
     },

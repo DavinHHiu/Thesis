@@ -4,5 +4,3 @@ migrations
 poetry.lock
 __pycache__
 
-package-lock.json
-

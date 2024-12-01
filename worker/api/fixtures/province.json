@@ -6,7 +6,9 @@
       "name": "Thành phố Hà Nội",
       "division_type": "thành phố trung ương",
       "codename": "thanh_pho_ha_noi",
-      "phone_code": 24
+      "phone_code": 24,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -16,7 +18,9 @@
       "name": "Tỉnh Hà Giang",
       "division_type": "tỉnh",
       "codename": "tinh_ha_giang",
-      "phone_code": 219
+      "phone_code": 219,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -26,7 +30,9 @@
       "name": "Tỉnh Cao Bằng",
       "division_type": "tỉnh",
       "codename": "tinh_cao_bang",
-      "phone_code": 206
+      "phone_code": 206,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -36,7 +42,9 @@
       "name": "Tỉnh Bắc Kạn",
       "division_type": "tỉnh",
       "codename": "tinh_bac_kan",
-      "phone_code": 209
+      "phone_code": 209,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -46,7 +54,9 @@
       "name": "Tỉnh Tuyên Quang",
       "division_type": "tỉnh",
       "codename": "tinh_tuyen_quang",
-      "phone_code": 207
+      "phone_code": 207,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -56,7 +66,9 @@
       "name": "Tỉnh Lào Cai",
       "division_type": "tỉnh",
       "codename": "tinh_lao_cai",
-      "phone_code": 214
+      "phone_code": 214,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -66,7 +78,9 @@
       "name": "Tỉnh Điện Biên",
       "division_type": "tỉnh",
       "codename": "tinh_dien_bien",
-      "phone_code": 215
+      "phone_code": 215,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -76,7 +90,9 @@
       "name": "Tỉnh Lai Châu",
       "division_type": "tỉnh",
       "codename": "tinh_lai_chau",
-      "phone_code": 213
+      "phone_code": 213,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -86,7 +102,9 @@
       "name": "Tỉnh Sơn La",
       "division_type": "tỉnh",
       "codename": "tinh_son_la",
-      "phone_code": 212
+      "phone_code": 212,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -96,7 +114,9 @@
       "name": "Tỉnh Yên Bái",
       "division_type": "tỉnh",
       "codename": "tinh_yen_bai",
-      "phone_code": 216
+      "phone_code": 216,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -106,7 +126,9 @@
       "name": "Tỉnh Hoà Bình",
       "division_type": "tỉnh",
       "codename": "tinh_hoa_binh",
-      "phone_code": 218
+      "phone_code": 218,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -116,7 +138,9 @@
       "name": "Tỉnh Thái Nguyên",
       "division_type": "tỉnh",
       "codename": "tinh_thai_nguyen",
-      "phone_code": 208
+      "phone_code": 208,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -126,7 +150,9 @@
       "name": "Tỉnh Lạng Sơn",
       "division_type": "tỉnh",
       "codename": "tinh_lang_son",
-      "phone_code": 205
+      "phone_code": 205,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -136,7 +162,9 @@
       "name": "Tỉnh Quảng Ninh",
       "division_type": "tỉnh",
       "codename": "tinh_quang_ninh",
-      "phone_code": 203
+      "phone_code": 203,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -146,7 +174,9 @@
       "name": "Tỉnh Bắc Giang",
       "division_type": "tỉnh",
       "codename": "tinh_bac_giang",
-      "phone_code": 204
+      "phone_code": 204,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -156,7 +186,9 @@
       "name": "Tỉnh Phú Thọ",
       "division_type": "tỉnh",
       "codename": "tinh_phu_tho",
-      "phone_code": 210
+      "phone_code": 210,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -166,7 +198,9 @@
       "name": "Tỉnh Vĩnh Phúc",
       "division_type": "tỉnh",
       "codename": "tinh_vinh_phuc",
-      "phone_code": 211
+      "phone_code": 211,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -176,7 +210,9 @@
       "name": "Tỉnh Bắc Ninh",
       "division_type": "tỉnh",
       "codename": "tinh_bac_ninh",
-      "phone_code": 222
+      "phone_code": 222,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -186,7 +222,9 @@
       "name": "Tỉnh Hải Dương",
       "division_type": "tỉnh",
       "codename": "tinh_hai_duong",
-      "phone_code": 220
+      "phone_code": 220,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -196,7 +234,9 @@
       "name": "Thành phố Hải Phòng",
       "division_type": "thành phố trung ương",
       "codename": "thanh_pho_hai_phong",
-      "phone_code": 225
+      "phone_code": 225,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -206,7 +246,9 @@
       "name": "Tỉnh Hưng Yên",
       "division_type": "tỉnh",
       "codename": "tinh_hung_yen",
-      "phone_code": 221
+      "phone_code": 221,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -216,7 +258,9 @@
       "name": "Tỉnh Thái Bình",
       "division_type": "tỉnh",
       "codename": "tinh_thai_binh",
-      "phone_code": 227
+      "phone_code": 227,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -226,7 +270,9 @@
       "name": "Tỉnh Hà Nam",
       "division_type": "tỉnh",
       "codename": "tinh_ha_nam",
-      "phone_code": 226
+      "phone_code": 226,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -236,7 +282,9 @@
       "name": "Tỉnh Nam Định",
       "division_type": "tỉnh",
       "codename": "tinh_nam_dinh",
-      "phone_code": 228
+      "phone_code": 228,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -246,7 +294,9 @@
       "name": "Tỉnh Ninh Bình",
       "division_type": "tỉnh",
       "codename": "tinh_ninh_binh",
-      "phone_code": 229
+      "phone_code": 229,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -256,7 +306,9 @@
       "name": "Tỉnh Thanh Hóa",
       "division_type": "tỉnh",
       "codename": "tinh_thanh_hoa",
-      "phone_code": 237
+      "phone_code": 237,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -266,7 +318,9 @@
       "name": "Tỉnh Nghệ An",
       "division_type": "tỉnh",
       "codename": "tinh_nghe_an",
-      "phone_code": 238
+      "phone_code": 238,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -276,7 +330,9 @@
       "name": "Tỉnh Hà Tĩnh",
       "division_type": "tỉnh",
       "codename": "tinh_ha_tinh",
-      "phone_code": 239
+      "phone_code": 239,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -286,7 +342,9 @@
       "name": "Tỉnh Quảng Bình",
       "division_type": "tỉnh",
       "codename": "tinh_quang_binh",
-      "phone_code": 232
+      "phone_code": 232,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -296,7 +354,9 @@
       "name": "Tỉnh Quảng Trị",
       "division_type": "tỉnh",
       "codename": "tinh_quang_tri",
-      "phone_code": 233
+      "phone_code": 233,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -306,7 +366,9 @@
       "name": "Tỉnh Thừa Thiên Huế",
       "division_type": "tỉnh",
       "codename": "tinh_thua_thien_hue",
-      "phone_code": 234
+      "phone_code": 234,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -316,7 +378,9 @@
       "name": "Thành phố Đà Nẵng",
       "division_type": "thành phố trung ương",
       "codename": "thanh_pho_da_nang",
-      "phone_code": 236
+      "phone_code": 236,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -326,7 +390,9 @@
       "name": "Tỉnh Quảng Nam",
       "division_type": "tỉnh",
       "codename": "tinh_quang_nam",
-      "phone_code": 235
+      "phone_code": 235,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -336,7 +402,9 @@
       "name": "Tỉnh Quảng Ngãi",
       "division_type": "tỉnh",
       "codename": "tinh_quang_ngai",
-      "phone_code": 255
+      "phone_code": 255,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -346,7 +414,9 @@
       "name": "Tỉnh Bình Định",
       "division_type": "tỉnh",
       "codename": "tinh_binh_dinh",
-      "phone_code": 256
+      "phone_code": 256,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -356,7 +426,9 @@
       "name": "Tỉnh Phú Yên",
       "division_type": "tỉnh",
       "codename": "tinh_phu_yen",
-      "phone_code": 257
+      "phone_code": 257,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -366,7 +438,9 @@
       "name": "Tỉnh Khánh Hòa",
       "division_type": "tỉnh",
       "codename": "tinh_khanh_hoa",
-      "phone_code": 258
+      "phone_code": 258,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -376,7 +450,9 @@
       "name": "Tỉnh Ninh Thuận",
       "division_type": "tỉnh",
       "codename": "tinh_ninh_thuan",
-      "phone_code": 259
+      "phone_code": 259,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -386,7 +462,9 @@
       "name": "Tỉnh Bình Thuận",
       "division_type": "tỉnh",
       "codename": "tinh_binh_thuan",
-      "phone_code": 252
+      "phone_code": 252,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -396,7 +474,9 @@
       "name": "Tỉnh Kon Tum",
       "division_type": "tỉnh",
       "codename": "tinh_kon_tum",
-      "phone_code": 260
+      "phone_code": 260,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -406,7 +486,9 @@
       "name": "Tỉnh Gia Lai",
       "division_type": "tỉnh",
       "codename": "tinh_gia_lai",
-      "phone_code": 269
+      "phone_code": 269,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -416,7 +498,9 @@
       "name": "Tỉnh Đắk Lắk",
       "division_type": "tỉnh",
       "codename": "tinh_dak_lak",
-      "phone_code": 262
+      "phone_code": 262,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -426,7 +510,9 @@
       "name": "Tỉnh Đắk Nông",
       "division_type": "tỉnh",
       "codename": "tinh_dak_nong",
-      "phone_code": 261
+      "phone_code": 261,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -436,7 +522,9 @@
       "name": "Tỉnh Lâm Đồng",
       "division_type": "tỉnh",
       "codename": "tinh_lam_dong",
-      "phone_code": 263
+      "phone_code": 263,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -446,7 +534,9 @@
       "name": "Tỉnh Bình Phước",
       "division_type": "tỉnh",
       "codename": "tinh_binh_phuoc",
-      "phone_code": 271
+      "phone_code": 271,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -456,7 +546,9 @@
       "name": "Tỉnh Tây Ninh",
       "division_type": "tỉnh",
       "codename": "tinh_tay_ninh",
-      "phone_code": 276
+      "phone_code": 276,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -466,7 +558,9 @@
       "name": "Tỉnh Bình Dương",
       "division_type": "tỉnh",
       "codename": "tinh_binh_duong",
-      "phone_code": 274
+      "phone_code": 274,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -476,7 +570,9 @@
       "name": "Tỉnh Đồng Nai",
       "division_type": "tỉnh",
       "codename": "tinh_dong_nai",
-      "phone_code": 251
+      "phone_code": 251,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -486,7 +582,9 @@
       "name": "Tỉnh Bà Rịa - Vũng Tàu",
       "division_type": "tỉnh",
       "codename": "tinh_ba_ria_vung_tau",
-      "phone_code": 254
+      "phone_code": 254,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -496,7 +594,9 @@
       "name": "Thành phố Hồ Chí Minh",
       "division_type": "thành phố trung ương",
       "codename": "thanh_pho_ho_chi_minh",
-      "phone_code": 28
+      "phone_code": 28,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -506,7 +606,9 @@
       "name": "Tỉnh Long An",
       "division_type": "tỉnh",
       "codename": "tinh_long_an",
-      "phone_code": 272
+      "phone_code": 272,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -516,7 +618,9 @@
       "name": "Tỉnh Tiền Giang",
       "division_type": "tỉnh",
       "codename": "tinh_tien_giang",
-      "phone_code": 273
+      "phone_code": 273,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -526,7 +630,9 @@
       "name": "Tỉnh Bến Tre",
       "division_type": "tỉnh",
       "codename": "tinh_ben_tre",
-      "phone_code": 275
+      "phone_code": 275,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -536,7 +642,9 @@
       "name": "Tỉnh Trà Vinh",
       "division_type": "tỉnh",
       "codename": "tinh_tra_vinh",
-      "phone_code": 294
+      "phone_code": 294,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -546,7 +654,9 @@
       "name": "Tỉnh Vĩnh Long",
       "division_type": "tỉnh",
       "codename": "tinh_vinh_long",
-      "phone_code": 270
+      "phone_code": 270,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -556,7 +666,9 @@
       "name": "Tỉnh Đồng Tháp",
       "division_type": "tỉnh",
       "codename": "tinh_dong_thap",
-      "phone_code": 277
+      "phone_code": 277,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -566,7 +678,9 @@
       "name": "Tỉnh An Giang",
       "division_type": "tỉnh",
       "codename": "tinh_an_giang",
-      "phone_code": 296
+      "phone_code": 296,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -576,7 +690,9 @@
       "name": "Tỉnh Kiên Giang",
       "division_type": "tỉnh",
       "codename": "tinh_kien_giang",
-      "phone_code": 297
+      "phone_code": 297,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -586,7 +702,9 @@
       "name": "Thành phố Cần Thơ",
       "division_type": "thành phố trung ương",
       "codename": "thanh_pho_can_tho",
-      "phone_code": 292
+      "phone_code": 292,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -596,7 +714,9 @@
       "name": "Tỉnh Hậu Giang",
       "division_type": "tỉnh",
       "codename": "tinh_hau_giang",
-      "phone_code": 293
+      "phone_code": 293,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -606,7 +726,9 @@
       "name": "Tỉnh Sóc Trăng",
       "division_type": "tỉnh",
       "codename": "tinh_soc_trang",
-      "phone_code": 299
+      "phone_code": 299,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -616,7 +738,9 @@
       "name": "Tỉnh Bạc Liêu",
       "division_type": "tỉnh",
       "codename": "tinh_bac_lieu",
-      "phone_code": 291
+      "phone_code": 291,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   },
   {
@@ -626,7 +750,9 @@
       "name": "Tỉnh Cà Mau",
       "division_type": "tỉnh",
       "codename": "tinh_ca_mau",
-      "phone_code": 290
+      "phone_code": 290,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
     }
   }
 ]

@@ -14,6 +14,7 @@ from rest_framework.views import APIView
 from api.consts import base_consts
 from api.models import (
     Address,
+    Cart,
     CartItem,
     OrderDetail,
     OrderItem,
@@ -77,17 +78,32 @@ class OrderItemViewSet(viewsets.ModelViewSet):
 
         checkout_items = request.data.get("checkout_items")
         checkout_item_ids = [i.get("id") for i in checkout_items]
-        cart_items = CartItem.objects.select_related("product_sku").filter(
+        cart_items = CartItem.objects.select_related("cart", "product_sku").filter(
             id__in=checkout_item_ids
         )
 
+        total_quantity = 0
+        total_amount = 0
+        order_items = []
         for item in cart_items:
-            OrderItem.objects.create(
-                order=order,
-                product_sku=item.product_sku,
-                quantity=item.quantity,
-                subtotal=item.subtotal,
+            order_items.append(
+                OrderItem(
+                    order=order,
+                    product_sku=item.product_sku,
+                    quantity=item.quantity,
+                    subtotal=item.subtotal,
+                )
             )
+
+            total_quantity += item.quantity
+            total_amount += item.subtotal
+
+        OrderItem.objects.bulk_create(order_items)
+        cart = cart_items[0].cart
+        cart.total_quantity -= total_quantity
+        cart.total_amount -= total_amount
+        cart.save()
+        cart_items.delete()
 
         return Response(status=status.HTTP_200_OK)
 

@@ -4,8 +4,10 @@ from rest_framework.utils import model_meta
 
 from api.models import Category, SubCategory
 
+from .mixin import CreateAndUpdateSerializer
 
-class CategorySerializer(serializers.ModelSerializer):
+
+class CategorySerializer(CreateAndUpdateSerializer):
     id = serializers.IntegerField(required=False)
     name = serializers.CharField()
     description = serializers.CharField()
@@ -18,7 +20,7 @@ class CategorySerializer(serializers.ModelSerializer):
 5
 
 
-class SubCategorySerializer(serializers.ModelSerializer):
+class SubCategorySerializer(CreateAndUpdateSerializer):
     id = serializers.IntegerField(required=False)
     category_id = serializers.IntegerField(source="category.id")
     name = serializers.CharField(required=False)

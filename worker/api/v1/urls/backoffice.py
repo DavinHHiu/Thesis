@@ -36,6 +36,11 @@ urlpatterns = [
         views.BORefreshJSONWebTokenView.as_view(),
         name="token-refresh",
     ),
+    path(
+        "revenue-statistics/",
+        views.RevenueStatisticsApiView.as_view(),
+        name="revenue-statistics",
+    ),
 ]
 
 urlpatterns.append(path("", include(router.urls)))

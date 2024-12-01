@@ -7,7 +7,7 @@ from django.utils.translation import gettext_lazy as _
 from api.models.mixins import CreateAndUpdateModelMixin
 
 
-class ShipmentMethod(models.Model, CreateAndUpdateModelMixin):
+class ShipmentMethod(CreateAndUpdateModelMixin, models.Model):
     id = models.BigAutoField(_("shipment method id"), primary_key=True)
     name = models.CharField(_("shipment method name"), max_length=255)
     value = models.CharField(_("shipment method value"), max_length=255)
@@ -23,7 +23,7 @@ class ShipmentMethod(models.Model, CreateAndUpdateModelMixin):
         verbose_name_plural = _("shipment methods")
 
 
-class Shipment(models.Model, CreateAndUpdateModelMixin):
+class Shipment(CreateAndUpdateModelMixin, models.Model):
     id = models.BigAutoField(_("shipment id"), primary_key=True)
     order = models.OneToOneField(
         to="api.OrderDetail",

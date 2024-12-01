@@ -4,14 +4,14 @@ import { createI18n } from "vue-i18n";
 
 const i18n = createI18n({
   legacy: true,
+  globalInjection: true,
   locale: "en",
   fallbackLocale: "en",
+  strictMessage: true,
   messages: {
     en,
     vi,
   },
-  globalInjection: true,
-  strictMessage: true,
 });
 
 export default i18n;

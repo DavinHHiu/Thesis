@@ -85,6 +85,13 @@ dividerBreak:
 
 dashboardPage:
   title: Dashboard
+  label:
+    period: Period
+  statistics:
+    period:
+      week: This week
+      month: This month
+      year: This year
 
 userPage:
   list:

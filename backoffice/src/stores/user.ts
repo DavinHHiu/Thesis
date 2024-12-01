@@ -19,9 +19,7 @@ export const useUserStore = defineStore("user", {
             "Content-Type": "multipart/form-data",
           },
         })
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     listUsers() {
       return axios.get(`${consts.BASE_URL}/users/`).then((response) => {
@@ -47,16 +45,16 @@ export const useUserStore = defineStore("user", {
             "Content-Type": "multipart/form-data",
           },
         })
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     destroyUser(id: string) {
       return axios
         .delete(`${consts.BASE_URL}/users/${id}/`)
         .then((response) => {
           if (response.status === 204) {
-            const updatedUsers = this.users.filter((user) => user.id !== id);
+            const updatedUsers = this.users.filter(
+              (user: User) => user.id !== id
+            );
             this.users = updatedUsers;
           }
         });

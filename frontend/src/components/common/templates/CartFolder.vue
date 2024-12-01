@@ -49,6 +49,7 @@
           class="btn-view"
           intent="primary"
           v-html="$t('cartFolder.btnLabel.checkout')"
+          @click="handleCheckout"
         />
       </div>
     </div>
@@ -74,7 +75,12 @@ export default defineComponent({
     ...mapState(useCartStore, ["cart", "cartItems"]),
   },
   methods: {
-    ...mapActions(useCartStore, ["retrieveCart", "listCartItems"]),
+    ...mapActions(useCartStore, [
+      "retrieveCart",
+      "listCartItems",
+      "setCheckoutItems",
+      "validateCheckoutItems",
+    ]),
     formatCurrency,
     formatAmount(amount: number) {
       const { locale } = useI18n();
@@ -87,6 +93,14 @@ export default defineComponent({
     continueShopping() {
       this.$emit("close:cart-folder");
       this.$router.push({ name: "search" });
+    },
+    async handleCheckout() {
+      this.setCheckoutItems(this.cartItems);
+      this.$emit("close:cart-folder");
+      const response = await this.validateCheckoutItems();
+      if (response.status === 200) {
+        this.$router.push({ name: "checkout-form" });
+      }
     },
   },
   async mounted() {

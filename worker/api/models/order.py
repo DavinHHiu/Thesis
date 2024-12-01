@@ -7,7 +7,7 @@ from api.consts import base_consts
 from api.models.mixins import CreateAndUpdateModelMixin
 
 
-class OrderDetail(models.Model, CreateAndUpdateModelMixin):
+class OrderDetail(CreateAndUpdateModelMixin, models.Model):
     id = models.CharField(_("order id"), primary_key=True, max_length=255)
     user = models.ForeignKey(to="api.User", on_delete=models.CASCADE)
     status = models.CharField(
@@ -23,7 +23,7 @@ class OrderDetail(models.Model, CreateAndUpdateModelMixin):
         verbose_name_plural = _("order details")
 
 
-class OrderItem(models.Model, CreateAndUpdateModelMixin):
+class OrderItem(CreateAndUpdateModelMixin, models.Model):
     id = models.UUIDField(_("order item id"), primary_key=True, default=uuid.uuid4)
     order = models.ForeignKey(to="api.OrderDetail", on_delete=models.CASCADE)
     product_sku = models.ForeignKey(to="api.ProductSku", on_delete=models.CASCADE)

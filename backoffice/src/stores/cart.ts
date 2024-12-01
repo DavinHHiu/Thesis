@@ -16,9 +16,7 @@ export const useCartStore = defineStore("cart", {
       payload.user = _.omit(payload.user, ["avatar", "password"]);
       return axios
         .post(`${consts.BASE_URL}/carts/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     listCarts() {
       return axios.get(`${consts.BASE_URL}/carts/`).then((response) => {
@@ -38,9 +36,7 @@ export const useCartStore = defineStore("cart", {
       payload.user = _.omit(payload.user, ["avatar", "password"]);
       return axios
         .put(`${consts.BASE_URL}/carts/${payload.id}/`, payload)
-        .then((response) => {
-          console.log(response);
-        });
+        .then((response) => response);
     },
     destroyCart(id: string) {
       return axios

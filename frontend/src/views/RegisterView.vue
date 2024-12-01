@@ -116,7 +116,6 @@ export default defineComponent({
         })
         .catch((err) => {
           const message = err.response.data.non_field_errors[0];
-          console.log(message);
           this.loading = false;
           this.toast({
             theme: "danger",

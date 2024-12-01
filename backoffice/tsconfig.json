@@ -2,8 +2,9 @@
   "compilerOptions": {
     "target": "ESNext",
     "module": "ESNext",
-    "strict": true,
+    "strict": false,
     "allowJs": true,
+    "noImplicitAny": true,
     "jsx": "preserve",
     "moduleResolution": "node",
     "experimentalDecorators": true,
