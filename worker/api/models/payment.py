@@ -21,7 +21,7 @@ class PaymentMethod(CreateAndUpdateModelMixin, models.Model):
 
 
 class Payment(CreateAndUpdateModelMixin, models.Model):
-    id = models.BigAutoField(_("payment id"), primary_key=True)
+    id = models.CharField(_("payment id"), primary_key=True, max_length=255)
     order = models.OneToOneField(
         to="api.OrderDetail",
         on_delete=models.CASCADE,

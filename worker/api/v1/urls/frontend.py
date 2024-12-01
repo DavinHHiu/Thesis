@@ -41,6 +41,7 @@ urlpatterns = [
         views.ChangePasswordApiView.as_view(),
         name="change-password",
     ),
+    path("search/by-image/", views.SearchByImageApiView.as_view(), name="search"),
 ]
 
 urlpatterns.append(path("", include(router.urls)))

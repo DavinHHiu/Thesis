@@ -49,3 +49,37 @@ ORDER_STATUSES = (
     (ORDER_STATUS_CANCELLED, _("Cancelled")),
     (ORDER_STATUS_REFUNDED, _("Refunded")),
 )
+
+CLASS_LABEL_JEAN = "jean"
+CLASS_LABEL_DRESS = "dress"
+CLASS_LABEL_SWEATSHIRT = "sweatshirt"
+CLASS_LABEL_BAG = "bag"
+CLASS_LABEL_HAT = "hat"
+CLASS_LABEL_T_SHIRT = "t-shirt"
+CLASS_LABEL_SHORT = "short"
+CLASS_LABEL_FLIP_FLOPS = "flip-flops"
+CLASS_LABEL_BRA = "bra"
+CLASS_LABEL_SHIRT = "shirt"
+CLASS_LABEL_SHOES = "shoes"
+CLASS_LABEL_BELT = "belt"
+CLASS_LABEL_BLAZER = "blazer"
+CLASS_LABEL_SKIRT = "skirt"
+CLASS_LABEL_JACKET = "jacket"
+
+CLASS_LABELS = (
+    (CLASS_LABEL_JEAN, _("Jean")),
+    (CLASS_LABEL_DRESS, _("Dress")),
+    (CLASS_LABEL_SWEATSHIRT, _("Sweatshirt")),
+    (CLASS_LABEL_BAG, _("Bag")),
+    (CLASS_LABEL_HAT, _("Hat")),
+    (CLASS_LABEL_T_SHIRT, _("T-Shirt")),
+    (CLASS_LABEL_SHORT, _("Short")),
+    (CLASS_LABEL_FLIP_FLOPS, _("Flip-Flops")),
+    (CLASS_LABEL_BRA, _("Bra")),
+    (CLASS_LABEL_SHIRT, _("Shirt")),
+    (CLASS_LABEL_SHOES, _("Shoes")),
+    (CLASS_LABEL_BELT, _("Belt")),
+    (CLASS_LABEL_BLAZER, _("Blazer")),
+    (CLASS_LABEL_SKIRT, _("Skirt")),
+    (CLASS_LABEL_JACKET, _("Jacket")),
+)

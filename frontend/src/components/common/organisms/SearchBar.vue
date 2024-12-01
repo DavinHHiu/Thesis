@@ -9,15 +9,20 @@
     <upload-preview
       :class="{ 'upload-open': curOption === 'image' }"
       class="upload-preview"
-      :model-value="imageSearch"
-      @update:model-value="(file) => (imageSearch = file)"
+      v-model="imageSearch"
+      @update:model-value="uploadImageSearch"
     />
     <text-field
       v-if="curOption === 'text'"
       class="w-full"
       :label="'searchPage.placeholder'"
     />
-    <custom-button class="w-full h-[5rem]" intent="primary" v-text="'Search'" />
+    <custom-button
+      class="w-full h-[5rem]"
+      intent="primary"
+      v-text="'Search'"
+      @click="handleSearch"
+    />
   </div>
 </template>
 <script lang="ts">
@@ -27,10 +32,17 @@ import TextField from "@/components/common/molecules/TextField.vue";
 import UploadPreview from "@/components/common/molecules/UploadPreview.vue";
 import IconRightArrow from "@/components/icons/IconRightArrow.vue";
 import { OptionItem } from "@/types/frontend";
-import { defineComponent } from "vue";
+import { defineComponent, PropType } from "vue";
 
 export default defineComponent({
   name: "SearchBar",
+  emits: ["update:modelValue", "submit"],
+  props: {
+    modelValue: {
+      type: Object as PropType<String | File>,
+      required: true,
+    },
+  },
   components: {
     CustomButton,
     TextField,
@@ -47,6 +59,14 @@ export default defineComponent({
       curOption: "text" as string,
       imageSearch: File,
     };
+  },
+  methods: {
+    uploadImageSearch(newValue: File) {
+      this.$emit("update:modelValue", newValue);
+    },
+    handleSearch() {
+      this.$emit("submit");
+    },
   },
 });
 </script>

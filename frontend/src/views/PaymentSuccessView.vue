@@ -22,6 +22,7 @@ export default defineComponent({
     return {
       token: "" as string,
       PayerID: "" as string,
+      paymentId: "" as string,
       isFading: false,
     };
   },
@@ -34,22 +35,28 @@ export default defineComponent({
   beforeMount() {
     this.token = this.$route.query.token as string;
     this.PayerID = this.$route.query.PayerID as string;
+    this.paymentId = this.$route.query.paymentId as string;
 
     const url = new URL(window.location.href);
     url.searchParams.delete("token");
     url.searchParams.delete("PayerID");
+    url.searchParams.delete("paymentId");
 
     window.history.replaceState({}, document.title, url.toString());
   },
   async mounted() {
-    const response = await this.executePayment(this.token, this.PayerID);
+    const response = await this.executePayment(
+      this.token,
+      this.PayerID,
+      this.paymentId
+    );
     if (response.status === 200) {
       this.isFading = true;
       setTimeout(() => {
         this.$router.push({
           name: "checkout-received",
           params: {
-            orderId: this.token,
+            orderId: response.data.order_id,
           },
         });
       }, 300);
