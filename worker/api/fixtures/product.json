@@ -118,5 +118,365 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5865917702de41478efb0fd0df04a16f",
+    "fields": {
+      "name": "Sony x Grimm DC",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: kết hợp in mực plastisol dạ quang, in cao tầng và thêu 2D mật độ cao. Chỉ thêu sử dụng chỉ Danh Tường.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nGIẶT MÁY và SẤY thoải mái. Hiệu ứng dạ quang cam kết bền tối thiểu 30 lần giặt.",
+      "summary": "Sự kết hợp giữa tinh hoa Nhật Bản từ sự đột phá về công nghệ và sáng tạo của Sony cùng với 4000 năm tự hào dân tộc Việt qua những thiết kế của Grimm DC",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "b6dde753845e47d8947e0dd5095a9495",
+    "fields": {
+      "name": "Glow-rious Dragon",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: in mực plastisol dạ quang.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nGIẶT MÁY và SẤY thoải mái.",
+      "summary": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "6ff1caec474d4deb82fc72fc3ea2ab31",
+    "fields": {
+      "name": "Jersey 29",
+      "description": "Chất liệu: GRDC™ Premium Polyester Fabric phối lưới: 100% polyester cao cấp, co dãn 4 chiều, dày dặn nhưng thấm hút cực tốt và mát mẻ, có tính năng hạn chế nhăn. Phối cùng lớp lưới hai bên hông.\nChi tiết thiết kế: in mực plastisol dạ quang.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nGIẶT MÁY và SẤY thoải mái.",
+      "summary": "Toàn bộ thiết kế sử dụng mực DẠ QUANG - hấp thụ ánh sáng và phát quang trở lại trong bóng tối.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "401878717b884b78b0c3e9d35c42cd7f",
+    "fields": {
+      "name": "Miễn là đi cùng nhau",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 230 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: in P.E.T.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nHình in bền suốt vòng đời sản phẩm, tối thiểu 30 lần giặt.\nGIẶT MÁY và SẤY thoải mái.",
+      "summary": "GRDC™ Streetvibe Fabric: 100% cotton 2 chiều",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "24cab28b1d6d4c51bc2b89af04f6780a",
+    "fields": {
+      "name": "Kính Vạn Hoa",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 230 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: in P.E.T.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nHình in bền suốt vòng đời sản phẩm, tối thiểu 30 lần giặt.\nGIẶT MÁY và SẤY thoải mái.",
+      "summary": "GRDC™ Streetvibe Fabric: 100% cotton 2 chiều",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9491a7f4d1384f4792ed325bb30f650f",
+    "fields": {
+      "name": "Cùng nhau",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 230 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: in P.E.T.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nHình in bền suốt vòng đời sản phẩm, tối thiểu 30 lần giặt.\nGIẶT MÁY và SẤY thoải mái.",
+      "summary": "GRDC™ Streetvibe Fabric: 100% cotton 2 chiều",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "94d840dda03443f6ab5359717d85c7e5",
+    "fields": {
+      "name": "Capybara",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: in P.E.T.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nHình in bền suốt vòng đời sản phẩm, tối thiểu 30 lần giặt.\nGIẶT MÁY và SẤY thoải mái.",
+      "summary": "GRDC™ Streetvibe Fabric: 100% cotton 2 chiều",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "7158f82581414fcbb4f2b2d7825113a8",
+    "fields": {
+      "name": "Vietmade 3D embroidery",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 230 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: in P.E.T.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nHình in bền suốt vòng đời sản phẩm, tối thiểu 30 lần giặt.\nGIẶT MÁY và SẤY thoải mái.",
+      "summary": "Made in Viet Nam hay Được làm tại Việt Nam là một cụm từ phổ biến",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "bbfd70d9638b463a93af07daf126c6b2",
+    "fields": {
+      "name": "LÂN HỘI",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 230 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: in P.E.T.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nHình in bền suốt vòng đời sản phẩm, tối thiểu 30 lần giặt.\nGIẶT MÁY và SẤY thoải mái.",
+      "summary": "GRDC™ Streetvibe Fabric: 100% cotton 2 chiều",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "4b8edb7bcce6409a88469944a0952bb1",
+    "fields": {
+      "name": "Lily of the Death Valley",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: in P.E.T.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nHình in bền suốt vòng đời sản phẩm, tối thiểu 30 lần giặt.\nGIẶT MÁY và SẤY thoải mái.",
+      "summary": "Lily hoa Linh Lan - biểu tượng của tình yêu, tinh khôi & hạnh phúc",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "76aea514be724db8899b0803cfd3931f",
+    "fields": {
+      "name": "Raccoon",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: in P.E.T.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nHình in bền suốt vòng đời sản phẩm, tối thiểu 30 lần giặt.\nGIẶT MÁY và SẤY thoải mái.",
+      "summary": "GRDC™ Streetvibe Fabric: 100% cotton 2 chiều",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1afe6eb64c654db1919a415695fdf479",
+    "fields": {
+      "name": "Tổ Quốc quyết sinh",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: in P.E.T.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nHình in bền suốt vòng đời sản phẩm, tối thiểu 30 lần giặt.\nGIẶT MÁY và SẤY thoải mái.",
+      "summary": "Dòng chữ \"Cho Tổ Quốc quyết sinh\" với ngôi sao nhũ vàng ở ngực trái và Grimm DC®VIETNAM ở ngực phải.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "d18e62a982594371bed52c5e5b9b85e8",
+    "fields": {
+      "name": "Vietnamese Son Doong",
+      "description": "Sơn Đoòng là hang động lớn nhất hành tinh và là hang động hùng vĩ nhất Việt Nam.\nSơn nghĩa là núi, Đoòng là tên của thung lũng nơi có suối Rào Thương chảy qua, Sơn Đoòng là hang trong núi nơi có sông ngầm chảy qua.\nCó tổng chiều dài 9 cây số, với thể tích 38.5 triệu mét khối, gấp 5 lần so với hang lớn thứ nhì thế giới (hang Deer ở Mã Lai).\nBên trong hang có một bức tường đá đồ sộ, được đặt tên Bức Tường Việt Nam - The Great Wall of Viet Nam.\nVào tháng 3 năm 2010, 20 năm sau lần đầu được phát hiện bởi ông Hồ Khanh - một sơn tràng người Việt, đoàn thám hiểm quốc tế dẫn đầu bởi ông Howard Limbert - thành viên Hiệp hội Hang Động Hoàng Gia Anh (BCRA) đã cùng leo qua Bức Tường Việt Nam và đi thêm 600m đến cửa hang. Năm đó, National Geographic TV chính thức công bố Sơn Đoòng là hang động tự nhiên lớn nhất thế giới và phát hành bộ phim “The World’s Biggest Cave”.\nNgày 27 tháng 12 năm 2019, Alan Walker đã phát hành Alone P.II quay tại Hang Sơn Đoòng. Tới hôm nay, MV có 358 triệu view.\nHệ thống hang động tại Sơn Đoòng vẫn chưa được khám phá hết.\nMực nhũ vàng ánh kim đặc biệt của Grimm DC, không bong tróc, không nứt, đẹp và lấp lánh suốt vòng đời sản phẩm.\nChất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: in P.E.T.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nHình in bền suốt vòng đời sản phẩm, tối thiểu 30 lần giặt.\nGIẶT MÁY và SẤY thoải mái.",
+      "summary": "Sơn Đoòng là hang động lớn nhất hành tinh và là hang động hùng vĩ nhất Việt Nam.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "7916ac453b1548a5a69e05448b7276be",
+    "fields": {
+      "name": "Tổ Long",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 230 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: in P.E.T.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nHình in bền suốt vòng đời sản phẩm, tối thiểu 30 lần giặt.\nGIẶT MÁY và SẤY thoải mái.\nHọa tiết được in kéo lụa mực plastisol, cho độ bền lý tính vượt trội, giúp hạn chế tối đa tình trạng bong tróc chi tiết in trong suốt thời gian sử dụng.",
+      "summary": "Tổ tiên Rồng của người Việt",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a7e5fef9e14a45f497558c84abb1f33d",
+    "fields": {
+      "name": "Good Brand",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 230 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nChi tiết thiết kế: in P.E.T.\nTuyệt đối không co rút, không chảy nhão, không dãn cổ.\nHình in bền suốt vòng đời sản phẩm, tối thiểu 30 lần giặt.\nGIẶT MÁY và SẤY thoải mái.\nHọa tiết được in kéo lụa mực plastisol, cho độ bền lý tính vượt trội, giúp hạn chế tối đa tình trạng bong tróc chi tiết in trong suốt thời gian sử dụng.",
+      "summary": "GRDC™ Streetvibe Fabric: 100% cotton 2 chiều",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c321ba347cfc42e99283543f8dfee727",
+    "fields": {
+      "name": "Essential",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. Giặt máy thoải mái.\nThiết kế tối giản, với Grimm DC Brand name và Signature box logo.\nChi tiết in: kéo lụa mực plastisol.\nBox logo thêu tỉ mỉ và tinh tế.",
+      "summary": "Mẫu áo thun Streetwear Basic tốt nhất trên thị trường",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ca5bcb5de0b04659824d8ed4c054e298",
+    "fields": {
+      "name": "Fresh tee",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 230 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ.\nGIẶT MÁY và SẤY thoải mái",
+      "summary": "Mẫu áo thun trơn",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "d8337c2865f548368dd39100cbdf6b08",
+    "fields": {
+      "name": "1.0",
+      "description": "Form Boxy hoàn toàn mới từ Grimm DC. Ngắn hơn. Thời trang hơn. Chắc rồi.\nChất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ.\nGIẶT MÁY và SẤY thoải mái.\nHọa tiết chữ G trước ngực được in giật nổi cao tầng, kỹ thuật đặc biệt đòi hỏi người thợ lành nghề của chúng tôi phải in thủ công từng áo, canh chỉnh lượng mực để đảm bảo độ hoàn hảo cho từng hình in.\nHọa tiết GRDC trên lưng áo: thêu tỉ mỉ và tinh tế.\nPhần thân áo được phối rập kỳ công.",
+      "summary": "Ngắn hơn. Thời trang hơn. Chắc rồi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9d285c7595cf445b9e2f8dc452b016d7",
+    "fields": {
+      "name": "1.1",
+      "description": "Form Boxy hoàn toàn mới từ Grimm DC. Ngắn hơn. Thời trang hơn. Chắc rồi.\nChất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ.\nGIẶT MÁY và SẤY thoải mái.\nHọa tiết chữ G trước ngực được in giật nổi cao tầng, kỹ thuật đặc biệt đòi hỏi người thợ lành nghề của chúng tôi phải in thủ công từng áo, canh chỉnh lượng mực để đảm bảo độ hoàn hảo cho từng hình in.\nHọa tiết GRDC trên lưng áo: thêu tỉ mỉ và tinh tế.\nPhần thân áo được phối rập kỳ công.",
+      "summary": "Ngắn hơn. Thời trang hơn. Chắc rồi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "60ccee6dd9774cf98967aa6114a9725c",
+    "fields": {
+      "name": "Chu Du",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ.\nHình in thân áo: kéo lụa mực plastisol.\nGIẶT MÁY và SẤY thoải mái.",
+      "summary": "Chu Du đến cùng trời cuối đất!",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0d597a0278b54c06b1e2b8aa3ef56518",
+    "fields": {
+      "name": "Biếm họa - NYC",
+      "description": "Form Boxy hoàn toàn mới từ Grimm DC. Ngắn hơn. Thời trang hơn. Chắc rồi.\nChất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. Giặt máy thoải mái.\nHọa tiết được in kéo lụa mực plastisol, cho độ bền lý tính vượt trội, giúp hạn chế tối đa tình trạng bong tróc chi tiết in trong suốt thời gian sử dụng.\nHọa tiết GRDC trên lưng áo: thêu tỉ mỉ và tinh tế.",
+      "summary": "Oh sweetheart, take me back to the night we met",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "b6050c3bee6d4514a2cf191c6b952c14",
+    "fields": {
+      "name": "Remind",
+      "description": "Mặt ngoài: trái tim rực rỡ và tràn đầy sức sống, là hình tượng Remind mong muốn mọi người nhớ về.\nMặt trong: góc tối trong tâm hồn, những vụn vỡ và ám ảnh của cuộc sống, cứa sâu vào những đêm đen cô đơn lạc lõng.\nDòng chữ trên vải khi mở nút: There is always someone who loves you / Sẽ luôn có một ai đó yêu thương ta. Dù cả thế giới đều quay lưng với bạn, thì chắc chắn vẫn sẽ còn Remind và Grimm DC ở đây để yêu thương, xoa dịu và đón bạn trở về.\nNhững cụm chữ mặt trong: Hear me out, loneliness, Remindne, unwanted, happiness, love me, hope, trust.",
+      "summary": "There Is Always Someone Who Loves You",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "46664f7ff81a4e17a4aaa50bb4104810",
+    "fields": {
+      "name": "GOAT Night",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250 gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. Giặt máy thoải mái.\nHọa tiết được in kéo lụa mực plastisol, cho độ bền lý tính vượt trội, giúp hạn chế tối đa tình trạng bong tróc chi tiết in trong suốt thời gian sử dụng.",
+      "summary": "GRDC™ Streetvibe Fabric: 100% cotton 2 chiều",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1d6f891f447a4569b0eaf3c30495ea6b",
+    "fields": {
+      "name": "Haftone Raglan",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. Giặt máy thoải mái.\nHọa tiết được in kéo lụa mực plastisol, cho độ bền lý tính vượt trội, giúp hạn chế tối đa tình trạng bong tróc chi tiết in trong suốt thời gian sử dụng.",
+      "summary": "GRDC™ Streetvibe Fabric: 100% cotton 2 chiều",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "86d0df88f1f04aafa81d1bb9c997f794",
+    "fields": {
+      "name": "Midnight",
+      "description": "Chất liệu: GRDC™ Streetvibe Fabric: 100% cotton 2 chiều, định lượng 250gsm, dày dặn, hầu như không chảy nhão, bo cổ bền bỉ, thấm hút cực tốt và mát mẻ. \nGiặt máy thoải mái. .Hình in: kéo lụa mực nước và in plas. \nPhần thân được chúng tôi cắt ráp phối thân thủ công một cách tỉ mỉ và tinh tế.",
+      "summary": "GRDC™ Streetvibe Fabric: 100% cotton 2 chiều",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "217bb4d3680340bb930406080a82ce2e",
+    "fields": {
+      "name": "The most basic",
+      "description": "Chất liệu: GRDC Standard™ Fabric: 94% cotton 6% spandex co dãn 4 chiều, ít nhăn, không xù, ít nhão, thấm hút tốt và mát mẻ, không tồn dư hóa chất gây ung thư, độ cầm màu cấp 4-5. Giặt máy thoải mái.\nGiúp giảm đen da tối đa nhờ chất liệu vải chống tia UV (tia cực tím) lên đến 50+, tương đương với khả năng chống đến 98% tia UV gây hại. Tính năng đặc biệt này giúp hạn chế quá trình hình thành hắc tố melanin - sắc tố đen gây sẫm màu da.\nBox logo thêu tỉ mỉ và tinh tế.",
+      "summary": "Box logo thêu tỉ mỉ và tinh tế, GRDC Standard™ Fabric: 94% cotton 6% spandex co dãn 4 chiều",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "776e1f40599b42509c8ae217c5bdfc0e",
+    "fields": {
+      "name": "Dòng máu Lạc Hồng",
+      "description": "Chất liệu: GRDC Standard™ Fabric: 94% cotton 6% spandex co dãn 4 chiều, ít nhăn, không xù, ít nhão, thấm hút tốt và mát mẻ, không tồn dư hóa chất gây ung thư, độ cầm màu cấp 4-5. Giặt máy thoải mái.\nGiúp giảm đen da tối đa nhờ chất liệu vải chống tia UV (tia cực tím) lên đến 50+, tương đương với khả năng chống đến 98% tia UV gây hại. Tính năng đặc biệt này giúp hạn chế quá trình hình thành hắc tố melanin - sắc tố đen gây sẫm màu da.\nHình in: kéo lụa mực plastisol.\nBox logo thêu tỉ mỉ và tinh tế.",
+      "summary": "Dòng máu Lạc Hồng - Bốn ngàn năm",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "16ce5ed7570e47698c4b7a32e192b646",
+    "fields": {
+      "name": "Âu Cơ",
+      "description": "Chất liệu: GRDC Standard™ Fabric: 94% cotton 6% spandex co dãn 4 chiều, ít nhăn, không xù, ít nhão, thấm hút tốt và mát mẻ, không tồn dư hóa chất gây ung thư, độ cầm màu cấp 4-5. Giặt máy thoải mái.\nGiúp giảm đen da tối đa nhờ chất liệu vải chống tia UV (tia cực tím) lên đến 50+, tương đương với khả năng chống đến 98% tia UV gây hại. Tính năng đặc biệt này giúp hạn chế quá trình hình thành hắc tố melanin - sắc tố đen gây sẫm màu da.\nHình in: kéo lụa mực plastisol.\nBox logo thêu tỉ mỉ và tinh tế.",
+      "summary": "Con Rồng - Cháu Tiên",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "fb9b963e4bd0424788b43f6e4be9df58",
+    "fields": {
+      "name": "The heir of Le",
+      "description": "Chất liệu: GRDC Standard™ Fabric: 94% cotton 6% spandex co dãn 4 chiều, ít nhăn, không xù, ít nhão, thấm hút tốt và mát mẻ, không tồn dư hóa chất gây ung thư, độ cầm màu cấp 4-5. Giặt máy thoải mái.\nGiúp giảm đen da tối đa nhờ chất liệu vải chống tia UV (tia cực tím) lên đến 50+, tương đương với khả năng chống đến 98% tia UV gây hại. Tính năng đặc biệt này giúp hạn chế quá trình hình thành hắc tố melanin - sắc tố đen gây sẫm màu da.\nHình in: kéo lụa mực plastisol.\nBox logo thêu tỉ mỉ và tinh tế.",
+      "summary": "Hay cho một nhà họ Lê, ngàn năm lịch sử anh tài vô số, minh quân nhiều như sao trên trời, tướng giỏi đứng chật cả đất,",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c54b7d9b930346dcb23c7d18ae0bcfc3",
+    "fields": {
+      "name": "The legacy of Phan family",
+      "description": "Chất liệu: GRDC Standard™ Fabric: 94% cotton 6% spandex co dãn 4 chiều, ít nhăn, không xù, ít nhão, thấm hút tốt và mát mẻ, không tồn dư hóa chất gây ung thư, độ cầm màu cấp 4-5. Giặt máy thoải mái.\nGiúp giảm đen da tối đa nhờ chất liệu vải chống tia UV (tia cực tím) lên đến 50+, tương đương với khả năng chống đến 98% tia UV gây hại. Tính năng đặc biệt này giúp hạn chế quá trình hình thành hắc tố melanin - sắc tố đen gây sẫm màu da.\nHình in: kéo lụa mực plastisol.\nBox logo thêu tỉ mỉ và tinh tế.",
+      "summary": "Họ Phan là một trong những đại tộc của nước Việt. Suốt chiều dài lịch sử",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
