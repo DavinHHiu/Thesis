@@ -478,5 +478,365 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "365999a156a54e598bb1d633d860f794",
+    "fields": {
+      "name": "Nón HỘI",
+      "description": "Chất liệu: Canvas\nGiúp giảm đen da tối đa nhờ chất liệu vải chống tia UV (tia cực tím) lên đến 50+, tương đương với khả năng chống đến 98% tia UV gây hại. Tính năng đặc biệt này giúp hạn chế quá trình hình thành hắc tố melanin - sắc tố đen gây sẫm màu da.\nHình in: kéo lụa mực plastisol.",
+      "summary": "Anh em đồng HỘI sẽ được tặng một quạt giấy nhẹ-bền-đẹp giá 59 cành khi đặt mua chiếc bucket này nhe",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "2a99485121da4d66b6d7dc0e6c9aa893",
+    "fields": {
+      "name": "Nón Capybara",
+      "description": "Thêu xù mật độ cao\nDễ thương tuyệt đối\nĐược ship trong hộp giấy cứng tiêu chuẩn của Grimm DC. Đẹp & sang.\nThích hợp làm quà để quen crush, hoặc để giảng hoà với ny\nbên hông có dòng chữ: \"don't worry, be Capy!\".\nform nón Grimm DC® Standard 6 múi 57cm (± 3 cm) giúp ôm khít và tăng giảm dễ dàng với từng kiểu đầu người đội",
+      "summary": "Form nón Grimm DC® Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "14da4f915f1d4c6885a440de0ff1ab40",
+    "fields": {
+      "name": "Nón TWxGR",
+      "description": "Thêu xù mật độ cao\nDễ thương tuyệt đối\nĐược ship trong hộp giấy cứng tiêu chuẩn của Grimm DC. Đẹp & sang.\nThích hợp làm quà để quen crush, hoặc để giảng hoà với ny\nform nón Grimm DC® Standard 6 múi 57cm (± 3 cm) giúp ôm khít và tăng giảm dễ dàng với từng kiểu đầu người đội",
+      "summary": "Form nón Grimm DC® Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "37350f33e2e2453fafc4e5db539a4612",
+    "fields": {
+      "name": "Nón Trucker",
+      "description": "Đơn giản nhất\nForm dáng đẹp nhất\nChất lượng cao nhất\nSản xuất tại Việt Nam\nMột size One size fits all\nPhía sau vải lưới thoáng khí\nMặt trước sử dụng mút chuyên dụng cao cấp\nForm Grimm DC®Standard, được nghiên cứu để phù hợp với vòng đầu của người Việt\nBên trong sử dụng dây rẽ và tem nhãn Grimm DC® với dòng chữ VIETMADE - NGƯỜI VIỆT LÀM",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "55ec612e13b2495489bd485c1ea730a7",
+    "fields": {
+      "name": "Nón Raccoon",
+      "description": "Thêu xù mật độ cao.\nBên hông có dòng chữ: \"ain't nothin' like me, 'cept me\".\nForm nón Grimm DC® Standard 6 múi 57cm (± 3 cm) giúp ôm khít và tăng giảm dễ dàng với từng kiểu đầu người đội.",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "aab57d02b73e422c809d42bf6fef9707",
+    "fields": {
+      "name": "Nón Chu du",
+      "description": "Dòng chữ mặt trước: CHU DU\nDòng chữ trên quai gài phía sau: VIỆT NAM \nDòng chữ trên đuôi nón: TỰ DO - SÓC - CHU DU\nSử dụng vải khaki cotton Matte Black đã qua xử lý wash để tạo hiệu ứng sờn cũ. \nMặt trước nón được xử lý xé rách thủ công từng sản phẩm. Mỗi chiếc nón là Độc Bản.  \nCác chi tiết mặt trước và sau được thêu chỉ Pristine D50019. \nBox logo mặt bên được thêu chỉ Deep Black. \nNón form mềm, có tăng đưa sau đầu. One size fits all. Không sợ gãy form dù nhét vào balo, túi, cốp hay sau khi giặt nón.",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0313b79e3183415eb356b229588f341a",
+    "fields": {
+      "name": "Nón rách Người Việt tự hào",
+      "description": "Dòng chữ mặt trước: Vietnamien, nghĩa là \"Người Việt\".\nDòng chữ trên quai gài phía sau: Je suis fier, nghĩa là \"Tôi tự hào\".\nDòng chữ trên đuôi nón: Fabriqué au VIETNAM, nghĩa là \"Làm tại Việt Nam\".\nSử dụng vải khaki cotton Matte Black đã qua xử lý wash để tạo hiệu ứng sờn cũ.\nMặt trước nón được xử lý xé rách thủ công từng sản phẩm. Mỗi chiếc nón là Độc Bản.\nCác chi tiết mặt trước và sau được thêu chỉ Pristine D50019.\nBox logo mặt bên được thêu chỉ Deep Black.\nNón form mềm, có tăng đưa sau đầu. One size fits all. Không sợ gãy form dù nhét vào balo, túi, cốp hay sau khi giặt nón.",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e25b33b676364635bfbb1dfd0ad6d3e7",
+    "fields": {
+      "name": "Nón Essential",
+      "description": "Chốt kim loại dập nổi biểu tượng Grimm DC màu bạc. \nHoạ tiết trên nón: thêu. \nSử dụng vải cotton 14. \nForm nón: form mềm. Tăng đưa sau đầu. One size fits all. Không sợ gãy form dù nhét vào balo, túi, cốp hay sau khi giặt nón.",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "4e9c3d17e9454e70a63d1dc279232261",
+    "fields": {
+      "name": "Nón ván trượt",
+      "description": "Chốt kim loại dập nổi biểu tượng Grimm DC màu đồng. \nHoạ tiết trên nón: thêu. \nSử dụng vải cotton 14. \nForm nón: form mềm. Tăng đưa sau đầu. One size fits all. Không sợ gãy form dù nhét vào balo, túi, cốp hay sau khi giặt nón.",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "4f27e58c88914bfc9be76009cc69a3a2",
+    "fields": {
+      "name": "Nón Yêu neh",
+      "description": "Chốt kim loại khắc laser hoạ tiết iron flame ở mẫu cũ nay được thay bằng hoạ tiết monogram dập nổi. Sang trọng và nổi bật.\nHoạ tiết trên nón: thêu.\nSử dụng vải cotton 14.\nForm nón: form mềm. Tăng đưa sau đầu. One size fits all. Không sợ gãy form dù nhét vào balo, túi, cốp hay sau khi giặt nón.",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "57213904028f4955aab20c47c69ee599",
+    "fields": {
+      "name": "Nón chiếc vịt bé-nê-phích",
+      "description": "Chốt kim loại khắc laser hoạ tiết iron flame ở mẫu cũ nay được thay bằng hoạ tiết monogram dập nổi. Sang trọng và nổi bật.\nHoạ tiết trên nón: thêu.\nSử dụng vải cotton 14.\nForm nón: form mềm. Tăng đưa sau đầu. One size fits all. Không sợ gãy form dù nhét vào balo, túi, cốp hay sau khi giặt nón.",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "fbbc017a15ac4795810a6378ba61fcb4",
+    "fields": {
+      "name": "Nón BD HERITAGES",
+      "description": "Sử dụng vải cotton 14 với phối màu Deep Black.\nForm nón Asia Standard 6 múi 57cm (± 3 cm) giúp ôm khít và tăng giảm dễ dàng với từng kiểu đầu người đội.",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c8a67bf795bd4300a15d0e7437619043",
+    "fields": {
+      "name": "Nón White",
+      "description": "Nón xịn\nTrắng. Tối giản. Dễ phối.\nChất lượng. Và đẹp như người yêu (cũ lẫn mới).\nChốt kim loại khắc laser hoạ tiết iron flame ở mẫu cũ nay được thay bằng hoạ tiết monogram dập nổi. Sang trọng và nổi bật.\nSử dụng vải cotton 14 với phối màu Matte Black.\nForm nón Asia Standard 6 múi 57cm (± 3 cm) giúp ôm khít và tăng giảm dễ dàng với từng kiểu đầu người đội.",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "531ddc193ad244b3b382a5f179b13c3e",
+    "fields": {
+      "name": "Nón Westside",
+      "description": "Chốt kim loại khắc laser hoạ tiết iron flame ở mẫu cũ nay được thay bằng hoạ tiết monogram dập nổi. Sang trọng và nổi bật.\nHoạ tiết Westside: Phối màu chỉ ánh bạc Metallic Silver Floss SN-15.\nSử dụng vải cotton 14 với phối màu Matte Black.\nForm nón: form mềm. Tăng đưa sau đầu. One size fits all. Không sợ gãy form dù nhét vào balo, túi, cốp hay sau khi giặt nón.",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a4d4e5a731f6419d8d285b8da97ea08a",
+    "fields": {
+      "name": "Nón Hanoian",
+      "description": "Toàn bộ phần thêu sử dụng chỉ vàng Yellow Butter D523.\nSử dụng vải cotton 14 với phối màu Matte Black.\nForm nón Asia Standard 6 múi 57cm (± 3 cm) giúp ôm khít và tăng giảm dễ dàng với từng kiểu đầu người đội.\nDòng chữ phía sau: \"I am vietnamese\" mang ý nghĩa \"Tôi là người Việt Nam\".",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5cca0c8c156d4874ae7c606e5535f118",
+    "fields": {
+      "name": "Nón Saigonese",
+      "description": "Toàn bộ phần thêu sử dụng chỉ đỏ Red Scarlet.\nSử dụng vải cotton 14 với phối màu Matte Black.\nForm nón Asia Standard 6 múi 57cm (± 3 cm) giúp ôm khít và tăng giảm dễ dàng với từng kiểu đầu người đội.\nDòng chữ phía sau: \"I am vietnamese\" mang ý nghĩa \"Tôi là người Việt Nam\"",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ec5208accea9434f8ca2fb09738b15ce",
+    "fields": {
+      "name": "ELLIPSE CAP",
+      "description": "Nón lưỡi trai thêu typo ở phía trước và bên trái, lót mềm phía trong\nCác chi tiết xử lý rách\nNón có nút kim loại tăng giảm độ rộng phía sau\nChất liệu: Kaki Jean",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "3d0cd7c2774345ed9b7b61d70f5cee29",
+    "fields": {
+      "name": "TAILWIND CAP",
+      "description": "Nón lưỡi trai thêu typo ở phía trước và bên phải, lót mềm phía trong\nCác chi tiết rả trước và sau kết hợp với các đường thêu nổi tạo các mảng màu tương phản\nNón có nameplate kim loại tăng giảm độ rộng phía sau\nChất liệu: Da lộn",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "33288340e5994ea5be3275e70f45b3d9",
+    "fields": {
+      "name": "BASIC CAP",
+      "description": "Nón lưỡi trai thêu typo ở phía trước và bên phải, lót mềm phía trong\nCác chi tiết rả trước và sau kết hợp với các đường thêu nổi tạo các mảng màu tương phản\nNón có nameplate kim loại tăng giảm độ rộng phía sau\nChất liệu: Da lộn",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ca5cf18f93214c689f605459eca75b0e",
+    "fields": {
+      "name": "RUBBER TAG CAP",
+      "description": "Nón lưỡi trai thêu typo ở phía trước và bên phải, lót mềm phía trong\nCác chi tiết rả trước và sau kết hợp với các đường thêu nổi tạo các mảng màu tương phản\nNón có nameplate kim loại tăng giảm độ rộng phía sau\nChất liệu: Da lộn",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "4bb33f25b9104bd78ea8f2489f5f0eff",
+    "fields": {
+      "name": "CAP LOGO",
+      "description": "Nón lưỡi trai thêu typo ở phía trước và bên phải, lót mềm phía trong\nCác chi tiết rả trước và sau kết hợp với các đường thêu nổi tạo các mảng màu tương phản\nNón có nameplate kim loại tăng giảm độ rộng phía sau\nChất liệu: Da lộn",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5d46b577870d45238a54d8616935ce89",
+    "fields": {
+      "name": "CAP GLOBAL",
+      "description": "Nón lưỡi trai thêu typo ở phía trước và bên phải, lót mềm phía trong\nCác chi tiết rả trước và sau kết hợp với các đường thêu nổi tạo các mảng màu tương phản\nNón có nameplate kim loại tăng giảm độ rộng phía sau\nChất liệu: Da lộn",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "2df6fcf2f431439fa3ac04ae3fe372e2",
+    "fields": {
+      "name": "WRINKLED CAMP CAP",
+      "description": "Nón lưỡi trai thêu typo ở phía trước và bên phải, lót mềm phía trong\nCác chi tiết rả trước và sau kết hợp với các đường thêu nổi tạo các mảng màu tương phản\nNón có nameplate kim loại tăng giảm độ rộng phía sau\nChất liệu: Da lộn",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9239d8f2463e4468b1b383b98ba92593",
+    "fields": {
+      "name": "HOLOGRAM LOGO CAMP CAP",
+      "description": "Nón lưỡi trai thêu typo ở phía trước và bên phải, lót mềm phía trong\nCác chi tiết rả trước và sau kết hợp với các đường thêu nổi tạo các mảng màu tương phản\nNón có nameplate kim loại tăng giảm độ rộng phía sau\nChất liệu: Da lộn",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9c08bdca93144227a79e9109ea6d7bfe",
+    "fields": {
+      "name": "Nón Vietnamien",
+      "description": "Nón lưỡi trai thêu typo ở phía trước và bên phải, lót mềm phía trong\nCác chi tiết rả trước và sau kết hợp với các đường thêu nổi tạo các mảng màu tương phản\nNón có nameplate kim loại tăng giảm độ rộng phía sau\nChất liệu: Da lộn",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "7eefa6a4273242d0a563c0f8dd8eb870",
+    "fields": {
+      "name": "Collage Cap",
+      "description": "Chất liệu: Cotton Kaki 100%\nChi tiết: Thêu chi tiết 3D Nổi\nKiểu dáng: Form Unisex size 58-64",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "eec35351276a4ba59c5445396e317f83",
+    "fields": {
+      "name": "S2 Washed Cap",
+      "description": "Chất liệu: Cotton Kaki 100%\nChi tiết: Thêu chi tiết 3D lửa\nKiểu dáng: Form Unisex size 58",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "78ca979e1c284070a84da8d6846c890c",
+    "fields": {
+      "name": "Blue White S Crews Fitted Hat",
+      "description": "Chất liệu: Mặt và thân nón làm từ vải kaki, mặt trong có bo thun co giãn\nHọa tiết: Hình thêu sắc nét, bền bỉ\nChi tiết: Tag Wolf Gang được thêu với độ chi tiết cao\nKiểu dáng: Form Fitted Hat phù hợp cả nam và nữ",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "54712dfc770f407c82409897387bed30",
+    "fields": {
+      "name": "S LETTER CAP",
+      "description": "| SWE® | S LETTER CAP\nCOLOR: BLUE\nMATERIAL: COTTON 100%\nSIZE: ONE SIZE\n\nS LETTER CAP - Một chiếc nón mới vừa được ra mắt với form dáng snapback mềm. Điểm nhấn của nón nằm ở họa tiết chữ S được thêu 3D ở mặt trước và hoạ tiết 3 ngôi sao nhỏ được thêu 2D ở bên hông. Phía sau nón được sử dụng khóa nhựa 7 lỗ để bạn có thể dễ dàng tăng chỉnh kích thước phù hợp với đầu. Nón được may bằng vải kaki với 3 phối màu kèm 3 kí tự khác nhau tạo thành tên thương hiệu SWE.",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1bd0575ea8eb4c1d93445a6ee1120111",
+    "fields": {
+      "name": "E LETTER CAP",
+      "description": "| SWE® | E LETTER CAP\nCOLOR: BEIGE\nMATERIAL: COTTON 100%\nSIZE: ONE SIZE\n\nE LETTER CAP - Một chiếc nón mới vừa được ra mắt với form dáng snapback mềm. Điểm nhấn của nón nằm ở họa tiết chữ E được thêu 3D ở mặt trước và hoạ tiết 3 ngôi sao nhỏ được thêu 2D ở bên hông. Phía sau nón được sử dụng khóa nhựa 7 lỗ để bạn có thể dễ dàng tăng chỉnh kích thước phù hợp với đầu. Nón được may bằng vải kaki với 3 phối màu kèm 3 kí tự khác nhau tạo thành tên thương hiệu SWE.",
+      "summary": "Form nón Standard 6 múi 57cm (± 3 cm) giúp ôm khít",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
