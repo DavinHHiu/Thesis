@@ -838,5 +838,365 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c66258df8bb04af28fd1a1bb68b5f377",
+    "fields": {
+      "name": "Bomber TWxGR",
+      "description": "Graphic kết hợp giữa 2 kỹ thuật thêu xù và thêu thường\nLớp lót chần bông mặt trong\nBo cổ áo và tà áo\nNút bấm dọc áo\nChất liệu: Da phối",
+      "summary": "Graphic kết hợp giữa 2 kỹ thuật thêu xù và thêu thường",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "56876f0da82a48c8a5adbd8d0174f67d",
+    "fields": {
+      "name": "SINCITY",
+      "description": "Chất liệu vải: vải dù.\nHệ thống 4 túi: hai túi hông thường + 1 túi ẩn với dây khóa bên hông trái + 1 túi bí mật bên trong.\nToàn bộ dây khóa sử dụng YKK zip.\nCổ tay hai thành phần: thun co giãn - đảm bảo ôm vừa vặn mọi kích thước cổ tay.\nHọa tiết in: in mực dầu.\nCụm Grimm DC ở mặt lưng được thêu tỉ mỉ và tinh tế.",
+      "summary": "Cụm Grimm DC ở mặt lưng được thêu tỉ mỉ và tinh tế.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "39efc6a0909f4cfabf14f54b9abc3b50",
+    "fields": {
+      "name": "AIR-tech",
+      "description": "Thiết kế AIR-vent in & out hoàn toàn mới, lượng gió lưu thông tăng gấp 2 lần\nLàm mát đến những khu vực khuất nhất như lưng dưới và bụng\nCông nghệ áp dụng: AIR-tech™ by Grimm DC a.k.a Hệ thống luân chuyển dòng khí. Gồm 3 bộ phận: AIR-vent in a.k.a. khe đưa gió vào, lưới mesh cho phép không khí luân chuyển trước/sau và AIR-vent out a.k.a. khe thoát gió ra. Vị trí AIR-vent in và out được tính toán chi tiết để đảm bảo tối đa hiệu quả thông khí cho các vùng nhiệt độ cao của cơ thể nhưng không làm form áo bị phồng lên quá mức khi di chuyển với tốc độ lớn.\nHệ thống 4 túi: hai túi hông thường + 1 túi ẩn với dây khóa bên hông trái + 1 túi bí mật bên trong.\nChất liệu vải: Polyester.\nToàn bộ dây khóa sử dụng YKK zip chính hãng Nhật Bản\nCổ tay hai thành phần: thun co giãn và đai gài velcro - đảm bảo ôm vừa vặn mọi kích thước cổ tay.\nBox logo: sử dụng kỹ thuật đúc khuôn silicon chính xác để tái tạo độ cao và chi tiết cho từng chữ.\nCụm Grimm DC ở mặt lưng: sử dụng kỹ thuật thêu nổi 3D với độ cao nét chữ lên đến 1.5mm.",
+      "summary": "Cụm Grimm DC ở mặt lưng: sử dụng kỹ thuật thêu nổi 3D với độ cao nét chữ lên đến 1.5mm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "59a1ec3760fe426e92e973fa40d36d04",
+    "fields": {
+      "name": "Advanced AIR-tech",
+      "description": "Công nghệ thông gió: AIR-tech™ by Grimm DC a.k.a Hệ thống luân chuyển dòng khí. Gồm 3 bộ phận: AIR-vent in a.k.a. khe đưa gió vào, lưới mess cho phép không khí luân chuyển trước/sau và AIR-vent out a.k.a. khe thoát gió ra. Vị trí AIR-vent in và out được tính toán chi tiết để đảm bảo tối đa hiệu quả thông khí cho các vùng nhiệt độ cao của cơ thể.\nHệ thống 4 túi: hai túi hông thường + 1 túi ẩn với dây khóa bên hông trái + 1 túi bí mật bên trong ngực trái.\nChất liệu vải: Polyester.\nToàn bộ dây khóa sử dụng YKK zip.\nCổ tay hai thành phần: thun co giãn và đai gài velcro - đảm bảo ôm vừa vặn mọi kích thước cổ tay.\nCụm Grimm DC ở mặt trước: thêu 2D\nCụm Grimm DC ở mặt lưng: thêu nổi 3D với độ cao nét chữ lên đến 1.5mm.",
+      "summary": "Advanced AT hay áo khoác thông gió thế hệ thứ hai thừa hưởng tất cả tính năng của áo khoác thông gió thế hệ thứ nhất.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e0ecfea3f27e4a98a5f13a957b8e9407",
+    "fields": {
+      "name": "AIR-tech 02",
+      "description": "Công nghệ áp dụng: AIR-tech™ by Grimm DC a.k.a Hệ thống luân chuyển dòng khí. Gồm 3 bộ phận: AIR-vent in a.k.a. khe đưa gió vào, lưới mesh cho phép không khí luân chuyển trước/sau và AIR-vent out a.k.a. khe thoát gió ra. Vị trí AIR-vent in và out được tính toán chi tiết để đảm bảo tối đa hiệu quả thông khí cho các vùng nhiệt độ cao của cơ thể nhưng không làm form áo bị phồng lên quá mức khi di chuyển với tốc độ lớn.\nHệ thống 4 túi: hai túi hông thường + 1 túi ẩn với dây khóa bên hông trái + 1 túi bí mật bên trong.\nChất liệu vải: Polyester.\nToàn bộ dây khóa sử dụng YKK zip.\nCổ tay hai thành phần: thun co giãn và đai gài velcro - đảm bảo ôm vừa vặn mọi kích thước cổ tay.\nBox logo: sử dụng kỹ thuật đúc khuôn silicon chính xác để tái tạo độ cao và chi tiết cho từng chữ.\nCụm Grimm DC ở mặt lưng: sử dụng kỹ thuật thêu nổi 3D với độ cao nét chữ lên đến 1.5mm.",
+      "summary": "AT:02 là mẫu áo khoác thông gió với cách mặc gài dây phía trước.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "8f7db4a663e94513a4b0bce61a9ab364",
+    "fields": {
+      "name": "AIR-tech 01",
+      "description": "Công nghệ áp dụng: AIR-tech™ by Grimm DC a.k.a Hệ thống luân chuyển dòng khí. Gồm 3 bộ phận: AIR-vent in a.k.a. khe đưa gió vào, lưới mesh cho phép không khí luân chuyển trước/sau và AIR-vent out a.k.a. khe thoát gió ra. Vị trí AIR-vent in và out được tính toán chi tiết để đảm bảo tối đa hiệu quả thông khí cho các vùng nhiệt độ cao của cơ thể nhưng không làm form áo bị phồng lên quá mức khi di chuyển với tốc độ lớn.\nHệ thống 4 túi: hai túi hông thường + 1 túi ẩn với dây khóa bên hông trái + 1 túi bí mật bên trong.\nChất liệu vải: Polyester.\nToàn bộ dây khóa sử dụng YKK zip.\nCổ tay hai thành phần: thun co giãn và đai gài velcro - đảm bảo ôm vừa vặn mọi kích thước cổ tay.\nBox logo: sử dụng kỹ thuật đúc khuôn silicon chính xác để tái tạo độ cao và chi tiết cho từng chữ.\nCụm Grimm DC ở mặt lưng: sử dụng kỹ thuật thêu nổi 3D với độ cao nét chữ lên đến 1.5mm.",
+      "summary": "AT:01 là mẫu áo khoác thông gió với cách mặc chui đầu.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "b463cc2752c3467b9e550d8e45eab4dc",
+    "fields": {
+      "name": "Functional Jacket",
+      "description": "Một chiếc áo khoác KHÔNG chống thấm. Vậy bức hình đầu tiên bên dưới ý nghĩa gì? Mẫu Jacket này chỉ có tính năng CHỐNG BÁM NƯỚC (water-repellent) chứ không chống thấm (water-proof). Có 3 cấp độ chống nước:\nToàn bộ khoá kéo đến từ công ty YKK, được Grimm DC đặt sản xuất riêng. Đặc biệt là dây kéo chính sử dụng 2 đầu khoá - điều chỉ xuất hiện ở các phiên bản áo khoác cao cấp.\nPhía sau dây kéo chính có nẹp đỡ - phần vải lót để đảm bảo dây khoá cứng không làm tổn thương da của bạn (trong trường hợp mình quyết định hôm đó không thích mặc thêm gì ở trong cả)\nCổ áo được thiết kế cao lên để tạo ra “cảm nhận” đường phố. Và vì thế, chúng tôi thêm vào nẹp che - đường bẻ ngoặt ra phía trước và giúp đầu khoá khi kéo lên hết mức sẽ không cọ vào da cổ của bạn.\nBên phải của áo có hệ thống túi đôi, với một túi ẩn có dây khoá - bạn sẽ không bao giờ sợ rớt mất món đồ quan trọng của mình nữa.\nNón của áo được thiết kế giấu bên trong cổ, khi không cần có thể cuốn tròn và gấp gọn vào túi dây khoá.\nBên trong có túi bí mật để cất những đồ không muốn ai thấy được (hoặc muốn nó ở gần trái tim của mình).\nTất cả dây xỏ đầu khoá đều được đặt dệt riêng với tên thương hiệu Grimm DC - một chi tiết rất rất nhỏ nhưng khiến chúng tôi cực kì thích thú và tự hào.",
+      "summary": "Một chiếc áo khoác KHÔNG chống thấm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a184b28c65784b0a8d384a25b4221096",
+    "fields": {
+      "name": "HALMORT JACKET",
+      "description": "Jacket khoá kéo zip dọc thân\nCó dây rút ở thân áo kèm nút chặn kim loại\nBo ở tay áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ in kéo lụa ở mặt sau áo\nCó 2 túi khoá kéo ẩn phía trước\nChất liệu: Vải dù",
+      "summary": "Jacket khoá kéo zip dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a201adb3dd104f32b4bf0b3fa540e5a7",
+    "fields": {
+      "name": "ENFOLD JACKET",
+      "description": "Thiết kế 2 túi to mặt trước áo\nDây rút ngay lai áo\nLogo in ở tay và mặt sau áo\nKhóa kéo dọc thân\nChất liệu: Vải dù",
+      "summary": "Jacket khoá kéo dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "06077d0ba3b049e387fe61e66d5b6cba",
+    "fields": {
+      "name": "911 LEATHER JACKET",
+      "description": "Áo khoác da khoá kéo zip full thân\nTypo graphic trên áo sử dụng kết hợp 3 kỹ thuật thêu thường, thêu nổi và đắp da\nCác chi tiết rả trên toàn bộ thân áo tạo các mảng màu làm điểm nhấn\nÁo có 2 túi phía trước\nChất liệu: Da PU",
+      "summary": "Áo khoác da khoá kéo zip full thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "855968548ff54435a9bf73a0698895d1",
+    "fields": {
+      "name": "REVERSIBLE JACKET",
+      "description": "Áo khoác dù có nón, khoá kéo zip chắc chắn\nCó 2 túi đối xứng ở mặt trước áo và 2 túi trang trí hai bên tay\nBo chun nón, cổ tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nLogo mặt trước và sau áo thêu nổi\nCác chi tiết nút kim loại trang trí\nChất liệu: Dù",
+      "summary": "Áo khoác dù có nón, khoá kéo zip chắc chắn.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ded2d171793c41079ecbcfd5247604e1",
+    "fields": {
+      "name": "OBSTREPEROUS VARSITY JACKET",
+      "description": "Graphic kết hợp giữa 2 kỹ thuật thêu xù và thêu thường\nLớp lót chần bông mặt trong\nBo cổ áo và tà áo\nNút bấm dọc áo\nChất liệu: Da phối",
+      "summary": "Graphic kết hợp giữa 2 kỹ thuật thêu xù và thêu thường.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ac9eaa3bc55f4036ab4b557071af1852",
+    "fields": {
+      "name": "DUPLE PARACHUTE JACKET",
+      "description": "Áo khoác dù có nón, khoá kéo zip chắc chắn\nCó 2 túi ở phía trước áo và 1 túi phía sau\nBo chun nón, cổ tay và thân áo\nChi tiết chữ thêu nổi ở mặt trước áo\nSử dụng kỹ thuật ráp nối vải trên toàn bộ thân áo\nLogo Hades được đính ngay nón\nChất liệu: Dù",
+      "summary": "Áo khoác dù có nón, khoá kéo zip chắc chắn.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "3be3a130b66b496bbc03bfede827364e",
+    "fields": {
+      "name": "AQUILINE LEATHER JACKET",
+      "description": "Áo khoác da khoá kéo zip full thân\nCổ áo sơ mi\nCác chi tiết rả trước và sau tạo các mảng màu tương phản\nCác chi tiết chữ được thêu nổi ở mặt trước và sau áo\nKhoá kéo zip phía sau hai tay áo\nChất liệu: Da PU",
+      "summary": "Áo khoác da khoá kéo zip full thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e61a74144167469eb74557b7f9cf7c28",
+    "fields": {
+      "name": "RACER VAIN JACKET",
+      "description": "Áo khoác dù có khoá kéo zip full thân\nCó 2 túi phía trước áo\nBo cổ tay và thân áo\nCác chi tiết rả trước và sau kết hợp với các line phản quang tạo hiệu ứng nổi bật\nSử dụng kỹ thuật in kéo lụa ở mặt trước và sau áo\nChất liệu: Dù",
+      "summary": "Áo khoác dù có khoá kéo zip full thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "d54ba6740c47448bb504dbfcead3f868",
+    "fields": {
+      "name": "FADED POLYESTER JACKET",
+      "description": "Áo khoác dù có nón, khoá kéo zip chắc chắn\nCó 4 túi đối xứng ở mặt trước áo\nBo chun nón, cổ tay và thân áo\nCác chi tiết nút kim loại và hoạ tiết chữ in kéo lụa\nSử dụng kỹ thuật ráp nối vải\nChất liệu: Dù",
+      "summary": "Áo khoác dù có nón, khoá kéo zip chắc chắn.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9d1388f10200411c9cd62e50702efa6d",
+    "fields": {
+      "name": "MAJOR PIECES JACKET",
+      "description": "Jacket khoá kéo zip dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket khoá kéo zip dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "92e90e0795a6451ba2618240ff4a44d6",
+    "fields": {
+      "name": "JACKET SIGNATURE",
+      "description": "Jacket khoá kéo zip dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket khoá kéo zip dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "d865444888cb48dbb610ce8b39825a00",
+    "fields": {
+      "name": "WORLDWIDE VARSITY JACKET",
+      "description": "Jacket bommer cúc bấm dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket bommer cúc bấm dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9ff7e784b05449c895f0e4e44c777eb0",
+    "fields": {
+      "name": "MONO VARSITY JACKET",
+      "description": "Jacket bommer cúc bấm dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket bommer cúc bấm dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "53e077fe7f7a4b8682145ed750bb95ce",
+    "fields": {
+      "name": "IMMORTAL VARSITY JACKET",
+      "description": "Jacket bommer cúc bấm dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket bommer cúc bấm dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c82f47dc773e4b4888d37e0652081d0f",
+    "fields": {
+      "name": "JACKET STAY ONTOP",
+      "description": "Jacket bommer cúc bấm dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket bommer cúc bấm dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "565802ed6f9c40f49d42bbe2f4f83c14",
+    "fields": {
+      "name": "CORDUROY VARSITY JACKET",
+      "description": "Jacket bommer cúc bấm dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket bommer cúc bấm dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "da4fbc864f934e78acaec9e268af50cd",
+    "fields": {
+      "name": "JACKET IMMORTALITY",
+      "description": "Jacket bommer cúc bấm dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket bommer cúc bấm dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "74c415d4eed44cb897a34bdb9f2db733",
+    "fields": {
+      "name": "JACKET STRIPES",
+      "description": "Jacket bommer cúc bấm dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket bommer cúc bấm dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9e6686e9af0a4426902722b16362d09e",
+    "fields": {
+      "name": "JACKET BIG LOGO",
+      "description": "Jacket bommer cúc bấm dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket bommer cúc bấm dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "cc17d7795ff745029faefc95409f03cb",
+    "fields": {
+      "name": "JACKET INTRINSICAL",
+      "description": "Jacket bommer cúc bấm dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket bommer cúc bấm dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "062b406a7c274e2d9733ae7d6536fba3",
+    "fields": {
+      "name": "JACKET LOGO FIRE",
+      "description": "Jacket bommer cúc bấm dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket bommer cúc bấm dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "160a19eba5784acb94f0fabe4c339b45",
+    "fields": {
+      "name": "VARSITY JACKET 90",
+      "description": "Jacket bommer cúc bấm dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket bommer cúc bấm dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "bb8d918874db47c39c978b511b9e5e6b",
+    "fields": {
+      "name": "CORDUROY BASEBALL JACKET",
+      "description": "Jacket bommer cúc bấm dọc thân\nCó dây rút ở tay và thân áo\nSử dụng kỹ thuật ráp nối vải\nChi tiết chữ phía trước áo được thêu viền \nCó 2 túi to phía trước và các nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Jacket bommer cúc bấm dọc thân.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
