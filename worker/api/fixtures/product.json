@@ -1930,5 +1930,365 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ef441cc395d345498c35c3a05e037fd8",
+    "fields": {
+      "name": "TLT415 - 10",
+      "description": "Thắt lưng da nam TLT415 - 10 được làm từ chất liệu da bò, thiết kế sang trọng và hiện đại. Sản phẩm có khóa trượt kim loại, dễ dàng điều chỉnh độ dài dây đeo ôm sát hông, thoải mái vận động cả ngày dài. Thắt lưng TL415 có hai màu sắc đen và nâu, giúp bạn có thể dễ phối với trang phục theo phong cách cá nhân của mình.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT415 - 10 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "6a60e728a0f44c4d9b5e13fccd4d3d58",
+    "fields": {
+      "name": "TLT416 - 2",
+      "description": "Thắt lưng da nam TLT416 - 2 được làm từ chất liệu da bò thật cao cấp. Phần mặt khóa kim loại, bề mặt nhám màu đen nam tính nhưng không mất vẻ tinh tế. Đầu khóa tân dễ sử dụng, chắc chắn giúp cố định độ dài thắt lưng vừa vặn với cơ thể. Thắt lưng có 2 tông màu cơ bản để dễ phối với nhiều kiểu trang phục khác nhau, phù hợp cho cả đi làm và đi chơi.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT415 - 2 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "659e560451004613bf85e423d7108da0",
+    "fields": {
+      "name": "TLT415 - 7",
+      "description": "Thắt lưng da nam TLT415 - 7 được làm từ chất liệu da bò thật cao cấp. Phần mặt khóa kim loại, bề mặt nhám màu đen nam tính nhưng không mất vẻ tinh tế. Đầu khóa tân dễ sử dụng, chắc chắn giúp cố định độ dài thắt lưng vừa vặn với cơ thể. Thắt lưng có 2 tông màu cơ bản để dễ phối với nhiều kiểu trang phục khác nhau, phù hợp cho cả đi làm và đi chơi.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT415 - 7 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "8619556b0695452cbc450619f1c203ac",
+    "fields": {
+      "name": "TLT416 - 5",
+      "description": "Thắt lưng da nam TLT416 - 5 được làm từ chất liệu da bò thật cao cấp. Phần mặt khóa kim loại, bề mặt nhám màu đen nam tính nhưng không mất vẻ tinh tế. Đầu khóa tân dễ sử dụng, chắc chắn giúp cố định độ dài thắt lưng vừa vặn với cơ thể. Thắt lưng có 2 tông màu cơ bản để dễ phối với nhiều kiểu trang phục khác nhau, phù hợp cho cả đi làm và đi chơi.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT416 - 5 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "3809cf60da1a4884bf9c093080be59fa",
+    "fields": {
+      "name": "TLT415 - 4",
+      "description": "Thắt lưng da nam TLT415 - 4 được làm từ chất liệu da bò thật cao cấp. Phần mặt khóa kim loại, bề mặt nhám màu đen nam tính nhưng không mất vẻ tinh tế. Đầu khóa tân dễ sử dụng, chắc chắn giúp cố định độ dài thắt lưng vừa vặn với cơ thể. Thắt lưng có 2 tông màu cơ bản để dễ phối với nhiều kiểu trang phục khác nhau, phù hợp cho cả đi làm và đi chơi.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT415 - 4 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "239553bc51fc424587921870b19e06b0",
+    "fields": {
+      "name": "TLT416 - 4",
+      "description": "Thắt lưng da nam TLT416 - 4 được làm từ chất liệu da bò thật cao cấp. Phần mặt khóa kim loại, bề mặt nhám màu đen nam tính nhưng không mất vẻ tinh tế. Đầu khóa tân dễ sử dụng, chắc chắn giúp cố định độ dài thắt lưng vừa vặn với cơ thể. Thắt lưng có 2 tông màu cơ bản để dễ phối với nhiều kiểu trang phục khác nhau, phù hợp cho cả đi làm và đi chơi.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT416 - 4 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "b970659e71cd44c9b657ed0e5b50d69d",
+    "fields": {
+      "name": "TLT415 - 8",
+      "description": "Thắt lưng da nam TLT415 - 8 được làm từ chất liệu da bò thật cao cấp. Phần mặt khóa kim loại, bề mặt nhám màu đen nam tính nhưng không mất vẻ tinh tế. Đầu khóa tân dễ sử dụng, chắc chắn giúp cố định độ dài thắt lưng vừa vặn với cơ thể. Thắt lưng có 2 tông màu cơ bản để dễ phối với nhiều kiểu trang phục khác nhau, phù hợp cho cả đi làm và đi chơi.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT415 - 8 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ac8883f6534e44d2aeee3922cc640bc8",
+    "fields": {
+      "name": "TLT415 - 3",
+      "description": "Thắt lưng da nam TLT415 - 3 được làm từ chất liệu da bò thật cao cấp. Phần mặt khóa kim loại, bề mặt nhám màu đen nam tính nhưng không mất vẻ tinh tế. Đầu khóa tân dễ sử dụng, chắc chắn giúp cố định độ dài thắt lưng vừa vặn với cơ thể. Thắt lưng có 2 tông màu cơ bản để dễ phối với nhiều kiểu trang phục khác nhau, phù hợp cho cả đi làm và đi chơi.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT415 - 3 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "69c1fc9d586c4194b27768f8f3f4da69",
+    "fields": {
+      "name": "TLT415 - 5",
+      "description": "Thắt lưng da nam TLT415 - 5 được làm từ chất liệu da bò thật cao cấp. Phần mặt khóa kim loại, bề mặt nhám màu đen nam tính nhưng không mất vẻ tinh tế. Đầu khóa tân dễ sử dụng, chắc chắn giúp cố định độ dài thắt lưng vừa vặn với cơ thể. Thắt lưng có 2 tông màu cơ bản để dễ phối với nhiều kiểu trang phục khác nhau, phù hợp cho cả đi làm và đi chơi.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT415 - 5 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "aaca366739164365becf80cec14c2f5f",
+    "fields": {
+      "name": "TLT416 - 3",
+      "description": "Thắt lưng da nam TLT416 - 3 được làm từ chất liệu da bò thật cao cấp. Phần mặt khóa kim loại, bề mặt nhám màu đen nam tính nhưng không mất vẻ tinh tế. Đầu khóa tân dễ sử dụng, chắc chắn giúp cố định độ dài thắt lưng vừa vặn với cơ thể. Thắt lưng có 2 tông màu cơ bản để dễ phối với nhiều kiểu trang phục khác nhau, phù hợp cho cả đi làm và đi chơi.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT416 - 3 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "f367eafc69d947eabdbc64f4dfc978e4",
+    "fields": {
+      "name": "TLT415 - 11",
+      "description": "Thắt lưng da nam TLT415 - 11 được làm từ chất liệu da bò thật cao cấp. Phần mặt khóa kim loại, bề mặt nhám màu đen nam tính nhưng không mất vẻ tinh tế. Đầu khóa tân dễ sử dụng, chắc chắn giúp cố định độ dài thắt lưng vừa vặn với cơ thể. Thắt lưng có 2 tông màu cơ bản để dễ phối với nhiều kiểu trang phục khác nhau, phù hợp cho cả đi làm và đi chơi.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT415 - 11 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "865ae608208c4367a97d0c6b7ee3eca6",
+    "fields": {
+      "name": "TLT415 - 6",
+      "description": "Thắt lưng da nam TLT415 - 6 được làm từ chất liệu da bò thật cao cấp. Phần mặt khóa kim loại, bề mặt nhám màu đen nam tính nhưng không mất vẻ tinh tế. Đầu khóa tân dễ sử dụng, chắc chắn giúp cố định độ dài thắt lưng vừa vặn với cơ thể. Thắt lưng có 2 tông màu cơ bản để dễ phối với nhiều kiểu trang phục khác nhau, phù hợp cho cả đi làm và đi chơi.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT415 - 6 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "603f51f6431f4edc829e6cbc19b6eff1",
+    "fields": {
+      "name": "TLT415 - 9",
+      "description": "Thắt lưng da nam TLT415 - 9 được làm từ chất liệu da bò thật cao cấp. Phần mặt khóa kim loại, bề mặt nhám màu đen nam tính nhưng không mất vẻ tinh tế. Đầu khóa tân dễ sử dụng, chắc chắn giúp cố định độ dài thắt lưng vừa vặn với cơ thể. Thắt lưng có 2 tông màu cơ bản để dễ phối với nhiều kiểu trang phục khác nhau, phù hợp cho cả đi làm và đi chơi.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT415 - 9 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "afef10f4af044307b9cf6f4fcb9ced3f",
+    "fields": {
+      "name": "TLT415 - 2",
+      "description": "Thắt lưng da nam TLT415 - 2 được làm từ chất liệu da bò thật cao cấp. Phần mặt khóa kim loại, bề mặt nhám màu đen nam tính nhưng không mất vẻ tinh tế. Đầu khóa tân dễ sử dụng, chắc chắn giúp cố định độ dài thắt lưng vừa vặn với cơ thể. Thắt lưng có 2 tông màu cơ bản để dễ phối với nhiều kiểu trang phục khác nhau, phù hợp cho cả đi làm và đi chơi.\nChất liệu: Da bò  \nKích thước: Dài (110cm - 120cm) x Rộng 4cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa gài\nTrọng lượng: 250 grams\nBảo hành: 12 tháng \nXuất xứ: Việt Nam",
+      "summary": "Thắt lưng da nam TLT415 - 2 được làm từ chất liệu da bò",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c6a37ad4cccb4b7ab513fbe9dbe4034a",
+    "fields": {
+      "name": "TL051F4V8B",
+      "description": "Thắt lưng da LATA thích hợp cho mọi quý ông thời hiện đại. Mẫu thắt lưng được thiết kế chắc chắn, đem lại cảm giác thoải mái và vừa vặn cho người sử dụng. Thắt lưng nam da bò LATA TL051 với khóa gài tiện lợi, giúp quý ông thuận tiện hơn trong sử dụng.\nChất liệu dây: da bò thật 100 % , dây dài 120cm\nChất liệu mặt: hợp kim thép không gỉ, mặt dài 4cm\nKiểu khóa: khóa gài\nMàu sắc: Bò, Đen\nTrọng lượng: 250g\nXuất xứ: Việt Nam\nDây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ, sử dụng thích hợp đeo đi chơi, dự tiệc, dạo phố, đi làm... Sản phẩm phù hợp làm quà tặng vô cùng ý nghĩa và sang trọng.",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5afa7c1edd264186ab68076492e81cae",
+    "fields": {
+      "name": "TL340D4V16",
+      "description": "Thắt lưng nam da thật Lata TL340 được làm từ chất liệu da bò cao cấp, có độ bóng tự nhiên, bền đẹp theo thời gian. Mặt dây làm từ kim loại không gỉ, phần khóa trượt tự động giúp điều chỉnh dây lưng dễ dàng. Bản dây được thiết kế phù hợp với nhiều loại trang phục khác nhau, tôn vẻ nam tính, lịch thiệp cho phái mạnh.\nChất liệu: Da bò thật cao cấp\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa tự động\nTrọng lượng: 220g\nBảo hành: 12 tháng",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c2d3cb3186f04220b273a8ad29de00eb",
+    "fields": {
+      "name": "TL339N4V16",
+      "description": "Thắt lưng nam da thật Lata TL339N4V16 được làm từ chất liệu da bò cao cấp, có độ bóng tự nhiên, bền đẹp theo thời gian. Mặt dây làm từ kim loại không gỉ, phần khóa trượt tự động giúp điều chỉnh dây lưng dễ dàng. Bản dây được thiết kế phù hợp với nhiều loại trang phục khác nhau, tôn vẻ nam tính, lịch thiệp cho phái mạnh.\nChất liệu: Da bò thật cao cấp\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa tự động\nTrọng lượng: 220g\nBảo hành: 12 tháng",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "f3eca7c4c2ca40fa9556fda007b36766",
+    "fields": {
+      "name": "TL341N4V16",
+      "description": "Thắt lưng nam da thật Lata TL341N4V16 được làm từ chất liệu da bò cao cấp, có độ bóng tự nhiên, bền đẹp theo thời gian. Mặt dây làm từ kim loại không gỉ, phần khóa trượt tự động giúp điều chỉnh dây lưng dễ dàng. Bản dây được thiết kế phù hợp với nhiều loại trang phục khác nhau, tôn vẻ nam tính, lịch thiệp cho phái mạnh.\nChất liệu: Da bò thật cao cấp\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa tự động\nTrọng lượng: 220g\nBảo hành: 12 tháng",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9fe01ea8d7254c08a27953e541864be1",
+    "fields": {
+      "name": "TL345N4V15",
+      "description": "Thắt lưng nam da thật Lata TL345N4V15 được làm từ chất liệu da bò cao cấp, có độ bóng tự nhiên, bền đẹp theo thời gian. Mặt dây làm từ kim loại không gỉ, phần khóa trượt tự động giúp điều chỉnh dây lưng dễ dàng. Bản dây được thiết kế phù hợp với nhiều loại trang phục khác nhau, tôn vẻ nam tính, lịch thiệp cho phái mạnh.\nChất liệu: Da bò thật cao cấp\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa tự động\nTrọng lượng: 220g\nBảo hành: 12 tháng",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "27824a9140db4814951dde4664791e86",
+    "fields": {
+      "name": "TL320N47",
+      "description": "Thắt lưng nam da thật Lata TL320N47 được làm từ chất liệu da bò cao cấp, có độ bóng tự nhiên, bền đẹp theo thời gian. Mặt dây làm từ kim loại không gỉ, phần khóa trượt tự động giúp điều chỉnh dây lưng dễ dàng. Bản dây được thiết kế phù hợp với nhiều loại trang phục khác nhau, tôn vẻ nam tính, lịch thiệp cho phái mạnh.\nChất liệu: Da bò thật cao cấp\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa tự động\nTrọng lượng: 220g\nBảo hành: 12 tháng",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "6bad6da4f7ae48a9b112d90baa3d08fc",
+    "fields": {
+      "name": "TL324N47",
+      "description": "Thắt lưng nam da thật Lata TL324N47 được làm từ chất liệu da bò cao cấp, có độ bóng tự nhiên, bền đẹp theo thời gian. Mặt dây làm từ kim loại không gỉ, phần khóa trượt tự động giúp điều chỉnh dây lưng dễ dàng. Bản dây được thiết kế phù hợp với nhiều loại trang phục khác nhau, tôn vẻ nam tính, lịch thiệp cho phái mạnh.\nChất liệu: Da bò thật cao cấp\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa tự động\nTrọng lượng: 220g\nBảo hành: 12 tháng",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "902862abb6cd42f9a6d97d55df9ca8ae",
+    "fields": {
+      "name": "TL325N47",
+      "description": "Thắt lưng nam da thật Lata TL325N47 được làm từ chất liệu da bò cao cấp, có độ bóng tự nhiên, bền đẹp theo thời gian. Mặt dây làm từ kim loại không gỉ, phần khóa trượt tự động giúp điều chỉnh dây lưng dễ dàng. Bản dây được thiết kế phù hợp với nhiều loại trang phục khác nhau, tôn vẻ nam tính, lịch thiệp cho phái mạnh.\nChất liệu: Da bò thật cao cấp\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nMàu sắc: Nâu, đen\nKiểu khóa: Khóa tự động\nTrọng lượng: 220g\nBảo hành: 12 tháng",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "568ac1deac5c4326955694efa7cd4810",
+    "fields": {
+      "name": "TL271",
+      "description": "Thắt lưng nam da cá sấu Lata TL271 là phụ kiện thời trang nam cao cấp. Sản phẩm làm từ da cá sấu nguyên miếng được lấy từ phần bụng, không nối, đầu khóa liền dây tạo sự chắc chắn. Dây nịt da cá sấu sẽ giúp bạn tạo phong cách, đẳng cấp riêng.\nChất liệu: Da cá sấu\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nKiểu khóa: Khóa tân tự động\nTrọng lượng: 240 grams\nBảo Hành: 1 năm\nXuất xứ: Việt Nam",
+      "summary": "Dây thắt lưng với chất liệu da cá sấu sẽ giúp bẻ tạo phong cách, đẳng cấp riêng.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "946b288c8a4d42daaacd2d5f096af8ec",
+    "fields": {
+      "name": "TL264",
+      "description": "Thắt lưng nam da thật đầu khóa tăng Lata TL264 được xem như phụ kiện không thể thiếu trong tủ quần áo của các bạn nam. Chiếc thắt lưng được làm từ da bò nguyên miếng, không bong tróc, không thấm nước. Đầu khóa đơn giản, cùng với dây da được thiết kế sang trọng và tinh tế. Thích hợp làm quà tặng, hoặc sử dụng.\nChất liệu: Da bò thật\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nKiểu khóa: Khóa tăng tự động\nTrọng lượng: 240 grams\nBảo Hành: 1 năm\nXuất xứ: Việt Nam",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "3939e6db914b44d6ab7c9b2f4139aae5",
+    "fields": {
+      "name": "TL297",
+      "description": "Thắt lưng nam da thật đầu khóa tăng Lata TL297 được xem như phụ kiện không thể thiếu trong tủ quần áo của các bạn nam. Chiếc thắt lưng được làm từ da bò nguyên miếng, không bong tróc, không thấm nước. Đầu khóa đơn giản, cùng với dây da được thiết kế sang trọng và tinh tế. Thích hợp làm quà tặng, hoặc sử dụng.\nChất liệu: Da bò thật\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nKiểu khóa: Khóa tăng tự động\nTrọng lượng: 240 grams\nBảo Hành: 1 năm\nXuất xứ: Việt Nam",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ac98bc48eace40d7a0003e1d892556f3",
+    "fields": {
+      "name": "TL339D4V16",
+      "description": "Thắt lưng nam da thật đầu khóa tăng Lata TL339D4V16 được xem như phụ kiện không thể thiếu trong tủ quần áo của các bạn nam. Chiếc thắt lưng được làm từ da bò nguyên miếng, không bong tróc, không thấm nước. Đầu khóa đơn giản, cùng với dây da được thiết kế sang trọng và tinh tế. Thích hợp làm quà tặng, hoặc sử dụng.\nChất liệu: Da bò thật\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nKiểu khóa: Khóa tăng tự động\nTrọng lượng: 240 grams\nBảo Hành: 1 năm\nXuất xứ: Việt Nam",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "530b0ace3af448f887ecbf814d57b28e",
+    "fields": {
+      "name": "TL341D4V15",
+      "description": "Thắt lưng nam da thật đầu khóa tăng Lata TL341D4V15 được xem như phụ kiện không thể thiếu trong tủ quần áo của các bạn nam. Chiếc thắt lưng được làm từ da bò nguyên miếng, không bong tróc, không thấm nước. Đầu khóa đơn giản, cùng với dây da được thiết kế sang trọng và tinh tế. Thích hợp làm quà tặng, hoặc sử dụng.\nChất liệu: Da bò thật\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nKiểu khóa: Khóa tăng tự động\nTrọng lượng: 240 grams\nBảo Hành: 1 năm\nXuất xứ: Việt Nam",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c7890b139313491cabe9df4fdc36a8ec",
+    "fields": {
+      "name": "TL280",
+      "description": "Thắt lưng nam da thật đầu khóa tăng Lata TL280 được xem như phụ kiện không thể thiếu trong tủ quần áo của các bạn nam. Chiếc thắt lưng được làm từ da bò nguyên miếng, không bong tróc, không thấm nước. Đầu khóa đơn giản, cùng với dây da được thiết kế sang trọng và tinh tế. Thích hợp làm quà tặng, hoặc sử dụng.\nChất liệu: Da bò thật\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nKiểu khóa: Khóa tăng tự động\nTrọng lượng: 240 grams\nBảo Hành: 1 năm\nXuất xứ: Việt Nam",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a8c585b7b23c45b287641002e2f2cfc9",
+    "fields": {
+      "name": "TL306D416",
+      "description": "Thắt lưng nam da thật đầu khóa tăng Lata TL306D416  được xem như phụ kiện không thể thiếu trong tủ quần áo của các bạn nam. Chiếc thắt lưng được làm từ da bò nguyên miếng, không bong tróc, không thấm nước. Đầu khóa đơn giản, cùng với dây da được thiết kế sang trọng và tinh tế. Thích hợp làm quà tặng, hoặc sử dụng.\nChất liệu: Da bò thật\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nKiểu khóa: Khóa tăng tự động\nTrọng lượng: 240 grams\nBảo Hành: 1 năm\nXuất xứ: Việt Nam",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "cf448b14473949ffb8fe29331e73443d",
+    "fields": {
+      "name": "TL301D415",
+      "description": "Thắt lưng nam da thật đầu khóa tăng Lata TL301D415 được xem như phụ kiện không thể thiếu trong tủ quần áo của các bạn nam. Chiếc thắt lưng được làm từ da bò nguyên miếng, không bong tróc, không thấm nước. Đầu khóa đơn giản, cùng với dây da được thiết kế sang trọng và tinh tế. Thích hợp làm quà tặng, hoặc sử dụng.\nChất liệu: Da bò thật\nKích thước: Dài (110cm - 120cm) x Rộng 3.5cm\nKiểu khóa: Khóa tăng tự động\nTrọng lượng: 240 grams\nBảo Hành: 1 năm\nXuất xứ: Việt Nam",
+      "summary": "Dây thắt lưng với chất liệu da bò mềm mại và gọn nhẹ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
