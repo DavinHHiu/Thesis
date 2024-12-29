@@ -3010,5 +3010,365 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "037a0e868dd7405db7ddf4e034ac916a",
+    "fields": {
+      "name": "Slim",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "bda7513acacc47c9a23545b1652d83f8",
+    "fields": {
+      "name": "Straight",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "37b20b8696674b0db11c6f72ac06ffa9",
+    "fields": {
+      "name": "Straight cropped",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c296fd96393444b5a5e3db96396e7890",
+    "fields": {
+      "name": "Slim cropped",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "72d4d785a2574c289bda02ee907d1ccc",
+    "fields": {
+      "name": "Blue Straight",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "2be26274d1f34c5491c3ed8873e3698e",
+    "fields": {
+      "name": "Black Straight",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "967d1285cb354cf5aa365ca8a2453263",
+    "fields": {
+      "name": "Light Blue Straight",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "77029bf1f86e4b4a8385429eb2a6a2ed",
+    "fields": {
+      "name": "Blue Straight 3",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "d85de7595f544eb6bbeb5fd5ef5de05f",
+    "fields": {
+      "name": "Wide leg",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "acb381c42c9f4007872bf5ebb752fd42",
+    "fields": {
+      "name": "Dark Blue Straight",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1ddf6fe6c0114d6b94c404ba5c9f4d3a",
+    "fields": {
+      "name": "White Straight",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "651bc3dba1324a408144aaabdf4f1769",
+    "fields": {
+      "name": "Dark Blue Straight 2",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "3080915bffc04f1885e88b707b3b91fb",
+    "fields": {
+      "name": "Slim 2",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0895df7a771e4d36b5a8c7a45a4d8e40",
+    "fields": {
+      "name": "Slim cropped 2",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "21b25fe08a4a4eecafef796c5355358c",
+    "fields": {
+      "name": "Slim 3",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "fe96403c94f54ac68a2ca0a09ebfe0f4",
+    "fields": {
+      "name": "Blue Wide Leg",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "7cca6d70f4744c2aad973886a0e46809",
+    "fields": {
+      "name": "Blue Straight 2",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "6c67837d49104cfb9982ff42c4d732b2",
+    "fields": {
+      "name": "Slim 4",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "d2603bf798d24dcaaa29679fcae609d8",
+    "fields": {
+      "name": "Slim 5",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "66a66a04d12542edb0381dafd1c65478",
+    "fields": {
+      "name": "Slim 6",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "f011905fcbde40d3af9746951d3991e6",
+    "fields": {
+      "name": "Slim cropped 3",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9567bc47c72e4eecaba78a261d92a0d5",
+    "fields": {
+      "name": "Straight 2",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "f4894003cfd947f3b8ea3e1f3bb57766",
+    "fields": {
+      "name": "Straight cropped 2",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5c4088743bdc41b2b11baaba85c7f05a",
+    "fields": {
+      "name": "Flared",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "7a99fb6fc0894202b892539eb7bedda2",
+    "fields": {
+      "name": "Straight 3",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "587f347f8b6646bdbe4b44a844e12651",
+    "fields": {
+      "name": "Slim cropped 4",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "4e120e8d921340309f5f9539e7514de5",
+    "fields": {
+      "name": "Slim cropped 5",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "6fecf01c034848deba30cc24eddbfd98",
+    "fields": {
+      "name": "Straight 4",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "3d43428529104525a80b5fde0be23659",
+    "fields": {
+      "name": "Cocoon",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "af0330bbb97240cc85e31554968f67cb",
+    "fields": {
+      "name": "Slim 7",
+      "description": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "summary": "ống quần ôm nhưng co giãn khá thoải mái, hoạt động vô tư. Chất liệu thoáng mát ok",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
