@@ -15628,5 +15628,1475 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1564,
+    "fields": {
+      "image": "images\\product\\6e2c7cb5178644498faa53a596982eb1\\1.jpg",
+      "product_sku_id": "6e2c7cb5178644498faa53a596982eb1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1565,
+    "fields": {
+      "image": "images\\product\\6e2c7cb5178644498faa53a596982eb1\\2.jpg",
+      "product_sku_id": "6e2c7cb5178644498faa53a596982eb1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1566,
+    "fields": {
+      "image": "images\\product\\6e2c7cb5178644498faa53a596982eb1\\3.jpg",
+      "product_sku_id": "6e2c7cb5178644498faa53a596982eb1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1567,
+    "fields": {
+      "image": "images\\product\\6e2c7cb5178644498faa53a596982eb1\\4.jpg",
+      "product_sku_id": "6e2c7cb5178644498faa53a596982eb1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1568,
+    "fields": {
+      "image": "images\\product\\6e2c7cb5178644498faa53a596982eb1\\5.jpg",
+      "product_sku_id": "6e2c7cb5178644498faa53a596982eb1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1569,
+    "fields": {
+      "image": "images\\product\\6e2c7cb5178644498faa53a596982eb1\\1.jpg",
+      "product_sku_id": "6e2c7cb5178644498faa53a596982eb1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1570,
+    "fields": {
+      "image": "images\\product\\6e2c7cb5178644498faa53a596982eb1\\2.jpg",
+      "product_sku_id": "6e2c7cb5178644498faa53a596982eb1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1571,
+    "fields": {
+      "image": "images\\product\\6e2c7cb5178644498faa53a596982eb1\\3.jpg",
+      "product_sku_id": "6e2c7cb5178644498faa53a596982eb1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1572,
+    "fields": {
+      "image": "images\\product\\6e2c7cb5178644498faa53a596982eb1\\4.jpg",
+      "product_sku_id": "6e2c7cb5178644498faa53a596982eb1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1573,
+    "fields": {
+      "image": "images\\product\\6e2c7cb5178644498faa53a596982eb1\\5.jpg",
+      "product_sku_id": "6e2c7cb5178644498faa53a596982eb1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1574,
+    "fields": {
+      "image": "images\\product\\8d60c2f3dafb486bab385bb302a50bdc\\1.jpg",
+      "product_sku_id": "8d60c2f3dafb486bab385bb302a50bdc",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1575,
+    "fields": {
+      "image": "images\\product\\8d60c2f3dafb486bab385bb302a50bdc\\2.jpg",
+      "product_sku_id": "8d60c2f3dafb486bab385bb302a50bdc",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1576,
+    "fields": {
+      "image": "images\\product\\8d60c2f3dafb486bab385bb302a50bdc\\3.jpg",
+      "product_sku_id": "8d60c2f3dafb486bab385bb302a50bdc",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1577,
+    "fields": {
+      "image": "images\\product\\8d60c2f3dafb486bab385bb302a50bdc\\4.jpg",
+      "product_sku_id": "8d60c2f3dafb486bab385bb302a50bdc",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1578,
+    "fields": {
+      "image": "images\\product\\8d60c2f3dafb486bab385bb302a50bdc\\5.jpg",
+      "product_sku_id": "8d60c2f3dafb486bab385bb302a50bdc",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1579,
+    "fields": {
+      "image": "images\\product\\a0fef4f18b18449a8d990091bd51a703\\1.jpg",
+      "product_sku_id": "a0fef4f18b18449a8d990091bd51a703",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1580,
+    "fields": {
+      "image": "images\\product\\a0fef4f18b18449a8d990091bd51a703\\2.jpg",
+      "product_sku_id": "a0fef4f18b18449a8d990091bd51a703",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1581,
+    "fields": {
+      "image": "images\\product\\a0fef4f18b18449a8d990091bd51a703\\3.jpg",
+      "product_sku_id": "a0fef4f18b18449a8d990091bd51a703",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1582,
+    "fields": {
+      "image": "images\\product\\a0fef4f18b18449a8d990091bd51a703\\4.jpg",
+      "product_sku_id": "a0fef4f18b18449a8d990091bd51a703",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1583,
+    "fields": {
+      "image": "images\\product\\a0fef4f18b18449a8d990091bd51a703\\5.jpg",
+      "product_sku_id": "a0fef4f18b18449a8d990091bd51a703",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1584,
+    "fields": {
+      "image": "images\\product\\11784e2fa6f340e59887d561b2ae241a\\1.jpg",
+      "product_sku_id": "11784e2fa6f340e59887d561b2ae241a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1585,
+    "fields": {
+      "image": "images\\product\\11784e2fa6f340e59887d561b2ae241a\\2.jpg",
+      "product_sku_id": "11784e2fa6f340e59887d561b2ae241a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1586,
+    "fields": {
+      "image": "images\\product\\11784e2fa6f340e59887d561b2ae241a\\3.jpg",
+      "product_sku_id": "11784e2fa6f340e59887d561b2ae241a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1587,
+    "fields": {
+      "image": "images\\product\\11784e2fa6f340e59887d561b2ae241a\\4.jpg",
+      "product_sku_id": "11784e2fa6f340e59887d561b2ae241a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1588,
+    "fields": {
+      "image": "images\\product\\11784e2fa6f340e59887d561b2ae241a\\5.jpg",
+      "product_sku_id": "11784e2fa6f340e59887d561b2ae241a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1589,
+    "fields": {
+      "image": "images\\product\\a2aee263d977483db18f2b26b3389c00\\1.jpg",
+      "product_sku_id": "a2aee263d977483db18f2b26b3389c00",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1590,
+    "fields": {
+      "image": "images\\product\\a2aee263d977483db18f2b26b3389c00\\2.jpg",
+      "product_sku_id": "a2aee263d977483db18f2b26b3389c00",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1591,
+    "fields": {
+      "image": "images\\product\\a2aee263d977483db18f2b26b3389c00\\3.jpg",
+      "product_sku_id": "a2aee263d977483db18f2b26b3389c00",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1592,
+    "fields": {
+      "image": "images\\product\\a2aee263d977483db18f2b26b3389c00\\4.jpg",
+      "product_sku_id": "a2aee263d977483db18f2b26b3389c00",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1593,
+    "fields": {
+      "image": "images\\product\\a2aee263d977483db18f2b26b3389c00\\5.jpg",
+      "product_sku_id": "a2aee263d977483db18f2b26b3389c00",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1594,
+    "fields": {
+      "image": "images\\product\\965cea1379ce4c46891bd64d871dfcac\\1.jpg",
+      "product_sku_id": "965cea1379ce4c46891bd64d871dfcac",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1595,
+    "fields": {
+      "image": "images\\product\\965cea1379ce4c46891bd64d871dfcac\\2.jpg",
+      "product_sku_id": "965cea1379ce4c46891bd64d871dfcac",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1596,
+    "fields": {
+      "image": "images\\product\\965cea1379ce4c46891bd64d871dfcac\\3.jpg",
+      "product_sku_id": "965cea1379ce4c46891bd64d871dfcac",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1597,
+    "fields": {
+      "image": "images\\product\\965cea1379ce4c46891bd64d871dfcac\\4.jpg",
+      "product_sku_id": "965cea1379ce4c46891bd64d871dfcac",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1598,
+    "fields": {
+      "image": "images\\product\\965cea1379ce4c46891bd64d871dfcac\\5.jpg",
+      "product_sku_id": "965cea1379ce4c46891bd64d871dfcac",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1599,
+    "fields": {
+      "image": "images\\product\\77bb8ae7878d45459432bae58a94891e\\1.jpg",
+      "product_sku_id": "77bb8ae7878d45459432bae58a94891e",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1600,
+    "fields": {
+      "image": "images\\product\\77bb8ae7878d45459432bae58a94891e\\2.jpg",
+      "product_sku_id": "77bb8ae7878d45459432bae58a94891e",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1601,
+    "fields": {
+      "image": "images\\product\\77bb8ae7878d45459432bae58a94891e\\3.jpg",
+      "product_sku_id": "77bb8ae7878d45459432bae58a94891e",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1602,
+    "fields": {
+      "image": "images\\product\\77bb8ae7878d45459432bae58a94891e\\4.jpg",
+      "product_sku_id": "77bb8ae7878d45459432bae58a94891e",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1603,
+    "fields": {
+      "image": "images\\product\\77bb8ae7878d45459432bae58a94891e\\5.jpg",
+      "product_sku_id": "77bb8ae7878d45459432bae58a94891e",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1604,
+    "fields": {
+      "image": "images\\product\\b4f1496c757a4a6d8ed537ed505aa139\\1.jpg",
+      "product_sku_id": "b4f1496c757a4a6d8ed537ed505aa139",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1605,
+    "fields": {
+      "image": "images\\product\\b4f1496c757a4a6d8ed537ed505aa139\\2.jpg",
+      "product_sku_id": "b4f1496c757a4a6d8ed537ed505aa139",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1606,
+    "fields": {
+      "image": "images\\product\\b4f1496c757a4a6d8ed537ed505aa139\\3.jpg",
+      "product_sku_id": "b4f1496c757a4a6d8ed537ed505aa139",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1607,
+    "fields": {
+      "image": "images\\product\\b4f1496c757a4a6d8ed537ed505aa139\\4.jpg",
+      "product_sku_id": "b4f1496c757a4a6d8ed537ed505aa139",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1608,
+    "fields": {
+      "image": "images\\product\\b4f1496c757a4a6d8ed537ed505aa139\\5.jpg",
+      "product_sku_id": "b4f1496c757a4a6d8ed537ed505aa139",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1609,
+    "fields": {
+      "image": "images\\product\\833b7a30da2340c18663ef709d0799aa\\1.jpg",
+      "product_sku_id": "833b7a30da2340c18663ef709d0799aa",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1610,
+    "fields": {
+      "image": "images\\product\\833b7a30da2340c18663ef709d0799aa\\2.jpg",
+      "product_sku_id": "833b7a30da2340c18663ef709d0799aa",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1611,
+    "fields": {
+      "image": "images\\product\\833b7a30da2340c18663ef709d0799aa\\3.jpg",
+      "product_sku_id": "833b7a30da2340c18663ef709d0799aa",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1612,
+    "fields": {
+      "image": "images\\product\\833b7a30da2340c18663ef709d0799aa\\4.jpg",
+      "product_sku_id": "833b7a30da2340c18663ef709d0799aa",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1613,
+    "fields": {
+      "image": "images\\product\\833b7a30da2340c18663ef709d0799aa\\5.jpg",
+      "product_sku_id": "833b7a30da2340c18663ef709d0799aa",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1614,
+    "fields": {
+      "image": "images\\product\\483abc3ce5fb493a8333e1fd22a25cbd\\1.jpg",
+      "product_sku_id": "483abc3ce5fb493a8333e1fd22a25cbd",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1615,
+    "fields": {
+      "image": "images\\product\\483abc3ce5fb493a8333e1fd22a25cbd\\2.jpg",
+      "product_sku_id": "483abc3ce5fb493a8333e1fd22a25cbd",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1616,
+    "fields": {
+      "image": "images\\product\\483abc3ce5fb493a8333e1fd22a25cbd\\3.jpg",
+      "product_sku_id": "483abc3ce5fb493a8333e1fd22a25cbd",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1617,
+    "fields": {
+      "image": "images\\product\\483abc3ce5fb493a8333e1fd22a25cbd\\4.jpg",
+      "product_sku_id": "483abc3ce5fb493a8333e1fd22a25cbd",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1618,
+    "fields": {
+      "image": "images\\product\\f462891df9b64cf5aa1e0b9fbd4af00f\\1.jpg",
+      "product_sku_id": "f462891df9b64cf5aa1e0b9fbd4af00f",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1619,
+    "fields": {
+      "image": "images\\product\\f462891df9b64cf5aa1e0b9fbd4af00f\\2.jpg",
+      "product_sku_id": "f462891df9b64cf5aa1e0b9fbd4af00f",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1620,
+    "fields": {
+      "image": "images\\product\\f462891df9b64cf5aa1e0b9fbd4af00f\\3.jpg",
+      "product_sku_id": "f462891df9b64cf5aa1e0b9fbd4af00f",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1621,
+    "fields": {
+      "image": "images\\product\\f462891df9b64cf5aa1e0b9fbd4af00f\\4.jpg",
+      "product_sku_id": "f462891df9b64cf5aa1e0b9fbd4af00f",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1622,
+    "fields": {
+      "image": "images\\product\\2f986f7238ce4a8c9f585b414ae04250\\1.jpg",
+      "product_sku_id": "2f986f7238ce4a8c9f585b414ae04250",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1623,
+    "fields": {
+      "image": "images\\product\\2f986f7238ce4a8c9f585b414ae04250\\2.jpg",
+      "product_sku_id": "2f986f7238ce4a8c9f585b414ae04250",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1624,
+    "fields": {
+      "image": "images\\product\\2f986f7238ce4a8c9f585b414ae04250\\3.jpg",
+      "product_sku_id": "2f986f7238ce4a8c9f585b414ae04250",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1625,
+    "fields": {
+      "image": "images\\product\\2f986f7238ce4a8c9f585b414ae04250\\4.jpg",
+      "product_sku_id": "2f986f7238ce4a8c9f585b414ae04250",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1626,
+    "fields": {
+      "image": "images\\product\\2f986f7238ce4a8c9f585b414ae04250\\1.jpg",
+      "product_sku_id": "2f986f7238ce4a8c9f585b414ae04250",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1627,
+    "fields": {
+      "image": "images\\product\\2f986f7238ce4a8c9f585b414ae04250\\2.jpg",
+      "product_sku_id": "2f986f7238ce4a8c9f585b414ae04250",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1628,
+    "fields": {
+      "image": "images\\product\\2f986f7238ce4a8c9f585b414ae04250\\3.jpg",
+      "product_sku_id": "2f986f7238ce4a8c9f585b414ae04250",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1629,
+    "fields": {
+      "image": "images\\product\\2f986f7238ce4a8c9f585b414ae04250\\4.jpg",
+      "product_sku_id": "2f986f7238ce4a8c9f585b414ae04250",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1630,
+    "fields": {
+      "image": "images\\product\\c8f4657beafc4cabaa2085b856493e31\\1.jpg",
+      "product_sku_id": "c8f4657beafc4cabaa2085b856493e31",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1631,
+    "fields": {
+      "image": "images\\product\\c8f4657beafc4cabaa2085b856493e31\\2.jpg",
+      "product_sku_id": "c8f4657beafc4cabaa2085b856493e31",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1632,
+    "fields": {
+      "image": "images\\product\\c8f4657beafc4cabaa2085b856493e31\\3.jpg",
+      "product_sku_id": "c8f4657beafc4cabaa2085b856493e31",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1633,
+    "fields": {
+      "image": "images\\product\\c8f4657beafc4cabaa2085b856493e31\\4.jpg",
+      "product_sku_id": "c8f4657beafc4cabaa2085b856493e31",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1634,
+    "fields": {
+      "image": "images\\product\\83d6230bc4e341b290685effe1e7568f\\1.jpg",
+      "product_sku_id": "83d6230bc4e341b290685effe1e7568f",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1635,
+    "fields": {
+      "image": "images\\product\\83d6230bc4e341b290685effe1e7568f\\2.jpg",
+      "product_sku_id": "83d6230bc4e341b290685effe1e7568f",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1636,
+    "fields": {
+      "image": "images\\product\\83d6230bc4e341b290685effe1e7568f\\3.jpg",
+      "product_sku_id": "83d6230bc4e341b290685effe1e7568f",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1637,
+    "fields": {
+      "image": "images\\product\\83d6230bc4e341b290685effe1e7568f\\4.jpg",
+      "product_sku_id": "83d6230bc4e341b290685effe1e7568f",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1638,
+    "fields": {
+      "image": "images\\product\\83d6230bc4e341b290685effe1e7568f\\5.jpg",
+      "product_sku_id": "83d6230bc4e341b290685effe1e7568f",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1639,
+    "fields": {
+      "image": "images\\product\\3014fca9156842319e596784fff52222\\1.jpg",
+      "product_sku_id": "3014fca9156842319e596784fff52222",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1640,
+    "fields": {
+      "image": "images\\product\\3014fca9156842319e596784fff52222\\2.jpg",
+      "product_sku_id": "3014fca9156842319e596784fff52222",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1641,
+    "fields": {
+      "image": "images\\product\\3014fca9156842319e596784fff52222\\3.jpg",
+      "product_sku_id": "3014fca9156842319e596784fff52222",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1642,
+    "fields": {
+      "image": "images\\product\\3014fca9156842319e596784fff52222\\4.jpg",
+      "product_sku_id": "3014fca9156842319e596784fff52222",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1643,
+    "fields": {
+      "image": "images\\product\\3014fca9156842319e596784fff52222\\5.jpg",
+      "product_sku_id": "3014fca9156842319e596784fff52222",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1644,
+    "fields": {
+      "image": "images\\product\\53e7824ec4bf4344bcadff41a0da45bc\\1.jpg",
+      "product_sku_id": "53e7824ec4bf4344bcadff41a0da45bc",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1645,
+    "fields": {
+      "image": "images\\product\\53e7824ec4bf4344bcadff41a0da45bc\\2.jpg",
+      "product_sku_id": "53e7824ec4bf4344bcadff41a0da45bc",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1646,
+    "fields": {
+      "image": "images\\product\\53e7824ec4bf4344bcadff41a0da45bc\\3.jpg",
+      "product_sku_id": "53e7824ec4bf4344bcadff41a0da45bc",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1647,
+    "fields": {
+      "image": "images\\product\\53e7824ec4bf4344bcadff41a0da45bc\\4.jpg",
+      "product_sku_id": "53e7824ec4bf4344bcadff41a0da45bc",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1648,
+    "fields": {
+      "image": "images\\product\\2345f74311264ea9978b2325e9fc0a17\\1.jpg",
+      "product_sku_id": "2345f74311264ea9978b2325e9fc0a17",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1649,
+    "fields": {
+      "image": "images\\product\\2345f74311264ea9978b2325e9fc0a17\\2.jpg",
+      "product_sku_id": "2345f74311264ea9978b2325e9fc0a17",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1650,
+    "fields": {
+      "image": "images\\product\\2345f74311264ea9978b2325e9fc0a17\\3.jpg",
+      "product_sku_id": "2345f74311264ea9978b2325e9fc0a17",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1651,
+    "fields": {
+      "image": "images\\product\\2345f74311264ea9978b2325e9fc0a17\\4.jpg",
+      "product_sku_id": "2345f74311264ea9978b2325e9fc0a17",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1652,
+    "fields": {
+      "image": "images\\product\\2345f74311264ea9978b2325e9fc0a17\\5.jpg",
+      "product_sku_id": "2345f74311264ea9978b2325e9fc0a17",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1653,
+    "fields": {
+      "image": "images\\product\\26575c8d39cc4979b4802089586f33f7\\1.jpg",
+      "product_sku_id": "26575c8d39cc4979b4802089586f33f7",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1654,
+    "fields": {
+      "image": "images\\product\\26575c8d39cc4979b4802089586f33f7\\2.jpg",
+      "product_sku_id": "26575c8d39cc4979b4802089586f33f7",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1655,
+    "fields": {
+      "image": "images\\product\\26575c8d39cc4979b4802089586f33f7\\3.jpg",
+      "product_sku_id": "26575c8d39cc4979b4802089586f33f7",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1656,
+    "fields": {
+      "image": "images\\product\\26575c8d39cc4979b4802089586f33f7\\4.jpg",
+      "product_sku_id": "26575c8d39cc4979b4802089586f33f7",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1657,
+    "fields": {
+      "image": "images\\product\\26575c8d39cc4979b4802089586f33f7\\5.jpg",
+      "product_sku_id": "26575c8d39cc4979b4802089586f33f7",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1658,
+    "fields": {
+      "image": "images\\product\\ebee42f4f5f94fd4884b3466c75d782a\\1.jpg",
+      "product_sku_id": "ebee42f4f5f94fd4884b3466c75d782a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1659,
+    "fields": {
+      "image": "images\\product\\ebee42f4f5f94fd4884b3466c75d782a\\2.jpg",
+      "product_sku_id": "ebee42f4f5f94fd4884b3466c75d782a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1660,
+    "fields": {
+      "image": "images\\product\\ebee42f4f5f94fd4884b3466c75d782a\\3.jpg",
+      "product_sku_id": "ebee42f4f5f94fd4884b3466c75d782a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1661,
+    "fields": {
+      "image": "images\\product\\ebee42f4f5f94fd4884b3466c75d782a\\4.jpg",
+      "product_sku_id": "ebee42f4f5f94fd4884b3466c75d782a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1662,
+    "fields": {
+      "image": "images\\product\\ebee42f4f5f94fd4884b3466c75d782a\\5.jpg",
+      "product_sku_id": "ebee42f4f5f94fd4884b3466c75d782a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1663,
+    "fields": {
+      "image": "images\\product\\92770e6fc1a642cfb57cc3185064f4ba\\1.jpg",
+      "product_sku_id": "92770e6fc1a642cfb57cc3185064f4ba",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1664,
+    "fields": {
+      "image": "images\\product\\92770e6fc1a642cfb57cc3185064f4ba\\2.jpg",
+      "product_sku_id": "92770e6fc1a642cfb57cc3185064f4ba",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1665,
+    "fields": {
+      "image": "images\\product\\92770e6fc1a642cfb57cc3185064f4ba\\3.jpg",
+      "product_sku_id": "92770e6fc1a642cfb57cc3185064f4ba",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1666,
+    "fields": {
+      "image": "images\\product\\92770e6fc1a642cfb57cc3185064f4ba\\4.jpg",
+      "product_sku_id": "92770e6fc1a642cfb57cc3185064f4ba",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1667,
+    "fields": {
+      "image": "images\\product\\92770e6fc1a642cfb57cc3185064f4ba\\5.jpg",
+      "product_sku_id": "92770e6fc1a642cfb57cc3185064f4ba",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1668,
+    "fields": {
+      "image": "images\\product\\dd163f4443254e928c42f3db08f8667a\\1.jpg",
+      "product_sku_id": "dd163f4443254e928c42f3db08f8667a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1669,
+    "fields": {
+      "image": "images\\product\\dd163f4443254e928c42f3db08f8667a\\2.jpg",
+      "product_sku_id": "dd163f4443254e928c42f3db08f8667a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1670,
+    "fields": {
+      "image": "images\\product\\dd163f4443254e928c42f3db08f8667a\\3.jpg",
+      "product_sku_id": "dd163f4443254e928c42f3db08f8667a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1671,
+    "fields": {
+      "image": "images\\product\\dd163f4443254e928c42f3db08f8667a\\4.jpg",
+      "product_sku_id": "dd163f4443254e928c42f3db08f8667a",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1672,
+    "fields": {
+      "image": "images\\product\\eba26205076042f2b12e25509b84f1aa\\1.jpg",
+      "product_sku_id": "eba26205076042f2b12e25509b84f1aa",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1673,
+    "fields": {
+      "image": "images\\product\\eba26205076042f2b12e25509b84f1aa\\2.jpg",
+      "product_sku_id": "eba26205076042f2b12e25509b84f1aa",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1674,
+    "fields": {
+      "image": "images\\product\\eba26205076042f2b12e25509b84f1aa\\3.jpg",
+      "product_sku_id": "eba26205076042f2b12e25509b84f1aa",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1675,
+    "fields": {
+      "image": "images\\product\\eba26205076042f2b12e25509b84f1aa\\4.jpg",
+      "product_sku_id": "eba26205076042f2b12e25509b84f1aa",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1676,
+    "fields": {
+      "image": "images\\product\\eba26205076042f2b12e25509b84f1aa\\5.jpg",
+      "product_sku_id": "eba26205076042f2b12e25509b84f1aa",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1677,
+    "fields": {
+      "image": "images\\product\\8a63b15cd22c4c47b5e6d4e753dc3aa1\\1.jpg",
+      "product_sku_id": "8a63b15cd22c4c47b5e6d4e753dc3aa1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1678,
+    "fields": {
+      "image": "images\\product\\8a63b15cd22c4c47b5e6d4e753dc3aa1\\2.jpg",
+      "product_sku_id": "8a63b15cd22c4c47b5e6d4e753dc3aa1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1679,
+    "fields": {
+      "image": "images\\product\\8a63b15cd22c4c47b5e6d4e753dc3aa1\\3.jpg",
+      "product_sku_id": "8a63b15cd22c4c47b5e6d4e753dc3aa1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1680,
+    "fields": {
+      "image": "images\\product\\8a63b15cd22c4c47b5e6d4e753dc3aa1\\4.jpg",
+      "product_sku_id": "8a63b15cd22c4c47b5e6d4e753dc3aa1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1681,
+    "fields": {
+      "image": "images\\product\\8a63b15cd22c4c47b5e6d4e753dc3aa1\\5.jpg",
+      "product_sku_id": "8a63b15cd22c4c47b5e6d4e753dc3aa1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1682,
+    "fields": {
+      "image": "images\\product\\c9d2b478a7e4411bad00b0825f546c36\\1.jpg",
+      "product_sku_id": "c9d2b478a7e4411bad00b0825f546c36",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1683,
+    "fields": {
+      "image": "images\\product\\c9d2b478a7e4411bad00b0825f546c36\\2.jpg",
+      "product_sku_id": "c9d2b478a7e4411bad00b0825f546c36",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1684,
+    "fields": {
+      "image": "images\\product\\c9d2b478a7e4411bad00b0825f546c36\\3.jpg",
+      "product_sku_id": "c9d2b478a7e4411bad00b0825f546c36",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1685,
+    "fields": {
+      "image": "images\\product\\c9d2b478a7e4411bad00b0825f546c36\\4.jpg",
+      "product_sku_id": "c9d2b478a7e4411bad00b0825f546c36",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1686,
+    "fields": {
+      "image": "images\\product\\0c2983cf725b4cefb177ea2f1b1cd453\\1.jpg",
+      "product_sku_id": "0c2983cf725b4cefb177ea2f1b1cd453",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1687,
+    "fields": {
+      "image": "images\\product\\0c2983cf725b4cefb177ea2f1b1cd453\\2.jpg",
+      "product_sku_id": "0c2983cf725b4cefb177ea2f1b1cd453",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1688,
+    "fields": {
+      "image": "images\\product\\0c2983cf725b4cefb177ea2f1b1cd453\\3.jpg",
+      "product_sku_id": "0c2983cf725b4cefb177ea2f1b1cd453",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1689,
+    "fields": {
+      "image": "images\\product\\0c2983cf725b4cefb177ea2f1b1cd453\\4.jpg",
+      "product_sku_id": "0c2983cf725b4cefb177ea2f1b1cd453",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1690,
+    "fields": {
+      "image": "images\\product\\0c2983cf725b4cefb177ea2f1b1cd453\\5.jpg",
+      "product_sku_id": "0c2983cf725b4cefb177ea2f1b1cd453",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1691,
+    "fields": {
+      "image": "images\\product\\65c4b6bb52ad4e579d7fa073efed58d1\\1.jpg",
+      "product_sku_id": "65c4b6bb52ad4e579d7fa073efed58d1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1692,
+    "fields": {
+      "image": "images\\product\\65c4b6bb52ad4e579d7fa073efed58d1\\2.jpg",
+      "product_sku_id": "65c4b6bb52ad4e579d7fa073efed58d1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1693,
+    "fields": {
+      "image": "images\\product\\65c4b6bb52ad4e579d7fa073efed58d1\\3.jpg",
+      "product_sku_id": "65c4b6bb52ad4e579d7fa073efed58d1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1694,
+    "fields": {
+      "image": "images\\product\\65c4b6bb52ad4e579d7fa073efed58d1\\4.jpg",
+      "product_sku_id": "65c4b6bb52ad4e579d7fa073efed58d1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1695,
+    "fields": {
+      "image": "images\\product\\65c4b6bb52ad4e579d7fa073efed58d1\\5.jpg",
+      "product_sku_id": "65c4b6bb52ad4e579d7fa073efed58d1",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1696,
+    "fields": {
+      "image": "images\\product\\5e6773a77a6e4a27bd4712279b736068\\1.jpg",
+      "product_sku_id": "5e6773a77a6e4a27bd4712279b736068",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1697,
+    "fields": {
+      "image": "images\\product\\5e6773a77a6e4a27bd4712279b736068\\2.jpg",
+      "product_sku_id": "5e6773a77a6e4a27bd4712279b736068",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1698,
+    "fields": {
+      "image": "images\\product\\5e6773a77a6e4a27bd4712279b736068\\3.jpg",
+      "product_sku_id": "5e6773a77a6e4a27bd4712279b736068",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1699,
+    "fields": {
+      "image": "images\\product\\5e6773a77a6e4a27bd4712279b736068\\4.jpg",
+      "product_sku_id": "5e6773a77a6e4a27bd4712279b736068",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1700,
+    "fields": {
+      "image": "images\\product\\5e6773a77a6e4a27bd4712279b736068\\5.jpg",
+      "product_sku_id": "5e6773a77a6e4a27bd4712279b736068",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1701,
+    "fields": {
+      "image": "images\\product\\473219b8f42140278a9b12b2a7762fa6\\1.jpg",
+      "product_sku_id": "473219b8f42140278a9b12b2a7762fa6",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1702,
+    "fields": {
+      "image": "images\\product\\473219b8f42140278a9b12b2a7762fa6\\2.jpg",
+      "product_sku_id": "473219b8f42140278a9b12b2a7762fa6",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1703,
+    "fields": {
+      "image": "images\\product\\473219b8f42140278a9b12b2a7762fa6\\3.jpg",
+      "product_sku_id": "473219b8f42140278a9b12b2a7762fa6",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1704,
+    "fields": {
+      "image": "images\\product\\473219b8f42140278a9b12b2a7762fa6\\4.jpg",
+      "product_sku_id": "473219b8f42140278a9b12b2a7762fa6",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1705,
+    "fields": {
+      "image": "images\\product\\473219b8f42140278a9b12b2a7762fa6\\5.jpg",
+      "product_sku_id": "473219b8f42140278a9b12b2a7762fa6",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1706,
+    "fields": {
+      "image": "images\\product\\dbacd599b206407ba98563294014781e\\1.jpg",
+      "product_sku_id": "dbacd599b206407ba98563294014781e",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1707,
+    "fields": {
+      "image": "images\\product\\dbacd599b206407ba98563294014781e\\2.jpg",
+      "product_sku_id": "dbacd599b206407ba98563294014781e",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1708,
+    "fields": {
+      "image": "images\\product\\dbacd599b206407ba98563294014781e\\3.jpg",
+      "product_sku_id": "dbacd599b206407ba98563294014781e",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1709,
+    "fields": {
+      "image": "images\\product\\dbacd599b206407ba98563294014781e\\4.jpg",
+      "product_sku_id": "dbacd599b206407ba98563294014781e",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductImage",
+    "pk": 1710,
+    "fields": {
+      "image": "images\\product\\dbacd599b206407ba98563294014781e\\5.jpg",
+      "product_sku_id": "dbacd599b206407ba98563294014781e",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]

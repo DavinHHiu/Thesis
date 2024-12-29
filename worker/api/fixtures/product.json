@@ -3370,5 +3370,365 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "f6ce4bc5041d4cc0b40a8c419855536c",
+    "fields": {
+      "name": "Modal Easy Care. Fitted",
+      "description": "Áo sơ mi tay dài nam Modal Easy Care. Fitted",
+      "summary": "Áo sơ mi tay dài nam Modal Easy Care. Fitted",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ec57f198a64d4dc2850f60b17229dbe6",
+    "fields": {
+      "name": "Áo sơ mi tay ngắn nam.Fitted",
+      "description": "Áo sơ mi tay ngắn nam.Fitted",
+      "summary": "Áo sơ mi tay ngắn nam.Fitted",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "290bbaab3099460ba87b3ae2fc2098bd",
+    "fields": {
+      "name": "Áo sơ mi tay dài nam. Fitted",
+      "description": "Áo sơ mi tay dài nam. Fitted",
+      "summary": "Áo sơ mi tay dài nam. Fitted",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "8f0644cb30a04e8d9908099972ce69f8",
+    "fields": {
+      "name": "Áo sơ mi tay dài nam vải Nano Non Iron. Fitted",
+      "description": "Áo sơ mi tay dài nam vải Nano Non Iron. Fitted",
+      "summary": "Áo sơ mi tay dài nam vải Nano Non Iron. Fitted",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "7bb45be6fd94472fa14a36a66235aeea",
+    "fields": {
+      "name": "Áo sơ mi tay dài nam bamboo.Fitted",
+      "description": "Áo sơ mi tay dài nam bamboo.Fitted",
+      "summary": "Áo sơ mi tay dài nam bamboo.Fitted",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "cc449b94dcb6453698ba17e5f4746345",
+    "fields": {
+      "name": "Áo sơ mi nam dài tay. Fitted",
+      "description": "Áo sơ mi nam dài tay. Fitted",
+      "summary": "Áo sơ mi nam dài tay. Fitted",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0f9add7a9fdb4f629a5c2881ead28401",
+    "fields": {
+      "name": "Áo sơ mi nam tay dài. Fitted 2",
+      "description": "Áo sơ mi nam tay dài. Fitted 2",
+      "summary": "Áo sơ mi nam tay dài. Fitted 2",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "7610994883c24a83b3defd200601ccfc",
+    "fields": {
+      "name": "Áo sơ mi nam tay dài. Fitted 3",
+      "description": "Áo sơ mi nam tay dài. Fitted 3",
+      "summary": "Áo sơ mi nam tay dài. Fitted 3",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c7af3db3777545d79ce042878fa1bb03",
+    "fields": {
+      "name": "Áo sơ mi tay dài. Fitted 4",
+      "description": "Áo sơ mi tay dài. Fitted 4",
+      "summary": "Áo sơ mi tay dài. Fitted 4",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "8884c393de6c45348e737721d91e8a8e",
+    "fields": {
+      "name": "Áo sơ mi tay ngắn. Fitted",
+      "description": "Áo sơ mi tay ngắn. Fitted",
+      "summary": "Áo sơ mi tay ngắn. Fitted",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "bef7299b0c4c4616b6caa78c3b4ed7c7",
+    "fields": {
+      "name": "Áo sơ mi nam tay dài. Fitted 5",
+      "description": "Áo sơ mi nam tay dài. Fitted 5",
+      "summary": "Áo sơ mi nam tay dài. Fitted 5",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ea99e476f9ec4c149dce04965eeba08c",
+    "fields": {
+      "name": "Áo sơ mi dài tay. Fitted 2",
+      "description": "Áo sơ mi dài tay. Fitted 2",
+      "summary": "Áo sơ mi dài tay. Fitted 2",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "359d020cdb804417bbb774c81355a2a3",
+    "fields": {
+      "name": "Áo sơ mi tay dài nam. Fitted 7",
+      "description": "Áo sơ mi tay dài nam. Fitted 7",
+      "summary": "Áo sơ mi tay dài nam. Fitted 7",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "379add9feb174e2091473aeb9ec80921",
+    "fields": {
+      "name": "Áo sơ mi nam dài tay flannel. Loose",
+      "description": "Áo sơ mi nam dài tay flannel. Loose",
+      "summary": "Áo sơ mi nam dài tay flannel. Loose",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ef760c45da124868bd37588449172a12",
+    "fields": {
+      "name": "Áo sơ mi tay dài nam có hình thêu.Oversize",
+      "description": "Áo sơ mi tay dài nam có hình thêu.Oversize",
+      "summary": "Áo sơ mi tay dài nam có hình thêu.Oversize",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e24aa4b0a68747fb9c7a83abf9495dab",
+    "fields": {
+      "name": "Áo sơ mi nam dài tay flannel. Oversize",
+      "description": "Áo sơ mi nam dài tay flannel. Oversize",
+      "summary": "Áo sơ mi nam dài tay flannel. Oversize",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "8f22d5befaca4cb58f6be91a432dd2df",
+    "fields": {
+      "name": "Áo sơ mi tay dài nam S cafe. Fitted",
+      "description": "Áo sơ mi tay dài nam S cafe. Fitted",
+      "summary": "Áo sơ mi tay dài nam S cafe. Fitted",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "d1f0ea33dd764116bfa58b5fa5ddf3dc",
+    "fields": {
+      "name": "Áo sơ mi nam tay dài. Fitted 8",
+      "description": "Áo sơ mi nam tay dài. Fitted 8",
+      "summary": "Áo sơ mi nam tay dài. Fitted 8",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "634b5e1feeee4f5d8299f7ea73a5ae4c",
+    "fields": {
+      "name": "Áo sơ mi jean sọc. Oversize",
+      "description": "Áo sơ mi jean sọc. Oversize",
+      "summary": "Áo sơ mi jean sọc. Oversize",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "8c6d25c95e0a48eb8ac65941da54dcc9",
+    "fields": {
+      "name": "Áo sơ mi nam tay ngắn. Fitted 2",
+      "description": "Áo sơ mi nam tay ngắn. Fitted 2",
+      "summary": "Áo sơ mi nam tay ngắn. Fitted 2",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5003a7cf27fb4f809f3de5a143bcea5e",
+    "fields": {
+      "name": "Áo sơ mi dài tay. Fitted 9",
+      "description": "Áo sơ mi dài tay. Fitted 9",
+      "summary": "Áo sơ mi dài tay. Fitted 9",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a63ed705212a4488999ee0516a925623",
+    "fields": {
+      "name": "Áo sơ mi tay dài oxford thêu. Loose",
+      "description": "Áo sơ mi tay dài oxford thêu. Loose",
+      "summary": "Áo sơ mi tay dài oxford thêu. Loose",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e7d1bee54960440d9f2195ea37c06268",
+    "fields": {
+      "name": "Áo sơ mi tay dài oxford nhãn trang trí. Loose",
+      "description": "Áo sơ mi tay dài oxford nhãn trang trí. Loose",
+      "summary": "Áo sơ mi tay dài oxford nhãn trang trí. Loose",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "38cffe030a3545b38f96eb01eff5f561",
+    "fields": {
+      "name": "Áo sơ mi denim nam. Loose",
+      "description": "Áo sơ mi denim nam. Loose",
+      "summary": "Áo sơ mi denim nam. Loose",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e46e469a1ff145d79b704f5b8a513642",
+    "fields": {
+      "name": "Áo sơ mi tay dài nam sọc dọc. Loose",
+      "description": "Áo sơ mi tay dài nam sọc dọc. Loose",
+      "summary": "Áo sơ mi tay dài nam sọc dọc. Loose",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e2bebafdf3ec432481eab9f9b27e8137",
+    "fields": {
+      "name": "Áo sơ mi tay ngắn. Fitted 3",
+      "description": "Áo sơ mi tay ngắn. Fitted 3",
+      "summary": "Áo sơ mi tay ngắn. Fitted 3",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "542d5d541a274581807d3011f8ec0140",
+    "fields": {
+      "name": "Áo sơ mi nam sọc tay dài. Loose",
+      "description": "Áo sơ mi nam sọc tay dài. Loose",
+      "summary": "Áo sơ mi nam sọc tay dài. Loose",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "fa3c0032f8ed407197a3c798c989f0cd",
+    "fields": {
+      "name": "Áo sơ mi tay ngắn. Fitted 2",
+      "description": "Áo sơ mi tay ngắn. Fitted 2",
+      "summary": "Áo sơ mi tay ngắn. Fitted 2",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ebc4697a810e489f85ab27c1ddd14108",
+    "fields": {
+      "name": "Áo sơ mi jean unisex. Oversize",
+      "description": "Áo sơ mi jean unisex. Oversize",
+      "summary": "Áo sơ mi jean unisex. Oversize",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c843e3644b444036be74f92cce66b911",
+    "fields": {
+      "name": "Áo sơ mi tay ngắn có túi. Loose",
+      "description": "Áo sơ mi tay ngắn có túi. Loose",
+      "summary": "Áo sơ mi tay ngắn có túi. Loosev",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
