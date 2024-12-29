@@ -2650,5 +2650,365 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e7eaa9e486cc45aca2357f8415c121e4",
+    "fields": {
+      "name": "DEM053010NAU",
+      "description": "Dép Eva Phun Nam Biti's DEM053010NAU",
+      "summary": "Dép Eva Phun Nam Biti's DEM053010NAU",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ae0502eaf6884c4fb7c98e625bccda14",
+    "fields": {
+      "name": "DEM011200XNH",
+      "description": "Dép Eva Phun Nam Bit's DEM011200XNH",
+      "summary": "Dép Eva Phun Nam Bit's DEM011200XNH",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "3630fe75900f4adf9487a1fd0e090a6b",
+    "fields": {
+      "name": "BTM001277NAU",
+      "description": "Dép Nam Biti's BTM001277NAU",
+      "summary": "Dép Nam Biti's BTM001277NAU",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "adcddf01ba144c0fbb0e3c29a151d96e",
+    "fields": {
+      "name": "BPM001900NAU",
+      "description": "Dép Nam Biti's BPM001900NAU",
+      "summary": "Dép Nam Biti's BPM001900NAU",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "4d6a7674f1c243ca982e148c764205e7",
+    "fields": {
+      "name": "BXM002600",
+      "description": "Dép Xốp Nam Biti's BXM002600*",
+      "summary": "Dép Xốp Nam Biti's BXM002600*",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "cc99ba5e99964fb9ba2dc3f1e7a30e33",
+    "fields": {
+      "name": "BXM002000",
+      "description": "Dép Xốp Nam Biti's BXM002000*",
+      "summary": "Dép Xốp Nam Biti's BXM002000*",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "34657e862fb24bcaba0006f3a43adef4",
+    "fields": {
+      "name": "BRM001500",
+      "description": "Dép Nam Biti's BRM001500",
+      "summary": "Dép Nam Biti's BRM001500",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "aa933ceb35eb4434a0496fc499a82388",
+    "fields": {
+      "name": "BPM001200",
+      "description": "Dép Nam Biti's BPM001200",
+      "summary": "Dép Nam Biti's BPM001200",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "450c2024a207443982109742a82aa319",
+    "fields": {
+      "name": "BEM001400",
+      "description": "Dép Evaphun Nam Biti's BEM001400",
+      "summary": "Dép Evaphun Nam Biti's BEM001400",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "2f37fb3c94be4e7f8550474d6919d1eb",
+    "fields": {
+      "name": "DRM040600",
+      "description": "Dép Thông Dụng Si Đế Cao Su Nam Biti's DRM040600",
+      "summary": "Dép Thông Dụng Si Đế Cao Su Nam Biti's DRM040600",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5086c8ea4c9243d0bb226dc0788debf9",
+    "fields": {
+      "name": "BEM002300",
+      "description": "Dép Eva Phun Nam Biti's BEM002300",
+      "summary": "Dép Eva Phun Nam Biti's BEM002300",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "06e343b8eff24d8a8c7311b866d6d50f",
+    "fields": {
+      "name": "BXM000800",
+      "description": "Dép Xốp Nam BXM000800*",
+      "summary": "Dép Xốp Nam BXM000800*",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "877f74ec857e48aaaa3dbbb1c02c34ae",
+    "fields": {
+      "name": "DEM007300",
+      "description": "Dép Eva Phun Nam Biti's DEM007300",
+      "summary": "Dép Eva Phun Nam Biti's DEM007300",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c97660c8ce1347d09a2a6a5dcad7c8dc",
+    "fields": {
+      "name": "DEM011700",
+      "description": "Dép Eva Phun Nam Biti's DEM011700",
+      "summary": "Dép Eva Phun Nam Biti's DEM011700",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "3f3762f0dfe34954a970e26215b3be98",
+    "fields": {
+      "name": "DEM012500",
+      "description": "Dép Eva Phun Nam Biti's DEM012500",
+      "summary": "Dép Eva Phun Nam Biti's DEM012500",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ebd658152638432bb498d79086357827",
+    "fields": {
+      "name": "DEM012600",
+      "description": "Dép Eva Phun Nam Biti's DEM012600",
+      "summary": "Dép Eva Phun Nam Biti's DEM012600",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "bd38468a71f247648ecaf134fcb5d090",
+    "fields": {
+      "name": "X0221B000NAU",
+      "description": "Dép Xốp Nữ Biti's X0221B000NAU",
+      "summary": "Dép Xốp Nữ Biti's X0221B000NAU",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "7bbdfd4c25f94e289785bbeb86ea8e2b",
+    "fields": {
+      "name": "BYW000600NAU",
+      "description": "Dép Nữ Bit's BYW000600NAU",
+      "summary": "Dép Nữ Bit's BYW000600NAU",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "f72d51fbc343404c9f60faf89b104533",
+    "fields": {
+      "name": "BYW000500",
+      "description": "Dép Thông Dụng Nữ Biti's BYW000500",
+      "summary": "Dép Thông Dụng Nữ Biti's BYW000500",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "aaeebdd7ad234a85acefe035b3fca65b",
+    "fields": {
+      "name": "BEW001800",
+      "description": "Dép Eva Phun Nữ Biti's BEW001800",
+      "summary": "Dép Eva Phun Nữ Biti's BEW001800",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9b25eba2bcc242dfaf9e8cf4ffe8e7ae",
+    "fields": {
+      "name": "BXW005500",
+      "description": "Dép Xốp Nữ Biti's BXW005500*",
+      "summary": "Dép Xốp Nữ Biti's BXW005500*",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c3fc3ef8ea45459aa90067414a4e4fb5",
+    "fields": {
+      "name": "BXW007000",
+      "description": "Dép Xốp Nữ Biti's BXW007000*",
+      "summary": "Dép Xốp Nữ Biti's BXW007000*",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "653b59210be840299c8ba2fadfa02295",
+    "fields": {
+      "name": "BXW009100",
+      "description": "Dép Xốp Nữ Biti's BXW009100*",
+      "summary": "Dép Xốp Nữ Biti's BXW009100*",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "b07f6b2d8e684bfe82e4a9c59e2811ab",
+    "fields": {
+      "name": "BXW003000",
+      "description": "Dép Xốp Nữ Biti's BXW003000*",
+      "summary": "Dép Xốp Nữ Biti's BXW003000*",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c998335e8fbf478aa488e44aceac614b",
+    "fields": {
+      "name": "BXW002500",
+      "description": "Dép Xốp Nữ BXW002500*",
+      "summary": "Dép Xốp Nữ BXW002500*",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "49f1e020617a4cc987e6adb548badab6",
+    "fields": {
+      "name": "BXW002000",
+      "description": "Dép Xốp Nữ BXW002000*",
+      "summary": "Dép Xốp Nữ BXW002000*",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "f1ad8392c5d746819435642034e00fb2",
+    "fields": {
+      "name": "DXW196500",
+      "description": "Dép Xốp Nữ Biti's DXW196500*",
+      "summary": "Dép Xốp Nữ Biti's DXW196500*",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "64d3101d889e42d487b10800584d927a",
+    "fields": {
+      "name": "DLW041900",
+      "description": "Dép Lào Nữ DLW041900",
+      "summary": "Dép Lào Nữ DLW041900",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "15602d99a6bf450cb6c45690e260ba72",
+    "fields": {
+      "name": "BEW001300",
+      "description": "Dép Eva Phun Nữ Biti's BEW001300",
+      "summary": "Dép Eva Phun Nữ Biti's BEW001300",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "4123735cbc004ed08743f5e89987aabd",
+    "fields": {
+      "name": "BEW001102",
+      "description": "Dép Eva Phun Nữ Biti's BEW001102",
+      "summary": "Dép Eva Phun Nữ Biti's BEW001102",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
