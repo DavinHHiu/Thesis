@@ -1570,5 +1570,365 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "f033ed408f6b4d269a9198abd186b726",
+    "fields": {
+      "name": "Crossbody Saigonese",
+      "description": "Phối màu chỉ ánh bạc Metallic Silver Floss.\n11.076 mũi kim, mất 40 phút thêu (máy tự động) và trên 100 công đoạn may thủ công cho mỗi sản phẩm.\nKhoá kéo YKK và dây khoá Dual Black Hardened Lock.\nVải ParaNord trượt nước.\nLớp lót 210d chống thấm.\nDây đai Ultra Lift bản lớn 5cm.\nKhoá gài Pure Black.\nKích thước túi: ngang 26cm x cao 16cm x rộng 10cm. Đủ lớn cho ví dài, iPhone 16 Pro Max, phụ kiện như tai nghe, sạc dự phòng, cáp sạc...\nBên trong có một ngăn phụ với dây kéo rời để chứa những vật dụng cần để riêng hoặc ít sử dụng đến.\nĐã thử nghiệm đi mưa nhỏ từ 10-15 phút và vẫn giữ những vật dụng bên trong khô ráo.\nTúi có thể để vừa một combo body + len vừa phải. Như trong hình là đủ cho 16-35 Gmaster cùng body. Xin lưu ý: túi không phải là túi chống sốc chuyên dụng cho máy ảnh.",
+      "summary": "Phối màu chỉ ánh bạc Metallic Silver Floss.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "8f448f22a13e4476981cfbcebbbfbc55",
+    "fields": {
+      "name": "Urbanista messenger bag",
+      "description": "Một chiếc túi có ngăn đựng laptop riêng, vừa 13\" với tiêu chuẩn chống sốc Grimm DC Armored Protection Tech™ - bảo vệ tuyệt đối chiếc máy của bạn*. TUYỆT ĐỐI. Hãy xem hình chụp ngăn laptop lộn ngược ra ngoài để thấy độ dày và sự chắc chắn chúng tôi tạo ra.\nNgăn chính rộng với nhiều túi phụ. Đảm bảo chứa mọi thứ bạn cần, một cách ngăn nắp, cho cả ngày phiêu lưu trong thành phố. Ngăn chính vừa laptop 16\" nhe.\nThông số kích thước: 35 x 16 x 25cm (đáy ngang x dọc x cao). Ngang nắp: 41cm (nắp túi to hơn đáy). Dây đeo khi xả ra hết cỡ là 1m2.\nThích hợp để đựng máy chụp hình + lens*.",
+      "summary": "Một chiếc túi có ngăn đựng laptop riêng.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "6626fa888aae4756bd5135f6739de216",
+    "fields": {
+      "name": "Crossbody Westside",
+      "description": "Phối màu chỉ ánh bạc Metallic Silver Floss.\n11.076 mũi kim, mất 40 phút thêu (máy tự động) và trên 100 công đoạn may thủ công cho mỗi sản phẩm.\nKhoá kéo YKK và dây khoá Dual Black Hardened Lock.\nVải ParaNord trượt nước.\nLớp lót 210d chống thấm.\nDây đai Ultra Lift bản lớn 5cm.\nKhoá gài Pure Black.\nKích thước túi: ngang 26cm x cao 16cm x rộng 10cm. Đủ lớn cho ví dài, iPhone 16 Pro Max, phụ kiện như tai nghe, sạc dự phòng, cáp sạc...\nBên trong có một ngăn phụ với dây kéo rời để chứa những vật dụng cần để riêng hoặc ít sử dụng đến.\nĐã thử nghiệm đi mưa nhỏ từ 10-15 phút và vẫn giữ những vật dụng bên trong khô ráo.\nTúi có thể để vừa một combo body + len vừa phải. Như trong hình là đủ cho 16-35 Gmaster cùng body. Xin lưu ý: túi không phải là túi chống sốc chuyên dụng cho máy ảnh.",
+      "summary": "Phối màu chỉ ánh bạc Metallic Silver Floss.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9a6f7e6227634958920390fe8c7f6f37",
+    "fields": {
+      "name": "Crossbody Hanoian",
+      "description": "Phối màu chỉ vàng Yellow Butter D523.\n11.076 mũi kim, mất 40 phút thêu (máy tự động) và trên 100 công đoạn may thủ công cho mỗi sản phẩm.\nKhoá kéo YKK và dây khoá Dual Black Hardened Lock.\nVải ParaNord trượt nước.\nLớp lót 210d chống thấm.\nDây đai Ultra Lift bản lớn 5cm.\nKhoá gài Pure Black.\nKích thước túi: ngang 26cm x cao 16cm x rộng 10cm. Đủ lớn cho ví dài, iPhone 16 Pro Max, phụ kiện như tai nghe, sạc dự phòng, cáp sạc...\nBên trong có một ngăn phụ với dây kéo rời để chứa những vật dụng cần để riêng hoặc ít sử dụng đến.\nĐã thử nghiệm đi mưa nhỏ từ 10-15 phút và vẫn giữ những vật dụng bên trong khô ráo.\nTúi có thể để vừa một combo body + len vừa phải. Như trong hình là đủ cho 16-35 Gmaster cùng body. Xin lưu ý: túi không phải là túi chống sốc chuyên dụng cho máy ảnh",
+      "summary": "Phối màu chỉ vàng Yellow Butter D523.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e1a7a856fb524b3e888bbd0c4457d99e",
+    "fields": {
+      "name": "Crossbody Saigonese",
+      "description": "Phối màu: chỉ đỏ Red Burgundy.\n11.076 mũi kim, mất 40 phút thêu (máy tự động) và trên 100 công đoạn may thủ công cho mỗi sản phẩm.\nKhoá kéo YKK và dây khoá Dual Black Hardened Lock.\nVải ParaNord trượt nước.\nLớp lót 210d chống thấm.\nDây đai Ultra Lift bản lớn 5cm.\nKhoá gài Pure Black.\nKích thước túi: ngang 26cm x cao 16cm x rộng 10cm. Đủ lớn cho ví dài, iPhone 16 Pro Max, phụ kiện như tai nghe, sạc dự phòng, cáp sạc...\nBên trong có một ngăn phụ với dây kéo rời để chứa những vật dụng cần để riêng hoặc ít sử dụng đến.\nĐã thử nghiệm đi mưa nhỏ từ 10-15 phút và vẫn giữ những vật dụng bên trong khô ráo.\nTúi có thể để vừa một combo body + len vừa phải. Như trong hình là đủ cho 16-35 Gmaster cùng body. Xin lưu ý: túi không phải là túi chống sốc chuyên dụng cho máy ảnh",
+      "summary": "Phối màu: chỉ đỏ Red Burgundy.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "eb8ed0535632487184314fafc344c594",
+    "fields": {
+      "name": "Crossbody Vietnamien",
+      "description": "Phối màu chỉ ánh vàng Metallic Golden Floss AN-02.\n11.076 mũi kim, mất 40 phút thêu (máy tự động) và trên 100 công đoạn may thủ công cho mỗi sản phẩm.\nKhoá kéo YKK và dây khoá Dual Black Hardened Lock.\nVải ParaNord trượt nước.\nLớp lót 210d chống thấm.\nDây đai Ultra Lift bản lớn 5cm.\nKhoá gài Pure Black.\nKích thước túi: ngang 26cm x cao 16cm x rộng 10cm. Đủ lớn cho ví dài, iPhone 16 Pro Max, phụ kiện như tai nghe, sạc dự phòng, cáp sạc...\nBên trong có một ngăn phụ với dây kéo rời để chứa những vật dụng cần để riêng hoặc ít sử dụng đến.\nĐã thử nghiệm đi mưa nhỏ từ 10-15 phút và vẫn giữ những vật dụng bên trong khô ráo.\nTúi có thể để vừa một combo body + len vừa phải. Như trong hình là đủ cho 16-35 Gmaster cùng body. Xin lưu ý: túi không phải là túi chống sốc chuyên dụng cho máy ảnh",
+      "summary": "Phối màu chỉ ánh vàng Metallic Golden Floss AN-02.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e9d14899513d4b918dfdf57815f3f4a6",
+    "fields": {
+      "name": "Túi tote dây rút Cùng nhau 2",
+      "description": "Chất liệu: vải canvas poly. \nChi tiết in: in thăng hoa (dye-sublimation).\nTúi có 2 lớp, miệng túi có dây rút, bên trong có kha khá ngăn nhỏ để phân chia đồ đạc.\nKích thước: 33cm x 42cm x 10cm.",
+      "summary": "Chất liệu: vải canvas poly.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "80c24b3f10004aab8adff247d3497d24",
+    "fields": {
+      "name": "Túi tote dây rút Cùng nhau 1",
+      "description": "Chất liệu: vải canvas poly. \nChi tiết in: in thăng hoa (dye-sublimation).\nTúi có 2 lớp, miệng túi có dây rút, bên trong có kha khá ngăn nhỏ để phân chia đồ đạc.\nKích thước: 33cm x 42cm x 10cm.",
+      "summary": "Chất liệu: vải canvas poly.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0e3764156ec84b028151e1c962a552fb",
+    "fields": {
+      "name": "Volcanic Ash shoulder bag",
+      "description": "Phối màu: tie-dye đen\nKích thước: 35 x 40 cm (dọc x ngang)\nMột ngăn dây kéo chính : một ngăn dây kéo bên trong\nKỹ thuật thêu nổi 3D embroidery\nKhoá YKK",
+      "summary": "Phối màu: tie-dye đen",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "d557216b5e66430d89785ffdb20ad9ab",
+    "fields": {
+      "name": "Apa:k 02 - Adventure backpack",
+      "description": "Trọng lượng nhẹ: 650 gram.\nApa:k 02 có kích thước 42 x 30 x 13.5cm (cao x ngang x rộng).\nHệ thống quai đeo áp dụng công nghệ Đối kháng trọng lực a.k.a /Lite Anti-gravity Tech™/. Dày dặn hơn. Êm hơn. Hấp thụ chấn động tốt hơn. Ôm sát vai hơn.\nNgăn laptop với công nghệ Armored Protection Tech™, đảm bảo laptop của bạn được bảo vệ tối đa. Ngăn laptop chứa vừa lap 16\". Kích thước 39 x 27 x 2.5cm (cao x ngang x rộng).",
+      "summary": "Thiết kế ngăn chính với thể tích chứa đồ lớn.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "d59154d338d943468dc39b469484da38",
+    "fields": {
+      "name": "Apa:k 01 - Adventure backpack",
+      "description": "Trọng lượng nhẹ: 650 gram.\nApa:k 02 có kích thước 42 x 30 x 13.5cm (cao x ngang x rộng).\nHệ thống quai đeo áp dụng công nghệ Đối kháng trọng lực a.k.a /Lite Anti-gravity Tech™/. Dày dặn hơn. Êm hơn. Hấp thụ chấn động tốt hơn. Ôm sát vai hơn.\nNgăn laptop với công nghệ Armored Protection Tech™, đảm bảo laptop của bạn được bảo vệ tối đa. Ngăn laptop chứa vừa lap 16\". Kích thước 39 x 27 x 2.5cm (cao x ngang x rộng).",
+      "summary": "Thiết kế ngăn chính với thể tích chứa đồ lớn.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "51578472741842088855707f8e919221",
+    "fields": {
+      "name": "Bag Flower",
+      "description": "Lấy cảm hứng từ những cánh hoa Đồng Tiền gần gũi. Thiết kế Đáy của Flower Bag đặc biệt mô phỏng một đoá hoa với lõi nhuỵ ở giữa và những cánh hoa xung quanh.",
+      "summary": "Lấy cảm hứng từ những cánh hoa Đồng Tiền gần gũi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "43fc320cfe0f4288928dae20408829c8",
+    "fields": {
+      "name": "Bag SANDWICH",
+      "description": "Bakery collection với điểm thú vị ở thiết kế 2 dây quai ẩn dưới 2 miếng da PU hình học cách điệu tạo cho mặt túi có điểm nhấn, thoạt nhìn như 2 mắt cú mèo hay Pokemon nhỉ!",
+      "summary": "Mua túi vuông SANDWICH mang đi đựng sandwich!",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c72596ae690948909a835608a817dbe6",
+    "fields": {
+      "name": "Bag Banh Mi",
+      "description": "Bakery collection với điểm thú vị ở thiết kế 2 dây quai ẩn dưới 2 miếng da PU hình học cách điệu tạo cho mặt túi có điểm nhấn, thoạt nhìn như 2 mắt cú mèo hay Pokemon nhỉ!",
+      "summary": "Mua túi chữ nhật Bánh Mì đựng chiếc bánh mì dài!",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "2fb98cc1966c4365ae312d0f9c43a1c7",
+    "fields": {
+      "name": "TACOS handbag",
+      "description": "Bakery collection với điểm thú vị ở thiết kế 2 dây quai ẩn dưới 2 miếng da PU hình học cách điệu tạo cho mặt túi có điểm nhấn, thoạt nhìn như 2 mắt cú mèo hay Pokemon nhỉ!",
+      "summary": "Mua túi bán nguyệt TACOS đựng chiếc bánh Tacos!",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "81f3a03c8ba3482aa5de316614fb8503",
+    "fields": {
+      "name": "Bag Lace",
+      "description": "Túi LACE không chỉ có Y2K mà còn là sự kết hợp xu hướng túi xách hiện nay với dáng bán nguyệt và mặt sau túi vẫn giữ trơn cho những ai vẫn muốn mang túi không có quá nhiều chi tiết.\nĐiểm nhấn đặc biệt của túi là hông túi với chi tiết mô phỏng nút thắt dây giày thể thao. Trong tiếng anh, dây giày là Shoeslace nên CHAUTFIFTH đặt tên túi là LACE.",
+      "summary": "Túi LACE không lạ!",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "b41694adb97d4659bb4184cbc05aac3b",
+    "fields": {
+      "name": "Bag ROLL",
+      "description": "Tay cầm dây kéo cũng với hình dáng hình học cách điệu chăm chút!\nTúi ROLL đựng được ví dài và các vật dụng khác với không gian rộng rãi. Có 1 ngăn nhỏ bên trong. Túi thiết kế để đeo vai ngắn, đeo vai dài, đeo chéo; có thể tháo rời dây đeo để cầm tay.",
+      "summary": "Mua túi ROLL đựng chiếc bánh Bông Lan Cuộn!",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "99ff234239704ceb96e3ae3f4a8d3233",
+    "fields": {
+      "name": "Bag TACOS",
+      "description": "Tay cầm dây kéo cũng với hình dáng hình học cách điệu chăm chút!\nTúi Tacos size M đựng được ví dài và các vật dụng khác với không gian rộng rãi. Có 1 ngăn nhỏ bên trong. Túi thiết kế để đeo vai ngắn, đeo vai dài, đeo chéo; có thể tháo rời dây đeo để cầm tay.",
+      "summary": "Mua túi bán nguyệt TACOS lớn đựng chiếc bánh Tacos!",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e7d667735e58476da2ba21f0b6f8b16e",
+    "fields": {
+      "name": "EGG bag",
+      "description": "Tay cầm dây kéo cũng với hình dáng hình học cách điệu chăm chút!\nTúi EGG đựng được ví dài và các vật dụng khác với không gian rộng rãi. Có 1 ngăn nhỏ bên trong. Túi thiết kế để đeo vai ngắn, đeo vai dài, đeo chéo; có thể tháo rời dây đeo để cầm tay.",
+      "summary": "Mua túi EGG đựng nửa tá Trứng!",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "69868cb7f0d24a748fd4498efbc049a8",
+    "fields": {
+      "name": "Bag C2-Pocket Hobo",
+      "description": "Đây là dáng túi hobo với điểm độc đáo nằm ở đáy túi. Thay vì may thẳng suông theo kiểu may thông thường, túi được tỉ mỉ may đáy cong lên phần thân để khi đeo, nhìn mặt trước cũng có thể thấy điểm nhấn đáy cong này.",
+      "summary": "Túi Hobo C2 - một chiếc túi hobo có 2 ngăn túi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "57496d5b80e146e79305cc712cf0e004",
+    "fields": {
+      "name": "Bag BUTTERFLY",
+      "description": "Loài Bướm này là chủng Maxi - Maxi trong Maximalism (chủ nghĩa tối đa). Nếu đã lâu rồi chúng ta quan tâm đến Minimalism (chủ nghĩa tối giản) thì có thể thử một chút với chiếc túi không còn chỗ trống có thể thêm thắt chi tiết khác, một cảm giác đủ đầy #fulfilled nghĩa đen, một sự kỳ công trong sản xuất.",
+      "summary": "Chiếc túi này tên Bướm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e3f739a7c3044435b88ea79c4c5643bb",
+    "fields": {
+      "name": "Túi xách C5-Pocket",
+      "description": "Túi C5-pockets: tên túi được đặt theo chức năng sử dụng của túi. Đây là dòng túi nhiều ngăn (multi-pockets), cụ thể là size S với 5 ngăn của Chautfifth (tên ngắn gọn là C5).",
+      "summary": "Túi đựng được ví dài, điện thoại, sổ A6 và nhiều vật dụng khác hàng ngày khác.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1cf8b87cc8204503b018cff35f34432e",
+    "fields": {
+      "name": "Bag C6-Pocket",
+      "description": "Túi C6-pockets: tên túi được đặt theo chức năng sử dụng của túi. Đây là dòng túi nhiều ngăn (multi-pockets), cụ thể là size L (Laptop) với 6 ngăn của Chautfifth (tên ngắn gọn là C6).",
+      "summary": "Kích thước túi được thiết kế để đựng Laptop 15 inch case dày và đựng được rất nhiều vật dụng đi làm đi học khác.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5870e76619b84e6d9e2cb4db80cc5f2f",
+    "fields": {
+      "name": "KAMELEON handbag",
+      "description": "Nhưng, như một con tắc kè hoa, KAMELEON có thể biến đổi khôn lường. Đây cũng chính là ý tưởng cho tên gọi của chiếc túi xách mang phong cách tối giản này, theo tên tiếng Anh của tắc kè hoa - Chameleon.",
+      "summary": "Hình khối chữ nhật thực sự giản đơn...",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "f502f78a7bd54c4cbec73c87fb849695",
+    "fields": {
+      "name": "RAINDROP handbag",
+      "description": "Chiều Sài Gòn tắt nắng\nMưa rơi\nGiọt nước lạ lùng, tròn đầy, nhún nhảy\nMềm mại nhưng cá tính; đơn giản nhưng chẳng hòa tan vào dòng người\nÝ tưởng thiết kế từ Chautfifth, gửi tới những nàng tìm kiếm sự mới lạ trong những hình khối giản đơn.",
+      "summary": "Sự mới lạ trong những hình khối giản đơn.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "cd589876fe9946ecb4ee40c3db0c08e8",
+    "fields": {
+      "name": "Bag LACE RUFFLES",
+      "description": "LACE bag - Phiên bản DARK SUGAR! Sugar liên tưởng đến sự ngọt ngào; Dark Sugar như thể một sự ngọt ngào bí ẩn! Với chi tiết xếp li dún thoạt nhìn \"bánh bèo\" trong màu sắc nâu đen chấm chấm như thể đường đen rất chất! Hãy cùng \"Bánh Bèo Bí Ẩn\" với Chautfifth nhé!",
+      "summary": "Lace Dark Sugar with Ruffles (Small)",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "6e2ff24493a24d91982559b9b6315e0e",
+    "fields": {
+      "name": "Purple M BAG handbag",
+      "description": "Được thiết kế hình chữ nhật phẳng, túi còn có thể điều chỉnh dáng như chữ M với chất liệu tạo sự mềm mại tự nhiên, không cần theo một dáng cố định.\nĐiểm đặc biệt với hai hình khối trái tim cách điệu gắn vào hai bên miệng túi.\nTúi kèm 2 loại dây đeo đổi gió cho thiết kế.",
+      "summary": "Hình khối cách điệu kèm theo sự mềm mại tự nhiên tạo nên một thiết kế mới lạ cho túi M bag.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9b21f1f8dc124214b810e701bcab9064",
+    "fields": {
+      "name": "PAPER TOTE handbag",
+      "description": "Mô phỏng sự \"phẳng\" như tờ giấy - \"PAPER\", túi Tote PAPER được thiết kế đơn giản hình chữ nhật phẳng, tiện lợi và gọn nhẹ với điểm nhấn dây đeo khác màu hoặc cùng màu với thân túi mang đến cảm giác vừa thân quen vừa độc đáo. Dây được may từ đáy túi tạo độ chắc chắn khi mang đồ nặng như laptop và các vật dụng khác.",
+      "summary": "Mô phỏng sự \"phẳng\" như tờ giấy.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1a942dd5600746c8a0715e701964f2b5",
+    "fields": {
+      "name": "Bag 2-FACE",
+      "description": "Mang tinh thần \"In the middle of something\" của Chautfifth vào thiết kế, một mặt của túi dành cho Maximalism - More is More khi chú trọng vào từng chi tiết tỷ mỷ thiết kế được phủ gần như kín mặt túi; một mặt túi còn lại dành cho Minimalism - Less is Less - But Not Plain, đơn giản nhưng không thiếu điểm nhấn.",
+      "summary": "2-Face bag: một chiếc túi có thể dùng được 2 mặt",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "638e6c43bbcf474182ff38f8d3d3d591",
+    "fields": {
+      "name": "Bag Zigzag Star",
+      "description": "Mang tinh thần \"In the middle of something\" của Chautfifth vào thiết kế, một mặt của túi dành cho Maximalism - More is More khi chú trọng vào từng chi tiết tỷ mỷ thiết kế được phủ gần như kín mặt túi; một mặt túi còn lại dành cho Minimalism - Less is Less - But Not Plain, đơn giản nhưng không thiếu điểm nhấn.\nBùm, bạn đã làm được, không gian của bạn bớt cân đối nhưng phải chăng được kéo dài và thú vị hơn đúng không?",
+      "summary": "Túi Ngôi sao Zigzag",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
