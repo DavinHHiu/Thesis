@@ -1198,5 +1198,377 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "65aac670fb93470e95942ac7fe0c7d53",
+    "fields": {
+      "name": "Quần đi chơi 1.0",
+      "description": "Chất liệu: vải dù bền bỉ, có trọng lượng nhẹ, bề mặt mịn, không nhăn.\nGiặt máy thoải mái.\nKhông bạc màu. Luôn đẹp như mới.\nĐáy quần được gia cố chắc chắn, bao bung chỉ kể cả có xoạc ngang / té.\nQuần có 2 túi thường, kèm túi ẩn với khóa kéo YKK Nhật chính hãng, để điện thoại và những đồ quý giá luôn an toàn.\nForm quần suông và rộng. Trendy nhưng thoải mái.\nLưng thun mềm, co giãn tốt, có dây rút để điều chỉnh vừa với eo và không gây khó chịu.",
+      "summary": "Vải dù bền bỉ, có trọng lượng nhẹ, bề mặt mịn, không nhăn.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "31a0f4b2c6534bf0b496f58e2ff8afeb",
+    "fields": {
+      "name": "Flex shorts",
+      "description": "Chất liệu: 100% sợi tổng hợp Polyester với công nghệ dệt sợi dọc ATY và sợi ngang HIGH STRETCH, tạo ra độ bền lý tính vượt trội, cùng cảm giác trên da tương tự sợi Cotton tự nhiên.\nGiặt máy thoải mái. 𝗩𝗮̉𝗶 𝗰𝗵𝗼̂́𝗻𝗴 𝗻𝗵𝗮̆𝗻.\nKhông bạc màu. Luôn đẹp như mới.\nCo giãn cực tốt, mỏng nhưng không xuyên thấu, nhẹ nhưng vẫn đứng form, thấm hút mồ hôi tốt. Mặc đi đâu, làm gì cũng tiện: đi học, đi làm, đi trượt ván, đi chơi,... hoặc đi ngủ.\nĐáy quần được gia cố chắc chắn, bao bung chỉ kể cả có xoạc ngang / té.\nQuần có 4 túi thường được đánh bọ rất kỹ, kèm túi ẩn với khóa kéo YKK Nhật chính hãng, để điện thoại và những đồ quý giá luôn an toàn.\nForm quần suông và rộng. Trendy nhưng thoải mái.\nLưng thun mềm, co giãn tốt, có dây rút để điều chỉnh vừa với eo và không gây khó chịu.",
+      "summary": "100% sợi tổng hợp Polyester với công nghệ dệt sợi dọc ATY và sợi ngang HIGH STRETCH.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "439f55a55057415ca0396a8efe1a2554",
+    "fields": {
+      "name": "Basic shorts",
+      "description": "Lớp ngoài sử dụng GRDC Standard™ Fabric: 94% cotton 6% spandex, co dãn 4 chiều, ít nhăn, thấm hút tốt và mát mẻ, không tồn dư hóa chất gây ung thư, độ cầm màu cấp 4-5.\nLớp trong sử dụng thun lạnh, giúp quần thoáng mát, mềm mịn, và dễ chịu khi tiếp xúc với da.\nGiúp giảm đen da tối đa nhờ chất liệu vải chống tia UV (tia cực tím) lên đến 50+, tương đương với khả năng chống đến 98% tia UV gây hại. Tính năng đặc biệt này giúp hạn chế quá trình hình thành hắc tố melanin - sắc tố đen gây sẫm màu da.\nTúi ẩn khóa kéo YKK Nhật chính hãng. Để điện thoại và đồ quý giá luôn an toàn.\nGiặt máy thoải mái.",
+      "summary": "Lớp ngoài sử dụng Standard™ Fabric: 94% cotton 6% spandex",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "4e426e66f5aa42a5b9b52c7d45c25c82",
+    "fields": {
+      "name": "Worthy life shorts",
+      "description": "Lớp ngoài sử dụng GRDC Standard™ Fabric: 94% cotton 6% spandex, co dãn 4 chiều, ít nhăn, thấm hút tốt và mát mẻ, không tồn dư hóa chất gây ung thư, độ cầm màu cấp 4-5.\nLớp trong sử dụng thun lạnh, giúp quần thoáng mát, mềm mịn, và dễ chịu khi tiếp xúc với da.\nGiúp giảm đen da tối đa nhờ chất liệu vải chống tia UV (tia cực tím) lên đến 50+, tương đương với khả năng chống đến 98% tia UV gây hại. Tính năng đặc biệt này giúp hạn chế quá trình hình thành hắc tố melanin - sắc tố đen gây sẫm màu da.\nTúi ẩn khóa kéo YKK Nhật chính hãng. Để điện thoại và đồ quý giá luôn an toàn.\nGiặt máy thoải mái.",
+      "summary": "Lớp ngoài sử dụng Standard™ Fabric: 94% cotton 6% spandex",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "90baa7e029644d7fa64fe5e39c0329b5",
+    "fields": {
+      "name": "Cordless primitive UJ shorts",
+      "description": "Vải: khaki cotton.\nMàu sắc: đen.\nBox logo: thêu.\nHình in: decal phản quang từ Siser - Ý.\nDây khoá: YKK - Nhật.",
+      "summary": "Lớp ngoài sử dụng Standard™ Fabric: 94% cotton 6% spandex",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5361e78852ba4b0cae7b606c4071a4ea",
+    "fields": {
+      "name": "Westside Short",
+      "description": "Vải: Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời nhưng vẫn đủ mềm để không gây khó chịu khi sử dụng.\nTúi khoá kéo YKK ở hông phải - không còn việc rớt điện thoại hoặc đồ vật quan trọng.\nHoạ tiết Westside: in decal phản quang.\nTất cả đường may sử dụng chỉ cotton Coats - thương hiệu chỉ của Anh và được sản xuất tại Việt Nam.\nĐường đánh bọ/đính bọ (bar-tack stitch): là đường chỉ thêu nhiều lần tới và lui trong một khoảng nhỏ, xuất hiện trên dòng sản phẩm chất lượng cao, tại những vị trí thường chịu nhiều lực tác động, dễ rách, bung đường chỉ như miệng túi sau, miệng túi trước, con đỉa, đường baget (phần môi Phéc-mơ-tuya)…nhằm gia cố đường may và khiến sản phẩm bền theo năm tháng. Trong mẫu quần short Westside, Grimm DC sử dụng tổng cộng 9 đường đánh bọ tại 9 điểm khác nhau.",
+      "summary": "Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c0701b048c2741868d6ba4a67b426557",
+    "fields": {
+      "name": "SHORT FIRE TRACK",
+      "description": "Vải: Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời nhưng vẫn đủ mềm để không gây khó chịu khi sử dụng.\nTúi khoá kéo YKK ở hông phải - không còn việc rớt điện thoại hoặc đồ vật quan trọng.\nHoạ tiết Westside: in decal phản quang.\nTất cả đường may sử dụng chỉ cotton Coats - thương hiệu chỉ của Anh và được sản xuất tại Việt Nam.\nĐường đánh bọ/đính bọ (bar-tack stitch): là đường chỉ thêu nhiều lần tới và lui trong một khoảng nhỏ, xuất hiện trên dòng sản phẩm chất lượng cao, tại những vị trí thường chịu nhiều lực tác động, dễ rách, bung đường chỉ như miệng túi sau, miệng túi trước, con đỉa, đường baget (phần môi Phéc-mơ-tuya)…nhằm gia cố đường may và khiến sản phẩm bền theo năm tháng. Trong mẫu quần short Westside, Grimm DC sử dụng tổng cộng 9 đường đánh bọ tại 9 điểm khác nhau.",
+      "summary": "Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "6661346f18934ee1a7e490a309c25c3e",
+    "fields": {
+      "name": "SHORT BASIC LOGO",
+      "description": "Vải: Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời nhưng vẫn đủ mềm để không gây khó chịu khi sử dụng.\nTúi khoá kéo YKK ở hông phải - không còn việc rớt điện thoại hoặc đồ vật quan trọng.\nHoạ tiết Westside: in decal phản quang.\nTất cả đường may sử dụng chỉ cotton Coats - thương hiệu chỉ của Anh và được sản xuất tại Việt Nam.\nĐường đánh bọ/đính bọ (bar-tack stitch): là đường chỉ thêu nhiều lần tới và lui trong một khoảng nhỏ, xuất hiện trên dòng sản phẩm chất lượng cao, tại những vị trí thường chịu nhiều lực tác động, dễ rách, bung đường chỉ như miệng túi sau, miệng túi trước, con đỉa, đường baget (phần môi Phéc-mơ-tuya)…nhằm gia cố đường may và khiến sản phẩm bền theo năm tháng. Trong mẫu quần short Westside, Grimm DC sử dụng tổng cộng 9 đường đánh bọ tại 9 điểm khác nhau.",
+      "summary": "Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "38ca0190adf24cc2ab3bec5a5d396817",
+    "fields": {
+      "name": "BOLD TRACK SHORT",
+      "description": "Vải: Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời nhưng vẫn đủ mềm để không gây khó chịu khi sử dụng.\nTúi khoá kéo YKK ở hông phải - không còn việc rớt điện thoại hoặc đồ vật quan trọng.\nHoạ tiết Westside: in decal phản quang.\nTất cả đường may sử dụng chỉ cotton Coats - thương hiệu chỉ của Anh và được sản xuất tại Việt Nam.\nĐường đánh bọ/đính bọ (bar-tack stitch): là đường chỉ thêu nhiều lần tới và lui trong một khoảng nhỏ, xuất hiện trên dòng sản phẩm chất lượng cao, tại những vị trí thường chịu nhiều lực tác động, dễ rách, bung đường chỉ như miệng túi sau, miệng túi trước, con đỉa, đường baget (phần môi Phéc-mơ-tuya)…nhằm gia cố đường may và khiến sản phẩm bền theo năm tháng. Trong mẫu quần short Westside, Grimm DC sử dụng tổng cộng 9 đường đánh bọ tại 9 điểm khác nhau.",
+      "summary": "Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a3a49a21e50641908874e338cfa1d2d4",
+    "fields": {
+      "name": "CORDUROY SHORT",
+      "description": "Vải: Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời nhưng vẫn đủ mềm để không gây khó chịu khi sử dụng.\nTúi khoá kéo YKK ở hông phải - không còn việc rớt điện thoại hoặc đồ vật quan trọng.\nHoạ tiết Westside: in decal phản quang.\nTất cả đường may sử dụng chỉ cotton Coats - thương hiệu chỉ của Anh và được sản xuất tại Việt Nam.\nĐường đánh bọ/đính bọ (bar-tack stitch): là đường chỉ thêu nhiều lần tới và lui trong một khoảng nhỏ, xuất hiện trên dòng sản phẩm chất lượng cao, tại những vị trí thường chịu nhiều lực tác động, dễ rách, bung đường chỉ như miệng túi sau, miệng túi trước, con đỉa, đường baget (phần môi Phéc-mơ-tuya)…nhằm gia cố đường may và khiến sản phẩm bền theo năm tháng. Trong mẫu quần short Westside, Grimm DC sử dụng tổng cộng 9 đường đánh bọ tại 9 điểm khác nhau.",
+      "summary": "Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "20f6f85df57447ad9feeb3177a393d4a",
+    "fields": {
+      "name": "O18-Q5 SHORT BASIC LOGO",
+      "description": "Vải: Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời nhưng vẫn đủ mềm để không gây khó chịu khi sử dụng.\nTúi khoá kéo YKK ở hông phải - không còn việc rớt điện thoại hoặc đồ vật quan trọng.\nHoạ tiết Westside: in decal phản quang.\nTất cả đường may sử dụng chỉ cotton Coats - thương hiệu chỉ của Anh và được sản xuất tại Việt Nam.\nĐường đánh bọ/đính bọ (bar-tack stitch): là đường chỉ thêu nhiều lần tới và lui trong một khoảng nhỏ, xuất hiện trên dòng sản phẩm chất lượng cao, tại những vị trí thường chịu nhiều lực tác động, dễ rách, bung đường chỉ như miệng túi sau, miệng túi trước, con đỉa, đường baget (phần môi Phéc-mơ-tuya)…nhằm gia cố đường may và khiến sản phẩm bền theo năm tháng. Trong mẫu quần short Westside, Grimm DC sử dụng tổng cộng 9 đường đánh bọ tại 9 điểm khác nhau.",
+      "summary": "Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c251c0e4343349548688ce939c8b1612",
+    "fields": {
+      "name": "SHORT PYRAMID",
+      "description": "Vải: Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời nhưng vẫn đủ mềm để không gây khó chịu khi sử dụng.\nTúi khoá kéo YKK ở hông phải - không còn việc rớt điện thoại hoặc đồ vật quan trọng.\nHoạ tiết Westside: in decal phản quang.\nTất cả đường may sử dụng chỉ cotton Coats - thương hiệu chỉ của Anh và được sản xuất tại Việt Nam.\nĐường đánh bọ/đính bọ (bar-tack stitch): là đường chỉ thêu nhiều lần tới và lui trong một khoảng nhỏ, xuất hiện trên dòng sản phẩm chất lượng cao, tại những vị trí thường chịu nhiều lực tác động, dễ rách, bung đường chỉ như miệng túi sau, miệng túi trước, con đỉa, đường baget (phần môi Phéc-mơ-tuya)…nhằm gia cố đường may và khiến sản phẩm bền theo năm tháng. Trong mẫu quần short Westside, Grimm DC sử dụng tổng cộng 9 đường đánh bọ tại 9 điểm khác nhau.",
+      "summary": "Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "aee72f145ae14f33a48c4b5b6e7401f9",
+    "fields": {
+      "name": "SHORT FADE",
+      "description": "Vải: Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời nhưng vẫn đủ mềm để không gây khó chịu khi sử dụng.\nTúi khoá kéo YKK ở hông phải - không còn việc rớt điện thoại hoặc đồ vật quan trọng.\nHoạ tiết Westside: in decal phản quang.\nTất cả đường may sử dụng chỉ cotton Coats - thương hiệu chỉ của Anh và được sản xuất tại Việt Nam.\nĐường đánh bọ/đính bọ (bar-tack stitch): là đường chỉ thêu nhiều lần tới và lui trong một khoảng nhỏ, xuất hiện trên dòng sản phẩm chất lượng cao, tại những vị trí thường chịu nhiều lực tác động, dễ rách, bung đường chỉ như miệng túi sau, miệng túi trước, con đỉa, đường baget (phần môi Phéc-mơ-tuya)…nhằm gia cố đường may và khiến sản phẩm bền theo năm tháng. Trong mẫu quần short Westside, Grimm DC sử dụng tổng cộng 9 đường đánh bọ tại 9 điểm khác nhau.",
+      "summary": "Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c318a87c4f2340948a17e3b446223b46",
+    "fields": {
+      "name": "BASIC SHORT",
+      "description": "Vải: Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời nhưng vẫn đủ mềm để không gây khó chịu khi sử dụng.\nTúi khoá kéo YKK ở hông phải - không còn việc rớt điện thoại hoặc đồ vật quan trọng.\nHoạ tiết Westside: in decal phản quang.\nTất cả đường may sử dụng chỉ cotton Coats - thương hiệu chỉ của Anh và được sản xuất tại Việt Nam.\nĐường đánh bọ/đính bọ (bar-tack stitch): là đường chỉ thêu nhiều lần tới và lui trong một khoảng nhỏ, xuất hiện trên dòng sản phẩm chất lượng cao, tại những vị trí thường chịu nhiều lực tác động, dễ rách, bung đường chỉ như miệng túi sau, miệng túi trước, con đỉa, đường baget (phần môi Phéc-mơ-tuya)…nhằm gia cố đường may và khiến sản phẩm bền theo năm tháng. Trong mẫu quần short Westside, Grimm DC sử dụng tổng cộng 9 đường đánh bọ tại 9 điểm khác nhau.",
+      "summary": "Sử dụng vải Khaki cotton sớ vừa, đảm bảo độ dày cho các hoạt động ngoài trời.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "eeebbfbb92e54225bab3e106a1d4e0f1",
+    "fields": {
+      "name": "PLEATED CASUAL SHORTS",
+      "description": "Quần short tây ống suông, thiết kế unisex\nQuần có 2 túi mổ sâu phía trước và 2 túi phía sau\nCác chi tiết trang trí tạo điểm nhấn: nameplate inox, mạc vải, mạc nhựa logo HADES\nChất vải đứng form, có độ rủ\nChất liệu: Kaki 100% cotton",
+      "summary": "Quần short tây ống suông, thiết kế unisex.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "17cbb94553aa482e86f82c7517337446",
+    "fields": {
+      "name": "BEATNIZ SHORTS",
+      "description": "Quần lưng thun có dây rút, nút chặn kim loại\nLogo thêu 3D ở mặt trước quần\nRáp nối vải ở mặt trước và sau quần tạo các mảng màu tương phản\nCó hai túi mổ sâu ở mặt trước quần\n\nChất liệu: Dù",
+      "summary": "Quần lưng thun có dây rút, nút chặn kim loại",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "dce19114eb534e09b08f900faa2a50c3",
+    "fields": {
+      "name": "FRAYED EDGE SHORTS",
+      "description": "Quần short lưng thun có dây rút\nQuần có 2 túi mổ sâu phía trước được xử lý đắp rách tưa viền\nGraphic in kéo lụa ở túi\nCác chi tiết đường line rách dọc mặt trước và sau quần tạo điểm nhấn\nLai quần rách tưa viền\nChất liệu: Chân cua",
+      "summary": "Quần short lưng thun có dây rút",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0670a63dcdfd42119f21bf0c917c10f8",
+    "fields": {
+      "name": "STANDARD STRIPLE SHORTS",
+      "description": "Quần short lưng thun có dây rút\nQuần có 2 túi mổ sâu phía trước và 2 túi sau\nNameplate inox được đính ở túi sau\nTypo \"H\" được thêu ở mặt trước quần\nChất liệu: Cotton",
+      "summary": "Quần short lưng thun có dây rút",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5b023d4115a849889b556c4c084aaaa3",
+    "fields": {
+      "name": "WASH JEANS SHORT",
+      "description": "Quần jeans lửng thiết kế unisex, độ dài qua gối, ống rộng\nQuần được xử lý wash tạo hiệu ứng riêng biệt\nNổi bật với các chi tiết đắp vải kèm xử lý rách ở mặt trước\nCó 2 túi trước và 2 túi sau quần\nHoạ tiết chữ được thêu viền ở túi sau quần\nTag da HADES và nameplate inox trang trí\nChất liệu: Jean",
+      "summary": "Quần jeans lửng thiết kế unisex, độ dài qua gối, ống rộng",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "bdddde5190244b5ea9ff25d58f8ed12a",
+    "fields": {
+      "name": "LODESTAR MESH SHORT",
+      "description": "Quần lưng thun có dây rút\nCác chi tiết trên quần sử dụng kỹ thuật in kéo lụa\nVải thoáng mát, đứng form\nChất liệu: Vải lưới",
+      "summary": "Quần lưng thun có dây rút",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e839c3b9a1154ff694a72d478783bec4",
+    "fields": {
+      "name": "CHEVALIER KHAKI SHORTS",
+      "description": "Quần short kaki thiết kế unisex\nQuần có 2 túi hộp khoá kéo chắc chắn kèm dây trang trí\n2 túi mổ sâu phía trước\nLogo HADES thêu nổi cùng màu ở túi \nHình in kéo lụa \"H\" cách điệu phía sau\nCác chi tiết nút kim loại khác\nChất liệu: Kaki",
+      "summary": "Quần short kaki thiết kế unisex",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0ec0167eb4544e1da8ba99535e3e817a",
+    "fields": {
+      "name": "DRAWSTRING POCKET SHORTS",
+      "description": "Quần short kaki thiết kế unisex\nQuần có 2 túi hộp khoá dây rút\n2 túi mổ sâu phía trước\nChi tiết chữ \"H\" thêu nổi ở túi quần trước\nChất liệu: Kaki",
+      "summary": "Quần short kaki thiết kế unisex",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "26c1523e953f455ea47cd1c857ea4536",
+    "fields": {
+      "name": "S-ULTIMATE SHORTS",
+      "description": "SUPERTRAMP S-ULTIMATE SHORTS là mẫu quần dù kết hợp cùng nhiều \"công năng\" lần đầu xuất hiện tại BAD HABITS. SUPERTRAMP được ra mắt với những sản phẩm thiết kế ấn tượng, khẳng định tinh thần \"Dare to be out\". Cảm hứng từ những sự thoát khỏi ngột ngạo được tạo ra từ định kiến, chiến dịch DARE TO BE OUT được ra mắt với người kẻ đồng hành SUPERTRAMP cùng item S-ULTIMATE SHORTS. Sản phẩm được chọn lựa chất liệu 90% Nylon, 10% Spandex thoáng mát cùng phần mesh thoáng khí, thích hợp với vận động thể thao. Với vô số chi tiết được \"đính kèm: dây rút điều chỉnh, điểm nhấn với thắt treo khăn ở lưng quần, cùng đường xẻ ngắn dọc lai quần. Cùng với các yếu tố hỗ trợ linh hoạt, S-ULTIMATE SHORTS đáp ứng được các yếu tố ngoại cảnh và đạt được sự bền bỉ cùng thời gian.",
+      "summary": "SUPERTRAMP S-ULTIMATE SHORTS là mẫu quần dù kết hợp cùng nhiều \"công năng\"",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "8bb59a75c33749869e73c313bf85ff15",
+    "fields": {
+      "name": "BHDBTS SHORT",
+      "description": "Quần short kaki thiết kế unisex\nQuần có 2 túi hộp khoá dây rút\n2 túi mổ sâu phía trước\nChi tiết chữ \"H\" thêu nổi ở túi quần trước\nChất liệu: Nỉ",
+      "summary": "Quần short kaki thiết kế unisex",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "4a7eb270f7b949ad9af569634f295f20",
+    "fields": {
+      "name": "NON STANDARD TRACK SHORTS",
+      "description": "Quần short kaki thiết kế unisex\nQuần có 2 túi hộp khoá dây rút\n2 túi mổ sâu phía trước\nChi tiết chữ \"H\" thêu nổi ở túi quần trước\nChất liệu: Nỉ",
+      "summary": "Quần short kaki thiết kế unisex",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "bcdf6899cd1d4c7685c398f68deed98d",
+    "fields": {
+      "name": "SUPERTRAMP MULTI-POCKET SHORTS",
+      "description": "SUPERTRAMP MULTI-POCKET SHORTS là mẫu quần dù kết hợp cùng nhiều \"công năng\" lần đầu xuất hiện tại BAD HABITS. SUPERTRAMP được ra mắt với những sản phẩm thiết kế ấn tượng, khẳng định tinh thần \"Dare to be out\".Cảm hứng từ những sự thoát khỏi ngột ngạo được tạo ra từ định kiến, chiến dịch DARE TO BE OUT được ra mắt với người kẻ đồng hành SUPERTRAMP cùng item MULTI-POCKET SHORTS. Sản phẩm được chọn lựa chất liệu 100% Nylon với vô số chi tiết được \"đính kèm: patch thêu trên thân quần, cùng hệ thống túi rải rác khắp quần với sức chứa rộng rãi, điểm nét với dây rút có thể điều chỉnh. Cùng với các yếu tố hỗ trợ linh hoạt, MULTI-POCKET SHORTS đáp ứng được các yếu tố ngoại cảnh và đạt được sự bền bỉ cùng thời gian.",
+      "summary": "SUPERTRAMP MULTI-POCKET SHORTS là mẫu quần dù kết hợp cùng nhiều \"công năng\".",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "14cb5b0d3f364efbaad2d10356009f30",
+    "fields": {
+      "name": "METAL LABEL BAGGY SHORT",
+      "description": "Quần short kaki thiết kế unisex\nQuần có 2 túi hộp khoá dây rút\n2 túi mổ sâu phía trước\nChi tiết chữ thêu nổi ở túi quần trước\nChất liệu: Nỉ",
+      "summary": "Quần short kaki thiết kế unisex",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c63d646c685744e2aa75f2f646b602ea",
+    "fields": {
+      "name": "ML FREEFALL SHORTS",
+      "description": "Quần short kaki thiết kế unisex\nQuần có 2 túi hộp khoá dây rút\n2 túi mổ sâu phía trước\nChi tiết chữ thêu nổi ở túi quần trước\nChất liệu: Dù (100% Nylon)",
+      "summary": "Quần short kaki thiết kế unisex",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e1f1928d56a046248e7d12677fb937df",
+    "fields": {
+      "name": "DOUBLE DESTROYED BAGGY SHORT",
+      "description": "Quần short kaki thiết kế unisex\nQuần có 2 túi hộp khoá dây rút\n2 túi mổ sâu phía trước\nChi tiết chữ thêu nổi ở túi quần trước\nChất liệu: Jeans",
+      "summary": "Quần short Jeans thiết kế unisex",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0fb0be76b0c0480b82ced5e71bf27daf",
+    "fields": {
+      "name": "GREY SIGNATURE SHORT",
+      "description": "Quần short kaki thiết kế unisex\nQuần có 2 túi hộp khoá dây rút\n2 túi mổ sâu phía trước\nChi tiết chữ thêu nổi ở túi quần trước\nChất liệu: Dù",
+      "summary": "Quần short kaki thiết kế unisex",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c495422e97e04d00b9c3d61c83bc7212",
+    "fields": {
+      "name": "BROWN DISSTRESSED CARGO SHORT",
+      "description": "Hoạ tiết rách được làm thủ công\nQuần short kaki thiết kế unisex\nQuần có 2 túi hộp khoá dây rút\n2 túi mổ sâu phía trước\nChi tiết chữ thêu nổi ở túi quần trước\nChất liệu: Nỉ",
+      "summary": "Quần short kaki thiết kế unisex",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
