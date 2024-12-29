@@ -4090,5 +4090,365 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "3c8941fcd3204723b021052d6ac92e86",
+    "fields": {
+      "name": "Blazer Formal 2 nút",
+      "description": "Giúp trang phục trở nên thoải mái và dễ mặc hơn so với gam màu đen. Một thiết kế Blazer không gây sự choáng ngợp cho người đối diện. Nó tạo nên cái vẻ gần gũi, cởi mở nhưng vẫn khéo léo và thanh lịch cùng các gam màu như xám hay navy, có tính ứng dụng cao kết hợp được với quần âu, quần jeans và cả quần khaki, mang đến cho Cậu vẻ ngoài casual nhưng vẫn đẹp tinh tế.",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "33f0255096a043a180a51af6891b442a",
+    "fields": {
+      "name": "Navy Blazer Formal",
+      "description": "Giúp trang phục trở nên thoải mái và dễ mặc hơn so với gam màu đen. Một thiết kế Blazer không gây sự choáng ngợp cho người đối diện. Nó tạo nên cái vẻ gần gũi, cởi mở nhưng vẫn khéo léo và thanh lịch cùng các gam màu như xám hay navy, có tính ứng dụng cao kết hợp được với quần âu, quần jeans và cả quần khaki, mang đến cho Cậu vẻ ngoài casual nhưng vẫn đẹp tinh tế.",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c7390943fc9a45e88f84375ef359343f",
+    "fields": {
+      "name": "Beige Blazer Formal",
+      "description": "Giúp trang phục trở nên thoải mái và dễ mặc hơn so với gam màu đen. Một thiết kế Blazer không gây sự choáng ngợp cho người đối diện. Nó tạo nên cái vẻ gần gũi, cởi mở nhưng vẫn khéo léo và thanh lịch cùng các gam màu như xám hay navy, có tính ứng dụng cao kết hợp được với quần âu, quần jeans và cả quần khaki, mang đến cho Cậu vẻ ngoài casual nhưng vẫn đẹp tinh tế.",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9fdf4f17fa924f7fb18a14d402ee2d58",
+    "fields": {
+      "name": "Blazer Formal 6 nút",
+      "description": "Áo Blazer Caro 6 nút Phom Slimfit vừa vặn đối với cơ thể, áo có lớp lót ở trong giúp người mặc luôn thoáng khí và thấm hút mồ hôi cực tốt",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0d45aa82d612469281eea4c3e5602698",
+    "fields": {
+      "name": "Blazer Pre 1 nút đen",
+      "description": "Áo Blazer Caro 1 nút Phom Slimfit vừa vặn đối với cơ thể, áo có lớp lót ở trong giúp người mặc luôn thoáng khí và thấm hút mồ hôi cực tốt",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c0aa896fb5354b208be74032367831be",
+    "fields": {
+      "name": "Blazer Formal 2 nút sọc xanh đen",
+      "description": "Blazer kẻ sọc hai nút xanh đen, phom slim fit. Sản phẩm đồng bộ với quần tây sọc xanh đen.",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1cfc9cebcc8e4bf8b5d27b84781382e6",
+    "fields": {
+      "name": "Blazer Formal 4 Nút Xám Sọc Nhuyễn",
+      "description": "Áo vest 4 nút màu xám sọc nhuyễn này thật sự phù hợp với những buổi tiệc, chất vải xốp nhẹ và khá là mịn. Lớp lót phối màu đẹp mắt, thoáng khí. Cực tôn dáng, áo vest này sinh ra để dành riêng cho cậu.",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "aa57619f23034e8f87d4b094fa2dddb2",
+    "fields": {
+      "name": "BLAZER THEO BỘ SUIT THIẾT KẾ THOẢI MÁI",
+      "description": "Áo khoác blazer vải viscose, dáng slim fit. Cổ ve lật, ve áo kiểu chữ K. Dài tay, cổ tay có khuy cài. Có một túi may viền trước ngực và túi có nắp ở hai bên",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "20c958021ac1445489b3007a9065e1cd",
+    "fields": {
+      "name": "BLAZER THEO BỘ SUIT THIẾT KẾ THOẢI MÁI",
+      "description": "Áo khoác blazer vải viscose, dáng slim fit. Cổ ve lật, ve áo kiểu chữ K. Dài tay, cổ tay có khuy cài. Có một túi may viền trước ngực và túi có nắp ở hai bên",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "92207031af244687b31a9c3e89e507ee",
+    "fields": {
+      "name": "BLAZER THEO BỘ SUIT DÁNG SLIM FIT",
+      "description": "Áo khoác blazer vải viscose, dáng slim fit. Cổ ve lật, ve áo kiểu chữ K. Dài tay, cổ tay có khuy cài. Có một túi may viền trước ngực và túi có nắp ở hai bên",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "180342f51ea44247bd54e16334fc785c",
+    "fields": {
+      "name": "NAVY BLAZER THEO BỘ SUIT THIẾT KẾ THOẢI MÁI",
+      "description": "Áo khoác blazer vải viscose, dáng slim fit. Cổ ve lật, ve áo kiểu chữ K. Dài tay, cổ tay có khuy cài. Có một túi may viền trước ngực và túi có nắp ở hai bên",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e7231dd139734f0c99d1b4c5d9b51688",
+    "fields": {
+      "name": "BLUE BLAZER THEO BỘ SUIT THIẾT KẾ THOẢI MÁI",
+      "description": "Áo khoác blazer vải viscose, dáng slim fit. Cổ ve lật, ve áo kiểu chữ K. Dài tay, cổ tay có khuy cài. Có một túi may viền trước ngực và túi có nắp ở hai bên",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "57c5066c4c5d4f9bb31312d73aabfd08",
+    "fields": {
+      "name": "Blazer hai hàng khuy",
+      "description": "Áo blazer hai hàng khuy, dáng rộng bằng vải dệt thoi với ve xếch và khuy ở đằng trước. Độn vai, một túi ngực và các túi trước mổ viền có nắp. Xẻ tà đơn. Có lớp lót.\nKích cỡ:\nVai: Rộng: 47.0 cm (Kích cỡ M/T), Tay áo: Chiều dài: 62.5 cm (Kích cỡ M/T), Mặt sau: Chiều dài: 75.0 cm (Kích cỡ M/T)\nChiều cao: Dài\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nCổ áo: Ve xếch\nPhong cách: Áo Blazer, Hai hàng khuy\nĐường viền cổ áo: Cổ chữ V\nMô tả: Màu be nhạt, Màu trơn",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "40e5e07f1652415b902d2fae57bdc563",
+    "fields": {
+      "name": "Blazer dệt chéo eo chiết hẹp",
+      "description": "Áo blazer một hàng khuy bằng vải dệt chéo mềm có ve chữ V và một khuy ở phía trước. Eo chiết hẹp với ly chiết định hình ở phía trước. Độn vai, tay dài và túi trước mổ viền. Có lớp lót.\nKích cỡ:\nMặt sau: Chiều dài: 70.0 cm (Kích cỡ 40T), Vai: Rộng: 44.0 cm (Kích cỡ 40T), Tay áo: Chiều dài: 63.5 cm (Kích cỡ 40T)\nChiều cao: Dài\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm nhẹ\nCổ áo: Ve chữ V\nPhong cách: Một hàng khuy\nĐường viền cổ áo: Cổ chữ V\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: EVERYDAY FASHION",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "df5cc58a28554cb68f6460a844589d0b",
+    "fields": {
+      "name": "Blazer ôm",
+      "description": "Áo khoác ôm bằng vải dệt thoi với ve chữ V và một khuy cài ở thân trước. Các túi trước mổ viền, một khuy trang trí ở cổ tay áo và một đường xẻ giữa tà áo sau. Có lớp lót.\nKích cỡ:\nVai: Rộng: 39.9 cm (Kích cỡ 40T), Tay áo: Chiều dài: 61.2 cm (Kích cỡ 40T), Mặt sau: Chiều dài: 60.65 cm (Kích cỡ 40T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm nhẹ\nCổ áo: Ve chữ V\nPhong cách: Áo Blazer\nMô tả: Màu đen, Màu trơn",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ea3e86e4c547446b8a5b2fb8c2e1e55c",
+    "fields": {
+      "name": "Blazer một hàng khuy den",
+      "description": "Áo blazer một hàng khuy bằng vải dệt thoi có ve chữ V và cài một khuy đằng trước. Độn vai, tay dài có đường xẻ và khuy ở cổ tay và túi trước mổ viền có nắp. Xẻ tà đơn. Có lớp lót.\nKích cỡ:\nTay áo: Chiều dài: 61.0 cm (Kích cỡ M/T), Mặt sau: Chiều dài: 73.0 cm (Kích cỡ M/T), Vai: Rộng: 43.0 cm (Kích cỡ M/T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm vừa\nCổ áo: Ve chữ V\nPhong cách: Một hàng khuy\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: MODERN CLASSIC",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "dc20cfd6476c46fe9db4f35bfd6b0993",
+    "fields": {
+      "name": "Blazer một hàng khuy be",
+      "description": "Áo blazer một hàng khuy bằng vải dệt thoi có ve chữ V và cài một khuy đằng trước. Độn vai, tay dài có đường xẻ và khuy ở cổ tay và túi trước mổ viền có nắp. Xẻ tà đơn. Có lớp lót.\nKích cỡ:\nTay áo: Chiều dài: 61.0 cm (Kích cỡ M/T), Mặt sau: Chiều dài: 73.0 cm (Kích cỡ M/T), Vai: Rộng: 43.0 cm (Kích cỡ M/T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm vừa\nCổ áo: Ve chữ V\nPhong cách: Một hàng khuy\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: MODERN CLASSIC",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "6585ae8d1e284d77ac371a5a40075a2f",
+    "fields": {
+      "name": "Blazer một hàng khuy dáng thụng",
+      "description": "Áo blazer một hàng khuy bằng vải dệt thoi có ve chữ V và cài một khuy đằng trước. Độn vai, tay dài có đường xẻ và khuy ở cổ tay và túi trước mổ viền có nắp. Xẻ tà đơn. Có lớp lót.\nKích cỡ:\nTay áo: Chiều dài: 61.0 cm (Kích cỡ M/T), Mặt sau: Chiều dài: 73.0 cm (Kích cỡ M/T), Vai: Rộng: 43.0 cm (Kích cỡ M/T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm vừa\nCổ áo: Ve chữ V\nPhong cách: Một hàng khuy\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: MODERN CLASSIC",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "17b9bd4ebdbb46489d64d96771a66f6f",
+    "fields": {
+      "name": "Áo blazer knit dệt jacquard",
+      "description": "Áo blazer một hàng khuy bằng vải dệt thoi có ve chữ V và cài một khuy đằng trước. Độn vai, tay dài có đường xẻ và khuy ở cổ tay và túi trước mổ viền có nắp. Xẻ tà đơn. Có lớp lót.\nKích cỡ:\nTay áo: Chiều dài: 61.0 cm (Kích cỡ M/T), Mặt sau: Chiều dài: 73.0 cm (Kích cỡ M/T), Vai: Rộng: 43.0 cm (Kích cỡ M/T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm vừa\nCổ áo: Ve chữ V\nPhong cách: Một hàng khuy\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: MODERN CLASSIC",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "53815fcbfe8747e081f5b4a4d7aafe1c",
+    "fields": {
+      "name": "Áo blazer vải twill",
+      "description": "Áo blazer một hàng khuy bằng vải dệt thoi có ve chữ V và cài một khuy đằng trước. Độn vai, tay dài có đường xẻ và khuy ở cổ tay và túi trước mổ viền có nắp. Xẻ tà đơn. Có lớp lót.\nKích cỡ:\nTay áo: Chiều dài: 61.0 cm (Kích cỡ M/T), Mặt sau: Chiều dài: 73.0 cm (Kích cỡ M/T), Vai: Rộng: 43.0 cm (Kích cỡ M/T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm vừa\nCổ áo: Ve chữ V\nPhong cách: Một hàng khuy\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: MODERN CLASSIC",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "402bbf95fb07425dbbd3f722f802ae11",
+    "fields": {
+      "name": "Áo blazer knit dệt jacquard đột chỉ",
+      "description": "Áo blazer một hàng khuy bằng vải dệt thoi có ve chữ V và cài một khuy đằng trước. Độn vai, tay dài có đường xẻ và khuy ở cổ tay và túi trước mổ viền có nắp. Xẻ tà đơn. Có lớp lót.\nKích cỡ:\nTay áo: Chiều dài: 61.0 cm (Kích cỡ M/T), Mặt sau: Chiều dài: 73.0 cm (Kích cỡ M/T), Vai: Rộng: 43.0 cm (Kích cỡ M/T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm vừa\nCổ áo: Ve chữ V\nPhong cách: Một hàng khuy\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: MODERN CLASSIC",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "f079fb2fadfe43e08b204bbc13dc6098",
+    "fields": {
+      "name": "Áo blazer nam vạt đắp chéo",
+      "description": "Áo blazer một hàng khuy bằng vải dệt thoi có ve chữ V và cài một khuy đằng trước. Độn vai, tay dài có đường xẻ và khuy ở cổ tay và túi trước mổ viền có nắp. Xẻ tà đơn. Có lớp lót.\nKích cỡ:\nTay áo: Chiều dài: 61.0 cm (Kích cỡ M/T), Mặt sau: Chiều dài: 73.0 cm (Kích cỡ M/T), Vai: Rộng: 43.0 cm (Kích cỡ M/T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm vừa\nCổ áo: Ve chữ V\nPhong cách: Một hàng khuy\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: MODERN CLASSIC",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "13053b98c8464e9996381ba89c30e819",
+    "fields": {
+      "name": "Áo blazer nam linen",
+      "description": "Áo blazer một hàng khuy bằng vải dệt thoi có ve chữ V và cài một khuy đằng trước. Độn vai, tay dài có đường xẻ và khuy ở cổ tay và túi trước mổ viền có nắp. Xẻ tà đơn. Có lớp lót.\nKích cỡ:\nTay áo: Chiều dài: 61.0 cm (Kích cỡ M/T), Mặt sau: Chiều dài: 73.0 cm (Kích cỡ M/T), Vai: Rộng: 43.0 cm (Kích cỡ M/T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm vừa\nCổ áo: Ve chữ V\nPhong cách: Một hàng khuy\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: MODERN CLASSIC",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "3659ec2bfce34928a3d86ddb88426c54",
+    "fields": {
+      "name": "Áo blazer knit dệt jacquard đột chỉ",
+      "description": "Áo blazer một hàng khuy bằng vải dệt thoi có ve chữ V và cài một khuy đằng trước. Độn vai, tay dài có đường xẻ và khuy ở cổ tay và túi trước mổ viền có nắp. Xẻ tà đơn. Có lớp lót.\nKích cỡ:\nTay áo: Chiều dài: 61.0 cm (Kích cỡ M/T), Mặt sau: Chiều dài: 73.0 cm (Kích cỡ M/T), Vai: Rộng: 43.0 cm (Kích cỡ M/T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm vừa\nCổ áo: Ve chữ V\nPhong cách: Một hàng khuy\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: MODERN CLASSIC",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1168c58326bc4bc8a4a82eece7436b8f",
+    "fields": {
+      "name": "Áo blazer knitting",
+      "description": "Áo blazer một hàng khuy bằng vải dệt thoi có ve chữ V và cài một khuy đằng trước. Độn vai, tay dài có đường xẻ và khuy ở cổ tay và túi trước mổ viền có nắp. Xẻ tà đơn. Có lớp lót.\nKích cỡ:\nTay áo: Chiều dài: 61.0 cm (Kích cỡ M/T), Mặt sau: Chiều dài: 73.0 cm (Kích cỡ M/T), Vai: Rộng: 43.0 cm (Kích cỡ M/T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm vừa\nCổ áo: Ve chữ V\nPhong cách: Một hàng khuy\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: MODERN CLASSIC",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "bb291bb1eddf4417b37858feaf57f75c",
+    "fields": {
+      "name": "Áo blazer sọc",
+      "description": "Áo blazer một hàng khuy bằng vải dệt thoi có ve chữ V và cài một khuy đằng trước. Độn vai, tay dài có đường xẻ và khuy ở cổ tay và túi trước mổ viền có nắp. Xẻ tà đơn. Có lớp lót.\nKích cỡ:\nTay áo: Chiều dài: 61.0 cm (Kích cỡ M/T), Mặt sau: Chiều dài: 73.0 cm (Kích cỡ M/T), Vai: Rộng: 43.0 cm (Kích cỡ M/T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm vừa\nCổ áo: Ve chữ V\nPhong cách: Một hàng khuy\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: MODERN CLASSIC",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "df6fa0a96dfd47ccb714960f01a7726c",
+    "fields": {
+      "name": "Herringbone wool blend blazer",
+      "description": "Blazer pha len. Cổ ve áo có khía. Còng cài cúc có khe hở. Hai túi vá.",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "504a11ac17a8450ebd9c74d535adf779",
+    "fields": {
+      "name": "Wool blend blazer",
+      "description": "Blazer pha len. Cổ ve áo có khía. Còng cài cúc có khe hở. Hai túi vá. Viền có lỗ thông hơi phía sau.",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c66a1786f7904b74900f917e8f679985",
+    "fields": {
+      "name": "100% wool flowing blazer",
+      "description": "Blazer pha len. Cổ ve áo có khía. Còng cài cúc có khe hở. Hai túi vá. Viền có lỗ thông hơi phía sau.",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "652b054bef8b4335bf698fc443bb5f0f",
+    "fields": {
+      "name": "Brushed cotton micro-twill blazer",
+      "description": "Cổ ve áo có khía. Vải cotton chải: bề mặt mịn như nhung mang lại sự ấm áp và dễ chịu khi chạm vào. Vải twill siêu nhỏ. Còng ba nút. Cài hai nút. Hai túi nắp. Được làm từ 100% bông.",
+      "summary": "Polyester 67% - Viscose 29% - Spandex 4%",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
