@@ -2290,5 +2290,365 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "bf36507300b74e858a4345216f78e4ac",
+    "fields": {
+      "name": "BSM000701",
+      "description": "Giày Thể Thao Nam Biti's BSM000701.",
+      "summary": "Giày Thể Thao Nam Biti's BSM000701.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "de08783d19ae41fb873a2b780068a733",
+    "fields": {
+      "name": "BSM002900",
+      "description": "Giày Thông Dụng Eva Phun Nam Biti's E-Flow BSM002900",
+      "summary": "Giày Thông Dụng Eva Phun Nam Biti's E-Flow BSM002900",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "92d28ab3c59544b78a1836fc96db9b92",
+    "fields": {
+      "name": "GSM000200",
+      "description": "Giày Thể Thao Nam Gosto GSM000200",
+      "summary": "Giày Thể Thao Nam Gosto GSM000200",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1110a60e357f41bc8bf724173f1b522b",
+    "fields": {
+      "name": "BSM000900",
+      "description": "Giày Thể Thao Nam Biti's BSM000900",
+      "summary": "Giày Thể Thao Nam Biti's BSM000900",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5603aa61c42349d6a4c05d0e72277499",
+    "fields": {
+      "name": "BSM000600",
+      "description": "Giày Thể Thao Thông Dụng Nam Biti's Basic BSM000600",
+      "summary": "Giày Thể Thao Thông Dụng Nam Biti's Basic BSM000600",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "70412792bd4a412db451cd08c8205930",
+    "fields": {
+      "name": "DSM074500",
+      "description": "Giày Thể Thao Nam Biti's DSM074500",
+      "summary": "Giày Thể Thao Nam Biti's DSM074500",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "2d0ec4e57a65493e83b9249c2f44c0d8",
+    "fields": {
+      "name": "DSMH10201",
+      "description": "Giày Thể Thao Cao Cấp Nam DSMH10201",
+      "summary": "Giày Thể Thao Cao Cấp Nam DSMH10201",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "2233f308a06d4bb98b5ea30a43fdfdfc",
+    "fields": {
+      "name": "HSM004801CAM",
+      "description": "Giày Thể Thao Nam Biti’s Hunter Running LiteDual - Original Edition 2K24 HSM004801CAM",
+      "summary": "Giày Thể Thao Nam Biti’s Hunter Running LiteDual - Original Edition 2K24 HSM004801CAM",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c824ab1688f54e54860bc33f1f9cfe7c",
+    "fields": {
+      "name": "HSM007200KEM",
+      "description": "Giày Thể Thao Nam Biti's Hunter Jogging HSM007200KEM",
+      "summary": "Giày Thể Thao Nam Biti's Hunter Jogging HSM007200KEM",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "fd0f293fbdec49429bb15621fdab29f3",
+    "fields": {
+      "name": "HSM004800DEN",
+      "description": "Giày Chạy Bộ Nam Biti's Hunter Running 2.0 HSM004800DEN",
+      "summary": "Giày Chạy Bộ Nam Biti's Hunter Running 2.0 HSM004800DEN",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9c029e4d50a54f4cad4b900fef1abe60",
+    "fields": {
+      "name": "HSM004900DEN",
+      "description": "Giày Thể Thao Nam BITI’S HUNTER JOGGING FESTIVE: PLUTON COLLECTION HSM004900DEN",
+      "summary": "Giày Thể Thao Nam BITI’S HUNTER JOGGING FESTIVE: PLUTON COLLECTION HSM004900DEN",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "6b2c819d1f1b4b12bee02c8d2e5a11e7",
+    "fields": {
+      "name": "HSW002301HOG",
+      "description": "Giày Thể Thao Nữ Biti's Hunter X HSW002301HOG",
+      "summary": "Giày Thể Thao Nữ Biti's Hunter X HSW002301HOG",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "b8a619c5213b4eab9c0cd9fb08c1a0d0",
+    "fields": {
+      "name": "HSW008400TRG",
+      "description": "Giày Thể Thao Nữ Biti's Hunter X - BST Festive Collection HSW008400TRG",
+      "summary": "Giày Thể Thao Nữ Biti's Hunter X - BST Festive Collection HSW008400TRG",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "205daf938b3447c8aea5e32d53c197c3",
+    "fields": {
+      "name": "DSWH10000",
+      "description": "Giày Chạy Bộ Nữ Biti's Hunter Running DSWH10000",
+      "summary": "Giày Chạy Bộ Nữ Biti's Hunter Running DSWH10000",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a8a5bfa9e3a640d8bcd9e519a20e818e",
+    "fields": {
+      "name": "DSWH08300",
+      "description": "Giày Chạy Bộ Nữ Biti's Hunter Running DSWH08300",
+      "summary": "Giày Chạy Bộ Nữ Biti's Hunter Running DSWH08300",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0142993b332b47458dccb2ab572f26f5",
+    "fields": {
+      "name": "DSWH02800",
+      "description": "Giày Thể Thao Cao Cấp Nữ Biti's Hunter X Layered Upper DSWH02800",
+      "summary": "Giày Thể Thao Cao Cấp Nữ Biti's Hunter X Layered Upper DSWH02800",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "b4db3d5cc10046cc8b9fb83816b43a77",
+    "fields": {
+      "name": "HSW008500DEN",
+      "description": "Giày Thể Thao Nữ Biti’s Hunter Tennis HSW008500DEN",
+      "summary": "Giày Thể Thao Nữ Biti’s Hunter Tennis HSW008500DEN",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "c81be366715946f3905dfd60c9b5f03a",
+    "fields": {
+      "name": "HSW006500TRG",
+      "description": "Giày Thể Thao Nữ Biti's Hunter Street Go For Love 2K24 HSW006500TRG",
+      "summary": "Giày Thể Thao Nữ Biti's Hunter Street Go For Love 2K24 HSW006500TRG",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "3f94fa8b06c341719501edceb4d77a77",
+    "fields": {
+      "name": "DSWH08500DEN",
+      "description": "Giày Thể Thao Nữ Biti's Hunter Street Bloomin' Central DSWH08500DEN",
+      "summary": "Giày Thể Thao Nữ Biti's Hunter Street Bloomin' Central DSWH08500DEN",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "9c937ebdbe1c4700813ad32fe8aaeed9",
+    "fields": {
+      "name": "HSW004700TRG",
+      "description": "Giày Thể Thao Nữ Biti’s Hunter STREET FESTIVE: FERIA COLLECTION HSW004700TRG",
+      "summary": "Giày Thể Thao Nữ Biti’s Hunter STREET FESTIVE: FERIA COLLECTION HSW004700TRG",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "4f05b390959f4e34bb8edd596abe93b9",
+    "fields": {
+      "name": "HSW008600NAD",
+      "description": "Giày Thể Thao Nữ Biti's Hunter Street HSW008600NAD",
+      "summary": "Giày Thể Thao Nữ Biti's Hunter Street HSW008600NAD",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "4714dff2d3ef464e996bbcf78a8b2b7a",
+    "fields": {
+      "name": "HSW007506HOL",
+      "description": "Giày Thể Thao Nữ Biti’s Hunter X LiteDash - Original Edition 2K24 HSW007506HOL",
+      "summary": "Giày Thể Thao Nữ Biti’s Hunter X LiteDash - Original Edition 2K24 HSW007506HOL",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "07b7faa786be445a94a7581fa61dc38d",
+    "fields": {
+      "name": "BMM001777NAU",
+      "description": "Giày Mocasin Nam Biti's BMM001777NAU",
+      "summary": "Giày Mocasin Nam Biti's BMM001777NAU",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "43324c7336894bf294f38796801bbbe6",
+    "fields": {
+      "name": "BVM002277NAD",
+      "description": "Giày Tây Nam Biti's BVM002277NAD",
+      "summary": "Giày Tây Nam Biti's BVM002277NAD",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "11afb378b7fb420fb73ac8ebb041e3fa",
+    "fields": {
+      "name": "BVM002077",
+      "description": "Giày Tây Nam Biti's BVM002077",
+      "summary": "Giày Tây Nam Biti's BVM002077",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "d0fdb57d38d7436da20b02c0aad6a151",
+    "fields": {
+      "name": "BMM001377",
+      "description": "Giày Mocasin Nam Biti's BMM001377",
+      "summary": "Giày Mocasin Nam Biti's BMM001377",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "539adf85080645c4849822c446a30f5a",
+    "fields": {
+      "name": "BVM001277",
+      "description": "Giày Tây Nam Biti's BVM001277",
+      "summary": "Giày Tây Nam Biti's BVM001277",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "307f2330bb9345ba94c9bef321a74f72",
+    "fields": {
+      "name": "BVM001588",
+      "description": "Giày Tây Nam Biti's BVM001588",
+      "summary": "Giày Tây Nam Biti's BVM001588",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ce09a75d9eed49bda5391fa8eaa11105",
+    "fields": {
+      "name": "BVM001788",
+      "description": "Giày Tây Boot Nam Biti's BVM001788",
+      "summary": "Giày Tây Boot Nam Biti's BVM001788",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a7e4144a064a428a9c93170dea775bfb",
+    "fields": {
+      "name": "BSM003700XNH",
+      "description": "Giày Thể Thao Cao Cấp Nam Biti's BSM003700XNH",
+      "summary": "Giày Thể Thao Cao Cấp Nam Biti's BSM003700XNH",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
