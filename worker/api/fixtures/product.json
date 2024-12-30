@@ -5170,5 +5170,377 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "dd7913b3529e4503a354625a09020b8b",
+    "fields": {
+      "name": "Áo nỉ dáng rộng",
+      "description": "Áo dáng rộng bằng vải nỉ với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ vịt\nMô tả: Màu be nhạt, Màu trơn\nNhóm khách hàng: BASICS, DIVIDED",
+      "summary": "Áo dáng rộng bằng vải nỉ với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "6448657ac1b14f2595e9520af2c763a4",
+    "fields": {
+      "name": "Áo nỉ dáng rộng 2",
+      "description": "Áo dáng rộng bằng vải nỉ với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ vịt\nMô tả: Màu be nhạt, Màu trơn\nNhóm khách hàng: BASICS, DIVIDED",
+      "summary": "Áo dáng rộng bằng vải nỉ với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "b62a6c5c85b947ffae70abb3739b7061",
+    "fields": {
+      "name": "Áo nỉ in hình",
+      "description": "Áo dáng rộng bằng vải nỉ với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ vịt\nMô tả: Màu be nhạt, Màu trơn\nNhóm khách hàng: BASICS, DIVIDED",
+      "summary": "Áo dáng rộng bằng vải nỉ với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "b823ed08e94d4f98bf4fe9fa6a3d7558",
+    "fields": {
+      "name": "Áo nỉ hoạ tiết chữ",
+      "description": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ phía trước. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu trắng/Xanh tím than, Le Marais, Paris, est 1947, Kẻ sọc",
+      "summary": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ phía trước.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "8a2a49d6e98d49c2b3bce3eacb28ce3e",
+    "fields": {
+      "name": "Áo nỉ hoạ tiết chữ 2",
+      "description": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ trên ngực. Vai ráp trễ, tay dài với viền gân nổi quanh cổ và ở cổ tay và gấu.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ vịt\nMô tả: Màu xám đậm/Trắng, J'aime Paris. 73",
+      "summary": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ trên ngực.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ca367378968446c98597b76b1741c187",
+    "fields": {
+      "name": "Áo nỉ dáng rộng 3",
+      "description": "Áo dáng rộng bằng vải nỉ với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ vịt\nMô tả: Màu xám nhạt đốm, Màu trơn\nNhóm khách hàng: BASICS, DIVIDED",
+      "summary": "Áo dáng rộng bằng vải nỉ với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "617fff1944bc4d54a2c4e1b8fe9d4192",
+    "fields": {
+      "name": "Áo nỉ dáng thụng có hoạ tiết",
+      "description": "Áo dáng thụng bằng vải nỉ với mặt trái chải xù mềm có hoạ tiết. Cổ tròn, viền gân nổi, vai ráp trễ nhiều và tay dài. Cổ tay và gấu bo gân nổi.\nSize của người mẫu: Người mẫu cao 175cm/5'9\" mặc size S\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu đỏ/Trắng/Đen, Qlty. NYC, New York\nNhóm khách hàng: DIVIDED",
+      "summary": "Áo dáng thụng bằng vải nỉ với mặt trái chải xù mềm có hoạ tiết.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a373e05817b2472fa07566f2b3221c0e",
+    "fields": {
+      "name": "Áo nỉ",
+      "description": "Áo bằng vải nỉ mềm làm từ cotton pha có cổ tròn và tay dài, ráp lăng. Viền gân nổi quanh cổ, cổ tay và gấu. Mặt trái chải xù mềm.\nKích cỡ:\nTay áo: Chiều dài: 75.0 cm (Kích cỡ M/T), Mặt trước: Chiều dài: 68.0 cm (Kích cỡ M/T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm vừa\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nKiểu tay áo: Ống tay ráp vai\nMô tả: Màu be đậm, Màu trơn\nNhóm khách hàng: BASICS",
+      "summary": "Áo bằng vải nỉ mềm làm từ cotton pha có cổ tròn và tay dài, ráp lăng.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a33a18609b8544dd9b22c91b98258039",
+    "fields": {
+      "name": "Áo nỉ dáng rộng 4",
+      "description": "Áo dáng rộng bằng vải nỉ với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ vịt\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: BASICS, DIVIDED",
+      "summary": "Áo dáng rộng bằng vải nỉ với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "2621d1fc406c41deb125fdc1d97827cf",
+    "fields": {
+      "name": "Áo nỉ trễ vai",
+      "description": "Áo trễ vai bằng vải nỉ có mặt trái chải xù mềm. Dáng rộng với vai ráp trễ, tay dài và viền gân nổi quanh cổ, cổ tay và gấu.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nPhong cách: Áo trễ vai, Áo nỉ\nMô tả: Màu xám đậm, Màu trơn\nNhóm khách hàng: BASICS, DIVIDED",
+      "summary": "Áo trễ vai bằng vải nỉ có mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "34e8d9facb53467ba7da8c6aee736765",
+    "fields": {
+      "name": "Áo nỉ dáng thụng",
+      "description": "Áo dáng thụng bằng vải nỉ với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Dài\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Grey-blue, Màu trơn\nNhóm khách hàng: BASICS",
+      "summary": "Áo dáng thụng bằng vải nỉ với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "744216370216412bbbbe33d0e337d5b0",
+    "fields": {
+      "name": "Áo nỉ dáng rộng 5",
+      "description": "Áo dáng rộng bằng vải nỉ với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ vịt\nMô tả: Màu xanh kaki, Màu trơn\nNhóm khách hàng: BASICS, DIVIDED",
+      "summary": "Áo dáng rộng bằng vải nỉ với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "bfd10a16c24e420da67553c15ba6d88c",
+    "fields": {
+      "name": "Áo nỉ 2",
+      "description": "Áo bằng vải nỉ làm từ cotton pha với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ nhiều, tay dài với cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: BASICS, DIVIDED",
+      "summary": "Áo bằng vải nỉ làm từ cotton pha với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "966484c63f89476a96baf8a244685c08",
+    "fields": {
+      "name": "Áo nỉ hoạ tiết chữ 3",
+      "description": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ trên ngực. Vai ráp trễ, tay dài với viền gân nổi quanh cổ và ở cổ tay và gấu.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ vịt\nMô tả: Màu xanh dương khói đốm/Xanh dương đậm/Trắng, Atelier Paris",
+      "summary": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ trên ngực.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a6547b13a2434935a5b228554872b5f6",
+    "fields": {
+      "name": "Áo nỉ dáng thụng 2",
+      "description": "Áo dáng thụng bằng vải nỉ với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Dài\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Light beige, Màu trơn\nNhóm khách hàng: BASICS",
+      "summary": "Áo dáng thụng bằng vải nỉ với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1856a612d0164110952245e47ea74a82",
+    "fields": {
+      "name": "Áo nỉ dáng thụng có hoạ tiết 2",
+      "description": "Áo dáng thụng bằng vải nỉ với mặt trái chải xù mềm có hoạ tiết. Cổ tròn, viền gân nổi, vai ráp trễ nhiều và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu xanh dương nhạt/Trắng, Samson's Brunch Club, open all day Monday – Sunday, Cốc và đĩa lót\nNhóm khách hàng: DIVIDED",
+      "summary": "Áo dáng thụng bằng vải nỉ với mặt trái chải xù mềm có hoạ tiết.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "02cedef0d62f4f6d9a0330a380bfc2cf",
+    "fields": {
+      "name": "Áo nỉ dáng thụng có hoạ tiết phía trước",
+      "description": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết phía trước. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nSize của người mẫu: Người mẫu cao 178cm/5'10\" mặc size M\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu xanh dương sáng/Trắng, The city of Pasadena\nNhóm khách hàng: DIVIDED",
+      "summary": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết phía trước.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "bfd4e8b9d0644b78972999c8a46c1fa5",
+    "fields": {
+      "name": "Áo nỉ 2",
+      "description": "Áo bằng vải nỉ làm từ cotton pha với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ nhiều, tay dài với cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu hồng nhạt, Màu trơn\nNhóm khách hàng: BASICS, DIVIDED",
+      "summary": "Áo bằng vải nỉ làm từ cotton pha với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e7676ea6f4154f7891aa59333d2107a5",
+    "fields": {
+      "name": "Áo nỉ 2",
+      "description": "Áo bằng vải nỉ làm từ cotton pha với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ nhiều, tay dài với cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu hồng nhạt, Màu trơn\nNhóm khách hàng: BASICS, DIVIDED",
+      "summary": "Áo bằng vải nỉ làm từ cotton pha với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "69f71f4a077c4b9c86446b5c01ac3c81",
+    "fields": {
+      "name": "Áo nỉ hoạ tiết chữ 4",
+      "description": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ phía trước. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu xanh dương/Trắng, Cannes, 91, France",
+      "summary": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ phía trước.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "7bff7745831b43729034a7184823dc5f",
+    "fields": {
+      "name": "Áo nỉ dáng thụng in hình",
+      "description": "Áo dáng thụng bằng vải nỉ in hình có cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu kem/Đen/Đỏ, Pontiac, division of General Motors, Pontiac, General Motors\nNhóm khách hàng: DIVIDED",
+      "summary": "Áo dáng thụng bằng vải nỉ in hình có cổ tròn, viền gân nổi, vai ráp trễ và tay dài.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "be9c5fc007124eb3b76bb2f56efc1b45",
+    "fields": {
+      "name": "Áo nỉ dáng thụng 3",
+      "description": "Áo dáng thụng bằng vải nỉ với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Dài\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu xám đậm, Màu trơn\nNhóm khách hàng: BASICS",
+      "summary": "Áo dáng thụng bằng vải nỉ với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "57742c41fa3d4d80be255807f9f0ae1e",
+    "fields": {
+      "name": "Áo nỉ trễ vai 2",
+      "description": "Áo trễ vai bằng vải nỉ có mặt trái chải xù mềm. Dáng rộng với vai ráp trễ, tay dài và viền gân nổi quanh cổ, cổ tay và gấu.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nPhong cách: Áo trễ vai, Áo nỉ\nMô tả: Màu hồng khói nhạt, Màu trơn\nNhóm khách hàng: BASICS, DIVIDED",
+      "summary": "Áo trễ vai bằng vải nỉ có mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "cd17e7cd45e8471d897a72f5c616cb6c",
+    "fields": {
+      "name": "Áo nỉ dáng thụng 4",
+      "description": "Áo dáng thụng bằng vải nỉ với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Dài\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu đen, Màu trơn\nNhóm khách hàng: BASICS",
+      "summary": "Áo dáng thụng bằng vải nỉ với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0e38342b140c4ba0b168e0201bde1838",
+    "fields": {
+      "name": "Áo nỉ 3",
+      "description": "Áo bằng vải nỉ mềm làm từ cotton pha có cổ tròn và tay dài, ráp lăng. Viền gân nổi quanh cổ, cổ tay và gấu. Mặt trái chải xù mềm.\nKích cỡ:\nTay áo: Chiều dài: 75.0 cm (Kích cỡ M/T), Mặt trước: Chiều dài: 68.0 cm (Kích cỡ M/T)\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Ôm vừa\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nKiểu tay áo: Ống tay ráp vai\nMô tả: Màu xanh dương khói, Màu trơn\nNhóm khách hàng: BASICS",
+      "summary": "Áo bằng vải nỉ mềm làm từ cotton pha có cổ tròn và tay dài, ráp lăng.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "003c36f89973426a8093fae22f04384b",
+    "fields": {
+      "name": "Áo nỉ 4",
+      "description": "Áo bằng vải nỉ làm từ cotton pha với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ nhiều, tay dài với cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu xám đậm, Màu trơn\nNhóm khách hàng: BASICS, DIVIDED",
+      "summary": "Áo bằng vải nỉ làm từ cotton pha với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a59e2edf6b17461cb6dd2201252deea3",
+    "fields": {
+      "name": "Áo nỉ 5",
+      "description": "Áo bằng vải nỉ làm từ cotton pha với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ nhiều, tay dài với cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Cỡ rộng\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu xám nhạt đốm, Màu trơn\nNhóm khách hàng: BASICS, DIVIDED",
+      "summary": "Áo bằng vải nỉ làm từ cotton pha với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "226fa5c8f530400faef426fb37cdcfcb",
+    "fields": {
+      "name": "Áo nỉ hoạ tiết chữ NYC",
+      "description": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ phía trước. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu kem/Xanh lá đậm, NYC sports, New York wellness, 1991",
+      "summary": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ phía trước.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "2c740705033e4cb8aa9d5d130d74fa00",
+    "fields": {
+      "name": "Áo nỉ dáng thụng in hình Ramones",
+      "description": "Áo dáng thụng bằng vải nỉ in hình với mặt trái chải xù mềm. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Dài\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu be xám/Đen/Hồng, Ramones, Ramones, Ramones\nNhóm khách hàng: DIVIDED",
+      "summary": "Áo dáng thụng bằng vải nỉ in hình với mặt trái chải xù mềm.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "b1e7268a37bb4def9281838543ce2cb0",
+    "fields": {
+      "name": "Áo nỉ hoạ tiết chữ Paris",
+      "description": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ phía trước. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu hồng nhạt, Paris club, Màu trơn",
+      "summary": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ phía trước.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "26e9b183a04e467486e7de6ba310009c",
+    "fields": {
+      "name": "Áo nỉ hoạ tiết chữ NYC Studios",
+      "description": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ phía trước. Cổ tròn, viền gân nổi, vai ráp trễ và tay dài. Cổ tay và gấu bo gân nổi.\nChiều cao: Chiều dài bình thường\nChiều dài tay áo: Tay dài\nĐộ vừa vặn: Quá cỡ\nPhong cách: Áo nỉ\nĐường viền cổ áo: Cổ tròn\nMô tả: Màu hồng nhạt, Paris club, Màu trơn",
+      "summary": "Áo dáng thụng bằng vải nỉ có mặt trái chải xù mềm và một hoạ tiết chữ phía trước.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
