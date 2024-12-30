@@ -4810,5 +4810,365 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "35768cb06e4b4abfbeb35a7b4d586b96",
+    "fields": {
+      "name": "100% cotton denim midi skirt",
+      "description": "Váy xòe. Chân váy midi. Vòng eo đàn hồi. Khóa kéo ở phía sau. Được làm từ 100% bông. Kết thúc denim.",
+      "summary": "Váy xòe.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a690a01731b94310b3e1b31c2579505a",
+    "fields": {
+      "name": "100% cotton denim skirt",
+      "description": "Chân váy midi denim làm từ chất liệu vải 100% cotton với các chi tiết đường khâu. Khóa kéo bên hông và cài nút. Viền có lỗ thông hơi phía sau. Hem có xẻ phía trước.",
+      "summary": "Chân váy midi denim làm từ chất liệu vải 100% cotton với các chi tiết đường khâu.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1c383185d59e474eb0840bab7575b3e2",
+    "fields": {
+      "name": "Creased-effect printed skirt",
+      "description": "Khóa kéo ở phía sau. Đã in. Kết thúc hiệu ứng nhăn.",
+      "summary": "Khóa kéo ở phía sau.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "57e914221d924d0a832055e6d501f765",
+    "fields": {
+      "name": "Long pleated skirt",
+      "description": "Vải xếp li có hiệu ứng nhăn. Khóa kéo. Vải chảy. Quần áo phù hợp có sẵn.",
+      "summary": "Vải xếp li có hiệu ứng nhăn.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0da61a12dfd8406c9f3ff190ec0e0d59",
+    "fields": {
+      "name": "Skirt with gathered waist detail",
+      "description": "Váy xòe. Vòng eo đàn hồi. Hai túi bên. Đã thu thập chi tiết. Được làm từ 100% bông. Quần áo phù hợp có sẵn. Cắt rời.",
+      "summary": "Váy xòe.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "efea9c6ccc6144938b9f79ada20686a5",
+    "fields": {
+      "name": "Flared wool blend midi skirt",
+      "description": "Chân váy midi chất liệu len pha. Khóa kéo ở phía sau. Chi tiết vải dày dặn.",
+      "summary": "Chân váy midi chất liệu len pha.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "d831ca6313a24e32b5c55bafbcfbbbd5",
+    "fields": {
+      "name": "Midi skirt with pleated detail",
+      "description": "Flared midi skirt with elasticated waist . Pleated detail.",
+      "summary": "Flared midi skirt with elasticated waist.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "b130ac77667f449684a7f98f301fbfaf",
+    "fields": {
+      "name": "Striped linen blend pareo skirt",
+      "description": "Chân váy midi. Có sọc. Dây rút buộc chặt. Được làm bằng vải cotton pha trộn.",
+      "summary": "Chân váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1c8c03323b0b49e8a3bb4031333b682d",
+    "fields": {
+      "name": "Co-ord midi skirt with melange detail",
+      "description": "Chân váy midi. Được làm bằng vải cotton pha trộn. Vải Melange. Quần áo phù hợp có sẵn.",
+      "summary": "Chân váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "39218516ab084556a057398c2aa5044a",
+    "fields": {
+      "name": "Long cotton flared maxi skirt",
+      "description": "Flounced skirt. Elastic waist. Two side pockets. Side split hem. Made of 100% cotton.",
+      "summary": "Flounced skirt.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e3c6e91d08324a2589659c7877994965",
+    "fields": {
+      "name": "Linen midi skirt with belt detail",
+      "description": "Chân váy midi. Thắt lưng có vòng đai. Hai túi bên. Chi tiết thắt lưng có khóa. Đã thu thập chi tiết. Được làm bằng 100% vải lanh. Cắt rời.",
+      "summary": "Chân váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "a9cea32278f341cd87d75cc956747e75",
+    "fields": {
+      "name": "Linen blend midi skirt with slit detail",
+      "description": "Váy midi. Khóa kéo ở phía sau. Hem có xẻ phía trước. Kết thúc hiệu ứng nhăn. Được làm từ chất liệu vải pha lanh và cotton. Cắt rời.",
+      "summary": "Váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "da9706e3d8ba43a9882a17dfc0ce8df1",
+    "fields": {
+      "name": "Abstract print midi skirt",
+      "description": "Váy midi in họa tiết trừu tượng. Viền có lỗ thông hơi phía sau. Kết thúc hiệu ứng nhăn.",
+      "summary": "Váy midi in họa tiết trừu tượng.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "d114b988577b46a9b4a785df912aa6a9",
+    "fields": {
+      "name": "Long flared knit skirt",
+      "description": "Váy xòe. Vòng eo đàn hồi. Bùng lên. Vải dệt kim. Được làm bằng vải pha trộn lyocell. Quần áo phù hợp có sẵn.",
+      "summary": "Váy xòe.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "95cb18064c4c4320beb7ce6376382884",
+    "fields": {
+      "name": "Printed pleated midi skirt",
+      "description": "Váy bồng bềnh. Vải xếp li có hiệu ứng nhăn. Chi tiết dây thắt lưng co giãn. Viền có lỗ thông hơi phía sau.",
+      "summary": "Váy bồng bềnh.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "dd39a55763814566ac31565bd779e3be",
+    "fields": {
+      "name": "Ombré printed midi skirt",
+      "description": "Váy midi. In ombre. Vòng eo đàn hồi. Được làm bằng vải cotton pha trộn.",
+      "summary": "Váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "63ecb2a1550d42aab3b9063b9d0bc61b",
+    "fields": {
+      "name": "Flared midi skirt with seam details",
+      "description": "Váy midi loe có chi tiết đường may. Khóa kéo ở phía sau. Được làm bằng vải pha trộn len.",
+      "summary": "Váy midi loe có chi tiết đường may.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "23fb73928a8e469bb0f31052c376733e",
+    "fields": {
+      "name": "Pleated ramie blend maxi skirt",
+      "description": "Vải xếp li có hiệu ứng nhăn. Lót. Được làm bằng hỗn hợp lyocell. Được làm bằng vải pha trộn ramie. Cắt rời.",
+      "summary": "Vải xếp li có hiệu ứng nhăn.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "52609202eda54f5c819ef1730f93e1f0",
+    "fields": {
+      "name": "Long embroidered crochet co-ord skirt",
+      "description": "Váy midi. Vòng eo đàn hồi. Vải ren dày dặn. Xoay lên viền. Lớp lót bông. Chi tiết vải bán trong suốt.. Có sẵn loại quần áo phù hợp.",
+      "summary": "Váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0c48474a0d6b4d289fec3de9cb28307c",
+    "fields": {
+      "name": "Linen blend skirt with pleated details",
+      "description": "Dây rút buộc chặt. Đóng dây rút. Khóa kéo bên hông. Lớp lót bông. Chi tiết xếp li ở mặt trước và mặt sau. Được làm bằng vải lanh pha trộn. Cắt rời.",
+      "summary": "Dây rút buộc chặt.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ed7aef60df944b25b6e13d537f5721f6",
+    "fields": {
+      "name": "Flared pleated skirt",
+      "description": "Chân váy midi loe có chi tiết xếp ly. Khóa kéo được che giấu bằng một túi quần. Chi tiết xếp li. Được làm bằng vải cotton pha trộn. Cắt rời.",
+      "summary": "Chân váy midi loe có chi tiết xếp ly.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "f025688ae14c4791a3286a4ea315f292",
+    "fields": {
+      "name": "Flared knit midi skirt",
+      "description": "Midi skirt made of knitted fabric. Elastic waist. Flared. Flecked-effect finish. Matching garment available.",
+      "summary": "Midi skirt made of knitted fabric.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "d10a0192a4d54644b4db4ad557f5e53d",
+    "fields": {
+      "name": "Ribbed co-ord skirt with tie detail",
+      "description": "Chân váy midi. Chi tiết buộc bên. Vải dệt kim. Được làm bằng vải cotton pha trộn. Vải có gân. Quần áo phù hợp có sẵn. Cắt rời.",
+      "summary": "Chân váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "bc4bf0a98630442aab5d3edec504a52c",
+    "fields": {
+      "name": "Ramie and lyocell blend long maxi skirt",
+      "description": "Váy xòe dài được thiết kế riêng. Dây buộc đàn hồi. Hai túi bên. Lót. Đã thu thập chi tiết. Được làm bằng hỗn hợp lyocell. Được làm bằng vải pha trộn ramie. Cắt rời.",
+      "summary": "Váy xòe dài được thiết kế riêng.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "319ecb8a52eb41e2be84b0a7bf1b9dbf",
+    "fields": {
+      "name": "Flowing pleated linen blend skirt",
+      "description": "Váy midi. Lớp lót bông. Chi tiết xếp li. Chi tiết xếp li ở mặt trước và mặt sau. Được làm bằng vải lanh pha trộn. Vải chảy.",
+      "summary": "Váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "554f3962922c43e99291a6a03a1b9521",
+    "fields": {
+      "name": "100% linen mini skirt with pockets",
+      "description": "Váy mini bồng bềnh làm từ vải 100% lanh. Khóa kéo bên hông. Hai túi bên. Mẫu này có kích thước vừa vặn hơn bình thường: chúng tôi khuyên bạn nên mua một cỡ nhỏ hơn bình thường..",
+      "summary": "Váy mini bồng bềnh làm từ vải 100% lanh.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "f1e21c55c10d4e9688e8786c506f60b0",
+    "fields": {
+      "name": "Ombré midi skirt",
+      "description": "Chân váy midi chất liệu cotton pha. In ombre. Chi tiết dây thắt lưng co giãn. Kết thúc hiệu ứng nhăn.",
+      "summary": "Chân váy midi chất liệu cotton pha.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "b9ff53cb6aaa42f6bad3def3ce63cddd",
+    "fields": {
+      "name": "Pleated denim midi skirt with yoke",
+      "description": "Chân váy midi denim làm từ chất liệu vải 100% cotton với các chi tiết đường khâu. Khóa kéo ở phía sau. Chi tiết xếp li. Cắt rời.",
+      "summary": "Chân váy midi denim làm từ chất liệu vải 100% cotton với các chi tiết đường khâu.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "303dc3642b8e4a22bfdc1883ce755e25",
+    "fields": {
+      "name": "Flowing midi skirt",
+      "description": "Váy bồng bềnh. Khóa kéo. Kết thúc hiệu ứng nhăn.",
+      "summary": "Váy bồng bềnh.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0f05b9b472ca47b3ac47153f5282d502",
+    "fields": {
+      "name": "Ramie and lyocell blend long flounce skirt",
+      "description": "Váy xòe dài được thiết kế riêng. Dây buộc đàn hồi. Lót. Được làm bằng vải ramie và lyocell. Cắt rời.",
+      "summary": "Váy xòe dài được thiết kế riêng.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
