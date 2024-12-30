@@ -4450,5 +4450,365 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Product",
+    "pk": "bdccca40c3ba4cac909f6a48e6ce9e2d",
+    "fields": {
+      "name": "Midi dress with tie detail",
+      "description": "Váy midi chất liệu 100% cotton. Cổ thuyền. Không tay. Chi tiết nơ buộc phía trước. Cắt rời.",
+      "summary": "Váy midi chất liệu 100% cotton.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "96eeabca9fa1449183b1f134e2db8cf9",
+    "fields": {
+      "name": "Halter midi dress with pleated detail",
+      "description": "Váy midi cổ yếm bồng bềnh. Không tay. Hem có xẻ phía trước. Mở chi tiết phía sau. Chi tiết xếp ly ở mặt trước. Cắt rời.",
+      "summary": "Váy midi cổ yếm bồng bềnh.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "31687314c21f426cb56c3fad3ffe1f53",
+    "fields": {
+      "name": "Crochet midi dress",
+      "description": "Váy midi chất liệu cotton pha. Cổ tròn. Không tay. Dây đai dày. Vải ren dày dặn. Lót.",
+      "summary": "Váy midi chất liệu cotton pha.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ba840d1a6975492e8f2ddf00463401ba",
+    "fields": {
+      "name": "Strappy crochet midi dress",
+      "description": "Váy midi móc làm bằng vải cotton pha. Cổ thuyền. Dây đai dày. Lót. Cắt rời.",
+      "summary": "Váy midi móc làm bằng vải cotton pha.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "ba082da2acc14364b7360561adf00b63",
+    "fields": {
+      "name": "Cotton halterneck dress",
+      "description": "Váy midi móc làm bằng vải cotton pha. Cổ thuyền. Dây đai dày. Lót. Cắt rời.",
+      "summary": "Váy midi móc làm bằng vải cotton pha.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1a68b6b3b8714119989d0b9456332748",
+    "fields": {
+      "name": "Ribbed midi dress with square neckline",
+      "description": "Váy midi chất liệu 100% cotton. Cổ vuông. Dây đai dày. Vải có gân. Cắt rời.",
+      "summary": "Váy midi chất liệu 100% cotton.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "10be5ac18c8548639a14a77e82b48fa7",
+    "fields": {
+      "name": "Linen midi dress with slit details",
+      "description": "Váy midi làm từ chất liệu vải 100% lanh. Đường viền cổ áo cắt thẳng. Không tay. Dây đeo. Mở chi tiết phía sau. Viền xẻ bên. Bộ quần áo này chật hơn bình thường..",
+      "summary": "Váy midi làm từ chất liệu vải 100% lanh.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "74cdbba62bb143b8860d855e5c87f2b9",
+    "fields": {
+      "name": "Double fabric midi dress with straps",
+      "description": "Váy midi. Chi tiết đường viền cổ áo phía sau. Cổ tròn. Dây đai dày. Vải đôi. Lỗ thông hơi bên ở viền. Vải chảy. Cắt rời.",
+      "summary": "Váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "eddd020e765d4ff2b40703934f2ba062",
+    "fields": {
+      "name": "Halterneck midi dress with pleated detail",
+      "description": "Váy midi. Đường viền cổ áo cắt thẳng. Dây đeo. Lớp lót bông. Chi tiết xếp li. Được làm bằng hỗn hợp vải lanh. Được làm bằng vải lanh pha trộn. Vải chảy. Cắt rời.",
+      "summary": "Váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "2e60b7f5200f40c5a3a85687a908fd8f",
+    "fields": {
+      "name": "Strapless dress",
+      "description": "Váy midi chất liệu cotton pha. Đường viền cổ áo cắt thẳng. Vải nhung. Khóa kéo ở phía sau. Trễ vai. Viền có lỗ thông hơi phía sau.",
+      "summary": "Váy midi chất liệu cotton pha.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "1af6975c3e22461596dabc4a86900f82",
+    "fields": {
+      "name": "100% linen double-strap jumpsuit",
+      "description": "Bộ áo liền quần làm từ vải lanh 100% và có dây đai đôi. Đường viền cổ áo cắt thẳng. Khóa kéo ở phía sau. Hai túi bên. Chi tiết xếp li ở mặt trước. Cắt rời.",
+      "summary": "Bộ áo liền quần làm từ vải lanh 100% và có dây đai đôi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "42b471aadfd24561a776643ec7550fa7",
+    "fields": {
+      "name": "Midi slip dress",
+      "description": "Váy midi viền ren. Cổ thuyền. Dây đeo. Kết thúc hiệu ứng nhăn. Vải chảy.",
+      "summary": "Váy midi viền ren.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "dcd06f9b51924b0185ee82da57420f0b",
+    "fields": {
+      "name": "Long creased print halter neck dress",
+      "description": "Váy dài có dây buộc cổ. Không tay. Lớp lót bông. Mở chi tiết phía sau. Đã in. Kết thúc hiệu ứng nhăn. Được làm bằng vải ramie và lyocell.",
+      "summary": "Váy dài có dây buộc cổ.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "0665b645c8b2450ba074d98684d9d778",
+    "fields": {
+      "name": "Cotton satin camisole midi dress",
+      "description": "Váy midi chất liệu vải cotton. Đường viền cổ chữ V ở phía sau và cổ. Dây đeo. Hem có xẻ phía trước. Kết thúc satin. Cắt rời.",
+      "summary": "Váy midi chất liệu vải cotton.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e6661f9de18b40f69bada9f195f41114",
+    "fields": {
+      "name": "Animal print mini dress",
+      "description": "Váy ngắn in hình động vật. Cổ thuyền. Không tay. Khóa kéo ở phía sau. Hai túi bên. Lớp lót bông. Được làm bằng vải cotton pha trộn.",
+      "summary": "Váy ngắn in hình động vật.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e275ba14c25941feb607186566b89d0b",
+    "fields": {
+      "name": "Midi dress with seam details",
+      "description": "Váy midi. Đường viền cổ áo cắt thẳng. Dây đeo. Lót.",
+      "summary": "Váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "3565144ef4aa4374b43a49bfb3b49d30",
+    "fields": {
+      "name": "Flowing midi dress",
+      "description": "Váy midi cổ tròn, dây đai rộng. Không tay. Vải chảy.",
+      "summary": "Váy midi cổ tròn, dây đai rộng.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "adfd4a8f6be4465d9969e15d8adfabc5",
+    "fields": {
+      "name": "Long linen dress with asymmetric neckline",
+      "description": "Váy được làm từ chất liệu vải lanh 100%. Trễ vai. Đường viền cổ áo không đối xứng. Lót. Viền xẻ bên. Kết thúc hiệu ứng nhăn. Vải dệt kim bánh quế. Vải chảy. Cắt rời.",
+      "summary": "Váy được làm từ chất liệu vải lanh 100%.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "e1d1e5a0b69841a49812249a1629fd58",
+    "fields": {
+      "name": "Satin midi dress with cowl neckline",
+      "description": "Váy midi bằng vải mềm mại với lớp phủ sa tanh. Cổ áo khoác. Không tay. Chi tiết thắt lưng xếp nếp. Kết thúc hiệu ứng nhăn. Bộ quần áo này chật hơn bình thường..",
+      "summary": "Váy midi bằng vải mềm mại với lớp phủ sa tanh.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5e5f48cc0fad4bfe828e0495c30856ef",
+    "fields": {
+      "name": "Flowing trench jumpsuit",
+      "description": "Áo liền quần. Cổ áo sơ mi. Không tay. Thắt lưng có vòng đai. Nút buộc. Hai túi vá có nắp ở ngực. Vải chảy. Bao gồm vành đai.",
+      "summary": "Áo liền quần.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5f5ff4f7be0d4620944bae72b02b653d",
+    "fields": {
+      "name": "Shirt dress with ruffle",
+      "description": "Váy midi. Cổ áo sơ mi. Đường viền cổ áo. Quấn buộc bằng nút bên. Chi tiết xù lông. Được làm bằng vải lanh pha trộn.",
+      "summary": "Váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "2da98252eda1454ea616cbadcf2729cb",
+    "fields": {
+      "name": "Ribbed midi dress with square neckline",
+      "description": "Váy midi chất liệu 100% cotton. Cổ vuông. Dây đai dày. Vải có gân. Cắt rời.",
+      "summary": "Váy midi chất liệu 100% cotton.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "377bbcfb5d0a46a69ddb79e2fa22ff46",
+    "fields": {
+      "name": "Long dress with gathered detailing",
+      "description": "Chiếc váy dài có xếp nếp và dây đai mỏng. Đường viền cổ chữ V ở phía sau và cổ. Không tay. Được làm bằng 100% vải lanh. Mẫu này có kích thước vừa vặn hơn bình thường: chúng tôi khuyên bạn nên mua một cỡ nhỏ hơn bình thường.. Đường cắt rộng.",
+      "summary": "Chiếc váy dài có xếp nếp và dây đai mỏng.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "08ef78fada794acf880cc15418666fca",
+    "fields": {
+      "name": "Linen midi dress with strap details",
+      "description": "Váy midi. Cổ chữ V. Nếp gấp ở dây đeo. Được làm bằng 100% vải lanh. Cắt rời.",
+      "summary": "Váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "f957641f3b3147f7b1470d1cae1a37ec",
+    "fields": {
+      "name": "Long striped linen halter dress",
+      "description": "Cổ dây có dây buộc phía sau. Đã in. In sọc. Được làm bằng 100% vải lanh. Cắt rời.",
+      "summary": "Cổ dây có dây buộc phía sau.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "81fd5c08c1fa42b7aa47a48001d82212",
+    "fields": {
+      "name": "Striped halterneck midi dress",
+      "description": "Midi dress. Halter neck. Thick straps.",
+      "summary": "Midi dress.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "41cce4a807cc4793844aac0dab19a2f9",
+    "fields": {
+      "name": "Linen blend halter jumpsuit with belt detail",
+      "description": "Váy midi. Cổ dây. Không tay. Hai túi bên. Được làm bằng hỗn hợp vải lanh. Cắt rời.",
+      "summary": "Váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "7985e5813d4d4019a72658cdf918c613",
+    "fields": {
+      "name": "100% linen long dress with contrast piping",
+      "description": "Áo dài làm bằng vải lanh 100%. Đường viền cổ chữ V ở phía sau và cổ. Dây đai dày. Hai túi bên. Chi tiết đường ống tương phản. Bộ quần áo này dài hơn bình thường.. Đường cắt hơi rộng để mang lại cảm giác thoải mái hơn..",
+      "summary": "Áo dài làm bằng vải lanh 100%.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "5eea56f9be9f40daaaf588c4752f8bb6",
+    "fields": {
+      "name": "Strappy midi dress with box pleat details",
+      "description": "Váy midi. Dây đeo. Chi tiết xếp li. Được làm bằng vải lanh pha trộn. Vải chảy. Cắt rời.",
+      "summary": "Váy midi.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Product",
+    "pk": "17fdb78937044900aadb246e5fde7821",
+    "fields": {
+      "name": "100% ramie printed halter dress",
+      "description": "arrow\nVáy midi 100% ramie. Cổ dây. Không tay. Nút cài phía trước được giấu bằng một vạt áo. Lớp lót bông. Đã in.",
+      "summary": "arrow\nVáy midi 100% ramie.",
+      "rating": "0",
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]

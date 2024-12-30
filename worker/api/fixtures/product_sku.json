@@ -17274,5 +17274,1265 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "2995ae2688684573b8a1d2d3f4fd8148",
+    "fields": {
+      "sku": "WKXZWGKHCDOWHSDS",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "bdccca40c3ba4cac909f6a48e6ce9e2d",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "2995ae2688684573b8a1d2d3f4fd8148",
+    "fields": {
+      "sku": "WKXZWGKHCDOWHSDM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "bdccca40c3ba4cac909f6a48e6ce9e2d",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "2995ae2688684573b8a1d2d3f4fd8148",
+    "fields": {
+      "sku": "WKXZWGKHCDOWHSDL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "bdccca40c3ba4cac909f6a48e6ce9e2d",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "e85870083a864d65963fe7fb4a831c17",
+    "fields": {
+      "sku": "SLCJIHIGBOFSFRWS",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 7,
+      "product_id": "96eeabca9fa1449183b1f134e2db8cf9",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "e85870083a864d65963fe7fb4a831c17",
+    "fields": {
+      "sku": "SLCJIHIGBOFSFRWM",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 7,
+      "product_id": "96eeabca9fa1449183b1f134e2db8cf9",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "e85870083a864d65963fe7fb4a831c17",
+    "fields": {
+      "sku": "SLCJIHIGBOFSFRWL",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 7,
+      "product_id": "96eeabca9fa1449183b1f134e2db8cf9",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "72c602dab9ac4358b28bcc23a00f70ec",
+    "fields": {
+      "sku": "PXKCSWAOVMAGBOTS",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "31687314c21f426cb56c3fad3ffe1f53",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "72c602dab9ac4358b28bcc23a00f70ec",
+    "fields": {
+      "sku": "PXKCSWAOVMAGBOTM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "31687314c21f426cb56c3fad3ffe1f53",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "72c602dab9ac4358b28bcc23a00f70ec",
+    "fields": {
+      "sku": "PXKCSWAOVMAGBOTL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "31687314c21f426cb56c3fad3ffe1f53",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "f859b3f5b5ec47978b7066642dfdd4a7",
+    "fields": {
+      "sku": "BSLMVXIBXSNKFAPS",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "ba840d1a6975492e8f2ddf00463401ba",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "f859b3f5b5ec47978b7066642dfdd4a7",
+    "fields": {
+      "sku": "BSLMVXIBXSNKFAPM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "ba840d1a6975492e8f2ddf00463401ba",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "f859b3f5b5ec47978b7066642dfdd4a7",
+    "fields": {
+      "sku": "BSLMVXIBXSNKFAPL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "ba840d1a6975492e8f2ddf00463401ba",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "55d4d32154814a72839ae78583980e87",
+    "fields": {
+      "sku": "WXHVSNMFFQUOLJXS",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "ba082da2acc14364b7360561adf00b63",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "55d4d32154814a72839ae78583980e87",
+    "fields": {
+      "sku": "WXHVSNMFFQUOLJXM",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "ba082da2acc14364b7360561adf00b63",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "55d4d32154814a72839ae78583980e87",
+    "fields": {
+      "sku": "WXHVSNMFFQUOLJXL",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "ba082da2acc14364b7360561adf00b63",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "780cbf895dea4958b9b0d84cd6c2bdec",
+    "fields": {
+      "sku": "LUCNAWXDFLZQOBSS",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "1a68b6b3b8714119989d0b9456332748",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "780cbf895dea4958b9b0d84cd6c2bdec",
+    "fields": {
+      "sku": "LUCNAWXDFLZQOBSM",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "1a68b6b3b8714119989d0b9456332748",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "780cbf895dea4958b9b0d84cd6c2bdec",
+    "fields": {
+      "sku": "LUCNAWXDFLZQOBSL",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "1a68b6b3b8714119989d0b9456332748",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "b23cb70a4f974f2091eef62a782ad04a",
+    "fields": {
+      "sku": "FSJSDBVQXYTUAHNS",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "10be5ac18c8548639a14a77e82b48fa7",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "b23cb70a4f974f2091eef62a782ad04a",
+    "fields": {
+      "sku": "FSJSDBVQXYTUAHNM",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "10be5ac18c8548639a14a77e82b48fa7",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "b23cb70a4f974f2091eef62a782ad04a",
+    "fields": {
+      "sku": "FSJSDBVQXYTUAHNL",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "10be5ac18c8548639a14a77e82b48fa7",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "d58790d73b984b6bb978a8726f9ee3b7",
+    "fields": {
+      "sku": "SSMKPMDPHIYYCHHS",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "74cdbba62bb143b8860d855e5c87f2b9",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "d58790d73b984b6bb978a8726f9ee3b7",
+    "fields": {
+      "sku": "SSMKPMDPHIYYCHHM",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "74cdbba62bb143b8860d855e5c87f2b9",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "d58790d73b984b6bb978a8726f9ee3b7",
+    "fields": {
+      "sku": "SSMKPMDPHIYYCHHL",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "74cdbba62bb143b8860d855e5c87f2b9",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "3833977e1e90434e97ee5eda47481cc8",
+    "fields": {
+      "sku": "QLBNLJZEXQKBWXXS",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "eddd020e765d4ff2b40703934f2ba062",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "3833977e1e90434e97ee5eda47481cc8",
+    "fields": {
+      "sku": "QLBNLJZEXQKBWXXM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "eddd020e765d4ff2b40703934f2ba062",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "3833977e1e90434e97ee5eda47481cc8",
+    "fields": {
+      "sku": "QLBNLJZEXQKBWXXL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "eddd020e765d4ff2b40703934f2ba062",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "525815dd3ae447e88fe8e53c625f23a2",
+    "fields": {
+      "sku": "RHJWHFMQZGZUUQCS",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "2e60b7f5200f40c5a3a85687a908fd8f",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "525815dd3ae447e88fe8e53c625f23a2",
+    "fields": {
+      "sku": "RHJWHFMQZGZUUQCM",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "2e60b7f5200f40c5a3a85687a908fd8f",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "525815dd3ae447e88fe8e53c625f23a2",
+    "fields": {
+      "sku": "RHJWHFMQZGZUUQCL",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "2e60b7f5200f40c5a3a85687a908fd8f",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "47951a689024415e85bc3a414106b9c8",
+    "fields": {
+      "sku": "WJCCKJZSOAEAMQNS",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "1af6975c3e22461596dabc4a86900f82",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "47951a689024415e85bc3a414106b9c8",
+    "fields": {
+      "sku": "WJCCKJZSOAEAMQNM",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "1af6975c3e22461596dabc4a86900f82",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "47951a689024415e85bc3a414106b9c8",
+    "fields": {
+      "sku": "WJCCKJZSOAEAMQNL",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "1af6975c3e22461596dabc4a86900f82",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "54f5e5e0b982468baa8167d007c7fc72",
+    "fields": {
+      "sku": "JZKDWQHPZNTWDOKS",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "42b471aadfd24561a776643ec7550fa7",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "54f5e5e0b982468baa8167d007c7fc72",
+    "fields": {
+      "sku": "JZKDWQHPZNTWDOKM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "42b471aadfd24561a776643ec7550fa7",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "54f5e5e0b982468baa8167d007c7fc72",
+    "fields": {
+      "sku": "JZKDWQHPZNTWDOKL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 4,
+      "product_id": "42b471aadfd24561a776643ec7550fa7",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "2cec9f2cfa724e2fafc80eb5065b985c",
+    "fields": {
+      "sku": "ICDRTRUAOJSDQWOS",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "dcd06f9b51924b0185ee82da57420f0b",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "2cec9f2cfa724e2fafc80eb5065b985c",
+    "fields": {
+      "sku": "ICDRTRUAOJSDQWOM",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "dcd06f9b51924b0185ee82da57420f0b",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "2cec9f2cfa724e2fafc80eb5065b985c",
+    "fields": {
+      "sku": "ICDRTRUAOJSDQWOL",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "dcd06f9b51924b0185ee82da57420f0b",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "cb492735f2e64cce87a1ce0ec194c338",
+    "fields": {
+      "sku": "JACQFOPYSMCMQQXS",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "0665b645c8b2450ba074d98684d9d778",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "cb492735f2e64cce87a1ce0ec194c338",
+    "fields": {
+      "sku": "JACQFOPYSMCMQQXM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "0665b645c8b2450ba074d98684d9d778",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "cb492735f2e64cce87a1ce0ec194c338",
+    "fields": {
+      "sku": "JACQFOPYSMCMQQXL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "0665b645c8b2450ba074d98684d9d778",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "17bce27a43834fca965ae3d31fff1a97",
+    "fields": {
+      "sku": "GYOLHFFBOSBHXAES",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "e6661f9de18b40f69bada9f195f41114",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "17bce27a43834fca965ae3d31fff1a97",
+    "fields": {
+      "sku": "GYOLHFFBOSBHXAEM",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "e6661f9de18b40f69bada9f195f41114",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "17bce27a43834fca965ae3d31fff1a97",
+    "fields": {
+      "sku": "GYOLHFFBOSBHXAEL",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "e6661f9de18b40f69bada9f195f41114",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "7031fc7896e94454bae720f7fa7ee554",
+    "fields": {
+      "sku": "OCQSVDUIQAWBDNPS",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "e275ba14c25941feb607186566b89d0b",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "7031fc7896e94454bae720f7fa7ee554",
+    "fields": {
+      "sku": "OCQSVDUIQAWBDNPM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "e275ba14c25941feb607186566b89d0b",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "7031fc7896e94454bae720f7fa7ee554",
+    "fields": {
+      "sku": "OCQSVDUIQAWBDNPL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "e275ba14c25941feb607186566b89d0b",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "f17700f520cd4526bceb9bf15fc9fbf1",
+    "fields": {
+      "sku": "JMWPMMMNAHZCGDNS",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "3565144ef4aa4374b43a49bfb3b49d30",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "f17700f520cd4526bceb9bf15fc9fbf1",
+    "fields": {
+      "sku": "JMWPMMMNAHZCGDNM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "3565144ef4aa4374b43a49bfb3b49d30",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "f17700f520cd4526bceb9bf15fc9fbf1",
+    "fields": {
+      "sku": "JMWPMMMNAHZCGDNL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "3565144ef4aa4374b43a49bfb3b49d30",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "e33dcd89b16243f48ec9774ed9104378",
+    "fields": {
+      "sku": "HDEJLBGOLNMRTHHS",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "adfd4a8f6be4465d9969e15d8adfabc5",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "e33dcd89b16243f48ec9774ed9104378",
+    "fields": {
+      "sku": "HDEJLBGOLNMRTHHM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "adfd4a8f6be4465d9969e15d8adfabc5",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "e33dcd89b16243f48ec9774ed9104378",
+    "fields": {
+      "sku": "HDEJLBGOLNMRTHHL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "adfd4a8f6be4465d9969e15d8adfabc5",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "3126a6d2262c4245ae0515d8e78c6f48",
+    "fields": {
+      "sku": "HLVCEDROXYOBHYAS",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "e1d1e5a0b69841a49812249a1629fd58",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "3126a6d2262c4245ae0515d8e78c6f48",
+    "fields": {
+      "sku": "HLVCEDROXYOBHYAM",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "e1d1e5a0b69841a49812249a1629fd58",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "3126a6d2262c4245ae0515d8e78c6f48",
+    "fields": {
+      "sku": "HLVCEDROXYOBHYAL",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "e1d1e5a0b69841a49812249a1629fd58",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "c967360fd11840b58a0307638a8adeef",
+    "fields": {
+      "sku": "WQVXOHECIQLCKIES",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "5e5f48cc0fad4bfe828e0495c30856ef",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "c967360fd11840b58a0307638a8adeef",
+    "fields": {
+      "sku": "WQVXOHECIQLCKIEM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "5e5f48cc0fad4bfe828e0495c30856ef",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "c967360fd11840b58a0307638a8adeef",
+    "fields": {
+      "sku": "WQVXOHECIQLCKIEL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "5e5f48cc0fad4bfe828e0495c30856ef",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "dd34d95d55f14b29a91c4e44c25df560",
+    "fields": {
+      "sku": "HIEGNXVPHPKIYNTS",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "5f5ff4f7be0d4620944bae72b02b653d",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "dd34d95d55f14b29a91c4e44c25df560",
+    "fields": {
+      "sku": "HIEGNXVPHPKIYNTM",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "5f5ff4f7be0d4620944bae72b02b653d",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "dd34d95d55f14b29a91c4e44c25df560",
+    "fields": {
+      "sku": "HIEGNXVPHPKIYNTL",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 15,
+      "product_id": "5f5ff4f7be0d4620944bae72b02b653d",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "618616db55d040dc90144b88380502e8",
+    "fields": {
+      "sku": "FFOOVRRFMJTLUUKS",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 7,
+      "product_id": "2da98252eda1454ea616cbadcf2729cb",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "618616db55d040dc90144b88380502e8",
+    "fields": {
+      "sku": "FFOOVRRFMJTLUUKM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 7,
+      "product_id": "2da98252eda1454ea616cbadcf2729cb",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "618616db55d040dc90144b88380502e8",
+    "fields": {
+      "sku": "FFOOVRRFMJTLUUKL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 7,
+      "product_id": "2da98252eda1454ea616cbadcf2729cb",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "0a9bb9c81747431ea0664ef8066e3419",
+    "fields": {
+      "sku": "WLGBMJIXEXGHWXWS",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 7,
+      "product_id": "377bbcfb5d0a46a69ddb79e2fa22ff46",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "0a9bb9c81747431ea0664ef8066e3419",
+    "fields": {
+      "sku": "WLGBMJIXEXGHWXWM",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 7,
+      "product_id": "377bbcfb5d0a46a69ddb79e2fa22ff46",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "0a9bb9c81747431ea0664ef8066e3419",
+    "fields": {
+      "sku": "WLGBMJIXEXGHWXWL",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 7,
+      "product_id": "377bbcfb5d0a46a69ddb79e2fa22ff46",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "6836481bd9034f76a5c91e3e8dd3956b",
+    "fields": {
+      "sku": "QCFRUPCVVQPWRGKS",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "08ef78fada794acf880cc15418666fca",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "6836481bd9034f76a5c91e3e8dd3956b",
+    "fields": {
+      "sku": "QCFRUPCVVQPWRGKM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "08ef78fada794acf880cc15418666fca",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "6836481bd9034f76a5c91e3e8dd3956b",
+    "fields": {
+      "sku": "QCFRUPCVVQPWRGKL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "08ef78fada794acf880cc15418666fca",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "9363619e79cf4b86b9eb507bdbf037b0",
+    "fields": {
+      "sku": "FFFLJMBVDJBGKNQS",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "f957641f3b3147f7b1470d1cae1a37ec",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "9363619e79cf4b86b9eb507bdbf037b0",
+    "fields": {
+      "sku": "FFFLJMBVDJBGKNQM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "f957641f3b3147f7b1470d1cae1a37ec",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "9363619e79cf4b86b9eb507bdbf037b0",
+    "fields": {
+      "sku": "FFFLJMBVDJBGKNQL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "f957641f3b3147f7b1470d1cae1a37ec",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "aa736d8958a544dfb5c95bc97277a1ad",
+    "fields": {
+      "sku": "ZNRIQDHCNBSWXXNS",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "81fd5c08c1fa42b7aa47a48001d82212",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "aa736d8958a544dfb5c95bc97277a1ad",
+    "fields": {
+      "sku": "ZNRIQDHCNBSWXXNM",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "81fd5c08c1fa42b7aa47a48001d82212",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "aa736d8958a544dfb5c95bc97277a1ad",
+    "fields": {
+      "sku": "ZNRIQDHCNBSWXXNL",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "81fd5c08c1fa42b7aa47a48001d82212",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "3f16b0204ce8410fa8edb3460e9d7828",
+    "fields": {
+      "sku": "IQWFWDXXVCIYPSYS",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "41cce4a807cc4793844aac0dab19a2f9",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "3f16b0204ce8410fa8edb3460e9d7828",
+    "fields": {
+      "sku": "IQWFWDXXVCIYPSYM",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "41cce4a807cc4793844aac0dab19a2f9",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "3f16b0204ce8410fa8edb3460e9d7828",
+    "fields": {
+      "sku": "IQWFWDXXVCIYPSYL",
+      "price": 47,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "41cce4a807cc4793844aac0dab19a2f9",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "66e37b136308435db5ac1a3afbf6ce4b",
+    "fields": {
+      "sku": "VRDIVMJRRSECCEJS",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "7985e5813d4d4019a72658cdf918c613",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "66e37b136308435db5ac1a3afbf6ce4b",
+    "fields": {
+      "sku": "VRDIVMJRRSECCEJM",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "7985e5813d4d4019a72658cdf918c613",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "66e37b136308435db5ac1a3afbf6ce4b",
+    "fields": {
+      "sku": "VRDIVMJRRSECCEJL",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 5,
+      "product_id": "7985e5813d4d4019a72658cdf918c613",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "5de6ce39b78c47c5a98acebc52020b85",
+    "fields": {
+      "sku": "RDNLQMWVUWEPKUHS",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 9,
+      "product_id": "5eea56f9be9f40daaaf588c4752f8bb6",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "5de6ce39b78c47c5a98acebc52020b85",
+    "fields": {
+      "sku": "RDNLQMWVUWEPKUHM",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 9,
+      "product_id": "5eea56f9be9f40daaaf588c4752f8bb6",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "5de6ce39b78c47c5a98acebc52020b85",
+    "fields": {
+      "sku": "RDNLQMWVUWEPKUHL",
+      "price": 45,
+      "quantity": 100,
+      "color_id": 9,
+      "product_id": "5eea56f9be9f40daaaf588c4752f8bb6",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "7ab482d9143e4bdcaa5cceb8625f87ce",
+    "fields": {
+      "sku": "BNRRBJBTABEWQPNS",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "17fdb78937044900aadb246e5fde7821",
+      "size_id": 1,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "7ab482d9143e4bdcaa5cceb8625f87ce",
+    "fields": {
+      "sku": "BNRRBJBTABEWQPNM",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "17fdb78937044900aadb246e5fde7821",
+      "size_id": 2,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.ProductSku",
+    "pk": "7ab482d9143e4bdcaa5cceb8625f87ce",
+    "fields": {
+      "sku": "BNRRBJBTABEWQPNL",
+      "price": 49,
+      "quantity": 100,
+      "color_id": 13,
+      "product_id": "17fdb78937044900aadb246e5fde7821",
+      "size_id": 3,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]
