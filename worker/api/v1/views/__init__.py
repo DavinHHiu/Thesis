@@ -15,7 +15,7 @@ from .product import (
     ProductSkuViewSet,
     ProductViewSet,
 )
-from .search import SearchByImageApiView
+from .search import SearchByImageApiView, SearchByTextApiView
 from .shipment import ShipmentMethodViewSet, ShipmentViewSet
 from .user import (
     AddressViewSet,

@@ -8,3 +8,7 @@ class CreateAndUpdateSerializer(serializers.ModelSerializer):
 
 class ImageSerializer(serializers.Serializer):
     image = serializers.ImageField(required=True)
+
+
+class TextSerializer(serializers.Serializer):
+    text = serializers.CharField(required=True, allow_blank=True)

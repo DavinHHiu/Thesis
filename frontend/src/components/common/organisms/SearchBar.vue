@@ -15,7 +15,9 @@
     <text-field
       v-if="curOption === 'text'"
       class="w-full"
-      :label="'searchPage.placeholder'"
+      :placeholder="$t('searchPage.placeholder')"
+      :value="keywordSearch"
+      @update:model-value="updateKeyword"
     />
     <custom-button
       class="w-full h-[5rem]"
@@ -58,11 +60,16 @@ export default defineComponent({
       ] as OptionItem[],
       curOption: "text" as string,
       imageSearch: File,
+      keywordSearch: "" as string,
     };
   },
   methods: {
     uploadImageSearch(newValue: File) {
       this.$emit("update:modelValue", newValue);
+    },
+    updateKeyword(newValue: string) {
+      this.keywordSearch = newValue;
+      this.$emit("update:modelValue", this.keywordSearch);
     },
     handleSearch() {
       this.$emit("submit");

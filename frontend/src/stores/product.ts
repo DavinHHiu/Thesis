@@ -32,6 +32,9 @@ export const useProductStore = defineStore("product", {
           }
         });
     },
+    updateProducts(products: Product[]) {
+      this.products = products;
+    },
     resetProduct() {
       this.productDetail = {} as ProductDetail;
       this.products = [] as Product[];

@@ -59,6 +59,7 @@ class ProductSku(CreateAndUpdateModelMixin, models.Model):
 class ProductImage(CreateAndUpdateModelMixin, models.Model):
     id = models.BigAutoField(_("product image id"), primary_key=True)
     image = models.ImageField(_("product image"), null=True, blank=True)
+    feature = models.TextField(_("product feature"), null=True, blank=True)
     product_sku = models.ForeignKey(
         to="api.ProductSku", on_delete=models.CASCADE, related_name="images"
     )

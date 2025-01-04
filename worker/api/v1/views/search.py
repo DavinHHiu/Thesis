@@ -1,18 +1,15 @@
 import numpy as np
-import tensorflow as tf
-from django.conf import settings
-from django.core.files.uploadedfile import InMemoryUploadedFile
-from PIL import Image
 from rest_framework import status
+from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import AllowAny
 from rest_framework.request import Request
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from api.consts import base_consts
-from api.v1.serializers import ImageSerializer
-
-MODEL = tf.keras.models.load_model("api/model/vgg16_clothing_classifier.h5")
+from api.models import Product
+from api.utils.ai_model import extract_features
+from api.utils.faiss import load_index
+from api.v1.serializers import ImageSerializer, ProductShallowSerializer, TextSerializer
 
 
 class SearchByImageApiView(APIView):
@@ -22,32 +19,53 @@ class SearchByImageApiView(APIView):
 
     permission_classes = [AllowAny]
     serializer_class = ImageSerializer
+    pagination_class = LimitOffsetPagination
 
     def post(self, request: Request, *args, **kwargs) -> Response:
         serializer = self.serializer_class(data=request.data)
         serializer.is_valid(raise_exception=True)
 
         image = serializer.validated_data["image"]
+        features = extract_features(image)
 
-        image = self._process_image(image)
+        faiss_index = load_index(512)
+        _, indices = faiss_index.search(np.array([features]), k=100)
 
-        prediction = MODEL.predict(image)
+        product_ids = list(
+            dict.fromkeys(faiss_index.product_ids[i] for i in indices[0])
+        )
 
-        prediction_idx = np.argmax(prediction)
-        prediction_class = base_consts.CLASS_LABELS[prediction_idx]
+        products = list(Product.objects.filter(id__in=product_ids))
 
-        response = {
-            "prediction": prediction[0].tolist(),
-        }
-        return Response(response, status=status.HTTP_200_OK)
+        sorted_products = sorted(products, key=lambda p: product_ids.index(p.id.hex))
 
-    def _process_image(self, image: InMemoryUploadedFile) -> np.array:
-        img = Image.open(image).convert(settings.IMAGE_MODE)
+        paginator = self.pagination_class()
+        paginated_products = paginator.paginate_queryset(sorted_products, request)
 
-        img = img.resize(settings.IMAGE_SIZE)
+        serializer = ProductShallowSerializer(
+            paginated_products, many=True, context={"request": request}
+        )
 
-        img_array = np.array(img) / settings.MAX_PIXEL_VALUE
+        return paginator.get_paginated_response(serializer.data)
 
-        img_array = np.expand_dims(img_array, axis=0)
 
-        return img_array
+class SearchByTextApiView(APIView):
+    permission_classes = [AllowAny]
+    serializer_class = TextSerializer
+    pagination_class = LimitOffsetPagination
+
+    def post(self, request: Request, *args, **kwargs) -> Response:
+        serializer = self.serializer_class(data=request.data)
+        serializer.is_valid(raise_exception=True)
+
+        keyword = serializer.validated_data["text"]
+        products = Product.objects.filter(name__icontains=keyword)
+
+        paginator = self.pagination_class()
+        paginated_products = paginator.paginate_queryset(products, request)
+
+        serializer = ProductShallowSerializer(
+            paginated_products, many=True, context={"request": request}
+        )
+
+        return paginator.get_paginated_response(serializer.data)
