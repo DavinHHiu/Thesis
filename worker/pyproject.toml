@@ -15,6 +15,7 @@ djangorestframework-simplejwt = "^5.3.1"
 djangorestframework-jwt = "^1.11.0"
 requests = "^2.32.3"
 paypalrestsdk = "^1.13.3"
+faiss-cpu = "^1.9.0.post1"
 
 
 [tool.poetry.group.dev.dependencies]

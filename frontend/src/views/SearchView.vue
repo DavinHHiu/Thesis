@@ -1,15 +1,25 @@
 <template>
   <div class="body flex">
     <div class="side-filter">
-      <search-bar v-model="queryInput" @submit="search" />
+      <search-bar v-model="queryInput" @submit="submitSearch" />
       <filter-price />
       <side-category />
       <side-best-sellers />
     </div>
     <div class="list-products">
-      <grid-layout wrap="wrap" :row-gap="2">
+      <grid-layout
+        wrap="wrap"
+        :row-gap="2"
+        :column-gap="1"
+        justify-conent="flex-start"
+      >
         <product-item v-for="item in products" :product="item" />
       </grid-layout>
+      <paging-number
+        :paging="paging"
+        :cur-page="currentPage"
+        @change-page="changePage"
+      />
     </div>
   </div>
 </template>
@@ -17,6 +27,7 @@
 <script lang="ts">
 import CustomButton from "@/components/common/atomic/CustomButton.vue";
 import NumberField from "@/components/common/molecules/NumberField.vue";
+import PagingNumber from "@/components/common/molecules/PagingNumber.vue";
 import ProductItem from "@/components/common/molecules/ProductItem.vue";
 import RangeField from "@/components/common/molecules/RangeField.vue";
 import TextField from "@/components/common/molecules/TextField.vue";
@@ -26,9 +37,10 @@ import SearchBar from "@/components/common/organisms/SearchBar.vue";
 import SideBestSellers from "@/components/common/organisms/SideBestSellers.vue";
 import SideCategory from "@/components/common/organisms/SideCategory.vue";
 import GridLayout from "@/layouts/GridLayout.vue";
-import { useProductStore } from "@/stores/product";
 import { useSearchStore } from "@/stores/search";
-import { mapActions, mapState } from "pinia";
+import { Product } from "@/types/worker";
+import { getPaginationRange } from "@/utils/utils";
+import { mapActions } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({
@@ -38,6 +50,7 @@ export default defineComponent({
     FilterPrice,
     GridLayout,
     NumberField,
+    PagingNumber,
     ProductItem,
     RangeField,
     SearchBar,
@@ -49,31 +62,58 @@ export default defineComponent({
   data() {
     return {
       queryInput: "" as String | File,
+      products: [] as Product[],
+      resultsCount: 0,
+      limit: 50,
+      offset: 0,
+      currentPage: 1,
     };
   },
   computed: {
-    ...mapState(useProductStore, ["products"]),
-  },
-  methods: {
-    ...mapActions(useProductStore, ["listProducts"]),
-    ...mapActions(useSearchStore, ["searchByImage"]),
-    search() {
-      if (this.queryInput instanceof File) {
-        this.searchByImage(this.queryInput);
-      }
+    paging() {
+      return getPaginationRange(
+        Math.floor(this.resultsCount / this.limit) + 1,
+        this.currentPage,
+        1
+      );
     },
   },
-  // watch: {
-  //   queryInput: {
-  //     immediate: true,
-  //     handler(query) {
-  //       console.log(query);
-  //       this.searchByImage(query);
-  //     },
-  //   },
-  // },
+  methods: {
+    ...mapActions(useSearchStore, ["searchByImage", "searchByText"]),
+    async search() {
+      let response = undefined;
+      if (this.queryInput instanceof File) {
+        response = await this.searchByImage(
+          this.queryInput,
+          this.limit,
+          this.offset
+        );
+      } else if (typeof this.queryInput === "string") {
+        response = await this.searchByText(
+          this.queryInput,
+          this.limit,
+          this.offset
+        );
+      }
+      if (response && response.status == 200 && response.data) {
+        this.products = response.data.results as Product[];
+        this.resultsCount = response.data.count;
+      }
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    },
+    submitSearch() {
+      this.currentPage = 1;
+      this.offset = 0;
+      this.search();
+    },
+    changePage(page: number) {
+      this.currentPage = page;
+      this.offset = (page - 1) * this.limit;
+      this.search();
+    },
+  },
   mounted() {
-    this.listProducts();
+    this.search();
   },
 });
 </script>

@@ -997,18 +997,6 @@
   },
   {
     "model": "api.Product",
-    "pk": "3be3a130b66b496bbc03bfede827364e",
-    "fields": {
-      "name": "AQUILINE LEATHER JACKET",
-      "description": "Áo khoác da khoá kéo zip full thân\nCổ áo sơ mi\nCác chi tiết rả trước và sau tạo các mảng màu tương phản\nCác chi tiết chữ được thêu nổi ở mặt trước và sau áo\nKhoá kéo zip phía sau hai tay áo\nChất liệu: Da PU",
-      "summary": "Áo khoác da khoá kéo zip full thân.",
-      "rating": "0",
-      "created_at": "2024-11-30T12:00:00+00:00",
-      "updated_at": "2024-11-30T12:00:00+00:00"
-    }
-  },
-  {
-    "model": "api.Product",
     "pk": "e61a74144167469eb74557b7f9cf7c28",
     "fields": {
       "name": "RACER VAIN JACKET",
@@ -2629,18 +2617,6 @@
   },
   {
     "model": "api.Product",
-    "pk": "ce09a75d9eed49bda5391fa8eaa11105",
-    "fields": {
-      "name": "BVM001788",
-      "description": "Giày Tây Boot Nam Biti's BVM001788",
-      "summary": "Giày Tây Boot Nam Biti's BVM001788",
-      "rating": "0",
-      "created_at": "2024-11-30T12:00:00+00:00",
-      "updated_at": "2024-11-30T12:00:00+00:00"
-    }
-  },
-  {
-    "model": "api.Product",
     "pk": "a7e4144a064a428a9c93170dea775bfb",
     "fields": {
       "name": "BSM003700XNH",
@@ -3378,18 +3354,6 @@
       "name": "Modal Easy Care. Fitted",
       "description": "Áo sơ mi tay dài nam Modal Easy Care. Fitted",
       "summary": "Áo sơ mi tay dài nam Modal Easy Care. Fitted",
-      "rating": "0",
-      "created_at": "2024-11-30T12:00:00+00:00",
-      "updated_at": "2024-11-30T12:00:00+00:00"
-    }
-  },
-  {
-    "model": "api.Product",
-    "pk": "ec57f198a64d4dc2850f60b17229dbe6",
-    "fields": {
-      "name": "Áo sơ mi tay ngắn nam.Fitted",
-      "description": "Áo sơ mi tay ngắn nam.Fitted",
-      "summary": "Áo sơ mi tay ngắn nam.Fitted",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"

@@ -9,7 +9,7 @@ export const useSearchStore = defineStore("search", {
     };
   },
   actions: {
-    searchByImage(image: File) {
+    searchByImage(image: File, limit: number, offset: number) {
       const payload = {
         image,
       };
@@ -19,6 +19,21 @@ export const useSearchStore = defineStore("search", {
             "Content-Type": "multipart/form-data",
           },
         })
+        .then((response) => {
+          console.log(response);
+          return response;
+        });
+    },
+    searchByText(keyword: String, limit: number, offset: number) {
+      const payload = {
+        text: keyword,
+      };
+      const params = {
+        limit,
+        offset,
+      };
+      return axios
+        .post(`${consts.BASE_URL}/search/by-text/`, payload, { params })
         .then((response) => {
           console.log(response);
           return response;

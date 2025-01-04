@@ -8,6 +8,8 @@ from rest_framework import serializers
 from rest_framework.utils import model_meta
 
 from api.models import Product, ProductAttribute, ProductImage, ProductSku, SubCategory
+from api.utils.ai_model import extract_features
+from api.utils.faiss import add_to_index, load_index
 
 from .category import SubCategorySerializer
 from .mixin import CreateAndUpdateSerializer
@@ -182,6 +184,14 @@ class ProductImageSerializer(CreateAndUpdateSerializer):
         image.save(image_path, format="JPEG")
 
         instance.image = os.path.relpath(image_path, media_root)
+
+        feature = extract_features(image_data)
+        feature_str = ",".join(map(str, feature))
+        instance.feature = feature_str
+
+        faiss_index = load_index(512)
+        add_to_index(faiss_index, feature, product_sku.product.id)
+
         instance.save()
 
         return instance

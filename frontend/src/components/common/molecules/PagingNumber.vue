@@ -3,7 +3,10 @@
     <li class="page-item"><span class="page-link">&laquo;</span></li>
     <li class="page-item"><span class="page-link">&lsaquo;</span></li>
     <template v-for="(page, index) in paging" :key="index">
-      <li :class="['page-item', { active: page === curPage }]">
+      <li
+        :class="['page-item', { active: page === curPage }]"
+        @click="changePage(page as any)"
+      >
         <span class="page-link">{{ page }}</span>
       </li>
     </template>
@@ -13,10 +16,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue';
+import { defineComponent } from "vue";
 
 export default defineComponent({
-  name: 'PagingNumber',
+  name: "PagingNumber",
+  emits: ["change-page"],
   props: {
     paging: {
       type: Array,
@@ -27,12 +31,17 @@ export default defineComponent({
       default: 1,
     },
   },
-  methods: {},
+  methods: {
+    changePage(page: number | string) {
+      if (typeof page === "string") return;
+      this.$emit("change-page", page);
+    },
+  },
 });
 </script>
 
 <style lang="scss" scoped>
-@import '@/assets/variables';
+@import "@/assets/variables";
 
 .pagination {
   display: flex;

@@ -12,7 +12,7 @@ export default defineComponent({
     rowGap: {
       type: [Number, String],
     },
-    gapColumn: {
+    columnGap: {
       type: [Number, String],
     },
     wrap: {
@@ -32,10 +32,10 @@ export default defineComponent({
     customStyle() {
       return {
         rowGap: this.rowGap ? this.rowGap + "rem" : "0rem",
-        gapColumn: this.gapColumn ? this.gapColumn + "rem" : "0rem",
+        columnGap: this.columnGap ? this.columnGap + "rem" : "0rem",
         flexWrap: this.wrap || "nowrap",
-        alignItems: this.alignItems || "initial",
-        justifyContent: this.justifyConent || "initial",
+        alignItems: this.alignItems,
+        justifyContent: this.justifyConent,
       };
     },
   },
@@ -45,6 +45,7 @@ export default defineComponent({
 .container {
   display: flex;
   justify-content: center;
+  width: 100%;
   .flex-item {
     flex: 1 1 20rem;
   }

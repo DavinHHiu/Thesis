@@ -175,4 +175,8 @@ IMAGE_MODE = "RGB"
 IMAGE_SIZE = (224, 224)
 MAX_PIXEL_VALUE = 255.0
 
+MODEL_PATH = BASE_DIR / "api" / "model" / "vgg16_clothing_classifier.h5"
+FAISS_INDEX_PATH = BASE_DIR / "api" / "model" / "product_index.faiss"
+PRODUCT_IDS_PATH = BASE_DIR / "api" / "model" / "product_ids.pkl"
+
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
