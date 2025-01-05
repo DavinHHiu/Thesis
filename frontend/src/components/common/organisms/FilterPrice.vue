@@ -1,10 +1,10 @@
 <template>
   <div class="filter-price-wp">
-    <h2 class="section-title mb-[2rem]">Filter by price</h2>
+    <h2 class="section-title mb-[2rem]" v-t="'searchPage.filter.title'" />
     <div class="filter-by-price-wp w-full">
       <div class="price-input flex justify-center mb-[2rem]">
         <div class="field flex items-center gap-[1rem]">
-          <span>Min</span>
+          <span v-t="'searchPage.filter.min'" />
           <number-field
             ref="inputMin"
             :value="minPrice"
@@ -13,7 +13,7 @@
         </div>
         <div class="separator flex items-center justify-center">-</div>
         <div class="field flex items-center gap-[1rem]">
-          <span>Max</span>
+          <span v-t="'searchPage.filter.max'" />
           <number-field
             ref="inputMax"
             :value="maxPrice"
@@ -34,16 +34,16 @@
         <range-field
           ref="rangeMin"
           class="range-min"
-          min="0"
-          max="10000"
+          :min="min"
+          :max="max"
           :value="minPrice"
           @input="handleChangeMin"
         />
         <range-field
           ref="rangeMax"
           class="range-max"
-          min="0"
-          max="10000"
+          :min="min"
+          :max="max"
           :value="maxPrice"
           @input="handleChangeMax"
         />
@@ -52,16 +52,11 @@
     <div
       class="filter-price-action mt-[25px] flex items-center justify-between"
     >
-      <custom-button class="px-[1.8rem] py-[1rem] uppercase" intent="primary"
-        >Fitler</custom-button
-      >
-      <div class="filter-price-value">
-        <span
-          >Price:
-          <span class="price-value"
-            >${{ minPrice }} - ${{ maxPrice }}</span
-          ></span
-        >
+      <div class="filter-price-value w-full flex justify-end">
+        <span class="block">
+          <span v-t="'searchPage.filter.price'" />:
+          <span class="price-value" v-text="`${minPrice}$ - ${maxPrice}$`" />
+        </span>
       </div>
     </div>
   </div>
@@ -75,6 +70,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "FilterPrice",
+  emits: ["update:min", "update:max"],
   components: {
     NumberField,
     RangeField,
@@ -87,16 +83,16 @@ export default defineComponent({
     },
     max: {
       type: Number,
-      default: 10000,
+      default: 500,
     },
   },
   data() {
     return {
-      minPrice: 2500,
-      maxPrice: 7500,
-      progressLeft: "25%",
-      progressRight: "25%",
-      priceGap: 1000,
+      minPrice: this.min,
+      maxPrice: this.max,
+      progressLeft: "0%",
+      progressRight: "0%",
+      priceGap: 20,
     };
   },
   methods: {
@@ -105,7 +101,7 @@ export default defineComponent({
       if (e.target.type === "number") {
         minPrice =
           !e.target.value && e.target.value === ""
-            ? 2500
+            ? this.minPrice
             : parseInt(e.target.value);
       } else {
         minPrice = parseInt(this.rangeMin.getInputRef().value);
@@ -117,13 +113,14 @@ export default defineComponent({
       minPrice = Math.max(minPrice, this.min);
       this.rangeMin.getInputRef().value = this.minPrice = minPrice;
       this.progressLeft = (this.minPrice / this.max) * 100 + "%";
+      this.$emit("update:min", { min: this.minPrice });
     },
     handleChangeMax(e: any) {
       let maxPrice = 0;
       if (e.target.type === "number") {
         maxPrice =
           !e.target.value && e.target.value === ""
-            ? 7500
+            ? this.maxPrice
             : parseInt(e.target.value);
       } else {
         maxPrice = parseInt(this.rangeMax.getInputRef().value);
@@ -135,6 +132,7 @@ export default defineComponent({
       maxPrice = Math.min(maxPrice, this.max);
       this.rangeMax.getInputRef().value = this.maxPrice = maxPrice;
       this.progressRight = 100 - (this.maxPrice / this.max) * 100 + "%";
+      this.$emit("update:max", { max: this.maxPrice });
     },
   },
   computed: {

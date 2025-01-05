@@ -2,7 +2,12 @@ from .address import DistrictSerializer, ProvinceSerializer, WardSerializer
 from .base import EmailValidationSerializer
 from .cart import CartItemSerializer, CartSerializer, ShallowCartItemSerializer
 from .category import CategorySerializer, SubCategorySerializer
-from .mixin import CreateAndUpdateSerializer, ImageSerializer, TextSerializer
+from .mixin import (
+    CreateAndUpdateSerializer,
+    ImageSerializer,
+    SearchSerializer,
+    TextSerializer,
+)
 from .order import OrderDetailSerializer, OrderItemSerializer
 from .payment import (
     PaymentMethodSerializer,

@@ -1,75 +1,85 @@
 <template>
   <page-body class="content">
     <Toast />
-    <div class="product">
-      <div class="product-image">
-        <image-preview :images="currentSku?.images || []" />
-      </div>
-      <div class="product-desc">
-        <nav class="breadcrumb">
-          <a href="">Home</a>&nbsp;/&nbsp;<a href="">Men</a>&nbsp;/&nbsp;DNK
-          Yellow Shoes
-        </nav>
-        <span class="single-product-category mb-[1.6rem] block"
-          ><a href="" rel="tag" v-text="productDetail?.categories?.[0]"
-        /></span>
-        <h1 class="product-title mb-[1.5rem]" v-text="productDetail.name" />
-        <p class="price py-[1.5rem] border-y">
-          <!-- <del aria-hidden="true" class="mr-[10px] text-slate-400">$150.00</del> -->
-          <span
-            class="screen-reader-text font-bold"
-            v-text="formatAmount(currentSku?.price)"
-          />
-          <!-- <span class="ast-shipping-text">+ Free Shipping</span> -->
-        </p>
-        <div class="my-[1.6rem]">
-          <product-sku-picker
-            :skus="productDetail?.skus"
-            :current-sku="currentSku"
-            @update:sku="changeSku"
-          />
+    <LoadingPage v-if="loading" />
+    <div v-else>
+      <div class="product">
+        <div class="product-image">
+          <image-preview :images="currentSku?.images || []" />
         </div>
-        <div class="action-wrapper flex gap-[2rem] mb-[2rem]">
-          <custom-button
-            class="btn-add h-[4.5rem]"
-            intent="primary"
-            :disabled="loading"
-            v-t="'inputLabel.common.addToCart'"
-            @click="handleAddToCart"
-          />
-        </div>
-        <div class="my-[1.6rem]">
-          <span v-text="productDetail?.summary" />
-        </div>
-        <div class="product_meta border-t">
-          <span class="posted_in block pt-[1rem] mb-[2rem]"
-            >Category: <a href="" v-text="productDetail?.categories?.[0]"
+        <div class="product-desc">
+          <nav class="breadcrumb">
+            <a href="">Home</a>&nbsp;/&nbsp;<a href="">Men</a>&nbsp;/&nbsp;DNK
+            Yellow Shoes
+          </nav>
+          <span class="single-product-category mb-[1.6rem] block"
+            ><a href="" rel="tag" v-text="productDetail?.categories?.[0]"
           /></span>
+          <h1 class="product-title mb-[1.5rem]" v-text="productDetail.name" />
+          <p class="price py-[1.5rem] border-y">
+            <!-- <del aria-hidden="true" class="mr-[10px] text-slate-400">$150.00</del> -->
+            <span
+              class="screen-reader-text font-bold"
+              v-text="formatAmount(currentSku?.price)"
+            />
+            <!-- <span class="ast-shipping-text">+ Free Shipping</span> -->
+          </p>
+          <div class="my-[1.6rem]">
+            <product-sku-picker
+              :skus="productDetail?.skus"
+              :current-sku="currentSku"
+              @update:sku="changeSku"
+            />
+          </div>
+          <div class="action-wrapper flex gap-[2rem] mb-[2rem]">
+            <custom-button
+              class="btn-add h-[4.5rem]"
+              intent="primary"
+              :disabled="loading"
+              v-t="'inputLabel.common.addToCart'"
+              @click="handleAddToCart"
+            />
+          </div>
+          <div class="my-[1.6rem]">
+            <p
+              class="product-description"
+              v-text="productDetail?.description"
+            />
+          </div>
+          <div class="product_meta border-t">
+            <span class="posted_in block pt-[1rem] mb-[2rem]"
+              >Category: <a href="" v-text="productDetail?.categories?.[0]"
+            /></span>
+          </div>
         </div>
       </div>
-    </div>
-    <div class="product-details-wrapper">
-      <ul class="tabs">
-        <li
-          v-for="(x, index) in ['Description', 'Reviews (0)']"
-          :key="index"
-          :class="{ active: index === currentTabIndex }"
-          @click="handleChangeTab(index)"
-        >
-          {{ x }}
-        </li>
-      </ul>
-      <div class="product-details">
-        <div class="pb-[2rem]">
-          <div>
-            <h3 class="product-details-title font-bold">Product description</h3>
+      <div class="product-details-wrapper">
+        <ul class="tabs">
+          <li
+            v-for="(x, index) in ['Description']"
+            :key="index"
+            :class="{ active: index === currentTabIndex }"
+            @click="handleChangeTab(index)"
+          >
+            {{ x }}
+          </li>
+        </ul>
+        <div class="product-details">
+          <div class="pb-[2rem]">
+            <div>
+              <h3 class="product-details-title font-bold">
+                Product description
+              </h3>
+            </div>
+            <div class="mb-[2rem]">
+              <p class="product-description">
+                {{ productDetail?.description }}
+              </p>
+            </div>
           </div>
-          <div class="mb-[2rem]">
-            <p v-text="productDetail?.description" />
+          <div v-for="image in currentSku?.images?.slice(1)" class="w-full">
+            <img :src="image" class="w-full" />
           </div>
-        </div>
-        <div v-for="image in currentSku?.images?.slice(1)" class="w-full">
-          <img :src="image" class="w-full" />
         </div>
       </div>
     </div>
@@ -154,9 +164,11 @@ export default defineComponent({
     },
   },
   async mounted() {
+    this.loading = true;
     const productId = this.$route.params.id;
     await this.retrieveProductDetail(productId as string);
     this.currentSku = this.productDetail?.skus[0] as ProductSkuDetail;
+    this.loading = false;
   },
 });
 </script>
@@ -268,6 +280,9 @@ export default defineComponent({
         }
       }
     }
+  }
+  .product-description {
+    text-align: justify;
   }
 }
 </style>

@@ -42,7 +42,7 @@ export const bulkSet = (item: object) => {
 
 export const remove = (item: string) => {
   if (isLocalStorageAvailable()) {
-    localStorage.remove(item);
+    localStorage.removeItem(item);
   } else {
     alert("Can't remove local storage item!");
   }

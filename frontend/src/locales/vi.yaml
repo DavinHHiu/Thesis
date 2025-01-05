@@ -86,6 +86,11 @@ homePage:
 
 searchPage:
   placeholder: Tìm kiếm Price Tag
+  filter:
+    title: Lọc theo giá
+    min: Tối thiểu
+    max: Tối đa
+    price: Giá
 
 productDetailPage:
   size: Size

@@ -16,7 +16,7 @@ feature_extractor = Model(inputs=MODEL.inputs, outputs=MODEL.layers[-2].output)
 def extract_features(image_data):
     image = None
     if isinstance(image_data, str):
-        image_data = base64.b64decode(image_data)
+        image_data = base64.b64decode(image_data.split(",")[1])
         image = Image.open(BytesIO(image_data))
     elif isinstance(image_data, UploadedFile):
         image = Image.open(image_data)
@@ -33,7 +33,6 @@ def extract_features(image_data):
         white_image.paste(image, ((max_dim - width) // 2, (max_dim - height) // 2))
 
         image_resized = white_image.resize(settings.IMAGE_SIZE)
-        # image_resized.show()
         image_array = np.array(image_resized)
         image_array = np.expand_dims(image_array, axis=0)
         image_array = preprocess_input(image_array)

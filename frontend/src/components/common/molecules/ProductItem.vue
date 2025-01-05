@@ -2,13 +2,13 @@
   <div class="product-wrapper">
     <div class="image-wrapper mb-[1rem]">
       <img class="first-img" :src="product?.images[0]" />
-      <img class="second-img" :src="product?.images[1]" />
+      <img class="second-img" :src="product?.images[1] ?? product?.images[0]" />
     </div>
     <div class="info-wrapper flex flex-col">
       <span class="product-name" v-text="product?.name" />
       <span class="product-category" v-text="product?.categories[0]" />
       <div>
-        <badge-star :rating="product?.rating as number" />
+        <badge-color :colors="product?.colors as string[]" />
       </div>
       <span
         class="price font-semibold"
@@ -25,7 +25,7 @@
 </template>
 <script lang="ts">
 import CustomButton from "@/components/common/atomic/CustomButton.vue";
-import BadgeStar from "@/components/common/molecules/BadgeStar.vue";
+import BadgeColor from "@/components/common/molecules/BadgeColor.vue";
 import { Product } from "@/types/worker";
 import { formatCurrency } from "@/utils/currency";
 import { defineComponent, PropType } from "vue";
@@ -37,7 +37,7 @@ export default defineComponent({
     product: {} as PropType<Product>,
   },
   components: {
-    BadgeStar,
+    BadgeColor,
     CustomButton,
   },
   methods: {

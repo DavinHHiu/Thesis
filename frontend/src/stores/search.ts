@@ -9,29 +9,15 @@ export const useSearchStore = defineStore("search", {
     };
   },
   actions: {
-    searchByImage(image: File, limit: number, offset: number) {
-      const payload = {
-        image,
-      };
+    searchByImage(payload: Object, params: Object) {
       return axios
-        .post(`${consts.BASE_URL}/search/by-image/`, payload, {
-          headers: {
-            "Content-Type": "multipart/form-data",
-          },
-        })
+        .post(`${consts.BASE_URL}/search/by-image/`, payload, { params })
         .then((response) => {
           console.log(response);
           return response;
         });
     },
-    searchByText(keyword: String, limit: number, offset: number) {
-      const payload = {
-        text: keyword,
-      };
-      const params = {
-        limit,
-        offset,
-      };
+    searchByText(payload: Object, params: Object) {
       return axios
         .post(`${consts.BASE_URL}/search/by-text/`, payload, { params })
         .then((response) => {

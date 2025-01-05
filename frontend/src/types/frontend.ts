@@ -44,9 +44,15 @@ interface Toast {
   delay?: number;
 }
 
+interface FilterPrice {
+  min: number;
+  max: number;
+}
+
 export {
   AuthToken,
   DropdownItem,
+  FilterPrice,
   OptionItem,
   LoginItem,
   RegisterItem,
