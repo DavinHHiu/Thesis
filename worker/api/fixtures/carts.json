@@ -31,5 +31,38 @@
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
     }
+  },
+  {
+    "model": "api.Cart",
+    "pk": "1a5bcd5a20564ef5840df70a0ba3151a",
+    "fields": {
+      "user_id": "4fbb1440bd8c44339102ec847750e3cb",
+      "total_amount": 0,
+      "total_quantity": 0,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Cart",
+    "pk": "2fe50000a7864daa9b7b89c25b090d2c",
+    "fields": {
+      "user_id": "b392f07cfc164506aa9402d1110bcb64",
+      "total_amount": 0,
+      "total_quantity": 0,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
+  },
+  {
+    "model": "api.Cart",
+    "pk": "b26d1060e5b143cd9a239dab37febee8",
+    "fields": {
+      "user_id": "cfe934e5d185453e8900f49aa78cf0d9",
+      "total_amount": 0,
+      "total_quantity": 0,
+      "created_at": "2024-11-30T12:00:00+00:00",
+      "updated_at": "2024-11-30T12:00:00+00:00"
+    }
   }
 ]

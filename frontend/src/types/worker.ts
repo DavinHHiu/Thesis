@@ -109,6 +109,7 @@ interface Product {
   name: string;
   rating?: number;
   categories: string[];
+  colors: string[];
   prices: number[];
   images: string[];
 }

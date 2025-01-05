@@ -3699,9 +3699,9 @@
     "model": "api.Product",
     "pk": "4cf10fcca57b44bca2d44409f22b2739",
     "fields": {
-      "name": "Áo Lót T-shirt Maximizer Có Gọng Mút Nâng",
-      "description": "Áo Lót T-shirt Maximizer Có Gọng Mút Nâng",
-      "summary": "Áo Lót T-shirt Maximizer Có Gọng Mút Nâng",
+      "name": "Maximizer Có Gọng Mút Nâng",
+      "description": "Maximizer Có Gọng Mút Nâng",
+      "summary": "Maximizer Có Gọng Mút Nâng",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3711,9 +3711,9 @@
     "model": "api.Product",
     "pk": "1c4ad1147be94900afeb5b954674e66b",
     "fields": {
-      "name": "Áo Lót Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
-      "description": "Áo Lót Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
-      "summary": "Áo Lót Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
+      "name": "Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
+      "description": "Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
+      "summary": "Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3723,9 +3723,9 @@
     "model": "api.Product",
     "pk": "b2dac57ea46b4566992febb6438f8cd3",
     "fields": {
-      "name": "Áo Lót Invisible Inside-Out Không Gọng Mút Nâng Cổ Chữ V",
-      "description": "Áo Lót Invisible Inside-Out Không Gọng Mút Nâng Cổ Chữ V",
-      "summary": "Áo Lót Invisible Inside-Out Không Gọng Mút Nâng Cổ Chữ V",
+      "name": "Invisible Inside-Out Không Gọng Mút Nâng Cổ Chữ V",
+      "description": "Invisible Inside-Out Không Gọng Mút Nâng Cổ Chữ V",
+      "summary": "Invisible Inside-Out Không Gọng Mút Nâng Cổ Chữ V",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3735,9 +3735,9 @@
     "model": "api.Product",
     "pk": "a3d3d3dda9b5464aa3b4d2b069d400a1",
     "fields": {
-      "name": "Áo Lót Invisible Inside-Out Không Gọng Mút Nâng Dây Tháo Rời",
-      "description": "Áo Lót Invisible Inside-Out Không Gọng Mút Nâng Dây Tháo Rời",
-      "summary": "Áo Lót Invisible Inside-Out Không Gọng Mút Nâng Dây Tháo Rời",
+      "name": "Invisible Inside-Out Không Gọng Mút Nâng Dây Tháo Rời",
+      "description": "Invisible Inside-Out Không Gọng Mút Nâng Dây Tháo Rời",
+      "summary": "Invisible Inside-Out Không Gọng Mút Nâng Dây Tháo Rời",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3747,9 +3747,9 @@
     "model": "api.Product",
     "pk": "00bd27ac3fb64c1bacf2287ce79b9a75",
     "fields": {
-      "name": "Áo Lót Maximizer 281 Có Gọng Mút Nâng",
-      "description": "Áo Lót Maximizer 281 Có Gọng Mút Nâng",
-      "summary": "Áo Lót Maximizer 281 Có Gọng Mút Nâng",
+      "name": "Maximizer 281 Có Gọng Mút Nâng",
+      "description": "Maximizer 281 Có Gọng Mút Nâng",
+      "summary": "Maximizer 281 Có Gọng Mút Nâng",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3759,9 +3759,9 @@
     "model": "api.Product",
     "pk": "bab56072bf65442bbc811e616aae65d8",
     "fields": {
-      "name": "Áo Lót Simply Natural Beauty Có Gọng Mút Nâng Tháo Rời",
-      "description": "Áo Lót Simply Natural Beauty Có Gọng Mút Nâng Tháo Rời",
-      "summary": "Áo Lót Simply Natural Beauty Có Gọng Mút Nâng Tháo Rời",
+      "name": "Simply Natural Beauty Có Gọng Mút Nâng Tháo Rời",
+      "description": "Simply Natural Beauty Có Gọng Mút Nâng Tháo Rời",
+      "summary": "Simply Natural Beauty Có Gọng Mút Nâng Tháo Rời",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3771,9 +3771,9 @@
     "model": "api.Product",
     "pk": "f9fb69e80172420ea158fbb5e17404b4",
     "fields": {
-      "name": "Áo Lót Maximizer Có Gọng Mút Nâng",
-      "description": "Áo Lót Maximizer Có Gọng Mút Nâng",
-      "summary": "Áo Lót Maximizer Có Gọng Mút Nâng",
+      "name": "Maximizer Có Gọng Mút Nâng",
+      "description": "Maximizer Có Gọng Mút Nâng",
+      "summary": "Maximizer Có Gọng Mút Nâng",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3783,9 +3783,9 @@
     "model": "api.Product",
     "pk": "3a3e7c546a9d4986acd5bf607cacfa09",
     "fields": {
-      "name": "Áo Lót Simply Style Larkspur Có Gọng Mút Nâng Cổ Chữ V",
-      "description": "Áo Lót Simply Style Larkspur Có Gọng Mút Nâng Cổ Chữ V",
-      "summary": "Áo Lót Simply Style Larkspur Có Gọng Mút Nâng Cổ Chữ V",
+      "name": "Simply Style Larkspur Có Gọng Mút Nâng Cổ Chữ V",
+      "description": "Simply Style Larkspur Có Gọng Mút Nâng Cổ Chữ V",
+      "summary": "Simply Style Larkspur Có Gọng Mút Nâng Cổ Chữ V",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3795,9 +3795,9 @@
     "model": "api.Product",
     "pk": "b6e89c97b17f4d31829919fb3b144352",
     "fields": {
-      "name": "Áo Lót Magic Wire Lite Sensation Mút Nâng Cổ Chữ V",
-      "description": "Áo Lót Magic Wire Lite Sensation Mút Nâng Cổ Chữ V",
-      "summary": "Áo Lót Magic Wire Lite Sensation Mút Nâng Cổ Chữ V",
+      "name": "Magic Wire Lite Sensation Mút Nâng Cổ Chữ V",
+      "description": "Magic Wire Lite Sensation Mút Nâng Cổ Chữ V",
+      "summary": "Magic Wire Lite Sensation Mút Nâng Cổ Chữ V",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3807,9 +3807,9 @@
     "model": "api.Product",
     "pk": "269a931979f740caaa443da22b333cce",
     "fields": {
-      "name": "Áo Lót Maximizer Có Gọng Mút Nâng",
-      "description": "Áo Lót Maximizer Có Gọng Mút Nâng",
-      "summary": "Áo Lót Maximizer Có Gọng Mút Nâng",
+      "name": "Maximizer Có Gọng Mút Nâng",
+      "description": "Maximizer Có Gọng Mút Nâng",
+      "summary": "Maximizer Có Gọng Mút Nâng",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3819,9 +3819,9 @@
     "model": "api.Product",
     "pk": "0203eb7174a246c7ad3700e01ae28ec8",
     "fields": {
-      "name": "Áo Lót Simply Everyday Basic Có Gọng Mút Nâng Dây Tháo Rời",
-      "description": "Áo Lót Simply Everyday Basic Có Gọng Mút Nâng Dây Tháo Rời",
-      "summary": "Áo Lót Simply Everyday Basic Có Gọng Mút Nâng Dây Tháo Rời",
+      "name": "Simply Everyday Basic Có Gọng Mút Nâng Dây Tháo Rời",
+      "description": "Simply Everyday Basic Có Gọng Mút Nâng Dây Tháo Rời",
+      "summary": "Simply Everyday Basic Có Gọng Mút Nâng Dây Tháo Rời",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3831,9 +3831,9 @@
     "model": "api.Product",
     "pk": "447df3cf9a0c404fae8a64be1b52ec20",
     "fields": {
-      "name": "Áo Lót Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
-      "description": "Áo Lót Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
-      "summary": "Áo Lót Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
+      "name": "Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
+      "description": "Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
+      "summary": "Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3843,9 +3843,9 @@
     "model": "api.Product",
     "pk": "416187eebd9347d19f9f2871874a7d14",
     "fields": {
-      "name": "Áo Lót Love Lace Gọng Wire Lite Mút Nâng - Thân thiện môi trường",
-      "description": "Áo Lót Love Lace Gọng Wire Lite Mút Nâng - Thân thiện môi trường",
-      "summary": "Áo Lót Love Lace Gọng Wire Lite Mút Nâng - Thân thiện môi trường",
+      "name": "Love Lace Gọng Wire Lite Mút Nâng - Thân thiện môi trường",
+      "description": "Love Lace Gọng Wire Lite Mút Nâng - Thân thiện môi trường",
+      "summary": "Love Lace Gọng Wire Lite Mút Nâng - Thân thiện môi trường",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3855,9 +3855,9 @@
     "model": "api.Product",
     "pk": "68d15750abb64046817dea9dde627839",
     "fields": {
-      "name": "Áo Lót Simply Modern Larkspur Gọng Wire Lite Mút Nâng Cổ chữ V",
-      "description": "Áo Lót Simply Modern Larkspur Gọng Wire Lite Mút Nâng Cổ chữ V",
-      "summary": "Áo Lót Simply Modern Larkspur Gọng Wire Lite Mút Nâng Cổ chữ V",
+      "name": "Simply Modern Larkspur Gọng Wire Lite Mút Nâng Cổ chữ V",
+      "description": "Simply Modern Larkspur Gọng Wire Lite Mút Nâng Cổ chữ V",
+      "summary": "Simply Modern Larkspur Gọng Wire Lite Mút Nâng Cổ chữ V",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3867,9 +3867,9 @@
     "model": "api.Product",
     "pk": "df1ea156ea5441c2aee47251cd1e12c2",
     "fields": {
-      "name": "Áo Lót Love Lace Không Gọng Mút Nâng - Thân thiện môi trường",
-      "description": "Áo Lót Love Lace Không Gọng Mút Nâng - Thân thiện môi trường",
-      "summary": "Áo Lót Love Lace Không Gọng Mút Nâng - Thân thiện môi trường",
+      "name": "Love Lace Không Gọng Mút Nâng - Thân thiện môi trường",
+      "description": "Love Lace Không Gọng Mút Nâng - Thân thiện môi trường",
+      "summary": "Love Lace Không Gọng Mút Nâng - Thân thiện môi trường",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3879,9 +3879,9 @@
     "model": "api.Product",
     "pk": "b4cac5fc0f6f4ccf9a87a6bdd46b9540",
     "fields": {
-      "name": "Áo Lót Aqua Lucky Không Gọng Mút Nâng",
-      "description": "Áo Lót Aqua Lucky Không Gọng Mút Nâng",
-      "summary": "Áo Lót Aqua Lucky Không Gọng Mút Nâng",
+      "name": "Aqua Lucky Không Gọng Mút Nâng",
+      "description": "Aqua Lucky Không Gọng Mút Nâng",
+      "summary": "Aqua Lucky Không Gọng Mút Nâng",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3891,9 +3891,9 @@
     "model": "api.Product",
     "pk": "44e1a4e5e1ec4d798faefd1accdc2e69",
     "fields": {
-      "name": "Áo Lót Style Airy Gọng Wire Lite Mút Nâng Cổ Chữ V - Thân Thiện Môi Trường",
-      "description": "Áo Lót Style Airy Gọng Wire Lite Mút Nâng Cổ Chữ V - Thân Thiện Môi Trường",
-      "summary": "Áo Lót Style Airy Gọng Wire Lite Mút Nâng Cổ Chữ V - Thân Thiện Môi Trường",
+      "name": "Style Airy Gọng Wire Lite Mút Nâng Cổ Chữ V - Thân Thiện Môi Trường",
+      "description": "Style Airy Gọng Wire Lite Mút Nâng Cổ Chữ V - Thân Thiện Môi Trường",
+      "summary": "Style Airy Gọng Wire Lite Mút Nâng Cổ Chữ V - Thân Thiện Môi Trường",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3903,9 +3903,9 @@
     "model": "api.Product",
     "pk": "5f5eda00de214a7890d8791b46f9b19f",
     "fields": {
-      "name": "Áo Lót Maximizer 280 Có Gọng Mút Nâng",
-      "description": "Áo Lót Maximizer 280 Có Gọng Mút Nâng",
-      "summary": "Áo Lót Maximizer 280 Có Gọng Mút Nâng",
+      "name": "Maximizer 280 Có Gọng Mút Nâng",
+      "description": "Maximizer 280 Có Gọng Mút Nâng",
+      "summary": "Maximizer 280 Có Gọng Mút Nâng",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3915,9 +3915,9 @@
     "model": "api.Product",
     "pk": "5a2a727f907d49a4b93a4f97b1937a2c",
     "fields": {
-      "name": "Áo Lót Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
-      "description": "Áo Lót Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
-      "summary": "Áo Lót Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
+      "name": "Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
+      "description": "Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
+      "summary": "Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3927,9 +3927,9 @@
     "model": "api.Product",
     "pk": "f2dce2479ead445ca933538a1c41a024",
     "fields": {
-      "name": "Áo Lót Maximizer Không Gọng Mút Nâng",
-      "description": "Áo Lót Maximizer Không Gọng Mút Nâng",
-      "summary": "Áo Lót Maximizer Không Gọng Mút Nâng",
+      "name": "Maximizer Không Gọng Mút Nâng",
+      "description": "Maximizer Không Gọng Mút Nâng",
+      "summary": "Maximizer Không Gọng Mút Nâng",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3939,9 +3939,9 @@
     "model": "api.Product",
     "pk": "a6ba2b62abb743949e87320e63985c00",
     "fields": {
-      "name": "Áo Lót sloggi Zero Có Gọng Mút Nâng",
-      "description": "Áo Lót sloggi Zero Có Gọng Mút Nâng",
-      "summary": "Áo Lót sloggi Zero Có Gọng Mút Nâng",
+      "name": "sloggi Zero Có Gọng Mút Nâng",
+      "description": "sloggi Zero Có Gọng Mút Nâng",
+      "summary": "sloggi Zero Có Gọng Mút Nâng",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3951,9 +3951,9 @@
     "model": "api.Product",
     "pk": "5fe6420b10094bbfa0da3824e5d75906",
     "fields": {
-      "name": "Áo Lót Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
-      "description": "Áo Lót Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
-      "summary": "Áo Lót Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
+      "name": "Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
+      "description": "Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
+      "summary": "Maximizer Có Gọng Mút Nâng Tháo Rời Dây Tháo Rời",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3963,9 +3963,9 @@
     "model": "api.Product",
     "pk": "6f819c2de1d742bfb7ac970ecc076c14",
     "fields": {
-      "name": "Áo Lót Invisible Inside-Out Không Gọng Mút Nâng Cổ Chữ V",
-      "description": "Áo Lót Invisible Inside-Out Không Gọng Mút Nâng Cổ Chữ V",
-      "summary": "Áo Lót Invisible Inside-Out Không Gọng Mút Nâng Cổ Chữ V",
+      "name": "Invisible Inside-Out Không Gọng Mút Nâng Cổ Chữ V",
+      "description": "Invisible Inside-Out Không Gọng Mút Nâng Cổ Chữ V",
+      "summary": "Invisible Inside-Out Không Gọng Mút Nâng Cổ Chữ V",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3975,9 +3975,9 @@
     "model": "api.Product",
     "pk": "c99d79ccf59842a6929242851df5363f",
     "fields": {
-      "name": "Áo Lót Invisible Inside-Out Không Gọng Mút Nâng Dây Tháo Rời",
-      "description": "Áo Lót Invisible Inside-Out Không Gọng Mút Nâng Dây Tháo Rời",
-      "summary": "Áo Lót Invisible Inside-Out Không Gọng Mút Nâng Dây Tháo Rời",
+      "name": "Invisible Inside-Out Không Gọng Mút Nâng Dây Tháo Rời",
+      "description": "Invisible Inside-Out Không Gọng Mút Nâng Dây Tháo Rời",
+      "summary": "Invisible Inside-Out Không Gọng Mút Nâng Dây Tháo Rời",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3987,9 +3987,9 @@
     "model": "api.Product",
     "pk": "261cb43cadd041039c5cc03dababbaf3",
     "fields": {
-      "name": "Áo Lót Magic Wire Lite Sensation Mút Nâng Cổ Chữ V",
-      "description": "Áo Lót Magic Wire Lite Sensation Mút Nâng Cổ Chữ V",
-      "summary": "Áo Lót Magic Wire Lite Sensation Mút Nâng Cổ Chữ V",
+      "name": "Magic Wire Lite Sensation Mút Nâng Cổ Chữ V",
+      "description": "Magic Wire Lite Sensation Mút Nâng Cổ Chữ V",
+      "summary": "Magic Wire Lite Sensation Mút Nâng Cổ Chữ V",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -3999,9 +3999,9 @@
     "model": "api.Product",
     "pk": "099e168b4ad34aad887ce5adae1b9bec",
     "fields": {
-      "name": "Áo Lót T-shirt Maximizer Có Gọng Mút Nâng",
-      "description": "Áo Lót T-shirt Maximizer Có Gọng Mút Nâng",
-      "summary": "Áo Lót T-shirt Maximizer Có Gọng Mút Nâng",
+      "name": "Maximizer Có Gọng Mút Nâng",
+      "description": "Maximizer Có Gọng Mút Nâng",
+      "summary": "Maximizer Có Gọng Mút Nâng",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -4011,9 +4011,9 @@
     "model": "api.Product",
     "pk": "ba70d0ff59434463b5ff13f8f102d1c4",
     "fields": {
-      "name": "Áo Lót Simply Natural Beauty Có Gọng Mút Nâng Tháo Rời",
-      "description": "Áo Lót Simply Natural Beauty Có Gọng Mút Nâng Tháo Rời",
-      "summary": "Áo Lót Simply Natural Beauty Có Gọng Mút Nâng Tháo Rời",
+      "name": "Simply Natural Beauty Có Gọng Mút Nâng Tháo Rời",
+      "description": "Simply Natural Beauty Có Gọng Mút Nâng Tháo Rời",
+      "summary": "Simply Natural Beauty Có Gọng Mút Nâng Tháo Rời",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -4023,9 +4023,9 @@
     "model": "api.Product",
     "pk": "4c43790e93274fd8922c1727a9722088",
     "fields": {
-      "name": "Áo Lót Simply Style Larkspur Có Gọng Mút Nâng Cổ Chữ V",
-      "description": "Áo Lót Simply Style Larkspur Có Gọng Mút Nâng Cổ Chữ V",
-      "summary": "Áo Lót Simply Style Larkspur Có Gọng Mút Nâng Cổ Chữ V",
+      "name": "Simply Style Larkspur Có Gọng Mút Nâng Cổ Chữ V",
+      "description": "Simply Style Larkspur Có Gọng Mút Nâng Cổ Chữ V",
+      "summary": "Simply Style Larkspur Có Gọng Mút Nâng Cổ Chữ V",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -4035,9 +4035,9 @@
     "model": "api.Product",
     "pk": "4c1a36597fb8457fb9e3a6b9295a1021",
     "fields": {
-      "name": "Áo lót D 388 Có Gọng Mút Nâng",
-      "description": "Áo lót D 388 Có Gọng Mút Nâng",
-      "summary": "Áo lót D 388 Có Gọng Mút Nâng",
+      "name": "D 388 Có Gọng Mút Nâng",
+      "description": "D 388 Có Gọng Mút Nâng",
+      "summary": "D 388 Có Gọng Mút Nâng",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"
@@ -4047,9 +4047,9 @@
     "model": "api.Product",
     "pk": "bce96b618a6143c68a8643b98d7f36bb",
     "fields": {
-      "name": "Áo Lót Premium Joy Không Gọng Mút Nâng Cổ Chữ V - Thân thiện môi trường",
-      "description": "Áo Lót Premium Joy Không Gọng Mút Nâng Cổ Chữ V - Thân thiện môi trường",
-      "summary": "Áo Lót Premium Joy Không Gọng Mút Nâng Cổ Chữ V - Thân thiện môi trường",
+      "name": "Premium Joy Không Gọng Mút Nâng Cổ Chữ V - Thân thiện môi trường",
+      "description": "Premium Joy Không Gọng Mút Nâng Cổ Chữ V - Thân thiện môi trường",
+      "summary": "Premium Joy Không Gọng Mút Nâng Cổ Chữ V - Thân thiện môi trường",
       "rating": "0",
       "created_at": "2024-11-30T12:00:00+00:00",
       "updated_at": "2024-11-30T12:00:00+00:00"

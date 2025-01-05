@@ -12,3 +12,13 @@ class ImageSerializer(serializers.Serializer):
 
 class TextSerializer(serializers.Serializer):
     text = serializers.CharField(required=True, allow_blank=True)
+
+
+class FilterPriceSerializer(serializers.Serializer):
+    min = serializers.IntegerField()
+    max = serializers.IntegerField()
+
+
+class SearchSerializer(serializers.Serializer):
+    query = serializers.CharField(allow_blank=True)
+    filter_price = FilterPriceSerializer()

@@ -240,6 +240,7 @@ class ProductShallowSerializer(serializers.Serializer):
     name = serializers.CharField()
     rating = serializers.IntegerField()
     images = serializers.SerializerMethodField()
+    colors = serializers.SerializerMethodField()
     categories = serializers.SerializerMethodField()
     prices = serializers.SerializerMethodField()
 
@@ -259,6 +260,9 @@ class ProductShallowSerializer(serializers.Serializer):
 
     def get_prices(self, obj):
         return obj.skus.values_list("price", flat=True)
+
+    def get_colors(self, obj):
+        return obj.skus.values_list("color__value", flat=True).distinct()
 
 
 class ProductSkuDetailSerializer(serializers.Serializer):

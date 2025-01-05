@@ -67,8 +67,8 @@ export default defineComponent({
       const file = event.target.files[0];
       this.$emit("update:modelValue", file);
     },
-    getDataURL(file: File) {
-      readFileAsDataURL(file).then((result) => (this.imagePath = result));
+    async getDataURL(file: File) {
+      this.imagePath = await readFileAsDataURL(file);
     },
   },
   computed: {

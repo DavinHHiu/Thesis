@@ -8,7 +8,7 @@
         <span class="product-name" v-text="product?.name" />
       </a>
       <div>
-        <badge-star :rating="product?.rating as number" />
+        <badge-color :colors="product?.colors as string[]" />
       </div>
       <span
         class="price font-semibold"
@@ -19,7 +19,7 @@
 </template>
 
 <script lang="ts">
-import BadgeStar from "@/components/common/molecules/BadgeStar.vue";
+import BadgeColor from "@/components/common/molecules/BadgeColor.vue";
 import { Product } from "@/types/worker";
 import { formatCurrency } from "@/utils/currency";
 import { defineComponent, PropType } from "vue";
@@ -28,7 +28,7 @@ import { useI18n } from "vue-i18n";
 export default defineComponent({
   name: "TopItem",
   components: {
-    BadgeStar,
+    BadgeColor,
   },
   props: {
     product: {} as PropType<Product>,

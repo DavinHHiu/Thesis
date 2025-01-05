@@ -1,7 +1,8 @@
 <template>
   <div class="side-best-sellers">
     <h2 class="section-title mb-[2rem]">Our Best Sellers</h2>
-    <ul>
+    <LoadingContent v-if="loading" />
+    <ul v-else>
       <li v-for="product in topProducts"><top-item :product="product" /></li>
     </ul>
   </div>
@@ -14,8 +15,15 @@ import _ from "lodash";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
+import LoadingContent from "./LoadingContent.vue";
+
 export default defineComponent({
   name: "SideBestSellers",
+  data() {
+    return {
+      loading: false,
+    };
+  },
   components: {
     TopItem,
   },
@@ -28,8 +36,10 @@ export default defineComponent({
       return _.take(this.products, 5);
     },
   },
-  mounted() {
-    this.listProducts();
+  async mounted() {
+    this.loading = true;
+    await this.listProducts();
+    this.loading = false;
   },
 });
 </script>

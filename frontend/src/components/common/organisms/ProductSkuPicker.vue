@@ -18,14 +18,15 @@
     </div>
     <div class="size-list-wp">
       <span class="title" v-t="'productDetailPage.size'" />
-      <div class="size-wp">
+      <div class="size-wp w-full h-full flex gap-[1rem]">
         <div
           v-for="size in listSizeDisplay"
-          class="sku w-full h-full flex items-center justify-center"
+          class="sku size-item flex items-center justify-center"
           :class="{
             active: !size.disabled && size.size === currentSize,
             'out-of-stock': size.disabled,
           }"
+          @click="changeSize(size)"
         >
           <span v-text="size.size" />
         </div>
@@ -79,64 +80,87 @@ export default defineComponent({
         }
       }
     },
+    changeSize(size: SizeDisplay) {
+      if (!size.disabled) {
+        const index = this.skus?.findIndex(
+          (sku) =>
+            sku.color === this.currentColor &&
+            sku.size === size.size &&
+            sku.quantity > 0
+        );
+        if (index !== undefined && index !== -1) {
+          this.$emit("update:sku", this.skus?.[index]);
+        } else {
+          const anotherSku = this.skus?.find(
+            (sku) => sku.size === size.size && sku.quantity > 0
+          );
+          this.$emit("update:sku", anotherSku);
+        }
+      }
+    },
   },
-  computed: {},
   watch: {
-    currentSku() {
-      this.currentColor = this.currentSku.color;
-      this.currentSize = this.currentSku.size;
-      this.listColorDisplay = _.reduce(
-        this.skus,
-        (acc: ColorDisplay[], sku) => {
-          if (!acc.some((item) => item.color === sku.color)) {
-            acc.push({
-              color: sku.color,
-              image: sku.images[0],
-              totalQuantity: sku.quantity,
-            });
+    currentSku: {
+      handler(sku: ProductSkuDetail) {
+        this.currentColor = this.currentSku.color;
+        this.currentSize = this.currentSku.size;
+        this.listColorDisplay = _.reduce(
+          this.skus,
+          (acc: ColorDisplay[], sku) => {
+            if (!acc.some((item) => item.color === sku.color)) {
+              acc.push({
+                color: sku.color,
+                image: sku.images[0],
+                totalQuantity: sku.quantity,
+              });
+            } else {
+              const index = acc.findIndex((item) => item.color === sku.color);
+              if (index !== -1) {
+                const accQuantity = acc[index].totalQuantity;
+                acc[index] = {
+                  ...acc[index],
+                  totalQuantity: accQuantity + sku.quantity,
+                };
+              }
+            }
+            return acc;
+          },
+          [] as ColorDisplay[]
+        );
+        this.listSizeDisplay = _.reduce(
+          this.skus,
+          (acc: SizeDisplay[], sku) => {
+            if (!acc.some((item) => item.size === sku.size)) {
+              acc.push({ size: sku.size, disabled: false });
+            }
+            return acc;
+          },
+          [] as SizeDisplay[]
+        );
+        this.listSizeDisplay = _.map(this.listSizeDisplay, (item) => {
+          if (
+            !this.skus?.some(
+              (sku) => sku.color === this.currentColor && sku.size === item.size
+            )
+          ) {
+            item.disabled = true;
           } else {
-            const index = acc.findIndex((item) => item.color === sku.color);
-            if (index !== -1) {
-              const accQuantity = acc[index].totalQuantity;
-              acc[index] = {
-                ...acc[index],
-                totalQuantity: accQuantity + sku.quantity,
-              };
+            const index = _.findIndex(
+              this.skus,
+              (sku) => sku.color === this.currentColor && sku.size === item.size
+            );
+            if (index !== -1 && this.skus[index].quantity <= 0) {
+              item.disabled = true;
             }
           }
-          return acc;
-        },
-        [] as ColorDisplay[]
-      );
-      this.listSizeDisplay = _.reduce(
-        this.skus,
-        (acc: SizeDisplay[], sku) => {
-          if (!acc.some((item) => item.size === sku.size)) {
-            acc.push({ size: sku.size, disabled: false });
-          }
-          return acc;
-        },
-        [] as SizeDisplay[]
-      );
-      this.listSizeDisplay = _.map(this.listSizeDisplay, (item) => {
-        if (
-          !this.skus?.some(
-            (sku) => sku.color === this.currentColor && sku.size === item.size
-          )
-        ) {
-          item.disabled = true;
-        } else {
-          const index = _.findIndex(
-            this.skus,
-            (sku) => sku.color === this.currentColor && sku.size === item.size
-          );
-          if (index !== -1 && this.skus[index].quantity <= 0) {
-            item.disabled = true;
-          }
-        }
-        return item;
-      });
+          return item;
+        });
+      },
+      immediate: true,
     },
+  },
+  mounted() {
+    console.log(this.currentSku);
   },
 });
 </script>
@@ -153,6 +177,10 @@ export default defineComponent({
   .sku {
     border: 1px solid transparent;
     cursor: pointer;
+  }
+  .size-item {
+    width: 5rem;
+    height: 5rem;
   }
   .active {
     position: relative;
@@ -212,10 +240,6 @@ export default defineComponent({
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    .size-wp {
-      width: 5rem;
-      height: 5rem;
-    }
   }
 }
 </style>

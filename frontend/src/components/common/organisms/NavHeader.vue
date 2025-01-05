@@ -4,19 +4,17 @@
       <app-logo :intent="intent" />
     </div>
     <div class="flex gap-[5rem]">
-      <div class="container">
-        <span class="material-symbols-outlined" v-text="'language'" />
-        <p class="header-items" v-text="'en'" />
-      </div>
       <div class="container" @click="navigateToOrders">
         <span class="material-symbols-outlined" v-text="'receipt_long'" />
         <p class="header-items" v-text="'orders'" />
       </div>
       <div class="container" @click="navigateToSearch">
         <span class="material-symbols-outlined" v-text="'search'" />
+        <p class="header-items" v-text="'search'" />
       </div>
       <div class="container" @click="openCartFolder">
         <icon-cart :intent="intent" />
+        <p class="header-items" v-text="'cart'" />
       </div>
       <div
         v-if="isAuthenticated"
@@ -41,9 +39,8 @@ import Avatar from "@/components/common/atomic/Avatar.vue";
 import AppLogo from "@/components/common/molecules/AppLogo.vue";
 import IconCart from "@/components/icons/IconCart.vue";
 import IconUser from "@/components/icons/IconUser.vue";
-import { useCartStore } from "@/stores/cart";
 import { useSessionStore } from "@/stores/session";
-import { mapActions, mapState } from "pinia";
+import { mapState } from "pinia";
 import { defineComponent } from "vue";
 
 export default defineComponent({

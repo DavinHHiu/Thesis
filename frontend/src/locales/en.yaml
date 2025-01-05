@@ -86,6 +86,11 @@ homePage:
 
 searchPage:
   placeholder: Search Price Tag
+  filter:
+    title: Filter by price
+    min: Min
+    max: Max
+    price: Price
 
 productDetailPage:
   size: Size
