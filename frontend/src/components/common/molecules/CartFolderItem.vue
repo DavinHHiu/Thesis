@@ -44,7 +44,7 @@ export default defineComponent({
     formatCurrency,
     handleRemoveCartItem(cartItemId: number) {
       this.removeCartItem(cartItemId)
-        .then((res) => {
+        .then(async (res) => {
           this.toast({
             theme: "success",
             message: "cartFolder.message.delete.success",

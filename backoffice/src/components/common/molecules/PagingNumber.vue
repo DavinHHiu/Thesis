@@ -2,7 +2,10 @@
   <ul class="pagination flex justify-end gap-[0.5rem] w-full mt-[5rem]">
     <li class="page-item"><span class="page-link">&lsaquo;</span></li>
     <template v-for="(page, index) in paging" :key="index">
-      <li :class="['page-item', { active: page === curPage }]">
+      <li
+        :class="['page-item', { active: page === curPage }]"
+        @click="changePage(page as any)"
+      >
         <span class="page-link">{{ page }}</span>
       </li>
     </template>
@@ -15,6 +18,7 @@ import { defineComponent } from "vue";
 
 export default defineComponent({
   name: "PagingNumber",
+  emits: ["change-page"],
   props: {
     paging: {
       type: Array,
@@ -25,10 +29,10 @@ export default defineComponent({
       default: 1,
     },
   },
-  methods: {},
-  computed: {
-    curPageIndex() {
-      return this.paging;
+  methods: {
+    changePage(page: number | string) {
+      if (typeof page === "string") return;
+      this.$emit("change-page", page);
     },
   },
 });

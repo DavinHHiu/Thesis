@@ -21,12 +21,15 @@ export const useUserStore = defineStore("user", {
         })
         .then((response) => response);
     },
-    listUsers() {
-      return axios.get(`${consts.BASE_URL}/users/`).then((response) => {
-        if (response.status === 200 && response.data) {
-          this.users = response.data.results;
-        }
-      });
+    listUsers(params: Object) {
+      return axios
+        .get(`${consts.BASE_URL}/users/`, { params })
+        .then((response) => {
+          if (response.status === 200 && response.data) {
+            this.users = response.data.results;
+            return response;
+          }
+        });
     },
     retrieveUser(id: string) {
       return axios.get(`${consts.BASE_URL}/users/${id}/`).then((response) => {

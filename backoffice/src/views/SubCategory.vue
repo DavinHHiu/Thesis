@@ -32,6 +32,11 @@
       </tbody>
     </table>
   </page-body>
+  <paging-number
+    :paging="paging"
+    :cur-page="currentPage"
+    @change-page="changePage"
+  />
   <modal
     ref="deleteModal"
     id="deleteModal"
@@ -47,10 +52,12 @@ import CustomButton from "@/components/common/atomic/CustomButton.vue";
 import EllipsisDropdown from "@/components/common/molecules/EllipsisDropdown.vue";
 import HeaderAction from "@/components/common/molecules/HeaderAction.vue";
 import Modal from "@/components/common/molecules/Modal.vue";
+import PagingNumber from "@/components/common/molecules/PagingNumber.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import { useSubCategoryStore } from "@/stores/subcategory";
 import { SubCategory } from "@/types/worker";
 import { fmt } from "@/utils/string";
+import { getPaginationRange } from "@/utils/utils";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
@@ -62,10 +69,15 @@ export default defineComponent({
     Modal,
     HeaderAction,
     PageBody,
+    PagingNumber,
   },
   data() {
     return {
       currentIndex: 0 as number,
+      resultsCount: 0,
+      limit: 50,
+      offset: 0,
+      currentPage: 1,
     };
   },
   methods: {
@@ -92,14 +104,38 @@ export default defineComponent({
         this.destroySubCategory(subcategory.id);
       }
     },
+    async changePage(page: number) {
+      this.currentPage = page;
+      this.offset = (page - 1) * this.limit;
+      this.loadingPage = true;
+      const params = {
+        limit: this.limit,
+        offset: this.offset,
+        category_id: Number(this.$route.params.categoryId),
+      };
+      await this.listByCategory(params);
+      this.loadingPage = false;
+    },
     fmt,
   },
   computed: {
     ...mapState(useSubCategoryStore, ["subcategories"]),
+    paging() {
+      return getPaginationRange(
+        Math.floor(this.resultsCount / this.limit) + 1,
+        this.currentPage,
+        1
+      );
+    },
   },
   async mounted() {
-    const category_id = this.$route.params.categoryId;
-    await this.listByCategory(Number(category_id));
+    const params = {
+      limit: this.limit,
+      offset: this.offset,
+      category_id: Number(this.$route.params.categoryId),
+    };
+    const response = await this.listByCategory(params);
+    this.resultsCount = response.data.count;
   },
 });
 </script>

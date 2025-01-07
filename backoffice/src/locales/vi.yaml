@@ -20,9 +20,6 @@ backofficeSidebar:
   - title: Đơn hàng
     path: /orders
     icon: task
-  - title: Cài đặt
-    path: /settings
-    icon: settings
 
 inputLabel:
   common:

@@ -59,26 +59,35 @@ export const useAddressStore = defineStore("address", {
           }
         });
     },
-    listProvinces() {
-      return axios.get(`${consts.BASE_URL}/provinces/`).then((response) => {
-        if (response.status === 200 && response.data) {
-          this.provinces = response.data.results;
-        }
-      });
+    listProvinces(params: Object) {
+      return axios
+        .get(`${consts.BASE_URL}/provinces/`, { params })
+        .then((response) => {
+          if (response.status === 200 && response.data) {
+            this.provinces = response.data.results;
+            return response;
+          }
+        });
     },
-    listDistricts() {
-      return axios.get(`${consts.BASE_URL}/districts/`).then((response) => {
-        if (response.status === 200 && response.data) {
-          this.districts = response.data.results;
-        }
-      });
+    listDistricts(params: Object) {
+      return axios
+        .get(`${consts.BASE_URL}/districts/`, { params })
+        .then((response) => {
+          if (response.status === 200 && response.data) {
+            this.districts = response.data.results;
+            return response;
+          }
+        });
     },
-    listWards() {
-      return axios.get(`${consts.BASE_URL}/wards/`).then((response) => {
-        if (response.status === 200 && response.data) {
-          this.wards = response.data.results;
-        }
-      });
+    listWards(params: Object) {
+      return axios
+        .get(`${consts.BASE_URL}/wards/`, { params })
+        .then((response) => {
+          if (response.status === 200 && response.data) {
+            this.wards = response.data.results;
+            return response;
+          }
+        });
     },
     listDistrictsByProvince(provinceCode: number) {
       return axios

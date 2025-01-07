@@ -34,6 +34,11 @@
       </template>
     </tbody>
   </table>
+  <paging-number
+    :paging="paging"
+    :cur-page="currentPage"
+    @change-page="changePage"
+  />
   <modal
     ref="deleteModal"
     id="deleteModal"
@@ -49,10 +54,12 @@ import CustomButton from "@/components/common/atomic/CustomButton.vue";
 import EllipsisDropdown from "@/components/common/molecules/EllipsisDropdown.vue";
 import HeaderAction from "@/components/common/molecules/HeaderAction.vue";
 import Modal from "@/components/common/molecules/Modal.vue";
+import PagingNumber from "@/components/common/molecules/PagingNumber.vue";
 import { useProductSkuStore } from "@/stores/productSku";
 import { ProductSku } from "@/types/worker";
 import { fmtCur } from "@/utils/currency";
 import { fmt } from "@/utils/string";
+import { getPaginationRange } from "@/utils/utils";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 import { useI18n } from "vue-i18n";
@@ -64,10 +71,15 @@ export default defineComponent({
     EllipsisDropdown,
     Modal,
     HeaderAction,
+    PagingNumber,
   },
   data() {
     return {
       currentIndex: 0 as number,
+      resultsCount: 0,
+      limit: 50,
+      offset: 0,
+      currentPage: 1,
     };
   },
   methods: {
@@ -98,14 +110,37 @@ export default defineComponent({
       const { locale } = useI18n();
       return fmtCur(locale.value, amount);
     },
+    async changePage(page: number) {
+      this.currentPage = page;
+      this.offset = (page - 1) * this.limit;
+      this.loadingPage = true;
+      const params = {
+        limit: this.limit,
+        offset: this.offset,
+        product_id: this.$route.params.productId,
+      };
+      await this.listProductSkus(params);
+      this.loadingPage = false;
+    },
     fmt,
   },
   computed: {
     ...mapState(useProductSkuStore, ["productSkus"]),
+    paging() {
+      return getPaginationRange(
+        Math.floor(this.resultsCount / this.limit) + 1,
+        this.currentPage,
+        1
+      );
+    },
   },
   async mounted() {
-    const productId = this.$route.params.productId;
-    await this.listProductSkus(productId as string);
+    const params = {
+      limit: this.limit,
+      offset: this.offset,
+      product_id: this.$route.params.productId,
+    };
+    await this.listProductSkus(params);
   },
 });
 </script>

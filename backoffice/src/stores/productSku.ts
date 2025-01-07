@@ -33,16 +33,15 @@ export const useProductSkuStore = defineStore("productSku", {
           }
         });
     },
-    listProductSkus(product_id: string) {
+    listProductSkus(params: Object) {
       return axios
         .get(`${consts.BASE_URL}/product-skus/`, {
-          params: {
-            product_id: product_id,
-          },
+          params,
         })
         .then((response) => {
           if (response.status === 200 && response.data) {
             this.productSkus = response.data;
+            return response;
           }
         });
     },

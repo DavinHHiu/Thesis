@@ -28,16 +28,15 @@ export const useSubCategoryStore = defineStore("subcategory", {
           }
         });
     },
-    listByCategory(category_id: number) {
+    listByCategory(params: Object) {
       return axios
         .get(`${consts.BASE_URL}/sub-categories/by-category/`, {
-          params: {
-            category_id: category_id,
-          },
+          params,
         })
         .then((response) => {
           if (response.status === 200 && response.data) {
             this.subcategories = response.data;
+            return response;
           }
         });
     },

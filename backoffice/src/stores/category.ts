@@ -17,12 +17,15 @@ export const useCategoryStore = defineStore("category", {
         .post(`${consts.BASE_URL}/categories/`, payload)
         .then((response) => response);
     },
-    listCategories() {
-      return axios.get(`${consts.BASE_URL}/categories/`).then((response) => {
-        if (response.status === 200 && response.data) {
-          this.categories = response.data.results;
-        }
-      });
+    listCategories(params: Object) {
+      return axios
+        .get(`${consts.BASE_URL}/categories/`, { params })
+        .then((response) => {
+          if (response.status === 200 && response.data) {
+            this.categories = response.data.results;
+            return response;
+          }
+        });
     },
     retrieveCategory(id: number) {
       return axios

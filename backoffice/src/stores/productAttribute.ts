@@ -20,12 +20,13 @@ export const useProductAttributeStore = defineStore("productAttribute", {
           }
         });
     },
-    listProductAttributes() {
+    listProductAttributes(params: Object) {
       return axios
-        .get(`${consts.BASE_URL}/product-attributes/`)
+        .get(`${consts.BASE_URL}/product-attributes/`, { params })
         .then((response) => {
           if (response.status === 200 && response.data) {
             this.productAttributes = response.data.results;
+            return response;
           }
         });
     },
