@@ -45,6 +45,11 @@
       </tbody>
     </table>
   </page-body>
+  <paging-number
+    :paging="paging"
+    :cur-page="currentPage"
+    @change-page="changePage"
+  />
   <modal
     ref="deleteModal"
     id="deleteModal"
@@ -61,12 +66,14 @@ import BadgeStar from "@/components/common/molecules/BadgeStar.vue";
 import EllipsisDropdown from "@/components/common/molecules/EllipsisDropdown.vue";
 import HeaderAction from "@/components/common/molecules/HeaderAction.vue";
 import Modal from "@/components/common/molecules/Modal.vue";
+import PagingNumber from "@/components/common/molecules/PagingNumber.vue";
 import RatingStar from "@/components/common/molecules/RatingStar.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
 import { useProductStore } from "@/stores/product";
 import { Product } from "@/types/worker";
 import { fmt } from "@/utils/string";
+import { getPaginationRange } from "@/utils/utils";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 
@@ -81,10 +88,15 @@ export default defineComponent({
     PageBody,
     PageTitle,
     RatingStar,
+    PagingNumber,
   },
   data() {
     return {
       currentIndex: 0 as number,
+      resultsCount: 0,
+      limit: 50,
+      offset: 0,
+      currentPage: 1,
     };
   },
   methods: {
@@ -108,13 +120,36 @@ export default defineComponent({
         this.destroyProduct(product.id);
       }
     },
+    async changePage(page: number) {
+      this.currentPage = page;
+      this.offset = (page - 1) * this.limit;
+      this.loadingPage = true;
+      const params = {
+        limit: this.limit,
+        offset: this.offset,
+      };
+      await this.listProducts(params);
+      this.loadingPage = false;
+    },
     fmt,
   },
   computed: {
     ...mapState(useProductStore, ["products"]),
+    paging() {
+      return getPaginationRange(
+        Math.floor(this.resultsCount / this.limit) + 1,
+        this.currentPage,
+        1
+      );
+    },
   },
   async mounted() {
-    await this.listProducts();
+    const params = {
+      limit: this.limit,
+      offset: this.offset,
+    };
+    const response = await this.listProducts(params);
+    this.resultsCount = response.data.count;
   },
 });
 </script>

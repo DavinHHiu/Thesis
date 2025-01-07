@@ -1,6 +1,7 @@
 <template>
   <page-title title="cartPage.title" />
   <page-body>
+    <LoadingPage v-if="loadingPage" />
     <Toast />
     <div v-if="totalQuantity === 0" class="empty-cart">
       <div class="flex items-center gap-[1rem] px-[2rem]">
@@ -124,12 +125,18 @@
         </div>
       </div>
     </div>
+    <paging-number
+      :paging="paging"
+      :cur-page="currentPage"
+      @change-page="changePage"
+    />
   </page-body>
 </template>
 
 <script lang="ts">
 import CustomButton from "@/components/common/atomic/CustomButton.vue";
 import NumberField from "@/components/common/molecules/NumberField.vue";
+import PagingNumber from "@/components/common/molecules/PagingNumber.vue";
 import TextField from "@/components/common/molecules/TextField.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
@@ -137,6 +144,7 @@ import IconRemove from "@/components/icons/IconRemove.vue";
 import { useCartStore } from "@/stores/cart";
 import { useToastStore } from "@/stores/toast";
 import { formatCurrency } from "@/utils/currency";
+import { getPaginationRange } from "@/utils/utils";
 import _ from "lodash";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
@@ -149,12 +157,18 @@ export default defineComponent({
     IconRemove,
     CustomButton,
     NumberField,
+    PagingNumber,
     PageTitle,
     PageBody,
   },
   data() {
     return {
       loading: false,
+      resultsCount: 0,
+      limit: 50,
+      offset: 0,
+      currentPage: 1,
+      loadingPage: false,
     };
   },
   methods: {
@@ -187,6 +201,8 @@ export default defineComponent({
         const response = await this.updateCartItemQuantity(foundItem);
         if (response?.status !== 200) {
           this.cartItems[foundAt].quantity--;
+        } else {
+          this.listCartItems({ limit: this.limit, offset: this.offset });
         }
       }
     },
@@ -241,7 +257,8 @@ export default defineComponent({
     },
     handleRemoveItem(cartItemId: number) {
       this.removeCartItem(cartItemId)
-        .then((res) => {
+        .then(async (res) => {
+          await this.listCartItems({ limit: this.limit, offset: this.offset });
           this.toast({
             theme: "success",
             message: "cartFolder.message.delete.success",
@@ -256,6 +273,13 @@ export default defineComponent({
     },
     continueShopping() {
       this.$router.push({ name: "search" });
+    },
+    async changePage(page: number) {
+      this.currentPage = page;
+      this.offset = (page - 1) * this.limit;
+      this.loadingPage = true;
+      await this.listCartItems({ limit: this.limit, offset: this.offset });
+      this.loadingPage = false;
     },
   },
   computed: {
@@ -272,10 +296,17 @@ export default defineComponent({
         0
       );
     },
+    paging() {
+      return getPaginationRange(
+        Math.floor(this.resultsCount / this.limit) + 1,
+        this.currentPage,
+        1
+      );
+    },
   },
   async mounted() {
     await this.retrieveCart();
-    await this.listCartItems();
+    await this.listCartItems({ limit: this.limit, offset: this.offset });
   },
 });
 </script>

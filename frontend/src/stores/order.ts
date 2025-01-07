@@ -54,18 +54,16 @@ export const useOrderStore = defineStore("order", {
           this.orderItems = response.data;
         });
     },
-    listOrders(status?: string, page?: number) {
+    listOrders(params: Object) {
       return axios
         .get(`${consts.BASE_URL}/orders/`, {
-          params: {
-            status,
-            page,
-          },
+          params,
         })
         .then((response) => {
           if (response.status === 200 && response.data) {
             this.orders = response.data.results;
           }
+          return response;
         });
     },
   },

@@ -3,35 +3,34 @@ import { fmtDate } from "@/utils/date";
 import { fmt } from "@/utils/string";
 import _ from "lodash";
 
-const computePaging = (
-  totalPages: number,
-  totalPagesDisplay: number,
+const getPaginationRange = (
+  totalPage: number,
   page: number,
   siblings: number
 ) => {
-  if (totalPages <= totalPagesDisplay) {
-    return _.range(1, totalPages + 1);
+  const totalPageInArray = 7 + siblings;
+  if (totalPageInArray >= totalPage) {
+    return _.range(1, totalPage + 1);
   }
 
   const leftSiblingIndex = Math.max(page - siblings, 1);
-  const showLeftDot = leftSiblingIndex > 3;
+  const showLeftDots = leftSiblingIndex > 2;
 
-  const rightSiblingIndex = Math.min(page + siblings, totalPages);
-  const showRightDot = rightSiblingIndex < totalPages - 2;
+  const rightSiblingIndex = Math.min(page + siblings, totalPage);
+  const showRightDots = rightSiblingIndex < totalPage - 2;
 
-  if (!showLeftDot && showRightDot) {
-    const leftRange = _.range(1, totalPagesDisplay - 1);
-    return [...leftRange, " ...", totalPages];
-  } else if (showLeftDot && !showRightDot) {
-    const rigtRange = _.range(
-      totalPages - (totalPagesDisplay - 2) + 1,
-      totalPages + 1
-    );
-    return [1, "... ", ...rigtRange];
+  if (!showLeftDots && showRightDots) {
+    const leftItemsCount = 3 + 2 * siblings;
+    const leftRange = _.range(1, leftItemsCount + 1);
+    return [...leftRange, " ...", totalPage];
+  } else if (showLeftDots && !showRightDots) {
+    const rightItemsCount = 3 + 2 * siblings;
+    const rightRange = _.range(totalPage - rightItemsCount + 1, totalPage + 1);
+    return [1, "... ", ...rightRange];
   } else {
     const middleRange = _.range(leftSiblingIndex, rightSiblingIndex + 1);
-    return [1, "... ", ...middleRange, " ...", totalPages];
+    return [1, "... ", ...middleRange, " ...", totalPage];
   }
 };
 
-export { computePaging, fmt, fmtCur, fmtDate };
+export { getPaginationRange, fmt, fmtCur, fmtDate };

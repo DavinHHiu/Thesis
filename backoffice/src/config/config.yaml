@@ -26,6 +26,3 @@ backofficeSidebar:
   - title: Order
     path: /orders
     icon: task
-  - title: Settings
-    path: /settings
-    icon: settings

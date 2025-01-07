@@ -1,6 +1,6 @@
 <template>
   <div class="body flex">
-    <loadingPage v-if="loadingPage" />
+    <LoadingPage v-if="loadingPage" />
     <div class="side-filter">
       <search-bar v-model="queryInput" @submit="submitSearch" />
       <filter-price
@@ -39,7 +39,6 @@ import RangeField from "@/components/common/molecules/RangeField.vue";
 import TextField from "@/components/common/molecules/TextField.vue";
 import TopItem from "@/components/common/molecules/TopItem.vue";
 import FilterPrice from "@/components/common/organisms/FilterPrice.vue";
-import LoadingContent from "@/components/common/organisms/LoadingContent.vue";
 import SearchBar from "@/components/common/organisms/SearchBar.vue";
 import SideBestSellers from "@/components/common/organisms/SideBestSellers.vue";
 import SideCategory from "@/components/common/organisms/SideCategory.vue";

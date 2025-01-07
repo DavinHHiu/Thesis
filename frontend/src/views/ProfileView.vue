@@ -19,10 +19,6 @@
             <span class="material-symbols-outlined" v-text="'pin_drop'" />
             <span v-text="'My addresses'" />
           </router-link>
-          <router-link class="side-tab-item" :to="{ name: 'profile.language' }">
-            <span class="material-symbols-outlined" v-text="'map'" />
-            <span v-text="'Locale'" />
-          </router-link>
           <router-link class="side-tab-item" :to="{ name: 'cartPage' }">
             <span class="material-symbols-outlined" v-text="'shopping_cart'" />
             <span v-text="'My cart'" />

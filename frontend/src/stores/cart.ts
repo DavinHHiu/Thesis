@@ -1,5 +1,3 @@
-import consts from "@/consts/consts";
-import { useOrderStore } from "@/stores/order";
 import {
   Address,
   Cart,
@@ -8,8 +6,11 @@ import {
   PaymentMethod,
   ShipmentMethod,
 } from "@/types/worker";
+
 import axios from "axios";
+import consts from "@/consts/consts";
 import { defineStore } from "pinia";
+import { useOrderStore } from "@/stores/order";
 
 export const useCartStore = defineStore("cart", {
   state: () => {
@@ -33,7 +34,7 @@ export const useCartStore = defineStore("cart", {
         .then(async (response) => {
           if (response.status === 201 && response.data) {
             await this.retrieveCart();
-            await this.listCartItems();
+            await this.listCartItems({ limit: 50, offset: 0 });
           }
           return response;
         });
@@ -44,17 +45,19 @@ export const useCartStore = defineStore("cart", {
         .then(async (response) => {
           if (response.status === 204) {
             await this.retrieveCart();
-            await this.listCartItems();
+            await this.listCartItems({ limit: 50, offset: 0 });
           }
           return response;
         });
     },
-    listCartItems() {
-      return axios.get(`${consts.BASE_URL}/cart-items/`).then((response) => {
-        if (response.status === 200 && response.data) {
-          this.cartItems = response.data.results;
-        }
-      });
+    listCartItems(params: Object) {
+      return axios
+        .get(`${consts.BASE_URL}/cart-items/`, { params })
+        .then((response) => {
+          if (response.status === 200 && response.data) {
+            this.cartItems = response.data.results;
+          }
+        });
     },
     updateCartItemQuantity(cartItem: CartItem) {
       const payload = {
@@ -65,7 +68,6 @@ export const useCartStore = defineStore("cart", {
       return axios
         .put(`${consts.BASE_URL}/cart-items/${cartItem.id}/`, payload)
         .then((response) => {
-          this.listCartItems();
           this.retrieveCart();
           return response;
         });

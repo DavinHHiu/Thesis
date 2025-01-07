@@ -1,10 +1,12 @@
 import paypalrestsdk
 from django.conf import settings
 from django.db import transaction
+from django.utils.module_loading import import_string
 from django.utils.translation import gettext_lazy as _
 from paypalrestsdk import Payment as PaypalPayment
 from rest_framework import status, viewsets
 from rest_framework.decorators import action
+from rest_framework.pagination import LimitOffsetPagination
 from rest_framework.permissions import AllowAny
 from rest_framework.response import Response
 from rest_framework.views import APIView
@@ -23,14 +25,56 @@ from api.models import (
 from api.v1.serializers import OrderDetailSerializer, OrderItemSerializer
 
 
+class OrderDetailPagination(LimitOffsetPagination):
+
+    def get_paginated_response(self, data):
+        OrderDetailViewSet = import_string("api.v1.views.order.OrderDetailViewSet")
+        queryset = OrderDetailViewSet.queryset
+        return Response(
+            {
+                "count": self.count,
+                "next": self.get_next_link(),
+                "previous": self.get_previous_link(),
+                "results": data,
+                "counter": {
+                    "pending": queryset.filter(
+                        status=base_consts.ORDER_STATUS_PENDING
+                    ).count(),
+                    "confirmed": queryset.filter(
+                        status=base_consts.ORDER_STATUS_COMFIRMED
+                    ).count(),
+                    "processing": queryset.filter(
+                        status=base_consts.ORDER_STATUS_PROCESSING
+                    ).count(),
+                    "shipping": queryset.filter(
+                        status=base_consts.ORDER_STATUS_SHIPPING
+                    ).count(),
+                    "delivered": queryset.filter(
+                        status=base_consts.ORDER_STATUS_DELIVERED
+                    ).count(),
+                    "completed": queryset.filter(
+                        status=base_consts.ORDER_STATUS_COMPLETED
+                    ).count(),
+                    "cancelled": queryset.filter(
+                        status=base_consts.ORDER_STATUS_CANCELLED
+                    ).count(),
+                    "refunded": queryset.filter(
+                        status=base_consts.ORDER_STATUS_REFUNDED
+                    ).count(),
+                },
+            }
+        )
+
+
 class OrderDetailViewSet(viewsets.ModelViewSet):
     """
     API endpoint for managing order details.
     """
 
+    permission_classes = [AllowAny]
     queryset = OrderDetail.objects.all()
     serializer_class = OrderDetailSerializer
-    permission_classes = [AllowAny]
+    pagination_class = OrderDetailPagination
 
     def get_queryset(self):
         queryset = super().get_queryset()

@@ -18,12 +18,15 @@ export const useProductStore = defineStore("product", {
         .post(`${consts.BASE_URL}/products/`, payload)
         .then((response) => response);
     },
-    listProducts() {
-      return axios.get(`${consts.BASE_URL}/products/`).then((response) => {
-        if (response.status === 200 && response.data) {
-          this.products = response.data.results;
-        }
-      });
+    listProducts(params: Object) {
+      return axios
+        .get(`${consts.BASE_URL}/products/`, { params })
+        .then((response) => {
+          if (response.status === 200 && response.data) {
+            this.products = response.data.results;
+          }
+          return response;
+        });
     },
     listProductsDisplay() {
       return axios

@@ -71,6 +71,12 @@ export default defineComponent({
     CustomButton,
     CartFolderItem,
   },
+  data() {
+    return {
+      limit: 50,
+      offset: 0,
+    };
+  },
   computed: {
     ...mapState(useCartStore, ["cart", "cartItems"]),
   },
@@ -105,7 +111,7 @@ export default defineComponent({
   },
   async mounted() {
     await this.retrieveCart();
-    await this.listCartItems();
+    await this.listCartItems({ limit: this.limit, offset: this.offset });
   },
 });
 </script>

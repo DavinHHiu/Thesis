@@ -62,6 +62,12 @@
         </template>
       </tbody>
     </table>
+    <paging-number
+      class="pagination"
+      :paging="paging"
+      :cur-page="currentPage"
+      @change-page="changePage"
+    />
     <!-- <paging-number class="pagination" :paging="array" /> -->
   </page-body>
 </template>
@@ -70,6 +76,7 @@
 import StatusPill from "@/components/common/atomic/StatusPill.vue";
 import EllipsisDropdown from "@/components/common/molecules/EllipsisDropdown.vue";
 import NavPills from "@/components/common/molecules/NavPills.vue";
+import PagingNumber from "@/components/common/molecules/PagingNumber.vue";
 import PageBody from "@/components/common/templates/PageBody.vue";
 import PageTitle from "@/components/common/templates/PageTitle.vue";
 import consts, { StatusType } from "@/consts/consts";
@@ -77,6 +84,7 @@ import { useOrderStore } from "@/stores/order";
 import { DropdownItem, NavPillItem as iNavPill } from "@/types/backoffice";
 import { Order } from "@/types/worker";
 import { fmt, fmtCur, fmtDate } from "@/utils/utils";
+import { getPaginationRange } from "@/utils/utils";
 import { mapActions, mapState } from "pinia";
 import { defineComponent } from "vue";
 import { useI18n } from "vue-i18n";
@@ -89,24 +97,29 @@ export default defineComponent({
     PageBody,
     NavPills,
     StatusPill,
+    PagingNumber,
   },
   data() {
     return {
-      items: [
-        { title: consts.ALL_STATUS, quantity: 2 },
-        { title: consts.ORDER_STATUS_PENDING, quantity: 1 },
-        { title: consts.ORDER_STATUS_COMFIRMED, quantity: 1 },
-        { title: consts.ORDER_STATUS_PROCESSING, quantity: 0 },
-        { title: consts.ORDER_STATUS_SHIPPING, quantity: 0 },
-        { title: consts.ORDER_STATUS_DELIVERED, quantity: 0 },
-        { title: consts.ORDER_STATUS_COMPLETED, quantity: 0 },
-        { title: consts.ORDER_STATUS_CANCELLED, quantity: 0 },
-        { title: consts.ORDER_STATUS_REFUNDED, quantity: 0 },
-      ] as iNavPill[],
+      items: [] as iNavPill[],
+      counter: {},
+      resultsCount: 0,
+      limit: 50,
+      offset: 0,
+      currentPage: 1,
+      loadingPage: false,
+      currentStatus: "all",
     };
   },
   computed: {
     ...mapState(useOrderStore, ["orders"]),
+    paging() {
+      return getPaginationRange(
+        Math.floor(this.resultsCount / this.limit) + 1,
+        this.currentPage,
+        1
+      );
+    },
   },
   methods: {
     ...mapActions(useOrderStore, ["listOrders", "updateOrderStatus"]),
@@ -115,9 +128,14 @@ export default defineComponent({
       return fmtCur(locale.value, amount);
     },
     changeStatus(item: iNavPill) {
-      this.listOrders(
-        item.title !== consts.ALL_STATUS ? item.title : undefined
-      );
+      this.offset = 0;
+      const params = {
+        limit: this.limit,
+        offset: this.offset,
+        status: item.title !== consts.ALL_STATUS ? item.title : undefined,
+      };
+      this.listOrders(params);
+      this.currentStatus = item.title;
     },
     goToDetail(orderId: string) {
       this.$router.push({
@@ -154,11 +172,43 @@ export default defineComponent({
         this.updateOrderStatus(order.id, obj.action);
       }
     },
+    async changePage(page: number) {
+      this.currentPage = page;
+      this.offset = (page - 1) * this.limit;
+      this.loadingPage = true;
+      const params = {
+        limit: this.limit,
+        offset: this.offset,
+        status: this.currentStatus,
+      };
+      await this.listOrders(params);
+      this.loadingPage = false;
+    },
     fmtDate,
     fmt,
   },
+  watch: {
+    counter: {
+      handler() {
+        const total = Object.values(
+          this.counter as { [key: string]: number }
+        ).reduce((sum, value) => sum + value, 0);
+        const result = Object.entries(this.counter).map(([key, value]) => ({
+          title: key,
+          quantity: value as number,
+        }));
+        this.items = [{ title: consts.ALL_STATUS, quantity: total }, ...result];
+      },
+      immediate: true,
+    },
+  },
   async mounted() {
-    await this.listOrders();
+    const params = {
+      limit: this.limit,
+      offset: this.offset,
+    };
+    const response = await this.listOrders(params);
+    this.counter = response.data.counter;
   },
 });
 </script>
